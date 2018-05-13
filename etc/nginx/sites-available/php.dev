@@ -1,0 +1,29 @@
+server {
+  listen                *:1111;
+  server_name           php.dev;
+  access_log           /Users/djzhang/Work/log/php.dev.access.log;
+  error_log            /Users/djzhang/Work/log/php.dev.error.log;
+
+  location / {
+    root  /Users/djzhang/Work/php.dev/html;
+    try_files  $uri  $uri/  /index.php?$args;
+    index index.php;
+  }
+
+  location ~ \.php$ {
+       root   /Users/djzhang/Work/php.dev/html;
+       try_files  $uri  $uri/  /index.php?$args;
+       index  index.html index.htm index.php;
+       fastcgi_param PATH_INFO $fastcgi_path_info;
+       fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;
+       fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    
+       fastcgi_pass 127.0.0.1:9000;
+       fastcgi_index index.php;
+       fastcgi_split_path_info ^(.+\.php)(/.+)$;
+       fastcgi_intercept_errors on;
+       include fastcgi_params;
+  }
+}
+
+

@@ -1,0 +1,41 @@
+<templateSet group="user">
+  <template name="wtshead" value="import Telescope from '../index'&#10;&#10;import * as React from 'react'&#10;&#10;import {connect} from 'react-redux'&#10;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="wconnectprops" value="&#10;interface I$MODULE_REF$StateProps {&#10;&#9;&#10;}&#10; &#10;interface I$MODULE_REF$DispatchProps {&#10;&#9;&#10;}&#10; &#10;interface I$MODULE_REF$Props extends I$MODULE_REF$StateProps, I$MODULE_REF$DispatchProps{&#10;&#9;&#10;}&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="MODULE_REF" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="winterface" value="import {&#10;  IParseModelUsers&#10;} from '../../interfaces'" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="wtypeprops" value="interface I$className$Props {&#10;  &#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="wwithrouterandconnect" value="@(connect(mapStateToProps, mapDispatchToProps) as any)&#10;@(withRouter as any)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="wtypedefaultprops" value="  public static defaultProps: Partial&lt;I$className$Props&gt; = {&#10;&#10;  }" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="wexportComp" value="export default $MODULE_REF$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="MODULE_REF" expression="fileNameWithoutExtension()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+</templateSet>

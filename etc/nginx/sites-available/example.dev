@@ -1,0 +1,19 @@
+server {
+  listen                *:8222;
+  server_name           politicl.dev;
+  access_log           /Users/djzhang/Work/log/example.dev.access.log;
+  error_log            /Users/djzhang/Work/log/example.dev.error.log;
+
+    root  /Users/djzhang/Work/example.dev/html;
+
+    index index.html index.htm;
+
+    server_name example.com www.example.com;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+}
+
+

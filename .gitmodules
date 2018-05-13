@@ -1,0 +1,7 @@
+[submodule "lib/spacemacs"]
+	path = lib/spacemacs
+	url = https://github.com/syl20bnr/spacemacs
+
+[submodule "emacs.d/vendors/matlab-emacs"]
+	path = emacs.d/vendors/matlab-emacs
+	url = https://git.code.sf.net/p/matlab-emacs/src

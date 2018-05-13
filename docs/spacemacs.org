@@ -1,0 +1,8 @@
+## tide for typescript (https://github.com/ananthakumaran/tide)
+
+  1. M-x tide-project-errors:
+         List all errors in the project. Errors can be navigated using n and p.
+         Press enter to open the file.
+  2. M-x tide-fix:
+         Apply code fix for the error at point. When invoked with a prefix arg,
+         apply code fix for all the errors in the file that are similar to the error at point.

@@ -1,0 +1,7 @@
+<templateSet group="Vue">
+  <template name="vclass" value="&lt;$div$ :class=&quot;{ $className$: $data$ }&quot;&gt;&lt;/$div$&gt;" description="Vue class binding" toReformat="true" toShortenFQNames="true">
+    <variable name="div" expression="" defaultValue="&quot;div&quot;" alwaysStopAt="true" />
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="data" expression="" defaultValue="&quot;data&quot;" alwaysStopAt="true" />
+  </template>
+</templateSet>

@@ -1,0 +1,21 @@
+# custom files
+custom/
+!custom/plugins/example
+!custom/example.zsh
+
+# temp files directories
+cache/
+log/
+
+emacs.d/.cache
+emacs.d/.cask
+emacs.d/elpa
+emacs.d/auto-save-list
+
+
+lib/
+lib/spacemacs/
+
+emacs.d/vendors/matlab-emacs/
+
+.env

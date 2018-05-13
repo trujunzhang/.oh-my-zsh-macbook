@@ -1,0 +1,37 @@
+<templateSet group="djzhang">
+  <template name="wtydefine" value="* $componentName$&#10;cat /Users/djzhang/Desktop/upwork-projects/CURRENT/wix/react-native-material-ui/src/$componentName$/$componentName$.react.js | react2dts --module-name toolbar&gt;/typings/$componentName$.d.ts" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="componentName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="whimportreact" value="import * as React from 'react'&#10;import * as  PropTypes from 'prop-types'" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="whdefaultProps" value="    public static defaultProps: Partial&lt;IPostsDailyProps&gt; = {&#10;&#10;    }" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="whtypes" value="Types.common." description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+</templateSet>
