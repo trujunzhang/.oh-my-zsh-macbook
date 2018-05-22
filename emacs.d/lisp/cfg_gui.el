@@ -5,16 +5,16 @@
       (setq initial-frame-alist
             '(
               (tool-bar-lines . 0)
-              (width . 160) ; chars
-              (height . 40) ; lines
+              (width . 120) ; chars
+              (height . 32) ; lines
               ;;
               ))
 
       (setq default-frame-alist
             '(
               (tool-bar-lines . 0)
-              (width . 160)
-              (height . 40)
+              (width . 120)
+              (height . 32)
               ;;
               )))
   (progn
