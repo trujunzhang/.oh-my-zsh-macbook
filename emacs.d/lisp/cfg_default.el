@@ -40,3 +40,8 @@
   ;;     projectile-globally-ignored-directories))
 
   ;;  (add-to-list 'projectile-globally-ignored-directories "node_modules")
+
+(spacemacs/set-leader-keys
+      ;; current project scope
+      "/"   'spacemacs/helm-project-smart-do-search-region-or-symbol
+      "*"   'spacemacs/helm-project-smart-do-search-region-or-symbol)

@@ -50,3 +50,4 @@
 (load "cfg_javascript.el")
 (load "cfg_lisp.el")
 (load "cfg_matlab.el")
+;; (load "cfg_w3m.el")

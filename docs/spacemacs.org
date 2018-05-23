@@ -6,3 +6,48 @@
   2. M-x tide-fix:
          Apply code fix for the error at point. When invoked with a prefix arg,
          apply code fix for all the errors in the file that are similar to the error at point.
+
+** Useful keys
+
+*** Managing projects
+
+| Key Binding | Description                                             |
+|-------------+---------------------------------------------------------|
+| ~SPC p r~   | open a recent file                                      |
+| ~SPC p R~   | replace a string                                        |
+| ~SPC p v~   | open project root in =vc-dir= or =magit=                |
+| ~SPC /~     | search in project with the best search tool available   |
+| ~SPC p I~   | invalidate the projectile cache                         |
+| ~SPC p k~   | kill all project buffers                                |
+| ~SPC p r~   | open a recent file                                      |
+
+
+*Note for Windows Users*: To enable fast indexing the GNU ~find~ or
+Cygwin ~find~ must be in your ~PATH~.
+
+
+
+
+**  Spacemacs online documentation
+
+  http://spacemacs.org/doc/DOCUMENTATION.html
+
+*** 14.8.11 Replacing text in several files
+If you have ag, pt or ack installed, replacing an occurrence of text in several files can be performed via helm-ag.
+
+Say you want to replace all foo occurrences by bar in your current project:
+
+initiate a search with SPC /
+enter in edit mode with C-c C-e
+go to the occurrence and enter in iedit state with SPC s e
+edit the occurrences then leave the iedit state
+press C-c C-c
+Note: In Spacemacs, helm-ag despite its name works with ack and pt as well (but not with grep).
+
+*** 14.8.12 Renaming files in a directory
+It is possible to batch rename files in a directory using wdired from an helm session:
+
+browse for a directory using SPC f f
+enter wdired with C-c C-e
+edit the file names and use C-c C-c to confirm the changes
+use C-c C-k to abort any changes
