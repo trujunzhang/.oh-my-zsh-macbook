@@ -39,14 +39,14 @@
 (load-file (concat spacemacs-start-directory "init.el"))
 
 ;; Emacs Cask Package manager
-(require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
-(cask-initialize)
+;; (require 'cask "~/.cask/cask.el")
+;; (cask-initialize)
 
 
 ;; load my other configurations
+(load "cfg_tide.el")
 (load "cfg_typescript.el")
 (load "cfg_default.el")
-(load "cfg_tide.el")
 (load "cfg_javascript.el")
 (load "cfg_lisp.el")
 (load "cfg_matlab.el")

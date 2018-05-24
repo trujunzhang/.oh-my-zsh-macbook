@@ -205,3 +205,7 @@ export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 # export MAGICK_HOME=/usr/local/opt/imagemagick
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+
+
+# emacs cask
+export PATH="/Users/djzhang/.cask/bin:$PATH"

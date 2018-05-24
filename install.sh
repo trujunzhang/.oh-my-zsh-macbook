@@ -52,3 +52,14 @@ ln -s $HOME/.oh-my-zsh-macbook/dotenv $HOME/.dotenv
 else
     echo "Exist. [.dotenv]..."
 fi
+
+
+
+echo ""
+if [ ! -d $HOME/.SpaceVim.d ]
+then
+ln -s $HOME/.oh-my-zsh-macbook/SpaceVim.d $HOME/.SpaceVim.d
+    echo "File does not exist. [.SpaceVim.d]..."
+else
+    echo "Exist. [.SpaceVim.d]..."
+fi
