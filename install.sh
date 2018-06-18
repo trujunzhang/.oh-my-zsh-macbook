@@ -2,20 +2,21 @@
 
 # submodule
 echo "First of all, pull all submodules. [spacemacs]"
-git submodule init
-git submodule update
+#git submodule init
+#git submodule update
 
 echo ""
-# .oh-my-zsh
+# .oh-my-zsh(plugins)
 if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/trujunzhang" ]
 then
 ln -s "$HOME/.oh-my-zsh-macbook/custom/plugins/trujunzhang"  "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
     echo "File does not exist. [trujunzhang, zsh plugin]..."
 else
-    echo "Exist. [trujunzhang, zsh plugin]..."
+    echo "Exist. [trujunzhang, zsh's plugin]..."
 fi
 
 echo ""
+# .oh-my-zsh
 if [ ! -f $HOME/.zshrc ]
 then
 ln -s $HOME/.oh-my-zsh-macbook/zshrc.used $HOME/.zshrc
@@ -25,7 +26,7 @@ else
 fi
 
 echo ""
-# spacemacs
+# emacs.d
 if [ ! -d $HOME/.emacs.d ]
 then
 ln -s $HOME/.oh-my-zsh-macbook/emacs.d $HOME/.emacs.d
@@ -35,6 +36,7 @@ else
 fi
 
 echo ""
+# spacemacs
 if [ ! -f $HOME/.spacemacs ]
 then
 ln -s $HOME/.oh-my-zsh-macbook/spacemacs.used $HOME/.spacemacs
@@ -45,6 +47,7 @@ fi
 
 
 echo ""
+# dotenv(Express.js environment variables)
 if [ ! -d $HOME/.dotenv ]
 then
 ln -s $HOME/.oh-my-zsh-macbook/dotenv $HOME/.dotenv
@@ -54,12 +57,23 @@ else
 fi
 
 
-
 echo ""
+# vim.d
 if [ ! -d $HOME/.SpaceVim.d ]
 then
 ln -s $HOME/.oh-my-zsh-macbook/SpaceVim.d $HOME/.SpaceVim.d
     echo "File does not exist. [.SpaceVim.d]..."
 else
     echo "Exist. [.SpaceVim.d]..."
+fi
+
+
+echo ""
+# LaunchAgents(jetbrains.upsource)
+if [ ! -f $HOME/Library/LaunchAgents/jetbrains.upsource.plist ]
+then
+ln -s $HOME/.oh-my-zsh-macbook/USERS/LaunchAgents/jetbrains.upsource.plist $HOME/Library/LaunchAgents/jetbrains.upsource.plist
+    echo "File does not exist. [jetbrains.upsource.plist]..."
+else
+    echo "Exist. [jetbrains.upsource.plist]..."
 fi
