@@ -66,14 +66,3 @@ ln -s $HOME/.oh-my-zsh-macbook/SpaceVim.d $HOME/.SpaceVim.d
 else
     echo "Exist. [.SpaceVim.d]..."
 fi
-
-
-echo ""
-# LaunchAgents(jetbrains.upsource)
-if [ ! -f $HOME/Library/LaunchAgents/jetbrains.upsource.plist ]
-then
-ln -s $HOME/.oh-my-zsh-macbook/USERS/LaunchAgents/jetbrains.upsource.plist $HOME/Library/LaunchAgents/jetbrains.upsource.plist
-    echo "File does not exist. [jetbrains.upsource.plist]..."
-else
-    echo "Exist. [jetbrains.upsource.plist]..."
-fi
