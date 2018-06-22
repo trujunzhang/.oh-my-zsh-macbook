@@ -19,3 +19,5 @@ lib/spacemacs/
 emacs.d/vendors/matlab-emacs/
 
 .env
+
+CocoaPods/**

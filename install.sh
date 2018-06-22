@@ -66,3 +66,14 @@ ln -s $HOME/.oh-my-zsh-macbook/SpaceVim.d $HOME/.SpaceVim.d
 else
     echo "Exist. [.SpaceVim.d]..."
 fi
+
+
+echo ""
+# vim.d
+if [ ! -d $HOME/Library/Caches/CocoaPods ]
+then
+ln -s $HOME/.oh-my-zsh-macbook/lib/CocoaPods $HOME/Library/Caches/CocoaPod
+    echo "File does not exist. [CocoaPods]..."
+else
+    echo "Exist. [CocoaPods]..."
+fi

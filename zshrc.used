@@ -205,5 +205,8 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 # React-native
 export REACT_NATIVE_MAX_WORKERS=2
 
+# Expo
+export EXPO_DEBUG=true
+
 # emacs cask
 export PATH="/Users/djzhang/.cask/bin:$PATH"
