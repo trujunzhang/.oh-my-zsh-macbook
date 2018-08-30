@@ -24,3 +24,4 @@ $ ln -s $HOME/.oh-my-zsh-macbook/emacs.d/elpa $HOME/.oh-my-zsh-macbook/lib/space
 ## git submodule
 
 $ git submodule add https://git.code.sf.net/p/matlab-emacs/src emacs.d/vendors/matlab-emacs
+

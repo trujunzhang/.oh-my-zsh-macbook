@@ -151,8 +151,8 @@ source /usr/local/opt/autoenv/activate.sh
 
 export MONOGACPREFIX="/usr/local"
 
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
 
 # politicl telescope web app's cloudinary
 export CLOUDINARY_URL=cloudinary://886131238629743:X1baj0k868ACgxU-a6Wobw8OsY8@di3fvexj8

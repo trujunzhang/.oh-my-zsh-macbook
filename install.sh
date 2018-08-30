@@ -72,8 +72,19 @@ echo ""
 # vim.d
 if [ ! -d $HOME/Library/Caches/CocoaPods ]
 then
-ln -s $HOME/.oh-my-zsh-macbook/lib/CocoaPods $HOME/Library/Caches/CocoaPod
+ln -s $HOME/.oh-my-zsh-macbook/lib/CocoaPods $HOME/Library/Caches/CocoaPods
     echo "File does not exist. [CocoaPods]..."
 else
     echo "Exist. [CocoaPods]..."
+fi
+
+
+echo ""
+# vim.d
+if [ ! -d $HOME/.cocoapods ]
+then
+ln -s $HOME/.oh-my-zsh-macbook/lib/responsitory.cocoapods $HOME/.cocoapods
+    echo "File does not exist. [.cocoapods]..."
+else
+    echo "Exist. [.cocoapods]..."
 fi
