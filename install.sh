@@ -88,3 +88,9 @@ ln -s $HOME/.oh-my-zsh-macbook/lib/responsitory.cocoapods $HOME/.cocoapods
 else
     echo "Exist. [.cocoapods]..."
 fi
+
+
+echo ""
+echo "This script is about to run npm."
+sh ./USERS/NODE.js/global_npm.sh
+echo "This script has just run npm."
