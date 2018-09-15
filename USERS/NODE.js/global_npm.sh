@@ -13,7 +13,7 @@ npm install -g prettier
 npm install -g installed-check
 
 # expo for react-native
-npm install -g exp
+npm install -g exp && exp path
 
 # https://github.com/tjunnone/npm-check-updates
 npm install -g npm-check-updates
