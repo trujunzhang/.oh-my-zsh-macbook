@@ -89,6 +89,9 @@ alias rnands='npm run android:shake'
 # yarn.all
 alias yarntc='yarn test.client'
 alias yarntw='yarn test.web'
+alias yarnita='yarn install && yarn test.web && yarn test.client'
+alias yarnta='yarn test.web && yarn test.client'
+
 alias yarnitc='yarn install && yarn test.client'
 alias yarnitw='yarn install && yarn test.web'
 

@@ -88,7 +88,7 @@ PYTHONPATH=$PYTHONPATH:/Users/djzhang/Desktop/upwork-projects/politicl/bitbucket
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(trujunzhang autojump git brew history zsh-syntax-highlighting)
+plugins=(trujunzhang autojump git brew nvm history zsh-syntax-highlighting)
 
 # User configuration
 
@@ -172,7 +172,7 @@ export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
 
 # nvm
 # Save your nvm env loading into your .bash_profile or similar
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # conda python environment
