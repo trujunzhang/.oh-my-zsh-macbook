@@ -1,8 +1,12 @@
 # Global
+npm install -g npm
 npm install -g yarn
 
 # react-native
 npm install -g create-react-native-app
+
+# Lerna
+npm install --global lerna
 
 # typescript with lint
 npm install -g typescript
