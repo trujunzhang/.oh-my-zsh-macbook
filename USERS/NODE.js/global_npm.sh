@@ -3,6 +3,7 @@ npm install -g npm
 npm install -g yarn
 
 # react-native
+npm install -g react-native-cli
 npm install -g create-react-native-app
 
 # Lerna

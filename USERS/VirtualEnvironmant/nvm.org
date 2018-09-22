@@ -1,0 +1,8 @@
+* First of all, remove links in the '/usr/local/bin'
+
+sudo rm  /usr/local/bin/
+
+
+* install.
+
+rm -rf $NVM_DIR ~/.npm ~/.bower ~/.nvm  ~/nvm &&  cd ~/ && git clone https://github.com/creationix/nvm.git .nvm && cd ~/.nvm  && git checkout v0.33.11 && . ~/.nvm/nvm.sh && nvm install 9.8.0 && nvm use 9.8.0
