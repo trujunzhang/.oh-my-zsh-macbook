@@ -36,8 +36,23 @@ else
 fi
 
 
+echo ""
+# spacemacs
+if [ ! -f $HOME/.spacemacs ]
+then
+    ln -s $HOME/.oh-my-zsh-macbook/spacemacs.used $HOME/.spacemacs
+    echo "File does not exist. [.spacemacs]..."
+else
+    echo "Exist. [.spacemacs]..."
+fi
+
 
 echo ""
-echo "This script is about to run npm."
-sh ./USERS/NODE.js/global_npm.sh
-echo "This script has just run npm."
+# my emacs layers
+if [ ! -d $HOME/.emacs.d/private/trujunzhang-workspace ]
+then
+    ln -s $HOME/.oh-my-zsh-macbook/emacs.d/layers/trujunzhang-workspace  $HOME/.emacs.d/private/trujunzhang-workspace
+    echo "File does not exist. [trujunzhang-workspace]..."
+else
+    echo "Exist. [trujunzhang-workspace]..."
+fi
