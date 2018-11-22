@@ -31,10 +31,10 @@
 
 (defconst trujunzhang-workspace-packages
   '(
+    typescript-mode
     matlab-mode
     bm
     ))
-
 
 (defun trujunzhang-workspace/init-matlab-mode()
   (use-package matlab-mode
@@ -43,6 +43,35 @@
 (defun trujunzhang-workspace/init-bm()
   (use-package bm
     :defer t))
+
+
+(defun trujunzhang-workspace/pre-init()
+  (message "info: trujunzhang: pre init package")
+  )
+
+(defun trujunzhang-workspace/init()
+  "Auto-save on focus out"
+  (message "info: trujunzhang: init package")
+  )
+
+(defun trujunzhang-workspace/post-init()
+  (message "info: trujunzhang: post init package")
+  )
+
+
+(defun trujunzhang-workspace/post-init-typescript-mode()
+  (message "info: trujunzhang: post init typescript-mode")
+
+  (add-hook 'focus-out-hook 'trujunzhang-workspace/sooheon-save-all)
+
+  (add-hook 'js2-mode-hook (lambda () (add-hook 'after-save-hook 'trujunzhang-workspace/prettier t t)))
+  (add-hook 'react-mode-hook (lambda () (add-hook 'after-save-hook 'trujunzhang-workspace/prettier t t)))
+  (add-hook 'typescript-mode-hook (lambda () (add-hook 'after-save-hook 'trujunzhang-workspace/prettier t t)))
+
+  (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+  )
+
 
 
 ;;; packages.el ends here
