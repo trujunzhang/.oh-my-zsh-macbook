@@ -3,6 +3,7 @@ npm install -g npm
 npm install -g yarn
 
 # react-native
+npm install -g expo-cli
 npm install -g react-native-cli
 npm install -g create-react-native-app
 
@@ -18,14 +19,13 @@ npm install -g prettier
 npm install -g installed-check
 
 # expo for react-native
-npm install -g exp && exp path
 
 # https://github.com/tjunnone/npm-check-updates
 npm install -g npm-check-updates
 
 # npm install -g
 
-# Spacemacs(react) 
+# Spacemacs(react)
 npm install -g tern
 npm install -g eslint babel-eslint eslint-plugin-react
 npm install -g js-beautify

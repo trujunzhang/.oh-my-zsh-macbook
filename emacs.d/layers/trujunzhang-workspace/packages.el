@@ -32,8 +32,8 @@
 (defconst trujunzhang-workspace-packages
   '(
     typescript-mode
-    matlab-mode
-    bm
+    ;; matlab-mode
+    ;; bm
     ))
 
 (defun trujunzhang-workspace/init-matlab-mode()
