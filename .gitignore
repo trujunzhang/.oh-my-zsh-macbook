@@ -11,6 +11,7 @@ emacs.d/.cask
 emacs.d/elpa
 emacs.d/auto-save-list
 
+.DS_Store
 
 lib/
 lib/spacemacs/
