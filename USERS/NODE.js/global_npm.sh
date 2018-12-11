@@ -2,6 +2,9 @@
 npm install -g npm
 npm install -g yarn
 
+# Heroku-cli
+npm install -g heroku
+
 # react-native
 npm install -g expo-cli
 npm install -g react-native-cli
