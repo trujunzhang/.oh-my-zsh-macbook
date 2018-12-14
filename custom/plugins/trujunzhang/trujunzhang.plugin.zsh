@@ -111,6 +111,7 @@ alias npmsvi='npm install --verbose --save-dev '
 alias npmsi='npm install --verbose --save '
 
 alias npmsc='yarn start:client'
+alias npmso='yarn start'
 
 # run dev
 alias npmd='npm run dev'
