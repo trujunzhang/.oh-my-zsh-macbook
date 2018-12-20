@@ -1,5 +1,4 @@
 # Global
-npm install -g npm
 npm install -g yarn
 
 # Heroku-cli
@@ -30,5 +29,4 @@ npm install -g npm-check-updates
 
 # Spacemacs(react)
 npm install -g tern
-npm install -g eslint babel-eslint eslint-plugin-react
 npm install -g js-beautify
