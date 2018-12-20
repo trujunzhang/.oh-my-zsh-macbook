@@ -3,10 +3,12 @@ docker run \
 -p 2222:22 -d atmoz/sftp \
 foo:pass:1001
 
+#  Create a new group ftpaccess for FTP users.
+sudo groupadd ftpaccess
 
 # The below steps must be followed while creating Users for sftp access.
 # Create user john with ftpaccess group and /usr/bin/nologin shell.
-sudo useradd -m foo -g ftpaccess -s
+sudo useradd -m foo -g ftpaccess
 
 # Passwd the user.
 sudo passwd foo
