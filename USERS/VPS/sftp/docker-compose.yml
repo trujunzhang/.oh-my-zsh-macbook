@@ -1,0 +1,10 @@
+sftp:
+  image: atmoz/sftp:latest
+  volumes:
+    - assets:/home/foo/upload
+    - ./images/sftp/sftp.d/fix_owner:/etc/sftp.d/fix_owner
+  command: "foo:pass"
+  ports:
+    - "2222:22"
+  restart: always
+
