@@ -134,6 +134,8 @@ alias npmu="npm update"
 
 alias npma="npmi && npmt && npmbb && npmdo"
 
+alias npmready="yarn && npmf && yarn tests && yarn checks &&  yarn ts.lints && yarn build.current && yarn build.current.pending"
+
 # npm typedoc
 alias npmdoc="npm run doc"
 alias npmigdoc="npm run doc:ignoreError"
