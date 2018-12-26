@@ -134,7 +134,7 @@ alias npmu="npm update"
 
 alias npma="npmi && npmt && npmbb && npmdo"
 
-alias npmready="yarn && npmf && yarn tests && yarn checks &&  yarn ts.lints && yarn build.current && yarn build.current.pending"
+alias npmready="yarn && npmf && yarn tests && yarn checks &&  yarn ts.lints && yarn build.current && yarn build.current.pending && yarn build.web.server && yarn build.web.cloud"
 
 # npm typedoc
 alias npmdoc="npm run doc"
