@@ -30,3 +30,7 @@ npm install -g npm-check-updates
 # Spacemacs(react)
 npm install -g tern
 npm install -g js-beautify
+
+# The React Native Generator to bootstrap your apps
+# https://github.com/bamlab/generator-rn-toolbox
+npm install -g yo generator-rn-toolbox
