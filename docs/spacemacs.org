@@ -11,15 +11,16 @@
 
 *** Managing projects
 
-| Key Binding | Description                                             |
-|-------------+---------------------------------------------------------|
-| ~SPC p r~   | open a recent file                                      |
-| ~SPC p R~   | replace a string                                        |
-| ~SPC p v~   | open project root in =vc-dir= or =magit=                |
-| ~SPC /~     | search in project with the best search tool available   |
-| ~SPC p I~   | invalidate the projectile cache                         |
-| ~SPC p k~   | kill all project buffers                                |
-| ~SPC p r~   | open a recent file                                      |
+|   | Key Binding | Description                                           |
+|---+-------------+-------------------------------------------------------|
+|   | ~SPC p r~   | open a recent file                                    |
+|   | ~SPC p R~   | replace a string                                      |
+|   | ~SPC p v~   | open project root in =vc-dir= or =magit=              |
+| * | ~SPC /~     | search in project with the best search tool available |
+| * | ~SPC r l    | resume the last completion buffer                     |
+|   | ~SPC p I~   | invalidate the projectile cache                       |
+|   | ~SPC p k~   | kill all project buffers                              |
+|   | ~SPC p r~   | open a recent file                                    |
 
 
 *Note for Windows Users*: To enable fast indexing the GNU ~find~ or

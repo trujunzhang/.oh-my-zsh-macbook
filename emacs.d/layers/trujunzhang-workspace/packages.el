@@ -31,6 +31,7 @@
 
 (defconst trujunzhang-workspace-packages
   '(
+    projectile
     typescript-mode
     ;; matlab-mode
     ;; bm
@@ -38,6 +39,7 @@
 
 (defun trujunzhang-workspace/init-matlab-mode()
   (use-package matlab-mode
+    ag
     :defer t))
 
 (defun trujunzhang-workspace/init-bm()
@@ -113,6 +115,11 @@
   (message "info: trujunzhang: post init package")
   )
 
+(defun trujunzhang-workspace/post-init-projectile()
+;;;  (setq projectile-project-search-path '("/Users/djzhang/Desktop/upwork-projects/CURRENT/python-ieatta-universal" "/Users/djzhang/Desktop/upwork-projects/CURRENT/python-politicl-universal"))
+
+  (setq projectile-enable-caching t)
+)
 
 (defun trujunzhang-workspace/post-init-typescript-mode()
   (message "info: trujunzhang: post init typescript-mode")
