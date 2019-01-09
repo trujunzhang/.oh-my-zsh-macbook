@@ -1,16 +1,15 @@
 
 
-(defun trujunzhang-workspace/sooheon-save-all()
+(defun trujunzhang-workspace/sooheon-save-all ()
   (interactive)
   (save-some-buffers t))
 
 
 (defun trujunzhang-workspace/prettier ()
   (interactive)
-  (shell-command
-   (format "%s --write %s"
-           (shell-quote-argument (executable-find "prettier"))
-           (shell-quote-argument (expand-file-name buffer-file-name))))
+  (shell-command (format "%s --write %s"
+                         (shell-quote-argument (executable-find "prettier"))
+                         (shell-quote-argument (expand-file-name buffer-file-name))))
   (revert-buffer t t t))
 
 
@@ -21,7 +20,8 @@
 (defun trujunzhang-workspace/indent-buffer ()
   "Indent the currently visited buffer."
   (interactive)
-  (indent-region (point-min) (point-max)))
+  (indent-region (point-min)
+                 (point-max)))
 
 (defun trujunzhang-workspace/indent-region-or-buffer ()
   "Indent a region if selected, otherwise the whole buffer."
@@ -29,7 +29,8 @@
   (save-excursion
     (if (region-active-p)
         (progn
-          (indent-region (region-beginning) (region-end))
+          (indent-region (region-beginning)
+                         (region-end))
           (message "Indented selected region."))
       (progn
         (indent-buffer)
@@ -38,30 +39,30 @@
 (defun get-point (symbol &optional arg)
   "get the point"
   (funcall symbol arg)
-  (point)
-  )
+  (point))
 
 (defun copy-thing (begin-of-thing end-of-thing &optional arg)
   "copy thing between beg & end into kill ring"
   (save-excursion
     (let ((beg (get-point begin-of-thing 1))
           (end (get-point end-of-thing arg)))
-      (copy-region-as-kill beg end)))
-  )
+      (copy-region-as-kill beg end))))
 
-(defun paste-to-mark(&optional arg)
+(defun paste-to-mark (&optional arg)
   "Paste things to mark, or to the prompt in shell-mode"
-  (let ((pasteMe 
-         (lambda()
-           (if (string= "shell-mode" major-mode)
-               (progn (comint-next-prompt 25535) (yank))
-             (progn (goto-char (mark)) (yank) )))))
+  (let ((pasteMe (lambda ()
+                   (if (string= "shell-mode" major-mode)
+                       (progn
+                         (comint-next-prompt 25535)
+                         (yank))
+                     (progn
+                       (goto-char (mark))
+                       (yank))))))
     (if arg
         (if (= arg 1)
             nil
           (funcall pasteMe))
-      (funcall pasteMe))
-    ))
+      (funcall pasteMe))))
 
 (defun copy-word (&optional arg)
   "Copy words at point into kill-ring"
@@ -70,14 +71,11 @@
   ;;(paste-to-mark arg)
   )
 
-(defun message-cursor()
+(defun message-cursor ()
   "message words at point from kill-ring"
   (interactive "P")
-  (let (cursorWord
-        (copy-word())
-        ))
-  (message cursorWord)
-  )
+  (let (cursorWord (copy-word ())))
+  (message cursorWord))
 
 (defun xx ()
   "print current word."

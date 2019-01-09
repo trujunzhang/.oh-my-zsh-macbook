@@ -119,6 +119,13 @@
 
   (message "info: trujunzhang: post init package for projectile!")
   (setq projectile-enable-caching t)
+
+  (projectile-register-project-type 'yarn '("package.json")
+                                    :compile "yarn"
+                                    :test "npm test"
+                                    :run "npm start"
+                                    :test-suffix ".test")
+
 )
 
 (defun trujunzhang-workspace/post-init-typescript-mode()
