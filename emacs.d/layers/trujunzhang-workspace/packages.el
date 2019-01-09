@@ -39,7 +39,6 @@
 
 (defun trujunzhang-workspace/init-matlab-mode()
   (use-package matlab-mode
-    ag
     :defer t))
 
 (defun trujunzhang-workspace/init-bm()
@@ -118,6 +117,7 @@
 (defun trujunzhang-workspace/post-init-projectile()
 ;;;  (setq projectile-project-search-path '("/Users/djzhang/Desktop/upwork-projects/CURRENT/python-ieatta-universal" "/Users/djzhang/Desktop/upwork-projects/CURRENT/python-politicl-universal"))
 
+  (message "info: trujunzhang: post init package for projectile!")
   (setq projectile-enable-caching t)
 )
 
