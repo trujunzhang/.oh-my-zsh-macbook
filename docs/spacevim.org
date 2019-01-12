@@ -1,0 +1,17 @@
+
+
+* Update plugins
+    
+       Use :SPUpdate command to update all the plugins and SpaceVim itself.
+           After :SPUpdate, you can assign plugins need to be updated. 
+           Use Tab to complete plugin names after :SPUpdate.
+
+
+* Get SpaceVim log
+     
+      Use :SPDebugInfo! command to display the log of SpaceVim. You also can use SPC h I to open a buffer with the issue template.
+
+
+* Custom Configuration
+  
+    The very first time SpaceVim starts up, it will ask you to choose a mode, then it will create a SpaceVim.d/init.toml in your HOME directory. All User configurations can be stored in your ~/.SpaceVim.d directory.

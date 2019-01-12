@@ -8,7 +8,7 @@
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 133))
 ("lerna.json"
- (filename . "~/Desktop/upwork-projects/CURRENT/python-ieatta-universal/lerna.json")
+ (filename . "~/Desktop/upwork-projects/CURRENT/python-politicl-universal/lerna.json")
  (front-context-string . "{\n  \"packages\": ")
  (rear-context-string)
  (position . 1))
