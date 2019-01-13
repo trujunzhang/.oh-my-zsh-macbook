@@ -226,18 +226,19 @@ alias cnpm="npm --registry=https://registry.npm.taobao.org \
 # https://hashrocket.com/blog/posts/keep-anaconda-from-constricting-your-homebrew-installs
 # Keep Anaconda from Constricting Your Homebrew Installs
 
+# method 1: anaconda3 for python
+export PATH="/anaconda3/bin:$PATH"
+
+# method 2: homebrew with anaconda3
 export SANS_ANACONDA="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# anaconda3 for python
-# export PATH="/anaconda3/bin:$PATH"
-
 # added by Anaconda3 4.4.0 installer
-export PATH="/anaconda3/bin:$SANS_ANACONDA"
+# export PATH="/anaconda3/bin:$SANS_ANACONDA"
 
 alias perseus="export PATH="\$SANS_ANACONDA" && echo Medusa decapitated."
 alias medusa="export PATH="/Applications/anaconda/bin:\$SANS_ANACONDA" && echo Perseus defeated."
 
-brew () {
+brewxxx () {
   perseus
   command brew "$@"
   medusa
