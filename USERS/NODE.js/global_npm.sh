@@ -9,6 +9,9 @@ npm install -g expo-cli
 npm install -g react-native-cli
 npm install -g create-react-native-app
 
+# react library
+npm install -g create-react-library
+
 # Lerna
 npm install --global lerna
 
