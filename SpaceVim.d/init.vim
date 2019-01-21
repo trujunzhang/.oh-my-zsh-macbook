@@ -50,7 +50,6 @@ let g:ale_fixers = {
 
 call SpaceVim#layers#load('autocomplete')
 call SpaceVim#layers#load('checkers', { 'show_cursor_error': 0 })
-call SpaceVim#layers#load('colorscheme')
 " call SpaceVim#layers#load('cscope')
 " call SpaceVim#layers#load('ctrlp')
 " call SpaceVim#layers#load('denite')
@@ -174,11 +173,6 @@ iabbrev ccopy Copyright 2017 techgaun, all rights reserved.
 iabbrev mysite http://www.techgaun.com
 iabbrev mygh https://github.com/techgaun
 iabbrev mytw https://twitter.com/techgaun
-
-map <Left> :echo "हुँदै हुँदैन!"<cr>
-map <Right> :echo "हुँदै हुँदैन!"<cr>
-map <Up> :echo "हुँदै हुँदैन!"<cr>
-map <Down> :echo "हुँदै हुँदैन!"<cr>
 
 nnoremap <leader>ev :vsplit ~/.SpaceVim.d/init.vim<cr>
 nnoremap <leader>Sv :source ~/.SpaceVim.d/init.vim<cr>
