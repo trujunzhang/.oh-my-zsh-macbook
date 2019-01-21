@@ -84,7 +84,7 @@ call SpaceVim#layers#load('lang#typescript')
 " call SpaceVim#layers#load('lsp')
 call SpaceVim#layers#load('shell')
 " call SpaceVim#layers#load('tags')
-" call SpaceVim#layers#load('tmux')
+call SpaceVim#layers#load('tmux')
 " call SpaceVim#layers#load('tools')
 " call SpaceVim#layers#load('VersionControl')
 

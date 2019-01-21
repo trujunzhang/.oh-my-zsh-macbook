@@ -15,6 +15,8 @@ directoryLink "emacs(Private Layout)" "$HOME/.oh-my-zsh-macbook/emacs.d/layers/t
 
 directoryLink "SpaceVim.d(UserProfile)"  "$HOME/.oh-my-zsh-macbook/SpaceVim.d" "$HOME/.SpaceVim.d"
 
+fileLink "gvimrc(MacVim)" "$HOME/.oh-my-zsh-macbook/gvimrc.used" "$HOME/.gvimrc"
+
 # pending(the following)
 # fileLink ".spacevim" "$HOME/.oh-my-zsh-macbook/spacevim.used" "$HOME/.spacevim"
 

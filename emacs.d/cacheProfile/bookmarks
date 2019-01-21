@@ -7,8 +7,13 @@
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 133))
-("lerna.json"
+("lerna.json(politicl)"
  (filename . "~/Desktop/upwork-projects/CURRENT/python-politicl-universal/lerna.json")
+ (front-context-string . "{\n  \"packages\": ")
+ (rear-context-string)
+ (position . 1))
+ ("lerna.json(ieatta)"
+ (filename . "~/Desktop/upwork-projects/CURRENT/python-ieatta-universal/lerna.json")
  (front-context-string . "{\n  \"packages\": ")
  (rear-context-string)
  (position . 1))
@@ -17,7 +22,7 @@
  (front-context-string . "\n)\n\n(defun truju")
  (rear-context-string . "ble-caching t)\n\n")
  (position . 4156))
-("UsersCell.tsx"
+("UsersCell.tsx(ieatta)"
  (filename . "~/Desktop/upwork-projects/CURRENT/python-ieatta-universal/packages/appClient/apps/client/components/lib/cells/UsersCell.tsx")
  (front-context-string . "ryText = `$ ${us")
  (rear-context-string . "   const seconda")
