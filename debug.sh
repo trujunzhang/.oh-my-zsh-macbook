@@ -12,6 +12,8 @@ fileLink ".spacemacs" "$HOME/.oh-my-zsh-macbook/spacemacs.used" "$HOME/.spacemac
 
 directoryLink "emacs(Private Layout)" "$HOME/.oh-my-zsh-macbook/emacs.d/layers/trujunzhang-workspace"  "$HOME/.emacs.d/private/trujunzhang-workspace"
 
+fileLink ".spacevim" "$HOME/.oh-my-zsh-macbook/spacevim.used" "$HOME/.spacevim"
+
 
 echo ""
 echo "This script is about to run npm."
