@@ -1,3 +1,5 @@
+" https://github.com/liuchengxu/space-vim
+
 " Comment the following line if you don't want Vim and NeoVim to share the
 " same plugin download directory.
 let g:spacevim_plug_home = '~/.vim/plugged'
