@@ -1,6 +1,9 @@
 # Global
 npm install -g yarn
 
+# esy
+npm install -g esy
+
 # Heroku-cli
 npm install -g heroku
 

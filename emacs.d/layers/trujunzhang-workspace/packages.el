@@ -118,13 +118,13 @@
 ;;;  (setq projectile-project-search-path '("/Users/djzhang/Desktop/upwork-projects/CURRENT/python-ieatta-universal" "/Users/djzhang/Desktop/upwork-projects/CURRENT/python-politicl-universal"))
 
   (message "info: trujunzhang: post init package for projectile!")
-  (setq projectile-enable-caching t)
+  ;; (setq projectile-enable-caching t)
 
-  (projectile-register-project-type 'yarn '("package.json")
-                                    :compile "yarn"
-                                    :test "npm test"
-                                    :run "npm start"
-                                    :test-suffix ".test")
+  ;; (projectile-register-project-type 'yarn '("package.json")
+                                    ;; :compile "yarn"
+                                    ;; :test "npm test"
+                                    ;; :run "npm start"
+                                    ;; :test-suffix ".test")
 
 )
 
