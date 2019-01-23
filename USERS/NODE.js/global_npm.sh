@@ -4,6 +4,10 @@ npm install -g yarn
 # esy
 npm install -g esy
 
+# neovim
+npm install -g import-js
+npm install -g neovim
+
 # Heroku-cli
 npm install -g heroku
 
