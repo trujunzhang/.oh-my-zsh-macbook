@@ -16,6 +16,7 @@
     colorscheme = "molokai"
     colorscheme_bg = "dark"
     background = "dark"
+    guifont = "SauceCodePro Nerd Font Mono:h11"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
@@ -26,6 +27,9 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_display_mode = false
+    # Macvim
+    statusline_unicode_symbols = false
+    enable_tabline_filetype_icon = false
 
 # Enable autocomplete layer
 [[layers]]
@@ -53,3 +57,6 @@ name = "tmux"
 
 [[layers]]
 name = "lang#markdown"
+
+[[custom_plugins]]
+ name = "907th/vim-auto-save"

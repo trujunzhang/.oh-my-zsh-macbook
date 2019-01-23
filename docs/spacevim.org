@@ -15,3 +15,20 @@
 * Custom Configuration
   
     The very first time SpaceVim starts up, it will ask you to choose a mode, then it will create a SpaceVim.d/init.toml in your HOME directory. All User configurations can be stored in your ~/.SpaceVim.d directory.
+
+* "lang#typescript"
+   
+       https://spacevim.org/layers/lang/typescript/
+
+        Key bindings
+        key binding	Description
+        SPC l c	type definition
+        SPC l d	show documentation
+        SPC l e	rename symbol
+        SPC l f	code fix
+        SPC l g	definition
+        SPC l i	import
+        SPC l r	references
+        SPC l s	search
+        SPC l t	type
+        g d	defintion preview
