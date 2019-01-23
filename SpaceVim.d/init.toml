@@ -42,6 +42,7 @@ default_height = 30
 name = "lang#javascript"
 
 [[layers]]
+# /Users/djzhang/.cache/vimfiles/repos/github.com/mhartington/nvim-typescript/install.sh
 name = "lang#typescript"
 
 [[layers]]
