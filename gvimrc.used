@@ -10,7 +10,7 @@ let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would 
 
 """ # "ctrlpvim/ctrlp.vim"
 let g:ctrlp_compare_lim = 0
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<space-p-f>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_root_markers = ['pom.xml', '.projectile']
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/build/*,*/coverage/*     " MacOSX/Linux

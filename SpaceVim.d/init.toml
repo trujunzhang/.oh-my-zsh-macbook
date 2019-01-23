@@ -61,5 +61,7 @@ name = "lang#markdown"
 [[custom_plugins]]
  name = "907th/vim-auto-save"
 
-[[custom_plugins]]
- name = "ctrlpvim/ctrlp.vim"
+[[layers]]
+name = "ctrlp"
+# [[custom_plugins]]
+#  name = "ctrlpvim/ctrlp.vim"
