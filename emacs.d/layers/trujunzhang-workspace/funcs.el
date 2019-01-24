@@ -1,5 +1,17 @@
 
 
+(defun trujunzhang-workspace/gui-default()
+ (setq default-frame-alist
+            '(
+              (tool-bar-lines . 0)
+              (width . 160)
+              (height . 40)
+              (background-color . "honeydew")
+              (left . 450)
+              (top . 400)))
+)
+
+
 (defun trujunzhang-workspace/sooheon-save-all ()
   (interactive)
   (save-some-buffers t))
