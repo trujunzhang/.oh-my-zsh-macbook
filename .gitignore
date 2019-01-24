@@ -21,3 +21,8 @@ emacs.d/vendors/matlab-emacs/
 .env
 
 CocoaPods/**
+
+
+# JetBrains
+**/.idea/**/*.xml
+.idea/**/*
