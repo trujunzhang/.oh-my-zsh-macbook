@@ -192,6 +192,7 @@ alias expand="exp android"
 
 # Emacs
 alias emacsd="emacs -debug-init"
+alias emacs='open -a /Applications/Emacs.app $1'
 
 # geny motion
 alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'genymotion'"

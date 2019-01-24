@@ -58,8 +58,8 @@ name = "tmux"
 [[layers]]
 name = "lang#markdown"
 
-[[custom_plugins]]
- name = "907th/vim-auto-save"
+# [[custom_plugins]]
+#  name = "907th/vim-auto-save"
 
 [[layers]]
 name = "ctrlp"
