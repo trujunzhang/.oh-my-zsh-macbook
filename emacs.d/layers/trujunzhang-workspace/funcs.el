@@ -6,9 +6,8 @@
               (tool-bar-lines . 0)
               (width . 160)
               (height . 40)
-              (background-color . "honeydew")
               (left . 450)
-              (top . 400)))
+              (top . 350)))
 )
 
 

@@ -115,6 +115,9 @@
   )
 
 (defun trujunzhang-workspace/post-init-projectile()
+
+   (trujunzhang-workspace/gui-default)
+
 ;;;  (setq projectile-project-search-path '("/Users/djzhang/Desktop/upwork-projects/CURRENT/python-ieatta-universal" "/Users/djzhang/Desktop/upwork-projects/CURRENT/python-politicl-universal"))
 
   (message "info: trujunzhang: post init package for projectile!")
