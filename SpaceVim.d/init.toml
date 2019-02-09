@@ -29,7 +29,9 @@
     enable_statusline_display_mode = false
     # Macvim
     statusline_unicode_symbols = false
-    enable_tabline_filetype_icon = false
+    enable_tabline_filetype_icon = true
+    # Side Tree
+    # filemanager = 'nerdtree' 
 
 # Enable autocomplete layer
 [[layers]]
@@ -43,25 +45,27 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
-name = "lang#javascript"
-
-[[layers]]
-# /Users/djzhang/.cache/vimfiles/repos/github.com/mhartington/nvim-typescript/install.sh
-name = "lang#typescript"
-
-[[layers]]
 name = "colorscheme"
 
 [[layers]]
-name = "tmux"
+  name = "lang#javascript"
+  enable_flow_syntax = false
 
 [[layers]]
-name = "lang#markdown"
+  name = "format"
 
-# [[custom_plugins]]
-#  name = "907th/vim-auto-save"
+#[[layers]]
+# /Users/djzhang/.cache/vimfiles/repos/github.com/mhartington/nvim-typescript/install.sh
+#name = "lang#typescript"
 
-[[layers]]
-name = "ctrlp"
-# [[custom_plugins]]
-#  name = "ctrlpvim/ctrlp.vim"
+#[[layers]]
+#name = "lang#markdown"
+
+#[[custom_plugins]]
+#name = "907th/vim-auto-save"
+
+#[[layers]]
+#name = "ctrlp"
+
+#[[custom_plugins]]
+#name = "prettier/vim-prettier"

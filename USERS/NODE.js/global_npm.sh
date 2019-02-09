@@ -22,6 +22,9 @@ npm install -g create-react-library
 # Lerna
 npm install --global lerna
 
+# javascript
+npm install -g eslint-cli
+
 # typescript with lint
 npm install -g typescript
 npm install -g tslint

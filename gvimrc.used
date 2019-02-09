@@ -2,6 +2,7 @@ set lines=45 columns=160
 
 set encoding=utf8
 let g:airline_powerline_fonts = 1
+let g:spacevim_guifont='Knack\ Nerd\ Font:h12'
 
 """ # 907th/vim-auto-save
 let g:auto_save = 1  " enable AutoSave on Vim startup

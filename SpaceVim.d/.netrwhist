@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/djzhang/Desktop/upwork-projects/CURRENT/python-politicl-universal/packages/appClient/src/redux'
 let g:netrw_dirhist_2='/Users/djzhang/.oh-my-zsh-macbook'
 let g:netrw_dirhist_3='/Users/djzhang/.oh-my-zsh-macbook/SpaceVim.d'
 let g:netrw_dirhist_4='/Users/djzhang/.oh-my-zsh-macbook/SpaceVim.d/autoload'
+let g:netrw_dirhist_5='/Users/djzhang/Desktop/upwork-projects/CURRENT/python-politicl-universal/packages/appClient'
