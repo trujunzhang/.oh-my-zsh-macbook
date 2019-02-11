@@ -57,17 +57,14 @@ name = "colorscheme"
   # enable_flow_syntax = false
 
 # [[layers]]
-  # name = "format"
-
-# [[layers]]
 # /Users/djzhang/.cache/vimfiles/repos/github.com/mhartington/nvim-typescript/install.sh
 # name = "lang#typescript"
 
-# [[custom_plugins]]
-# name = "907th/vim-auto-save"
+[[custom_plugins]]
+name = "907th/vim-auto-save"
 
-[[layers]]
-name = "ctrlp"
+[[custom_plugins]]
+name = "Quramy/tsuquyomi"
 
-# [[custom_plugins]]
-# name = "prettier/vim-prettier"
+[[custom_plugins]]
+name = "leafgarland/typescript-vim"
