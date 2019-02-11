@@ -7,8 +7,8 @@ function! myspacevim#before() abort
 endfunction
 
 function! myspacevim#init() abort
-  call SpaceVim#layers#load('lang#html')
-  call SpaceVim#layers#load('lang#javascript', {'build': './install.sh'})
+  " call SpaceVim#layers#load('lang#html')
+  " call SpaceVim#layers#load('lang#javascript', {'build': './install.sh'})
 endfunction
 
 function! myspacevim#after() abort

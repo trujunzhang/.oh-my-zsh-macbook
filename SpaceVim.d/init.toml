@@ -52,22 +52,22 @@ default_height = 30
 [[layers]]
 name = "colorscheme"
 
-[[layers]]
-  name = "lang#javascript"
-  enable_flow_syntax = false
+# [[layers]]
+  # name = "lang#javascript"
+  # enable_flow_syntax = false
 
-[[layers]]
-  name = "format"
+# [[layers]]
+  # name = "format"
 
-[[layers]]
+# [[layers]]
 # /Users/djzhang/.cache/vimfiles/repos/github.com/mhartington/nvim-typescript/install.sh
-name = "lang#typescript"
+# name = "lang#typescript"
 
-[[custom_plugins]]
-name = "907th/vim-auto-save"
+# [[custom_plugins]]
+# name = "907th/vim-auto-save"
 
 [[layers]]
 name = "ctrlp"
 
-[[custom_plugins]]
-name = "prettier/vim-prettier"
+# [[custom_plugins]]
+# name = "prettier/vim-prettier"
