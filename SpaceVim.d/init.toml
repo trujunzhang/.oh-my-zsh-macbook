@@ -30,14 +30,19 @@
     # Macvim
     statusline_unicode_symbols = false
     enable_tabline_filetype_icon = true
+    # my space
+    bootstrap_before = "myspacevim#init"
     # Side Tree
     # filemanager = 'nerdtree' 
+    # Project
+    project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', 'package.json', '.SpaceVim.d/','.next','node_modules','ios','android','build','production-cloud','production-server']
 
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
 auto-completion-return-key-behavior = "complete"
 auto-completion-tab-key-behavior = "smart"
+
 
 [[layers]]
 name = 'shell'
@@ -54,18 +59,15 @@ name = "colorscheme"
 [[layers]]
   name = "format"
 
-#[[layers]]
+[[layers]]
 # /Users/djzhang/.cache/vimfiles/repos/github.com/mhartington/nvim-typescript/install.sh
-#name = "lang#typescript"
+name = "lang#typescript"
 
-#[[layers]]
-#name = "lang#markdown"
+[[custom_plugins]]
+name = "907th/vim-auto-save"
 
-#[[custom_plugins]]
-#name = "907th/vim-auto-save"
+[[layers]]
+name = "ctrlp"
 
-#[[layers]]
-#name = "ctrlp"
-
-#[[custom_plugins]]
-#name = "prettier/vim-prettier"
+[[custom_plugins]]
+name = "prettier/vim-prettier"
