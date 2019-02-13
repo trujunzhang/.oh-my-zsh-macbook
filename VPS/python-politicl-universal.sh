@@ -4,7 +4,7 @@ source ../bash/files-functions.sh
 
 appName="python-politicl-universal"
 gitProjectTmpSrc="/tmp/${appName}"
-currentBranch="add.database.12"
+currentBranch="fix.filter.13"
 
 if [ ! -d "${gitProjectTmpSrc}" ]
 then
