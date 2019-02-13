@@ -21,4 +21,4 @@ git checkout "${currentBranch}"
 
 git reset --hard
 
-yarn && npm run fix && yarn tests && yarn checks &&  yarn ts.lints  && yarn build.current.pending && yarn build.web.server && yarn build.web.cloud
+yarn && yarn tests && yarn checks &&  yarn ts.lints  && yarn build.current.pending && yarn build.web.server && yarn build.web.cloud
