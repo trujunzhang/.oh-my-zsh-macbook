@@ -3,19 +3,19 @@
 source ../bash/files-functions.sh
 
 appName="python-politicl-universal"
-gitProjectTmpSrc="/tmp/${appName}"
+gitProjectSrcDir="$HOME/current/${appName}"
 currentBranch="fix.filter.13"
 
-if [ ! -d "${gitProjectTmpSrc}" ]
+if [ ! -d "${gitProjectSrcDir}" ]
 then
-    git clone git@bitbucket.org:sidkarwal/python-politicl-universal.git "${gitProjectTmpSrc}"
-    echo "Directory does not exist. ${gitProjectTmpSrc}"
+    git clone git@bitbucket.org:sidkarwal/python-politicl-universal.git "${gitProjectSrcDir}"
+    echo "Directory does not exist. ${gitProjectSrcDir}"
 else
-    # rm -rf "${gitProjectTmpSrc}"
-    echo "Directory already exist. ${gitProjectTmpSrc}"
+    # rm -rf "${gitProjectSrcDir}"
+    echo "Directory already exist. ${gitProjectSrcDir}"
 fi
 
-cd "${gitProjectTmpSrc}"
+cd "${gitProjectSrcDir}"
 
 git checkout "${currentBranch}"
 
