@@ -4,6 +4,7 @@ source ../bash/files-functions.sh
 
 appName="python-politicl-universal"
 gitProjectTmpSrc="/tmp/${appName}"
+currentBranch="add.database.12"
 
 if [ ! -d "${gitProjectTmpSrc}" ]
 then
@@ -16,5 +17,7 @@ fi
 git clone git@bitbucket.org:sidkarwal/python-politicl-universal.git "${gitProjectTmpSrc}"
 
 cd "${gitProjectTmpSrc}"
+
+git checkout "${currentBranch}"
 
 yarn && npmf && yarn tests && yarn checks &&  yarn ts.lints  && yarn build.current.pending && yarn build.web.server && yarn build.web.cloud
