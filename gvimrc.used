@@ -4,6 +4,11 @@ set encoding=utf8
 let g:airline_powerline_fonts = 1
 let g:spacevim_guifont='Knack\ Nerd\ Font:h12'
 
+""" Quramy/tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
+
+
 """ # 907th/vim-auto-save
 let g:auto_save = 1  " enable AutoSave on Vim startup
 let g:auto_save_silent = 1  " do not display the auto-save notification
