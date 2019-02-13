@@ -2,13 +2,13 @@
 
 ** ssh for bitbucket
 
-*** ssh-keygen (passphrase:wanghao)
+*** ssh-keygen (passphrase:none)
 
 root@wanghao:~/.ssh# ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/root/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):[wanghao]
-Enter same passphrase again: [wanghao]
+Enter passphrase (empty for no passphrase):[]
+Enter same passphrase again: []
 Your identification has been saved in /root/.ssh/id_rsa.
 Your public key has been saved in /root/.ssh/id_rsa.pub.
 The key fingerprint is:
