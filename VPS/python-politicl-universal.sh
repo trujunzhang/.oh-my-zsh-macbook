@@ -8,13 +8,12 @@ currentBranch="add.database.12"
 
 if [ ! -d "${gitProjectTmpSrc}" ]
 then
+    git clone git@bitbucket.org:sidkarwal/python-politicl-universal.git "${gitProjectTmpSrc}"
     echo "Directory does not exist. ${gitProjectTmpSrc}"
 else
-    rm -rf "${gitProjectTmpSrc}"
+    # rm -rf "${gitProjectTmpSrc}"
     echo "Directory already exist. ${gitProjectTmpSrc}"
 fi
-
-git clone git@bitbucket.org:sidkarwal/python-politicl-universal.git "${gitProjectTmpSrc}"
 
 cd "${gitProjectTmpSrc}"
 
