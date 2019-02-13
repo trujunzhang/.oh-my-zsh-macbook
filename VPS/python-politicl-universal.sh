@@ -20,4 +20,6 @@ cd "${gitProjectTmpSrc}"
 
 git checkout "${currentBranch}"
 
+git reset --hard
+
 yarn && npmf && yarn tests && yarn checks &&  yarn ts.lints  && yarn build.current.pending && yarn build.web.server && yarn build.web.cloud
