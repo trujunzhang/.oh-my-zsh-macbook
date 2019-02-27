@@ -71,3 +71,6 @@ name = "Quramy/tsuquyomi"
 
 [[custom_plugins]]
 name = "leafgarland/typescript-vim"
+
+[[custom_plugins]]
+name = "leshill/vim-json"
