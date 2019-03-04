@@ -5,14 +5,17 @@ yarn config set registry 'https://registry.npm.taobao.org'
 npm install -g yarn
 
 # esy
-npm install -g esy
+# npm install -g esy
+
+# sketch plugins
+npm install -g skpm
 
 # neovim
 npm install -g import-js
 npm install -g neovim
 
 # Heroku-cli
-npm install -g heroku
+# npm install -g heroku
 
 # react-native
 npm install -g expo-cli

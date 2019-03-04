@@ -247,3 +247,7 @@ brewxxx () {
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# flutter sdk
+export PATH="$PATH:$HOME/Documents/flutterSDK/bin"
