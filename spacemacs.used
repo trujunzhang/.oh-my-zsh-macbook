@@ -42,7 +42,7 @@ values."
      ;;; cedet
      semantic
      helm
-     auto-completion
+     ;; auto-completion
      better-defaults
      emacs-lisp
      git
