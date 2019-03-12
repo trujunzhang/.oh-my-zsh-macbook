@@ -122,6 +122,9 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/local/sbin
 
+export GEM_HOME="$HOME/.rvm/gems/ruby-2.6.0"
+export GEM_PATH="$HOME/.rvm/gems/ruby-2.6.0:$HOME/.rvm/gems/ruby-2.6.0@global"
+
 ## [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 export PATH="$HOME/.cask/bin:$PATH"
