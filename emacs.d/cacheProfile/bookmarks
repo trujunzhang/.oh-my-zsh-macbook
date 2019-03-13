@@ -17,8 +17,8 @@
  (front-context-string . "{\n  \"packages\": ")
  (rear-context-string)
  (position . 1))
-("packages.el"
- (filename . "~/.oh-my-zsh-macbook/emacs.d/layers/trujunzhang-workspace/packages.el")
+("project.org"
+ (filename . "~/Documents/Organizations/projects.org")
  (front-context-string . "\n)\n\n(defun truju")
  (rear-context-string . "ble-caching t)\n\n")
  (position . 4156))

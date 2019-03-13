@@ -12,11 +12,13 @@ export ZSH=~/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 
 if [ -n "$INSIDE_EMACS" ]; then
-    export ZSH_THEME="apple"
+    # export ZSH_THEME="apple"
 else
-    export ZSH_THEME="robbyrussell"
+    # export ZSH_THEME="robbyrussell"
 fi
 
+# ZSH_THEME=kafeitu
+ZSH_THEME=robbyrussell
 
 # Android SDK
 # via homebrew
