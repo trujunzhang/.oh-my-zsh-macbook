@@ -65,7 +65,10 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(vue-mode
+                                      lsp-mode
+                                      lsp-vue
+                                      company-lsp)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -320,6 +323,15 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+(require 'vue-mode)
+  (add-to-list 'vue-mode-hook #'smartparens-mode)
+(require 'lsp-mode)
+  (require 'lsp-vue)
+  (add-hook 'vue-mode-hook #'lsp-vue-mmm-enable)
+  (with-eval-after-load 'lsp-mode
+    (require 'lsp-flycheck))
+(require 'company-lsp)
+  (push 'company-lsp company-backends)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -331,7 +343,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm-w3m w3m web-completion-data dash-functional company auto-complete tern f s dash ws-butler winum volatile-highlights vi-tilde-fringe uuidgen toc-org spaceline powerline restart-emacs rainbow-delimiters popwin persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff xterm-color which-key web-mode web-beautify use-package unfill tide tagedit stickyfunc-enhance srefactor smeargle slim-mode shell-pop scss-mode sass-mode pug-mode pcre2el orgit org-projectile org-present org-pomodoro org-mime org-download mwim multi-term mmm-mode markdown-toc magit-gitflow macrostep livid-mode less-css-mode json-mode js2-refactor js-doc hydra htmlize helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy flyspell-correct-helm flycheck-pos-tip exec-path-from-shell evil-visualstar evil-magit evil-escape evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl define-word company-web company-tern company-statistics column-enforce-mode coffee-mode clean-aindent-mode bind-map auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+    (vue-mode edit-indirect ssass-mode vue-html-mode lsp-vue company-lsp lsp-mode ht helm-w3m w3m web-completion-data dash-functional company auto-complete tern f s dash ws-butler winum volatile-highlights vi-tilde-fringe uuidgen toc-org spaceline powerline restart-emacs rainbow-delimiters popwin persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff xterm-color which-key web-mode web-beautify use-package unfill tide tagedit stickyfunc-enhance srefactor smeargle slim-mode shell-pop scss-mode sass-mode pug-mode pcre2el orgit org-projectile org-present org-pomodoro org-mime org-download mwim multi-term mmm-mode markdown-toc magit-gitflow macrostep livid-mode less-css-mode json-mode js2-refactor js-doc hydra htmlize helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy flyspell-correct-helm flycheck-pos-tip exec-path-from-shell evil-visualstar evil-magit evil-escape evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl define-word company-web company-tern company-statistics column-enforce-mode coffee-mode clean-aindent-mode bind-map auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

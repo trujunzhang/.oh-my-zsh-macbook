@@ -4,6 +4,10 @@ npm install -g yarn
 # Config.
 yarn config set registry 'https://registry.npm.taobao.org'
 
+# angular 
+npm install -g @angular/cli
+npm install -g vue-language-server
+
 # esy
 # npm install -g esy
 
