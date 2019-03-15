@@ -2,12 +2,10 @@
 
 (setq recentf-list
       '(
-        "/Users/djzhang/Documents/Organizations/IDES/spacemacs/spacemacs/.cache/recentf"
-        "/Users/djzhang/Documents/Organizations/IDES/spacemacs/spacemacs/spacemacs.mk"
-        "/Users/djzhang/Documents/Organizations/IDES/spacemacs/spacemacs/CHANGELOG.org"
+        "/Users/djzhang/Desktop/upwork-projects/CURRENT/ADOBEXDTutorials/createASocialProject_lerna/package.json"
+        "/Users/djzhang/Desktop/upwork-projects/CURRENT/python-politicl-universal/package.json"
+        "/Users/djzhang/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/Organizations/projects.org"
         "/Users/djzhang/Documents/Organizations/IDES/spacemacs/spacemacs/core/core-debug.el"
-        "/Users/djzhang/Documents/Organizations/IDES/spacemacs/spacemacs/core/core-auto-completion.el"
-        "/Users/djzhang/Documents/Organizations/IDES/spacemacs/spacemacs/network-security.data"
         ))
 
 (setq recentf-filter-changer-current 'nil)
