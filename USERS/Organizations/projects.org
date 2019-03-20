@@ -16,7 +16,14 @@
  *** styled-icons (Popular icon packs like Font Awesome, Material Design, and Octicons, available as React Styled Components) 
    [[file+emacs:/Users/djzhang/Documents/Organizations/TERMS/styled-components/thirdLibs/styled-icons][styled-icons]]
 
+* Awesome
+
+**  svg
+   [[file+emacs:/Users/djzhang/Documents/Organizations/Awesome/awesome-svg][awesome-svg]]
 
 
+* Vector Icons
 
+** ionicons
 
+/Users/djzhang/Documents/Organizations/TERMS/VectorIcons/react-ionicons

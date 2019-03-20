@@ -4,4 +4,5 @@
     "~/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/" 
     "~/Documents/Organizations/TERMS/styled-components/thirdLibs/styled-icons/"
     "~/Documents/Organizations/Awesome/awesome-emacs"
+    "~/Documents/Organizations/Awesome/awesome-svg"
 )
