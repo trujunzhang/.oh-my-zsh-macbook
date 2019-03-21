@@ -345,6 +345,9 @@ you should place your code here."
     (require 'lsp-flycheck))
 (require 'company-lsp)
   (push 'company-lsp company-backends)
+
+;;  Symbol’s function definition is void: lsp-make-traverser
+(add-to-list 'exec-path "/Users/djzhang/.nvm/versions/node/v10.8.0/bin")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
