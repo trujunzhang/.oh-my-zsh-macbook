@@ -4,9 +4,12 @@ npm install -g yarn
 # Config.
 yarn config set registry 'https://registry.npm.taobao.org'
 
-# angular 
+# angular.js
 npm install -g @angular/cli
-npm install -g vue-language-server
+
+# vue.js
+npm install -g vue-language-server # Vue tooling for VS Code, powered by vue-language-server.
+npm install -g @vue/cli
 
 # esy
 # npm install -g esy
