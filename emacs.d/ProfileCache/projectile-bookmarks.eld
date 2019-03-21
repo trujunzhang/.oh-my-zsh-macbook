@@ -1,4 +1,5 @@
 (
+    "~/Desktop/upwork-projects/CURRENT/webpack-politicl-lerna"
     "~/Desktop/upwork-projects/CURRENT/ADOBEXDTutorials/createASocialProject_lerna"
     "~/Documents/Organizations/IDES/spacemacs/spacemacs/" 
     "~/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/" 
