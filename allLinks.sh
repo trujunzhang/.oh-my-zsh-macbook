@@ -6,7 +6,7 @@ OH_MY_ZSH_HOME="$ORGANIZATIONS_HOME/IDES/oh-my-zsh/oh-my-zsh"
 SPACEMACS_HOME="$ORGANIZATIONS_HOME/IDES/spacemacs/spacemacs"
 SPACEMACS_W3M_HOME="$ORGANIZATIONS_HOME/IDES/spacemacs/venmos/w3m-layer"
 SPACEMACS_VUE_HOME="$ORGANIZATIONS_HOME/IDES/spacemacs/lawrsp/vue-layer"
-
+POWER_LEVEL_9K_HOME="$ORGANIZATIONS_HOME/IDES/oh-my-zsh/powerlevel9k"
 
 #!/usr/bin/env bash
 
@@ -16,6 +16,7 @@ source ./bash/files-functions.sh
 directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_HOME"  "$HOME/.oh-my-zsh"
 
 directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/custom/plugins/trujunzhang"  "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
+directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"  "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
 
 # zshrc(rc)
 
