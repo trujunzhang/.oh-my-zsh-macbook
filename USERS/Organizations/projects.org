@@ -27,3 +27,14 @@
 ** ionicons
 
 /Users/djzhang/Documents/Organizations/TERMS/VectorIcons/react-ionicons
+
+
+* Babel7 + Typescript 
+
+** Rollup
+
+*** Template Projects
+    [[file+emacs:/Users/djzhang/Documents/Organizations/Babel7-TS/rollup-typescript-babel][rollup-typescript-babel]]
+    
+  
+

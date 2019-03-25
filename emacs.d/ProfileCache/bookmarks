@@ -24,7 +24,7 @@
  (rear-context-string)
  (position . 1))
 ("project.org"
- (filename . "~/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS")
+ (filename . "~/Documents/Organizations")
  (front-context-string . "\n)\n\n(defun truju")
  (rear-context-string . "ble-caching t)\n\n")
  (position . 1))
