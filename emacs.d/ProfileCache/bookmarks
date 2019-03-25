@@ -2,34 +2,35 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("djzhangBuffer"
+(
+("lerna.json(webpack-politicl-lerna)"
+ (filename .  "~/Desktop/upwork-projects/CURRENT/webpack-politicl-lerna")
+ (front-context-string . "\n\n    \"@expo/vec")
+ (rear-context-string . "-32.0.0.tar.gz\"\n")
+ (position . 1))
+("djzhangBuffer"
  (filename . "~/.djzhang_node/djzhangBuffer")
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
- (position . 133))
+ (position . 1))
 ("lerna.json(politicl)"
  (filename . "~/Desktop/upwork-projects/CURRENT/python-politicl-universal/lerna.json")
  (front-context-string . "{\n  \"packages\": ")
  (rear-context-string)
  (position . 1))
- ("lerna.json(ieatta)"
+("lerna.json(ieatta)"
  (filename . "~/Desktop/upwork-projects/CURRENT/python-ieatta-universal/lerna.json")
  (front-context-string . "{\n  \"packages\": ")
  (rear-context-string)
  (position . 1))
 ("project.org"
- (filename . "~/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/Organizations")
+ (filename . "~/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS")
  (front-context-string . "\n)\n\n(defun truju")
  (rear-context-string . "ble-caching t)\n\n")
- (position . 4156))
-("UsersCell.tsx(ieatta)"
- (filename . "~/Desktop/upwork-projects/CURRENT/python-ieatta-universal/packages/appClient/apps/client/components/lib/cells/UsersCell.tsx")
- (front-context-string . "ryText = `$ ${us")
- (rear-context-string . "   const seconda")
- (position . 1484))
+ (position . 1))
 ("keybindings.el"
- (filename . "~/.oh-my-zsh-macbook/emacs.d/layers/trujunzhang-workspace/keybindings.el")
+ (filename . "~/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/emacs.d/layers/trujunzhang-workspace/keybindings.el")
  (front-context-string . "  \"dj\"    'bookm")
  (rear-context-string . "  'bookmark-set\n")
- (position . 328))
+ (position . 1))
 )
