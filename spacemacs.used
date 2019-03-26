@@ -63,7 +63,7 @@ values."
      markdown
      org
      (shell :variables
-        shell-default-shell 'ansi-term
+        shell-default-shell 'eshell
         shell-default-height 30
         shell-default-term-shell "/bin/zsh"
         shell-default-position 'bottom)
