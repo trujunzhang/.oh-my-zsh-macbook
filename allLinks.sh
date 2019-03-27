@@ -7,10 +7,14 @@ SPACEMACS_HOME="$ORGANIZATIONS_HOME/IDES/spacemacs/spacemacs"
 SPACEMACS_W3M_HOME="$ORGANIZATIONS_HOME/IDES/spacemacs/venmos/w3m-layer"
 SPACEMACS_VUE_HOME="$ORGANIZATIONS_HOME/IDES/spacemacs/lawrsp/vue-layer"
 POWER_LEVEL_9K_HOME="$ORGANIZATIONS_HOME/IDES/oh-my-zsh/powerlevel9k"
+COCOAPODS_HOME="$ORGANIZATIONS_HOME/IDES/cocoapods/.cocoapods"
 
 #!/usr/bin/env bash
 
 source ./bash/files-functions.sh
+
+# cocoapods(ruby)
+directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
 
 # .oh-my-zsh
 directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_HOME"  "$HOME/.oh-my-zsh"

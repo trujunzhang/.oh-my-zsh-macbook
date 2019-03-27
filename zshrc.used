@@ -90,7 +90,7 @@ PYTHONPATH=$PYTHONPATH:/Users/djzhang/Desktop/upwork-projects/politicl/bitbucket
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(trujunzhang autojump git brew nvm history zsh-syntax-highlighting)
+plugins=(trujunzhang autojump git brew nvm history)
 
 # User configuration
 

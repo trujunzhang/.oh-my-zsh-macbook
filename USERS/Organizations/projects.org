@@ -35,6 +35,16 @@
 
 *** Template Projects
     [[file+emacs:/Users/djzhang/Documents/Organizations/Babel7-TS/rollup-typescript-babel][rollup-typescript-babel]]
-    
-  
+
+* react-native-ui-kitten
+
+** Lib
+    [[file+emacs:/Users/djzhang/Documents/Organizations/TERMS/akveo_react-native-ui-kitten/react-native-ui-kitten][react-native-ui-kitten]]
+
+*** Example in lib
+    [[file+emacs:/Users/djzhang/Documents/Organizations/TERMS/akveo_react-native-ui-kitten/react-native-ui-kitten/example][example]]
+
+** Example
+    [[file+emacs:/Users/djzhang/Documents/Organizations/TERMS/akveo_react-native-ui-kitten/kittenTricks][kittenTricks for react-native-ui-kitten]]
+
 
