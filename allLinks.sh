@@ -23,10 +23,10 @@ SPACEMACS_VUE_HOME="$SPACEMACS_HOME/lawrsp/vue-layer"
 ### IDES(cocoapods)
 COCOAPODS_HOME="$IDES_HOME/cocoapods/.cocoapods"
 ### IDES(ENVS)
-IDES_HOME="$IDES_HOME/ENVS"
+ENVS_HOME="$IDES_HOME/ENVS"
 #### Items
 # git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-PYENV_HOME="$IDE_HOME/pyenv"
+PYENV_HOME="$ENVS_HOME/pyenv"
 
 # Import function files.
 source ./bash/files-functions.sh
@@ -41,7 +41,7 @@ directoryLink  "Application(djzhang)"  "$ORGANIZATIONS_APPLICATION_HOME"  "$HOME
 directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
 
 # .oh-my-zsh
-directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
+# directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
 
 directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/custom/plugins/trujunzhang"  "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
 directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"  "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
