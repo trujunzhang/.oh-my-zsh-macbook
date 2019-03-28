@@ -1,17 +1,33 @@
-
-CURRENT=`pwd`
-ORGANIZATIONS_HOME="/Users/djzhang/Documents/Organizations"
-TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/.oh-my-zsh-macbook"
-OH_MY_ZSH_HOME="$ORGANIZATIONS_HOME/IDES/oh-my-zsh/oh-my-zsh"
-SPACEMACS_HOME="$ORGANIZATIONS_HOME/IDES/spacemacs/spacemacs"
-SPACEMACS_W3M_HOME="$ORGANIZATIONS_HOME/IDES/spacemacs/venmos/w3m-layer"
-SPACEMACS_VUE_HOME="$ORGANIZATIONS_HOME/IDES/spacemacs/lawrsp/vue-layer"
-POWER_LEVEL_9K_HOME="$ORGANIZATIONS_HOME/IDES/oh-my-zsh/powerlevel9k"
-COCOAPODS_HOME="$ORGANIZATIONS_HOME/IDES/cocoapods/.cocoapods"
-
 #!/usr/bin/env bash
 
+CURRENT=`pwd`
+# Folders in Home.
+USER_PROFILE_DJZHANG_HOME="/Users/djzhang"
+ORGANIZATIONS_HOME="$USER_PROFILE_DJZHANG_HOME/Documents/Organizations"
+# Links
+ORGANIZATIONS_APPLICATION_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/Applications"
+TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/.oh-my-zsh-macbook"
+## Links(IDES)
+IDES_HOME="$ORGANIZATIONS_HOME/IDES"
+OH_MY_ZSH_HOME="$IDES_HOME/oh-my-zsh/oh-my-zsh"
+POWER_LEVEL_9K_HOME="$IDES_HOME/oh-my-zsh/powerlevel9k"
+### IDES(spacemacs)
+SPACEMACS_HOME="$ORGANIZATIONS_HOME/spacemacs"
+SPACEMACS_IDE_HOME="$SPACEMACS_HOME/spacemacs"
+SPACEMACS_W3M_HOME="$SPACEMACS_HOME/venmos/w3m-layer"
+SPACEMACS_VUE_HOME="$SPACEMACS_HOME/lawrsp/vue-layer"
+COCOAPODS_HOME="$IDES_HOME/cocoapods/.cocoapods"
+### IDES(ENVS)
+IDES_HOME="$ORGANIZATIONS_HOME/IDES"
+
+# Import function files.
 source ./bash/files-functions.sh
+
+# Environment
+
+
+# trujunzhang's profile
+directoryLink  "Application(djzhang)"  "$ORGANIZATIONS_APPLICATION_HOME"  "$HOME/Applications"
 
 # cocoapods(ruby)
 directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
@@ -30,7 +46,7 @@ directoryLink  "dotenv(Express.js environment variables)"  "$TRUJUNZHANG_DOTFILE
 
 # spacemacs
 
-directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_HOME"  "$HOME/.emacs.d"
+directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"  "$HOME/.emacs.d"
 
 fileLink ".spacemacs(profile)" "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.used" "$HOME/.spacemacs"
 
