@@ -9,22 +9,30 @@ ORGANIZATIONS_APPLICATION_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/Applications"
 TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/.oh-my-zsh-macbook"
 ## Links(IDES)
 IDES_HOME="$ORGANIZATIONS_HOME/IDES"
-OH_MY_ZSH_HOME="$IDES_HOME/oh-my-zsh/oh-my-zsh"
-POWER_LEVEL_9K_HOME="$IDES_HOME/oh-my-zsh/powerlevel9k"
+### IDES(zsh)
+OH_MY_ZSH_HOME="$IDES_HOME/oh-my-zsh"
+#### Items
+OH_MY_ZSH_IDE_HOME="$OH_MY_ZSH_HOME/oh-my-zsh"
+POWER_LEVEL_9K_HOME="$OH_MY_ZSH_HOME/powerlevel9k"
 ### IDES(spacemacs)
-SPACEMACS_HOME="$ORGANIZATIONS_HOME/spacemacs"
+SPACEMACS_HOME="$IDES_HOME/spacemacs"
+#### Items
 SPACEMACS_IDE_HOME="$SPACEMACS_HOME/spacemacs"
 SPACEMACS_W3M_HOME="$SPACEMACS_HOME/venmos/w3m-layer"
 SPACEMACS_VUE_HOME="$SPACEMACS_HOME/lawrsp/vue-layer"
+### IDES(cocoapods)
 COCOAPODS_HOME="$IDES_HOME/cocoapods/.cocoapods"
 ### IDES(ENVS)
-IDES_HOME="$ORGANIZATIONS_HOME/IDES"
+IDES_HOME="$IDES_HOME/ENVS"
+#### Items
+# git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+PYENV_HOME="$IDE_HOME/pyenv"
 
 # Import function files.
 source ./bash/files-functions.sh
 
 # Environment
-
+directoryLink  "Env(Pyenv)"  "$PYENV_HOME"  "$HOME/.pyenv"
 
 # trujunzhang's profile
 directoryLink  "Application(djzhang)"  "$ORGANIZATIONS_APPLICATION_HOME"  "$HOME/Applications"
@@ -33,7 +41,7 @@ directoryLink  "Application(djzhang)"  "$ORGANIZATIONS_APPLICATION_HOME"  "$HOME
 directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
 
 # .oh-my-zsh
-directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_HOME"  "$HOME/.oh-my-zsh"
+directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
 
 directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/custom/plugins/trujunzhang"  "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
 directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"  "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
