@@ -26,3 +26,5 @@ CocoaPods/**
 # JetBrains
 **/.idea/**/*.xml
 .idea/**/*
+
+.netrwhist
