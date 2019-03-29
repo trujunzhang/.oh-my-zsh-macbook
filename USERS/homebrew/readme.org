@@ -1,0 +1,16 @@
+* Restore, Clone or Backup your Homebrew Setup
+ https://tomlankhorst.nl/brew-bundle-restore-backup/
+
+** Backup your configuration
+
+*** Let’s get started quickly! Install the Homebrew tap:
+   >> brew install htop
+   >> brew tap Homebrew/bundle
+
+*** Run the following command to create a text file named Brewfile with all Homebrew packaged installed on your system:
+   >> brew bundle dump
+
+** Restore your configuration
+   >> brew bundle
+
+
