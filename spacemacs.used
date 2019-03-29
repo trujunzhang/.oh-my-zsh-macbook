@@ -47,7 +47,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      ;;; cedet
-     semantic
+     ;;; semantic
      helm
      ;;; https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bcompletion/auto-completion
      (auto-completion

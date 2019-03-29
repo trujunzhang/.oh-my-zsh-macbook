@@ -1,3 +1,15 @@
+* Projects
+
+** IEATTA
+*** Map Libraries
+
+**** [[/Users/djzhang/Documents/Organizations/USERS/sb2nov/travel][travel map]]
+
+
+* Program Resume template
+
+** sb2nov
+    [[file+emacs:/Users/djzhang/Documents/Organizations/USERS/sb2nov/resume][resume]]
 
 * Example 
   
@@ -48,3 +60,25 @@
     [[file+emacs:/Users/djzhang/Documents/Organizations/TERMS/akveo_react-native-ui-kitten/kittenTricks][kittenTricks for react-native-ui-kitten]]
 
 
+
+    
+* dotfiles
+
+** Tmux(zsh,spacemacs)
+
+*** My dotfiles, spacemacs and zsh with a little bit of tmux, ranger and mpv
+    [[file+emacs:/Users/djzhang/Documents/Organizations/DotFiles/dotfiles_cpaulik][cpaulik(dotfiles)]]
+   
+
+* Machine Lerning
+
+** Open Source Machine Learning Framework
+
+*** tensorflow
+   An Open Source Machine Learning Framework for Everyone https://tensorflow.org 
+   [[https://github.com/tensorflow/tensorflow][github:tensorflow]]
+  
+
+
+
+/Users/djzhang/Documents/Organizations/USERS/sb2nov/travel

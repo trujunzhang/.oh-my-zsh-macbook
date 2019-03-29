@@ -1,0 +1,4 @@
+* 03/28/2019
+   1. pyenv
+      pyenv install 3.6.0 
+ 

@@ -198,4 +198,4 @@ alias emacs='open -a /Applications/Emacs.app $1'
 alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'genymotion'"
 
 # macvim
-alias gvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias gvim='$HOME/Applications/MacVim.app/Contents/MacOS/Vim -g'
