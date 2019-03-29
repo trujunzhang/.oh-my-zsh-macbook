@@ -47,8 +47,8 @@ directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/cust
 directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"  "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
 
 # zshrc(rc)
-
-fileLink ".zshrc"  "$TRUJUNZHANG_DOTFILES_HOME/zshrc.used" "$HOME/.zshrc"
+fileLink ".zsh(env)"  "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
+fileLink ".zsh(rc)"  "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink" "$HOME/.zshrc"
 
 directoryLink  "dotenv(Express.js environment variables)"  "$TRUJUNZHANG_DOTFILES_HOME/dotenv" "$HOME/.dotenv"
 
@@ -56,7 +56,7 @@ directoryLink  "dotenv(Express.js environment variables)"  "$TRUJUNZHANG_DOTFILE
 
 directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"  "$HOME/.emacs.d"
 
-fileLink ".spacemacs(profile)" "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.used" "$HOME/.spacemacs"
+fileLink ".spacemacs(profile)" "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
 
 directoryLink "emacs(Private Layout)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"  "$HOME/.emacs.d/private/trujunzhang-workspace"
 directoryLink "w3m(third Layout)" "$SPACEMACS_W3M_HOME"  "$HOME/.emacs.d/private/w3m"
@@ -65,10 +65,7 @@ directoryLink "w3m(third Layout)" "$SPACEMACS_VUE_HOME"  "$HOME/.emacs.d/private
 # spacevim
 directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/SpaceVim.d" "$HOME/.SpaceVim.d"
 
-fileLink "gvimrc(MacVim)" "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.used" "$HOME/.gvimrc"
-
-# pending(the following)
-# fileLink ".spacevim" "$TRUJUNZHANG_DOTFILES_HOME/spacevim.used" "$HOME/.spacevim"
+fileLink "gvimrc(MacVim)" "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink" "$HOME/.gvimrc"
 
 # pending(the following)
 # ====================================

@@ -204,11 +204,6 @@ export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 # export MAGICK_HOME=/usr/local/opt/imagemagick
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
-# pyenv
-export PATH="/Users/djzhang/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
-
 # Fastlane
 export PATH="$HOME/.fastlane/bin:$PATH"
 
