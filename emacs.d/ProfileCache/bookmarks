@@ -4,7 +4,7 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (
 ("lerna.json(webpack-politicl-lerna)"
- (filename .  "~/Desktop/upwork-projects/CURRENT/webpack-politicl-lerna")
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/webpack-politicl-lerna")
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
@@ -19,12 +19,12 @@
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
 ("lerna.json(politicl)"
- (filename . "~/Desktop/upwork-projects/CURRENT/python-politicl-universal/lerna.json")
+ (filename . "~/Documents/Organizations/__CODING/CURRENT/python-politicl-universal/lerna.json")
  (front-context-string . "{\n  \"packages\": ")
  (rear-context-string)
  (position . 1))
 ("lerna.json(ieatta)"
- (filename . "~/Desktop/upwork-projects/CURRENT/python-ieatta-universal/lerna.json")
+ (filename . "~/Documents/Organizations/__CODING/CURRENT/python-ieatta-universal/lerna.json")
  (front-context-string . "{\n  \"packages\": ")
  (rear-context-string)
  (position . 1))
