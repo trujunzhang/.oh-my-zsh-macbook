@@ -1,0 +1,40 @@
+* SOLVED: OSX or macOS Sierra, error while installing python with python: zipimport.ZipImportError: can't decompress data; zlib not available
+   https://tutorials.technology/solved_errors/5-zipimport_ZipImportError_cant_decompress_data_zlib_not_available.html
+
+
+====================================================================
+====================================================================
+zipimport.ZipImportError: can't decompress data; zlib not available   
+====================================================================
+$ pyenv install 3.6.0
+Downloading Python-3.6.0.tar.xz...
+-> https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tar.xz
+Installing Python-3.6.0...
+
+BUILD FAILED (OS X 10.12.4 using python-build 20160602)
+
+Inspect or clean up the working tree at /var/folders/1f/pdmszzls4xs6px9gmf627ng40000gn/T/python-build.20170409145711.16182
+Results logged to /var/folders/1f/pdmszzls4xs6px9gmf627ng40000gn/T/python-build.20170409145711.16182.log
+
+Last 10 log lines:
+  File "/private/var/folders/1f/pdmszzls4xs6px9gmf627ng40000gn/T/python-build.20170409145711.16182/Python-3.6.0/Lib/ensurepip/__main__.py", line 4, in <module>
+    ensurepip._main()
+  File "/private/var/folders/1f/pdmszzls4xs6px9gmf627ng40000gn/T/python-build.20170409145711.16182/Python-3.6.0/Lib/ensurepip/__init__.py", line 189, in _main
+    default_pip=args.default_pip,
+  File "/private/var/folders/1f/pdmszzls4xs6px9gmf627ng40000gn/T/python-build.20170409145711.16182/Python-3.6.0/Lib/ensurepip/__init__.py", line 102, in bootstrap
+    _run_pip(args + [p[0] for p in _PROJECTS], additional_paths)
+  File "/private/var/folders/1f/pdmszzls4xs6px9gmf627ng40000gn/T/python-build.20170409145711.16182/Python-3.6.0/Lib/ensurepip/__init__.py", line 27, in _run_pip
+    import pip
+zipimport.ZipImportError: can't decompress data; zlib not available
+make: *** [install] Error 1
+====================================================================
+====================================================================
+
+
+brew update
+brew upgrade
+brew install zlib
+export CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include" 
+export LDFLAGS="-L$(brew --prefix openssl)/lib"
+pyenv install 3.6.0
+
