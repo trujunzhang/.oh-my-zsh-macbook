@@ -11,15 +11,6 @@ export ZSH=~/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-if [ -n "$INSIDE_EMACS" ]; then
-    # export ZSH_THEME="apple"
-else
-    # export ZSH_THEME="robbyrussell"
-fi
-
-# ZSH_THEME=kafeitu
-# ZSH_THEME="powerlevel9k/powerlevel9k"
-
 # Android SDK
 # via homebrew
 #export ANDROID_HOME=/usr/local/opt/android-sdk
@@ -90,7 +81,7 @@ PYTHONPATH=$PYTHONPATH:/Users/djzhang/Desktop/upwork-projects/politicl/bitbucket
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(trujunzhang autojump git brew nvm history)
+plugins=(trujunzhang autojump git brew nvm history pyenv)
 
 # User configuration
 
