@@ -11,6 +11,7 @@
 ** sb2nov
     [[file+emacs:/Users/djzhang/Documents/Organizations/USERS/sb2nov/resume][resume]]
 
+
 * Example 
   
 ** TODO MarvelHeroes
@@ -27,6 +28,7 @@
  ** third-libs
  *** styled-icons (Popular icon packs like Font Awesome, Material Design, and Octicons, available as React Styled Components) 
    [[file+emacs:/Users/djzhang/Documents/Organizations/TERMS/styled-components/thirdLibs/styled-icons][styled-icons]]
+
 
 * Awesome
 
@@ -47,6 +49,7 @@
 
 *** Template Projects
     [[file+emacs:/Users/djzhang/Documents/Organizations/Babel7-TS/rollup-typescript-babel][rollup-typescript-babel]]
+
 
 * react-native-ui-kitten
 
