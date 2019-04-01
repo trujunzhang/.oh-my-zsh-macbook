@@ -24,6 +24,10 @@ https://medium.com/mindful-technology/too-many-open-files-limit-ulimit-on-mac-os
 
 ** Steps To Fix
 
+*** Create /Library/LaunchDaemons/limit.maxfiles.plist with this content; file will (must) be owned by root, which is important:
+
+*** If you also want the number of allowed processes increased, create  /Library/LaunchDaemons/limit.maxproc.plist with content:
+    
 
 ** Restart your computer!
 
