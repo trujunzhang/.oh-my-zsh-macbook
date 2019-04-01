@@ -39,7 +39,6 @@ values."
      ;; lsp
      ;; pandoc
      html
-     typescript
      javascript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.

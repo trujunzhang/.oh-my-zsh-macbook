@@ -38,4 +38,9 @@
  (front-context-string . "  \"dj\"    'bookm")
  (rear-context-string . "  'bookmark-set\n")
  (position . 1))
+("lang(spacemacs)"
+ (filename . "~/Documents/Organizations/IDES/spacemacs/spacemacs/layers/+lang")
+ (front-context-string . "  \"dj\"    'bookm")
+ (rear-context-string . "  'bookmark-set\n")
+ (position . 1))
 )
