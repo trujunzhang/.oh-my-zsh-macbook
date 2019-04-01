@@ -1,0 +1,49 @@
+
+* “Too many open files” limit/ulimit on Mac OS X
+
+
+====================================================================
+====================================================================
+“Too many open files” limit/ulimit on Mac OS X
+====================================================================
+https://medium.com/mindful-technology/too-many-open-files-limit-ulimit-on-mac-os-x-add0f1bfddde
+[https://medium.com/mindful-technology/too-many-open-files-limit-ulimit-on-mac-os-x-add0f1bfddde]
+
+
+
+** Before I started (and after getting the error):
+
+   >> $ ulimit -a
+      [...]
+      open files                      (-n) 256
+      [...]
+      max user processes              (-u) 709
+      [...]
+
+
+
+** Steps To Fix
+
+
+** Restart your computer!
+
+  >> $ ulimit -a
+    [...]
+    open files                      (-n) 524288
+    [...]
+    max user processes              (-u) 2048
+    [...]
+
+
+====================================================================
+====================================================================
+Fixed: 
+====================================================================
+https://medium.com/mindful-technology/too-many-open-files-limit-ulimit-on-mac-os-x-add0f1bfddde
+[https://medium.com/mindful-technology/too-many-open-files-limit-ulimit-on-mac-os-x-add0f1bfddde]
+====================================================================
+
+
+
+
+
