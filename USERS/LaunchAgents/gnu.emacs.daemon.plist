@@ -7,7 +7,7 @@
         <string>gnu.emacs.daemon</string>
         <key>ProgramArguments</key>
         <array>
-          <string>/Applications/Emacs.app/Contents/MacOS/Emacs</string>
+            <string>/Users/djzhang/Documents/Organizations/__APPLICATIONS/Applications/Emacs.app/Contents/MacOS/Emacs<string>
           <string>--daemon</string>
         </array>
        <key>RunAtLoad</key>
