@@ -1,0 +1,10 @@
+https://github.com/KnisterPeter/react-to-typescript-definitions
+
+
+1. react2dts
+
+cat <some/react/component.jsx> |react2dts --top-level-module
+
+* ActionButton
+
+cat /Users/djzhang/Desktop/upwork-projects/CURRENT/wix/react-native-material-ui/src/ActionButton/ActionButton.react.js | react2dts --module-name toolbar>actionButton.d.ts

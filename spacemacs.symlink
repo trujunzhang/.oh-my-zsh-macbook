@@ -36,6 +36,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     latex
      ;; lsp
      ;; pandoc
      html
@@ -351,6 +352,19 @@ you should place your code here."
 
 ;; ;;  Symbol’s function definition is void: lsp-make-traverser
 (add-to-list 'exec-path "/Users/djzhang/.nvm/versions/node/v10.8.0/bin")
+
+;;LaTex
+(add-hook 'LaTeX-mode-hook
+          (lambda ()
+            (setq TeX-auto-untabify t     ; remove all tabs before saving
+                  TeX-engine 'xetex       ; use xelatex default
+                  TeX-show-compilation t)  ; display compilation windows
+            (TeX-global-PDF-mode t)       ; PDF mode enable, not plain
+            (setq TeX-save-query nil)
+            (imenu-add-menubar-index)
+            (define-key LaTeX-mode-map (kbd "TAB") 'TeX-complete-symbol)))
+
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -362,7 +376,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (prettier-js magit transient git-commit with-editor anzu evil goto-chg undo-tree pos-tip bind-key yasnippet packed helm avy helm-core async popup typescript-mode org-category-capture alert log4e gntp org-plus-contrib markdown-mode magit-popup skewer-mode simple-httpd json-snatcher json-reformat multiple-cursors js2-mode projectile request haml-mode gitignore-mode fringe-helper git-gutter+ git-gutter flycheck pkg-info epl flx pandoc-mode ox-pandoc company-quickhelp vue-mode edit-indirect ssass-mode vue-html-mode lsp-vue company-lsp lsp-mode ht helm-w3m w3m web-completion-data dash-functional company auto-complete tern f s dash ws-butler winum volatile-highlights vi-tilde-fringe uuidgen toc-org spaceline powerline restart-emacs rainbow-delimiters popwin persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff xterm-color which-key web-mode web-beautify use-package unfill tide tagedit stickyfunc-enhance srefactor smeargle slim-mode shell-pop scss-mode sass-mode pug-mode pcre2el orgit org-projectile org-present org-pomodoro org-mime org-download mwim multi-term mmm-mode markdown-toc magit-gitflow macrostep livid-mode less-css-mode json-mode js2-refactor js-doc hydra htmlize helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy flyspell-correct-helm flycheck-pos-tip exec-path-from-shell evil-visualstar evil-magit evil-escape evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl define-word company-web company-tern company-statistics column-enforce-mode coffee-mode clean-aindent-mode bind-map auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+    (company-auctex auctex prettier-js magit transient git-commit with-editor anzu evil goto-chg undo-tree pos-tip bind-key yasnippet packed helm avy helm-core async popup typescript-mode org-category-capture alert log4e gntp org-plus-contrib markdown-mode magit-popup skewer-mode simple-httpd json-snatcher json-reformat multiple-cursors js2-mode projectile request haml-mode gitignore-mode fringe-helper git-gutter+ git-gutter flycheck pkg-info epl flx pandoc-mode ox-pandoc company-quickhelp vue-mode edit-indirect ssass-mode vue-html-mode lsp-vue company-lsp lsp-mode ht helm-w3m w3m web-completion-data dash-functional company auto-complete tern f s dash ws-butler winum volatile-highlights vi-tilde-fringe uuidgen toc-org spaceline powerline restart-emacs rainbow-delimiters popwin persp-mode paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff xterm-color which-key web-mode web-beautify use-package unfill tide tagedit stickyfunc-enhance srefactor smeargle slim-mode shell-pop scss-mode sass-mode pug-mode pcre2el orgit org-projectile org-present org-pomodoro org-mime org-download mwim multi-term mmm-mode markdown-toc magit-gitflow macrostep livid-mode less-css-mode json-mode js2-refactor js-doc hydra htmlize helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy flyspell-correct-helm flycheck-pos-tip exec-path-from-shell evil-visualstar evil-magit evil-escape evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl define-word company-web company-tern company-statistics column-enforce-mode coffee-mode clean-aindent-mode bind-map auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
