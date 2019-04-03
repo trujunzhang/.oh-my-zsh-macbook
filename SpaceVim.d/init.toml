@@ -55,6 +55,10 @@ name = "colorscheme"
 [[layers]]
 name = "unite"
 
+[[layers]]
+name = "tmux"
+tmux_navigator_modifier = "alt"
+
 # [[layers]]
   # name = "lang#javascript"
   # enable_flow_syntax = false
