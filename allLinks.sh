@@ -40,9 +40,24 @@ ENVS_HOME="$IDES_HOME/ENVS"
 # git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 PYENV_HOME="$ENVS_HOME/pyenv"
 
+### IDES(HOME)
+### /Users/djzhang/Library/Application Support/**
+DEST_APPLICATION_SUPPOR="$HOME/Library/Application Support"
+IDES_TRUJUNZHANG_HOME="$TRUJUNZHANG_DOTFILES_HOME/USERS/IDES"
+### IDES(VSCODE)
+VSCODE_USERS_HOME="$IDES_TRUJUNZHANG_HOME/vscode/User"
+### /Users/djzhang/Library/Application Support/Code/User
+DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
+
 
 # Import function files.
 source ./bash/files-functions.sh
+
+# IDES(VSCode|Webstorm)
+# https://github.com/VSpaceCode/VSpaceCode
+fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json" "$DEST_VSCODE_USER_HOME/keybindings.json"
+fileLink "settings.json(vscode)"  "$VSCODE_USERS_HOME/settings.json" "$DEST_VSCODE_USER_HOME/settings.json"
+
 
 # $USERPROFILE/Library/Caches
 directoryLink  "Caches(Yarn)"  "$LIBRARY_YARN_HOME"  "$HOME/Library/Caches/Yarn"
