@@ -1,0 +1,24 @@
+* New XAMPP security concept
+   [https://sharadchhetri.com/2014/03/24/new-xampp-security-concept/]
+
+
+   >> find /opt/lampp -name httpd-xampp.conf
+   note:
+    root@debian:~# find /opt/lampp -name httpd-xampp.conf
+    /opt/lampp/etc/extra/httpd-xampp.conf
+
+   >> vi /opt/lampp/etc/extra/httpd-xampp.conf
+
+     #       Require local
+	   Require all granted
+     ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
+
+   >> /opt/lampp/lampp reloadapache
+   note:
+      XAMPP: Reload Apache...ok.
+
+   
+
+
+
+
