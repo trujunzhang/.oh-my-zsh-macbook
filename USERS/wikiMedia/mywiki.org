@@ -1,0 +1,5 @@
+* MediaWiki 1.32.0 installation
+  >> Name of wiki: [trujunzhang]
+  >> Your username: [djzhang]
+  >> Password: [wanghao@720]
+  >> Email address: [wanghao720sn@sina.com]

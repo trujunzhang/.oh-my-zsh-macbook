@@ -1,0 +1,7 @@
+* Create a new mysql database
+   >> wikidb
+
+* Add a new user
+   >> wikiuser
+   >> passwd: [wh]
+
