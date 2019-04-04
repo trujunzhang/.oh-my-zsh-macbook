@@ -199,4 +199,4 @@ alias emacsd="emacs -debug-init"
 alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'genymotion'"
 
 # macvim
-alias gvim='$HOME/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
