@@ -1140,5 +1140,6 @@
             ]
         }
     ],
-    "vim.easymotion": true
+    "vim.easymotion": true,
+    "typescript.updateImportsOnFileMove.enabled": "never"
 }

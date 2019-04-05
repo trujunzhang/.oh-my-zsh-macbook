@@ -124,6 +124,7 @@
 
   ;;; Auto save buffers.
   (add-hook 'focus-out-hook 'trujunzhang-workspace/sooheon-save-all)
+  ;; (add-hook 'evil-insert-state-exit-hook 'trujunzhang-workspace/sooheon-save-all)
   )
 
 ;;; Prettier-js
