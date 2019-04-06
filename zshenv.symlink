@@ -1,4 +1,105 @@
+# unknown
+# ======================================================================
+# tabtab source for yo package
+# uninstall by removing these lines or running `tabtab uninstall yo`
+# [[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
+
+
+# all export [PATH]
+# ======================================================================
+# Android Studio installed automatically
+export ANDROID_HOME=/Users/djzhang/Library/Android/sdk
+export PATH=$PATH:/Users/djzhang/Library/Android/sdk/tools
+export PATH=$PATH:/Users/djzhang/Library/Android/sdk/platform-tools
+# Android~/android-ndk-r9d
+# ndk
+export ANDROID_NDK=/Users/djzhang/Library/Android/ndk
+export NDK_ROOT=/Users/djzhang/Library/Android/ndk
+export PATH=$PATH:/Users/djzhang/Library/Android/ndk
+# others
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=$PATH:/usr/local/sbin
+export GEM_HOME="$HOME/.rvm/gems/ruby-2.6.0"
+export GEM_PATH="$HOME/.rvm/gems/ruby-2.6.0:$HOME/.rvm/gems/ruby-2.6.0@global"
+export PATH="$HOME/.cask/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH=/usr/local/mysql/bin:$PATH
+export PATH="/Applications/MATLAB_R2015b.app/bin:$PATH"
+export PATH="/Applications/GenymotionShell.app/Contents/MacOS:$PATH"
+export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
+
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
+
+
+# rvm 
+# ======================================================================
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# auto env
+# ======================================================================
+source /usr/local/opt/autoenv/activate.sh
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+
+# java environment
+# ======================================================================
+# export PATH="$HOME/.jenv/bin:$PATH"
+# eval "$(jenv init -)"
+
+# nvm
+# ======================================================================
+# Save your nvm env loading into your .bash_profile or similar
+# export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # pyenv
+# ======================================================================
 export PATH="/Users/djzhang/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 # eval "$(pyenv virtualenv-init -)"
+
+# ************************************
+# activate
+# ************************************
+# source activate 2.7.11
+
+# flutter sdk
+# ======================================================================
+export PATH="$PATH:$HOME/Documents/flutterSDK/bin"
+
+# imagemagick
+# ======================================================================
+# export MAGICK_HOME=/usr/local/opt/imagemagick
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+
+# Fastlane
+# ======================================================================
+export PATH="$HOME/.fastlane/bin:$PATH"
+
+# React-native
+# ======================================================================
+export REACT_NATIVE_MAX_WORKERS=2
+
+# Expo
+# ======================================================================
+export EXPO_DEBUG=true
+
+# emacs cask
+# ======================================================================
+export PATH="/Users/djzhang/.cask/bin:$PATH"
+
+# Android SDK
+# ======================================================================
+# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+export ANDROID_SDK_ROOT=/Users/djzhang/Library/Android/sdk
+export ANDROID_SDK_HOME=/Users/djzhang/Library/Android/sdk
+export PATH=$ANDROID_SDK_ROOT:$PATH
+export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
+
+

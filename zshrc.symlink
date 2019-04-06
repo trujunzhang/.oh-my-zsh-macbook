@@ -1,49 +1,26 @@
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
-# Android SDK
-# via homebrew
-#export ANDROID_HOME=/usr/local/opt/android-sdk
-
-# download via tar.gz
-#export ANDROID_HOME=/usr/local/opt/android-sdk
-
-# Android Studio installed automatically
-export ANDROID_HOME=/Users/djzhang/Library/Android/sdk
-export PATH=$PATH:/Users/djzhang/Library/Android/sdk/tools
-export PATH=$PATH:/Users/djzhang/Library/Android/sdk/platform-tools
-
-# Android~/android-ndk-r9d
-# ndk
-export ANDROID_NDK=/Users/djzhang/Library/Android/ndk
-export NDK_ROOT=/Users/djzhang/Library/Android/ndk
-export PATH=$PATH:/Users/djzhang/Library/Android/ndk
-
-# emacs roswell
-export PATH=$PATH:/Users/djzhang/.roswell/bin
-
-# others
-export PATH=$PATH:/Applications/Matlab.app/bin
-export PATH=$PATH:/Users/djzhang/anaconda/bin
-#export GRADLE_HOME=/usr/local/opt/gradle
-
-PYTHONPATH=$PYTHONPATH:/Users/djzhang/Desktop/upwork-projects/politicl/bitbucket/politicl-crawler-scraper
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
@@ -71,21 +48,27 @@ PYTHONPATH=$PYTHONPATH:/Users/djzhang/Desktop/upwork-projects/politicl/bitbucket
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(trujunzhang autojump git brew nvm history pyenv)
 
+source $ZSH/oh-my-zsh.sh
+
 # User configuration
 
-source $ZSH/oh-my-zsh.sh
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -101,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -112,146 +95,3 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH=$PATH:/usr/local/sbin
-
-export GEM_HOME="$HOME/.rvm/gems/ruby-2.6.0"
-export GEM_PATH="$HOME/.rvm/gems/ruby-2.6.0:$HOME/.rvm/gems/ruby-2.6.0@global"
-
-## [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
-export PATH="$HOME/.cask/bin:$PATH"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-export PATH=/usr/local/mysql/bin:$PATH
-
-export PATH="/Applications/MATLAB_R2015b.app/bin:$PATH"
-export PATH="/Applications/GenymotionShell.app/Contents/MacOS:$PATH"
-export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
-
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
-
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# auto env
-source /usr/local/opt/autoenv/activate.sh
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
-# tabtab source for yo package
-# uninstall by removing these lines or running `tabtab uninstall yo`
-[[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
-
-## source dnvm.sh
-
-# export DNX_FEED=https://www.nuget.org/api/v2
-
-export MONOGACPREFIX="/usr/local"
-
-# export PATH="$HOME/.jenv/bin:$PATH"
-# eval "$(jenv init -)"
-
-# politicl telescope web app's cloudinary
-export CLOUDINARY_URL=cloudinary://886131238629743:X1baj0k868ACgxU-a6Wobw8OsY8@di3fvexj8
-
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  #ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-
-#setenv ("GNUTERM", "X11")
-
-# Docker
-#eval "$(docker-machine env default)"
-
-# slimerjs
-export SLIMERJSLAUNCHER=/Applications/Firefox.app/Contents/MacOS/firefox
-
-# nvm
-# Save your nvm env loading into your .bash_profile or similar
-# export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# conda python environment
-# source activate 2.7.11
-
-export PATH="/usr/local/opt/opencv3/bin:$PATH"
-
-# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/Users/djzhang/Library/Android/sdk
-export ANDROID_SDK_HOME=/Users/djzhang/Library/Android/sdk
-export PATH=$ANDROID_SDK_ROOT:$PATH
-export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
-
-# Add environment variable ANT_ROOT for cocos2d-x
-# export ANT_ROOT=/usr/local/Cellar/ant/1.10.1/bin
-# export PATH=$ANT_ROOT:$PATH
-
-# imagemagick
-
-# export MAGICK_HOME=/usr/local/opt/imagemagick
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-
-# Fastlane
-export PATH="$HOME/.fastlane/bin:$PATH"
-
-# React-native
-export REACT_NATIVE_MAX_WORKERS=2
-
-# Expo
-export EXPO_DEBUG=true
-
-# emacs cask
-export PATH="/Users/djzhang/.cask/bin:$PATH"
-
-#alias for cnpm
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
-  --cache=$HOME/.npm/.cache/cnpm \
-  --disturl=https://npm.taobao.org/dist \
-  --userconfig=$HOME/.cnpmrc"
-
-# https://hashrocket.com/blog/posts/keep-anaconda-from-constricting-your-homebrew-installs
-# Keep Anaconda from Constricting Your Homebrew Installs
-
-# method 1: anaconda3 for python
-export PATH="/anaconda3/bin:$PATH"
-
-# method 2: homebrew with anaconda3
-export SANS_ANACONDA="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
-# added by Anaconda3 4.4.0 installer
-# export PATH="/anaconda3/bin:$SANS_ANACONDA"
-
-alias perseus="export PATH="\$SANS_ANACONDA" && echo Medusa decapitated."
-alias medusa="export PATH="/Applications/anaconda/bin:\$SANS_ANACONDA" && echo Perseus defeated."
-
-brewxxx () {
-  perseus
-  command brew "$@"
-  medusa
-}
-
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
-# flutter sdk
-export PATH="$PATH:$HOME/Documents/flutterSDK/bin"
-
-# https://medium.com/the-code-review/make-your-terminal-more-colourful-and-productive-with-iterm2-and-zsh-11b91607b98c
-# powerlevel9k
-export TERM="xterm-256color"
-# POWERLEVEL9K_MODE='nerdfont-complete'
-# source ~/Documents/Organizations/IDES/oh-my-zsh/powerlevel9k/powerlevel9k.zsh-theme
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(ssh dir vcs newline status)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-# POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-
-# Load Zsh tools for syntax highlighting and autosuggestions
-HOMEBREW_FOLDER="/usr/local/share"
-# source "$HOMEBREW_FOLDER/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-# source "$HOMEBREW_FOLDER/zsh-autosuggestions/zsh-autosuggestions.zsh"
