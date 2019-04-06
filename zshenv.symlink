@@ -102,4 +102,6 @@ export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 
-
+# oh-my-zsh(with Homebrew)
+# ======================================================================
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
