@@ -16,6 +16,7 @@
   
     The very first time SpaceVim starts up, it will ask you to choose a mode, then it will create a SpaceVim.d/init.toml in your HOME directory. All User configurations can be stored in your ~/.SpaceVim.d directory.
 
+
 * "lang#typescript"
    
        https://spacevim.org/layers/lang/typescript/

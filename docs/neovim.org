@@ -1,0 +1,16 @@
+
+
+* Check Health
+
+    > : CheckHealth
+
+* After installing the neovim client, you will have to run :UpdateRemotePlugins.
+   
+    > :UpdateRemotePlugins
+
+
+
+
+
+
+

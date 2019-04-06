@@ -1,0 +1,44 @@
+
+* How to enable python
+  [[https://www.reddit.com/r/SpaceVim/comments/afew54/how_to_enable_python/][python for neovim and spacevim]]
+
+
+** How can I properly enable python in SpaceVim? If I ask if python is enabled, I get 0
+
+      >> :echo has('python')
+          0
+
+
+** I have this option in my ~/.SpaceVim.d/init.toml
+
+   [[layers]]
+   name = "lang#python"
+
+** I've also tried adding these options:
+
+   [options]
+       python_host_prog = "/Users/xxx/.pyenv/versions/neovim2/bin/python"
+       python3_host_prog = "/Users/xxx/.pyenv/versions/neovim3/bin/python"
+       pymode_python = "python3"
+
+   In vanilla nvim, I can set these options which work
+
+      let g:python_host_prog = '/Users/xxx/.pyenv/versions/neovim2/bin/python'
+      let g:python3_host_prog = '/Users/xxx/.pyenv/versions/neovim3/bin/python'
+      let g:pymode_python = 'python3'
+
+   And
+
+    >> :echo has('python')
+       1
+
+
+* please read spacevim faq, no doc show we can do this:
+
+```
+
+[options]   
+   python_host_prog = "/Users/xxx/.pyenv/versions/neovim2/bin/python"       
+   python3_host_prog = "/Users/xxx/.pyenv/versions/neovim3/bin/python"
+   pymode_python = "python3"
+
