@@ -4,6 +4,7 @@ function! myspacevim#before() abort
   # nnoremap jk <Esc>
   # call SpaceVim#custom#SPCGroupName(['f','p'], 'Prettier')
   # call SpaceVim#custom#SPC('Prettier', ['g', 'p'], 'Prettier', 'Format Javascript', 1)
+  call SpaceVim#custom#SPC('nmap', ['c','c'], '<Plug>NERDCommenterInvert', 'comment or uncomment lines', 0)
 endfunction
 
 function! myspacevim#init() abort
@@ -14,3 +15,4 @@ endfunction
 function! myspacevim#after() abort
     iunmap jk
 endfunction
+i
