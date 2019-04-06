@@ -32,7 +32,11 @@
     # Enable Vim compatible mode, avoid changing origin Vim key bindings
     vimcompatible = true
     # https://everettjf.gitbooks.io/spacevimtutorial/content/install/6.html
-    # guifont='Hack_Nerd_Font:h11'
+    guifont='Hack_Nerd_Font:h11'
+    # pyenv
+    python_host_prog = "/Users/djzhang/.pyenv/shims/python"
+    python3_host_prog = "/Users/djzhang/.pyenv/shims/python"
+    pymode_python = "python3"
     # my space
     bootstrap_before = "myspacevim#init"
     # Side Tree
