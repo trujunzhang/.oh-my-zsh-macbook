@@ -32,7 +32,7 @@
     # Enable Vim compatible mode, avoid changing origin Vim key bindings
     vimcompatible = true
     # https://everettjf.gitbooks.io/spacevimtutorial/content/install/6.html
-    guifont='Hack_Nerd_Font:h11'
+    # guifont='Hack_Nerd_Font:h11'
     # my space
     bootstrap_before = "myspacevim#init"
     # Side Tree

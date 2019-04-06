@@ -16,6 +16,7 @@ let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' ch
 set encoding=UTF-8
 """ set guifont=DroidSansMono_Nerd_Font:h11
 """ set guifont=DroidSansMono\ Nerd\ Font:h11
+set guifont=Hack_Nerd_Font:h11
 
 """ # "ctrlpvim/ctrlp.vim"
 let g:ctrlp_compare_lim = 0
