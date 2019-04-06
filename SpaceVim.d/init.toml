@@ -68,7 +68,7 @@ tmux_navigator_modifier = "alt"
 
 # [[layers]]
 # /Users/djzhang/.cache/vimfiles/repos/github.com/mhartington/nvim-typescript/install.sh
-# name = "lang#typescript"
+name = "lang#typescript"
 
 [[custom_plugins]]
 # Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more
