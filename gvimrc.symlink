@@ -6,11 +6,10 @@ set lines=45 columns=160
 let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
 
-""" # 907th/vim-auto-save
-let g:auto_save = 1  " enable AutoSave on Vim startup
-let g:auto_save_silent = 1  " do not display the auto-save notification
-let g:auto_save_events = ["InsertLeave", "TextChanged"]
-let g:auto_save_write_all_buffers = 1  " write all open buffers as if you would use :wa
+"" Auto save when window loses focus
+"" https://www.reddit.com/r/vim/comments/7ffgpx/auto_save_when_window_loses_focus/
+"" For vim on windows or neovim(with gui), you can add {the following} to your .vimrc to auto save whenever the window loses focus.
+:au FocusLost * :wa
 
 """ https://github.com/ryanoasis/vim-devicons
 """ 'vim-devicons' is so important. 

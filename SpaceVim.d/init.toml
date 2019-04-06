@@ -75,9 +75,6 @@ tmux_navigator_modifier = "alt"
 name = "ryanoasis/vim-devicons"
 
 [[custom_plugins]]
-name = "907th/vim-auto-save"
-
-[[custom_plugins]]
 name = "Quramy/tsuquyomi"
 
 [[custom_plugins]]
