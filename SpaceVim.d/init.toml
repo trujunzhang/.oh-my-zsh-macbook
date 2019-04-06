@@ -20,7 +20,7 @@
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
-   # Disable statusline separator, if you want to use other value, please
+    # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
     statusline_separator = "nil"
     statusline_inactive_separator = "bar"
@@ -54,6 +54,10 @@ default_height = 30
 
 [[layers]]
 name = "colorscheme"
+
+[[layers]]
+  name = "lang#python"
+  format-on-save = 1
 
 [[layers]]
 name = "unite"
