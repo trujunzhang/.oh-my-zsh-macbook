@@ -36,9 +36,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     vimscript
-     rust
-     latex
+     ;; latex
      ;; lsp
      ;; pandoc
      html
