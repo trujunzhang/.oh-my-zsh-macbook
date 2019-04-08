@@ -55,7 +55,6 @@ VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
 # Import function files.
 source ./bash/files-functions.sh
 
-
 # https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
 directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
 
@@ -64,14 +63,15 @@ directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
 fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json" "$DEST_VSCODE_USER_HOME/keybindings.json"
 fileLink "settings.json(vscode)"  "$VSCODE_USERS_HOME/settings.json" "$DEST_VSCODE_USER_HOME/settings.json"
 
-# IDES(Sublime)
+# IDES(Sublime|LightTable)
 SUBLIME_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
 ln -sv "$SUBLIME_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
+LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
+ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 
 # $USERPROFILE/Library/Caches
 directoryLink  "Caches(Yarn)"  "$LIBRARY_YARN_HOME"  "$HOME/Library/Caches/Yarn"
 directoryLink  "Caches(CocoaPods)"  "$LIBRARY_COCOAPODS_HOME"  "$HOME/Library/Caches/CocoaPods"
-
 
 # Environment
 directoryLink  "Env(Pyenv)"  "$PYENV_HOME"  "$HOME/.pyenv"
