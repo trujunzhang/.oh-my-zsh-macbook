@@ -49,15 +49,24 @@ VSCODE_USERS_HOME="$IDES_TRUJUNZHANG_HOME/vscode/User"
 ### /Users/djzhang/Library/Application Support/Code/User
 DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
 
+# Trujunzhag's vimrc
+VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
 
 # Import function files.
 source ./bash/files-functions.sh
+
+
+# https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
+directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
 
 # IDES(VSCode|Webstorm)
 # https://github.com/VSpaceCode/VSpaceCode
 fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json" "$DEST_VSCODE_USER_HOME/keybindings.json"
 fileLink "settings.json(vscode)"  "$VSCODE_USERS_HOME/settings.json" "$DEST_VSCODE_USER_HOME/settings.json"
 
+# IDES(Sublime)
+SUBLIME_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
+ln -sv "$SUBLIME_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
 
 # $USERPROFILE/Library/Caches
 directoryLink  "Caches(Yarn)"  "$LIBRARY_YARN_HOME"  "$HOME/Library/Caches/Yarn"
