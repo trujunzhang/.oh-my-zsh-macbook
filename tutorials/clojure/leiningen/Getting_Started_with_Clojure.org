@@ -1,0 +1,7 @@
+
+* Getting Started with Clojure
+   [http://clojure-doc.org/articles/tutorials/getting_started.html]
+   
+
+
+

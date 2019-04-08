@@ -355,6 +355,9 @@ you should place your code here."
 ;; ;;  Symbol’s function definition is void: lsp-make-traverser
 (add-to-list 'exec-path "/Users/djzhang/.nvm/versions/node/v10.8.0/bin")
 
+;;Clojure
+(setq clojure-enable-fancify-symbols t)
+
 ;;LaTex
 (add-hook 'LaTeX-mode-hook
           (lambda ()
