@@ -109,3 +109,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # LEIN Coljure 
 LEIN_JVM_OPTS="-Dmaven.wagon.rto=1800000"
+
+# Light Table
+export LT_HOME="/Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/lighttable"

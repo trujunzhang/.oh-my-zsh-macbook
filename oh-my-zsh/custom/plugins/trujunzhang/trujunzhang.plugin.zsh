@@ -192,7 +192,7 @@ alias expios="exp ios"
 alias expand="exp android"
 
 # Emacs
-alias emacs='open -a $HOME/Applications/Emacs.app $1'
+alias emacs='open -a /Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Emacs.app $1'
 alias emacsd="emacs -debug-init"
 
 # geny motion
