@@ -134,7 +134,7 @@ alias npmu="npm update"
 
 alias npma="npmi && npmt && npmbb && npmdo"
 
-alias npmready="yarn && npmf && yarn tests && yarn checks &&  yarn ts.lints  && yarn build.current.pending && yarn build.web.server && yarn build.web.cloud"
+alias npmready="yarn ready.assets && yarn && npmf && yarn tests && yarn checks && yarn ts.lints && yarn build.current.pending && yarn build.web.server && yarn build.web.cloud"
 alias npmreadyclient="yarn && npmf && yarn test.client && yarn check.client &&  yarn ts.lint.client"
 alias npmeasy="yarn ready.assets && yarn"
 

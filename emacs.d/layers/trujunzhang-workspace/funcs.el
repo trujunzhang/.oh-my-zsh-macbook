@@ -14,6 +14,11 @@
         )
   )
 
+(defun trujunzhang-workspace/insert-buffer-name()
+  "Insert the full path file name into the current buffer."
+  (interactive)
+  (insert (buffer-file-name (window-buffer (minibuffer-selected-window)))))
+
 (defun trujunzhang-workspace/gui-default()
  (setq default-frame-alist
             '(
