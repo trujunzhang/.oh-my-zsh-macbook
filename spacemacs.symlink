@@ -356,6 +356,9 @@ you should place your code here."
 ;; ;;  Symbol’s function definition is void: lsp-make-traverser
 (add-to-list 'exec-path "/Users/djzhang/.nvm/versions/node/v10.8.0/bin")
 
+;;; Makedown's issue: markdown failed with exit code 127
+(setq markdown-command "pandoc")
+
 ;;LaTex
 (add-hook 'LaTeX-mode-hook
           (lambda ()
