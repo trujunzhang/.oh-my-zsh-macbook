@@ -94,19 +94,19 @@ fileLink ".zsh(rc)"  "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink" "$HOME/.zshrc"
 
 directoryLink  "dotenv(Express.js environment variables)"  "$TRUJUNZHANG_DOTFILES_HOME/dotenv" "$HOME/.dotenv"
 
-# spacemacs
-
+# spacemacs(All)
 directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"  "$HOME/.emacs.d"
-
 fileLink ".spacemacs(profile)" "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
 
+## spacemacs(plugins)
 directoryLink "emacs(Private Layout)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"  "$HOME/.emacs.d/private/trujunzhang-workspace"
 directoryLink "w3m(third Layout)" "$SPACEMACS_W3M_HOME"  "$HOME/.emacs.d/private/w3m"
-directoryLink "w3m(third Layout)" "$SPACEMACS_VUE_HOME"  "$HOME/.emacs.d/private/vue"
+# directoryLink "w3m(third Layout)" "$SPACEMACS_VUE_HOME"  "$HOME/.emacs.d/private/vue"
+## spacemacs(Snippets)
+directoryLink "emacs(My Snippet)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/mySnippets"  "$HOME/.emacs.d/private/mySnippets"
 
-# spacevim
+# spacevim(All)
 directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/SpaceVim.d" "$HOME/.SpaceVim.d"
-
 fileLink "gvimrc(MacVim)" "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink" "$HOME/.gvimrc"
 
 # pending(the following)
