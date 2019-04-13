@@ -37,6 +37,7 @@
 (defconst trujunzhang-workspace-packages
   '(
     ;;; For typescript
+    ;;; company
     tide
     typescript-mode
     web-mode
@@ -46,6 +47,12 @@
     ;;; For matlab
     ;; matlab-mode
     ))
+
+;;; Auto-company
+;;; =================================
+;;;; (defun typescript/post-init-company ()
+;;;;  (spacemacs|add-company-hook typescript-mode))
+
 
 ;;; tide
 ;;; =================================
@@ -63,6 +70,7 @@
       ;; (push 'company-tide company-backends-typescript-mode)
       )
     :config
+    (company-mode +1)
     (progn
       (spacemacs/declare-prefix-for-mode 'typescript-mode "mg" "goto")
       (spacemacs/declare-prefix-for-mode 'typescript-mode "mh" "help")
