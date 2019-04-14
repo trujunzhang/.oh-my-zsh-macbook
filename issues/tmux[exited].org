@@ -1,0 +1,10 @@
+➜  ~ tmux
+[exited]
+➜  ~
+
+* Trouble Shooting
+ https://github.com/nicknisi/vim-workshop
+ 
+If your tmux session is closed immediatly and you see the [exited] message in the terminal you are probably missing the reattach-to-user-namespace package to install it simply do
+
+brew install reattach-to-user-namespace
