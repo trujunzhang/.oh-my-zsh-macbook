@@ -8,6 +8,11 @@
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
+("lerna.json(global-material-ui)"
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-material-ui")
+ (front-context-string . "\n\n    \"@expo/vec")
+ (rear-context-string . "-32.0.0.tar.gz\"\n")
+ (position . 1))
 ("Project.org(File)"
  (filename . "~/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/Organizations/projects.org")
  (front-context-string . "\n\n    \"@expo/vec")

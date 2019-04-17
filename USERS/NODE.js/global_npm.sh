@@ -36,7 +36,7 @@ npm install -g create-react-native-app
 npm install -g create-react-library
 
 # Lerna
-npm install --global lerna
+npm install --global lerna cpx npm-run-all
 
 
 # javascript

@@ -40,7 +40,8 @@
     # my space
     bootstrap_before = "myspacevim#init"
     # Side Tree
-    # filemanager = 'nerdtree' 
+    filemanager = 'nerdtree' 
+    filetree_direction = "left"
     # Project
     project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', 'package.json', '.SpaceVim.d/','.next','node_modules','ios','android','build','production-cloud','production-server']
 
