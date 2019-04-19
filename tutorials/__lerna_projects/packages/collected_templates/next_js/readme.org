@@ -1,0 +1,16 @@
+
+* Next.js Configure
+
+>>>>>>>>
+next.config.js
+<<<<<<<<
+
+https://github.com/PetrNikolas/next.js-starter-kit
+
+
+
+
+
+
+
+ 
