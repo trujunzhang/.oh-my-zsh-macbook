@@ -112,3 +112,10 @@ browse for a directory using SPC f f
 enter wdired with C-c C-e
 edit the file names and use C-c C-c to confirm the changes
 use C-c C-k to abort any changes
+
+
+* Format html files
+
+   1. M-x sgml-mode - Enable the sgml-mode major mode so that sgml-pretty-print command auto-loads.
+   2. C-x h - Select the whole buffer.
+   3. M-x sgml-pretty-print
