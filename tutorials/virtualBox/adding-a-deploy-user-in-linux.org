@@ -6,9 +6,12 @@
 
 Login to new server as root, then add a deploy user
 
-sudo useradd --create-home -s /bin/bash deploy
-sudo adduser deploy sudo
-sudo passwd deploy
+>> sudo useradd --create-home -s /bin/bash deploy
+>> sudo adduser deploy sudo
+>> sudo passwd deploy
+>> password: whdeploy
+>> password: [whdeploy]
+
 And Update the new password
 
 Now login as that user
