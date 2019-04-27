@@ -1,0 +1,39 @@
+* Scroll with mouse
+
+Ctrl-b then [ then you can use your normal navigation keys to scroll around (eg. Up Arrow or PgDn). 
+Press q to quit scroll mode.
+
+Alternatively you can press Ctrl-b PgUp to go directly into copy mode and scroll one page up (which is what it sounds like you will want most of the time)
+
+In vi mode (see below), you can also scroll the page up/down line by line using Shift-k and Shift-j (if you're already in scroll mode). Unshifted, the cursor moves instead of the page.
+
+ note:
+   tmux may be controlled from an attached client by using a key combination of a prefix key, ‘C-b’ (Ctrl-b) by default, followed by a command key.
+
+The default command key bindings are:
+
+[Enter copy mode to copy text or view the history.
+
+Function                     vi              emacs
+--------                     --              -----
+Half page down               C-d             M-Down
+Half page up                 C-u             M-Up
+Next page                    C-f             Page down
+Previous page                C-b             Page up
+Scroll down                  C-Down or C-e   C-Down
+Scroll up                    C-Up or C-y     C-Up
+Search again                 n               n
+Search again in reverse      N               N
+Search backward              ?               C-r
+Search forward               /               C-s   
+
+Plus a bunch more. Note that you have to press C-b twice if you use that for page up since C-b is bound as the command key. See the man page for information on prefacing a copy mode command with a repeat count.
+
+You can set the key binding mode using Ctrl-b, then
+
+:set-window-option mode-keys emacs
+or vi.
+
+
+
+
