@@ -121,5 +121,5 @@ export EDITOR="$VISUAL"
 # BEGIN run on shell startup ###################################################
 if ( hash tmux 2>/dev/null ) && [ $TERM != "screen-256color" ]; then
   # tmux
-  tmux attach || tmux new
+  # tmux attach || tmux new
 fi

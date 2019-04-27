@@ -5,6 +5,12 @@ CURRENT=`pwd`
 USER_PROFILE_DJZHANG_HOME="/Users/djzhang"
 ORGANIZATIONS_HOME="$USER_PROFILE_DJZHANG_HOME/Documents/Organizations"
 
+# ====================================================================
+# ====================================================================
+#          Variables
+# ====================================================================
+# ====================================================================
+
 # Home(All)
 # ======================================
 ORGANIZATIONS_APPLICATION_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/Applications"
@@ -52,8 +58,20 @@ DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
 # Trujunzhag's vimrc
 VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
 
+# Trujunzhag's tmux
+TMUX_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/USERS/tmux"
+TMUX_FOLDER="$TMUX_HOME/.tmux"
+TMUX_CONFIG="$TMUX_HOME/.tmux.conf"
+
 # Import function files.
 source ./bash/files-functions.sh
+
+
+# ====================================================================
+# ====================================================================
+#         All Links 
+# ====================================================================
+# ====================================================================
 
 # https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
 directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
@@ -108,6 +126,10 @@ directoryLink "emacs(My Snippet)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/mySnippets
 # spacevim(All)
 directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/SpaceVim.d" "$HOME/.SpaceVim.d"
 fileLink "gvimrc(MacVim)" "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink" "$HOME/.gvimrc"
+
+# Tmux(All)
+directoryLink "tmux(Folder)"  "$TMUX_FOLDER" "$HOME/.tmux"
+fileLink "tmux(config)" "$TMUX_CONFIG" "$HOME/.tmux.conf"
 
 # pending(the following)
 # ====================================
