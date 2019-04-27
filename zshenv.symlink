@@ -112,3 +112,14 @@ LEIN_JVM_OPTS="-Dmaven.wagon.rto=1800000"
 
 # Light Table
 export LT_HOME="/Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/lighttable"
+
+# BEGIN set common environment variables #####################################
+export VISUAL=vim
+export EDITOR="$VISUAL"
+# END set common environment variables #######################################
+
+# BEGIN run on shell startup ###################################################
+if ( hash tmux 2>/dev/null ) && [ $TERM != "screen-256color" ]; then
+  # tmux
+  tmux attach || tmux new
+fi
