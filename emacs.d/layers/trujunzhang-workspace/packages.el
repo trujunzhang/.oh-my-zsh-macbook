@@ -36,6 +36,7 @@
 
 (defconst trujunzhang-workspace-packages
   '(
+    (indent-guide :fetcher github :repo "zk-phi/indent-guide")
     ;;; For typescript
     ;;; company
     tide
@@ -47,6 +48,12 @@
     ;;; For matlab
     ;; matlab-mode
     ))
+
+;;; indent-guide
+;;; =================================
+(defun trujunzhang-workspace/post-init-indent-guide ()
+    (indent-guide-global-mode)
+  )
 
 ;;; Auto-company
 ;;; =================================
