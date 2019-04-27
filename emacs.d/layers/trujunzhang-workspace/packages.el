@@ -61,10 +61,10 @@
     )
    :config
      (setq highlight-indent-guides-method 'character)
-     (setq highlight-indent-guides-character ?\X)
-    (set-face-background 'highlight-indent-guides-odd-face "darkgray")
-    (set-face-background 'highlight-indent-guides-even-face "dimgray")
-    (set-face-foreground 'highlight-indent-guides-character-face "dimgray") 
+     (setq highlight-indent-guides-character ?\|)
+     (set-face-background 'highlight-indent-guides-odd-face "darkgray")
+     (set-face-background 'highlight-indent-guides-even-face "dimgray")
+     (set-face-foreground 'highlight-indent-guides-character-face "dimgray") 
    )
    )
 
