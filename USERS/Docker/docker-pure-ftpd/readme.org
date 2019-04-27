@@ -1,0 +1,11 @@
+* How to deploy a ftp-server on the vps
+
+** Create a deploy user
+   [[file:tutorials/virtualBox/adding-a-deploy-user-in-linux.org]]
+
+** docker-compose 
+   >> cd USERS/Docker/docker-pure-ftpd
+   >> docker-compose up -d
+
+** maintainer the docker   
+   >> docker exec -it pure-ftpd /bin/bash
