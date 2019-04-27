@@ -14,3 +14,7 @@
    >> brew bundle
 
 
+* How do I uninstall Homebrew?
+  To uninstall Homebrew, paste the command below in a terminal prompt.
+
+   >> ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
