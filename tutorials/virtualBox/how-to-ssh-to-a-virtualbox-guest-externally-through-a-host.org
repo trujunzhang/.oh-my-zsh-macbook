@@ -1,0 +1,22 @@
+* How to SSH to a VirtualBox guest externally through a host? 
+   https://stackoverflow.com/questions/5906441/how-to-ssh-to-a-virtualbox-guest-externally-through-a-host
+
+
+The best way to login to a guest Linux VirtualBox VM is port forwarding. By default, you should have one interface already which is using NAT. Then go to the Network settings and click the Port Forwarding button. Add a new Rule. As the rule name, insert "ssh". As "Host port", insert 3022. As "Guest port", insert 22. Everything else of the rule can be left blank.
+
+or from the command line
+
+>> VBoxManage modifyvm myserver --natpf1 "ssh,tcp,,3022,,22"
+>> VBoxManage modifyvm ubuntu --natpf1 "ssh,tcp,,3022,,22"
+where 'myserver' is the name of the created VM. Check the added rules:
+
+>> VBoxManage showvminfo myserver | grep 'Rule'
+>> VBoxManage showvminfo ubuntu | grep 'Rule'
+That's all! Please be sure you don't forget to install an SSH server in the VM:
+
+>> sudo apt-get install openssh-server
+To SSH into the guest VM, write:
+
+>> ssh -p 3022 user@127.0.0.1
+>> ssh -p 3022 djzhang@127.0.0.1
+Where user is your username within the VM. 
