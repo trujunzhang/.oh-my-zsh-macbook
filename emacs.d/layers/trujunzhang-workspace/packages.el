@@ -36,7 +36,7 @@
 
 (defconst trujunzhang-workspace-packages
   '(
-    (indent-guide :fetcher github :repo "zk-phi/indent-guide")
+    highlight-indent-guides
     ;;; For typescript
     ;;; company
     tide
@@ -49,17 +49,29 @@
     ;; matlab-mode
     ))
 
-;;; indent-guide
+;;; highlight-indent-guides
 ;;; =================================
-(defun trujunzhang-workspace/post-init-indent-guide ()
-    (indent-guide-global-mode)
-  )
+(defun trujunzhang-workspace/init-highlight-indent-guides()
+  (use-package highlight-indent-guides
+   :defer t
+   :init
+   (progn
+    (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+    (setq highlight-indent-guides-delay 0.3)
+    )
+   :config
+     (setq highlight-indent-guides-method 'character)
+     (setq highlight-indent-guides-character ?\X)
+    (set-face-background 'highlight-indent-guides-odd-face "darkgray")
+    (set-face-background 'highlight-indent-guides-even-face "dimgray")
+    (set-face-foreground 'highlight-indent-guides-character-face "dimgray") 
+   )
+   )
 
 ;;; Auto-company
 ;;; =================================
 ;;;; (defun typescript/post-init-company ()
 ;;;;  (spacemacs|add-company-hook typescript-mode))
-
 
 ;;; tide
 ;;; =================================
