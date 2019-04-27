@@ -1,5 +1,6 @@
 version: '2'
 
+# github: https://github.com/stilliard/docker-pure-ftpd
 # Usage example: https://github.com/stilliard/docker-pure-ftpd/wiki/Docker-stack-with-Wordpress-&-FTP
 # https://docs.docker.com/compose/install/
 # docker-compose up -d
