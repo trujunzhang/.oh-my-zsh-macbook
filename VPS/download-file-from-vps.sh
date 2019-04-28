@@ -13,7 +13,6 @@ https://linuxhint.com/zip_folder_linux/
 
 >> unzip ZIP_ARCHIVE.zip
 
-
 ** The basic syntax to use scp (secure copy) for securely downloading remote files is as follows, replacing user, server, path, and target as appropriate:
 
-scp root@199.180.133.198:/root/vps_backup.zip /Users/djzhang/Desktop
+scp root@xxx.xxx.xxx.xxx:/root/vps_backup.zip /Users/djzhang/Desktop
