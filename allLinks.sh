@@ -59,9 +59,8 @@ DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
 VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
 
 # Trujunzhag's tmux
-TMUX_HOME="$TRUJUNZHANG_DOTFILES_HOME/USERS/tmux"
-TMUX_FOLDER="$TMUX_HOME/tmux"
-TMUX_CONFIG="$TMUX_HOME/.tmux.conf"
+TMUX_CONFIG="$TRUJUNZHANG_DOTFILES_HOME/tmux.conf.symlink"
+TMUX_CONFIG_LOCAL="$TRUJUNZHANG_DOTFILES_HOME/tmux.conf.local.symlink"
 
 # Import function files.
 source ./bash/files-functions.sh
@@ -128,8 +127,8 @@ directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/SpaceVim.d"
 fileLink "gvimrc(MacVim)" "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink" "$HOME/.gvimrc"
 
 # Tmux(All)
-directoryLink "tmux(Folder)"  "$TMUX_FOLDER" "$HOME/.tmux"
 fileLink "tmux(config)" "$TMUX_CONFIG" "$HOME/.tmux.conf"
+fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL" "$HOME/.tmux.conf.local"
 
 # pending(the following)
 # ====================================
