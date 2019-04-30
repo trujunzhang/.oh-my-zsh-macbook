@@ -21,7 +21,7 @@ values."
    ;; and `nil'. `unused' will lazy install only unused layers (i.e. layers
    ;; not listed in variable `dotspacemacs-configuration-layers'), `all' will
    ;; lazy install any layer that support lazy installation even the layers
-   ;; listed in `dotspacemacs-configuration-layers'. `nil' disable the lazy
+(message "The name of this buffer is: %s." (fileName))   ;; listed in `dotspacemacs-configuration-layers'. `nil' disable the lazy
    ;; installation feature and you have to explicitly list a layer in the
    ;; variable `dotspacemacs-configuration-layers' to install it.
    ;; (default 'unused)
@@ -62,7 +62,7 @@ values."
       auto-completion-enable-help-tooltip 'manual
       :disabled-for org erc)
      better-defaults
-     ;;; emacs-lisp
+     emacs-lisp
      git
      markdown
      org

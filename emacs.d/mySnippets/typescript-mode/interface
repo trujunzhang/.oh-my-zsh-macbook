@@ -1,6 +1,0 @@
-#name : document string
-# --
-
-export interface I`(car (last (split-string (buffer-file-name) "/")))Props {
-
-}

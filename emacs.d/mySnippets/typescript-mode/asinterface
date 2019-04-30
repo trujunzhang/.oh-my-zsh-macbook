@@ -1,0 +1,7 @@
+#name : interface
+# --
+`(buffer-file-name)
+-- `(car (last (split-string (buffer-file-name) "/"))) wh
+
+export interface I `(car (last (split-string (buffer-file-name) "/"))) Props {
+}
