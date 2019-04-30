@@ -113,8 +113,8 @@
 ;;; web-mode
 ;;; =================================
 (defun trujunzhang-workspace/post-init-web-mode ()
-  (add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
-  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+  (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
   ;; FIXME -- this is not good!
   (add-hook 'web-mode-hook
             (lambda ()
