@@ -9,6 +9,8 @@ https://linuxhint.com/zip_folder_linux/
 
 >> zip -r $HOME/vps_backup.zip /tmp/DefinitelyTyped
 
+>> zip -r /home/deploy/data/politicl.zip /home/deploy/data/politicl-api/.git
+
 ** Extracting the Zip Archive using the Command Line Interface (CLI)
 
 >> unzip ZIP_ARCHIVE.zip

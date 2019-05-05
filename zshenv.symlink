@@ -122,5 +122,4 @@ export EDITOR="$VISUAL"
 if ( hash tmux 2>/dev/null ) && [ $TERM != "screen-256color" ]; then
   # tmux
   tmux attach || tmux new
-  # tmux source-file ~/.tmux.conf
 fi

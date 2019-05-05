@@ -65,6 +65,9 @@ TMUX_CONFIG_LOCAL="$TRUJUNZHANG_DOTFILES_HOME/tmux.conf.local.symlink"
 # Import function files.
 source ./bash/files-functions.sh
 
+# Applications
+SYSTEM_APPLICATION="/Applications"
+SKETCH_APP="/Users/djzhang/Documents/Organizations/__APPLICATIONS/XD/Sketch.app"
 
 # ====================================================================
 # ====================================================================
@@ -129,6 +132,9 @@ fileLink "gvimrc(MacVim)" "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink" "$HOME/.gv
 # Tmux(All)
 fileLink "tmux(config)" "$TMUX_CONFIG" "$HOME/.tmux.conf"
 fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL" "$HOME/.tmux.conf.local"
+
+# Application Links
+directoryLink "sketch(app)"  "$SKETCH_APP" "$SYSTEM_APPLICATION/Sketch.app"
 
 # pending(the following)
 # ====================================
