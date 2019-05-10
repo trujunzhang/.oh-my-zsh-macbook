@@ -31,10 +31,6 @@ export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 
 
-# rvm
-# ======================================================================
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # auto env
 # ======================================================================
@@ -123,3 +119,10 @@ if ( hash tmux 2>/dev/null ) && [ $TERM != "screen-256color" ]; then
   # tmux
   tmux attach || tmux new
 fi
+
+# rvm
+# ======================================================================
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+rvm use ruby-2.6.0
+# export PATH="$GEM_HOME/bin:$PATH"
