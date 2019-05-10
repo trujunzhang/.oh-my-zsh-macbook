@@ -124,5 +124,5 @@ fi
 # ======================================================================
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-rvm use ruby-2.6.0
+rvm use 2.6.0 --default
 # export PATH="$GEM_HOME/bin:$PATH"
