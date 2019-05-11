@@ -10,8 +10,8 @@ services:
       - UMASK_SET=022
       - WEBUI_PORT=8080
     volumes:
-      - :/config
-      - :/home/deploy/data
+      - /home/deploy/data/config:/config
+      - /home/deploy/data/torrent:/downloads
     ports:
       - 6881:6881
       - 6881:6881/udp
