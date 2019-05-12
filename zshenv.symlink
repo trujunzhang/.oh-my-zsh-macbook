@@ -31,6 +31,16 @@ export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 
 
+# Global Environment
+# ======================================================================
+## To make Neovim your default editor, use this line(below):
+export EDITOR="nvim"
+
+## nvim is Vim for me, so where it is installed, I want to use it all the time. To make this a reality, I added the following alias to my ZSH configuration:
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
+
 
 # auto env
 # ======================================================================
