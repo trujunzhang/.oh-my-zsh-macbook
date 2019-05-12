@@ -37,6 +37,10 @@ export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 source /usr/local/opt/autoenv/activate.sh
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
+# rvm
+# ======================================================================
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # java environment
 # ======================================================================
@@ -116,13 +120,5 @@ export EDITOR="$VISUAL"
 
 # BEGIN run on shell startup ###################################################
 if ( hash tmux 2>/dev/null ) && [ $TERM != "screen-256color" ]; then
-  # tmux
-  tmux attach || tmux new
+  # tmux attach || tmux new
 fi
-
-# rvm
-# ======================================================================
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# rvm use 2.6.0 --default
-# export PATH="$GEM_HOME/bin:$PATH"
