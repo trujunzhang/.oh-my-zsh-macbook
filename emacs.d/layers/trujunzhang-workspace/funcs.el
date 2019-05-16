@@ -1,3 +1,16 @@
+
+;;
+;; Convert the first character to uppercase/capital letter using yasnippet
+;; https://emacs.stackexchange.com/questions/12613/convert-the-first-character-to-uppercase-capital-letter-using-yasnippet
+;; 
+(defun my/capitalize-first-char (&optional string)
+  "Capitalize only the first character of the input STRING."
+  (when (and string (> (length string) 0))
+    (let ((first-char (substring string nil 1))
+          (rest-str   (substring string 1)))
+      (concat (capitalize first-char) rest-str))))
+
+
 (defun trujunzhang-workspace/my-web-mode-hook ()
   "Hooks for Web mode."
   (setq web-mode-markup-indent-offset 20

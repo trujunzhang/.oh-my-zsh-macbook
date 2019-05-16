@@ -1,7 +1,10 @@
-#name : interface
-# --
-`(buffer-file-name)
--- `(car (last (split-string (buffer-file-name) "/"))) wh
+#name : asinterface
+# info : https://cupfullofcode.com/blog/2013/02/26/snippet-expansion-with-yasnippet/index.html
+# -- 
+export interface I`(my/capitalize-first-char (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`Props {
 
-export interface I `(car (last (split-string (buffer-file-name) "/"))) Props {
+}
+
+export interface I`(my/capitalize-first-char (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`State{
+
 }

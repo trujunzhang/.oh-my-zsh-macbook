@@ -40,7 +40,12 @@
     # my space
     bootstrap_before = "myspacevim#init"
     # Side Tree
-    filemanager = 'nerdtree' 
+    # file manager plugins supported in SpaceVim:
+    # - vimfiler (default)
+    # - nerdtree
+    # - defx
+    # filemanager = 'defx' 
+    filemanager = 'vimfiler' 
     filetree_direction = "left"
     # Project
     project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', 'package.json', '.SpaceVim.d/','.next','node_modules','ios','android','build','production-cloud','production-server']
@@ -61,11 +66,22 @@ default_height = 30
 name = "colorscheme"
 
 [[layers]]
-  name = "lang#python"
-  format-on-save = 1
+name = "lang#python"
+format-on-save = 1
 
+# Fuzzy finder  
+# SpaceVim provides five fuzzy find tools, 
+# each of them is configured in a layer(unite, denite, leaderf, ctrlp and fzf layer). 
+# These layers have the same key bindings and features. 
+# But they need different dependencies.
 [[layers]]
 name = "unite"
+
+# Bookmarks management
+# Bookmarks manager is included in tools layer, 
+# to use following key bindings, you need to enable tools layer:
+[[layers]]
+name = "tools"
 
 [[layers]]
 name = "tmux"
