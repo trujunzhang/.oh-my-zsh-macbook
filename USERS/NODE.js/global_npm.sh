@@ -2,7 +2,7 @@
 npm install -g yarn
 
 # Config.
-yarn config set registry 'https://registry.npm.taobao.org'
+# yarn config set registry 'https://registry.npm.taobao.org'
 
 # Create typescript definitions files (d.ts) from react components
 npm install -g react-to-typescript-definitions

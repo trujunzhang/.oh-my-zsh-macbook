@@ -1,0 +1,16 @@
+
+* Demo projects
+
+** TODO builderbook
+    
+    https://github.com/builderbook/builderbook
+
+    [[file+emacs:/Users/djzhang/Documents/Organizations/TERMS/ZEIT/builderbook][git local project]]
+
+    Open source web app. Built with React, Material-UI, Next, Express, Mongoose, MongoDB.
+
+
+* Resume (Latex)
+
+** CVS 
+
