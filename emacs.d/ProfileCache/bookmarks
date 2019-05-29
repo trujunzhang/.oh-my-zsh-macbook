@@ -8,6 +8,16 @@
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
+("web.json(global-politicl-lerna)"
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appWeb/app/package.json")
+ (front-context-string . "\n\n    \"@expo/vec")
+ (rear-context-string . "-32.0.0.tar.gz\"\n")
+ (position . 1))
+("appLibs.json(global-politicl-lerna)"
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appLibrary/appLibs/package.json")
+ (front-context-string . "\n\n    \"@expo/vec")
+ (rear-context-string . "-32.0.0.tar.gz\"\n")
+ (position . 1))
 ("lerna.json(global-material-ui)"
  (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-material-ui")
  (front-context-string . "\n\n    \"@expo/vec")
