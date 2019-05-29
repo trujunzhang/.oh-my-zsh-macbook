@@ -1,0 +1,31 @@
+* IDES
+
+** atom 
+
+*** Plugins
+
+  |--------------------+--------+------+--------+---------|
+  | name               | url    |      | status |         |
+  |--------------------+--------+------+--------+---------|
+  |                    |        | used | check  | pending |
+  |--------------------+--------+------+--------+---------|
+  | monokai            | [[https://atom.io/themes/monokai][theme]]  | *    |        |         |
+  | vim-mode-plus      | [[https://atom.io/packages/vim-mode-plus][plugin]] | *    |        |         |
+  | atom-typescript    | [[https://atom.io/packages/atom-typescript][plugin]] | *    |        |         |
+  | Highlight Selected | [[https://atom.io/packages/highlight-selected][plugin]] | *    |        |         |
+  | single-click-open  | [[https://atom.io/packages/single-click-open][plugin]] | *    |        |         |
+  |--------------------+--------+------+--------+---------|
+
+
+
+
+
+
+  |------+-----+------+--------+---------|
+  | name | url |      | status |         |
+  |------+-----+------+--------+---------|
+  |      |     | used | check  | pending |
+  |------+-----+------+--------+---------|
+  |      |     |      |        |         |
+  |      |     |      |        |         |
+  |------+-----+------+--------+---------|

@@ -1,33 +1,11 @@
 "*":
-  "atom-beautify":
-    general: {}
-  "atom-ide-ui":
-    use: {}
-  "atom-package-deps":
-    ignored: [
-      "linter-package-json-validator"
-      "linter-jsonlint"
-    ]
   core:
-    telemetryConsent: "limited"
-  editor:
-    fontSize: 16
-    preferredLineLength: 100
-    showIndentGuide: true
-    showInvisibles: true
-    softWrap: true
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "monokai"
+    ]
   "exception-reporting":
-    userId: "c3e419a6-250a-4e79-85f8-48fdda7d7718"
-  filesize:
-    UseDecimal: true
-  "ide-flowtype":
-    tryFlowBin: true
-  "linter-stylelint":
-    disableWhenNoConfig: true
-    enableHtmlLinting: true
-  "markdown-preview":
-    useGitHubStyle: true
-  "tree-view":
-    hideIgnoredNames: true
+    userId: "349a0ed7-f680-4b80-a7bf-0ce7171413ad"
   welcome:
     showOnStartup: false
