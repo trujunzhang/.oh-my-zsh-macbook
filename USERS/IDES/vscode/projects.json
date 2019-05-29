@@ -1,21 +1,14 @@
 [
 	{
-		"name": "demo-NativeBase-SharedComps",
-		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/clientLibrary/NativeBase/demo-NativeBase-SharedComps",
-		"paths": [],
-		"group": "",
-		"enabled": true
-	},
-	{
-		"name": "Admin-Dashboard-Template-React-Bootstrap",
-		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/webLibrary/react-bootstrap/Admin-Dashboard-Template-React-Bootstrap",
-		"paths": [],
-		"group": "",
-		"enabled": true
-	},
-	{
 		"name": "web-app",
 		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appWeb/app",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
+		"name": "global-politicl-lerna(ROOT)",
+		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna",
 		"paths": [],
 		"group": "",
 		"enabled": true
