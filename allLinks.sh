@@ -54,6 +54,9 @@ IDES_TRUJUNZHANG_HOME="$TRUJUNZHANG_DOTFILES_HOME/USERS/IDES"
 VSCODE_USERS_HOME="$IDES_TRUJUNZHANG_HOME/vscode/User"
 ### /Users/djzhang/Library/Application Support/Code/User
 DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
+### IDES(Atom)
+ATOM_USERS_HOME="$IDES_TRUJUNZHANG_HOME/atom"
+DEST_ATOM_USER_HOME="$USER_PROFILE_DJZHANG_HOME/.atom"
 
 # Trujunzhag's vimrc
 VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
@@ -83,11 +86,18 @@ directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
 fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json" "$DEST_VSCODE_USER_HOME/keybindings.json"
 fileLink "settings.json(vscode)"  "$VSCODE_USERS_HOME/settings.json" "$DEST_VSCODE_USER_HOME/settings.json"
 
+# IDES(atom)
+fileLink "config.cson(atom)"  "$ATOM_USERS_HOME/config.cson" "$DEST_ATOM_USER_HOME/config.cson"
+fileLink "keymap.cson(atom)"  "$ATOM_USERS_HOME/keymap.cson" "$DEST_ATOM_USER_HOME/keymap.cson"
+
+
 # IDES(Sublime|LightTable)
 SUBLIME_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
 ln -sv "$SUBLIME_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
 LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
 ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
+
+
 
 # $USERPROFILE/Library/Caches
 directoryLink  "Caches(Yarn)"  "$LIBRARY_YARN_HOME"  "$HOME/Library/Caches/Yarn"
