@@ -51,16 +51,17 @@ PYENV_HOME="$ENVS_HOME/pyenv"
 DEST_APPLICATION_SUPPOR="$HOME/Library/Application Support"
 IDES_TRUJUNZHANG_HOME="$TRUJUNZHANG_DOTFILES_HOME/USERS/IDES"
 ### IDES(VSCODE)
-VSCODE_USERS_HOME="$IDES_TRUJUNZHANG_HOME/vscode/User"
+VSCODE_HOME="$IDES_TRUJUNZHANG_HOME/vscode"
+VSCODE_USERS_HOME="$VSCODE_HOME/User"
 ### /Users/djzhang/Library/Application Support/Code/User
 DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
 ### IDES(Atom)
-ATOM_USERS_HOME="$IDES_TRUJUNZHANG_HOME/atom"
-DEST_ATOM_USER_HOME="$USER_PROFILE_DJZHANG_HOME/.atom"
+ATOM_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/atom"
+ATOM_HOME_DEST="$USER_PROFILE_DJZHANG_HOME/.atom"
 ### IDES(Sublime)
-SUBLIME_USERS_HOME="$IDES_TRUJUNZHANG_HOME/sublime"
+SUBLIME_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/sublime"
 ### /Users/djzhang/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-DEST_SUBLIME_USER_HOME="$DEST_APPLICATION_SUPPOR/Sublime Text 3/Packages/User"
+SUBLIME_HOME_DEST="$DEST_APPLICATION_SUPPOR/Sublime Text 3/Packages/User"
 
 # Trujunzhag's vimrc
 VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
@@ -89,16 +90,17 @@ directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
 # https://github.com/VSpaceCode/VSpaceCode
 fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json" "$DEST_VSCODE_USER_HOME/keybindings.json"
 fileLink "settings.json(vscode)"  "$VSCODE_USERS_HOME/settings.json" "$DEST_VSCODE_USER_HOME/settings.json"
+fileLink "projects.json(vscode)"  "$VSCODE_HOME/projects.json" "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager/projects.json"
 
 # IDES(atom)
-fileLink "config.cson(atom)"  "$ATOM_USERS_HOME/config.cson" "$DEST_ATOM_USER_HOME/config.cson"
-fileLink "keymap.cson(atom)"  "$ATOM_USERS_HOME/keymap.cson" "$DEST_ATOM_USER_HOME/keymap.cson"
+fileLink "config.cson(atom)"  "$ATOM_HOME_SOURCE/config.cson" "$ATOM_HOME_DEST/config.cson"
+fileLink "keymap.cson(atom)"  "$ATOM_HOME_SOURCE/keymap.cson" "$ATOM_HOME_DEST/keymap.cson"
 
 
 # IDES(Sublime)
-fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_USERS_HOME/Preferences.sublime-settings" "$DEST_SUBLIME_USER_HOME/Preferences.sublime-settings"
-SUBLIME_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
-ln -sv "$SUBLIME_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
+fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_HOME_SOURCE/Preferences.sublime-settings" "$SUBLIME_HOME_DEST/Preferences.sublime-settings"
+SUBLIME_APP_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
+ln -sv "$SUBLIME_APP_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
 
 # IDES(LightTable)
 LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
