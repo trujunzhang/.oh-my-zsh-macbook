@@ -57,6 +57,10 @@ DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
 ### IDES(Atom)
 ATOM_USERS_HOME="$IDES_TRUJUNZHANG_HOME/atom"
 DEST_ATOM_USER_HOME="$USER_PROFILE_DJZHANG_HOME/.atom"
+### IDES(Sublime)
+SUBLIME_USERS_HOME="$IDES_TRUJUNZHANG_HOME/sublime"
+### /Users/djzhang/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
+DEST_SUBLIME_USER_HOME="$DEST_APPLICATION_SUPPOR/Sublime Text 3/Packages/User"
 
 # Trujunzhag's vimrc
 VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
@@ -91,9 +95,12 @@ fileLink "config.cson(atom)"  "$ATOM_USERS_HOME/config.cson" "$DEST_ATOM_USER_HO
 fileLink "keymap.cson(atom)"  "$ATOM_USERS_HOME/keymap.cson" "$DEST_ATOM_USER_HOME/keymap.cson"
 
 
-# IDES(Sublime|LightTable)
+# IDES(Sublime)
+fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_USERS_HOME/Preferences.sublime-settings" "$DEST_SUBLIME_USER_HOME/Preferences.sublime-settings"
 SUBLIME_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
 ln -sv "$SUBLIME_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
+
+# IDES(LightTable)
 LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
 ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 
