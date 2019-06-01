@@ -7,6 +7,13 @@
 		"enabled": true
 	},
 	{
+		"name": "client-app",
+		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appClient/app",
+		"paths": [],
+		"group": "",
+		"enabled": true
+	},
+	{
 		"name": "global-politicl-lerna(ROOT)",
 		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna",
 		"paths": [],

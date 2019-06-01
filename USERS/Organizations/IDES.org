@@ -14,6 +14,7 @@
   | atom-typescript    | [[https://atom.io/packages/atom-typescript][plugin]] | *    |        |         |
   | Highlight Selected | [[https://atom.io/packages/highlight-selected][plugin]] | *    |        |         |
   | single-click-open  | [[https://atom.io/packages/single-click-open][plugin]] | *    |        |         |
+  | project-manager    | [[https://atom.io/packages/project-manager][plugin]] | *    |        |         |
   |--------------------+--------+------+--------+---------|
 
 

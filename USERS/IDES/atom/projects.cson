@@ -1,0 +1,14 @@
+[
+  {
+    title: "web-App"
+    paths: [
+      "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appWeb/app"
+    ]
+  }
+  {
+    title: "Global Politicl Lerna(Root)"
+    paths: [
+      "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna"
+    ]
+  }
+]
