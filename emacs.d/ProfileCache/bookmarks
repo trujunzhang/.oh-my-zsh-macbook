@@ -8,6 +8,11 @@
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
+("lerna.json(global-ieatta-lerna)"
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-ieatta-lerna")
+ (front-context-string . "\n\n    \"@expo/vec")
+ (rear-context-string . "-32.0.0.tar.gz\"\n")
+ (position . 1))
 ("web.json(global-politicl-lerna)"
  (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appWeb/app/package.json")
  (front-context-string . "\n\n    \"@expo/vec")
