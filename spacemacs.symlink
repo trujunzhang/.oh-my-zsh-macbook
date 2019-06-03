@@ -36,9 +36,9 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     python
-     (clojure :variables clojure-enable-fancify-symbols t)
-     vimscript
+     ;; python
+     ;; (clojure :variables clojure-enable-fancify-symbols t)
+     ;; vimscript
      ;; latex
      ;; lsp
      ;; pandoc
@@ -62,11 +62,11 @@ values."
       auto-completion-enable-help-tooltip 'manual
       :disabled-for org erc)
      better-defaults
-     emacs-lisp
+     ;; emacs-lisp
      git
-     markdown
+     ;; markdown
      org
-     latex
+     ;; latex
      (shell :variables
         shell-default-shell 'eshell
         shell-default-height 30
@@ -75,9 +75,9 @@ values."
      ;; spell-checking
      syntax-checking
      version-control
-     tmux
+     ;; tmux
      trujunzhang-workspace
-     w3m
+     ;; w3m
    )
 
    ;; List of additional packages that will be installed without being
