@@ -24,8 +24,8 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 
 # https://github.com/tmux-plugins/tmux-continuum/blob/master/docs/automatic_start.md
-# set -g @continuum-boot 'on' 
- 
+# set -g @continuum-boot 'on'
+
 # Save
 set -g @continuum-save-interval '240240'
 set -g @continuum-boot-options 'iterm'
@@ -35,3 +35,14 @@ set -g @continuum-restore 'on'
 # Trujunzhang's plugins with session (END)
 # ===============================================
 
+# Trujunzhang's config for Mouse Support
+# ===============================================
+
+set-option -g mouse on
+
+# make scrolling with wheels work
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
+
+# Trujunzhang's config for Mouse Support (END)
+# ===============================================
