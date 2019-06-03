@@ -1,37 +1,44 @@
 [
-	{
-		"name": "web-app",
-		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appWeb/app",
-		"paths": [],
-		"group": "",
-		"enabled": true
-	},
-	{
-		"name": "client-app",
-		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appClient/app",
-		"paths": [],
-		"group": "",
-		"enabled": true
-	},
-	{
-		"name": "global-politicl-lerna(ROOT)",
-		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna",
-		"paths": [],
-		"group": "",
-		"enabled": true
-	},
   {
-		"name": "appLibs",
-		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appLibrary/appLibs",
-		"paths": [],
-		"group": "",
-		"enabled": true
-	},
+    "name": "web-app",
+    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appWeb/app",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  },
   {
-		"name": "appSharedComps",
-		"rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appLibrary/appSharedComps",
-		"paths": [],
-		"group": "",
-		"enabled": true
-	}
+    "name": "client-app",
+    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appClient/app",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  },
+  {
+    "name": "client-shared",
+    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appClient/sharedComps",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  },
+  {
+    "name": "global-politicl-lerna(ROOT)",
+    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  },
+  {
+    "name": "appLibs",
+    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appLibrary/appLibs",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  },
+  {
+    "name": "appSharedComps",
+    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appLibrary/appSharedComps",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  }
 ]
