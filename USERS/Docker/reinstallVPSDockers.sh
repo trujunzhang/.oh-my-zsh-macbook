@@ -1,13 +1,12 @@
 # https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04
 # Step 1 — Installing Docker
-wget -qO- https://get.docker.com/ | sh
-sudo usermod -aG docker $(whoami)
+#wget -qO- https://get.docker.com/ | sh
+#sudo usermod -aG docker $(whoami)
 
 # https://docs.docker.com/compose/install/
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-
+#sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+#sudo chmod +x /usr/local/bin/docker-compose
+#sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 #!/usr/bin/env bash
 
