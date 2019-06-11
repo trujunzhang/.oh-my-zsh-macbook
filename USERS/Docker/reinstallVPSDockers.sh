@@ -29,10 +29,10 @@ docker run -d --name ipsec-vpn-server --env-file /root/.oh-my-zsh-macbook/USERS/
 cd /root/.oh-my-zsh-macbook
 cd USERS/Docker/docker-pure-ftpd
 
-docker-compose up -d
+# docker-compose up -d
 
 cd /root/.oh-my-zsh-macbook
 # cd USERS/Docker/docker-rutorrent
 cd USERS/Docker/qbittorrent
 
-docker-compose up -d
+# docker-compose up -d
