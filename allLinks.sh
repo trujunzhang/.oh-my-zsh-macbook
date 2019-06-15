@@ -155,6 +155,11 @@ fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL" "$HOME/.tmux.conf.local"
 # Application Links
 directoryLink "sketch(app)"  "$SKETCH_APP" "$SYSTEM_APPLICATION/Sketch.app"
 
+# Android Environment
+directoryLink "sdk(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android" "/Users/djzhang/Library/Android"
+directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android" "/Users/djzhang/.android"
+directoryLink ".gradle(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle" "/Users/djzhang/.gradle"
+
 # pending(the following)
 # ====================================
 # directoryLink "CocoaPods(Library/Caches)"  "$TRUJUNZHANG_DOTFILES_HOME/lib/CocoaPods" "$HOME/Library/Caches/CocoaPods"
