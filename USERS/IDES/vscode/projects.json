@@ -35,6 +35,13 @@
     "enabled": true
   },
   {
+    "name": "client-app(ieatta)",
+    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-ieatta-lerna/packages/appClient/app",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  },
+  {
     "name": "client-shared",
     "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appClient/sharedComps",
     "paths": [],
