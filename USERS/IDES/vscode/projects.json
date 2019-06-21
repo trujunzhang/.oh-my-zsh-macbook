@@ -1,4 +1,11 @@
 [
+   {
+    "name": "global-sketch-lerna(ROOT)",
+    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-sketch-lerna",
+    "paths": [],
+    "group": "",
+    "enabled": true
+  },
   {
     "name": "global-politicl-lerna(ROOT)",
     "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna",
