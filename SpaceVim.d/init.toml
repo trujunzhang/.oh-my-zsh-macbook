@@ -77,6 +77,10 @@ format-on-save = 1
 [[layers]]
 name = "unite"
 
+[[layers]]
+name = "ctrlp"
+
+
 # Bookmarks management
 # Bookmarks manager is included in tools layer, 
 # to use following key bindings, you need to enable tools layer:

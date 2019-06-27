@@ -9,4 +9,4 @@ export interface I`(my/capitalize-first-char (file-name-nondirectory (file-name-
 
 }
 
-export class `(my/capitalize-first-char (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))` extends React.Components<I`(my/capitalize-first-char (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`Props, I`(my/capitalize-first-char (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`State> {
+export class `(my/capitalize-first-char (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))` extends React.Component<I`(my/capitalize-first-char (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`Props, I`(my/capitalize-first-char (file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`State> {
