@@ -4,7 +4,6 @@
 # uninstall by removing these lines or running `tabtab uninstall yo`
 # [[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
 
-
 # all export [PATH]
 # ======================================================================
 # Android Studio installed automatically
@@ -30,27 +29,10 @@ export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home
 
-
-# Global Environment
-# ======================================================================
-## To make Neovim your default editor, use this line(below):
-export EDITOR="nvim"
-
-## nvim is Vim for me, so where it is installed, I want to use it all the time. To make this a reality, I added the following alias to my ZSH configuration:
-if type nvim > /dev/null 2>&1; then
-  alias vim='nvim'
-fi
-
-
 # auto env
 # ======================================================================
 source /usr/local/opt/autoenv/activate.sh
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
-
-# rvm
-# ======================================================================
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # java environment
 # ======================================================================
@@ -77,6 +59,10 @@ eval "$(pyenv init -)"
 # activate
 # ************************************
 # source activate 2.7.11
+
+# dart sdk
+# ======================================================================
+export PATH="$PATH:$HOME/Documents/dartSDK/bin"
 
 # flutter sdk
 # ======================================================================
@@ -111,7 +97,6 @@ export ANDROID_SDK_HOME=/Users/djzhang/Library/Android/sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
-
 # oh-my-zsh(with Homebrew)
 # ======================================================================
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -130,5 +115,14 @@ export EDITOR="$VISUAL"
 
 # BEGIN run on shell startup ###################################################
 if ( hash tmux 2>/dev/null ) && [ $TERM != "screen-256color" ]; then
-  # tmux attach || tmux new
+  # tmux
+  tmux attach || tmux new
 fi
+
+# rvm
+# ======================================================================
+# Load RVM into a shell session *as a function*
+export PATH="$GEM_HOME/bin:$PATH"
+# 
+# Load RVM into a shell session *as a function*
+# 
