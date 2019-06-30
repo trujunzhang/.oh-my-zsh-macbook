@@ -91,6 +91,9 @@ name = "tools"
 name = "tmux"
 tmux_navigator_modifier = "alt"
 
+[[layers]]
+name = "lang#dart"
+
 # [[layers]]
   # name = "lang#javascript"
   # enable_flow_syntax = false
