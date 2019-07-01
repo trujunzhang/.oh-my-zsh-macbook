@@ -207,3 +207,4 @@ alias iosopen='open -a Simulator'
 # Flutter
 alias frun='flutter run'
 alias fbapk='flutter build apk --split-per-abi'
+alias fpget='flutter packages get'
