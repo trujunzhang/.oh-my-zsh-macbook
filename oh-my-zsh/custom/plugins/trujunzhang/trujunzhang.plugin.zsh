@@ -201,5 +201,9 @@ alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --a
 # macvim
 alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
 
-#xcode
+# xcode
 alias iosopen='open -a Simulator'
+
+# Flutter
+alias frun='flutter run'
+alias fbapk='flutter build apk --split-per-abi'

@@ -1,13 +1,21 @@
 "*":
+  _dart:
+    _firstRun: true
+    _version: "1.0.1"
+  "autocomplete-plus":
+    autoActivationDelay: 500
   core:
     disabledPackages: [
       "linter"
     ]
+    followSymlinks: false
     telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
       "monokai"
     ]
+  dart:
+    sdkLocation: "/Users/djzhang/Documents/dartSDK"
   "exception-reporting":
     userId: "349a0ed7-f680-4b80-a7bf-0ce7171413ad"
   "prettier-atom":
