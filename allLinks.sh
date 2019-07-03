@@ -159,6 +159,7 @@ directoryLink "sketch(app)"  "$SKETCH_APP" "$SYSTEM_APPLICATION/Sketch.app"
 directoryLink "sdk(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android" "/Users/djzhang/Library/Android"
 directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android" "/Users/djzhang/.android"
 directoryLink ".gradle(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle" "/Users/djzhang/.gradle"
+directoryLink ".m2(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2" "/Users/djzhang/.m2"
 
 # pending(the following)
 # ====================================
