@@ -4,27 +4,27 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (
 ("lerna.json(global-politicl-lerna)"
- (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna")
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna")
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
 ("lerna.json(global-ieatta-lerna)"
- (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-ieatta-lerna")
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-ieatta-lerna")
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
 ("web.json(global-politicl-lerna)"
- (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appWeb/app/package.json")
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna/packages/appWeb/app/package.json")
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
 ("appLibs.json(global-politicl-lerna)"
- (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-politicl-lerna/packages/appLibrary/appLibs/package.json")
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna/packages/appLibrary/appLibs/package.json")
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
 ("lerna.json(global-material-ui)"
- (filename .  "~/Documents/Organizations/__CODING/CURRENT/global-material-ui")
+ (filename .  "~/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-material-ui")
  (front-context-string . "\n\n    \"@expo/vec")
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
@@ -44,12 +44,12 @@
  (rear-context-string . "-32.0.0.tar.gz\"\n")
  (position . 1))
 ("lerna.json(politicl)"
- (filename . "~/Documents/Organizations/__CODING/CURRENT/python-politicl-universal/lerna.json")
+ (filename . "~/Documents/Organizations/__CODING/CURRENT/__GLOBALS/python-politicl-universal/lerna.json")
  (front-context-string . "{\n  \"packages\": ")
  (rear-context-string)
  (position . 1))
 ("lerna.json(ieatta)"
- (filename . "~/Documents/Organizations/__CODING/CURRENT/python-ieatta-universal/lerna.json")
+ (filename . "~/Documents/Organizations/__CODING/CURRENT/__GLOBALS/python-ieatta-universal/lerna.json")
  (front-context-string . "{\n  \"packages\": ")
  (rear-context-string)
  (position . 1))
