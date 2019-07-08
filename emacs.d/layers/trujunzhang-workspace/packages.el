@@ -152,7 +152,7 @@
   ;;; Auto save buffers.
   (add-hook 'focus-out-hook 'trujunzhang-workspace/sooheon-save-all)
   ;; (add-hook 'evil-insert-state-exit-hook 'trujunzhang-workspace/sooheon-save-all)
-  )
+)
 
 ;;; Prettier-js
 ;;; =================================
@@ -160,21 +160,21 @@
   (message "info: [trujunzhang]: <init> prettier-js")
   (use-package prettier-js
     :defer t)
-  )
+)
 
 (defun trujunzhang-workspace/post-init-prettier-js ()
   (message "info: [trujunzhang]: <post> prettier-js")
   (add-hook 'js2-mode-hook 'prettier-js-mode)
   (add-hook 'web-mode-hook 'prettier-js-mode)
   (add-hook 'typescript-mode-hook 'prettier-js-mode)
-  )
+)
 
 ;;; Matlab-mode
 ;;; =================================
 (defun trujunzhang-workspace/init-matlab-mode()
   (use-package matlab-mode
     :defer t)
-  )
+)
 
 ;;; Projectile
 ;;; =================================
