@@ -12,3 +12,4 @@
 ;; variables
 
 (setq dart-enable-analysis-server t)
+;; (setq dart-enable-analysis-server nil)
