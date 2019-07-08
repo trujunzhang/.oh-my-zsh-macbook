@@ -13,7 +13,6 @@
   '(
     ;; flycheck
     flutter
-    helm
     (dart-mode :location (recipe
       :fetcher github
       :repo "sid-kurias/dart-mode"
@@ -35,9 +34,10 @@
   )
 )
 
-
 (defun dart-layer/post-init-flycheck ()
   (spacemacs/add-flycheck-hook 'dart-mode))
+
+(defun dart-layer/init-helm-dart())
 
 (defun dart-layer/init-flutter()
   (use-package flutter
