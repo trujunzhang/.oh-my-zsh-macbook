@@ -12,6 +12,7 @@
 (setq dart-layer-packages
   '(
     ;; flycheck
+    flutter
     helm
     (dart-mode :location (recipe
       :fetcher github
@@ -37,6 +38,15 @@
 
 (defun dart-layer/post-init-flycheck ()
   (spacemacs/add-flycheck-hook 'dart-mode))
+
+(defun dart-layer/init-flutter()
+  (use-package flutter
+    :after dart-mode
+    :bind (:map dart-mode-map
+                ("C-M-x" . #'flutter-run-or-hot-reload))
+    :custom
+    (flutter-sdk-path "/Users/djzhang/Documents/flutterSDK/"))
+)
 
 (defun dart-layer/init-company-dart ()
   (use-package company-dart
@@ -70,4 +80,6 @@
             )
           )
     )
+    :custom
+    (dart-sdk-path "/Users/djzhang/Documents/flutterSDK/bin/cache/dart-sdk/")
 ))
