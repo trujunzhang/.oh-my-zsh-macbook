@@ -9,9 +9,9 @@
 ;;
 ;;; License: GPLv3
 
-(setq dart-packages
+(setq dart-layer-packages
   '(
-    flycheck
+    ;; flycheck
     helm
     (dart-mode :location (recipe
       :fetcher github
@@ -35,17 +35,17 @@
 )
 
 
-(defun dart/post-init-flycheck ()
+(defun dart-layer/post-init-flycheck ()
   (spacemacs/add-flycheck-hook 'dart-mode))
 
-(defun dart/init-company-dart ()
+(defun dart-layer/init-company-dart ()
   (use-package company-dart
     :defer t
     :init (spacemacs|add-company-backends
             :backends company-dart
             :modes dart-mode)))
 
-(defun dart/init-dart-mode ()
+(defun dart-layer/init-dart-mode ()
   (use-package dart-mode
     :defer t
     :init
