@@ -42,7 +42,7 @@ values."
      ;; latex
      ;; lsp
      ;; pandoc
-     html
+     ;; html
      javascript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
