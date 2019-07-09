@@ -19,7 +19,7 @@ sudo modprobe af_key
 docker rm -f $(docker ps -a -q)
 
 # Step2: Remove docker images.
-docker rmi $(docker images -q)
+# docker rmi $(docker images -q)
 
 # Step3: Install docker images.
 docker pull hwdsl2/ipsec-vpn-server
