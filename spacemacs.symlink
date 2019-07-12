@@ -42,6 +42,7 @@ values."
      ;; latex
      ;; lsp
      ;; pandoc
+     python
      ;; html
      javascript
      ;; ----------------------------------------------------------------
