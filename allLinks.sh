@@ -106,6 +106,8 @@ ln -sv "$SUBLIME_APP_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
 LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
 ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 
+# IDE(Sublime Merge)
+ln -s "//Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 
 
 # $USERPROFILE/Library/Caches

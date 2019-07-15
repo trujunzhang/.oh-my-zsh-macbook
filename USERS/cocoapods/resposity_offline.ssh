@@ -1,0 +1,10 @@
+
+direct='/Users/djzhang/Documents/Organizations/IDES/cocoapods/.cocoapods/repos/master/SpecTest/'
+matchstring='https://github.com/google/boringssl'
+
+echo "direct path: $direct"
+
+# grep -rl '$matchstring' $direct | xargs sed -i '' 's/$matchstring/linux/g'
+
+grep -rl 'windows' $direct | xargs sed -i 's/windows/linux/g'
+

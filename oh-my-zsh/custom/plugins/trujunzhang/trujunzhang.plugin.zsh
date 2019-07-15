@@ -205,6 +205,8 @@ alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Content
 alias iosopen='open -a Simulator'
 
 # Flutter
+alias fkill="killall -9 dart"
+alias fcheck="flutter analyze"
 alias frun='flutter run'
 alias fbapk='flutter build apk --split-per-abi'
 alias fpget='flutter packages get'
