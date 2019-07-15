@@ -48,3 +48,7 @@ bind -n WheelDownPane select-pane -t= \; send-keys -M
 
 # Trujunzhang's config for Mouse Support (END)
 # ===============================================
+
+
+# Tmux plugin for copying to system clipboard. Works on OSX, Linux and Cygwin.
+set -g @plugin 'tmux-plugins/tmux-yank'

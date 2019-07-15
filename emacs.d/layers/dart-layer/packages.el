@@ -15,7 +15,8 @@
     flutter
     (dart-mode :location (recipe
       :fetcher github
-      :repo "sid-kurias/dart-mode"
+      ;; :repo "sid-kurias/dart-mode"
+      :repo "bradyt/dart-mode"
       )
     )
     (helm-dart :location (recipe
