@@ -208,5 +208,6 @@ alias iosopen='open -a Simulator'
 alias fkill="killall -9 dart"
 alias fcheck="flutter analyze"
 alias frun='flutter run'
+alias ftest='flutter test'
 alias fbapk='flutter build apk --split-per-abi'
 alias fpget='flutter packages get'
