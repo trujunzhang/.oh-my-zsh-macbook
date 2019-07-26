@@ -70,6 +70,7 @@ export PATH="$PATH:$HOME/Documents/dartSDK/bin"
 # flutter sdk
 # ======================================================================
 export PATH="$PATH:$HOME/Documents/flutterSDK/bin"
+export PATH="$PATH:$HOME/Documents/flutterSDK/bin/cache/dart-sdk/bin"
 export PATH="$PATH:$HOME/Documents/flutterSDK/.pub-cache/bin"
 
 # imagemagick

@@ -133,7 +133,7 @@ directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"  "$HOME/.
 fileLink ".zsh(env)"  "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
 fileLink ".zsh(rc)"  "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink" "$HOME/.zshrc"
 
-directoryLink  "dotenv(Express.js environment variables)"  "$TRUJUNZHANG_DOTFILES_HOME/dotenv" "$HOME/.dotenv"
+directoryLink  "dotenv(Express.js environment variables)"  "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
 
 # spacemacs(All)
 directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"  "$HOME/.emacs.d"
