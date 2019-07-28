@@ -1,3 +1,4 @@
+
 # unknown
 # ======================================================================
 # tabtab source for yo package
@@ -132,8 +133,6 @@ export PATH="$GEM_HOME/bin:$PATH"
 # Load RVM into a shell session *as a function*
 # 
 
-# anaconda 
-export PATH="/anaconda3/bin:$PATH"
 
 
 
