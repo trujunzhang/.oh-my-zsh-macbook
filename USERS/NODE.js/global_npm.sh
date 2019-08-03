@@ -11,7 +11,7 @@ npm install -g react-to-typescript-definitions
 # npm install -g @angular/cli
 
 # vue.js
-npm install -g vue-language-server # Vue tooling for VS Code, powered by vue-language-server.
+# npm install -g vue-language-server # Vue tooling for VS Code, powered by vue-language-server.
 # npm install -g @vue/cli
 
 # esy
@@ -63,4 +63,4 @@ npm install -g js-beautify
 
 # The React Native Generator to bootstrap your apps
 # https://github.com/bamlab/generator-rn-toolbox
-npm install -g yo generator-rn-toolbox
+# npm install -g yo generator-rn-toolbox
