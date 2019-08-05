@@ -206,6 +206,7 @@ alias iosopen='open -a Simulator'
 
 # Flutter
 alias fkill="killall -9 dart"
+alias fdoc='flutter doctor -v'
 alias fcheck="flutter analyze"
 alias frun='flutter run'
 alias ftest='flutter test'
