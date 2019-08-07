@@ -83,6 +83,9 @@ SKETCH_APP="/Users/djzhang/Documents/Organizations/__APPLICATIONS/XD/Sketch.app"
 # ====================================================================
 # ====================================================================
 
+# shell that run when os startup.
+fileLink "shellstartup.config"  "$TRUJUNZHANG_DOTFILES_HOME/USERS/system/shellstartup.config" "$HOME/shellstartup.config"
+
 # https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
 directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
 
