@@ -27,4 +27,8 @@ CocoaPods/**
 **/.idea/**/*.xml
 .idea/**/*
 
+USERS/movie/.idea/movie.iml
+USERS/movie/.idea
+USERS/movie/.idea/**/*
+
 .netrwhist
