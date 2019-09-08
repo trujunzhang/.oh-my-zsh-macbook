@@ -1,0 +1,7 @@
+* Docker container for Aria2 download client with integrated WebUI.
+  https://github.com/abcminiuser/docker-aria2-with-webui
+
+
+** docker-compose 
+   >> docker-compose up -d
+
