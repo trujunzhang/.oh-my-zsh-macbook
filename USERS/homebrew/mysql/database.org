@@ -1,0 +1,10 @@
+* Access mysql :
+
+  $ mysql -u root -p 
+  $ password: [wanghao]
+
+* And then create a Database, quit with \q :
+  $ mysql > CREATE DATABASE mywordpressdb;
+  $ mysql > \q
+  
+You can now edit your wp-config.php file and you are good to go !  

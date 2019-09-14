@@ -1,0 +1,10 @@
+* wordpress
+[[https://medium.com/@charlesthk/wordpress-on-os-x-with-nginx-php-mysql-62767a62efc4][install]]
+
+* apps
+  $ brew install php@7.1
+  $ brew install nginx 
+  $ brew install mysql
+
+  
+ 
