@@ -28,6 +28,9 @@ export PATH="/Applications/MATLAB_R2015b.app/bin:$PATH"
 export PATH="/Applications/GenymotionShell.app/Contents/MacOS:$PATH"
 export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 
+# php's composer
+alias composer="php /usr/local/bin/composer.phar"
+
 # bin folder in User's home.
 export PATH="$HOME/bin:$PATH"
 
