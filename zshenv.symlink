@@ -31,6 +31,9 @@ export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 # php's composer
 alias composer="php /usr/local/bin/composer.phar"
 
+# ieatta's firebase json configure.
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/djzhang/Documents/Organizations/__SDKS/FIREBASE/service-account-file.json"
+
 # bin folder in User's home.
 export PATH="$HOME/bin:$PATH"
 

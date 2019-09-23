@@ -1,6 +1,11 @@
 * whatsupcoders
-** FlutterCharts  
+** DONE FlutterCharts  
     [[https://github.com/whatsupcoders/FlutterCharts][code]]
-*** TODO task: clone the app.
-**** 
+*** task: clone the app.
 
+* stringcode
+** TODO Flutter-speed-coding---Restaurant-Mobile-App
+   [[https://github.com/JoonasN/Flutter-speed-coding---Restaurant-Mobile-App][code]]
+   [[https://www.youtube.com/watch?v=mMwO5Ad8kIs][youtube]]
+*** task: clone the app. 
+   
