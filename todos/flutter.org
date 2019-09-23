@@ -1,7 +1,9 @@
 * whatsupcoders
 ** DONE FlutterCharts  
+   keyword: chart,grid_view,font_awesome,sparkline
     [[https://github.com/whatsupcoders/FlutterCharts][code]]
 *** task: clone the app.
+
 
 * stringcode
 ** TODO Flutter-speed-coding---Restaurant-Mobile-App
@@ -9,3 +11,10 @@
    [[https://www.youtube.com/watch?v=mMwO5Ad8kIs][youtube]]
 *** task: clone the app. 
    
+* Andrea Bizzotto
+** TODO Flutter & Firebase: Authentication Service with Provider & ValueNotifier 
+   keyword: Firebase, Authentication, Provider, notify.
+   [[https://github.com/bizz84/firebase_auth_demo_flutter][code]]
+   [[https://www.youtube.com/watch?v=MjY1_LaXyd8&t=316s][youtube]]
+*** task: clone the app. 
+  
