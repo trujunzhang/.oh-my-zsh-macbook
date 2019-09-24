@@ -1,0 +1,72 @@
+[
+    {
+        "name": "",
+        "status": "ok",
+        "path": "",
+        "git": "",
+        "folder": ""
+    },
+    {
+        "name": "Firebase",
+        "status": "pending",
+        "path": "",
+        "git": "https://github.com/firebase/firebase-ios-sdk-xxx.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "name": "BoringSSL-GRPC",
+        "status": "ok",
+        "path": "f/8/8/BoringSSL-GRPC",
+        "git": "https://github.com/google/boringssl-xxx.git",
+        "folder": "boringssl"
+    },
+    {
+        "name": "GoogleAppMeasurement",
+        "status": "pending",
+        "path": "e/3/b/GoogleAppMeasurement",
+        "git": "tar.gz",
+        "folder": "tar.gz"
+    },
+    {
+        "name": "Realm",
+        "status": "ok",
+        "path": "9/4/5/RealmSwift",
+        "git": "https://github.com/realm/realm-cocoa-xxx.git",
+        "folder": "realm-cocoa"
+    },
+    {
+        "name": "FBSDKCoreKit",
+        "status": "pending",
+        "path": "",
+        "git": "https://github.com/facebook/facebook-objc-sdk-xxx.git",
+        "folder": "facebook-objc-sdk"
+    },
+    {
+        "name": "firebase-io",
+        "status": "pending",
+        "path": "",
+        "git": "https://github.com/firebase/firebase-ios-sdk-xxx.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "name": "nanopb",
+        "status": "pending",
+        "path": "",
+        "git": "https://github.com/nanopb/nanopb-xxx.git",
+        "folder": "nanopb"
+    },
+    {
+        "name": "protobuf",
+        "status": "ok",
+        "path": "e/c/d/Protobuf",
+        "git": "https://github.com/protocolbuffers/protobuf-xxx.git",
+        "folder": "protobuf"
+    },
+    {
+        "name": "Flutter",
+        "status": "pending",
+        "path": "",
+        "git": "https://github.com/wutongyu008/Flutter-xxx.git",
+        "folder": "Flutter"
+    }
+]

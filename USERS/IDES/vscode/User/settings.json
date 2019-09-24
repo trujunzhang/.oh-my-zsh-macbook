@@ -1143,5 +1143,11 @@
     "vim.easymotion": true,
     "typescript.updateImportsOnFileMove.enabled": "never",
     "extensions.ignoreRecommendations": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }

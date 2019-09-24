@@ -1,0 +1,82 @@
+
+* Firebase
+[https://github.com/firebase/firebase-ios-sdk-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/firebase-ios-sdk
+
+* (pending)BoringSSL-GRPC
+[master/Specs/f/8/8/BoringSSL-GRPC/0.0.3]
+[master/Specs/f/8/8/BoringSSL-GRPC/0.0.3]
+[master/Specs/0/8/a/BoringSSL]
+[master/Specs/0/8/a/BoringSSL]
+[https://github.com/google/boringssl-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/boringssl
+
+* Installing gRPC-C++ (0.0.9)
+[master/Specs/1/2/a/gRPC]
+[master/Specs/1/2/a/gRPC]
+[master/Specs/c/8/7/gRPC-C++]
+[master/Specs/c/8/7/gRPC-C++]
+[https://github.com/grpc/grpc-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/grpc
+
+* GoogleAppMeasurement
+[master/Specs/e/3/b/GoogleAppMeasurement]
+[master/Specs/e/3/b/GoogleAppMeasurement]
+[https://dl.google.com/dl/cpdc/d4534705354433d5/GoogleAppMeasurement-6.0.3.tar.gz]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/_zips/GoogleAppMeasurement-6.0.3.tar.gz
+
+* realm
+[master/Specs/9/4/5/RealmSwift]
+[master/Specs/9/4/5/RealmSwift]
+[https://github.com/realm/realm-cocoa-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/realm-cocoa
+
+* Installing FBSDKCoreKit (4.39.1)
+[https://github.com/facebook/facebook-objc-sdk-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/facebook-objc-sdk
+
+* firebase-ios
+[https://github.com/firebase/firebase-ios-sdk-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/firebase-ios-sdk
+
+* nanopb
+[https://github.com/nanopb/nanopb-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/nanopb
+
+* protobuf
+[master/Specs/e/c/d/Protobuf]
+[master/Specs/e/c/d/Protobuf]
+[https://github.com/protocolbuffers/protobuf-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/protobuf
+
+* Flutter
+[https://github.com/wutongyu008/Flutter-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/Flutter
+
+* Branch
+[https://github.com/BranchMetrics/iOS-Deferred-Deep-Linking-SDK-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/iOS-Deferred-Deep-Linking-SDK
+
+* Crashlytics
+[https://kit-downloads.fabric.io/cocoapods/crashlytics/3.13.1/crashlytics-xxx.zip]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/crashlytics-3.13.1.zip
+
+* DoubleConversion
+[https://github.com/google/double-conversion-xxx.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/double-conversion
+
+* folly
+[https://github.com/facebook/folly.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/folly
+
+* glog
+[https://github.com/google/glog.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/glog
+
+* FBAudienceNetwork
+[https://developers.facebook.com/resources/FBAudienceNetwork-5.1.1-xxx.zip]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/FBAudienceNetwork-5.1.1.zip
+
+* boost-for-react-native
+[https://github.com/react-native-community/boost-for-react-native.git]
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/boost-for-react-native
