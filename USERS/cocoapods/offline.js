@@ -40,7 +40,7 @@ function replaceEachFiles(line) {
 
     var folders = getDirectories(localPath)
     for (var i = 0; i < folders.length; i++) {
-        var destPath = localPath + "/" + folders[i] + "/" + line['filename'] + ".podspec.json"
+        var destPath = localPath + "/" + folders[i] + "/" + line['filename'] 
         offlineJsonFile(destPath, line)
         console.log('destPath: ' + destPath)
     }

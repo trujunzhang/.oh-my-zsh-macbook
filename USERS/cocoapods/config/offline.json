@@ -83,7 +83,7 @@
         "name": "FacebookCore",
         "type": "git",
         "path": "e/9/6/FacebookCore",
-        "filename": "FacebookCore",
+        "filename": "FacebookCore.podspec.json",
         "git": "https://github.com/facebook/facebook-sdk-swift.git",
         "folder": "facebook-sdk-swift"
     },
@@ -91,7 +91,15 @@
         "name": "FacebookLogin",
         "type": "git",
         "path": "5/9/0/FacebookLogin",
-        "filename": "FacebookLogin",
+        "filename": "FacebookLogin.podspec.json",
+        "git": "https://github.com/facebook/facebook-sdk-swift.git",
+        "folder": "facebook-sdk-swift"
+    },
+    {
+        "name": "FacebookShare",
+        "type": "git",
+        "path": "1/1/6/FacebookShare",
+        "filename": "FacebookShare.podspec.json",
         "git": "https://github.com/facebook/facebook-sdk-swift.git",
         "folder": "facebook-sdk-swift"
     }
