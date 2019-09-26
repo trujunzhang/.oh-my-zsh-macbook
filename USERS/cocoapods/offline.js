@@ -20,6 +20,9 @@ function replaceToOffline(obj, line) {
 }
 
 function offlineJsonFile(destFile, line) {
+    if (line['type'] !== 'git' && line['type'] !== 'zip') {
+        return
+    }
 
     try {
         var obj = JSON.parse(fs.readFileSync(destFile, 'utf8'))
@@ -40,9 +43,10 @@ function replaceEachFiles(line) {
 
     var folders = getDirectories(localPath)
     for (var i = 0; i < folders.length; i++) {
-        var destPath = localPath + "/" + folders[i] + "/" + line['filename'] 
-        offlineJsonFile(destPath, line)
+        var destPath = localPath + "/" + folders[i] + "/" + line['filename']
         console.log('destPath: ' + destPath)
+
+        offlineJsonFile(destPath, line)
     }
 }
 
