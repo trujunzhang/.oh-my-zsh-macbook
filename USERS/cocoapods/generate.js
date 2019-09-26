@@ -24,7 +24,7 @@ for (var i = 0; i < folderNumbers.length; i++) {
                 var child = children[x]
                 let item = {
                     'name': child,
-                    'path': i + "/" + j + "/" + k + "/" + child
+                    'path': folderNumbers[i] + "/" + folderNumbers[j] + "/" + folderNumbers[k] + "/" + child
                 }
                 // console.log("item: ", JSON.stringify(item))
                 items.push(item)

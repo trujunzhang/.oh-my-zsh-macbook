@@ -1,106 +1,114 @@
 [
     {
-        "name": "",
         "type": "git",
+        "name": "",
         "path": "",
         "filename": "",
         "git": "",
         "folder": ""
     },
     {
-        "name": "Firebase",
         "type": "pending",
+        "name": "Firebase",
         "path": "",
         "filename": "",
         "git": "https://github.com/firebase/firebase-ios-sdk-xxx.git",
         "folder": "firebase-ios-sdk"
     },
     {
-        "name": "BoringSSL-GRPC",
         "type": "git",
+        "name": "BoringSSL-GRPC",
         "path": "f/8/8/BoringSSL-GRPC",
         "filename": "",
         "git": "https://github.com/google/boringssl-xxx.git",
         "folder": "boringssl"
     },
     {
-        "name": "GoogleAppMeasurement",
         "type": "zip",
+        "name": "GoogleAppMeasurement",
         "path": "e/3/b/GoogleAppMeasurement",
         "filename": "",
         "git": "tar.gz",
         "folder": "tar.gz"
     },
     {
-        "name": "Realm",
         "type": "git",
+        "name": "Realm",
         "path": "9/4/5/RealmSwift",
         "filename": "",
         "git": "https://github.com/realm/realm-cocoa-xxx.git",
         "folder": "realm-cocoa"
     },
     {
-        "name": "FBSDKCoreKit",
         "type": "pending",
+        "name": "FBSDKCoreKit",
         "path": "",
         "filename": "",
         "git": "https://github.com/facebook/facebook-objc-sdk-xxx.git",
         "folder": "facebook-objc-sdk"
     },
     {
-        "name": "firebase-io",
         "type": "pending",
+        "name": "firebase-io",
         "path": "",
         "filename": "",
         "git": "https://github.com/firebase/firebase-ios-sdk-xxx.git",
         "folder": "firebase-ios-sdk"
     },
     {
-        "name": "nanopb",
         "type": "pending",
+        "name": "nanopb",
         "path": "",
         "filename": "",
         "git": "https://github.com/nanopb/nanopb-xxx.git",
         "folder": "nanopb"
     },
     {
-        "name": "protobuf",
         "type": "git",
+        "name": "protobuf",
         "path": "e/c/d/Protobuf",
         "filename": "",
         "git": "https://github.com/protocolbuffers/protobuf-xxx.git",
         "folder": "protobuf"
     },
     {
-        "name": "Flutter",
         "type": "pending",
+        "name": "Flutter",
         "path": "",
         "filename": "",
         "git": "https://github.com/wutongyu008/Flutter-xxx.git",
         "folder": "Flutter"
     },
     {
-        "name": "FacebookCore",
         "type": "git",
+        "name": "FacebookCore",
         "path": "e/9/6/FacebookCore",
         "filename": "FacebookCore.podspec.json",
         "git": "https://github.com/facebook/facebook-sdk-swift.git",
         "folder": "facebook-sdk-swift"
     },
     {
-        "name": "FacebookLogin",
         "type": "git",
+        "name": "FacebookLogin",
         "path": "5/9/0/FacebookLogin",
         "filename": "FacebookLogin.podspec.json",
         "git": "https://github.com/facebook/facebook-sdk-swift.git",
         "folder": "facebook-sdk-swift"
     },
     {
-        "name": "FacebookShare",
         "type": "git",
+        "name": "FacebookShare",
         "path": "1/1/6/FacebookShare",
         "filename": "FacebookShare.podspec.json",
         "git": "https://github.com/facebook/facebook-sdk-swift.git",
         "folder": "facebook-sdk-swift"
+    },
+    {
+        "type": "git",
+        "name": "GoogleToolboxForMac",
+        "path": "7/4/b/GoogleToolboxForMac",
+        "filename": "GoogleToolboxForMac.podspec.json",
+        "git": "https://github.com/google/google-toolbox-for-mac.git",
+        "folder": "google-toolbox-for-mac"
     }
 ]
