@@ -16,7 +16,9 @@
 
 ############################  SETUP PARAMETERS
 app_name='spf13-vim'
-[ -z "$APP_PATH" ] && APP_PATH="$HOME/.spf13-vim-3"
+CURRENT=`pwd`
+# [ -z "$APP_PATH" ] && APP_PATH="$HOME/.spf13-vim-3"
+[ -z "$APP_PATH" ] && APP_PATH="$CURRENT"
 [ -z "$REPO_URI" ] && REPO_URI='https://github.com/spf13/spf13-vim.git'
 [ -z "$REPO_BRANCH" ] && REPO_BRANCH='3.0'
 debug_mode='0'
@@ -119,6 +121,25 @@ create_symlinks() {
     debug
 }
 
+setup_vundle() {
+    local system_shell="$SHELL"
+    export SHELL='/bin/sh'
+
+
+    msg "setup_vundle: $1"
+
+    vim \
+        -u "$1" \
+        "+set nomore" \
+        "+BundleInstall!" \
+        "+BundleClean" \
+        "+qall"
+
+    export SHELL="$system_shell"
+
+    success "Now updating/installing plugins using Vundle"
+    debug
+}
 
 ############################ MAIN()
 variable_set "$HOME"
@@ -128,9 +149,10 @@ program_must_exist "git"
 do_backup       "$HOME/.vimrc" \
                 "$HOME/.gvimrc"
 
-CURRENT=`pwd`
-create_symlinks "$CURRENT" \
+create_symlinks "$APP_PATH" \
                 "$HOME"
+
+# setup_vundle    "$CURRENT/.vimrc.bundles.default"
 
 msg             "\nThanks for installing $app_name."
 msg             "© `date +%Y` http://vim.spf13.com/"
