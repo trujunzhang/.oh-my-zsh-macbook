@@ -1,5 +1,5 @@
 #=============================================================================
-# dark_powered.toml --- dark powered configuration example for SpaceVim
+# basic.toml --- basic configuration example for SpaceVim
 # Copyright (c) 2016-2017 Wang Shidong & Contributors
 # Author: Wang Shidong < wsdjeg at 163.com >
 # URL: https://spacevim.org
@@ -11,51 +11,28 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    # colorscheme = "gruvbox"
-    # colorscheme = "onedark"
-    colorscheme = "molokai"
+    colorscheme = "gruvbox"
     colorscheme_bg = "dark"
-    background = "dark"
-    guifont = "SauceCodePro Nerd Font Mono:h11"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
-    enable_guicolors = true
+    enable_guicolors = false
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
     statusline_separator = "nil"
     statusline_inactive_separator = "bar"
     buffer_index_type = 4
     windows_index_type = 3
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = true
-    statusline_unicode_symbols = true 
-    # Enable Vim compatible mode, avoid changing origin Vim key bindings
+    enable_tabline_filetype_icon = false
+    enable_statusline_mode = false
+    statusline_unicode_symbols = false
+    # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
-    # https://everettjf.gitbooks.io/spacevimtutorial/content/install/6.html
-    guifont='Hack_Nerd_Font:h11'
-    # pyenv
-    python_host_prog = "/Users/djzhang/.pyenv/shims/python"
-    python3_host_prog = "/Users/djzhang/.pyenv/shims/python"
-    pymode_python = "python3"
-    # my space
-    bootstrap_before = "myspacevim#init"
-    # Side Tree
-    # file manager plugins supported in SpaceVim:
-    # - vimfiler (default)
-    # - nerdtree
-    # - defx
-    # filemanager = 'defx' 
-    filemanager = 'vimfiler' 
-    filetree_direction = "left"
-    # Project
-    project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', 'package.json', '.SpaceVim.d/','.next','node_modules','ios','android','build','production-cloud','production-server']
 
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
 auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "smart"
-
+auto-completion-tab-key-behavior = "cycle"
 
 [[layers]]
 name = 'shell'
@@ -63,58 +40,12 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
-name = "colorscheme"
-
-[[layers]]
-name = "lang#python"
-format-on-save = 1
-
-# Fuzzy finder  
-# SpaceVim provides five fuzzy find tools, 
-# each of them is configured in a layer(unite, denite, leaderf, ctrlp and fzf layer). 
-# These layers have the same key bindings and features. 
-# But they need different dependencies.
-[[layers]]
-name = "unite"
-
-[[layers]]
+# SpaceVim provides five fuzzy find tools, each of them is configured 
+# in a layer(unite, denite, leaderf, ctrlp and fzf layer).
 name = "ctrlp"
 
-
-# Bookmarks management
-# Bookmarks manager is included in tools layer, 
-# to use following key bindings, you need to enable tools layer:
-[[layers]]
-name = "tools"
-
-[[layers]]
-name = "tmux"
-tmux_navigator_modifier = "alt"
-
-
-# [[layers]]
-  # name = "lang#javascript"
-  # enable_flow_syntax = false
-
-# [[layers]]
-# /Users/djzhang/.cache/vimfiles/repos/github.com/mhartington/nvim-typescript/install.sh
-name = "lang#typescript"
+[[custom_plugins]]
+name = "dart-lang/dart-vim-plugin"
 
 [[custom_plugins]]
-# Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more
-name = "ryanoasis/vim-devicons"
-
-[[custom_plugins]]
-name = "Quramy/tsuquyomi"
-
-[[custom_plugins]]
-name = "leafgarland/typescript-vim"
-
-[[custom_plugins]]
-name = "leshill/vim-json"
-
-[[custom_plugins]]
-name = 'dart-lang/dart-vim-plugin'
-
-[[custom_plugins]]
-name = 'thosakwe/vim-flutter'
+name = "thosakwe/vim-flutter"
