@@ -228,7 +228,6 @@
     set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
     set scrolljump=5                " Lines to scroll when cursor leaves screen
     set scrolloff=3                 " Minimum lines to keep above and below cursor
-    set foldenable                  " Auto fold code
     set list
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
 
@@ -571,6 +570,26 @@
         let g:snips_author = 'Steve Francia <steve.francia@gmail.com>'
     " }
 
+    " Flutter {
+        if isdirectory(expand("~/.vim/bundle/tsuquyomi"))
+            " nmap <leader>fr :FlutterRun<CR>
+            " nmap <leader>fq :FlutterQuit<CR>
+            " nmap <leader>fh :FlutterHotReload<CR>
+            nnoremap <leader>fa :FlutterRun<cr>
+            nnoremap <leader>fq :FlutterQuit<cr>
+            nnoremap <leader>fr :FlutterHotReload<cr>
+            nnoremap <leader>fR :FlutterHotRestart<cr>
+            nnoremap <leader>fD :FlutterVisualDebug<cr>
+        endif
+    " }
+
+    " Autosave {
+        if isdirectory(expand("~/.vim/bundle/vim-auto-save"))
+            let g:auto_save = 1  " enable AutoSave on Vim startup
+            let g:auto_save_events = ["InsertLeave", "TextChanged"]
+        endif
+    " }
+
     " NerdTree {
         if isdirectory(expand("~/.vim/bundle/nerdtree"))
             map <C-e> <plug>NERDTreeTabsToggle<CR>
@@ -649,6 +668,7 @@ let NERDTreeWinPos = "right"
     " ctrlp {
         if isdirectory(expand("~/.vim/bundle/ctrlp.vim/"))
             let g:ctrlp_working_path_mode = 'ra'
+            nmap <leader>pf :CtrlP<CR>
             nnoremap <silent> <D-t> :CtrlP<CR>
             nnoremap <silent> <D-r> :CtrlPMRU<CR>
             let g:ctrlp_custom_ignore = {
