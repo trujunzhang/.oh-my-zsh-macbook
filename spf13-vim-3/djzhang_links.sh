@@ -152,7 +152,7 @@ do_backup       "$HOME/.vimrc" \
 create_symlinks "$APP_PATH" \
                 "$HOME"
 
-# setup_vundle    "$CURRENT/.vimrc.bundles.default"
+setup_vundle    "$CURRENT/.vimrc.bundles.default"
 
 msg             "\nThanks for installing $app_name."
 msg             "© `date +%Y` http://vim.spf13.com/"
