@@ -1,3 +1,8 @@
+
+# spf13-vim: write buffer.
+"set autowrite                       " Automatically write a file when leaving a modified buffer
+"set autowrite                       " Automatically write a file when leaving a modified buffer
+
 # spf13-vim : Steve Francia's Vim Distribution
 
                     __ _ _____              _

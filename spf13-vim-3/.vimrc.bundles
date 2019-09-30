@@ -103,7 +103,6 @@
     " General {
         if count(g:spf13_bundle_groups, 'general')
             " trujunzhang's plugins
-            Bundle '907th/vim-auto-save'
             Bundle 'scrooloose/nerdtree'
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'spf13/vim-colors'
