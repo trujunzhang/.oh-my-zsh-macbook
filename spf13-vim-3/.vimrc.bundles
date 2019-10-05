@@ -102,7 +102,6 @@
 
     " General {
         if count(g:spf13_bundle_groups, 'general')
-            " trujunzhang's plugins
             Bundle 'scrooloose/nerdtree'
             Bundle 'altercation/vim-colors-solarized'
             Bundle 'spf13/vim-colors'
@@ -221,13 +220,6 @@
             " typescript
             Bundle 'leafgarland/typescript-vim'
             Bundle 'Quramy/tsuquyomi'
-        endif
-    " }
-
-    " Flutter {
-        if count(g:spf13_bundle_groups, 'flutter')
-            Bundle 'dart-lang/dart-vim-plugin'
-            Bundle 'thosakwe/vim-flutter'
         endif
     " }
 

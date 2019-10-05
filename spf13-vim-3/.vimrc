@@ -237,10 +237,10 @@
 
     set nowrap                      " Do not wrap long lines
     set autoindent                  " Indent at the same level of the previous line
-    set shiftwidth=4                " Use indents of 4 spaces
+    set shiftwidth=2                " Use indents of 4 spaces
     set expandtab                   " Tabs are spaces, not tabs
-    set tabstop=4                   " An indentation every four columns
-    set softtabstop=4               " Let backspace delete indent
+    set tabstop=2                   " An indentation every four columns
+    set softtabstop=2               " Let backspace delete indent
     set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
     set splitright                  " Puts new vsplit windows to the right of the current
     set splitbelow                  " Puts new split windows to the bottom of the current
@@ -478,7 +478,6 @@
         endif
         " }
 
-
     " TextObj Sentence {
         if count(g:spf13_bundle_groups, 'writing')
             augroup textobj_sentence
@@ -583,27 +582,20 @@
         endif
     " }
 
-    " Autosave {
-        if isdirectory(expand("~/.vim/bundle/vim-auto-save"))
-            let g:auto_save = 1  " enable AutoSave on Vim startup
-            let g:auto_save_events = ["InsertLeave", "TextChanged"]
-        endif
-    " }
-
     " NerdTree {
         if isdirectory(expand("~/.vim/bundle/nerdtree"))
             map <C-e> <plug>NERDTreeTabsToggle<CR>
             map <leader>e :NERDTreeFind<CR>
             nmap <leader>pt :NERDTreeFind<CR>
 
-" Nerd Tree
-let NERDChristmasTree=0
-let NERDTreeWinSize=30
-let NERDTreeChDirMode=2
-" let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
-let NERDTreeShowBookmarks=1
-let NERDTreeWinPos = "right"
-            
+            " Nerd Tree
+            let NERDChristmasTree=0
+            let NERDTreeWinSize=30
+            let NERDTreeChDirMode=2
+            " let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
+            let NERDTreeShowBookmarks=1
+            let NERDTreeWinPos = "left"
+
 
             let NERDTreeShowBookmarks=1
             let NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']

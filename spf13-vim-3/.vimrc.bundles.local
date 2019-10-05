@@ -1,0 +1,7 @@
+
+    " Flutter {
+        " if count(g:spf13_bundle_groups, 'flutter')
+            Bundle 'dart-lang/dart-vim-plugin'
+            Bundle 'thosakwe/vim-flutter'
+        " endif
+    " }
