@@ -18,6 +18,8 @@
     sdkLocation: "/Users/djzhang/Documents/dartSDK"
   "exception-reporting":
     userId: "349a0ed7-f680-4b80-a7bf-0ce7171413ad"
+  "markdown-preview":
+    useGitHubStyle: true
   "prettier-atom":
     formatOnSaveOptions:
       isDisabledIfNoConfigFile: true
