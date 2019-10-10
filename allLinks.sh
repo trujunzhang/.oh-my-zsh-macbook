@@ -16,6 +16,10 @@ ORGANIZATIONS_HOME="$USER_PROFILE_DJZHANG_HOME/Documents/Organizations"
 ORGANIZATIONS_APPLICATION_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/Applications"
 TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/.oh-my-zsh-macbook"
 
+# User's profile
+USERPROFILE_HOME="$ORGANIZATIONS_HOME/__UserProfile"
+PATH_SYSTEM_APPLICATION_SUPPORT="$HOME/Library/Application Support"
+
 # *Links(IDES)
 # ======================================
 CACHES_HOME="$ORGANIZATIONS_HOME/__CACHES"
@@ -166,6 +170,11 @@ directoryLink "sdk(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Librar
 directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android" "/Users/djzhang/.android"
 directoryLink ".gradle(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle" "/Users/djzhang/.gradle"
 directoryLink ".m2(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2" "/Users/djzhang/.m2"
+
+# User's profile
+directoryLink "Firefox(profile)"  "$USERPROFILE_HOME/ApplicationSupport/Firefox" "$PATH_SYSTEM_APPLICATION_SUPPORT/Firefox"
+directoryLink "Vivaldi(profile)"  "$USERPROFILE_HOME/ApplicationSupport/Vivaldi" "$PATH_SYSTEM_APPLICATION_SUPPORT/Vivaldi"
+
 
 # pending(the following)
 # ====================================

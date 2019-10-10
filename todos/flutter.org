@@ -5,11 +5,23 @@
 *** task: clone the app.
 
 
+** DONE Flutter-Nested-Tabs 
+   keyboard: tabs.
+   [[https://github.com/whatsupcoders/Flutter-Nested-Tabs][code]]
+*** task: clone the app.
+
+
 * stringcode
-** TODO Flutter-speed-coding---Restaurant-Mobile-App
+** DONE Flutter-speed-coding---Restaurant-Mobile-App
    keyboard: floatingActionButton, bottomNavigationBar.
    [[https://github.com/JoonasN/Flutter-speed-coding---Restaurant-Mobile-App][code]]
    [[https://www.youtube.com/watch?v=mMwO5Ad8kIs][youtube]]
+*** task: clone the app. 
+   
+    
+** TODO Flutter-Speed-coding---Greenery-App
+    [[https://github.com/JoonasN/Flutter-Speed-coding---Greenery-App][code]]
+    [[https://www.youtube.com/watch?v=K8pG0Lo4f1o][youtube]]
 *** task: clone the app. 
    
     
@@ -19,9 +31,3 @@
    [[https://github.com/bizz84/firebase_auth_demo_flutter][code]]
    [[https://www.youtube.com/watch?v=MjY1_LaXyd8&t=316s][youtube]]
 *** task: clone the app. 
-
-** TODO Flutter-Nested-Tabs 
-   keyboard: tabs.
-   [[https://github.com/whatsupcoders/Flutter-Nested-Tabs][code]]
-*** task: clone the app.
- 

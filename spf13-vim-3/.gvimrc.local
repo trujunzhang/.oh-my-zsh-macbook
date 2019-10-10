@@ -1,0 +1,5 @@
+
+""" Pyenv for neovim and spacevim
+let g:python_host_prog = "/Users/djzhang/.pyenv/shims/python"
+let g:python3_host_prog = "/Users/djzhang/.pyenv/shims/python"
+let g:pymode_python = "python3"
