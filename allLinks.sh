@@ -172,8 +172,12 @@ directoryLink ".gradle(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.g
 directoryLink ".m2(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2" "/Users/djzhang/.m2"
 
 # User's profile
-directoryLink "Firefox(profile)"  "$USERPROFILE_HOME/ApplicationSupport/Firefox" "$PATH_SYSTEM_APPLICATION_SUPPORT/Firefox"
-directoryLink "Vivaldi(profile)"  "$USERPROFILE_HOME/ApplicationSupport/Vivaldi" "$PATH_SYSTEM_APPLICATION_SUPPORT/Vivaldi"
+directoryLink "Alfred 3(profile)"             "$USERPROFILE_HOME/ApplicationSupport/Alfred 3"            "$PATH_SYSTEM_APPLICATION_SUPPORT/Alfred 3"
+directoryLink "BetterTouchTool(profile)"      "$USERPROFILE_HOME/ApplicationSupport/BetterTouchTool"     "$PATH_SYSTEM_APPLICATION_SUPPORT/BetterTouchTool"
+directoryLink "com.trankynam.aText(profile)"  "$USERPROFILE_HOME/ApplicationSupport/com.trankynam.aText" "$PATH_SYSTEM_APPLICATION_SUPPORT/com.trankynam.aText"
+directoryLink "Firefox(profile)"              "$USERPROFILE_HOME/ApplicationSupport/Firefox"             "$PATH_SYSTEM_APPLICATION_SUPPORT/Firefox"
+directoryLink "Sublime Text 3(profile)"       "$USERPROFILE_HOME/ApplicationSupport/Sublime Text 3"      "$PATH_SYSTEM_APPLICATION_SUPPORT/Sublime Text 3"
+directoryLink "Vivaldi(profile)"              "$USERPROFILE_HOME/ApplicationSupport/Vivaldi"             "$PATH_SYSTEM_APPLICATION_SUPPORT/Vivaldi"
 
 
 # pending(the following)
