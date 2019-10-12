@@ -122,6 +122,28 @@ create_symlinks() {
     debug
 }
 
+sync_repo() {
+    local repo_path="$1"
+    local repo_uri="$2"
+    local repo_branch="$3"
+    local repo_name="$4"
+
+    msg "Trying to update $repo_name"
+
+    if [ ! -e "$repo_path" ]; then
+        mkdir -p "$repo_path"
+        git clone -b "$repo_branch" "$repo_uri" "$repo_path"
+        ret="$?"
+        success "Successfully cloned $repo_name."
+    else
+        cd "$repo_path" && git pull origin "$repo_branch"
+        ret="$?"
+        success "Successfully updated $repo_name"
+    fi
+
+    debug
+}
+
 setup_vundle() {
     local system_shell="$SHELL"
     export SHELL='/bin/sh'
@@ -152,6 +174,11 @@ do_backup       "$HOME/.vimrc" \
 
 create_symlinks "$APP_PATH" \
                 "$HOME"
+
+sync_repo       "$HOME/.vim/bundle/vundle" \
+                "$VUNDLE_URI" \
+                "master" \
+                "vundle"
 
 setup_vundle    "$CURRENT/.vimrc.bundles.default"
 
