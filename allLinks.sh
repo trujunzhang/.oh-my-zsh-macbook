@@ -95,14 +95,13 @@ directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
 
 # IDES(VSCode|Webstorm)
 # https://github.com/VSpaceCode/VSpaceCode
-fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json" "$DEST_VSCODE_USER_HOME/keybindings.json"
-fileLink "settings.json(vscode)"  "$VSCODE_USERS_HOME/settings.json" "$DEST_VSCODE_USER_HOME/settings.json"
-fileLink "projects.json(vscode)"  "$VSCODE_HOME/projects.json" "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager/projects.json"
+fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json"   "$DEST_VSCODE_USER_HOME/keybindings.json"
+fileLink "settings.json(vscode)"     "$VSCODE_USERS_HOME/settings.json"      "$DEST_VSCODE_USER_HOME/settings.json"
+fileLink "projects.json(vscode)"     "$VSCODE_HOME/projects.json"            "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager/projects.json"
 
 # IDES(atom)
 fileLink "config.cson(atom)"  "$ATOM_HOME_SOURCE/config.cson" "$ATOM_HOME_DEST/config.cson"
 fileLink "keymap.cson(atom)"  "$ATOM_HOME_SOURCE/keymap.cson" "$ATOM_HOME_DEST/keymap.cson"
-
 
 # IDES(Sublime)
 fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_HOME_SOURCE/Preferences.sublime-settings" "$SUBLIME_HOME_DEST/Preferences.sublime-settings"
@@ -118,10 +117,10 @@ ln -s "//Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge
 
 
 # $USERPROFILE/Library/Caches
-directoryLink  "Caches(Yarn)"  "$LIBRARY_YARN_HOME"  "$HOME/Library/Caches/Yarn"
-directoryLink  "Caches(CocoaPods)"  "$LIBRARY_COCOAPODS_HOME"  "$HOME/Library/Caches/CocoaPods"
+directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/Caches/Yarn"
+directoryLink  "Caches(CocoaPods)"  "$LIBRARY_COCOAPODS_HOME"    "$HOME/Library/Caches/CocoaPods"
 
-# Environment
+# Environment(pyenv)
 directoryLink  "Env(Pyenv)"  "$PYENV_HOME"  "$HOME/.pyenv"
 
 # trujunzhang's profile
@@ -134,42 +133,42 @@ directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
 # directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
 
 directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang"  "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
-directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"  "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
+directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"                                             "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
 
 # zshrc(rc)
 fileLink ".zsh(env)"  "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
-fileLink ".zsh(rc)"  "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink" "$HOME/.zshrc"
+fileLink ".zsh(rc)"   "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink"  "$HOME/.zshrc"
 
 directoryLink  "dotenv(Express.js environment variables)"  "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
 
 # spacemacs(All)
-directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"  "$HOME/.emacs.d"
-fileLink ".spacemacs(profile)" "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
+directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"                          "$HOME/.emacs.d"
+fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
 
 ## spacemacs(plugins)
-directoryLink "emacs_layout(trujunzhang)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"  "$HOME/.emacs.d/private/trujunzhang-workspace"
-directoryLink "emacs_layout(dart-layer)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/dart-layer"  "$HOME/.emacs.d/private/dart-layer"
-directoryLink "w3m(third Layout)" "$SPACEMACS_W3M_HOME"  "$HOME/.emacs.d/private/w3m"
+directoryLink "emacs_layout(trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"    "$HOME/.emacs.d/private/trujunzhang-workspace"
+directoryLink "emacs_layout(dart-layer)"   "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/dart-layer"               "$HOME/.emacs.d/private/dart-layer"
+directoryLink "w3m(third Layout)"          "$SPACEMACS_W3M_HOME"                                                "$HOME/.emacs.d/private/w3m"
 # directoryLink "w3m(third Layout)" "$SPACEMACS_VUE_HOME"  "$HOME/.emacs.d/private/vue"
 ## spacemacs(Snippets)
 directoryLink "emacs(My Snippet)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/mySnippets"  "$HOME/.emacs.d/private/mySnippets"
 
 # spacevim(All)
-directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/SpaceVim.d" "$HOME/.SpaceVim.d"
-fileLink "gvimrc(MacVim)" "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink" "$HOME/.gvimrc"
+directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/SpaceVim.d"       "$HOME/.SpaceVim.d"
+fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
 
 # Tmux(All)
-fileLink "tmux(config)" "$TMUX_CONFIG" "$HOME/.tmux.conf"
-fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL" "$HOME/.tmux.conf.local"
+fileLink "tmux(config)"       "$TMUX_CONFIG"          "$HOME/.tmux.conf"
+fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL"    "$HOME/.tmux.conf.local"
 
 # Application Links
-directoryLink "sketch(app)"  "$SKETCH_APP" "$SYSTEM_APPLICATION/Sketch.app"
+directoryLink "sketch(app)"    "$SKETCH_APP"          "$SYSTEM_APPLICATION/Sketch.app"
 
 # Android Environment
-directoryLink "sdk(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android" "/Users/djzhang/Library/Android"
-directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android" "/Users/djzhang/.android"
-directoryLink ".gradle(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle" "/Users/djzhang/.gradle"
-directoryLink ".m2(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2" "/Users/djzhang/.m2"
+directoryLink "sdk(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android"   "$HOME/Library/Android"
+directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android"          "$HOME/.android"
+directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
+directoryLink ".m2(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2"               "$HOME/.m2"
 
 # User's profile
 directoryLink "Alfred 3(profile)"             "$USERPROFILE_HOME/ApplicationSupport/Alfred 3"            "$PATH_SYSTEM_APPLICATION_SUPPORT/Alfred 3"
