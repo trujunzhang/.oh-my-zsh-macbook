@@ -119,5 +119,28 @@
         "git": "https://github.com/BoltsFramework/Bolts-ObjC.git",
         "folder": "Bolts-ObjC"
     },
-
+    {
+        "type": "git",
+        "name": "BoringSSL-GRPC",
+        "path": "f/8/8/BoringSSL-GRPC",
+        "filename": "BoringSSL-GRPC.podspec.json",
+        "git": "https://github.com/google/boringssl.git",
+        "folder": "boringssl"
+    },
+    {
+        "type": "git",
+        "name": "FBSDKCoreKit",
+        "path": "9/b/5/FBSDKCoreKit",
+        "filename": "FBSDKCoreKit.podspec.json",
+        "git": "https://github.com/facebook/facebook-objc-sdk.git",
+        "folder": "facebook-objc-sdk"
+    },
+    {
+        "type": "git",
+        "name": "FBSDKLoginKit",
+        "path": "b/3/c/FBSDKLoginKit",
+        "filename": "FBSDKLoginKit.podspec.json",
+        "git": "https://github.com/facebook/facebook-objc-sdk.git",
+        "folder": "facebook-objc-sdk"
+    }
 ]
