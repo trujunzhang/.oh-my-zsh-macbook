@@ -12,7 +12,6 @@ function getDirectories(path) {
 
 var items = []
 
-
 for (var i = 0; i < folderNumbers.length; i++) {
     for (var j = 0; j < folderNumbers.length; j++) {
         for (var k = 0; k < folderNumbers.length; k++) {

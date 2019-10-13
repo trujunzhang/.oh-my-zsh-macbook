@@ -110,5 +110,14 @@
         "filename": "GoogleToolboxForMac.podspec.json",
         "git": "https://github.com/google/google-toolbox-for-mac.git",
         "folder": "google-toolbox-for-mac"
-    }
+    },
+    {
+        "type": "git",
+        "name": "Bolts",
+        "path": "a/8/e/Bolts",
+        "filename": "Bolts.podspec.json",
+        "git": "https://github.com/BoltsFramework/Bolts-ObjC.git",
+        "folder": "Bolts-ObjC"
+    },
+
 ]
