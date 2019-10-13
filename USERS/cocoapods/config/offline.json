@@ -142,5 +142,13 @@
         "filename": "FBSDKLoginKit.podspec.json",
         "git": "https://github.com/facebook/facebook-objc-sdk.git",
         "folder": "facebook-objc-sdk"
+    },
+    {
+        "type": "git",
+        "name": "FBSDKCoreKit",
+        "path": "f/4/e/FMDB",
+        "filename": "FMDB.podspec.json",
+        "git": "https://github.com/ccgus/fmdb.git",
+        "folder": "fmdb"
     }
 ]
