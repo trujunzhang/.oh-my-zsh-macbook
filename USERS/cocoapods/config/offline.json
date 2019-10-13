@@ -8,28 +8,28 @@
         "folder": ""
     },
     {
-        "type": "pending",
-        "name": "Firebase",
-        "path": "",
-        "filename": "",
-        "git": "https://github.com/firebase/firebase-ios-sdk-xxx.git",
-        "folder": "firebase-ios-sdk"
+        "type": "git",
+        "name": "gRPC-C++",
+        "path": "c/8/7/gRPC-C++",
+        "filename": "gRPC-C++.podspec.json",
+        "git": "https://github.com/grpc/grpc.git",
+        "folder": "grpc"
     },
     {
         "type": "git",
-        "name": "BoringSSL-GRPC",
-        "path": "f/8/8/BoringSSL-GRPC",
-        "filename": "",
-        "git": "https://github.com/google/boringssl-xxx.git",
-        "folder": "boringssl"
+        "name": "Protobuf",
+        "path": "e/c/d/Protobuf",
+        "filename": "Protobuf.podspec.json",
+        "git": "https://github.com/protocolbuffers/protobuf.git",
+        "folder": "protobuf"
     },
     {
-        "type": "zip",
-        "name": "GoogleAppMeasurement",
-        "path": "e/3/b/GoogleAppMeasurement",
-        "filename": "",
-        "git": "tar.gz",
-        "folder": "tar.gz"
+        "type": "git",
+        "name": "GoogleUtilities",
+        "path": "0/8/4/GoogleUtilities",
+        "filename": "GoogleUtilities.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
     },
     {
         "type": "git",
@@ -38,46 +38,6 @@
         "filename": "",
         "git": "https://github.com/realm/realm-cocoa-xxx.git",
         "folder": "realm-cocoa"
-    },
-    {
-        "type": "pending",
-        "name": "FBSDKCoreKit",
-        "path": "",
-        "filename": "",
-        "git": "https://github.com/facebook/facebook-objc-sdk-xxx.git",
-        "folder": "facebook-objc-sdk"
-    },
-    {
-        "type": "pending",
-        "name": "firebase-io",
-        "path": "",
-        "filename": "",
-        "git": "https://github.com/firebase/firebase-ios-sdk-xxx.git",
-        "folder": "firebase-ios-sdk"
-    },
-    {
-        "type": "pending",
-        "name": "nanopb",
-        "path": "",
-        "filename": "",
-        "git": "https://github.com/nanopb/nanopb-xxx.git",
-        "folder": "nanopb"
-    },
-    {
-        "type": "git",
-        "name": "protobuf",
-        "path": "e/c/d/Protobuf",
-        "filename": "",
-        "git": "https://github.com/protocolbuffers/protobuf-xxx.git",
-        "folder": "protobuf"
-    },
-    {
-        "type": "pending",
-        "name": "Flutter",
-        "path": "",
-        "filename": "",
-        "git": "https://github.com/wutongyu008/Flutter-xxx.git",
-        "folder": "Flutter"
     },
     {
         "type": "git",
@@ -164,6 +124,30 @@
         "name": "FirebaseAuthInterop",
         "path": "4/2/7/FirebaseAuthInterop",
         "filename": "FirebaseAuthInterop.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "type": "git",
+        "name": "FirebaseCore",
+        "path": "8/b/d/FirebaseCore",
+        "filename": "FirebaseCore.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "type": "git",
+        "name": "FirebaseFirestore",
+        "path": "0/9/f/FirebaseFirestore",
+        "filename": "FirebaseFirestore.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "type": "git",
+        "name": "FirebaseInstanceID",
+        "path": "3/6/0/FirebaseInstanceID",
+        "filename": "FirebaseInstanceID.podspec.json",
         "git": "https://github.com/firebase/firebase-ios-sdk.git",
         "folder": "firebase-ios-sdk"
     }

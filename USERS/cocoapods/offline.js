@@ -52,8 +52,8 @@ function replaceEachFiles(line) {
 
 try {
     var obj = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
-    // var line = obj[2]
-    var line = obj[obj.length - 1]
+    var line = obj[1]
+    // var line = obj[obj.length - 1]
 
     replaceEachFiles(line)
     // console.log('djzhang, ' + line )
