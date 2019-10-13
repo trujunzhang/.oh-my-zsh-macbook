@@ -150,5 +150,21 @@
         "filename": "FMDB.podspec.json",
         "git": "https://github.com/ccgus/fmdb.git",
         "folder": "fmdb"
+    },
+    {
+        "type": "git",
+        "name": "FirebaseAuth",
+        "path": "6/3/6/FirebaseAuth",
+        "filename": "FirebaseAuth.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "type": "git",
+        "name": "FirebaseAuthInterop",
+        "path": "4/2/7/FirebaseAuthInterop",
+        "filename": "FirebaseAuthInterop.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
     }
 ]
