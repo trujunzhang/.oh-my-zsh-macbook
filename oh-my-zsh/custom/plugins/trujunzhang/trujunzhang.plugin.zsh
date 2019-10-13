@@ -214,13 +214,10 @@ alias fbapk='flutter build apk --split-per-abi'
 alias fpget='flutter packages get'
 alias fpupdate='flutter pub upgrade'
 
+# python
+alias pjnote='jupyter notebook'
+
 # django
 alias djrun='python manage.py runserver'
 alias djmj='python manage.py migrate'
 alias djmmj='python manage.py makemigrations'
-
-# python
-alias pjnote='jupyter notebook'
-
-alias wjsglobal='npm install -g typescript @babel/plugin-proposal-decorators babel-plugin-module-resolver babel-core babel-jest @types/jest jest @babel/cli @babel/core @babel/runtime @babel/polyfill @babel/preset-env @babel/preset-react @babel/preset-typescript @babel/plugin-transform-runtime @babel/plugin-proposal-class-properties @babel/plugin-proposal-object-rest-spread @types/react-test-renderer react-test-renderer'
-

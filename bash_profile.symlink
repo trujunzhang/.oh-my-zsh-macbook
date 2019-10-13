@@ -30,3 +30,75 @@ WHITE="\[\e[1;37m\]"
 # Change command prompt display
 NAME="djzhang"
 export PS1="${YELLOW}\W:${PURPLE}${RED} ${NAME}\$ "
+
+# =============
+# https://raw.githubusercontent.com/leolanese/bash_profile/master/bash_profile
+# =============
+
+clear
+
+# BASIC CONFIGURATION
+#   ------------------------------------------------------------
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+tput bel
+
+
+## shortcuts & directions
+#   ------------------------------------------------------------
+alias  ls="ls -aFhlG"
+alias  ll="ls -l" 
+alias  ls='ls -GFh'
+alias  ..="cd .."
+alias  ...="cd ../.."
+
+# ============
+# djzhang's profile
+# ============
+
+# dart sdk
+# ======================================================================
+export PATH="$PATH:$HOME/Documents/dartSDK/bin"
+
+# flutter sdk
+# ======================================================================
+export PATH="$PATH:$HOME/Documents/flutterSDK/bin"
+export PATH="$PATH:$HOME/Documents/flutterSDK/bin/cache/dart-sdk/bin"
+export PATH="$PATH:$HOME/Documents/flutterSDK/.pub-cache/bin"
+
+# macvim
+alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
+
+# xcode
+alias iosopen='open -a Simulator'
+
+# Flutter
+alias fkill="killall -9 dart"
+alias fdoc='flutter doctor -v'
+alias fcheck="flutter analyze"
+alias frun='flutter run'
+alias ftest='flutter test'
+alias fbapk='flutter build apk --split-per-abi'
+alias fpget='flutter packages get'
+alias fpupdate='flutter pub upgrade'
+
+# python
+alias pjnote='jupyter notebook'
+
+# nvm
+# ======================================================================
+# Save your nvm env loading into your .bash_profile or similar
+# export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pyenv
+# ======================================================================
+export PATH="/Users/djzhang/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+
