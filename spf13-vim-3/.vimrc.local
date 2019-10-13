@@ -1,6 +1,5 @@
 colorscheme molokai
 
-
 " let g:python_host_prog = '/path/to/neovim2/bin/python'
 let g:python3_host_prog = '/Users/djzhang/.pyenv/shims/python'
 set pythonthreedll=/Users/djzhang/.pyenv/shims/python

@@ -41,8 +41,8 @@ export PATH="$HOME/bin:$PATH"
 
 # auto env
 # ======================================================================
-source /usr/local/opt/autoenv/activate.sh
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+# source /usr/local/opt/autoenv/activate.sh
+# [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 # java environment
 # ======================================================================
@@ -111,8 +111,8 @@ export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 # oh-my-zsh(with Homebrew)
 # ======================================================================
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
 # LEIN Coljure
 LEIN_JVM_OPTS="-Dmaven.wagon.rto=1800000"
