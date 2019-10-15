@@ -580,9 +580,9 @@
             " nmap <leader>fr :FlutterRun<CR>
             " nmap <leader>fq :FlutterQuit<CR>
             " nmap <leader>fh :FlutterHotReload<CR>
-            nnoremap <leader>fa :FlutterRun<cr>
-            nnoremap <leader>fq :FlutterQuit<cr>
-            nnoremap <leader>fr :FlutterHotReload<cr>
+            nnoremap <leader>r :FlutterRun<cr>
+            nnoremap <leader>q :FlutterQuit<cr>
+            nnoremap <leader>h :FlutterHotReload<cr>
             nnoremap <leader>fR :FlutterHotRestart<cr>
             nnoremap <leader>fD :FlutterVisualDebug<cr>
         endif
