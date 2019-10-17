@@ -91,7 +91,7 @@ SKETCH_APP="/Users/djzhang/Documents/Organizations/__APPLICATIONS/XD/Sketch.app"
 fileLink "shellstartup.config"  "$TRUJUNZHANG_DOTFILES_HOME/USERS/system/shellstartup.config" "$HOME/shellstartup.config"
 
 # https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
-directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
+# directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
 
 # IDES(VSCode|Webstorm)
 # https://github.com/VSpaceCode/VSpaceCode
