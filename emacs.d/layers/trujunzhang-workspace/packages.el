@@ -36,6 +36,7 @@
 
 (defconst trujunzhang-workspace-packages
   '(
+    pyenv-mode-auto
     highlight-indent-guides
     ;;; For typescript
     ;;; company
@@ -48,6 +49,10 @@
     ;;; For matlab
     ;; matlab-mode
     ))
+
+(defun trujunzhang-workspace/init-pyenv-mode-auto()
+)
+
 
 ;;; highlight-indent-guides
 ;;; =================================
