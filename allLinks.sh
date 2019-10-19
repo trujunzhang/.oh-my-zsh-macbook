@@ -121,7 +121,7 @@ directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/
 directoryLink  "Caches(CocoaPods)"  "$LIBRARY_COCOAPODS_HOME"    "$HOME/Library/Caches/CocoaPods"
 
 # Environment(pyenv)
-directoryLink  "Env(Pyenv)"  "$PYENV_HOME"  "$HOME/.pyenv"
+# directoryLink  "Env(Pyenv)"  "$PYENV_HOME"  "$HOME/.pyenv"
 
 # trujunzhang's profile
 directoryLink  "Application(djzhang)"  "$ORGANIZATIONS_APPLICATION_HOME"  "$HOME/Applications"
