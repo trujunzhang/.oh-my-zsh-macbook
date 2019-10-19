@@ -5,59 +5,63 @@ let offlineFolder = 'file:///Users/djzhang/Documents/Organizations/__CACHES/gith
 let jsonFile = 'config/offline.json'
 
 function getDirectories(path) {
-    return fs.readdirSync(path).filter((file) => {
-        return fs.statSync(path + '/' + file).isDirectory();
-    });
+  return fs.readdirSync(path).filter((file) => {
+    return fs.statSync(path + '/' + file).isDirectory();
+  });
 }
 
 function replaceToOffline(obj, line) {
-    const last = obj['source']['git']
-    // console.log('last: ' + last)
-    if (last === line['git']) {
-        obj['source']['git'] = offlineFolder + line['folder']
-    }
-    return obj;
+  const last = obj['source']['git']
+  // console.log('last: ' + last)
+  if (last === line['git']) {
+    obj['source']['git'] = offlineFolder + line['folder']
+  }
+  return obj;
 }
 
 function offlineJsonFile(destFile, line) {
-    if (line['type'] !== 'git' && line['type'] !== 'zip') {
-        return
-    }
+  if (line['type'] !== 'git' && line['type'] !== 'zip') {
+    return
+  }
 
-    try {
-        var obj = JSON.parse(fs.readFileSync(destFile, 'utf8'))
-        const offlineObj = replaceToOffline(obj, line)
-        const content = JSON.stringify(offlineObj, null, 4)
+  try {
+    var obj = JSON.parse(fs.readFileSync(destFile, 'utf8'))
+    const offlineObj = replaceToOffline(obj, line)
+    const content = JSON.stringify(offlineObj, null, 4)
 
-        // console.log('content: ' + content)
-        fs.writeFileSync(destFile, content);
-    } catch (e) {
-        console.log("Error: offline file, ", pkgFile)
-        // throw e
-    }
+    //console.log('content: ' + content)
+    console.log('offline: destFile=' + destFile)
+    fs.writeFileSync(destFile, content);
+  } catch (e) {
+    console.log("Error: offline file, ", pkgFile)
+    // throw e
+  }
 }
 
 function replaceEachFiles(line) {
-    let localPath = cocoapodsResposity + line['path']
-    // console.log('localPath: '+ localPath )
+  let localPath = cocoapodsResposity + line['path']
+  // console.log('localPath: '+ localPath )
 
-    var folders = getDirectories(localPath)
-    for (var i = 0; i < folders.length; i++) {
-        var destPath = localPath + "/" + folders[i] + "/" + line['filename']
-        console.log('destPath: ' + destPath)
+  var folders = getDirectories(localPath)
+  for (var i = 0; i < folders.length; i++) {
+    var destPath = localPath + "/" + folders[i] + "/" + line['filename']
+    //console.log('destPath: ' + destPath)
 
-        offlineJsonFile(destPath, line)
-    }
+    offlineJsonFile(destPath, line)
+  }
 }
 
 try {
-    var obj = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
-    var line = obj[1]
-    // var line = obj[obj.length - 1]
-
+  var obj = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
+  var length = obj.length
+  var i = 1
+  for(i; i< length; i++){
+    // var line = obj[1]
+    var line = obj[i]
+    //console.log('djzhang, ' + line['filename'] )
     replaceEachFiles(line)
-    // console.log('djzhang, ' + line )
+  }
 } catch (e) {
-    console.log("Error: restore build.current:", jsonFile)
-    // throw e
+  console.log("Error: restore build.current:", jsonFile)
+  // throw e
 }

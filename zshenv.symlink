@@ -61,9 +61,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # pyenv
 # ======================================================================
-#export PATH="/Users/djzhang/.pyenv/bin:$PATH"
-#eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+export PATH="/Users/djzhang/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # ************************************
 # activate

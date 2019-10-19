@@ -1,4 +1,4 @@
-set guifont=Menlo\ Regular:h11
+set guifont=Menlo\ Regular:h12
 
 """ Pyenv for neovim and spacevim
 let g:python_host_prog = "/Users/djzhang/.pyenv/shims/python"
