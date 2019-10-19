@@ -15,14 +15,14 @@ function replaceToOffline(obj, line) {
   // console.log('last: ' + last)
   if (last === line['git']) {
     obj['source']['git'] = offlineFolder + line['folder']
+    console.log('replace to: git =' + last)
+  }else {
+    //console.log('replace to: last=' + last)
   }
   return obj;
 }
 
 function offlineJsonFile(destFile, line) {
-  if (line['type'] !== 'git' && line['type'] !== 'zip') {
-    return
-  }
 
   try {
     var obj = JSON.parse(fs.readFileSync(destFile, 'utf8'))
@@ -30,7 +30,6 @@ function offlineJsonFile(destFile, line) {
     const content = JSON.stringify(offlineObj, null, 4)
 
     //console.log('content: ' + content)
-    console.log('offline: destFile=' + destFile)
     fs.writeFileSync(destFile, content);
   } catch (e) {
     console.log("Error: offline file, ", pkgFile)
@@ -39,6 +38,9 @@ function offlineJsonFile(destFile, line) {
 }
 
 function replaceEachFiles(line) {
+  if (line['type'] !== 'git' && line['type'] !== 'zip') {
+    return
+  }
   let localPath = cocoapodsResposity + line['path']
   // console.log('localPath: '+ localPath )
 
@@ -51,10 +53,10 @@ function replaceEachFiles(line) {
   }
 }
 
+var i = 1
 try {
   var obj = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
   var length = obj.length
-  var i = 1
   for(i; i< length; i++){
     // var line = obj[1]
     var line = obj[i]
@@ -62,6 +64,7 @@ try {
     replaceEachFiles(line)
   }
 } catch (e) {
-  console.log("Error: restore build.current:", jsonFile)
+  //console.log("Error: restore build.current:", jsonFile)
+  console.log("Error: restore build.current: index= ", i)
   // throw e
 }

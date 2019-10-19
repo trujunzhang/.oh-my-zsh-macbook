@@ -43,8 +43,8 @@
         "type": "git",
         "name": "Realm",
         "path": "9/4/5/RealmSwift",
-        "filename": "",
-        "git": "https://github.com/realm/realm-cocoa-xxx.git",
+        "filename": "RealmSwift.podspec.json",
+        "git": "https://github.com/realm/realm-cocoa.git",
         "folder": "realm-cocoa"
     },
     {
