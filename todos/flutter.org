@@ -19,15 +19,31 @@
 *** task: clone the app. 
    
     
-** TODO Flutter-Speed-coding---Greenery-App
+** DONE Flutter-Speed-coding---Greenery-App
+   CLOSED: [2019-10-20 Sun 16:22]
     [[https://github.com/JoonasN/Flutter-Speed-coding---Greenery-App][code]]
     [[https://www.youtube.com/watch?v=K8pG0Lo4f1o][youtube]]
 *** task: clone the app. 
    
+
+** DONE Flutter-speed-coding---bank-screen
+   CLOSED: [2019-10-21 Mon 15:25]
+   keys: card.
+   [[https://github.com/JoonasN/Flutter-speed-coding---bank-screen][code]]
+*** task: clone the app. 
     
+
 * Andrea Bizzotto
 ** TODO Flutter & Firebase: Authentication Service with Provider & ValueNotifier 
    keyword: Firebase, Authentication, Provider, notify.
    [[https://github.com/bizz84/firebase_auth_demo_flutter][code]]
    [[https://www.youtube.com/watch?v=MjY1_LaXyd8&t=316s][youtube]]
 *** task: clone the app. 
+
+
+* Javier González Rodríguez [[https://www.youtube.com/channel/UCF9uKbahHOibtuJdHxbCF9A][youtube ]][[https://github.com/javico2609][github]]
+** TODO real-estate-clone
+   [[https://github.com/javico2609/flutter-challenges/tree/master/lib/pages/templates/real-estate-clone][code]]
+*** task: clone the app. 
+    
+
