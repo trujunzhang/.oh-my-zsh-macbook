@@ -289,7 +289,10 @@
     " Misc {
         if count(g:spf13_bundle_groups, 'misc')
             Bundle 'rust-lang/rust.vim'
-            Bundle 'tpope/vim-markdown'
+            " Bundle 'tpope/vim-markdown'
+            " djzhang's plugins.
+            " Bundle 'godlygeek/tabular'
+            Bundle 'plasticboy/vim-markdown'
             Bundle 'spf13/vim-preview'
             Bundle 'tpope/vim-cucumber'
             Bundle 'cespare/vim-toml'
