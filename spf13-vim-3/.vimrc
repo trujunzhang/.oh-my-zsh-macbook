@@ -564,12 +564,6 @@
         nmap <Leader>ac <Plug>ToggleAutoCloseMappings
     " }
 
-    " SnipMate {
-        " Setting the author var
-        " If forking, please overwrite in your .vimrc.local file
-        let g:snips_author = 'Steve Francia <steve.francia@gmail.com>'
-    " }
-
     " Flutter {
         if isdirectory(expand("~/.vim/bundle/tsuquyomi"))
             " Plug 'dart-lang/dart-vim-plugin'
@@ -737,6 +731,14 @@
         endif
     "}
 
+    " SnipMate {
+        " Setting the author var
+        " If forking, please overwrite in your .vimrc.local file
+        let g:snips_author = 'Steve Francia <steve.francia@gmail.com>'
+
+        inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+    " }
+
     " YouCompleteMe {
         if count(g:spf13_bundle_groups, 'youcompleteme')
             let g:acp_enableAtStartup = 0
@@ -893,6 +895,7 @@
             let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
             let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
     " }
+
     " neocomplcache {
         elseif count(g:spf13_bundle_groups, 'neocomplcache')
             let g:acp_enableAtStartup = 0
