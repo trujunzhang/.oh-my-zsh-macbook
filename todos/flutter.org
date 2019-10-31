@@ -1,9 +1,8 @@
 * whatsupcoders
 ** DONE FlutterCharts  
-   keyword: chart,grid_view,font_awesome,sparkline
+   keyword: Chart,grid_view,font_awesome,sparkline
     [[https://github.com/whatsupcoders/FlutterCharts][code]]
 *** task: clone the app.
-
 
 ** DONE Flutter-Nested-Tabs 
    keyboard: tabs.
@@ -20,7 +19,6 @@
    
     
 ** DONE Flutter-Speed-coding---Greenery-App
-   CLOSED: [2019-10-20 Sun 16:22]
     [[https://github.com/JoonasN/Flutter-Speed-coding---Greenery-App][code]]
     [[https://www.youtube.com/watch?v=K8pG0Lo4f1o][youtube]]
 *** task: clone the app. 
@@ -46,8 +44,10 @@
    [[https://github.com/javico2609/flutter-challenges/tree/master/lib/pages/templates/real-estate-clone][code]]
 *** task: clone the app. 
     
+
 * rajayogan
-** TODO flutterui-fruitcookbook
+** DONE flutterui-fruitcookbook
+   key: Positioned, Stack(with Image), Asset Images.
    [[https://github.com/rajayogan/flutterui-fruitcookbook][code]]
 *** task: clone the app. 
 
