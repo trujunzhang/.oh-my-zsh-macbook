@@ -1,0 +1,8 @@
+* homebrew's respository
+
+> echo "$(brew --repo)"
+> /usr/local/Homebrew 
+
+* homebrew's core
+
+> /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
