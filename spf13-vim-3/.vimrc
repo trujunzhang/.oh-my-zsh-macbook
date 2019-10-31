@@ -736,7 +736,7 @@
         " If forking, please overwrite in your .vimrc.local file
         let g:snips_author = 'Steve Francia <steve.francia@gmail.com>'
 
-        inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+        "" inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
     " }
 
     " YouCompleteMe {
