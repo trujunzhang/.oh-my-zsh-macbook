@@ -7,3 +7,7 @@
 
 * 
  > pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  theano tensorflow keras  
+
+ > pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  scipy numpy matplotlib pandas sklearn 
+
+
