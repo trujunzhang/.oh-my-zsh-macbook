@@ -213,6 +213,7 @@ alias ftest='flutter test'
 alias fbapk='flutter build apk --split-per-abi'
 alias fpget='flutter packages get'
 alias fpupdate='flutter pub upgrade'
+alias fjson='flutter packages pub run json_model'
 
 # python
 alias pjnote='jupyter notebook'
