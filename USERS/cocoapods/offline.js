@@ -1,6 +1,7 @@
 const fs = require('fs')
 
-let cocoapodsResposity = "/Users/djzhang/Documents/Organizations/IDES/cocoapods/.cocoapods/repos/master/Specs/"
+//let cocoapodsResposity = "/Users/djzhang/Documents/Organizations/IDES/cocoapods/.cocoapods/repos/master/Specs/"
+let cocoapodsResposity = "/Users/djzhang/.cocoapods/repos/master/Specs/"
 let offlineFolder = 'file:///Users/djzhang/Documents/Organizations/__CACHES/github/'
 let jsonFile = 'config/offline.json'
 
@@ -15,7 +16,7 @@ function replaceToOffline(obj, line) {
   // console.log('last: ' + last)
   if (last === line['git']) {
     obj['source']['git'] = offlineFolder + line['folder']
-    console.log('replace to: git =' + last)
+    console.log('replace to: git=' + last)
   }else {
     //console.log('replace to: last=' + last)
   }
@@ -66,5 +67,5 @@ try {
 } catch (e) {
   //console.log("Error: restore build.current:", jsonFile)
   console.log("Error: restore build.current: index= ", i)
-  // throw e
+  throw e
 }

@@ -51,4 +51,9 @@
    [[https://github.com/rajayogan/flutterui-fruitcookbook][code]]
 *** task: clone the app. 
 
+* scitbiz [[https://github.com/scitbiz][github]]
+** flutter_pokedex
+   [[https://github.com/scitbiz/flutter_pokedex][code]]
+*** task: clone the app. 
+
 
