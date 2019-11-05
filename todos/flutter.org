@@ -51,9 +51,14 @@
    [[https://github.com/rajayogan/flutterui-fruitcookbook][code]]
 *** task: clone the app. 
 
+
 * scitbiz [[https://github.com/scitbiz][github]]
-** flutter_pokedex
+** TODO flutter_pokedex
    [[https://github.com/scitbiz/flutter_pokedex][code]]
 *** task: clone the app. 
 
-
+* iampawan [[https://github.com/iampawan][github]]
+** TODO Flutter-Instagram-UI-Clone
+   keys: [ThemeData(primaryIconTheme, primaryTextTheme)]
+   [[https://github.com/iampawan/Flutter-Instagram-UI-Clone][code]]
+*** task: clone the app. 
