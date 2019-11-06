@@ -57,8 +57,15 @@
    [[https://github.com/scitbiz/flutter_pokedex][code]]
 *** task: clone the app. 
 
+
 * iampawan [[https://github.com/iampawan][github]]
 ** TODO Flutter-Instagram-UI-Clone
    keys: [ThemeData(primaryIconTheme, primaryTextTheme)]
    [[https://github.com/iampawan/Flutter-Instagram-UI-Clone][code]]
+*** task: clone the app. 
+
+
+* kaina404 [[https://github.com/kaina404][github]]
+** TODO FlutterDouBan
+   [[https://github.com/kaina404/FlutterDouBan][code]]
 *** task: clone the app. 
