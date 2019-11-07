@@ -1,0 +1,30 @@
+<templateSet group="Flutter-djzhang">
+  <template name="wstyle" value="   style: TextStyle(&#10;&#9;&#9;&#9;fontSize: $fontSize$,&#10;&#9;&#9;&#9;color: Colors,&#10;&#9;&#9;&#9;fontWeight: FontWeight,&#10;   )," description="Text's style." toReformat="false" toShortenFQNames="true">
+    <variable name="fontSize" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="wsw" value="MediaQuery.of(context).size.width" description="Screen Width" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="wsh" value="MediaQuery.of(context).size.height" description="Screen Height." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="wicon" value="                Icon(&#10;                  Icons.$name$,&#10;                  color: Colors.,&#10;                  size: ,&#10;                )," description="Icon Widget." toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="wpush" value="&#9;Navigator.of(context).push(&#10;&#9;&#9;&#9;MaterialPageRoute(builder: (context) =&gt; $widget$ (&#10;&#9;&#9;&#9;)&#10;&#9;&#9;&#9;));" description="Navigator push." toReformat="false" toShortenFQNames="true">
+    <variable name="widget" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+</templateSet>
