@@ -41,6 +41,7 @@
 
 * Javier González Rodríguez [[https://www.youtube.com/channel/UCF9uKbahHOibtuJdHxbCF9A][youtube ]][[https://github.com/javico2609][github]]
 ** TODO real-estate-clone
+   keys: [colorFilter(image), CircleAvatar, ListTile]
    [[https://github.com/javico2609/flutter-challenges/tree/master/lib/pages/templates/real-estate-clone][code]]
 *** task: clone the app. 
     
