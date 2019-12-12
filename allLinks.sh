@@ -117,7 +117,7 @@ ln -s "//Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge
 
 
 # $USERPROFILE/Library/Caches
-directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/Caches/Yarn"
+# directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/Caches/Yarn"
 directoryLink  "Caches(CocoaPods)"  "$LIBRARY_COCOAPODS_HOME"    "$HOME/Library/Caches/CocoaPods"
 
 # Environment(pyenv)
