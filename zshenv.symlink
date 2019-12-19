@@ -1,4 +1,12 @@
 
+export DOTFILES=$HOME/.dotfiles
+export CACHEDIR="$HOME/.local/share"
+
+[[ -d "$CACHEDIR" ]] || mkdir -p "$CAHCEDIR"
+
+export EDITOR='nvim'
+export GIT_EDITOR='nvim'
+
 # unknown
 # ======================================================================
 # tabtab source for yo package
@@ -134,19 +142,14 @@ export EDITOR="$VISUAL"
 
 # BEGIN run on shell startup ###################################################
 if ( hash tmux 2>/dev/null ) && [ $TERM != "screen-256color" ]; then
-  # tmux
   tmux attach || tmux new
 fi
 
 # rvm
 # ======================================================================
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # Load RVM into a shell session *as a function*
 export PATH="$GEM_HOME/bin:$PATH"
-# 
+#
 # Load RVM into a shell session *as a function*
-# 
-
-
-
-
+#
