@@ -597,11 +597,8 @@ call plug#begin('~/.config/vimPlugins/plugged')
     " }
 
     " Styles {{{
-        Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
-        Plug 'groenewege/vim-less', { 'for': 'less' }
         Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
         Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-        Plug 'stephenway/postcss.vim', { 'for': 'css' }
     " }}}
 
     " markdown {{{
@@ -620,7 +617,6 @@ call plug#begin('~/.config/vimPlugins/plugged')
         let g:vim_json_syntax_conceal = 0
     " }}}
 
-    Plug 'ekalinin/Dockerfile.vim'
 " }}}
 
 call plug#end()
