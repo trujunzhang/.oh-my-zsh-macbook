@@ -377,13 +377,6 @@ call plug#begin('~/.config/vimPlugins/plugged')
     Plug 'moll/vim-bbye'
     nmap <leader>b :Bdelete<cr>
 
-    " Writing in vim {{{{
-        Plug 'junegunn/goyo.vim'
-
-        autocmd! User GoyoEnter nested call helpers#goyo#enter()
-        autocmd! User GoyoLeave nested call helpers#goyo#leave()
-    " }}}
-
     " context-aware pasting
     Plug 'sickill/vim-pasta'
 
