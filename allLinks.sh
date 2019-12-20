@@ -20,7 +20,13 @@ TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/.oh-my-zsh-macbook"
 USERPROFILE_HOME="$ORGANIZATIONS_HOME/__UserProfile"
 PATH_SYSTEM_APPLICATION_SUPPORT="$HOME/Library/Application Support"
 
-# *Links(IDES)
+# *Links(dot_vim)
+# ======================================
+VIM_ALL_HOME="$ORGANIZATIONS_HOME/nicknisi/vim"
+# ==Items==
+DOT_VIM_RC="$VIM_ALL_HOME/init.vim"
+
+# *Links(Caches)
 # ======================================
 CACHES_HOME="$ORGANIZATIONS_HOME/__CACHES"
 # ==Items==
