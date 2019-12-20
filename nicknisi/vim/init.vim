@@ -596,6 +596,14 @@ call plug#begin('~/.config/vimPlugins/plugged')
         let g:pymode_python = 'python3'
     " }
 
+    " Indent guider {
+        " http://vimcasts.org/episodes/show-invisibles/
+        Plug 'Yggdroot/indentLine'
+        let g:indentLine_color_gui = '#A4E57E'
+        " let g:indentLine_char_list = ['▸', '▸', '▸', '▸'] 
+        let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+    " }
+
     " Styles {{{
         Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
         Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
