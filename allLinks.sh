@@ -22,7 +22,7 @@ PATH_SYSTEM_APPLICATION_SUPPORT="$HOME/Library/Application Support"
 
 # *Links(dot_vim)
 # ======================================
-VIM_ALL_HOME="$ORGANIZATIONS_HOME/nicknisi/vim"
+VIM_ALL_HOME="$TRUJUNZHANG_DOTFILES_HOME/nicknisi/vim"
 # ==Items==
 DOT_VIM_RC="$VIM_ALL_HOME/init.vim"
 
@@ -121,6 +121,9 @@ ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 # IDE(Sublime Merge)
 ln -s "//Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 
+# DOT_VIM
+directoryLink  "vim(.vim)"    "$VIM_ALL_HOME"    "$HOME/.vim"
+fileLink       "vim(.vimrc)"  "$DOT_VIM_RC"      "$HOME/.vimrc"
 
 # $USERPROFILE/Library/Caches
 # directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/Caches/Yarn"
