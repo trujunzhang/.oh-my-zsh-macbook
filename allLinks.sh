@@ -122,8 +122,9 @@ ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 ln -s "//Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 
 # DOT_VIM
-directoryLink  "vim(.vim)"    "$VIM_ALL_HOME"    "$HOME/.vim"
-fileLink       "vim(.vimrc)"  "$DOT_VIM_RC"      "$HOME/.vimrc"
+directoryLink  "vim(.vim)"         "$VIM_ALL_HOME"    "$HOME/.vim"
+directoryLink  "neovim(config)"    "$VIM_ALL_HOME"    "$HOME/.config/nvim"
+fileLink       "vim(.vimrc)"       "$DOT_VIM_RC"      "$HOME/.vimrc"
 
 # $USERPROFILE/Library/Caches
 # directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/Caches/Yarn"
