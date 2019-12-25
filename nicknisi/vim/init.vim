@@ -655,6 +655,9 @@ call plug#end()
 " }}}
 
 " djzhang's config {{{
+    set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+    set termencoding=utf-8
+    set encoding=utf-8
     :au FocusLost * silent! wa          " (djzhang)Automatically write a file when leaving a modified buffer
     :au FocusLost * :wa
     set autowrite                      " Automatically write a file when leaving a modified buffer
