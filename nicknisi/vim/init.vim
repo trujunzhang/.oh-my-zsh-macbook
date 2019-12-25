@@ -459,17 +459,6 @@ call plug#begin('~/.config/vimPlugins/plugged')
         \ }
     " }}}
 
-    " vim-fugitive {{{
-        Plug 'tpope/vim-fugitive'
-        nmap <silent> <leader>gs :Gstatus<cr>
-        nmap <leader>ge :Gedit<cr>
-        nmap <silent><leader>gr :Gread<cr>
-        nmap <silent><leader>gb :Gblame<cr>
-
-        Plug 'tpope/vim-rhubarb' " hub extension for fugitive
-        Plug 'sodapopcan/vim-twiggy'
-    " }}}
-
     " UltiSnips {{{
         Plug 'SirVer/ultisnips' " Snippets plugin
         let g:UltiSnipsExpandTrigger="<C-l>"
