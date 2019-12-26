@@ -178,9 +178,6 @@ call plug#begin('~/.config/vimPlugins/plugged')
     " shortcut to save
     nmap <leader>, :w<cr>
 
-    " set paste toggle
-    set pastetoggle=<leader>v
-
     " edit ~/.config/nvim/init.vim
     map <leader>ev :e! ~/.config/nvim/init.vim<cr>
     " edit gitconfig
