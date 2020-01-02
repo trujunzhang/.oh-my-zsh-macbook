@@ -207,8 +207,8 @@ call plug#begin('~/.config/vimPlugins/plugged')
 
     " switch between current and last buffer
     " nmap <leader>. <c-^>
-    nmap <leader><tab> <c-^> 
- 
+    nmap <leader><tab> <c-^>
+
     " enable . command in visual mode
     vnoremap . :normal .<cr>
 
@@ -319,7 +319,7 @@ call plug#begin('~/.config/vimPlugins/plugged')
 
     " tmux integration for vim
     """ command :help vimux
-    Plug 'benmills/vimux' 
+    Plug 'benmills/vimux'
 
     " enables repeating other supported plugins with the . command
     Plug 'tpope/vim-repeat'
@@ -586,7 +586,7 @@ call plug#begin('~/.config/vimPlugins/plugged')
         " http://vimcasts.org/episodes/show-invisibles/
         Plug 'Yggdroot/indentLine'
         let g:indentLine_color_gui = '#A4E57E'
-        " let g:indentLine_char_list = ['▸', '▸', '▸', '▸'] 
+        " let g:indentLine_char_list = ['▸', '▸', '▸', '▸']
         let g:indentLine_char_list = ['|', '¦', '┆', '┊']
     " }
 
@@ -641,7 +641,9 @@ call plug#end()
 " }}}
 
 " djzhang's config {{{
-    set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+    set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+    set enc=utf8
+    set fencs=utf8,gbk,gb2312,gb18030
     set termencoding=utf-8
     set encoding=utf-8
     :au FocusLost * silent! wa          " (djzhang)Automatically write a file when leaving a modified buffer
