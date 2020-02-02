@@ -3,7 +3,7 @@
 
 " ensure vim-plug is installed and then load it
 call functions#PlugLoad()
-call plug#begin('~/.config/vimPlugins/plugged')
+call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
 
 " General {{{
     " Abbreviations
