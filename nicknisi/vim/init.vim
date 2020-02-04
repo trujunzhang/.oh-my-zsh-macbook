@@ -579,7 +579,7 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
 
     " Python {
         Plug 'klen/python-mode'
-        let g:pymode_python = 'python3'
+        " let g:pymode_python = 'python3' " No used(02-04-2020)
     " }
 
     " Indent guider {
@@ -641,6 +641,7 @@ call plug#end()
 " }}}
 
 " djzhang's config {{{
+    set guifont=Hack_Nerd_Font:h12
     set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
     set enc=utf8
     set fencs=utf8,gbk,gb2312,gb18030

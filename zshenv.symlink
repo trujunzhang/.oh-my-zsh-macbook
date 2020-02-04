@@ -1,8 +1,12 @@
 
 export DOTFILES=$HOME/.dotfiles
+export CONFIGDIR="$HOME/.config"
+export LOCALDIR="$HOME/.local"
 export CACHEDIR="$HOME/.local/share"
 
-[[ -d "$CACHEDIR" ]] || mkdir -p "$CAHCEDIR"
+[[ -d "$CONFIGDIR" ]] || mkdir -p "$CONFIGDIR"
+[[ -d "$LOCALDIR" ]]  || mkdir -p "$LOCALDIR"
+[[ -d "$CACHEDIR" ]]  || mkdir -p "$CAHCEDIR"
 
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
@@ -146,10 +150,11 @@ if ( hash tmux 2>/dev/null ) && [ $TERM != "screen-256color" ]; then
 fi
 
 # rvm
+# Step1: Install GPG
+#        http://mac-tutorials.net/2020/01/08/step-step-mac-catalina-install-gpg/2/
+# Step2: 
+#        http://rvm.io/
 # ======================================================================
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # Load RVM into a shell session *as a function*
 export PATH="$GEM_HOME/bin:$PATH"
-#
-# Load RVM into a shell session *as a function*
-#
