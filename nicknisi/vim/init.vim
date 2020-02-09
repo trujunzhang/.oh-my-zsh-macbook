@@ -322,13 +322,13 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
     Plug 'benmills/vimux'
 
     " enables repeating other supported plugins with the . command
-    Plug 'tpope/vim-repeat'
+    " Plug 'tpope/vim-repeat'
 
     " .editorconfig support
-    Plug 'editorconfig/editorconfig-vim'
+    " Plug 'editorconfig/editorconfig-vim'
 
     " single/multi line code handler: gS - split one line into multiple, gJ - combine multiple lines into one
-    Plug 'AndrewRadev/splitjoin.vim'
+    " Plug 'AndrewRadev/splitjoin.vim'
 
     " add end, endif, etc. automatically
     Plug 'tpope/vim-endwise'
@@ -579,7 +579,7 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
 
     " Python {
         Plug 'klen/python-mode'
-        " let g:pymode_python = 'python3' " No used(02-04-2020)
+        let g:pymode_python = 'python3' 
     " }
 
     " Indent guider {
@@ -591,8 +591,8 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
     " }
 
     " Styles {{{
-        Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-        Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+        " Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+        " Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
     " }}}
 
     " markdown {{{
