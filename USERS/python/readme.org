@@ -10,6 +10,8 @@
 
  > pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  scipy numpy matplotlib pandas sklearn 
 
+ > pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  pyyaml nltk  
+
  > pip install -i https://pypi.tuna.tsinghua.edu.cn/simp  weasyprint
 
 
