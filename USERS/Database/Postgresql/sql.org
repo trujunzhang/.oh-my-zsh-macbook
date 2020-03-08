@@ -1,0 +1,22 @@
+* tutorial
+  [[https://www.codementor.io/@engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb][blog]]
+
+** Start by entering the following on the command line:
+
+   $> psql postgres
+
+** create user
+    Now let’s create our new role:
+
+  $> postgres=# CREATE ROLE patrick WITH LOGIN PASSWORD 'Getting started'; 
+  $> postgres=# \du
+
+
+
+
+
+
+
+
+
+
