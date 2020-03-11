@@ -580,6 +580,9 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
     " Python {
         Plug 'klen/python-mode'
         let g:pymode_python = 'python3' 
+        """ https://robertbasic.com/blog/force-python-version-in-vim/
+        if has('python3')
+        endif
     " }
 
     " Indent guider {
