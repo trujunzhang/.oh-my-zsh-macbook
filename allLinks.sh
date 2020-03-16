@@ -33,7 +33,6 @@ CACHES_HOME="$ORGANIZATIONS_HOME/__CACHES"
 LIBRARY_YARN_HOME="$CACHES_HOME/Yarn"
 LIBRARY_COCOAPODS_HOME="$CACHES_HOME/CocoaPods"
 
-
 # *Links(IDES)
 # ======================================
 IDES_HOME="$ORGANIZATIONS_HOME/IDES"
@@ -101,6 +100,7 @@ fileLink "shellstartup.config"  "$TRUJUNZHANG_DOTFILES_HOME/USERS/system/shellst
 
 # IDES(VSCode|Webstorm)
 # https://github.com/VSpaceCode/VSpaceCode
+directoryLink  "snippet(vscode)"     "$VSCODE_USERS_HOME/snippets"           "$DEST_VSCODE_USER_HOME/snippets"
 fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json"   "$DEST_VSCODE_USER_HOME/keybindings.json"
 fileLink "settings.json(vscode)"     "$VSCODE_USERS_HOME/settings.json"      "$DEST_VSCODE_USER_HOME/settings.json"
 fileLink "projects.json(vscode)"     "$VSCODE_HOME/projects.json"            "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager/projects.json"
