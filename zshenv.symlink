@@ -41,6 +41,7 @@ export PATH="/Applications/GenymotionShell.app/Contents/MacOS:$PATH"
 export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 
 # php's composer
+# https://duvien.com/blog/installing-composer-mac-osx
 alias composer="php /usr/local/bin/composer.phar"
 
 # ieatta's firebase json configure.
