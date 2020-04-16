@@ -1149,5 +1149,8 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[sass]": {
+        "editor.defaultFormatter": "michelemelluso.code-beautifier"
     }
 }

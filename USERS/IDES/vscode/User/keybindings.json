@@ -47,5 +47,9 @@
         "key": "ctrl+k",
         "command": "list.focusUp",
         "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "cmd+k f",
+        "command": "eslint.executeAutofix"
     }
 ]

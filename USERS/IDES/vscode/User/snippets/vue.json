@@ -16,18 +16,15 @@
             ""
         ]
     },
-    "Vue for script": {
-        "prefix": "v-script",
-        "description": "Vue for importing script file",
+    "Vue for script/style": {
+        "prefix": "v-ss",
+        "description": "Vue for importing script/style file",
         "body": [
-            "<script src=./\"${TM_FILENAME_BASE}.js\"/>"
+            "<script src=\"./${TM_FILENAME_BASE}.js\"/>"
+            ""
+            "<script lang=\"ts\" src=\"./${TM_FILENAME_BASE}.ts\"/>"
+            ""
+            "<style lang=\"scss\" src=\"./${TM_FILENAME_BASE}.scss\"/>"
         ]
-    },
-    "Vue for style": {
-        "prefix": "v-style",
-        "description": "Vue for importing style file",
-        "body": [
-            "<style lang=\"scss\" src=./\"${TM_FILENAME_BASE}.scss\"/>"
-        ]
-    }           
+    }               
 }
