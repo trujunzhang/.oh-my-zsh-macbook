@@ -25,6 +25,8 @@
             "<script lang=\"ts\" src=\"./${TM_FILENAME_BASE}.ts\"/>"
             ""
             "<style lang=\"scss\" src=\"./${TM_FILENAME_BASE}.scss\"/>"
+            ""
+            "<style lang=\"sass\" src=\"./${TM_FILENAME_BASE}.sass\"/>"
         ]
     }               
 }
