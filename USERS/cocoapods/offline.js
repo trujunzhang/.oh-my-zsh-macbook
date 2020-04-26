@@ -24,7 +24,6 @@ function replaceToOffline(obj, line) {
 }
 
 function offlineJsonFile(destFile, line) {
-
   try {
     var obj = JSON.parse(fs.readFileSync(destFile, 'utf8'))
     const offlineObj = replaceToOffline(obj, line)
@@ -38,20 +37,31 @@ function offlineJsonFile(destFile, line) {
   }
 }
 
-function replaceEachFiles(line,dest) {
-  if (line['type'] !== 'git' && line['type'] !== 'zip') {
-    return
-  }
-  let localPath = dest + line['path']
-  // console.log('localPath: '+ localPath )
-
+function replaceJsonFile(line,localPath){
   var folders = getDirectories(localPath)
   for (var i = 0; i < folders.length; i++) {
     var destPath = localPath + "/" + folders[i] + "/" + line['filename']
     //console.log('destPath: ' + destPath)
-
     offlineJsonFile(destPath, line)
   }
+}
+
+function replaceEachFiles(line,spacesPath) {
+  if (line['type'] !== 'git' && line['type'] !== 'zip') {
+    return
+  }
+  let localPath = spacesPath + line['path']
+  // console.log('localPath: '+ localPath )
+
+  fs.stat(localPath, function(err, stats) {
+    //Check if error defined and the error code is "not exists"
+    // if (err && err.errno === 34) {
+    if (err) {
+    } else {
+      //just in case there was a different error:
+      replaceJsonFile(line,localPath)
+    }
+  })
 }
 
 var i = 1
