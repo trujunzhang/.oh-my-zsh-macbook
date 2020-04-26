@@ -121,6 +121,14 @@
     },
     {
         "type": "git",
+        "name": "Firebase",
+        "path": "0/3/5/Firebase",
+        "filename": "Firebase.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "type": "git",
         "name": "FirebaseAuth",
         "path": "6/3/6/FirebaseAuth",
         "filename": "FirebaseAuth.podspec.json",
