@@ -1,7 +1,7 @@
 const fs = require('fs')
 
-//let cocoapodsResposity = "/Users/djzhang/Documents/Organizations/IDES/cocoapods/.cocoapods/repos/master/Specs/"
 let cocoapodsResposity = "/Users/djzhang/.cocoapods/repos/master/Specs/"
+let trunkResposity = "/Users/djzhang/.cocoapods/repos/trunk/Specs/"
 let offlineFolder = 'file:///Users/djzhang/Documents/Organizations/__CACHES/github/'
 let jsonFile = 'config/offline.json'
 
@@ -38,11 +38,11 @@ function offlineJsonFile(destFile, line) {
   }
 }
 
-function replaceEachFiles(line) {
+function replaceEachFiles(line,dest) {
   if (line['type'] !== 'git' && line['type'] !== 'zip') {
     return
   }
-  let localPath = cocoapodsResposity + line['path']
+  let localPath = dest + line['path']
   // console.log('localPath: '+ localPath )
 
   var folders = getDirectories(localPath)
@@ -62,7 +62,8 @@ try {
     // var line = obj[1]
     var line = obj[i]
     //console.log('djzhang, ' + line['filename'] )
-    replaceEachFiles(line)
+    replaceEachFiles(line,cocoapodsResposity)
+    replaceEachFiles(line,trunkResposity)
   }
 } catch (e) {
   //console.log("Error: restore build.current:", jsonFile)
