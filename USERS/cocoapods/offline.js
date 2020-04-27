@@ -32,7 +32,7 @@ function offlineJsonFile(destFile, line) {
     //console.log('content: ' + content)
     fs.writeFileSync(destFile, content);
   } catch (e) {
-    console.log("Error: offline file, ", pkgFile)
+    console.log("Error: offline file, ", destFile)
     // throw e
   }
 }
