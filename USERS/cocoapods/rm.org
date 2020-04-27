@@ -1,0 +1,9 @@
+find . -name 'Pods' -type d | xargs rm -rf
+
+find . -name 'build' -type d | xargs rm -rf
+
+find . -name 'Flutter' -type d | xargs rm -rf
+
+find . -name 'Flutter.framework' -type d | xargs rm -rf
+
+find . -name 'App.framework' -type d | xargs rm -rf
