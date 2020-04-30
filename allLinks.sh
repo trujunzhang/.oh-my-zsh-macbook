@@ -100,6 +100,8 @@ fileLink "shellstartup.config"  "$TRUJUNZHANG_DOTFILES_HOME/USERS/system/shellst
 
 # IDES(VSCode|Webstorm)
 # https://github.com/VSpaceCode/VSpaceCode
+mkdir "/Users/djzhang/Library/Application Support/Code"
+mkdir "/Users/djzhang/Library/Application Support/Code/User"
 directoryLink  "snippet(vscode)"     "$VSCODE_USERS_HOME/snippets"           "$DEST_VSCODE_USER_HOME/snippets"
 fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json"   "$DEST_VSCODE_USER_HOME/keybindings.json"
 fileLink "settings.json(vscode)"     "$VSCODE_USERS_HOME/settings.json"      "$DEST_VSCODE_USER_HOME/settings.json"
