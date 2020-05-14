@@ -132,8 +132,8 @@ directoryLink  "neovim(config)"    "$VIM_ALL_HOME"    "$HOME/.config/nvim"
 fileLink       "vim(.vimrc)"       "$DOT_VIM_RC"      "$HOME/.vimrc"
 
 # $USERPROFILE/Library/Caches
-directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/Caches/Yarn"
-directoryLink  "Caches(CocoaPods)"  "$LIBRARY_COCOAPODS_HOME"    "$HOME/Library/Caches/CocoaPods"
+# directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/Caches/Yarn"
+# directoryLink  "Caches(CocoaPods)"  "$LIBRARY_COCOAPODS_HOME"    "$HOME/Library/Caches/CocoaPods"
 
 # Environment(pyenv)
 # directoryLink  "Env(Pyenv)"  "$PYENV_HOME"  "$HOME/.pyenv"

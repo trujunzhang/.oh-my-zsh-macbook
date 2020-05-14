@@ -1152,5 +1152,6 @@
     },
     "[sass]": {
         "editor.defaultFormatter": "michelemelluso.code-beautifier"
-    }
+    },
+    "dart.openDevTools": "flutter"
 }
