@@ -216,6 +216,11 @@ alias fpupdate='flutter pub upgrade'
 alias fapk='flutter build apk --split-per-abi'
 alias fjson='flutter packages pub run json_model'
 
+# Firebase-tool
+alias fblogin='firebase login'
+alias fbcreatefunction='firebase init functions'
+alias fbdeploy='firebase deploy --only functions'
+
 # python
 alias pjnote='jupyter notebook'
 
