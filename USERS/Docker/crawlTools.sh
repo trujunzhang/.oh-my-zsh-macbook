@@ -12,3 +12,5 @@ docker run \
 
 
 # docker run --restart=always -d --name gerapy -v ~/gerapy:/app/gerapy -p 8000:8000 germey/gerapy
+
+
