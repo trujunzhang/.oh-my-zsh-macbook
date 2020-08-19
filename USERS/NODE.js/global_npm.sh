@@ -28,9 +28,9 @@ npm install -g neovim
 # npm install -g heroku
 
 # react-native
-npm install -g expo-cli
-npm install -g react-native-cli
-npm install -g create-react-native-app
+# npm install -g expo-cli
+# npm install -g react-native-cli
+# npm install -g create-react-native-app
 
 # react library
 npm install -g create-react-library
@@ -40,12 +40,12 @@ npm install --global lerna cpx npm-run-all
 
 
 # javascript
-npm install -g eslint-cli
+# npm install -g eslint-cli
 
 # typescript with lint
-npm install -g typescript
-npm install -g tslint
-npm install -g prettier
+# npm install -g typescript
+# npm install -g tslint
+# npm install -g prettier
 
 # https://github.com/voxpelli/node-installed-check
 npm install -g installed-check
