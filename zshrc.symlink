@@ -120,5 +120,5 @@ alias tns='tmux new-session -s'
 # How to set Python3 as a default python version on Mac?
 #    https://dev.to/irfnhm/how-to-set-python3-as-a-default-python-version-on-mac-4jjf
 # $> ls -l /usr/local/bin/python*
-# alias python='python3'
-# alias pip='pip3'
+alias python='python3'
+alias pip='pip3'
