@@ -87,6 +87,9 @@ alias rnandl='npm run android:logcat'
 alias rnands='npm run android:shake'
 
 # yarn.all
+alias ytest='yarn test'
+alias yserve='yarn serve'
+alias ydev='yarn dev'
 alias yarntc='yarn test.client'
 alias yarntw='yarn test.web'
 alias yarnita='yarn install && yarn test.web && yarn test.client'
