@@ -11,6 +11,12 @@
 
 #!/usr/bin/env bash
 
+# issue: UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+# fix: https://github.com/docker/compose/issues/3927 
+# 
+export DOCKER_CLIENT_TIMEOUT=120
+export COMPOSE_HTTP_TIMEOUT=120
+
 # Important:
 #    First, load the IPsec af_key kernel module on the Docker host. This step is optional for Ubuntu and Debian.
 ### sudo modprobe af_key
