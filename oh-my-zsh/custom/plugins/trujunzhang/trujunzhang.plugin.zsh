@@ -237,3 +237,4 @@ alias djmmj='python manage.py makemigrations'
 alias penv="python3 -m venv venv"
 alias pactive="source venv/bin/activate"
 
+alias pjnote="jupyter notebook"
