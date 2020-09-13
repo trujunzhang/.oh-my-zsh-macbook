@@ -120,7 +120,23 @@ alias tns='tmux new-session -s'
 # How to set Python3 as a default python version on Mac?
 #    https://dev.to/irfnhm/how-to-set-python3-as-a-default-python-version-on-mac-4jjf
 # $> ls -l /usr/local/bin/python*
-alias python='python3'
-alias pip='pip3'
+# alias python='python3'
+# alias pip='pip3'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/djzhang/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/djzhang/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/djzhang/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/djzhang/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
