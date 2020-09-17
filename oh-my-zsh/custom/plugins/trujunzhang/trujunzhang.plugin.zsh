@@ -241,4 +241,4 @@ alias pjnote="jupyter notebook"
 
 # djzhang's cmd
 alias dfpython="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/python"
-alias drunvpn="python vpn_connect.py"
+alias drunvpn="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
