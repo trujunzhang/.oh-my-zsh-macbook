@@ -109,7 +109,6 @@ alias npmrr="npm run sketch:render"
 
 # npm.plugin
 alias npmi='npm install --verbose'
-alias yarni='yarn install --verbose'
 
 alias npmsvi='npm install --verbose --save-dev '
 alias npmsi='npm install --verbose --save '
