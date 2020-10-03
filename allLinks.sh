@@ -86,6 +86,14 @@ source ./bash/files-functions.sh
 SYSTEM_APPLICATION="/Applications"
 SKETCH_APP="/Users/djzhang/Documents/Organizations/__APPLICATIONS/XD/Sketch.app"
 
+
+# ====================================================================
+# ====================================================================
+#         All folder 
+# ====================================================================
+# ====================================================================
+mkdir "$USER_PROFILE_DJZHANG_HOME/.local"
+mkdir "$USER_PROFILE_DJZHANG_HOME/.local/share"
 # ====================================================================
 # ====================================================================
 #         All Links 
