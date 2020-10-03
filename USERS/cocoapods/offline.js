@@ -41,7 +41,7 @@ function replaceJsonFile(line,localPath){
   var folders = getDirectories(localPath)
   for (var i = 0; i < folders.length; i++) {
     var destPath = localPath + "/" + folders[i] + "/" + line['filename']
-    //console.log('destPath: ' + destPath)
+    console.log('destPath: ' + destPath)
     offlineJsonFile(destPath, line)
   }
 }
@@ -71,7 +71,7 @@ try {
   for(i; i< length; i++){
     // var line = obj[1]
     var line = obj[i]
-    //console.log('djzhang, ' + line['filename'] )
+    // console.log('djzhang, ' + line['filename'] )
     replaceEachFiles(line,cocoapodsResposity)
     replaceEachFiles(line,trunkResposity)
   }
