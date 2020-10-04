@@ -644,6 +644,10 @@ call plug#end()
 " }}}
 
 " djzhang's config {{{
+    " Auto save {{{
+        Plug '907th/vim-auto-save'
+        let g:auto_save = 1  " enable AutoSave on Vim startup
+    " }}}
     "" fullscreen
     "" set fu
     set guifont=Hack_Nerd_Font:h12

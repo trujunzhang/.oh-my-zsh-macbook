@@ -233,6 +233,9 @@ alias djmj='python manage.py migrate'
 alias djmmj='python manage.py makemigrations'
 
 # python env
+alias pinit="pipenv shell"
+alias pinstall="pipenv install --dev"
+alias pgraph="pipenv graph"
 # https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 alias penv="python3 -m venv venv"
 alias pactive="source venv/bin/activate"

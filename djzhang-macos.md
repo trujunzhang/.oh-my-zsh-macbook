@@ -26,6 +26,9 @@
 
 # atom(ide)
     $ /Users/djzhang/.atom
+    $ /Volumes/Data/ALLNew_Macbook/Users/djzhang/.atom
 
 # vscode(ide)
     $ /Users/djzhang/.vscode
+    $ /Volumes/Data/ALLNew_Macbook/Users/djzhang/.vscode
+
