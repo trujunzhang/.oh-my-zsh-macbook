@@ -643,6 +643,20 @@ call plug#end()
     highlight Normal ctermbg=none
 " }}}
 
+" Terminal {{{
+" start terminal in insert mode
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+
+" open terminal on ctrl+;
+" uses zsh instead of bash
+function! OpenTerminal()
+  " split term://bash
+  split term://zsh
+  resize 10
+endfunction
+nnoremap <c-n> :call OpenTerminal()<CR>
+" }}}
+
 " djzhang's config {{{
     " Auto save {{{
         Plug '907th/vim-auto-save'

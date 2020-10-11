@@ -244,6 +244,7 @@ alias pjnote="jupyter notebook"
 
 # neovim
 alias neovimcheck="nvim +checkhealth"
+alias neovimplugininstall="nvim +PlugInstall"
 
 # djzhang's cmd
 alias dfpython="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/python"
