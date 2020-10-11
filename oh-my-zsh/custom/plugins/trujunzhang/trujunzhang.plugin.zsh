@@ -242,6 +242,9 @@ alias pactive="source venv/bin/activate"
 
 alias pjnote="jupyter notebook"
 
+# neovim
+alias neovimcheck="nvim +checkhealth"
+
 # djzhang's cmd
 alias dfpython="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/python"
 alias drunvpn="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/python && python vpn_connect.py"

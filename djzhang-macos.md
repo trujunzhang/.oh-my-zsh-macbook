@@ -32,3 +32,13 @@
     $ /Users/djzhang/.vscode
     $ /Volumes/Data/ALLNew_Macbook/Users/djzhang/.vscode
 
+# vim-devicons(vim)
+    $ https://github.com/ryanoasis/vim-devicons
+
+#  nerd-fonts
+    $ https://github.com/ryanoasis/nerd-fonts
+    $ install:
+    $ brew tap homebrew/cask-fonts
+    $ brew cask install font-hack-nerd-font
+
+
