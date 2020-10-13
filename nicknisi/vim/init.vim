@@ -456,6 +456,17 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
         \ }
     " }}}
 
+    " vim-fugitive {{{
+        Plug 'tpope/vim-fugitive'
+        nmap <silent> <leader>gs :Gstatus<cr>
+        nmap <leader>ge :Gedit<cr>
+        nmap <silent><leader>gr :Gread<cr>
+        nmap <silent><leader>gb :Gblame<cr>
+
+        Plug 'tpope/vim-rhubarb' " hub extension for fugitive
+        Plug 'sodapopcan/vim-twiggy'
+    " }}}
+    "
     " UltiSnips {{{
         Plug 'SirVer/ultisnips' " Snippets plugin
         let g:UltiSnipsExpandTrigger="<C-l>"
@@ -599,6 +610,7 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
     " }}}
 
     " markdown {{{
+        Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] }
         Plug 'tpope/vim-markdown', { 'for': 'markdown' }
         let g:markdown_fenced_languages = [ 'tsx=typescript.tsx' ]
 

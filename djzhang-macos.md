@@ -38,7 +38,7 @@
 #  nerd-fonts
     $ https://github.com/ryanoasis/nerd-fonts
     $ install:
-    $ brew tap homebrew/cask-fonts
-    $ brew cask install font-hack-nerd-font
+       brew tap homebrew/cask-fonts
+       brew cask install font-hack-nerd-font
 
 
