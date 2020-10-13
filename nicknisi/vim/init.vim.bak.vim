@@ -527,6 +527,7 @@ call plug#begin('~/.config/vimPlugins/plugged')
 
         Plug 'tpope/vim-rhubarb' " hub extension for fugitive
         Plug 'sodapopcan/vim-twiggy'
+        Plug 'rbong/vim-flog'
     " }}}
 
     " UltiSnips {{{
@@ -536,8 +537,8 @@ call plug#begin('~/.config/vimPlugins/plugged')
         let g:UltiSnipsJumpBackwardTrigger="<C-k>"
     " }}}
 
-    " coc {{{
-        Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+" coc {{{
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
         let g:coc_global_extensions = [
         \ 'coc-css',
@@ -552,7 +553,8 @@ call plug#begin('~/.config/vimPlugins/plugged')
         \ 'coc-emmet',
         \ 'coc-prettier',
         \ 'coc-ultisnips',
-        \ 'coc-explorer'
+        \ 'coc-explorer',
+        \ 'coc-diagnostic'
         \ ]
 
         autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -612,6 +614,18 @@ call plug#begin('~/.config/vimPlugins/plugged')
         let col = col('.') - 1
         return !col || getline('.')[col - 1]  =~# '\s'
         endfunction
+
+        " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+        " position. Coc only does snippet and additional edit on confirm.
+        if exists('*complete_info')
+            inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+        else
+            imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+        endif
+
+        " For enhanced <CR> experience with coc-pairs checkout :h coc#on_enter()
+        inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
     " }}}
 " }}}
 
