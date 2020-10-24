@@ -177,8 +177,8 @@ fileLink ".bash(rc)"        "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink"  "$HOME/
 directoryLink  "dotenv(Express.js environment variables)"  "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
 
 # spacemacs(All)
-directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"                          "$HOME/.emacs.d"
-fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
+# directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"                          "$HOME/.emacs.d"
+# fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
 
 ## spacemacs(plugins)
 directoryLink "emacs_layout(trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"    "$HOME/.emacs.d/private/trujunzhang-workspace"

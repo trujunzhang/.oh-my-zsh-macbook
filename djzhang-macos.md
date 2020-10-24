@@ -11,6 +11,9 @@
     $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     $ brew install autojump gpg
 
+# pipenv
+    $ brew install pipenv
+
 # (pending)rvn(ruby)
     $ https://rvm.io/
 		$ rvm install 2.6.0
