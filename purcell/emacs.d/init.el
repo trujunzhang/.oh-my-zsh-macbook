@@ -71,13 +71,13 @@
 (require 'init-hippie-expand)
 (require 'init-company)
 (require 'init-windows)
-(require 'init-sessions)
+; (require 'init-sessions)
 (require 'init-mmm)
 
 (require 'init-editing-utils)
 (require 'init-whitespace)
 
-(require 'init-vc)
+; (require 'init-vc)
 (require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
@@ -89,7 +89,6 @@
 (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
-; (require 'init-erlang)
 (require 'init-javascript)
 (require 'init-php)
 (require 'init-org)
@@ -100,7 +99,7 @@
 (require 'init-http)
 (require 'init-python)
 ; (require 'init-haskell)
-(require 'init-elm)
+; (require 'init-elm)
 ; (require 'init-purescript)
 ; (require 'init-ruby)
 ; (require 'init-rails)
@@ -118,8 +117,6 @@
 (require 'init-paredit)
 (require 'init-lisp)
 (require 'init-slime)
-; (require 'init-clojure)
-; (require 'init-clojure-cider)
 (require 'init-common-lisp)
 
 ;; djzhang's el
