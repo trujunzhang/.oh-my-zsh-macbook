@@ -121,6 +121,8 @@
 
 ;; djzhang's el
 (require 'init-evil)
+(require 'init-neotree)
+(require 'init-autosave)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))
