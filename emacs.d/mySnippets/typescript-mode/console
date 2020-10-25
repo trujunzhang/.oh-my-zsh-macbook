@@ -1,4 +1,0 @@
-# -*- mode: snippet -*-
-# name: console object
-# --
-console.log('$1', JSON.stringify($2))

@@ -1,8 +1,0 @@
-#name : document string
-# --
--------------------------------------------------------------------------------
--- `(car (last (split-string (buffer-file-name) "/"))) ; finds last entry
-   ; (filename) in the full path of the file`
--- Author: Author
--- Description: $1
--------------------------------------------------------------------------------

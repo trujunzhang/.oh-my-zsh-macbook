@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: base name of a file without path
-# key: name
-# --
-$(basename "$${1:VAR}")
