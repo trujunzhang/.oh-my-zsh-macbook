@@ -41,6 +41,8 @@ OH_MY_ZSH_HOME="$IDES_HOME/oh-my-zsh"
 # ==Items==
 OH_MY_ZSH_IDE_HOME="$OH_MY_ZSH_HOME/oh-my-zsh"
 POWER_LEVEL_9K_HOME="$OH_MY_ZSH_HOME/powerlevel9k"
+# **IDES(purcell's emacs.d)
+PURCELL_EMACS_HOME="$TRUJUNZHANG_DOTFILES_HOME/purcell/emacs.d"
 # **IDES(spacemacs)
 SPACEMACS_HOME="$IDES_HOME/spacemacs"
 # ==Items==
@@ -176,13 +178,16 @@ fileLink ".bash(rc)"        "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink"  "$HOME/
 
 directoryLink  "dotenv(Express.js environment variables)"  "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
 
+# **IDES(purcell's emacs.d)
+directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
+
 # spacemacs(All)
 # directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"                          "$HOME/.emacs.d"
 # fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
 
 ## spacemacs(plugins)
-directoryLink "emacs_layout(trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"    "$HOME/.emacs.d/private/trujunzhang-workspace"
-directoryLink "emacs_layout(dart-layer)"   "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/dart-layer"               "$HOME/.emacs.d/private/dart-layer"
+# directoryLink "emacs_layout(trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"    "$HOME/.emacs.d/private/trujunzhang-workspace"
+# directoryLink "emacs_layout(dart-layer)"   "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/dart-layer"               "$HOME/.emacs.d/private/dart-layer"
 # directoryLink "w3m(third Layout)"          "$SPACEMACS_W3M_HOME"                                                "$HOME/.emacs.d/private/w3m"
 # directoryLink "vue(third Layout)"        "$SPACEMACS_VUE_HOME"                                                "$HOME/.emacs.d/private/vue"
 ## spacemacs(Snippets)
@@ -193,11 +198,11 @@ directoryLink "emacs_layout(dart-layer)"   "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/l
 # fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
 
 # Tmux(All)
-fileLink "tmux(config)"       "$TMUX_CONFIG"          "$HOME/.tmux.conf"
-fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL"    "$HOME/.tmux.conf.local"
+# fileLink "tmux(config)"       "$TMUX_CONFIG"          "$HOME/.tmux.conf"
+# fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL"    "$HOME/.tmux.conf.local"
 
 # Application Links
-directoryLink "sketch(app)"    "$SKETCH_APP"          "$SYSTEM_APPLICATION/Sketch.app"
+# directoryLink "sketch(app)"    "$SKETCH_APP"          "$SYSTEM_APPLICATION/Sketch.app"
 
 # Android Environment
 directoryLink "sdk(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android"   "$HOME/Library/Android"
