@@ -9,6 +9,9 @@
 ;;;    https://www.emacswiki.org/emacs/NeoTree
 
 (require-package 'neotree)
+
+(setq-default neo-show-hidden-files t)
+
 ; (global-set-key [f8] 'neotree-toggle)
 (define-key evil-normal-state-map "n" 'neotree-toggle)
 

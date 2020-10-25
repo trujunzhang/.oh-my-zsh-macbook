@@ -1,0 +1,6 @@
+* neotree
+  space+n toggle
+  
+  
+
+  

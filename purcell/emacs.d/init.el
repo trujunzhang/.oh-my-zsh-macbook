@@ -53,6 +53,11 @@
 (maybe-require-package 'scratch)
 (require-package 'command-log-mode)
 
+;; djzhang's el
+(require 'init-evil)
+(require 'init-neotree)
+(require 'init-autosave)
+
 (require 'init-frame-hooks)
 (require 'init-xterm)
 (require 'init-themes)
@@ -118,11 +123,6 @@
 (require 'init-lisp)
 (require 'init-slime)
 (require 'init-common-lisp)
-
-;; djzhang's el
-(require 'init-evil)
-(require 'init-neotree)
-(require 'init-autosave)
 
 (when *spell-check-support-enabled*
   (require 'init-spelling))
