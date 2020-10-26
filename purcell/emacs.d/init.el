@@ -57,6 +57,7 @@
 (require 'init-evil)
 (require 'init-neotree)
 (require 'init-autosave)
+(require 'init-flutter)
 
 (require 'init-frame-hooks)
 (require 'init-xterm)
