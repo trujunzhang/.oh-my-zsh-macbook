@@ -1,3 +1,6 @@
+# “XXXXX” is damaged and can’t be opened. You should move it to the Trash
+    $ sudo spctl --master-disable
+
 # xcode
     $ app store
 

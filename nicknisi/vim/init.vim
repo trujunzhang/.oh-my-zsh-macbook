@@ -657,18 +657,22 @@ call plug#end()
     highlight Normal ctermbg=none
 " }}}
 
+" Dash and final setup {{{
+    Plug 'rizzatti/dash.vim'
+" }}}
+"
 " Terminal {{{
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+    " start terminal in insert mode
+    au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 
-" open terminal on ctrl+;
-" uses zsh instead of bash
-function! OpenTerminal()
-  " split term://bash
-  split term://zsh
-  resize 10
-endfunction
-nnoremap <c-n> :call OpenTerminal()<CR>
+    " open terminal on ctrl+;
+    " uses zsh instead of bash
+    function! OpenTerminal()
+      " split term://bash
+      split term://zsh
+      resize 10
+    endfunction
+    nnoremap <c-n> :call OpenTerminal()<CR>
 " }}}
 
 " djzhang's config {{{
