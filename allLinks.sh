@@ -142,6 +142,7 @@ ln -s "//Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge
 directoryLink  "nginx(site)"         "$CACHES_HOME/www"    "/usr/local/var/www"
 
 # DOT_VIM
+mkdir "$HOME/.config"
 directoryLink  "vim(.vim)"         "$VIM_ALL_HOME"    "$HOME/.vim"
 directoryLink  "neovim(config)"    "$VIM_ALL_HOME"    "$HOME/.config/nvim"
 fileLink       "vim(.vimrc)"       "$DOT_VIM_RC"      "$HOME/.vimrc"
