@@ -159,6 +159,7 @@ alias podi='pod install --verbose'
 
 # git.plugin
 alias gitsubupdate="git submodule update --remote"
+alias gitpullsubmodule="git pull --recurse-submodules"
 
 # ios-sim.plugin
 # npm install ios-sim -g
