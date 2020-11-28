@@ -256,4 +256,7 @@ alias dgitreset="git init && git add . && git commit -m 'first commit' && git ch
 
 # nvm
 alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file:///Users/djzhang/Documents/Organizations/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.34.0 && . ~/.nvm/nvm.sh && nvm install 12.12 && nvm use 12.12 && npm install -g yarn"
+
+# cocoapods
+# https://blog.csdn.net/qq_41110569/article/details/106501098
 alias cocoapodsMaster="git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master"
