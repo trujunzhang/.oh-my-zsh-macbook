@@ -207,6 +207,7 @@ alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Content
 
 # xcode
 alias iosopen='open -a Simulator'
+alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 
 # Flutter
 alias fkill="killall -9 dart"
