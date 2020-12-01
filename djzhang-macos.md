@@ -51,3 +51,8 @@
     $ brew install neovim
     $ yarn global add neovim
 
+# firebase cli
+    $ firebase-tools-macos
+    $ https://github.com/firebase/firebase-tools/releases
+    $ copy to /usr/local/bin/firebase
+
