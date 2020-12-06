@@ -262,3 +262,10 @@ alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file:///Users/djzhang/Documen
 # cocoapods
 # https://blog.csdn.net/qq_41110569/article/details/106501098
 alias cocoapodsMaster="git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master"
+
+# Firebase
+# Install, configure and integrate Local Emulator Suite
+alias femulatorsstart="firebase emulators:start"
+
+
+
