@@ -4,5 +4,5 @@ shadowsocks:
     - "8388:8388"
   environment:
     - SS_PASSWORD=ssp@ss
-    - SS_METHOD=aes-256-cfb
+    - SS_METHOD=aes-256-gcm
   restart: always
