@@ -1,3 +1,10 @@
+# https://bwh88.net/
+================================================
+root password: IIb7CDFVq5El
+SSH port: 27724
+================================================
+
+
 # All values MUST be placed inside 'single quotes'
 # DO NOT use these special characters within values: \ " '
 wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
