@@ -37,7 +37,7 @@ IKEv2 guide:       https://git.io/ikev2
 
 ================================================
 # [ss://eGNoYWNoYTIwLWlldGYtcG9seTEzMDU6KTg4UF9wVUZANTAuMTE1LjE2Ni4xMDk6NDQzP3BsdWdpbj1vYmZzLWxvY2FsO29iZnMtaG9zdD1tenN0YXRpYy5jb207b2Jmcy11cmk9LztvYmZzPXRscyNUd2lzdA==]
-# [Server IP: 50.115.166.109 PassWord: )88P_pUF Encryption: xchacha20-ietf-poly1305 OBFS: tls OBFS-HOST: mzstatic.com OBFS-URI: /]
+# [Server IP: 50.115.1xx.109 PassWord: )88P_pUF Encryption: xchacha20-ietf-poly1305 OBFS: tls OBFS-HOST: mzstatic.com OBFS-URI: /]
 ================================================
 
 
