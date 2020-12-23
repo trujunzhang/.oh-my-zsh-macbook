@@ -1167,5 +1167,7 @@
         "editor.wordBasedSuggestions": false
     },
     "python.showStartPage": false,
-    "git.ignoreMissingGitWarning": true
+    "git.ignoreMissingGitWarning": true,
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false
 }
