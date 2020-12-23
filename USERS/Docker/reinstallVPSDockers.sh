@@ -1,7 +1,11 @@
 # Step 1 — Installing Docker
 #
 # https://docs.docker.com/install/linux/docker-ce/ubuntu/
-#
+# Tutorial: 
+#   https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04
+# sudo apt install docker.io
+# sudo systemctl start docker
+# sudo systemctl enable docker
 
 # Step 2 — Installing Docker-compose
 # https://docs.docker.com/compose/install/
