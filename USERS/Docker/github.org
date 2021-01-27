@@ -1,4 +1,5 @@
 * shadowsocks-server
   https://github.com/dockage/shadowsocks-server
 
-  
+* v2ray
+  https://github.com/v2fly/docker  
