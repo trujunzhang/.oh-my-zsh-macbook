@@ -223,7 +223,7 @@ alias fpupdate='flutter pub upgrade'
 alias fapk='flutter build apk --split-per-abi --verbose'
 alias fjson='flutter packages pub run json_model'
 # https://flutter.dev/docs/development/tools/web-renderers
-alias fwebrun='flutter run -d chrome'
+alias fwebrun='flutter run -d chrome --web-hostname localhost --web-port 5000'
 alias fwebrelease='flutter build web --release'
 
 # Firebase-tool
