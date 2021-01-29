@@ -211,6 +211,7 @@ alias iosopen='open -a Simulator'
 alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 
 # Flutter
+alias fclean="flutter clean"
 alias fkill="killall -9 dart"
 alias fdoc='flutter doctor -v'
 alias fcheck="flutter analyze"

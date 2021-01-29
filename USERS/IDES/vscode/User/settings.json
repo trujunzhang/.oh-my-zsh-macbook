@@ -1169,5 +1169,8 @@
     "python.showStartPage": false,
     "git.ignoreMissingGitWarning": true,
     "dart.debugExternalLibraries": false,
-    "dart.debugSdkLibraries": false
+    "dart.debugSdkLibraries": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }
