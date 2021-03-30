@@ -319,7 +319,7 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
 
     " tmux integration for vim
     """ command :help vimux
-    Plug 'benmills/vimux'
+    " Plug 'benmills/vimux'
 
     " enables repeating other supported plugins with the . command
     " Plug 'tpope/vim-repeat'
