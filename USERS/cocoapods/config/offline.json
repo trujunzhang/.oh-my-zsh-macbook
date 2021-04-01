@@ -270,5 +270,13 @@
         "filename": "GTMSessionFetcher.podspec.json",
         "git": "https://github.com/google/gtm-session-fetcher.git",
         "folder": "gtm-session-fetcher"
+    },
+    {
+        "type": "git",
+        "name": "PromisesObjC",
+        "path": "0/b/5/PromisesObjC",
+        "filename": "PromisesObjC.podspec.json",
+        "git": "https://github.com/google/promises.git",
+        "folder": "promises"
     }
 ]
