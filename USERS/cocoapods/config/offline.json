@@ -278,5 +278,13 @@
         "filename": "PromisesObjC.podspec.json",
         "git": "https://github.com/google/promises.git",
         "folder": "promises"
+    },
+    {
+        "type": "git",
+        "name": "leveldb-library",
+        "path": "a/d/a/leveldb-library",
+        "filename": "leveldb-library.podspec.json",
+        "git": "https://github.com/google/leveldb.git",
+        "folder": "leveldb"
     }
 ]
