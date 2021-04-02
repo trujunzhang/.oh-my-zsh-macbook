@@ -57,6 +57,7 @@ function replaceEachFiles(line,spacesPath) {
     //Check if error defined and the error code is "not exists"
     // if (err && err.errno === 34) {
     if (err) {
+      console.log('read file error: '+ err)
     } else {
       //just in case there was a different error:
       replaceJsonFile(line,localPath)
@@ -64,7 +65,7 @@ function replaceEachFiles(line,spacesPath) {
   })
 }
 
-var i = 1
+var i = 0
 try {
   var obj = JSON.parse(fs.readFileSync(jsonFile, 'utf8'));
   var length = obj.length

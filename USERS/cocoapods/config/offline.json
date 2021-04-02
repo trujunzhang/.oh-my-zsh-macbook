@@ -1,14 +1,6 @@
 [
     {
         "type": "git",
-        "name": "",
-        "path": "",
-        "filename": "",
-        "git": "",
-        "folder": ""
-    },
-    {
-        "type": "git",
         "name": "gRPC-Core",
         "path": "9/1/0/gRPC-Core",
         "filename": "gRPC-Core.podspec.json",
@@ -36,8 +28,9 @@
         "name": "GoogleUtilities",
         "path": "0/8/4/GoogleUtilities",
         "filename": "GoogleUtilities.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "firebase-ios-sdk"
+        "git-old": "https://github.com/firebase/firebase-ios-sdk.git",
+        "git": "https://github.com/google/GoogleUtilities.git",
+        "folder": "GoogleUtilities"
     },
     {
         "type": "git",
