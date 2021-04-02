@@ -303,5 +303,13 @@
         "filename": "nanopb.podspec.json",
         "git": "https://github.com/nanopb/nanopb.git",
         "folder": "nanopb"
+    },
+    {
+        "type": "git",
+        "name": "GTMAppAuth",
+        "path": "2/c/c/GTMAppAuth",
+        "filename": "GTMAppAuth.podspec.json",
+        "git": "https://github.com/google/GTMAppAuth.git",
+        "folder": "GTMAppAuth"
     }
 ]
