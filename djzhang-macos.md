@@ -56,6 +56,10 @@
     $ brew install neovim
     $ yarn global add neovim
 
+# node dependencies
+    $ https://github.com/raineorshine/npm-check-updates    
+    $ npm install -g npm-check-updates
+
 # firebase cli
     $ firebase-tools-macos
     $ https://github.com/firebase/firebase-tools/releases
