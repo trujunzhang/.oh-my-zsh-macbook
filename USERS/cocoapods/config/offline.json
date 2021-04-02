@@ -279,5 +279,29 @@
         "filename": "leveldb-library.podspec.json",
         "git": "https://github.com/google/leveldb.git",
         "folder": "leveldb"
+    },
+    {
+        "type": "git",
+        "name": "Reachability",
+        "path": "c/7/9/Reachability",
+        "filename": "Reachability.podspec.json",
+        "git": "https://github.com/tonymillion/Reachability.git",
+        "folder": "Reachability"
+    },
+    {
+        "type": "git",
+        "name": "abseil",
+        "path": "3/8/6/abseil",
+        "filename": "abseil.podspec.json",
+        "git": "https://github.com/abseil/abseil-cpp.git",
+        "folder": "abseil-cpp"
+    },
+    {
+        "type": "git",
+        "name": "nanopb",
+        "path": "6/1/e/nanopb",
+        "filename": "nanopb.podspec.json",
+        "git": "https://github.com/nanopb/nanopb.git",
+        "folder": "nanopb"
     }
 ]
