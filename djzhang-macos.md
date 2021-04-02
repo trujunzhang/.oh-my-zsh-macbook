@@ -1,3 +1,6 @@
+# Show hidden files
+    $ defaults write com.apple.finder AppleShowAllFiles -boolean true
+
 # “XXXXX” is damaged and can’t be opened. You should move it to the Trash
     $ sudo spctl --master-disable
 
@@ -11,6 +14,8 @@
     $ ./allLinks.sh
 
 # homebrew
+    $ /usr/local/Homebrew
+    $ /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core
     $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     $ brew install autojump gpg
 
@@ -45,7 +50,7 @@
     $ https://github.com/ryanoasis/nerd-fonts
     $ install:
        brew tap homebrew/cask-fonts
-       brew cask install font-hack-nerd-font
+       brew install --cask font-hack-nerd-font
 
 # neovim
     $ brew install neovim
@@ -55,4 +60,3 @@
     $ firebase-tools-macos
     $ https://github.com/firebase/firebase-tools/releases
     $ copy to /usr/local/bin/firebase
-

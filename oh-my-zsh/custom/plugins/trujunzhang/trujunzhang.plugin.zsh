@@ -254,9 +254,9 @@ alias neovimcheck="nvim +checkhealth"
 alias neovimplugininstall="nvim +PlugInstall"
 
 # djzhang's cmd
-alias dfpython="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/python"
-alias drunvpn="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
-alias drunoffline="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/.oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
+alias dfpython="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python"
+alias drunvpn="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
+alias drunoffline="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
 
 # djzhang's git
 alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b developing"
@@ -271,6 +271,3 @@ alias cocoapodsMaster="git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaP
 # Firebase
 # Install, configure and integrate Local Emulator Suite
 alias femulatorsstart="firebase emulators:start"
-
-
-
