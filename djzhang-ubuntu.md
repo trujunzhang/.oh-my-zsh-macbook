@@ -12,11 +12,16 @@
    https://github.com/ytdl-org/youtube-dl
    https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/
 
+    $ sudo apt install ffmpeg
+
     $ youtube-dl -f best https://www.youtube.com/watch?v=
     $ youtube-dl -f 315 https://www.youtube.com/watch?v=
 
    Run with -F to see available formats: 
     $ youtube-dl -F https://www.youtube.com/watch?v=
+
+   Get subtitles from Youtube in SRT format
+    $ youtube-dl --write-auto-sub --convert-subs=srt -f best https://www.youtube.com/watch?v=
 
 
 
