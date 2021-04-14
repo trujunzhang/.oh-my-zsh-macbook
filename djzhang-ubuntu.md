@@ -14,6 +14,8 @@
 
     $ sudo apt install ffmpeg
 
+    $ youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt
+    $ youtube-dl -f 'bestvideo+bestaudio[ext=m4a]'
     $ youtube-dl -f best https://www.youtube.com/watch?v=
     $ youtube-dl -f 315 https://www.youtube.com/watch?v=
 
