@@ -6,6 +6,8 @@
 * zip a folder in Ubuntu Linux using the cli
     $ sudo apt install zip unzip 
     $ zip -r filename.zip folder
+####
+   Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
 
 
 * youtube_dl
