@@ -91,6 +91,8 @@ alias yinstall='yarn'
 alias ytest='yarn test'
 alias yserve='yarn serve'
 alias ydev='yarn dev'
+alias ybuild='yarn build'
+alias ystart='yarn start'
 alias ycheck='yarn lint'
 alias yarntc='yarn test.client'
 alias yarntw='yarn test.web'
@@ -101,7 +103,6 @@ alias yarnitc='yarn install && yarn test.client'
 alias yarnitw='yarn install && yarn test.web'
 
 # yarn.plugin
-alias yarns='yarn start'
 alias yarnab='yarn android:build'
 alias yarnai='yarn android:install'
 
