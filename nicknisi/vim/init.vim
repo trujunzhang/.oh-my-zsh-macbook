@@ -467,7 +467,7 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
         Plug 'sodapopcan/vim-twiggy'
         Plug 'rbong/vim-flog'
     " }}}
-    
+
     " UltiSnips {{{
         Plug 'SirVer/ultisnips' " Snippets plugin
         let g:UltiSnipsExpandTrigger="<C-l>"
@@ -591,8 +591,16 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
     " }}}
 
     " Python {
+        "" https://github.com/python-mode/python-mode/blob/develop/doc/pymode.txt
         Plug 'klen/python-mode'
-        let g:pymode_python = 'python3' 
+        "" nmap <silent> <leader>t :PymodeRun<cr>
+        " code running
+        let g:pymode_run=1
+        let g:pymode_run_bind='<leader>t'
+
+
+        let g:pymode_python = 'python3'
+        let g:python3_host_prog='/Users/djzhang/opt/anaconda3/bin/python'
         """ https://robertbasic.com/blog/force-python-version-in-vim/
         if has('python3')
         endif

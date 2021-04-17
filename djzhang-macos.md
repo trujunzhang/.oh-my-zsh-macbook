@@ -55,6 +55,7 @@
 # neovim
     $ brew install neovim
     $ yarn global add neovim
+    $ pip install pynvim
 
 # node dependencies
     $ https://github.com/raineorshine/npm-check-updates    
