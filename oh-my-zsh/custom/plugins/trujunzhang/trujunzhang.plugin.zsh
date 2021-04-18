@@ -90,6 +90,14 @@ alias rnands='npm run android:shake'
 alias pnote="jupyter notebook"
 alias pinstall="pip install -i https://pypi.tuna.tsinghua.edu.cn/simple"
 
+# python env
+alias peinit="pipenv shell"
+alias peinstall="pipenv install --dev"
+alias pegraph="pipenv graph"
+# https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+alias penv="python3 -m venv venv"
+alias peactive="source venv/bin/activate"
+
 # yarn.all
 alias yinstall='yarn'
 alias ytest='yarn test'
@@ -243,16 +251,6 @@ alias pjnote='jupyter notebook'
 alias djrun='python manage.py runserver'
 alias djmj='python manage.py migrate'
 alias djmmj='python manage.py makemigrations'
-
-# python env
-alias pinit="pipenv shell"
-alias pinstall="pipenv install --dev"
-alias pgraph="pipenv graph"
-# https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
-alias penv="python3 -m venv venv"
-alias pactive="source venv/bin/activate"
-
-alias pjnote="jupyter notebook"
 
 # neovim
 alias neovimcheck="nvim +checkhealth"
