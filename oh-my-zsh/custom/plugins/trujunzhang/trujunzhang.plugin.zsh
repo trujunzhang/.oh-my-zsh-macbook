@@ -86,6 +86,10 @@ alias rnandd='npm run android:device'
 alias rnandl='npm run android:logcat'
 alias rnands='npm run android:shake'
 
+# python
+alias pnote="jupyter notebook"
+alias pinstall="pip install -i https://pypi.tuna.tsinghua.edu.cn/simple"
+
 # yarn.all
 alias yinstall='yarn'
 alias ytest='yarn test'
