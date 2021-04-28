@@ -39,7 +39,7 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
     " Searching
     set ignorecase " case insensitive searching
     set smartcase " case-sensitive if expresson contains a capital letter
-    set hlsearch " highlight search results
+    " set hlsearch " highlight search results
     set incsearch " set incremental search, like modern browsers
     set nolazyredraw " don't redraw while executing macros
 
@@ -184,7 +184,7 @@ call plug#begin('~/Documents/Organizations/TRUJUNZHANG/vimPlugins/plugged')
     map <leader>eg :e! ~/.gitconfig<cr>
 
     " clear highlighted search
-    noremap <space> :set hlsearch! hlsearch?<cr>
+    " noremap <space> :set hlsearch! hlsearch?<cr>
 
     " activate spell-checking alternatives
     nmap ;s :set invspell spelllang=en<cr>
