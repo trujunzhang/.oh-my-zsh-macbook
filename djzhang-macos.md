@@ -19,6 +19,13 @@
     $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     $ brew install autojump gpg
 
+# emacs-plus
+  $ brew tap d12frosted/emacs-plus
+  # to install Emacs 28
+  $ brew install emacs-plus@28 --with-spacemacs-icon
+  $ brew link emacs-plus@28
+  $ npm install -g typescript tslint typescript-formatter tern js-beautify eslint 
+
 # pipenv
     $ brew install pipenv
 
