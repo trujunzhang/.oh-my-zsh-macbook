@@ -10,7 +10,7 @@
 # oh-my-zsh
     $ /Volumes/Data/ALLNew_Macbook/Users/djzhang/.oh-my-zsh
 
-#  .oh-my-zsh-macbook
+#  _oh-my-zsh-macbook
     $ ./allLinks.sh
 
 # homebrew
@@ -20,6 +20,7 @@
     $ brew install autojump gpg
 
 # emacs-plus
+  $ path: /Volumes/Data/MACBOOK_ORG/ApplicationBackup/emacs-plus@28--git.zip
   $ brew tap d12frosted/emacs-plus
   # to install Emacs 28
   $ brew install emacs-plus@28 --with-spacemacs-icon
