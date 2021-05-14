@@ -9,13 +9,14 @@
 # Spacemacs: useful shortcut
 
 | Key binding     | Description                                                                            |
-|-----------------+----------------------------------------------------------------------------------------|
+|-----------------|----------------------------------------------------------------------------------------|
 | ~SPC b h~       | open =*spacemacs*= home buffer                                                         |
 | ~SPC b m~       | open =*Messages*= buffer                                                               |
 | ~SPC f j~   | jump to the current buffer file in dired                                                               |
 | ~SPC f r~   | open a recent file                                                                                     |
 | ~SPC c l~   | comment lines             |
 | ~SPC c p~   | comment paragraphs        |
+| ~SPC h d m~ | describe current modes                                    |
 
 **** Lisp Key bindings
 ***** Emacs lisp specific key bindings
