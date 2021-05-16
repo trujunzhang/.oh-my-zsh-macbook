@@ -17,6 +17,8 @@
 | ~SPC c l~   | comment lines             |
 | ~SPC c p~   | comment paragraphs        |
 | ~SPC h d m~ | describe current modes                                    |
+| ~SPC r l~              | resume the last =completion= buffer                          |
+| ~SPC r s~ or ~SPC s l~ | resume search buffer (completion or converted search buffer) |
 
 **** Lisp Key bindings
 ***** Emacs lisp specific key bindings
@@ -32,6 +34,7 @@
   https://www.spacemacs.org/layers/+lang/python/README.html
 
 # ipython-notebook
+
 
 
 

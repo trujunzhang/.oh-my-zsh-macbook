@@ -26,6 +26,7 @@
   $ brew install emacs-plus@28 --with-spacemacs-icon
   $ brew link emacs-plus@28
   $ npm install -g typescript tslint typescript-formatter tern js-beautify eslint 
+  $ pinstall 'python-language-server[all]' pyls-isort pyls-mypy pyls-black  pyls-memestra flake8 autoflake importmagic epc
 
 # pipenv
     $ brew install pipenv
