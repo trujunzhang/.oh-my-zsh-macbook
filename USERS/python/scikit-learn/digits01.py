@@ -20,3 +20,4 @@ plt.ylabel('component 2')
 plt.colorbar()
 
 plt.show()
+

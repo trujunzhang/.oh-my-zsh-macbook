@@ -274,3 +274,14 @@ alias cocoapodsMaster="git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaP
 # Firebase
 # Install, configure and integrate Local Emulator Suite
 alias femulatorsstart="firebase emulators:start"
+
+# clojure
+alias crun='lein run'
+alias ctest='lein test'
+alias csearch='lein search'
+
+
+
+
+
+

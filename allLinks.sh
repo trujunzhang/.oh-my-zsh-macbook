@@ -209,7 +209,7 @@ fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.syml
 directoryLink "sdk(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android"   "$HOME/Library/Android"
 directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android"          "$HOME/.android"
 directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
-directoryLink ".m2(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2"               "$HOME/.m2"
+# directoryLink ".m2(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2"               "$HOME/.m2"
 
 # User's profile
 # directoryLink "Alfred 3(profile)"             "$USERPROFILE_HOME/ApplicationSupport/Alfred 3"            "$PATH_SYSTEM_APPLICATION_SUPPORT/Alfred 3"
