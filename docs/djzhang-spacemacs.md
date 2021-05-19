@@ -33,6 +33,14 @@
 # python
   https://www.spacemacs.org/layers/+lang/python/README.html
 
+# emacs-lisp
+
+| ~SPC m e b~                | evaluate current buffer                                |
+| ~SPC m e e~                | evaluate sexp before point                             |
+| ~SPC m e f~                | evaluation current function                            |
+| ~SPC m e r~                | evaluate current region                                |
+| ~SPC m = b~ | format current buffer   |
+
 # ipython-notebook
 
 
