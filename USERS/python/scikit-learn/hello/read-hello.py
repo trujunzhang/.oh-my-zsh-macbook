@@ -16,9 +16,17 @@ def make_hello(N=1000, rseed=42):     # Make a plot with "HELLO" text; save as P
     X = X[:N]
     return X[np.argsort(X[:, 0])]
 
+def rotate(X, angle):
+    theta = np.deg2rad(angle)
+    R = [[np.cos(theta), np.sin(theta)],
+         [-np.sin(theta), np.cos(theta)]]
+    return np.dot(X, R)
+
 X = make_hello(1000)
 colorize = dict(c=X[:, 0], cmap=plt.cm.get_cmap('rainbow', 5))
-plt.scatter(X[:, 0], X[:, 1], **colorize)
+# plt.scatter(X[:, 0], X[:, 1], **colorize)
+X2 = rotate(X, 20) + 5
+plt.scatter(X2[:, 0], X2[:, 1], **colorize)
 plt.axis('equal');
 
 plt.show()
