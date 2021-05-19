@@ -3,6 +3,9 @@
    https://practicalli.github.io/spacemacs/ [emacs]
    https://github.com/practicalli/spacemacs.d [config]
 
+# official docs
+   https://clojure.org/guides/learn/syntax
+
 # install clojure
    https://hackernoon.com/getting-started-with-clojure-on-mac-os-ebcc4cd5f642
    $ brew install leiningen
