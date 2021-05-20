@@ -25,6 +25,13 @@
   # to install Emacs 28
   $ brew install emacs-plus@28 --with-spacemacs-icon
   $ brew link emacs-plus@28
+  
+## font-fira
+  $ brew tap homebrew/cask-fonts
+  $ brew install --cask font-fira-code
+
+## vue.js
+  $ npm install -g eslint-cli prettier vls 
 
 ## javascript/typescript
   $ npm install -g typescript tslint typescript-formatter tern js-beautify eslint 
