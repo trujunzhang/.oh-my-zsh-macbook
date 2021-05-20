@@ -23,6 +23,14 @@
 **** Lisp Key bindings
 ***** Emacs lisp specific key bindings
 
+# private layout
+  To create a new configuration layer:
+  $SPC SPC configuration-layer/create-layer RET
+  
+  Then you are free to symlink your layers into =~/emacs.d/private= /or/ leave them
+  anywhere you want, and reference the parent directory in the variable
+  =dotspacemacs-configuration-layer-path= of your =~/.spacemacs=.
+  
 # theme
   https://www.spacemacs.org/doc/DOCUMENTATION.html#gui-elements
   https://themegallery.robdor.com/
