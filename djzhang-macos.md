@@ -25,8 +25,17 @@
   # to install Emacs 28
   $ brew install emacs-plus@28 --with-spacemacs-icon
   $ brew link emacs-plus@28
+
+## javascript/typescript
   $ npm install -g typescript tslint typescript-formatter tern js-beautify eslint 
+
+## python
   $ pinstall 'python-language-server[all]' pyls-isort pyls-mypy pyls-black  pyls-memestra flake8 autoflake importmagic epc
+
+## pdf
+  https://github.com/politza/pdf-tools#server-prerequisites
+  $ brew install poppler automake
+  $ run the command =pdf-tools-install=.
 
 # pipenv
     $ brew install pipenv

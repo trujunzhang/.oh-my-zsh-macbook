@@ -33,6 +33,8 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(vue
+     epub
+     pdf
      yaml
      neotree
      djzhang
@@ -40,6 +42,7 @@ This function should only modify configuration layer settings."
                        ein-backend 'jupyter)
      (dart :variables
            lsp-dart-sdk-dir "~/Documents/flutterSDK/bin/cache/dart-sdk")
+
      (clojure :variables
               clojure-backend 'cider                  ;; use cider and disable lsp
               clojure-enable-linters 'clj-kondo       ;; clj-kondo included in lsp
@@ -51,6 +54,7 @@ This function should only modify configuration layer settings."
               cider-result-overlay-position 'at-point ;; results shown right after expression
               cider-overlays-use-font-lock t
               cider-repl-buffer-size-limit 100)       ;; limit lines shown in REPL buffer
+
      (javascript :variables
                  js2-basic-offset 4)
      (typescript :variables
@@ -620,6 +624,40 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Over-ride Spacemacs defaults
+  ;;
+  ;; Set new location for file bookmarks, SPC f b
+  ;; Default: ~/.emacs.d/.cache/bookmarks
+  (setq bookmark-default-file "~/.emacs.d/.workspace/bookmarks")
+
+  ;;
+  ;; Set new location for recent save files
+  ;; Default: ~/.emacs.d/.cache/recentf
+  (setq recentf-save-file  "~/.emacs.d/.workspace/recentf")
+
+  ;; replace / search with helm-swoop in Evil normal state
+  (evil-global-set-key 'normal "/" 'helm-swoop)
+
+  ;; Load in magithub features after magit package has loaded
+  ;; (use-package magithub
+  ;;   :after magit
+  ;;   :config (magithub-feature-autoinject t))
+  ;;
+  ;; Use Spacemacs as the $EDITOR (or $GIT_EDITOR) for git commits messages
+  ;; when using git commit on the command line
+  ;; (global-git-commit-mode t)
+  ;;
+  ;; Set locations of all your Git repositories
+  ;; with a number to define how many sub-directories to search
+  ;; `SPC g L' - list all Git repositories in the defined paths,
+  (setq magit-repository-directories
+        '(("~/.emacs.d"  . 0)
+          ("~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook" . 2)))
+ 
+ 
+
   (setq neo-theme 'nerd))
 
 ;; Do not write anything past this comment. This is where Emacs will
