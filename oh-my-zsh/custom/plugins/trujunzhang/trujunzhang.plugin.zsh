@@ -280,6 +280,10 @@ alias crun='lein run'
 alias ctest='lein test'
 alias csearch='lein search'
 
+# chemacs2
+# https://github.com/plexus/chemacs2
+alias espace="echo 'spacemacs' > ~/.emacs-profile"
+alias edoom="echo 'doom' > ~/.emacs-profile"
 
 
 

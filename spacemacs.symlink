@@ -669,12 +669,12 @@ before packages are loaded."
   ;;
   ;; Set new location for file bookmarks, SPC f b
   ;; Default: ~/.emacs.d/.cache/bookmarks
-  (setq bookmark-default-file "~/.emacs.d/.workspace/bookmarks")
+  (setq bookmark-default-file "~/Documents/Organizations/IDES/emacs-shim/.workspace/bookmarks")
 
   ;;
   ;; Set new location for recent save files
   ;; Default: ~/.emacs.d/.cache/recentf
-  (setq recentf-save-file  "~/.emacs.d/.workspace/recentf")
+  (setq recentf-save-file  "~/Documents/Organizations/IDES/emacs-shim/.workspace/recentf")
 
   ;; replace / search with helm-swoop in Evil normal state
   (evil-global-set-key 'normal "/" 'helm-swoop)

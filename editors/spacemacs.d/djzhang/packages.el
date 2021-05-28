@@ -39,15 +39,22 @@
 ;;   `djzhang/post-init-PACKAGE' to customize the package as it is loaded.
 
 (defconst djzhang-packages
-  '(super-save))
+  '(
+    super-save))
+
+(defun djzhang-packages/post-init-eww ()
+   "docstring"
+   (message "djzhang [post]: eww!"))
 
 (defun djzhang/init-super-save ()
   "https://github.com/bbatsov/super-save"
+  (message "djzhang [init]: super save!")
   (use-package super-save
      :ensure t
      :config
      (progn
-       (spacemacs/set-leader-keys "zx" 'spacemacs//djzhang-open-pdfs)
+       (spacemacs/set-leader-keys "za" 'spacemacs//djzhang-open-pdfs)
+       (spacemacs/set-leader-keys "zs" 'spacemacs//djzhang-open-ml)
        (super-save-mode +1))))
 
 

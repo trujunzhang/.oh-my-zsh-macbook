@@ -22,11 +22,18 @@
 
 (defun spacemacs//djzhang-open-pdfs ()
    "Open pdfs."
-   ;; (spacemacs/set-leader-keys "fh" 'hexl-find-file)
    (interactive)
    (setq pdf-file "/Users/djzhang/Documents/Doc-pdf/zweig/1965 米哈伊尔·亚历山大罗维奇·肖洛霍夫 苏联  静静的顿河(金人译，人民文学版).pdf")
    (find-file pdf-file)
    (message "djzhang: open pdfs!"))
+
+
+(defun spacemacs//djzhang-open-ml()
+  "Open pdfs."
+  (interactive)
+  (setq pdf-file "/Users/djzhang/Documents/Doc-pdf/python/deep-learning-book-master/Split-pdf/Part I Applied Math and Machine Learning Basics.pdf")
+  (find-file pdf-file)
+  (message "djzhang: open pdfs!"))
 
 (defun spacemacs/djzhang-open-wh ()
   (message "djzhang: open pdfs!"))
