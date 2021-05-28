@@ -282,8 +282,11 @@ alias csearch='lein search'
 
 # chemacs2
 # https://github.com/plexus/chemacs2
-alias espace="echo 'spacemacs' > ~/.emacs-profile"
-alias edoom="echo 'doom' > ~/.emacs-profile"
+alias etspace="echo 'spacemacs' > ~/.emacs-profile"
+alias etdoom="echo 'doom' > ~/.emacs-profile"
+alias edoominstall="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom install"
+alias edoomsync="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom sync"
+alias edoomdoctor="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom doctor"
 
 
 

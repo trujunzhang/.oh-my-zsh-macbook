@@ -36,6 +36,8 @@ LIBRARY_COCOAPODS_HOME="$CACHES_HOME/CocoaPods"
 # *Links(IDES)
 # ======================================
 IDES_HOME="$ORGANIZATIONS_HOME/IDES"
+# **IDES(chemacs2[emacs-shim])
+EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
 # **IDES(zsh)
 OH_MY_ZSH_HOME="$IDES_HOME/oh-my-zsh"
 # ==Items==
@@ -181,6 +183,13 @@ directoryLink  "dotenv(Express.js environment variables)"  "$ORGANIZATIONS_HOME/
 
 # **IDES(purcell's emacs.d)
 # directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
+
+# **IDES(chemacs2[emacs-shim])
+# EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
+directoryLink "chemacs2(.emacs.d)"       "$EMACS_SHIM_HOME/chemacs2"                     "$HOME/.emacs.d"
+directoryLink "Doom(.doom.d)"            "$TRUJUNZHANG_DOTFILES_HOME/editors/.doom.d"    "$HOME/.doom.d"
+fileLink "chemacs2(.emacs-profile)"      "$EMACS_SHIM_HOME/.emacs-profile"               "$HOME/.emacs-profile"
+fileLink "chemacs2(.emacs-profiles.el)"  "$EMACS_SHIM_HOME/.emacs-profiles.el"           "$HOME/.emacs-profiles.el"
 
 # spacemacs(All)
 # directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"                          "$HOME/.emacs.d"
