@@ -26,7 +26,19 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; (setq doom-theme 'doom-one)
-(setq doom-theme 'zaiste)
+(setq doom-theme 'doom-city-lights)
+;; (setq doom-theme 'zaiste)
+
+;; Font setup
+(setq
+     doom-font (font-spec :family "Fira Code" :size 14)
+     ;; doom-font (font-spec :family "Iosevka" :size 18)
+     doom-big-font (font-spec :family "Fira Code" :size 19)
+     ;; doom-big-font (font-spec :family "Iosevka" :size 28)
+     ;doom-variable-pitch-font (font-spec :family "Fira Sans")
+     ;doom-unicode-font (font-spec :family "DejaVu Sans Mono")
+ )
+
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -56,4 +68,4 @@
 
 ;; How to set the default style of Emacs startup, such as full screen and font size
 ;; https://github.com/hlissner/doom-emacs/issues/2652
-(add-hook 'window-setup-hook #'toggle-frame-maximized)
+(add-hook 'window-setup-hook #'toggle-frame-fullscreen)
