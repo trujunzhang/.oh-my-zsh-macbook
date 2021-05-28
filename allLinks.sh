@@ -189,7 +189,7 @@ directoryLink  "dotenv(Express.js environment variables)"  "$ORGANIZATIONS_HOME/
 directoryLink "chemacs2(.emacs.d)"       "$EMACS_SHIM_HOME/chemacs2"                     "$HOME/.emacs.d"
 directoryLink "Doom(.doom.d)"            "$TRUJUNZHANG_DOTFILES_HOME/editors/.doom.d"    "$HOME/.doom.d"
 fileLink "chemacs2(.emacs-profile)"      "$EMACS_SHIM_HOME/.emacs-profile"               "$HOME/.emacs-profile"
-fileLink "chemacs2(.emacs-profiles.el)"  "$EMACS_SHIM_HOME/.emacs-profiles.el"           "$HOME/.emacs-profiles.el"
+fileLink "chemacs2(.emacs-profiles.el)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/.emacs-profiles.el" "$HOME/.emacs-profiles.el"
 
 # spacemacs(All)
 # directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"                          "$HOME/.emacs.d"
