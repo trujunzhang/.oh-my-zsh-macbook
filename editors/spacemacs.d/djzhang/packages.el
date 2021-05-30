@@ -53,8 +53,11 @@
      :ensure t
      :config
      (progn
+       (spacemacs/set-leader-keys "zq" 'spacemacs//djzhang-open-ml-data_science)
+       (spacemacs/set-leader-keys "zw" 'spacemacs//djzhang-open-ml-deep-learning)
        (spacemacs/set-leader-keys "za" 'spacemacs//djzhang-open-pdfs)
-       (spacemacs/set-leader-keys "zs" 'spacemacs//djzhang-open-ml)
+       (spacemacs/set-leader-keys "zs" 'spacemacs//djzhang-open-zweig)
+       (spacemacs/set-leader-keys "zz" 'spacemacs//djzhang-open-movies-dir)
        (super-save-mode +1))))
 
 
