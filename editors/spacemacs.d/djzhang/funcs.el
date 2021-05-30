@@ -23,32 +23,32 @@
 (defun spacemacs//djzhang-open-ml-data_science()
   "Open pdfs."
   (interactive)
-  (setq pdf-file "/Users/djzhang/Documents/Doc-pdf/python/Python_Data_Science_Handbook.pdf")
+  (let pdf-file "~/Documents/Doc-pdf/python/Python_Data_Science_Handbook.pdf")
   (find-file pdf-file)
   (message "open pdf: %s!" pdf-file))
 
 (defun spacemacs//djzhang-open-ml-deep-learning()
   "Open pdfs."
   (interactive)
-  (setq pdf-file "/Users/djzhang/Documents/Doc-pdf/python/deep-learning-book-master/Split-pdf/Part I Applied Math and Machine Learning Basics.pdf")
+  (let pdf-file "~/Documents/Doc-pdf/python/deep-learning-book-master/Split-pdf/Part I Applied Math and Machine Learning Basics.pdf")
   (find-file pdf-file)
   (message "open pdf: %s!" pdf-file))
 
 (defun spacemacs//djzhang-open-pdfs ()
    "Open pdfs."
    (interactive)
-   (setq pdf-file "/Users/djzhang/Documents/Doc-pdf/zweig/1965 米哈伊尔·亚历山大罗维奇·肖洛霍夫 苏联  静静的顿河(金人译，人民文学版).pdf")
+   (let pdf-file "~/Documents/Doc-pdf/zweig/1965 米哈伊尔·亚历山大罗维奇·肖洛霍夫 苏联  静静的顿河(金人译，人民文学版).pdf")
    (find-file pdf-file)
    (message "open pdf: %s!" pdf-file))
 
 (defun spacemacs//djzhang-open-zweig()
   "Open pdfs."
   (interactive)
-  (setq pdf-file "/Users/djzhang/Documents/Doc-pdf/zweig/[茨威格传记系列：三作家(卡萨诺瓦、司汤达、托.pdf")
+  (let pdf-file "~/Documents/Doc-pdf/zweig/[茨威格传记系列：三作家(卡萨诺瓦、司汤达、托.pdf")
   (find-file pdf-file)
   (message "open pdf: %s!" pdf-file))
 
 (defun spacemacs//djzhang-open-movies-dir ()
   (interactive)
-  (dired "/Users/djzhang/Movies")
+  (dired "~/Movies")
   (message "djzhang: open Movies Folder!"))
