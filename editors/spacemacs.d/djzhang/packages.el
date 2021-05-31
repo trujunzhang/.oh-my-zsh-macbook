@@ -53,11 +53,18 @@
      :ensure t
      :config
      (progn
+       ;; pdf(ml) 
        (spacemacs/set-leader-keys "zq" 'spacemacs//djzhang-open-ml-data_science)
        (spacemacs/set-leader-keys "zw" 'spacemacs//djzhang-open-ml-deep-learning)
+       ;; pdf
        (spacemacs/set-leader-keys "za" 'spacemacs//djzhang-open-pdfs)
        (spacemacs/set-leader-keys "zs" 'spacemacs//djzhang-open-zweig)
-       (spacemacs/set-leader-keys "zz" 'spacemacs//djzhang-open-movies-dir)
+       ;; folder
+       (spacemacs/set-leader-keys "zm" 'spacemacs//djzhang-open-movies-dir)
+       (spacemacs/set-leader-keys "zn" 'spacemacs//djzhang-open-downloads-dir)
+       ;; others
+       (spacemacs/set-leader-keys "zc" 'spacemacs//djzhang-tern)
+       (spacemacs/set-leader-keys "zv" 'spacemacs//djzhang-shell)
        (super-save-mode +1))))
 
 
