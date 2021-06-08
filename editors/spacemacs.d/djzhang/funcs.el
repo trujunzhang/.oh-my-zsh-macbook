@@ -34,6 +34,13 @@
   (find-file pdf-file)
   (message "open pdf: %s!" pdf-file))
 
+(defun spacemacs//djzhang-open-ml-example()
+  "Open pdfs."
+  (interactive)
+  (setq pdf-file "~/Documents/Doc-pdf/book-1/ML 机器学习：实用案例解析.pdf")
+  (find-file pdf-file)
+  (message "open pdf: %s!" pdf-file))
+
 (defun spacemacs//djzhang-open-pdfs ()
    "Open pdfs."
    (interactive)
@@ -44,7 +51,7 @@
 (defun spacemacs//djzhang-open-zweig()
   "Open pdfs."
   (interactive)
-  (setq pdf-file "~/Documents/Doc-pdf/zweig/[茨威格传记系列：三作家(卡萨诺瓦、司汤达、托.pdf")
+  (setq pdf-file "~/Documents/Doc-pdf/zweig/古希腊罗马奴隶制.epub")
   (find-file pdf-file)
   (message "open pdf: %s!" pdf-file))
 

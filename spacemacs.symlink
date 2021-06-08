@@ -38,6 +38,10 @@ This function should only modify configuration layer settings."
      yaml
      neotree
      djzhang
+
+     (ranger :variables
+              ranger-override-dired 'ranger
+              ranger-show-preview t)
      (ipython-notebook :variables
                        ein-backend 'jupyter)
      (dart :variables

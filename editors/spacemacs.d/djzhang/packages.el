@@ -53,9 +53,12 @@
      :ensure t
      :config
      (progn
+       ;; bookmark
+       (spacemacs/set-leader-keys "zb" 'bookmark-set)
        ;; pdf(ml) 
        (spacemacs/set-leader-keys "zq" 'spacemacs//djzhang-open-ml-data_science)
        (spacemacs/set-leader-keys "zw" 'spacemacs//djzhang-open-ml-deep-learning)
+       (spacemacs/set-leader-keys "ze" 'spacemacs//djzhang-open-ml-example)
        ;; pdf
        (spacemacs/set-leader-keys "za" 'spacemacs//djzhang-open-pdfs)
        (spacemacs/set-leader-keys "zs" 'spacemacs//djzhang-open-zweig)
