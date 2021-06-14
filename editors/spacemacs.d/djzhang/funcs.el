@@ -30,7 +30,7 @@
 (defun spacemacs//djzhang-open-ml-deep-learning()
   "Open pdfs."
   (interactive)
-  (setq pdf-file "~/Documents/Doc-pdf/python/deep-learning-book-master/Split-pdf/Part I Applied Math and Machine Learning Basics.pdf")
+  (setq pdf-file "~/Documents/Doc-pdf/python/deep-learning-book-master/Split-pdf/Part I- 2 Linear Algebra.pdf")
   (find-file pdf-file)
   (message "open pdf: %s!" pdf-file))
 

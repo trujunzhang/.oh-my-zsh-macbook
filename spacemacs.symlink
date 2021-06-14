@@ -41,7 +41,7 @@ This function should only modify configuration layer settings."
 
      (ranger :variables
               ranger-override-dired 'ranger
-              ranger-show-preview t)
+              ranger-show-preview nil)
      (ipython-notebook :variables
                        ein-backend 'jupyter)
      (dart :variables
@@ -348,7 +348,7 @@ It should only modify the values of Spacemacs settings."
    ;;                             :powerline-scale 1.5)
 
    dotspacemacs-default-font '(("Fira Code"
-                                :size 14
+                                :size 16
                                 :weight normal
                                 :width normal
                                 :powerline-scale 1.1)
@@ -668,6 +668,7 @@ before packages are loaded."
   (setq ranger-ignored-extensions '("mkv" "iso" "mp4" "sketch" ".DS_Store"))
   (setq ranger-max-preview-size 10)
   (setq ranger-show-hidden t)
+  (setq ranger-cleanup-on-disable t)
 
   ;; How do I stop emacs from asking me if I want to load a large file?
   ;; https://unix.stackexchange.com/questions/108259/how-do-i-stop-emacs-from-asking-me-if-i-want-to-load-a-large-file
