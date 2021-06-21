@@ -40,8 +40,7 @@ This function should only modify configuration layer settings."
      djzhang
 
      (ranger :variables
-              ranger-override-dired 'ranger
-              ranger-show-preview nil)
+              ranger-override-dired 'ranger)
      (ipython-notebook :variables
                        ein-backend 'jupyter)
      (dart :variables
@@ -665,10 +664,11 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
 
   ;; Ranger
-  (setq ranger-ignored-extensions '("mkv" "iso" "mp4" "sketch" ".DS_Store"))
+  (setq ranger-ignored-extensions '("mkv" "iso" "mp4" "sketch" ".DS_Store" "DS_Store"))
   (setq ranger-max-preview-size 10)
   (setq ranger-show-hidden t)
   (setq ranger-cleanup-on-disable t)
+  (setq ranger-preview-file nil)
 
   ;; How do I stop emacs from asking me if I want to load a large file?
   ;; https://unix.stackexchange.com/questions/108259/how-do-i-stop-emacs-from-asking-me-if-i-want-to-load-a-large-file

@@ -65,11 +65,15 @@
   (dired "~/Downloads")
   (message "djzhang: open Downloads Folder!"))
 
+(defun spacemacs//djzhang-open-organizations-dir ()
+  (interactive)
+  (dired "~/Documents/Organizations")
+  (message "djzhang: open Downloads Folder!"))
+
 (defun spacemacs//djzhang-tern ()
    "docstring"
    (interactive)
    (term "/bin/zsh"))
-
 
 (defun spacemacs//djzhang-shell()
   "docstring"

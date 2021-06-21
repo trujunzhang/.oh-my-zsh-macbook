@@ -65,6 +65,7 @@
        ;; folder
        (spacemacs/set-leader-keys "zm" 'spacemacs//djzhang-open-movies-dir)
        (spacemacs/set-leader-keys "zn" 'spacemacs//djzhang-open-downloads-dir)
+       (spacemacs/set-leader-keys "zb" 'spacemacs//djzhang-open-organizations-dir)
        ;; others
        (spacemacs/set-leader-keys "zc" 'spacemacs//djzhang-tern)
        (spacemacs/set-leader-keys "zv" 'spacemacs//djzhang-shell)
