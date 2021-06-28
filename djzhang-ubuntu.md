@@ -24,9 +24,17 @@
     $ youtube-dl -f 'bestvideo+bestaudio[ext=m4a]'
     $ youtube-dl -f best https://www.youtube.com/watch?v=
     $ youtube-dl -f 315 https://www.youtube.com/watch?v=
+    
+    Cmd on the vps
+      alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
+
+
 
    Run with -F to see available formats:
     $ youtube-dl -F https://www.youtube.com/watch?v=
 
    Get subtitles from Youtube in SRT format
     $ youtube-dl --write-auto-sub --convert-subs=srt -f best https://www.youtube.com/watch?v=
+   
+   Merge MP4 with M4A
+    $ ffmpeg -i video.mp4 -i audio.m4a -acodec copy -vcodec copy output.mp4  
