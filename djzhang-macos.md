@@ -55,10 +55,14 @@
 # cocoapods(ruby)
     $ gem install cocoapods
 		$ pod setup
+        $ https://github.com/CocoaPods/Specs
 		$ "/Users/djzhang/.cocoapods/repos/master/Specs/"
 
 # nvm(node)
     $ dnvmreset
+    
+## global dependencies
+    $ npm install -g npm-check-updates
 
 # atom(ide)
     $ /Users/djzhang/.atom
