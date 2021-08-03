@@ -66,6 +66,7 @@
        (spacemacs/set-leader-keys "zm" 'spacemacs//djzhang-open-movies-dir)
        (spacemacs/set-leader-keys "zn" 'spacemacs//djzhang-open-downloads-dir)
        (spacemacs/set-leader-keys "zj" 'spacemacs//djzhang-open-organizations-dir)
+       (spacemacs/set-leader-keys "zk" 'spacemacs//djzhang-open-flutter-dir)
        ;; others
        (spacemacs/set-leader-keys "zc" 'spacemacs//djzhang-tern)
        (spacemacs/set-leader-keys "zv" 'spacemacs//djzhang-shell)

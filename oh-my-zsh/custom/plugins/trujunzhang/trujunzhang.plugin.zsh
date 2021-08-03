@@ -293,7 +293,13 @@ alias edoominstall="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-
 alias edoomsync="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom sync"
 alias edoomdoctor="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom doctor"
 
+# youtube-dl
+alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
+alias yhddl="youtube-dl -f 'bestvideo[ext=webm]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
 
-
+# docker
+alias wdockps="docker ps -a"
+alias wdockrm="docker rm -f $(docker ps -a -q)"
+alias wdockimgrm="docker rmi $(docker images -q)"
 
 

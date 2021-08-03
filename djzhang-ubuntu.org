@@ -1,6 +1,6 @@
-####
+##################################################################
    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
-
+##################################################################
 
 * Oh My Zsh
    $ sudo apt install zsh
@@ -8,11 +8,14 @@
 
    Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
 
+** plugins
+   $ cd /tmp && git clone https://github.com/trujunzhang/.oh-my-zsh-macbook
+   $ rm -rf /root/.oh-my-zsh/custom/plugins/trujunzhang 
+   $ cp -r /tmp/.oh-my-zsh-macbook/oh-my-zsh/custom/plugins/trujunzhang  /root/.oh-my-zsh/custom/plugins/trujunzhang 
 
 * zip a folder in Ubuntu Linux using the cli
     $ sudo apt install zip unzip
     $ zip -r filename.zip folder
-
 
 * youtube_dl
    https://github.com/ytdl-org/youtube-dl
