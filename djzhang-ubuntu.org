@@ -17,6 +17,14 @@
     $ sudo apt install zip unzip
     $ zip -r filename.zip folder
 
+* All dockers    
+** docker-pure-ftpd & qbittorrent
+   $ cd .oh-my-zsh-macbook/USERS/Docker && ./reinstallVPSDockers.sh
+
+** v2ray   
+   $ cp .oh-my-zsh-macbook/USERS/Docker/v2ray/etc/config.json /etc/v2ray/config.json
+   $ cd .oh-my-zsh-macbook/USERS/Docker && ./v2ray.sh
+   
 * youtube_dl
    https://github.com/ytdl-org/youtube-dl
    https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/
