@@ -299,7 +299,7 @@ alias yhddl="youtube-dl -f 'bestvideo[ext=webm]+bestaudio[ext=m4a]/best[ext=mp4]
 
 # docker
 alias wdockps="docker ps -a"
-alias wdockrm="docker rm -f $(docker ps -a -q)"
-alias wdockimgrm="docker rmi $(docker images -q)"
+alias wdockrm='docker rm -f $(docker ps -a -q)'
+alias wdockimgrm='docker rmi $(docker images -q)'
 
 
