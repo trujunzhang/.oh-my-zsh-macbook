@@ -2,6 +2,26 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+(defun dotspacemacs/layers-backup ()
+  "unused layers"
+  (setq-default
+   dotspacemacs-configuration-layers
+   '(
+     ruby
+     eww
+     (clojure :variables
+              clojure-backend 'cider                  ;; use cider and disable lsp
+              clojure-enable-linters 'clj-kondo       ;; clj-kondo included in lsp
+              cider-repl-display-help-banner nil      ;; disable help banner
+              cider-pprint-fn 'fipp                   ;; fast pretty printing
+              clojure-indent-style 'align-arguments
+              clojure-align-forms-automatically t
+              clojure-toplevel-inside-comment-form t  ;; evaluate expressions in comment as top level
+              cider-result-overlay-position 'at-point ;; results shown right after expression
+              cider-overlays-use-font-lock t
+              cider-repl-buffer-size-limit 100)       ;; limit lines shown in REPL buffer
+)))
+
 (defun dotspacemacs/layers ()
   "Layer configuration:
 This function should only modify configuration layer settings."
@@ -32,32 +52,20 @@ This function should only modify configuration layer settings."
    
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(ruby
-     eww
+   '(
      epub
      pdf
-     yaml
      neotree
      djzhang
 
+     yaml
+
      (ranger :variables
               ranger-override-dired 'ranger)
-     (ipython-notebook :variables
-                       ein-backend 'jupyter)
-     (dart :variables
-           lsp-dart-sdk-dir "~/Documents/flutterSDK/bin/cache/dart-sdk")
 
-     (clojure :variables
-              clojure-backend 'cider                  ;; use cider and disable lsp
-              clojure-enable-linters 'clj-kondo       ;; clj-kondo included in lsp
-              cider-repl-display-help-banner nil      ;; disable help banner
-              cider-pprint-fn 'fipp                   ;; fast pretty printing
-              clojure-indent-style 'align-arguments
-              clojure-align-forms-automatically t
-              clojure-toplevel-inside-comment-form t  ;; evaluate expressions in comment as top level
-              cider-result-overlay-position 'at-point ;; results shown right after expression
-              cider-overlays-use-font-lock t
-              cider-repl-buffer-size-limit 100)       ;; limit lines shown in REPL buffer
+     (dart :variables
+           dart-backend 'lsp
+           lsp-dart-sdk-dir "~/Documents/flutterSDK/bin/cache/dart-sdk")
 
      tide
      (javascript :variables
@@ -69,6 +77,8 @@ This function should only modify configuration layer settings."
      (vue :variables
           vue-backend 'lsp)
      
+     (ipython-notebook :variables
+                       ein-backend 'jupyter)
      (python :variables
              python-test-runner 'pytest
              python-backend 'anaconda)
