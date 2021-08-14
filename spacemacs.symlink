@@ -20,6 +20,17 @@
               cider-result-overlay-position 'at-point ;; results shown right after expression
               cider-overlays-use-font-lock t
               cider-repl-buffer-size-limit 100)       ;; limit lines shown in REPL buffer
+
+     tide
+     (javascript :variables
+                 javascript-backend 'tide
+                 js2-basic-offset 4)
+
+     (ipython-notebook :variables
+                       ein-backend 'jupyter)
+
+     dash
+     multiple-cursors
 )))
 
 (defun dotspacemacs/layers ()
@@ -67,18 +78,12 @@ This function should only modify configuration layer settings."
            dart-backend 'lsp
            lsp-dart-sdk-dir "~/Documents/flutterSDK/bin/cache/dart-sdk")
 
-     tide
-     (javascript :variables
-                 javascript-backend 'tide
-                 js2-basic-offset 4)
      (typescript :variables
-                 typescript-backend 'tide
+                 typescript-backend 'lsp
                  typescript-linter 'eslint)
      (vue :variables
           vue-backend 'lsp)
      
-     (ipython-notebook :variables
-                       ein-backend 'jupyter)
      (python :variables
              python-test-runner 'pytest
              python-backend 'anaconda)
@@ -148,13 +153,11 @@ This function should only modify configuration layer settings."
      osx
      better-defaults
      emacs-lisp
-     dash
-     multiple-cursors
      org
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     spell-checking
+     ;; spell-checking
      syntax-checking
      ;; version-control
      )

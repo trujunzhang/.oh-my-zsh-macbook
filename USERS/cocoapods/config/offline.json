@@ -250,6 +250,14 @@
     },
     {
         "type": "git",
+        "name": "FirebaseCrashlytics",
+        "path": "e/7/d/FirebaseCrashlytics",
+        "filename": "FirebaseCrashlytics.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "type": "git",
         "name": "AppAuth",
         "path": "b/b/9/AppAuth",
         "filename": "AppAuth.podspec.json",
