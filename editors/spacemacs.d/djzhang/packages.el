@@ -40,11 +40,17 @@
 
 (defconst djzhang-packages
   '(
+    jetbrains
     super-save))
 
-(defun djzhang-packages/post-init-eww ()
+(defun djzhang/post-init-eww ()
    "docstring"
    (message "djzhang [post]: eww!"))
+
+(defun djzhang/init-jetbrains ()
+  "docstring"
+  (message "djzhang [init]: jetbrains!")
+)
 
 (defun djzhang/init-super-save ()
   "https://github.com/bbatsov/super-save"
