@@ -229,6 +229,8 @@ alias fkill="killall -9 dart"
 alias fdoc='flutter doctor -v'
 alias fcheck="flutter analyze"
 alias frun='flutter run --verbose'
+# https://dart.dev/null-safety/unsound-null-safety
+alias frunnull='flutter run --no-sound-null-safety'
 alias ftest='flutter test'
 alias fbapk='flutter build apk --split-per-abi'
 alias fpget='flutter packages get'
@@ -239,7 +241,9 @@ alias fjson='flutter packages pub run json_model'
 alias fwebrun='flutter run -d chrome --web-hostname localhost --web-port 5000'
 alias fwebrelease='flutter build web --release'
 alias fpubspecupdate='flutter pub upgrade --major-versions'
+alias fdartupdate='dart pub upgrade --null-safety'
 alias fpubspecout='flutter pub outdated'
+alias fanalyze='flutter analyze'
 
 # Firebase-tool
 alias fblogin='firebase login'
