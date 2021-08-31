@@ -226,8 +226,7 @@ alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 # Flutter
 alias fclean="flutter clean"
 alias fkill="killall -9 dart"
-alias fdoc='flutter doctor -v'
-alias fcheck="flutter analyze"
+alias fdoctor='flutter doctor -v'
 alias frun='flutter run --verbose'
 # https://dart.dev/null-safety/unsound-null-safety
 alias frunnull='flutter run --no-sound-null-safety'
