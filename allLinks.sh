@@ -146,7 +146,7 @@ directoryLink  "nginx(site)"         "$CACHES_HOME/www"    "/usr/local/var/www"
 # DOT_VIM
 mkdir "$HOME/.config"
 # directoryLink  "vim(.vim)"         "$VIM_ALL_HOME"    "$HOME/.vim"
-directoryLink  "neovim(config)"    "$VIM_ALL_HOME"    "$HOME/.config/nvim"
+# directoryLink  "neovim(config)"    "$VIM_ALL_HOME"    "$HOME/.config/nvim"
 # fileLink       "vim(.vimrc)"       "$DOT_VIM_RC"      "$HOME/.vimrc"
 
 # $USERPROFILE/Library/Caches

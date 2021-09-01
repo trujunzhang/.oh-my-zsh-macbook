@@ -118,6 +118,8 @@ alias yarnitw='yarn install && yarn test.web'
 alias yarnab='yarn android:build'
 alias yarnai='yarn android:install'
 
+alias yupdate='ncu -u'
+
 # npm sketch-app
 alias npmrr="npm run sketch:render"
 
