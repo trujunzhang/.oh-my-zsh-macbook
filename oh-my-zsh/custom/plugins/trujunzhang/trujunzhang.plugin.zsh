@@ -307,4 +307,9 @@ alias wdockps="docker ps -a"
 alias wdockrm='docker rm -f $(docker ps -a -q)'
 alias wdockimgrm='docker rmi $(docker images -q)'
 
+# https://github.com/xieyezi/monia-cli
+alias fmoniacreate='monia create'
+alias fmoniainit='monia init'
+
+
 
