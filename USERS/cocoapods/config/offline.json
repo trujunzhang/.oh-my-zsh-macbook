@@ -327,5 +327,13 @@
         "filename": "GTMAppAuth.podspec.json",
         "git": "https://github.com/google/GTMAppAuth.git",
         "folder": "GTMAppAuth"
+    },
+    {
+        "type": "git",
+        "name": "Sentry",
+        "path": "a/b/d/Sentry",
+        "filename": "Sentry.podspec.json",
+        "git": "https://github.com/getsentry/sentry-cocoa.git",
+        "folder": "sentry-cocoa"
     }
 ]
