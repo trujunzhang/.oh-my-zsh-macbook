@@ -246,6 +246,9 @@ alias fdartupdate='dart pub upgrade --null-safety'
 alias fpubspecout='flutter pub outdated'
 alias fanalyze='flutter analyze'
 
+# plugins
+alias fintlgenerate='flutter pub run intl_utils:generate'
+
 # Firebase-tool
 alias fblogin='firebase login'
 alias fbcreatefunction='firebase init functions'
