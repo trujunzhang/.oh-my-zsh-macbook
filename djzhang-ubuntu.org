@@ -29,6 +29,11 @@
    https://github.com/ytdl-org/youtube-dl
    https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/
 
+** install   
+   $ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+   $ sudo chmod a+rx /usr/local/bin/youtube-dl
+
+** usage   
     $ sudo apt install ffmpeg
 
     $ youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt
