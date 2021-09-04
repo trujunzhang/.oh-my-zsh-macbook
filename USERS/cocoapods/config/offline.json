@@ -74,6 +74,14 @@
     },
     {
         "type": "git",
+        "name": "GoogleDataTransport",
+        "path": "0/6/a/GoogleDataTransport",
+        "filename": "GoogleDataTransport.podspec.json",
+        "git": "https://github.com/google/GoogleDataTransport.git",
+        "folder": "GoogleDataTransport"
+    },
+    {
+        "type": "git",
         "name": "Bolts",
         "path": "a/8/e/Bolts",
         "filename": "Bolts.podspec.json",
