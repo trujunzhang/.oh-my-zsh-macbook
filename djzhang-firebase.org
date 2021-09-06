@@ -1,0 +1,8 @@
+* Android
+** Firebase Crashlytics  
+   https://firebase.google.com/docs/crashlytics/get-started?platform=android&authuser=0
+
+** Add Firebase to your Android project    
+   https://firebase.google.com/docs/android/setup
+
+   

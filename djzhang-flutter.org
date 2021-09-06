@@ -1,0 +1,9 @@
+* Tools
+** intl_utils
+   Dart package that creates a binding between your translations from .arb files and your Flutter app.
+   It generates boilerplate code for official Dart Intl library and adds auto-complete for keys in Dart code.
+   https://pub.dev/packages/intl_utils
+   
+** retrofit_generator   
+   retrofit.dart is a type conversion dio client generator using source_gen and inspired by Chopper and Retrofit.
+   https://mings.in/retrofit.dart/
