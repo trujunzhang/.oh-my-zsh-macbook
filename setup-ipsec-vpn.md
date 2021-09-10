@@ -4,6 +4,10 @@ root password: R9nCYEUN8hzb
 SSH port: 27724
 ================================================
 
+================================================
+root password: n!X6y_%5D%Y,MS)L
+================================================
+
 
 # All values MUST be placed inside 'single quotes'
 # DO NOT use these special characters within values: \ " '

@@ -18,6 +18,20 @@
     $ zip -r filename.zip folder
 
 * All dockers    
+**  Installing Docker
+   # https://docs.docker.com/install/linux/docker-ce/ubuntu/
+   # Tutorial: 
+   #   https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04
+   $ sudo apt install docker.io
+   $ sudo systemctl start docker
+   $ sudo systemctl enable docker
+
+** Installing Docker-compose
+   # https://docs.docker.com/compose/install/
+   $ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   $ sudo chmod +x /usr/local/bin/docker-compose
+   $ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  
 ** docker-pure-ftpd & qbittorrent
    $ cd .oh-my-zsh-macbook/USERS/Docker && ./reinstallVPSDockers.sh
 
