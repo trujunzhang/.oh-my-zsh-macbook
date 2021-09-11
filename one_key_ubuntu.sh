@@ -19,6 +19,7 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
    #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
+    rm /root/.zshrc
     fileLink ".zsh(rc)"   "zshrc_ubuntu.symlink"  "/root/.zshrc"
 
 # plugins
