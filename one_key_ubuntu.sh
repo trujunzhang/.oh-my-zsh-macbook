@@ -2,6 +2,7 @@
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook
 #    chmod +x one_key_ubuntu.sh
+#    ./one_key_ubuntu.sh
 ##################################################################
 
 # Import function files.
