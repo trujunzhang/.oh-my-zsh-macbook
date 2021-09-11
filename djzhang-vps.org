@@ -1,11 +1,14 @@
 * bandwagon
    https://bwh81.net
    email: trujunzhang@gmail.com
+   root password: R9nCYEUN8hzb
+   SSH port: 27724
    blog: https://www.bandwagonhost.net/
 
 * Vultr   
    https://www.vultr.com/
    email: wanghaoyh720@yahoo.com
+   root password: n!X6y_%5D%Y,MS)L
    Products:
        name: my_v2ray
        date: 2021-09-10
