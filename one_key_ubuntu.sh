@@ -49,6 +49,7 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
      docker-compose up -d
 
 ## v2ray   
+     mkdir /etc/v2ray
      cd /root/.oh-my-zsh-macbook
      cp USERS/Docker/v2ray/etc/config.json /etc/v2ray/config.json
      docker run \
