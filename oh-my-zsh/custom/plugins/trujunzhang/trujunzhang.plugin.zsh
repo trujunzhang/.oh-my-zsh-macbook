@@ -302,8 +302,17 @@ alias edoomsync="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-ema
 alias edoomdoctor="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom doctor"
 
 # youtube-dl
+# https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/
 alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
-alias yhddl="youtube-dl -f 'bestvideo[ext=webm]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
+alias ydl_hd="youtube-dl -f 'bestvideo[ext=webm]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
+alias ydlist16="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 1 --playlist-end 6"
+alias ydlist712="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 7 --playlist-end 12"
+alias ydlist1318="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 13 --playlist-end 18"
+alias ydlist1924="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 19 --playlist-end 24"
+alias ydlist2530="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 25 --playlist-end 30"
+alias ydlist3136="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 31 --playlist-end 36"
+alias ydlist3742="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 37 --playlist-end 42"
+alias ydlist4348="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 43 --playlist-end 48"
 
 # docker
 alias wdockps="docker ps -a"
