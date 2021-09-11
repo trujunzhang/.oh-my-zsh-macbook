@@ -8,6 +8,9 @@
 # Import function files.
 source ./bash/files-functions.sh
 
+# python
+   sudo apt install python-is-python3
+
 # vpn
 wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
         VPN_IPSEC_PSK='wh' \
