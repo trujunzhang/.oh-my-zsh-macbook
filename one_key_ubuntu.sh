@@ -1,6 +1,7 @@
 ##################################################################
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook
+#    chmod +x one_key_ubuntu.sh
 ##################################################################
 
 # Import function files.
@@ -25,7 +26,6 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
 # zip a folder in Ubuntu Linux using the cli
       sudo apt install -y zip unzip
-      # zip -r filename.zip folder
 
 # All dockers    
 ##  Installing Docker
@@ -94,4 +94,5 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
 ## usage   
       sudo apt install -y ffmpeg
+      mkdir /home/deploy/data/youtube
 
