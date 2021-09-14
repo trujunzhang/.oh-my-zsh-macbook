@@ -26,7 +26,7 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
     rm /root/.zshrc
     cp zshrc_ubuntu.symlink  /root/.zshrc
 
-# plugins
+## plugins
      cp -r oh-my-zsh/custom/plugins/trujunzhang  /root/.oh-my-zsh/custom/plugins/trujunzhang 
 
 # zip a folder in Ubuntu Linux using the cli
