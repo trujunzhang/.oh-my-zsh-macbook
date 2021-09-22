@@ -6,6 +6,7 @@ docker run \
     --restart=always \
     -d --name v2ray \
     -v /etc/v2ray:/etc/v2ray \
+    -p 8888:8888\
     -p 1901:1901\
     -p 1902:1902\
     -p 1903:1903\
