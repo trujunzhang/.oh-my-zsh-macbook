@@ -8,6 +8,9 @@
 # Import function files.
 source ./bash/files-functions.sh
 
+# Tools
+sudo apt install -y curl
+
 # python
    sudo apt install python-is-python3
 
