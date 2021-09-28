@@ -71,6 +71,8 @@ This function should only modify configuration layer settings."
 
      yaml
 
+     restclient   
+
      (ranger :variables
               ranger-override-dired 'ranger)
 

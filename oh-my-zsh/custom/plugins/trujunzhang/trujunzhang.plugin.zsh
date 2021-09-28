@@ -271,6 +271,7 @@ alias dfpython="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh
 alias drunvpn="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drv="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drunoffline="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
+alias wcdxxx="mkdir /tmp/xxx && cd /tmp/xxx"
 
 # djzhang's git
 alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b develop"

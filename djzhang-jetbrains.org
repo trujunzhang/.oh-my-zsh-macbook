@@ -1,0 +1,11 @@
+* android studio
+   https://developer.android.com/studio
+
+* webstorm
+   https://www.jetbrains.com/webstorm/download/#section=mac
+
+* pycharm
+   https://www.jetbrains.com/pycharm/download/#section=mac
+
+
+  
