@@ -1,0 +1,25 @@
+# homepage:
+#   https://www.themoviedb.org/
+#
+# documentation:
+#   https://www.themoviedb.org/documentation/api?language=en-US
+# api:
+#   https://developers.themoviedb.org/3/getting-started/introduction
+
+
+#
+# trending:
+#   https://developers.themoviedb.org/3/trending/get-trending
+#
+GET https://api.themoviedb.org/3/trending/all/day?api_key=d7ff494718186ed94ee75cf73c1a3214
+
+#
+# Get a list of shows that are currently on the air.
+#
+# on_the_air:
+#   https://developers.themoviedb.org/3/tv/get-tv-on-the-air
+#
+GET https://api.themoviedb.org/3/tv/on_the_air?api_key=d7ff494718186ed94ee75cf73c1a3214&language=en-US&page=1
+
+
+
