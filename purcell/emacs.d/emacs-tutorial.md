@@ -1,6 +1,0 @@
-* neotree
-  space+n toggle
-  
-  
-
-  
