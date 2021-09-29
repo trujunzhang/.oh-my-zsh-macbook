@@ -1,4 +1,7 @@
 * Tools
+** Internationalizing Flutter apps
+   https://flutter.dev/docs/development/accessibility-and-localization/internationalization
+   
 ** intl_utils
    Dart package that creates a binding between your translations from .arb files and your Flutter app.
    It generates boilerplate code for official Dart Intl library and adds auto-complete for keys in Dart code.
@@ -9,8 +12,23 @@
    https://mings.in/retrofit.dart/
 
 * Plugins   
+** flex_color_scheme  
+   A Flutter package to make and use beautiful color scheme based themes.
+   https://github.com/rydmike/flex_color_scheme
+  
+* project templation 
+** flutterGetFire
+   Quick Starter for flutter using firebase & GetX 
+   https://github.com/Addimohammedsaid/flutterGetFire
+   keys: Firebase,Getx
   
 * Projects   
-
-
+** Flutter-Movie
+   A Flutter movie app build with Fish-Redux and TMDB api.  
+   https://github.com/o1298098/Flutter-Movie
   
+
+
+
+
+   

@@ -21,5 +21,12 @@ GET https://api.themoviedb.org/3/trending/all/day?api_key=d7ff494718186ed94ee75c
 #
 GET https://api.themoviedb.org/3/tv/on_the_air?api_key=d7ff494718186ed94ee75cf73c1a3214&language=en-US&page=1
 
+#
+# Get a list of TV shows that are airing today. 
+#
+# airing_today:
+#   https://developers.themoviedb.org/3/tv/get-tv-airing-today
+#
+GET https://api.themoviedb.org/3/tv/airing_today?api_key=d7ff494718186ed94ee75cf73c1a3214&language=en-US&page=1
 
 
