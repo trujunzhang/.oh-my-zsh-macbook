@@ -1,0 +1,33 @@
+* Current path
+   
+  #+BEGIN_SRC bash
+    CURRENT=`pwd`
+  #+END_SRC
+
+  #+RESULTS:
+
+* Get the parent directory for a file
+
+  #+BEGIN_SRC bash
+    filepath=/a/b/c/d/file
+    parentname="$(basename "$(dirname "$filepath")")"
+    echo "$parentname" # d
+  #+END_SRC
+
+  #+RESULTS:
+  : d
+
+
+  #+BEGIN_SRC bash
+    filepath=/a/b/c/d/file
+    parentPath="$(dirname "$filepath")"
+    echo "$parentPath" # /a/b/c/d
+  #+END_SRC
+
+  #+RESULTS:
+  : /a/b/c/d
+
+
+
+
+

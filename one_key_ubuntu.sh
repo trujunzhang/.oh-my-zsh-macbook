@@ -5,6 +5,8 @@
 #    ./one_key_ubuntu.sh
 ##################################################################
 
+CURRENT=`pwd`
+
 # Import function files.
 source ./bash/files-functions.sh
 
@@ -48,11 +50,9 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
      sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
   
 ## docker-pure-ftpd & qbittorrent
-     cd /root/.oh-my-zsh-macbook
-     cd USERS/Docker/docker-pure-ftpd
+     cd "$CURRENT/USERS/Docker/docker-pure-ftpd"
      docker-compose up -d
-     cd /root/.oh-my-zsh-macbook
-     cd USERS/Docker/qbittorrent
+     cd "$CURRENT/USERS/Docker/qbittorrent"
      docker-compose up -d
 
 ## v2ray   
