@@ -1,5 +1,6 @@
 ##################################################################
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && chmod +x one_key_ubuntu.sh
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook
 #    chmod +x one_key_ubuntu.sh
 #    ./one_key_ubuntu.sh
@@ -57,8 +58,8 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
 ## v2ray   
      mkdir /etc/v2ray
-     cd /root/.oh-my-zsh-macbook
-     cp USERS/Docker/v2ray/etc/config.json /etc/v2ray/config.json
+     # cd /root/.oh-my-zsh-macbook
+     cp "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
      # docker run \
      #        --restart=always \
      #        -d --name v2ray \

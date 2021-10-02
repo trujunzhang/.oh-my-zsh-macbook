@@ -5,4 +5,8 @@
 ** Add Firebase to your Android project    
    https://firebase.google.com/docs/android/setup
 
-   
+* vue.js
+** @nuxtjs/firebase
+   https://firebase.nuxtjs.org/
+   https://github.com/nuxt-community/firebase-module
+  
