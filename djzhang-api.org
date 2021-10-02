@@ -1,0 +1,11 @@
+* github
+  https://github.com/settings/applications/1718906
+  application name: my_gsy
+  Client ID: 942e9e3baa1273a10594
+  Client secrets: 6a699871d11ea0dee05aa0e4ea8517afa9ce33d7
+
+
+* themoviedb
+   https://www.themoviedb.org/settings/api
+   API Key (v3 auth): 4404a9b19ecba087c96939f96dfeffd2
+   
