@@ -6,6 +6,13 @@
 
   #+RESULTS:
 
+* no such file or directory mkdir 
+  To ensure that all of the required directories are created,
+  add the -p option, to make parent directories as needed:
+  #+BEGIN_SRC bash
+    sudo mkdir -p /hadoop-data/hadoopmaster/hdfs/namenode
+  #+END_SRC
+  
 * Get the parent directory for a file
 
   #+BEGIN_SRC bash

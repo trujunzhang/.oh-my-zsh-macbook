@@ -12,6 +12,21 @@
 source ./bash/files-functions.sh
 source ./bash/tools.sh
 
+# copy 'homebrew'
+if [ -d  ~/Desktop/zip/Homebrew ]; then
+    if [ ! -d  /usr/local/Homebrew ]; then
+        mv ~/Desktop/zip/Homebrew /usr/local/Homebrew
+    fi
+fi
+
+# copy 'emacs'
+if [ -d  '~/Desktop/zip/emacs-plus@28--git' ]; then
+    if [ ! -d  '~/Library/Caches/Homebrew/emacs-plus@28--git' ]; then
+        mkdir -p '~/Library/Caches/Homebrew'
+        mv '~/Desktop/zip/emacs-plus@28--git' '~/Library/Caches/Homebrew/emacs-plus@28--git' 
+    fi
+fi
+
 # homebrew
 if ! command_exists brew; then
     ( exec "./bash/homebrew_install.sh" )
@@ -49,10 +64,19 @@ if ! command_exists yarn; then
     npm install -g monia-cli
 fi    
 
+if ! command_exists tsc; then
+    npm install -g typescript typescript-formatter tern js-beautify eslint 
+fi    
+
 # cocoapods
 if ! command_exists pod; then
     gem install cocoapods
 fi    
 
 # firebase cli
-
+if [ -f ~/Desktop/zip/firebase-tools-macos ]; then
+    if [ ! -f /usr/local/bin/firebase ]; then
+        mv ~/Desktop/zip/firebase-tools-macos /usr/local/bin/firebase
+        chmod +x /usr/local/bin/firebase
+    fi
+fi
