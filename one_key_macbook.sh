@@ -64,6 +64,7 @@ if ! command_exists yarn; then
     npm install -g monia-cli
 fi    
 
+## typescript
 if ! command_exists tsc; then
     npm install -g typescript typescript-formatter tern js-beautify eslint 
 fi    

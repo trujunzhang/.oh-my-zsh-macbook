@@ -12,6 +12,15 @@
   #+BEGIN_SRC bash
     sudo mkdir -p /hadoop-data/hadoopmaster/hdfs/namenode
   #+END_SRC
+
+* list all files in a directory and subdirectories
+
+  #+BEGIN_SRC bash
+    find "$DIR" -maxdepth 4 -mindepth 1 -type f | while read filepath; do
+        echo "$filepath"
+    done
+  #+END_SRC
+  
   
 * Get the parent directory for a file
 
