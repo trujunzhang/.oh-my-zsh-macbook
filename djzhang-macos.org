@@ -28,6 +28,7 @@
   $ /usr/local/opt/emacs-plus@28
   
 ** font-fira
+  $ ~/Library/Fonts/FiraCode-Bold.ttf (316.7KB)
   $ brew tap homebrew/cask-fonts
   $ brew install --cask font-fira-code
 

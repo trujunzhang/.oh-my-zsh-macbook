@@ -6,7 +6,7 @@
 #   .5 ./allLinks
 
 # cp ~/Desktop/zip/Homebrew /usr/local/Homebrew
-# cp ~/Desktop/zip/Homebrew /usr/local/Homebrew
+# cp ~/Desktop/zip/emacs-plus@28--git /usr/local/Homebrew
 
 # Import function files.
 source ./bash/files-functions.sh
@@ -15,17 +15,44 @@ source ./bash/tools.sh
 # homebrew
 if ! command_exists brew; then
     ( exec "./bash/homebrew_install.sh" )
+fi
+
+## list
+if ! command_exists ssh-copy-id; then
     brew install autojump gpg ssh-copy-id
-fi    
+fi
+
+## emacs
+if [ ! -d  /usr/local/opt/emacs-plus@28 ]; then
+    brew tap d12frosted/emacs-plus
+    brew install emacs-plus@28 --with-spacemacs-icon
+    brew link emacs-plus@28
+fi
+
+## font-fira
+if [ ! -f  ~/Library/Fonts/FiraCode-Bold.ttf ]; then
+    brew tap homebrew/cask-fonts
+    brew install --cask font-fira-code
+fi
 
 # nvm(node.js)
 if [ ! -d  ~/.nvm ]; then
     cd ~/ && rm -rf .nvm 
     git clone file:///Users/djzhang/Documents/Organizations/IDES/nvm/localNVM .nvm
     cd ~/.nvm  && git checkout v0.38.0 && . ~/.nvm/nvm.sh && nvm install 12.13.1 && nvm use 12.13.1
+fi    
+
+## list
+if ! command_exists yarn; then
     npm install -g yarn
     npm install -g npm-check-updates
     npm install -g monia-cli
 fi    
 
+# cocoapods
+if ! command_exists pod; then
+    gem install cocoapods
+fi    
+
+# firebase cli
 
