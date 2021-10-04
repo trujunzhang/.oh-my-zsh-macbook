@@ -175,6 +175,9 @@ fileLink ".zsh(rc)"   "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink"  "$HOME/.zshrc"
 # editor(config)
 fileLink ".editor(config)"  "$TRUJUNZHANG_DOTFILES_HOME/editorconfig.symlink" "$HOME/.editorconfig"
 
+# git(config)
+fileLink ".git(config)"  "$TRUJUNZHANG_DOTFILES_HOME/gitconfig.symlink" "$HOME/.gitconfig"
+
 # bash
 fileLink ".bash(profile)"   "$TRUJUNZHANG_DOTFILES_HOME/bash_profile.symlink"  "$HOME/.bash_profile"
 fileLink ".bash(rc)"        "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink"  "$HOME/.bashrc"
@@ -218,7 +221,7 @@ fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.syml
 directoryLink "sdk(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android"   "$HOME/Library/Android"
 directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android"          "$HOME/.android"
 directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
-directoryLink ".m2(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2"               "$HOME/.m2"
+# directoryLink ".m2(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2"               "$HOME/.m2"
 
 # User's profile
 # directoryLink "Alfred 3(profile)"             "$USERPROFILE_HOME/ApplicationSupport/Alfred 3"            "$PATH_SYSTEM_APPLICATION_SUPPORT/Alfred 3"
