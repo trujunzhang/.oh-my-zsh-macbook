@@ -5,12 +5,12 @@ end=$2
 list=$3
 
 
-for i in {1..12}
+for i in {1..18}
 do
 
     echo "                         "
     echo "========================="
-    echo " youtube-dl  $i of 12    "
+    echo " youtube-dl  $i of 18    "
     echo "========================="
     echo "                         "
 
