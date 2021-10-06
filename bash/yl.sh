@@ -11,7 +11,7 @@ do
 
     echo "                         "
     echo "========================="
-    echo " youtube-dl  $i          "
+    echo " youtube-dl  $i of 12    "
     echo "========================="
     echo "                         "
 
