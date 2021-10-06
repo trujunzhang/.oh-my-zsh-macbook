@@ -230,6 +230,7 @@ alias fclean="flutter clean"
 alias fkill="killall -9 dart"
 alias fdoctor='flutter doctor -v'
 alias frun='flutter run --verbose'
+alias frundev='flutter run -t lib/main_dev.dart'
 # https://dart.dev/null-safety/unsound-null-safety
 alias frunnull='flutter run --no-sound-null-safety'
 alias ftest='flutter test'

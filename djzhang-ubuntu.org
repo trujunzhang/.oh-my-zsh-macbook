@@ -68,3 +68,13 @@
    
    Merge MP4 with M4A
     $ ffmpeg -i video.mp4 -i audio.m4a -acodec copy -vcodec copy output.mp4  
+
+** process
+  #+BEGIN_SRC bash
+            pgrep youtube-dl
+            
+            processid=$(pgrep youtube-dl)
+            kill -TSTP $processid
+    
+            kill -9 $(pgrep youtube-dl)
+  #+END_SRC
