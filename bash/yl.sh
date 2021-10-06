@@ -9,14 +9,16 @@ for i in {1..8}
 do
     kill -9 $(pgrep youtube-dl)
 
+    echo "                         "
     echo "========================="
     echo " youtube-dl              "
     echo "========================="
+    echo "                         "
 
     youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start $start --playlist-end $end $list  &
 
 
-    sleep 10s
+    sleep 30s
 done
 
 
