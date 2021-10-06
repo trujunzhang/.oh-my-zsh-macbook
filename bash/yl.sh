@@ -5,13 +5,13 @@ end=$2
 list=$3
 
 
-for i in {1..8}
+for i in {1..12}
 do
     kill -9 $(pgrep youtube-dl)
 
     echo "                         "
     echo "========================="
-    echo " youtube-dl              "
+    echo " youtube-dl  $i          "
     echo "========================="
     echo "                         "
 
