@@ -43,7 +43,13 @@
   #+RESULTS:
   : /a/b/c/d
 
-
+* For loop
+  #+BEGIN_SRC bash
+     for i in {1..5}
+     do
+         echo "Welcome $i times"
+     done
+  #+END_SRC
 
 
 
