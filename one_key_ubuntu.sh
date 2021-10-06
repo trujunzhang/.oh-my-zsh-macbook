@@ -76,3 +76,9 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
       sudo apt install -y ffmpeg
       mkdir /home/deploy/data/youtube
 
+## bash file
+      cp "$CURRENT/bash/yl.sh" /usr/bin/yl
+      sudo chmod +x /usr/bin/yl
+
+
+
