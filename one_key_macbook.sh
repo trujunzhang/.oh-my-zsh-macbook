@@ -8,6 +8,8 @@
 # cp ~/Desktop/zip/Homebrew /usr/local/Homebrew
 # cp ~/Desktop/zip/emacs-plus@28--git /usr/local/Homebrew
 
+CURRENT=`pwd`
+
 # Import function files.
 source ./bash/files-functions.sh
 source ./bash/tools.sh
@@ -81,3 +83,11 @@ if [ -f ~/Desktop/zip/firebase-tools-macos ]; then
         chmod +x /usr/local/bin/firebase
     fi
 fi
+
+# flutter tool(getx generator)
+
+if [ ! -f /usr/local/bin/get_generator ]; then
+    cp "$CURRENT/bash/get_generator.sh" /usr/local/bin/get_generator
+    chmod +x /usr/local/bin/get_generator
+fi
+

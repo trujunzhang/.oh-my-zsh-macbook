@@ -12,7 +12,7 @@ CURRENT=`pwd`
 source ./bash/files-functions.sh
 
 # Tools
-sudo apt install -y curl
+sudo apt install -y curl vim
 
 # python
    sudo apt install python-is-python3

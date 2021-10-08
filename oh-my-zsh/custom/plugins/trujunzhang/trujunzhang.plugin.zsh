@@ -229,6 +229,8 @@ alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 alias fclean="flutter clean"
 alias fkill="killall -9 dart"
 alias fdoctor='flutter doctor -v'
+alias fcreatelib="flutter create --template=package"
+alias fcreateapp="flutter create"
 alias frun='flutter run --verbose'
 alias frundev='flutter run -t lib/main_dev.dart'
 # https://dart.dev/null-safety/unsound-null-safety
@@ -272,7 +274,7 @@ alias dfpython="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh
 alias drunvpn="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drv="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drunoffline="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
-alias wcdxxx="mkdir /tmp/xxx && cd /tmp/xxx"
+alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 
 # djzhang's git
 alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b develop"

@@ -1,7 +1,7 @@
 * bandwagon
    https://bwh81.net
    email: trujunzhang@gmail.com
-   root password: KcDjeA1Ko58L
+   root password: kSUH88lR3CtC
    SSH port: 27724
    blog: https://www.bandwagonhost.net/
 

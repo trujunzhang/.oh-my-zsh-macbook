@@ -16,7 +16,7 @@ do
 
     youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start $start --playlist-end $end $list  &
 
-    sleep 30s
+    sleep 45s
 
     kill -9 $(pgrep youtube-dl)
 done
