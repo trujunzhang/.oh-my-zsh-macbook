@@ -9,6 +9,18 @@
 * Script to create files in a template  
   https://itectec.com/unixlinux/bash-script-to-create-files-in-a-template/
   
+  #+BEGIN_SRC bash
+        cat > index.html << EOF
+    <html>
+    <head>
+      ${title}
+    </head>
+    <body>
+    </body>
+    </html>
+    EOF
+  #+END_SRC
+  
 
 * no such file or directory mkdir 
   To ensure that all of the required directories are created,
