@@ -26,10 +26,15 @@ if [ ! -f "$CURRENT/view.dart" ]; then
     viewFile="$CURRENT/view.dart"
     cat > "$viewFile" <<EOF
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:app_language/langs/l10n.dart';
 import 'package:my_plugin/my_plugin.dart';
 
-class ${CLASSNAME}Screen extends StatelessWidget {
+import 'index.dart';
+
+class ${CLASSNAME}Page extends GetWidget<${CLASSNAME}Controller> {
+  const ${CLASSNAME}Page({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return BaseScaffold(
@@ -38,7 +43,8 @@ class ${CLASSNAME}Screen extends StatelessWidget {
           // title: MyTitle(S.of(context).drawerMenuItemAbout),
           leadingType: AppBarBackType.None,
         ),
-        body: _buildBody(context));
+        body: Obx(() => _buildBody(context)));
+        // body: _buildBody(context));
   }
 
   Widget _buildBody(BuildContext context) {
