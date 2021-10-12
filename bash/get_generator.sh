@@ -1,23 +1,95 @@
+#!/bin/bash
 
 CURRENT=`pwd`
 
+CLASSNAME=$1
+
 if [ ! -f "$CURRENT/bindings.dart" ]; then
-    touch "$CURRENT/bindings.dart"
+    bindingsFile="$CURRENT/bindings.dart"
+
+    cat > "$bindingsFile" <<EOF
+import 'package:get/get.dart';
+
+import 'controller.dart';
+
+class ${CLASSNAME}Binding implements Bindings {
+  @override
+  void dependencies() {
+    Get.put<${CLASSNAME}Controller>(${CLASSNAME}Controller());
+  }
+}
+EOF
+
 fi
 
 if [ ! -f "$CURRENT/view.dart" ]; then
-    touch "$CURRENT/view.dart"
+    viewFile="$CURRENT/view.dart"
+    cat > "$viewFile" <<EOF
+import 'package:flutter/material.dart';
+import 'package:app_language/langs/l10n.dart';
+import 'package:my_plugin/my_plugin.dart';
+
+class ${CLASSNAME}Screen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BaseScaffold(
+        appBar: MyAppBar(
+          centerTitle: true,
+          // title: MyTitle(S.of(context).drawerMenuItemAbout),
+          leadingType: AppBarBackType.None,
+        ),
+        body: _buildBody(context));
+  }
+
+  Widget _buildBody(BuildContext context) {
+    return Container();
+  }
+}
+EOF
+
 fi
 
 if [ ! -f "$CURRENT/state.dart" ]; then
-    touch "$CURRENT/state.dart"
+    stateFile="$CURRENT/state.dart"
+    cat > "$stateFile" <<EOF
+import 'package:get/get.dart';
+
+class ${CLASSNAME}State {
+  Rx<String> displayName = Rx<String>('');
+
+}
+EOF
 fi
 
 if [ ! -f "$CURRENT/controller.dart" ]; then
-    touch "$CURRENT/controller.dart"
+    controllerFile="$CURRENT/controller.dart"
+    cat > "$controllerFile" <<EOF
+import 'package:get/get.dart';
+
+import 'index.dart';
+
+class ${CLASSNAME}Controller extends GetxController {
+  ${CLASSNAME}Controller ();
+
+  final state = ${CLASSNAME}State();
+
+  @override
+  void onInit() {
+    super.onInit();
+  }
+}
+EOF
 fi
 
 if [ ! -f "$CURRENT/index.dart" ]; then
-    echo -e "library category; \n\nexport './bindings.dart'; \nexport './view.dart'; \nexport './state.dart'; \nexport './controller.dart'; \n" > "$CURRENT/index.dart"
+    indexFile="$CURRENT/index.dart"
+    cat > "$indexFile" <<EOF
+library category;
+
+export './bindings.dart'; 
+export './view.dart'; 
+export './state.dart'; 
+export './controller.dart'; 
+EOF
 fi
 
