@@ -320,8 +320,7 @@ alias yl4348="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]
 alias yl4954="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 49 --playlist-end 54"
 
 alias wydlcache="youtube-dl --rm-cache-dir"
-
-alias wdownyl="nohup ydlcron > /tmp/foo.out 2> /tmp/foo.err < /dev/null &"
+alias wdownyl="youtube-dl --rm-cache-dir && nohup ydlcron > /tmp/foo.out 2> /tmp/foo.err < /dev/null &"
 
 alias wprocessyl="pgrep youtube-dl"
 alias wjobs="jobs -l"
