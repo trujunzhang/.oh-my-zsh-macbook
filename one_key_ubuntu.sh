@@ -1,11 +1,8 @@
 ##################################################################
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
-#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cp /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cp /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu 
 #    cd .oh-my-zsh-macbook && git pull && rm /usr/bin/one_key_ubuntu && cp /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
-#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && chmod +x one_key_ubuntu.sh
-#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook
-#    chmod +x one_key_ubuntu.sh
-#    ./one_key_ubuntu.sh
+#    one_key_ubuntu
 ##################################################################
 
 # CURRENT=`pwd`
@@ -30,7 +27,7 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
     #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
     rm /root/.zshrc
-    cp zshrc_ubuntu.symlink  /root/.zshrc
+    cp "#CURRENT/zshrc_ubuntu.symlink"  /root/.zshrc
 
 ## plugins
 
@@ -79,7 +76,7 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
 ## usage   
       sudo apt install -y ffmpeg
-      mkdir /home/deploy/data/youtube
+      mkdir -p /home/deploy/data/youtube
 
 ## bash file
 
