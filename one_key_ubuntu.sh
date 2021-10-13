@@ -27,7 +27,7 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
     #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
     rm /root/.zshrc
-    cp -r "#CURRENT/zshrc_ubuntu.symlink" /root/.zshrc
+    cp -r "$CURRENT/zshrc_ubuntu.symlink" /root/.zshrc
 
 ## plugins
 
