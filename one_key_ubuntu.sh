@@ -31,7 +31,7 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
 ## plugins
 
-    if [ -d /root/.oh-my-zsh/custom/plugins/trujunzhang]; then
+    if [ -d /root/.oh-my-zsh/custom/plugins/trujunzhang ]; then
         rm -rf /root/.oh-my-zsh/custom/plugins/trujunzhang
     fi
 
