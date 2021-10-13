@@ -1,15 +1,15 @@
 ##################################################################
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cp /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
+#    cd .oh-my-zsh-macbook && git pull && rm /usr/bin/one_key_ubuntu && cp /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && chmod +x one_key_ubuntu.sh
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook
 #    chmod +x one_key_ubuntu.sh
 #    ./one_key_ubuntu.sh
 ##################################################################
 
-CURRENT=`pwd`
-
-# Import function files.
-source ./bash/files-functions.sh
+# CURRENT=`pwd`
+CURRENT='/root/.oh-my-zsh-macbook'
 
 # Tools
 sudo apt install -y curl vim
@@ -28,12 +28,17 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
     sudo apt install -y zsh
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-   #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
+    #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
     rm /root/.zshrc
     cp zshrc_ubuntu.symlink  /root/.zshrc
 
 ## plugins
-     cp -r oh-my-zsh/custom/plugins/trujunzhang  /root/.oh-my-zsh/custom/plugins/trujunzhang 
+
+    if [ -d /root/.oh-my-zsh/custom/plugins/trujunzhang]; then
+        rm -rf /root/.oh-my-zsh/custom/plugins/trujunzhang
+    fi
+
+    cp -r "$CURRENT/oh-my-zsh/custom/plugins/trujunzhang"  /root/.oh-my-zsh/custom/plugins/trujunzhang 
 
 # zip a folder in Ubuntu Linux using the cli
       sudo apt install -y zip unzip
