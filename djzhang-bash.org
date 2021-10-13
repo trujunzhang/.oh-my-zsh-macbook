@@ -6,6 +6,13 @@
 
   #+RESULTS:
 
+* How to Run Linux Commands in Background  
+   https://linuxize.com/post/how-to-run-linux-commands-in-background/ 
+   
+  #+BEGIN_SRC bash
+    command > /dev/null 2>&1 &  
+  #+END_SRC
+
 * Script to create files in a template  
   https://itectec.com/unixlinux/bash-script-to-create-files-in-a-template/
   
