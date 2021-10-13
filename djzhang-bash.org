@@ -13,6 +13,13 @@
     command > /dev/null 2>&1 &  
   #+END_SRC
 
+* How To Use Cron to Automate Tasks on Ubuntu 18.04  
+  https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804
+  
+  #+BEGIN_SRC bash
+    crontab -e
+  #+END_SRC
+  
 * Script to create files in a template  
   https://itectec.com/unixlinux/bash-script-to-create-files-in-a-template/
   

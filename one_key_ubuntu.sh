@@ -77,8 +77,16 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
       mkdir /home/deploy/data/youtube
 
 ## bash file
-      cp "$CURRENT/bash/yl.sh" /usr/bin/yl
-      sudo chmod +x /usr/bin/yl
+
+      if [ ! -f /usr/bin/yl ]; then
+          cp "$CURRENT/bash/yl.sh" /usr/bin/yl
+          sudo chmod +x /usr/bin/yl
+      fi
+
+      if [ ! -f /usr/bin/ydlcron ]; then
+          cp "$CURRENT/bash/ydlcron.sh" /usr/bin/ydlcron
+          sudo chmod +x /usr/bin/ydlcron
+      fi
 
 
 

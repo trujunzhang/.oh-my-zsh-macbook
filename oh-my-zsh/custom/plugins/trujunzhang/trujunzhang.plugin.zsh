@@ -322,6 +322,10 @@ alias yl4954="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]
 alias wylprocess="pgrep youtube-dl"
 alias wjobs="jobs -l"
 
+# crontab
+alias whcronedit="crontab -e"
+alias whcroninfo="crontab -l"
+
 # docker
 alias wdockps="docker ps -a"
 alias wdockrm='docker rm -f $(docker ps -a -q)'
