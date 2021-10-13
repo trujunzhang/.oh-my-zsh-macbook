@@ -319,6 +319,8 @@ alias yl3742="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]
 alias yl4348="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 43 --playlist-end 48"
 alias yl4954="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 49 --playlist-end 54"
 
+alias ylprocess="pgrep youtube-dl"
+
 # docker
 alias wdockps="docker ps -a"
 alias wdockrm='docker rm -f $(docker ps -a -q)'

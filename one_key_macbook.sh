@@ -39,6 +39,11 @@ if ! command_exists ssh-copy-id; then
     brew install autojump gpg ssh-copy-id
 fi
 
+## git
+if ! command_exists git; then
+    brew install git
+fi
+
 ## emacs
 if [ ! -d  /usr/local/opt/emacs-plus@28 ]; then
     brew tap d12frosted/emacs-plus

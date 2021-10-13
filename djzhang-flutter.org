@@ -1,3 +1,9 @@
+* Code snippet
+** hide keyboard layout  
+  #+BEGIN_SRC dart
+    FocusScope.of(context).requestFocus(FocusNode());
+  #+END_SRC
+
 * Tools
 ** Internationalizing Flutter apps
    https://flutter.dev/docs/development/accessibility-and-localization/internationalization
