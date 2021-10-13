@@ -5,9 +5,6 @@
 #   .4 .oh-my-zsh
 #   .5 ./allLinks
 
-# cp ~/Desktop/zip/Homebrew /usr/local/Homebrew
-# cp ~/Desktop/zip/emacs-plus@28--git /usr/local/Homebrew
-
 CURRENT=`pwd`
 
 # Import function files.
@@ -15,17 +12,17 @@ source ./bash/files-functions.sh
 source ./bash/tools.sh
 
 # copy 'homebrew'
-if [ -d  ~/Desktop/zip/Homebrew ]; then
+if [ -d  ~/Desktop/ZIP/Homebrew ]; then
     if [ ! -d  /usr/local/Homebrew ]; then
-        mv ~/Desktop/zip/Homebrew /usr/local/Homebrew
+        mv ~/Desktop/ZIP/Homebrew /usr/local/Homebrew
     fi
 fi
 
 # copy 'emacs'
-if [ -d  '~/Desktop/zip/emacs-plus@28--git' ]; then
+if [ -d  '~/Desktop/ZIP/emacs-plus@28--git' ]; then
     if [ ! -d  '~/Library/Caches/Homebrew/emacs-plus@28--git' ]; then
         mkdir -p '~/Library/Caches/Homebrew'
-        mv '~/Desktop/zip/emacs-plus@28--git' '~/Library/Caches/Homebrew/emacs-plus@28--git' 
+        mv '~/Desktop/ZIP/emacs-plus@28--git' '~/Library/Caches/Homebrew/emacs-plus@28--git' 
     fi
 fi
 
