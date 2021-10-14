@@ -305,24 +305,28 @@ alias edoominstall="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-
 alias edoomsync="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom sync"
 alias edoomdoctor="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom doctor"
 
-# youtube-dl
+# 
+# youtube-dl(pending)
 # https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/
-alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
-alias ydl_hd="youtube-dl -f 'bestvideo[ext=webm]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
-alias yl16="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 1 --playlist-end 6"
-alias yl712="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 7 --playlist-end 12"
-alias yl1318="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 13 --playlist-end 18"
-alias yl1924="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 19 --playlist-end 24"
-alias yl2530="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 25 --playlist-end 30"
-alias yl3136="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 31 --playlist-end 36"
-alias yl3742="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 37 --playlist-end 42"
-alias yl4348="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 43 --playlist-end 48"
-alias yl4954="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 49 --playlist-end 54"
+#
+# yt-dlp
+# https://github.com/yt-dlp/yt-dlp#usage-and-options
+alias ydl="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
+alias ydl_hd="yt-dlp -f 'bestvideo[ext=webm]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt"
+alias yl16="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 1 --playlist-end 6"
+alias yl712="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 7 --playlist-end 12"
+alias yl1318="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 13 --playlist-end 18"
+alias yl1924="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 19 --playlist-end 24"
+alias yl2530="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 25 --playlist-end 30"
+alias yl3136="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 31 --playlist-end 36"
+alias yl3742="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 37 --playlist-end 42"
+alias yl4348="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 43 --playlist-end 48"
+alias yl4954="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 49 --playlist-end 54"
 
-alias wydlcache="youtube-dl --rm-cache-dir"
-alias wdownyl="youtube-dl --rm-cache-dir && nohup ydlcron > /tmp/foo.out 2> /tmp/foo.err < /dev/null &"
+alias wydlcache="yt-dlp --rm-cache-dir"
+alias wdownyl="yt-dlp --rm-cache-dir && nohup ydlcron > /tmp/foo.out 2> /tmp/foo.err < /dev/null &"
 
-alias wprocessyl="pgrep youtube-dl"
+alias wprocessyl="pgrep yt-dlp"
 alias wjobs="jobs -l"
 
 # crontab

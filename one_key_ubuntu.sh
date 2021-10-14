@@ -13,6 +13,7 @@ sudo apt install -y curl vim
 
 # python
 sudo apt install python-is-python3
+sudo apt install -y python3-pip
 
 # vpn
 wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
@@ -70,9 +71,8 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
      #        v2ray/official  v2ray \
      #        -config=/etc/v2ray/config.json
 
-# youtube_dl
-     sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-     sudo chmod a+rx /usr/local/bin/youtube-dl
+# yt-dlp
+     python3 -m pip install --upgrade yt-dlp
 
 ## usage   
       sudo apt install -y ffmpeg
