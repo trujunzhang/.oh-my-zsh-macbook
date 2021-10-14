@@ -236,6 +236,7 @@ alias frundev='flutter run -t lib/main_dev.dart'
 # https://dart.dev/null-safety/unsound-null-safety
 alias frunnull='flutter run --no-sound-null-safety'
 alias ftest='flutter test'
+alias fdevices='flutter devices'
 alias fbapk='flutter build apk --split-per-abi'
 alias fpget='flutter packages get'
 alias fpupdate='flutter pub upgrade'
