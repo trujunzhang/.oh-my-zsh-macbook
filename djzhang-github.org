@@ -19,7 +19,7 @@
    Make sure to copy your personal access token now. You won’t be able to see it again!
 
   #+BEGIN_SRC bash
-    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
+    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
   #+END_SRC
   
 
