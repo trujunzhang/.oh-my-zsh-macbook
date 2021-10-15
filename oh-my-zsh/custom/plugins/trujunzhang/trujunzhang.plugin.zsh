@@ -253,7 +253,7 @@ alias fanalyze='flutter analyze'
 
 # plugins
 alias fintlgenerate='flutter pub run intl_utils:generate'
-alias fretrofitgenerate='flutter pub run build_runner build'
+alias fbuildgenerate='flutter pub run build_runner build'
 
 # Firebase-tool
 alias fblogin='firebase login'
@@ -278,6 +278,7 @@ alias drunvpn="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-
 alias drv="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drunoffline="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
+alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 
 # djzhang's git
 alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b develop"

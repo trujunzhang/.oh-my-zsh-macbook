@@ -1176,5 +1176,8 @@
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
-    "workbench.colorTheme": "Visual Studio Light"
+    "workbench.colorTheme": "Visual Studio Light",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "jsonToDart.codeGenerator": "JSON",
+    "jsonToDart.targetDirectory.path": "/lib/src/entities"
 }
