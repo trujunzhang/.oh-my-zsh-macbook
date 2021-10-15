@@ -5,24 +5,24 @@
 #   .4 .oh-my-zsh
 #   .5 ./allLinks
 
-CURRENT=`pwd`
+CURRENT=`pwd` 
 
 # Import function files.
 source ./bash/files-functions.sh
 source ./bash/tools.sh
 
 # copy 'homebrew'
-if [ -d  ~/Desktop/ZIP/Homebrew ]; then
-    if [ ! -d  /usr/local/Homebrew ]; then
-        mv ~/Desktop/ZIP/Homebrew /usr/local/Homebrew
-    fi
-fi
+# if [ -d  ~/Desktop/ZIP/Homebrew ]; then
+#     if [ ! -d  /usr/local/Homebrew ]; then
+        # mv ~/Desktop/ZIP/Homebrew /usr/local/Homebrew
+#     fi
+# fi
 
 # copy 'emacs'
 if [ -d  '~/Desktop/ZIP/emacs-plus@28--git' ]; then
     if [ ! -d  '~/Library/Caches/Homebrew/emacs-plus@28--git' ]; then
         mkdir -p '~/Library/Caches/Homebrew'
-        mv '~/Desktop/ZIP/emacs-plus@28--git' '~/Library/Caches/Homebrew/emacs-plus@28--git' 
+        # mv '~/Desktop/ZIP/emacs-plus@28--git' '~/Library/Caches/Homebrew/emacs-plus@28--git' 
     fi
 fi
 
@@ -33,7 +33,11 @@ fi
 
 ## list
 if ! command_exists ssh-copy-id; then
-    brew install autojump gpg ssh-copy-id
+    brew install gpg ssh-copy-id
+fi
+
+if [ ! -d  ~/Library/autojump ]; then
+    brew install autojump
 fi
 
 ## git
@@ -46,6 +50,7 @@ if [ ! -d  /usr/local/opt/emacs-plus@28 ]; then
     brew tap d12frosted/emacs-plus
     brew install emacs-plus@28 --with-spacemacs-icon
     brew link emacs-plus@28
+    open /usr/local/opt/emacs-plus@28
 fi
 
 ## font-fira
