@@ -253,6 +253,7 @@ alias fanalyze='flutter analyze'
 
 # plugins
 alias fintlgenerate='flutter pub run intl_utils:generate'
+alias fretrofitgenerate='flutter pub run build_runner build'
 
 # Firebase-tool
 alias fblogin='firebase login'
