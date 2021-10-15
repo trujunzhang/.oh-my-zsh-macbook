@@ -1,5 +1,26 @@
-* Token
+* Create Personal Access Token on GitHub
 
+   From your GitHub account,
+   go to Settings =>
+         Developer Settings =>
+         Personal Access Token =>
+         Generate New Token (Give your password) =>
+         Fillup the form =>
+         click Generate token =>
+         Copy the generated Token
 
+** Github's tokens         
+
+   Go to this link: https://github.com/settings/tokens
+   (Profile -> settings -> developers setting -> personal access tokens).
+   (don't go to repository setting; it's your profile setting)
+   
+** Edit personal access token
+   Make sure to copy your personal access token now. You won’t be able to see it again!
+
+  #+BEGIN_SRC bash
+    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
+  #+END_SRC
+         
               
 
