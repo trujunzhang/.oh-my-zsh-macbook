@@ -3,6 +3,7 @@
 CURRENT=`pwd`
 
 CLASSNAME=$1
+PACKAGENAME=$2
 
 if [ ! -f "$CURRENT/bindings.dart" ]; then
     bindingsFile="$CURRENT/bindings.dart"
@@ -90,7 +91,13 @@ fi
 if [ ! -f "$CURRENT/index.dart" ]; then
     indexFile="$CURRENT/index.dart"
     cat > "$indexFile" <<EOF
-library category;
+library ${PACKAGENAME};
+
+//    GetPage(
+//      name: Routes.INITIAL,
+//      page: () => const ${CLASSNAME}Page(),
+//      binding: ${CLASSNAME}Binding(),
+//    ),
 
 export './bindings.dart'; 
 export './view.dart'; 

@@ -1179,5 +1179,5 @@
     "workbench.colorTheme": "Visual Studio Light",
     "diffEditor.ignoreTrimWhitespace": false,
     "jsonToDart.codeGenerator": "JSON",
-    "jsonToDart.targetDirectory.path": "/lib/src/entities"
+    "jsonToDart.targetDirectory.path": "/src/entities"
 }
