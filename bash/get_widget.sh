@@ -15,14 +15,14 @@ import 'package:my_plugin/my_plugin.dart';
 
 import 'index.dart';
 
-class ${CLASSNAME}Page extends StatefulWidget {
-  const ${CLASSNAME}Page({Key? key}) : super(key: key);
+class ${CLASSNAME} extends StatefulWidget {
+  const ${CLASSNAME}({Key? key}) : super(key: key);
 
   @override
-  _${CLASSNAME}PageState createState() => _${CLASSNAME}PageState();
+  _${CLASSNAME}State createState() => _${CLASSNAME}State();
 }
 
-class _${CLASSNAME}PageState extends State<${CLASSNAME}Page> {
+class _${CLASSNAME}State extends State<${CLASSNAME}> {
   ${CLASSNAME}Controller controller = Get.put<${CLASSNAME}Controller>(${CLASSNAME}Controller());
 
   @override
