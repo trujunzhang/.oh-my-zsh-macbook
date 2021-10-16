@@ -5,24 +5,6 @@ CURRENT=`pwd`
 CLASSNAME=$1
 PACKAGENAME=$2
 
-if [ ! -f "$CURRENT/bindings.dart" ]; then
-    bindingsFile="$CURRENT/bindings.dart"
-
-    cat > "$bindingsFile" <<EOF
-import 'package:get/get.dart';
-
-import 'controller.dart';
-
-class ${CLASSNAME}Binding implements Bindings {
-  @override
-  void dependencies() {
-    Get.put<${CLASSNAME}Controller>(${CLASSNAME}Controller());
-  }
-}
-EOF
-
-fi
-
 if [ ! -f "$CURRENT/view.dart" ]; then
     viewFile="$CURRENT/view.dart"
     cat > "$viewFile" <<EOF
@@ -107,13 +89,6 @@ if [ ! -f "$CURRENT/index.dart" ]; then
     cat > "$indexFile" <<EOF
 library ${PACKAGENAME};
 
-//    GetPage(
-//      name: Routes.INITIAL,
-//      page: () => const ${CLASSNAME}Page(),
-//      binding: ${CLASSNAME}Binding(),
-//    ),
-
-export './bindings.dart'; 
 export './view.dart'; 
 export './state.dart'; 
 export './controller.dart'; 

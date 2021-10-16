@@ -92,12 +92,18 @@ if [ -f ~/Desktop/zip/firebase-tools-macos ]; then
 fi
 
 # flutter tool(getx generate)
+if [ -f /usr/local/bin/get_generate ]; then
+    rm /usr/local/bin/get_generate
+fi
 if [ ! -f /usr/local/bin/get_generate ]; then
     cp "$CURRENT/bash/get_generate.sh" /usr/local/bin/get_generate
     chmod +x /usr/local/bin/get_generate
 fi
 
 # flutter tool(getx widget)
+if [ -f /usr/local/bin/get_widget ]; then
+    rm /usr/local/bin/get_widget
+fi
 if [ ! -f /usr/local/bin/get_widget ]; then
     cp "$CURRENT/bash/get_widget.sh" /usr/local/bin/get_widget
     chmod +x /usr/local/bin/get_widget
