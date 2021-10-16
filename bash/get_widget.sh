@@ -27,14 +27,8 @@ class _${CLASSNAME}PageState extends State<${CLASSNAME}Page> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseScaffold(
-        appBar: MyAppBar(
-          centerTitle: true,
-          // title: MyTitle(S.of(context).drawerMenuItemAbout),
-          leadingType: AppBarBackType.None,
-        ),
-        body: Obx(() => _buildBody(context)));
-    // body: _buildBody(context));
+    return Obx(() => _buildBody(context));
+    // return _buildBody(context);
   }
 
   Widget _buildBody(BuildContext context) {
