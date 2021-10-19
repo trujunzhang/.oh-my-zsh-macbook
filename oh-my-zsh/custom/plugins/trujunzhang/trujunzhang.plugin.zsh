@@ -254,6 +254,7 @@ alias fanalyze='flutter analyze'
 # plugins
 alias fintlgenerate='flutter pub run intl_utils:generate'
 alias fbuildgenerate='flutter pub run build_runner build --delete-conflicting-outputs'
+alias frungenerate='./maintain/run_generate.sh'
 
 # library
 alias fcoderest='cd plugin/app_rest && code .'

@@ -27,8 +27,8 @@ class _${CLASSNAME}State extends State<${CLASSNAME}> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() => _buildBody(context));
-    // return _buildBody(context);
+    // return Obx(() => _buildBody(context));
+    return _buildBody(context);
   }
 
   Widget _buildBody(BuildContext context) {
@@ -50,6 +50,7 @@ if [ ! -f "$CURRENT/state.dart" ]; then
     stateFile="$CURRENT/state.dart"
     cat > "$stateFile" <<EOF
 import 'package:get/get.dart';
+import 'package:app_rest/app_rest.dart';
 
 class ${CLASSNAME}State {
   Rx<String> displayName = Rx<String>('');
@@ -62,11 +63,12 @@ if [ ! -f "$CURRENT/controller.dart" ]; then
     controllerFile="$CURRENT/controller.dart"
     cat > "$controllerFile" <<EOF
 import 'package:get/get.dart';
+import 'package:app_config/app_config.dart';
+import 'package:app_rest/app_rest.dart';
 
 import 'index.dart';
 
 class ${CLASSNAME}Controller extends GetxController {
-  ${CLASSNAME}Controller ();
 
   final state = ${CLASSNAME}State();
 

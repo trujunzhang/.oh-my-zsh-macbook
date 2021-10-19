@@ -44,8 +44,8 @@ class ${CLASSNAME}Page extends GetWidget<${CLASSNAME}Controller> {
           // title: MyTitle(S.of(context).drawerMenuItemAbout),
           leadingType: AppBarBackType.None,
         ),
-        body: Obx(() => _buildBody(context)));
-        // body: _buildBody(context));
+        // body: Obx(() => _buildBody(context)));
+        body: _buildBody(context));
   }
 
   Widget _buildBody(BuildContext context) {
@@ -60,6 +60,7 @@ if [ ! -f "$CURRENT/state.dart" ]; then
     stateFile="$CURRENT/state.dart"
     cat > "$stateFile" <<EOF
 import 'package:get/get.dart';
+import 'package:app_rest/app_rest.dart';
 
 class ${CLASSNAME}State {
   Rx<String> displayName = Rx<String>('');
@@ -72,16 +73,20 @@ if [ ! -f "$CURRENT/controller.dart" ]; then
     controllerFile="$CURRENT/controller.dart"
     cat > "$controllerFile" <<EOF
 import 'package:get/get.dart';
+import 'package:app_config/app_config.dart';
+import 'package:app_rest/app_rest.dart';
 
 import 'index.dart';
 
 class ${CLASSNAME}Controller extends GetxController {
-  ${CLASSNAME}Controller ();
+
+  late String? detailId;
 
   final state = ${CLASSNAME}State();
 
   @override
   void onInit() {
+    detailId = Get.parameters[ParamsHelper.ID];
     super.onInit();
   }
 }
