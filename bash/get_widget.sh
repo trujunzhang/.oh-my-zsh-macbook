@@ -26,6 +26,12 @@ class _${CLASSNAME}State extends State<${CLASSNAME}> {
   ${CLASSNAME}Controller controller = Get.put<${CLASSNAME}Controller>(${CLASSNAME}Controller());
 
   @override
+  void initState() {
+    // controller.loadMovieInfo(widget.id);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     // return Obx(() => _buildBody(context));
     return _buildBody(context);

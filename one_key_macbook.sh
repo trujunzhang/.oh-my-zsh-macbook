@@ -108,3 +108,12 @@ if [ ! -f /usr/local/bin/get_widget ]; then
     cp "$CURRENT/bash/get_widget.sh" /usr/local/bin/get_widget
     chmod +x /usr/local/bin/get_widget
 fi
+
+# flutter tool(getx rest)
+if [ -f /usr/local/bin/get_rest ]; then
+    rm /usr/local/bin/get_rest
+fi
+if [ ! -f /usr/local/bin/get_rest ]; then
+    cp "$CURRENT/bash/get_rest.sh" /usr/local/bin/get_rest
+    chmod +x /usr/local/bin/get_rest
+fi

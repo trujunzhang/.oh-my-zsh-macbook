@@ -76,6 +76,8 @@ import 'package:get/get.dart';
 import 'package:app_config/app_config.dart';
 import 'package:app_rest/app_rest.dart';
 
+import '../../../routes/params_helper.dart';
+
 import 'index.dart';
 
 class ${CLASSNAME}Controller extends GetxController {
@@ -89,6 +91,14 @@ class ${CLASSNAME}Controller extends GetxController {
     detailId = Get.parameters[ParamsHelper.ID];
     super.onInit();
   }
+
+
+//==========================================================
+// UI Events
+//==========================================================
+  onIconPress() {
+  }
+
 }
 EOF
 fi
