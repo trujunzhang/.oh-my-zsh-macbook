@@ -86,7 +86,7 @@ import 'package:app_rest/app_rest.dart';
 
 import '../../../routes/params_helper.dart';
 
-import 'index.dart';
+import 'state.dart';
 
 class ${CLASSNAME}Controller extends GetxController {
 

@@ -259,6 +259,7 @@ alias frungenerate='./maintain/run_generate.sh'
 
 # library
 alias fcoderest='cd plugin/app_rest && code .'
+alias fcodelanguage='cd plugin/app_language && code .'
 
 # Firebase-tool
 alias fblogin='firebase login'
