@@ -5,6 +5,10 @@ CURRENT=`pwd`
 CLASSNAME=$1
 PACKAGENAME=$2
 
+if [ ! -d "$CURRENT/widgets" ]; then
+    mkdir "$CURRENT/widgets"
+fi
+
 if [ ! -f "$CURRENT/view.dart" ]; then
     viewFile="$CURRENT/view.dart"
     cat > "$viewFile" <<EOF

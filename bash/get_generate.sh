@@ -5,6 +5,14 @@ CURRENT=`pwd`
 CLASSNAME=$1
 PACKAGENAME=$2
 
+if [ ! -d "$CURRENT/components" ]; then
+    mkdir "$CURRENT/components"
+fi
+
+if [ ! -d "$CURRENT/widgets" ]; then
+    mkdir "$CURRENT/widgets"
+fi
+
 if [ ! -f "$CURRENT/bindings.dart" ]; then
     bindingsFile="$CURRENT/bindings.dart"
 
