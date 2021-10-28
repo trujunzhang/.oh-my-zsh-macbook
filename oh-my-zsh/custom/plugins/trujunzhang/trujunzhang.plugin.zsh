@@ -99,6 +99,7 @@ alias penv="python3 -m venv venv"
 alias peactive="source venv/bin/activate"
 
 # yarn.all
+alias yupdate='ncu -u'
 alias yinstall='yarn'
 alias ytest='yarn test'
 alias yserve='yarn serve'
