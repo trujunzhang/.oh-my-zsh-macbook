@@ -46,12 +46,12 @@ if ! command_exists git; then
 fi
 
 ## emacs
-if [ ! -d  /usr/local/opt/emacs-plus@28 ]; then
-    brew tap d12frosted/emacs-plus
-    brew install emacs-plus@28 --with-spacemacs-icon
-    brew link emacs-plus@28
-    open /usr/local/opt/emacs-plus@28
-fi
+# if [ ! -d  /usr/local/opt/emacs-plus@28 ]; then
+#     brew tap d12frosted/emacs-plus
+#     brew install emacs-plus@28 --with-spacemacs-icon
+#     brew link emacs-plus@28
+#     open /usr/local/opt/emacs-plus@28
+# fi
 
 ## font-fira
 if [ ! -f  ~/Library/Fonts/FiraCode-Bold.ttf ]; then

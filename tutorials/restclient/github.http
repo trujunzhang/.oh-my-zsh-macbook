@@ -1,0 +1,6 @@
+#
+# https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api
+#
+
+GET https://api.github.com/users/trujunzhang/received_events
+
