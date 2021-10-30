@@ -63,7 +63,7 @@ fi
 if [ ! -d  ~/.nvm ]; then
     cd ~/ && rm -rf .nvm 
     git clone file:///Users/djzhang/Documents/Organizations/IDES/nvm/localNVM .nvm
-    cd ~/.nvm  && git checkout v0.38.0 && . ~/.nvm/nvm.sh && nvm install 12.13.1 && nvm use 12.13.1
+    cd ~/.nvm  && git checkout v0.39.0 && . ~/.nvm/nvm.sh && nvm install 14.18.0 && nvm use 14.18.0
 fi    
 
 ## list

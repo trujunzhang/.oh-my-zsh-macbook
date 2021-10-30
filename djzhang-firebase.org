@@ -10,3 +10,22 @@
    https://firebase.nuxtjs.org/
    https://github.com/nuxt-community/firebase-module
   
+* firebase cli
+   https://firebase.google.com/docs/cli
+
+** A Practical Approach to Cloud Functions for Firebase: Direct Calls   
+   https://medium.com/firebase-developers/a-practical-approach-to-cloud-functions-for-firebase-direct-calls-f38ec7f5981c
+   [https://medium.com/firebase-developers/a-practical-approach-to-cloud-functions-for-firebase-direct-calls-f38ec7f5981c]
+
+
+   
+
+
+
+
+
+
+
+
+
+   
