@@ -40,12 +40,24 @@
 
 (defconst djzhang-packages
   '(
+    ;; https://github.com/Davoodeh/dart-snippets    
+    ;; dart-snippets
+    ;; https://github.com/emacs-php/jetbrains.el   
     jetbrains
+    ;; https://github.com/bbatsov/super-save   
     super-save))
 
 (defun djzhang/post-init-eww ()
    "docstring"
    (message "djzhang [post]: eww!"))
+
+(defun djzhang/init-dart-snippets ()
+    "docstring"
+    (message "djzhang [init]: dart-snippets!")
+    ;; (use-package dart-snippets
+    ;;     :ensure t
+    ;; )
+)
 
 (defun djzhang/init-jetbrains ()
   "docstring"
