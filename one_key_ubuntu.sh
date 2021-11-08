@@ -62,7 +62,9 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 ## v2ray   
      mkdir /etc/v2ray
      # cd /root/.oh-my-zsh-macbook
-     cp "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
+     if [ ! -f /etc/v2ray/config.json ]; then
+         cp "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
+     fi
      # docker run \
      #        --restart=always \
      #        -d --name v2ray \
