@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Trujunzhang"
+      user-mail-address "trujunzhang@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -71,3 +71,11 @@
 ;; How to set the default style of Emacs startup, such as full screen and font size
 ;; https://github.com/hlissner/doom-emacs/issues/2652
 (add-hook 'window-setup-hook #'toggle-frame-fullscreen)
+
+;; https://github.com/bbatsov/super-save
+(use-package! super-save
+  :config
+  (progn
+    (super-save-mode +1)))
+
+(load! "+mail")
