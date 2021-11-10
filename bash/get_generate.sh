@@ -104,8 +104,7 @@ class ${CLASSNAME}Controller extends GetxController {
 //==========================================================
 // UI Events
 //==========================================================
-  onIconPress() {
-  }
+  onIconPress() {}
 
 }
 EOF

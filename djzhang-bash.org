@@ -40,6 +40,13 @@
     EOF
   #+END_SRC
   
+* How to Force cp Command to Overwrite without Confirmation
+  The best way to force the overwrite is to use a backward slash
+  before the cp command as shown in the following example.
+  Here, we are copying contents of the bin directory to test directory.
+  #+BEGIN_SRC bash
+    cp -r bin test
+  #+END_SRC
 
 * no such file or directory mkdir 
   To ensure that all of the required directories are created,

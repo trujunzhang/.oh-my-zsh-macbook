@@ -62,9 +62,7 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 ## v2ray   
      mkdir /etc/v2ray
      # cd /root/.oh-my-zsh-macbook
-     if [ ! -f /etc/v2ray/config.json ]; then
-         cp "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
-     fi
+     cp -r "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
      # docker run \
      #        --restart=always \
      #        -d --name v2ray \
@@ -82,21 +80,11 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
 ## bash file
 
-      if [ -f /usr/bin/yl ]; then
-          rm /usr/bin/yl
-      fi
-      if [ ! -f /usr/bin/yl ]; then
-          cp "$CURRENT/bash/yl.sh" /usr/bin/yl
-          sudo chmod +x /usr/bin/yl
-      fi
+      cp -r "$CURRENT/bash/yl.sh" /usr/bin/yl
+      sudo chmod +x /usr/bin/yl
 
-      if [ -f /usr/bin/yl ]; then
-          rm /usr/bin/ydlcron
-      fi
-      if [ ! -f /usr/bin/ydlcron ]; then
-          cp "$CURRENT/bash/ydlcron.sh" /usr/bin/ydlcron
-          sudo chmod +x /usr/bin/ydlcron
-      fi
+      cp -r "$CURRENT/bash/ydlcron.sh" /usr/bin/ydlcron
+      sudo chmod +x /usr/bin/ydlcron
 
 
 

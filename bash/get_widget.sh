@@ -79,6 +79,7 @@ import 'package:app_rest/app_rest.dart';
 import 'state.dart';
 
 class ${CLASSNAME}Controller extends GetxController {
+  PageController pageController = Get.find();
 
   final state = ${CLASSNAME}State();
 
@@ -86,6 +87,12 @@ class ${CLASSNAME}Controller extends GetxController {
   void onInit() {
     super.onInit();
   }
+
+//==========================================================
+// UI Events
+//==========================================================
+  onIconPress() {}
+
 }
 EOF
 fi
