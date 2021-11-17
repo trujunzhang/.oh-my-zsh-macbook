@@ -233,7 +233,7 @@ alias fdoctor='flutter doctor -v'
 alias fcreatelib="flutter create --template=package"
 alias fcreateapp="flutter create"
 alias frun='flutter run --verbose'
-alias frundev='flutter run -t lib/main_dev.dart'
+alias frundev='flutter run -t lib/main_dev.dart --web-port=1234'
 # https://dart.dev/null-safety/unsound-null-safety
 alias frunnull='flutter run --no-sound-null-safety'
 alias ftest='flutter test'
