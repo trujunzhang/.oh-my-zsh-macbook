@@ -93,6 +93,7 @@ fi
 # dart sdk
 # ======================================================================
 export PATH="$PATH:$HOME/Documents/dartSDK/bin"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 # flutter sdk
 # ======================================================================
