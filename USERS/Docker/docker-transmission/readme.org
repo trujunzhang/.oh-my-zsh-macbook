@@ -2,3 +2,9 @@
   https://github.com/linuxserver/docker-transmission
 
 
+** docker
+      - HOST_WHITELIST=dnsnane list #optional
+       
+
+
+      
