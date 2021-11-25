@@ -20,8 +20,8 @@ services:
 #      - "/folder_on_disk/ssl:/etc/ssl/private/"
     environment:
       PUBLICHOST: "localhost"
-      FTP_USER_NAME: deploy
-      FTP_USER_PASS: deploy
+      FTP_USER_NAME: djzhang
+      FTP_USER_PASS: wanghaoFTP@720
       FTP_USER_HOME: /home/deploy
 # also for ssl/tls:
 #      ADDED_FLAGS: "--tls=2"

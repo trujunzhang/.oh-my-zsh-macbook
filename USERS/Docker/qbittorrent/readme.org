@@ -4,4 +4,8 @@ https://hub.docker.com/r/linuxserver/qbittorrent
 ** Login Account
 The webui is at <your-ip>:8080 and the default username/password is admin/adminadmin.
 
+** configure
+Config path: /home/deploy/data/config/qBittorrent/qBittorrent.conf
+  username: djzhang
+  passwd:   wanghaoADMIN@720
 
