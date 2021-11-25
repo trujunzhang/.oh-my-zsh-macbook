@@ -1,14 +1,20 @@
 * win10 homepage
    $ https://www.microsoft.com/en-us/software-download/windows10ISO
 
-* win10 install
-**  Windows To Go
+** win10 install
+***  Windows To Go
 
-* pcmaster
-   https://mofang.ruanmei.com/
+* Win11 homepage
+   https://www.microsoft.com/software-download/windows11
    
-* disable auto update
+* Configure   
+** disable auto update
    https://monovm.com/blog/disable-windows-update-from-group-policy/
-   
+
+* Tools   
+** pcmaster
+   https://mofang.ruanmei.com/
+
+
    
    
