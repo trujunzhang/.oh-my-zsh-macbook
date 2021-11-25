@@ -54,6 +54,8 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
      sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
   
 ## docker-pure-ftpd & qbittorrent
+     cd "$CURRENT/USERS/Docker/docker-transmission"
+     docker-compose up -d
      cd "$CURRENT/USERS/Docker/docker-pure-ftpd"
      docker-compose up -d
      cd "$CURRENT/USERS/Docker/qbittorrent"
