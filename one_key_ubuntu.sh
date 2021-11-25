@@ -58,6 +58,7 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
      docker-compose up -d
      cd "$CURRENT/USERS/Docker/qbittorrent"
      docker-compose up -d
+     mkdir -p /home/deploy/data/config/qBittorrent
      cp -r "$CURRENT/USERS/Docker/qbittorrent/qBittorrent.conf" /home/deploy/data/config/qBittorrent/qBittorrent.conf
 
 ## v2ray   
