@@ -10,7 +10,7 @@ services:
       - TRANSMISSION_WEB_HOME=/combustion-release/ #optional
       - USER=djzhang #optional
       - PASS=wanghaoADMIN@720 #optional
-      - WHITELIST="192.168.*.* 127.0.0.1" #optional
+      - WHITELIST=192.168.*.* 127.0.0.1 #optional
     volumes:
       - /home/deploy/data/config:/config
       - /home/deploy/data/torrent:/downloads
