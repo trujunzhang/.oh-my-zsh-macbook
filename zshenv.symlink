@@ -18,6 +18,8 @@ export GIT_EDITOR='nvim'
 # [[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
 
 # all export [PATH]
+# my custom bins
+export PATH="/Users/djzhang/Documents/Organizations/__APPLICATIONS/BinApps:$PATH"
 # ======================================================================
 # Android Studio installed automatically
 export ANDROID_HOME=/Users/djzhang/Library/Android/sdk
