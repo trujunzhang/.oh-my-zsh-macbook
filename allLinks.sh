@@ -172,11 +172,14 @@ directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-m
 fileLink ".zsh(env)"  "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
 fileLink ".zsh(rc)"   "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink"  "$HOME/.zshrc"
 
+# jetbrains's ideavim(config)
+fileLink ".ideavim(config)" "$TRUJUNZHANG_DOTFILES_HOME/ideavimrc.symlink" "$HOME/.ideavimrc"
+
 # editor(config)
 fileLink ".editor(config)"  "$TRUJUNZHANG_DOTFILES_HOME/editorconfig.symlink" "$HOME/.editorconfig"
 
 # git(config)
-fileLink ".git(config)"  "$TRUJUNZHANG_DOTFILES_HOME/gitconfig.symlink" "$HOME/.gitconfig"
+fileLink ".git(config)"     "$TRUJUNZHANG_DOTFILES_HOME/gitconfig.symlink" "$HOME/.gitconfig"
 
 # bash
 fileLink ".bash(profile)"   "$TRUJUNZHANG_DOTFILES_HOME/bash_profile.symlink"  "$HOME/.bash_profile"
