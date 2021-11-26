@@ -3,6 +3,7 @@
 
 ** win10 install
 ***  Windows To Go
+   https://bbs.luobotou.org/thread-761-1-1.html
 
 * Win11 homepage
    https://www.microsoft.com/software-download/windows11
