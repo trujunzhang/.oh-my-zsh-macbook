@@ -140,8 +140,11 @@ ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 # IDE(Sublime Merge)
 ln -s "//Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 
+# Path
+fileLink   "studio(path)"   "$ORGANIZATIONS_HOME/__APPLICATIONS/BinApps/studio"   "/usr/local/bin/studio"
+
 # nginx default site
-directoryLink  "nginx(site)"         "$CACHES_HOME/www"    "/usr/local/var/www"
+# directoryLink  "nginx(site)"         "$CACHES_HOME/www"    "/usr/local/var/www"
 
 # DOT_VIM
 mkdir "$HOME/.config"
