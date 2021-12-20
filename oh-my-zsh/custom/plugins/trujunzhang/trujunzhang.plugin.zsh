@@ -263,6 +263,13 @@ alias frunupdate='./maintain/run_update.sh'
 alias fcoderest='cd plugin/app_rest && code .'
 alias fcodelanguage='cd plugin/app_language && code .'
 
+# Global library
+# Splitting up large code bases into separate independently versioned packages is extremely useful for code sharing.
+# https://pub.dev/packages/melos
+# Automatically generate the dart file for pubspec.yaml
+# https://pub.dev/packages/flutter_asset_generator
+alias fglobal='pub global activate melos && pub global activate flutter_asset_generator'
+
 # Firebase-tool
 alias fblogin='firebase login'
 alias fbcreatefunction='firebase init functions'
