@@ -262,6 +262,7 @@ alias frunupdate='./maintain/run_update.sh'
 # library
 alias fcoderest='cd plugin/app_rest && code .'
 alias fcodelanguage='cd plugin/app_language && code .'
+alias fassets='fgen --no-watch -o plugin/app_config/lib/src/resource.dart'
 
 # Global library
 # Splitting up large code bases into separate independently versioned packages is extremely useful for code sharing.

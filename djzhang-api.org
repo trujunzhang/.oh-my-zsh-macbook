@@ -9,3 +9,13 @@
    https://www.themoviedb.org/settings/api
    API Key (v3 auth): 4404a9b19ecba087c96939f96dfeffd2
    
+* figma
+
+ myPrivateApp's token: 
+// ============================================
+296311-17d2bbab-044d-415d-9be0-e1d088fb2a01
+// ============================================
+
+
+
+
