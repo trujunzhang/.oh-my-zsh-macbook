@@ -40,17 +40,17 @@ if [ ! -d  ~/Library/autojump ]; then
     brew install autojump
 fi
 
-## git
-if ! command_exists git; then
-    brew install git
-fi
-
 ## emacs
 if [ ! -d  /usr/local/opt/emacs-plus@28 ]; then
     brew tap d12frosted/emacs-plus
     brew install emacs-plus@28 --with-spacemacs-icon
     brew link emacs-plus@28
     open /usr/local/opt/emacs-plus@28
+fi
+
+## git
+if [ ! -f /usr/local/bin/git ]; then
+    brew install git
 fi
 
 ## font-fira
