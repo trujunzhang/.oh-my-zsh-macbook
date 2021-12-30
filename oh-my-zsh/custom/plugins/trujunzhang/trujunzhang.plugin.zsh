@@ -223,6 +223,7 @@ alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --a
 alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
 
 # xcode
+alias xcodeselect='sudo xcode-select --switch /Volumes/MacApp/Applications/Xcode.app/Contents/Developer'
 alias iosopen='open -a Simulator'
 alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 
@@ -253,6 +254,7 @@ alias fdartupdate='dart pub upgrade --null-safety'
 alias fpubspecout='flutter pub outdated'
 alias fanalyze='flutter analyze'
 alias fsdkout='rm -f flutter && fdoctor > flutter '
+alias frmlocks="find . -name 'pubspec.lock' -type f | xargs rm -rf"
 
 # plugins
 alias fintlgenerate='flutter pub run intl_utils:generate'
@@ -266,11 +268,21 @@ alias fcodelanguage='cd plugin/app_language && code .'
 alias fassets='fgen --no-watch -o ../packages/app_config/lib/src/resource.dart'
 
 # Global library
-# Splitting up large code bases into separate independently versioned packages is extremely useful for code sharing.
-# https://pub.dev/packages/melos
-# Automatically generate the dart file for pubspec.yaml
-# https://pub.dev/packages/flutter_asset_generator
-alias fglobal='pub global activate melos && pub global activate flutter_asset_generator'
+# melos
+#   Splitting up large code bases into separate independently versioned packages is extremely useful for code sharing.
+#   https://pub.dev/packages/melos
+# asset generator
+#   Automatically generate the dart file for pubspec.yaml
+#   https://pub.dev/packages/flutter_asset_generator
+# dartdoc
+#   Use dartdoc to generate HTML documentaton for your Dart package.
+#   https://pub.dev/packages/dartdoc
+# dhttpd
+#   An easy way to run an HTTP server locally is to use the dhttpd package.
+#   https://pub.dev/packages/dhttpd
+alias fglobal='pub global activate melos && pub global activate flutter_asset_generator && pub global activate dartdoc && pub global activate dhttpd'
+alias fgendoc='dartdoc'
+alias fdochttp='dhttpd --path doc/api'
 
 # Firebase-tool
 alias fblogin='firebase login'

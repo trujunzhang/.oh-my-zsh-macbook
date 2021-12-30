@@ -9,6 +9,13 @@
    Melos is a CLI tool used to help manage Dart projects with multiple packages.
    https://docs.page/invertase/melos
    
+** dartdoc
+   Use dartdoc to generate HTML documentaton for your Dart package.
+   https://pub.dev/packages/dartdoc
+
+*** Effective Dart: Documentation
+   https://dart.dev/guides/language/effective-dart/documentation
+  
 
 ** Internationalizing Flutter apps
    https://flutter.dev/docs/development/accessibility-and-localization/internationalization
