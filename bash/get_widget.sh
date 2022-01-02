@@ -7,6 +7,7 @@ PACKAGENAME=$2
 
 if [ ! -d "$CURRENT/widgets" ]; then
     mkdir "$CURRENT/widgets"
+    touch "$CURRENT/widgets/index.dart"
 fi
 
 if [ ! -f "$CURRENT/view.dart" ]; then

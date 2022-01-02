@@ -95,6 +95,10 @@ fi
 cp -r "$CURRENT/bash/get_generate.sh" /usr/local/bin/get_generate
 chmod +x /usr/local/bin/get_generate
 
+# flutter tool(getx no binding)
+cp -r "$CURRENT/bash/get_no_binding_page.sh" /usr/local/bin/get_no_binding_page
+chmod +x /usr/local/bin/get_no_binding_page
+
 # flutter tool(getx widget)
 cp -r "$CURRENT/bash/get_widget.sh" /usr/local/bin/get_widget
 chmod +x /usr/local/bin/get_widget

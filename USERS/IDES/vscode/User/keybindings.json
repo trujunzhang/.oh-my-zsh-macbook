@@ -51,5 +51,13 @@
     {
         "key": "cmd+k f",
         "command": "eslint.executeAutofix"
+    },
+    {
+      "key": "cmd+k a",
+      "command": "editor.action.fixAll"
+    },
+    {
+      "key": "cmd+alt+l",
+      "command": "editor.action.formatDocument"
     }
 ]

@@ -15,24 +15,6 @@ if [ ! -d "$CURRENT/widgets" ]; then
     touch "$CURRENT/widgets/index.dart"
 fi
 
-if [ ! -f "$CURRENT/bindings.dart" ]; then
-    bindingsFile="$CURRENT/bindings.dart"
-
-    cat > "$bindingsFile" <<EOF
-import 'package:get/get.dart';
-
-import 'controller.dart';
-
-class ${CLASSNAME}Binding implements Bindings {
-  @override
-  void dependencies() {
-    Get.put<${CLASSNAME}Controller>(${CLASSNAME}Controller());
-  }
-}
-EOF
-
-fi
-
 if [ ! -f "$CURRENT/view.dart" ]; then
     viewFile="$CURRENT/view.dart"
     cat > "$viewFile" <<EOF
@@ -43,8 +25,32 @@ import 'package:my_plugin/my_plugin.dart';
 
 import 'index.dart';
 
-class ${CLASSNAME}Page extends GetWidget<${CLASSNAME}Controller> {
+
+class ${CLASSNAME}Page extends StatefulWidget {
   const ${CLASSNAME}Page({Key? key}) : super(key: key);
+
+  @override
+  _${CLASSNAME}PageState createState() => _${CLASSNAME}State();
+}
+
+class _${CLASSNAME}PageState extends State<${CLASSNAME}Page> {
+  late ${CLASSNAME}Controller controller;
+  String tag = documentIdFromCurrentDate();
+
+  @override
+  void initState() {
+    super.initState();
+
+    controller = Get.put<${CLASSNAME}Controller>(
+        ${CLASSNAME}Controller(),
+        tag: tag);
+  }
+
+  @override
+  void dispose() {
+    Get.delete<${CLASSNAME}Controller>(tag: tag);
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -120,13 +126,14 @@ library ${PACKAGENAME};
 //    GetPage(
 //      name: Routes.INITIAL,
 //      page: () => const ${CLASSNAME}Page(),
-//      binding: ${CLASSNAME}Binding(),
 //    ),
 
-export './bindings.dart'; 
 export './view.dart'; 
 export './state.dart'; 
 export './controller.dart'; 
 EOF
 fi
+
+
+
 
