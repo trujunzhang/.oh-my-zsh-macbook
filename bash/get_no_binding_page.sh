@@ -65,7 +65,7 @@ class _${CLASSNAME}PageState extends State<${CLASSNAME}Page> {
   }
 
   Widget _buildBody(BuildContext context) {
-    return Container();
+    return Container(color: Colors.red,);
   }
 }
 EOF

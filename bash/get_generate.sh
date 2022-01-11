@@ -59,7 +59,7 @@ class ${CLASSNAME}Page extends GetWidget<${CLASSNAME}Controller> {
   }
 
   Widget _buildBody(BuildContext context) {
-    return Container();
+    return Container(color: Colors.red,);
   }
 }
 EOF

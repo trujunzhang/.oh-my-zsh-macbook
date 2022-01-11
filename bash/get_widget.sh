@@ -43,7 +43,7 @@ class _${CLASSNAME}State extends State<${CLASSNAME}> {
   }
 
   Widget _buildBody(BuildContext context) {
-    return Container();
+    return Container(color: Colors.red,);
   }
 
   @override
