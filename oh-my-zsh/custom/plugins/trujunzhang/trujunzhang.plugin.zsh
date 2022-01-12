@@ -225,6 +225,9 @@ alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Content
 # xcode
 alias xcodeselect='sudo xcode-select --switch /Volumes/MacApp/Applications/Xcode.app/Contents/Developer'
 alias iosopen='open -a Simulator'
+alias ioslist='xcrun simctl list devices available'
+alias iosiphone8='open -a Simulator --args -CurrentDeviceUDID 4011447B-DF37-47A7-8C7D-C4E578B5B976 iPhone8'
+alias iosiphone13pro='open -a Simulator --args -CurrentDeviceUDID E7A90CEB-9487-450D-B037-876248C41D6A iPhone13pro'
 alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 
 # Flutter
