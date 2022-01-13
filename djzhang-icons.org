@@ -1,0 +1,14 @@
+* flutter_icons
+   https://pub.dev/packages/flutter_icons
+
+** MaterialIcons   
+   https://fonts.google.com/icons?selected=Material+Icons
+
+
+* font_awesome_flutter
+   https://fontawesome.com/v5.15/icons?d=gallery&p=2
+
+   
+
+
+

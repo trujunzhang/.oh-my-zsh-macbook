@@ -16,6 +16,9 @@
 *** Effective Dart: Documentation
    https://dart.dev/guides/language/effective-dart/documentation
   
+** flutter_launcher_icons_maker
+   A command-line tool which simplifies the task of updating your Flutter app's launcher icon. 
+   https://pub.dev/packages/flutter_launcher_icons_maker
 
 ** Internationalizing Flutter apps
    https://flutter.dev/docs/development/accessibility-and-localization/internationalization

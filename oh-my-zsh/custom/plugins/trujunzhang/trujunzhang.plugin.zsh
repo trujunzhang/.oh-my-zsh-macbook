@@ -262,6 +262,7 @@ alias frmlocks="find . -name 'pubspec.lock' -type f | xargs rm -rf"
 # plugins
 alias fintlgenerate='flutter pub run intl_utils:generate'
 alias fbuildgenerate='flutter pub run build_runner build --delete-conflicting-outputs'
+alias flaunchericonsgenerate='flutter pub run flutter_launcher_icons_maker:main'
 alias frungenerate='./maintain/run_generate.sh'
 alias frunupdate='./maintain/run_update.sh'
 
