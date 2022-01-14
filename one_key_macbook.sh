@@ -42,6 +42,7 @@ fi
 
 ## emacs
 if [ ! -d  /usr/local/opt/emacs-plus@28 ]; then
+    ## url = https://github.com/emacs-mirror/emacs.git
     brew tap d12frosted/emacs-plus
     brew install emacs-plus@28 --with-spacemacs-icon
     brew link emacs-plus@28

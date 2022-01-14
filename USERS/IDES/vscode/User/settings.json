@@ -1180,5 +1180,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "jsonToDart.codeGenerator": "JSON",
     "jsonToDart.targetDirectory.path": "/src/entities",
-    "dart.warnWhenEditingFilesOutsideWorkspace": false
+    "dart.warnWhenEditingFilesOutsideWorkspace": false,
+    "dart.flutterHotReloadOnSave": "always",
+    "dart.hotReloadOnSave": "always"
 }
