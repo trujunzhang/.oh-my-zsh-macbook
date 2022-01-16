@@ -15,6 +15,10 @@ if [ ! -d "$CURRENT/widgets" ]; then
     touch "$CURRENT/widgets/index.dart"
 fi
 
+if [ ! -f "$CURRENT/styles.dart" ]; then
+    touch "$CURRENT/styles.dart"
+fi
+
 if [ ! -f "$CURRENT/bindings.dart" ]; then
     bindingsFile="$CURRENT/bindings.dart"
 
