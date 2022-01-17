@@ -59,5 +59,9 @@
     {
       "key": "cmd+alt+l",
       "command": "editor.action.formatDocument"
+    },
+    {
+      "key": "cmd+r",
+      "command": "workbench.action.debug.start"
     }
 ]

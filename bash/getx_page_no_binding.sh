@@ -16,7 +16,24 @@ if [ ! -d "$CURRENT/widgets" ]; then
 fi
 
 if [ ! -f "$CURRENT/styles.dart" ]; then
-    touch "$CURRENT/styles.dart"
+    stylesFile="$CURRENT/styles.dart"
+    cat > "$stylesFile" <<EOF
+import 'package:flutter/material.dart';
+import 'package:mix/mix.dart';
+
+const title = Variant('title');
+
+Mix get overlay {
+  return Mix(
+    margin(8),
+    title(
+      titleCase(),
+    ),
+  );
+}
+
+EOF
+
 fi
 
 if [ ! -f "$CURRENT/view.dart" ]; then
@@ -27,8 +44,8 @@ import 'package:get/get.dart';
 import 'package:app_language/langs/l10n.dart';
 import 'package:my_plugin/my_plugin.dart';
 
+import 'styles.dart';
 import 'index.dart';
-
 
 class ${CLASSNAME}Page extends StatefulWidget {
   const ${CLASSNAME}Page({Key? key}) : super(key: key);

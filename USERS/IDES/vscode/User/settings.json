@@ -1182,5 +1182,6 @@
     "jsonToDart.targetDirectory.path": "/src/entities",
     "dart.warnWhenEditingFilesOutsideWorkspace": false,
     "dart.flutterHotReloadOnSave": "always",
-    "dart.hotReloadOnSave": "always"
+    "dart.hotReloadOnSave": "always",
+    "dart.showInspectorNotificationsForWidgetErrors": false
 }
