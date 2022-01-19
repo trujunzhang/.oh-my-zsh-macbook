@@ -63,5 +63,9 @@
     {
       "key": "cmd+r",
       "command": "workbench.action.debug.start"
-    }
+    },
+    {
+      "key": "cmd+s",
+      "command": "workbench.action.splitEditorDown"
+    },
 ]
