@@ -1,0 +1,64 @@
+* {{Continuous delivery with Flutter}}
+  https://docs.flutter.dev/deployment/cd
+
+* Circleci
+  https://circleci.com/ 
+
+** Sample config.yml Files   
+  https://circleci.com/docs/2.0/sample-config/?utm_source=google&utm_medium=sem&utm_campaign=sem-google-dg--uscan-en-dsa-maxConv-auth-nb&utm_term=g_-_c__dsa_&utm_content=&gclid=Cj0KCQiAip-PBhDVARIsAPP2xc0UwhZQH2lGjfsIJ2msHbjhGtVENkAU_q-STZoy2__Myj_6JqwmU8gaAhp0EALw_wcB
+
+** blog
+*** Codemagic vs CircleCI: In depth comparison
+   https://blog.codemagic.io/circleci-vs-codemagic/
+
+* codemagic   
+   https://codemagic.io/start/
+
+** codemagic.yaml   
+  https://docs.codemagic.io/yaml/yaml-getting-started/ 
+
+* Fastlane
+  https://docs.fastlane.tools/
+
+** blog
+*** Building and deploying Flutter apps with Fastlane
+   https://circleci.com/blog/deploy-flutter-android/
+*** Flutter and fastlane, how to setup an iOS continuous delivery solution   
+   https://benoitpasquier.com/fastlane-flutter-ios/
+
+* Bitrise
+  https://www.bitrise.io/
+   
+* Appcircle
+  https://appcircle.io/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
