@@ -1153,7 +1153,6 @@
     "[sass]": {
         "editor.defaultFormatter": "michelemelluso.code-beautifier"
     },
-    "dart.openDevTools": "flutter",
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,

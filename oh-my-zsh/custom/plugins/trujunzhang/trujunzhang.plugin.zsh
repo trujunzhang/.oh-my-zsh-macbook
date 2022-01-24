@@ -236,8 +236,10 @@ alias fkill="killall -9 dart"
 alias fdoctor='flutter doctor -v'
 alias fcreatelib="flutter create --template=package"
 alias fcreateapp="flutter create"
-alias frun='flutter run --verbose'
-alias frundev='flutter run -t lib/main_dev.dart --web-port=1234'
+alias frunapp='flutter run --verbose'
+alias frundevapp='flutter run -t lib/main_dev.dart --web-port=1234'
+alias frunweb='flutter run --verbose --web-port=1234 -d chrome'
+alias frundevweb='flutter run -t lib/main_dev.dart --web-port=1234 -d chrome'
 # https://dart.dev/null-safety/unsound-null-safety
 alias frunnull='flutter run --no-sound-null-safety'
 alias ftest='flutter test'
