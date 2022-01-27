@@ -237,9 +237,9 @@ alias fdoctor='flutter doctor -v'
 alias fcreatelib="flutter create --template=package"
 alias fcreateapp="flutter create"
 alias frunapp='flutter run --verbose'
-alias frundevapp='flutter run -t lib/main_dev.dart --web-port=1234'
+alias frunappdev='flutter run -t lib/main_dev.dart --web-port=1234'
 alias frunweb='flutter run --verbose --web-port=1234 -d chrome'
-alias frundevweb='flutter run -t lib/main_dev.dart --web-port=1234 -d chrome'
+alias frunwebdev='flutter run -t lib/main_dev.dart --web-port=1234 -d chrome'
 # https://dart.dev/null-safety/unsound-null-safety
 alias frunnull='flutter run --no-sound-null-safety'
 alias ftest='flutter test'
@@ -254,7 +254,9 @@ alias fjson='flutter packages pub run json_model'
 # https://flutter.dev/docs/development/tools/web-renderers
 alias fwebrun='flutter run -d chrome --web-hostname localhost --web-port 5000'
 alias fwebrelease='flutter build web --release'
-alias fpubspecupdate='flutter pub upgrade --major-versions'
+# alias fpubspecupdate='flutter pub upgrade --major-versions'
+alias fpubspecupdate='flutter pub upgrade'
+alias fpubspecoutdated='flutter pub outdated'
 alias fdartupdate='dart pub upgrade --null-safety'
 alias fpubspecout='flutter pub outdated'
 alias fanalyze='flutter analyze'
@@ -267,6 +269,7 @@ alias fbuildgenerate='flutter pub run build_runner build --delete-conflicting-ou
 alias flaunchericonsgenerate='flutter pub run flutter_launcher_icons_maker:main'
 alias frungenerate='./scripts/run_generate.sh'
 alias frunupdate='./scripts/run_update.sh'
+alias fruntest='./scripts/run_test.sh'
 
 # library
 alias fcoderest='cd plugin/app_rest && code .'
