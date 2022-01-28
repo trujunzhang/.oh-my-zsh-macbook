@@ -1,8 +1,8 @@
 #!/bin/bash
 
-start=$1
-end=$2
-list=$3
+start=$2
+end=$3
+list=$4
 
 
 # for i in {1..22}
