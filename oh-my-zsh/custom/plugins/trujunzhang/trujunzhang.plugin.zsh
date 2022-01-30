@@ -236,10 +236,10 @@ alias fkill="killall -9 dart"
 alias fdoctor='flutter doctor -v'
 alias fcreatelib="flutter create --template=package"
 alias fcreateapp="flutter create"
-alias frunapp='flutter run --verbose'
-alias frunappdev='flutter run -t lib/main_dev.dart --web-port=1234'
-alias frunweb='flutter run --verbose --web-port=1234 -d chrome'
-alias frunwebdev='flutter run -t lib/main_dev.dart --web-port=1234 -d chrome'
+alias frapp='flutter run --verbose'
+alias frappdev='flutter run -t lib/main_dev.dart --web-port=1234'
+alias frweb='flutter run --verbose --web-port=1234 -d chrome'
+alias frwebdev='flutter run -t lib/main_dev.dart --web-port=1234 -d chrome'
 # https://dart.dev/null-safety/unsound-null-safety
 alias frunnull='flutter run --no-sound-null-safety'
 alias ftest='flutter test'
@@ -267,9 +267,9 @@ alias frmlocks="find . -name 'pubspec.lock' -type f | xargs rm -rf"
 alias fintlgenerate='flutter pub run intl_utils:generate'
 alias fbuildgenerate='flutter pub run build_runner build --delete-conflicting-outputs'
 alias flaunchericonsgenerate='flutter pub run flutter_launcher_icons_maker:main'
-alias frungenerate='./scripts/run_generate.sh'
-alias frunupdate='./scripts/run_update.sh'
-alias fruntest='./scripts/run_test.sh'
+alias frgenerate='./scripts/run_generate.sh'
+alias frupdate='./scripts/run_update.sh'
+alias frtest='./scripts/run_test.sh'
 
 # library
 alias fcoderest='cd plugin/app_rest && code .'
