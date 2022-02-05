@@ -22,22 +22,6 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
         VPN_PASSWORD='test' \
         sh vpnsetup.sh
 
-# Oh My Zsh
-    sudo apt install -y zsh
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-    #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
-    rm /root/.zshrc
-    cp -r "$CURRENT/zshrc_ubuntu.symlink" /root/.zshrc
-
-## plugins
-
-    if [ -d /root/.oh-my-zsh/custom/plugins/trujunzhang ]; then
-        rm -rf /root/.oh-my-zsh/custom/plugins/trujunzhang
-    fi
-
-    cp -r "$CURRENT/oh-my-zsh/custom/plugins/trujunzhang"  /root/.oh-my-zsh/custom/plugins/trujunzhang 
-
 # zip a folder in Ubuntu Linux using the cli
       sudo apt install -y zip unzip
 
@@ -89,6 +73,24 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
       cp -r "$CURRENT/bash/ydlcron.sh" /usr/bin/ydlcron
       sudo chmod +x /usr/bin/ydlcron
+
+
+# Oh My Zsh
+      sudo apt install -y zsh
+      sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+      #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
+      rm /root/.zshrc
+      cp -r "$CURRENT/zshrc_ubuntu.symlink" /root/.zshrc
+
+## plugins
+
+      if [ -d /root/.oh-my-zsh/custom/plugins/trujunzhang ]; then
+          rm -rf /root/.oh-my-zsh/custom/plugins/trujunzhang
+      fi
+
+      cp -r "$CURRENT/oh-my-zsh/custom/plugins/trujunzhang"  /root/.oh-my-zsh/custom/plugins/trujunzhang 
+
 
 
 

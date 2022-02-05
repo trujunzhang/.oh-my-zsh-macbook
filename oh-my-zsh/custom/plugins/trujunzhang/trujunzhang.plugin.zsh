@@ -293,6 +293,13 @@ alias fglobal='pub global activate melos && pub global activate flutter_asset_ge
 alias fgendoc='dartdoc'
 alias fdochttp='dhttpd --path doc/api'
 
+# VPS
+alias wsshbwg='ssh -p 27724 root@23.105.205.158'
+# alias wsshtmp='ssh root@'
+# alias wsshcopytmp='ssh-copy-id root@'
+alias wsshtmp='ssh root@45.77.253.206'
+alias wsshcopytmp='ssh-copy-id root@45.77.253.206'
+
 # Firebase-tool
 alias fblogin='firebase login'
 alias fbcreatefunction='firebase init functions'
