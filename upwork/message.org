@@ -4,16 +4,25 @@
 
 Hi I am very interested in this project and would like to offer you my services for your project
 I have more than 10 years experienced in making mobile app works
-I completed more than 27 projects here
+I completed more than 27 projects 
 
 I will do this in less than 24 hours please message me
 
-i will not disappoint you with my work and will give u a high quality work for sure
+I will not disappoint you with my work and will give u a high quality work for sure
 
 
+* flutter
 
+Hi I am very interested in this project and would like to offer you my services for your project.
 
+The following is what my proposals is: 
+  1. The Clean Architecture
+     Using library 'Getx' to bind Firebase's Stream.
+     
+  2. One module one Library. Unit test in each libraries.
+  3. Using 'sentry' online services to monitor all exceptions.
 
+I will not disappoint you with my work and will give u a high quality work for sure
 
 
 

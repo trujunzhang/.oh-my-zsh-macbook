@@ -8,6 +8,9 @@
 # CURRENT=`pwd`
 CURRENT='/root/.oh-my-zsh-macbook'
 
+## install zsh
+sudo apt install -y zsh
+
 # Tools
 sudo apt install -y curl vim
 
@@ -51,13 +54,13 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
      mkdir -p /etc/v2ray
      # cd /root/.oh-my-zsh-macbook
      cp -r "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
-     # docker run \
-     #        --restart=always \
-     #        -d --name v2ray \
-     #        -v /etc/v2ray:/etc/v2ray \
-     #        -p 8888:8888\
-     #        v2ray/official  v2ray \
-     #        -config=/etc/v2ray/config.json
+     docker run \
+            --restart=always \
+            -d --name v2ray \
+            -v /etc/v2ray:/etc/v2ray \
+            -p 8888:8888\
+            v2ray/official  v2ray \
+            -config=/etc/v2ray/config.json
 
 # yt-dlp
      python3 -m pip install --upgrade yt-dlp
@@ -89,9 +92,6 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
       fi
 
       cp -r "$CURRENT/oh-my-zsh/custom/plugins/trujunzhang"  /root/.oh-my-zsh/custom/plugins/trujunzhang 
-
-## install zsh
-      sudo apt install -y zsh
 
 
 
