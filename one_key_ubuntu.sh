@@ -76,7 +76,6 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
 
 # Oh My Zsh
-      sudo apt install -y zsh
       sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
       #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
@@ -90,6 +89,9 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
       fi
 
       cp -r "$CURRENT/oh-my-zsh/custom/plugins/trujunzhang"  /root/.oh-my-zsh/custom/plugins/trujunzhang 
+
+## install zsh
+      sudo apt install -y zsh
 
 
 
