@@ -203,10 +203,6 @@ alias crunand="cocos run -p android"
 
 alias crunand86="cocos run -p android --ap android-21 --app-aib x86"
 
-# digital ocean
-
-alias wsshp="ssh root@139.59.15.125"
-
 # Expo
 alias exps="exp start"
 alias expios="exp ios"
@@ -298,8 +294,8 @@ alias wsshbwg='ssh -p 27724 root@23.105.205.158'
 alias wsshcopybwg='ssh-copy-id -p 27724 root@23.105.205.158'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh root@45.77.33.43'
-alias wsshcopytmp='ssh-copy-id root@45.77.33.43'
+alias wsshtmp='ssh root@45.76.220.13'
+alias wsshcopytmp='ssh-copy-id root@45.76.220.13'
 
 # Firebase-tool
 alias fblogin='firebase login'

@@ -4,3 +4,9 @@
 *** Icons 4 Design
    http://emsoftware.com/xdplugins/icons-4-design/
    
+*** Global-Font-Replace-for-Adobe-XD
+
+   https://github.com/adamcoulombe/Global-Font-Replace-for-Adobe-XD
+
+   
+   
