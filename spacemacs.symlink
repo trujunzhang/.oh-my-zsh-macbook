@@ -78,7 +78,7 @@ This function should only modify configuration layer settings."
 
      (dart :variables
            dart-backend 'lsp
-           lsp-dart-sdk-dir "~/Documents/flutterSDK/bin/cache/dart-sdk")
+           lsp-dart-sdk-dir "~/Documents/flutter/bin/cache/dart-sdk")
 
      (typescript :variables
                  typescript-backend 'lsp

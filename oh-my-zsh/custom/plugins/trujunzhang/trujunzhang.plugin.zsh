@@ -294,8 +294,8 @@ alias wsshbwg='ssh -p 27724 root@23.105.205.158'
 alias wsshcopybwg='ssh-copy-id -p 27724 root@23.105.205.158'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh root@45.76.220.13'
-alias wsshcopytmp='ssh-copy-id root@45.76.220.13'
+alias wsshtmp='ssh root@158.247.213.28'
+alias wsshcopytmp='ssh-copy-id root@158.247.213.28'
 
 # Firebase-tool
 alias fblogin='firebase login'
