@@ -323,7 +323,7 @@ alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 
 # djzhang's git
-alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b develop"
+alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b work"
 
 # nvm
 alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file:///Users/djzhang/Documents/Organizations/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.38.0 && . ~/.nvm/nvm.sh && nvm install 12.13.1 && nvm use 12.13.1 && npm install -g yarn"
