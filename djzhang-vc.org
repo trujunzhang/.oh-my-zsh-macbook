@@ -5,6 +5,19 @@
 
 ** bitbucket
 
+** gitee
+   https://gitee.com/
+   email: trujunzhang@hotmail.com
+
+** coding   
+   https://coding.net/
+   email: wanghao720sn@sina.com
+
+** gitcode(csdn)
+   https://gitcode.net/explore
+
+** baidu
+   http://xiaolvyun.baidu.com/
 
 * git-flow
    https://danielkummer.github.io/git-flow-cheatsheet/

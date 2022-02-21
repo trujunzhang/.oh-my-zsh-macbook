@@ -1,3 +1,17 @@
+* Material Design
+** color system
+   https://api.flutter.dev/flutter/material/ColorScheme-class.html
+   
+   https://material.io/design/color/the-color-system.html#color-theme-creation
+
+   https://m3.material.io/styles/color/the-color-system/color-roles
+
+   https://www.shejidaren.com/material-design-thinking.html
+   
+   英文字体使用Roboto,中文字体使用Noto。
+   小知识：Noto有个中文名字叫思源黑体，并且是一个开源免费的字体，所以小伙伴以后就不要再用微软雅黑啦。
+
+   
 * Adobe XD
 ** plugins
 

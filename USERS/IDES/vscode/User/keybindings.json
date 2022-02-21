@@ -68,4 +68,8 @@
       "key": "cmd+s",
       "command": "workbench.action.splitEditorDown"
     },
+    {
+      "key": "cmd+e",
+      "command": "workbench.action.quickOpen"
+    }
 ]
