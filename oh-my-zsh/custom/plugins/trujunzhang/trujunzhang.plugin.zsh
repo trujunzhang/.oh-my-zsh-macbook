@@ -245,7 +245,9 @@ alias fpget='flutter packages get'
 alias fpgetlock='rm -f pubspec.lock && flutter packages get'
 alias fprundevgetlock='rm pubspec.lock && flutter packages get && flutter run -t lib/main_dev.dart'
 alias fpupdate='flutter pub upgrade'
-alias fapk='flutter build apk --split-per-abi --verbose'
+alias fbuildapk='flutter build apk --split-per-abi --verbose'
+# https://docs.flutter.dev/deployment/web
+alias fbuildweb='flutter build web'
 alias fjson='flutter packages pub run json_model'
 # https://flutter.dev/docs/development/tools/web-renderers
 alias fwebrun='flutter run -d chrome --web-hostname localhost --web-port 5000'
@@ -287,7 +289,8 @@ alias fassets='fgen --no-watch -o ../packages/app_config/lib/src/resource.dart'
 #   https://pub.dev/packages/dhttpd
 alias fglobal='pub global activate melos && pub global activate flutter_asset_generator && pub global activate dartdoc && pub global activate dhttpd'
 alias fgendoc='dartdoc'
-alias fdochttp='dhttpd --path doc/api'
+alias fhttpdoc='dhttpd --path doc/api'
+alias fhttpweb='dhttpd --path build/web'
 
 # VPS
 alias wsshbwg='ssh -p 27724 root@23.105.205.158'
