@@ -274,6 +274,10 @@ alias fcoderest='cd plugin/app_rest && code .'
 alias fcodelanguage='cd plugin/app_language && code .'
 alias fassets='fgen --no-watch -o ../packages/app_config/lib/src/resource.dart'
 
+# projects
+alias fcdapp='cd app'
+alias fcddocwidget='cd doc_widget_app'
+
 # Global library
 # melos
 #   Splitting up large code bases into separate independently versioned packages is extremely useful for code sharing.
