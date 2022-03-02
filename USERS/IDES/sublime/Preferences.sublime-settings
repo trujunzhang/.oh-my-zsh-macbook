@@ -7,5 +7,5 @@
 	"update_check": false,
 	"vintage_start_in_command_mode": true,
 	"theme": "auto",
-	"color_scheme": "Sixteen.sublime-color-scheme",
+	"color_scheme": "Packages/Github Color Theme/GitHub.tmTheme",
 }
