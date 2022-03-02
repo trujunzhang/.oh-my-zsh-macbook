@@ -73,10 +73,8 @@ ATOM_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/atom"
 ATOM_HOME_DEST="$USER_PROFILE_DJZHANG_HOME/.atom"
 ### IDES(Sublime)
 SUBLIME_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/sublime"
-### /Users/djzhang/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-SUBLIME_SUPPORT="$DEST_APPLICATION_SUPPOR/Sublime Text 3"
-SUBLIME_SUPPORT_PACKAGES="$DEST_APPLICATION_SUPPOR/Sublime Text 3/Packages"
-SUBLIME_SUPPORT_USER="$DEST_APPLICATION_SUPPOR/Sublime Text 3/Packages/User"
+### /Users/djzhang/Library/Application\ Support/Sublime\ Text\ /Packages/User
+SUBLIME_SUPPORT_USER="$DEST_APPLICATION_SUPPOR/Sublime Text/Packages/User"
 
 # Trujunzhag's vimrc
 VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
@@ -126,9 +124,7 @@ fileLink "config.cson(atom)"  "$ATOM_HOME_SOURCE/config.cson" "$ATOM_HOME_DEST/c
 fileLink "keymap.cson(atom)"  "$ATOM_HOME_SOURCE/keymap.cson" "$ATOM_HOME_DEST/keymap.cson"
 
 # IDES(Sublime)
-mkdir "$SUBLIME_SUPPORT"
-mkdir "$SUBLIME_SUPPORT_PACKAGES"
-mkdir "$SUBLIME_SUPPORT_USER"
+mkdir -p "$SUBLIME_SUPPORT_USER"
 fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_HOME_SOURCE/Preferences.sublime-settings" "$SUBLIME_SUPPORT_USER/Preferences.sublime-settings"
 SUBLIME_APP_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
 ln -sv "$SUBLIME_APP_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"

@@ -5,5 +5,7 @@
 	],
 	"save_on_focus_lost": true,
 	"update_check": false,
-	"vintage_start_in_command_mode": true
+	"vintage_start_in_command_mode": true,
+	"theme": "auto",
+	"color_scheme": "Sixteen.sublime-color-scheme",
 }

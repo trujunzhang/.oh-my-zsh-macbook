@@ -278,6 +278,9 @@ alias fassets='fgen --no-watch -o ../packages/app_config/lib/src/resource.dart'
 alias fcdapp='cd app'
 alias fcddocwidget='cd doc_widget_app'
 
+# install apk
+alias finstallapkrelease='adb install build/app/outputs/apk/release/app-arm64-v8a-release.apk'
+
 # Global library
 # melos
 #   Splitting up large code bases into separate independently versioned packages is extremely useful for code sharing.
