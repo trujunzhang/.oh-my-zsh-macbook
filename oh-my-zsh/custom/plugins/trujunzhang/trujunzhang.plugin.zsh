@@ -277,6 +277,7 @@ alias fassets='fgen --no-watch -o ../packages/app_config/lib/src/resource.dart'
 # projects
 alias fcdapp='cd app'
 alias fcddocwidget='cd doc_widget_app'
+alias fcdpgconfig='cd packages/app_config'
 
 # install apk
 alias finstallapkrelease='adb install build/app/outputs/apk/release/app-arm64-v8a-release.apk'
@@ -304,13 +305,18 @@ alias wsshbwg='ssh -p 27724 root@23.105.205.158'
 alias wsshcopybwg='ssh-copy-id -p 27724 root@23.105.205.158'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh root@158.247.213.28'
-alias wsshcopytmp='ssh-copy-id root@158.247.213.28'
+alias wsshtmp='ssh root@108.160.134.57'
+alias wsshcopytmp='ssh-copy-id root@108.160.134.57'
 
-# Firebase-tool
+# Firebase
+## Firebase-tool
 alias fblogin='firebase login'
 alias fbcreatefunction='firebase init functions'
 alias fbdeploy='firebase deploy --only functions'
+
+## Install, configure and integrate Local Emulator Suite
+alias femulatorsstart="firebase emulators:start"
+
 
 # python
 alias pjnote='jupyter notebook'
@@ -341,10 +347,6 @@ alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file:///Users/djzhang/Documen
 # cocoapods
 # https://blog.csdn.net/qq_41110569/article/details/106501098
 alias cocoapodsMaster="git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master"
-
-# Firebase
-# Install, configure and integrate Local Emulator Suite
-alias femulatorsstart="firebase emulators:start"
 
 # clojure
 alias crun='lein run'

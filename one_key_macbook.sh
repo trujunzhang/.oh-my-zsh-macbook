@@ -72,6 +72,7 @@ if ! command_exists yarn; then
     npm install -g yarn
     npm install -g npm-check-updates
     npm install -g monia-cli
+    npm install -g firebase-tools
 fi    
 
 ## typescript
@@ -85,10 +86,11 @@ if ! command_exists pod; then
 fi    
 
 # firebase cli
+## https://github.com/firebase/firebase-tools/releases
 if [ -f ~/Desktop/zip/firebase-tools-macos ]; then
     if [ ! -f /usr/local/bin/firebase ]; then
-        mv ~/Desktop/zip/firebase-tools-macos /usr/local/bin/firebase
-        chmod +x /usr/local/bin/firebase
+        # mv ~/Desktop/zip/firebase-tools-macos /usr/local/bin/firebase
+        # chmod +x /usr/local/bin/firebase
     fi
 fi
 
