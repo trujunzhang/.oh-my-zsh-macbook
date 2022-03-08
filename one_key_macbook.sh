@@ -94,6 +94,10 @@ if [ -f ~/Desktop/zip/firebase-tools-macos ]; then
     fi
 fi
 
+# flutter tool(getx style)
+cp -r "$CURRENT/bash/getx_style.sh" /usr/local/bin/getx_style
+chmod +x /usr/local/bin/getx_style
+
 # flutter tool(getx page)
 cp -r "$CURRENT/bash/getx_page.sh" /usr/local/bin/getx_page
 chmod +x /usr/local/bin/getx_page
