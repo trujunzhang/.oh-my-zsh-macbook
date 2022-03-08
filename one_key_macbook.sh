@@ -87,12 +87,12 @@ fi
 
 # firebase cli(pending)
 ## https://github.com/firebase/firebase-tools/releases
-if [ -f ~/Desktop/zip/firebase-tools-macos ]; then
-    if [ ! -f /usr/local/bin/firebase ]; then
+# if [ -f ~/Desktop/zip/firebase-tools-macos ]; then
+    # if [ ! -f /usr/local/bin/firebase ]; then
         # mv ~/Desktop/zip/firebase-tools-macos /usr/local/bin/firebase
         # chmod +x /usr/local/bin/firebase
-    fi
-fi
+    # fi
+# fi
 
 # flutter tool(getx style)
 cp -r "$CURRENT/bash/getx_style.sh" /usr/local/bin/getx_style
