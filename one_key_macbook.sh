@@ -85,7 +85,7 @@ if ! command_exists pod; then
     gem install cocoapods
 fi    
 
-# firebase cli
+# firebase cli(pending)
 ## https://github.com/firebase/firebase-tools/releases
 if [ -f ~/Desktop/zip/firebase-tools-macos ]; then
     if [ ! -f /usr/local/bin/firebase ]; then
