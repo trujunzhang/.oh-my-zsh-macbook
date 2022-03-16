@@ -18,14 +18,6 @@ source ./bash/tools.sh
 #     fi
 # fi
 
-# copy 'emacs'
-if [ -d  '~/Desktop/ZIP/emacs-plus@28--git' ]; then
-    if [ ! -d  '~/Library/Caches/Homebrew/emacs-plus@28--git' ]; then
-        mkdir -p '~/Library/Caches/Homebrew'
-        # mv '~/Desktop/ZIP/emacs-plus@28--git' '~/Library/Caches/Homebrew/emacs-plus@28--git' 
-    fi
-fi
-
 # homebrew
 if ! command_exists brew; then
     ( exec "./bash/homebrew_install.sh" )
@@ -41,12 +33,12 @@ if [ ! -d  ~/Library/autojump ]; then
 fi
 
 ## emacs
-if [ ! -d  /usr/local/opt/emacs-plus@28 ]; then
+if [ ! -d  /usr/local/opt/emacs-plus@29 ]; then
     ## url = https://github.com/emacs-mirror/emacs.git
     brew tap d12frosted/emacs-plus
-    brew install emacs-plus@28 --with-spacemacs-icon
-    brew link emacs-plus@28
-    open /usr/local/opt/emacs-plus@28
+    brew install emacs-plus@29 --with-spacemacs-icon
+    brew link emacs-plus@29
+    open /usr/local/opt/emacs-plus@29
 fi
 
 ## git
