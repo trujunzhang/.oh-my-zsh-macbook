@@ -165,8 +165,8 @@ fi
 export PATH="$GEM_HOME/bin:$PATH"
 
 # flutter 
-export PUB_HOSTED_URL=https://pub.flutter-io.cn
-export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+# export PUB_HOSTED_URL=https://pub.flutter-io.cn
+# export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 # pdf-tools for spacemacs
 # https://github.com/politza/pdf-tools

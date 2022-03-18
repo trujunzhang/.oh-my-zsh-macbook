@@ -220,7 +220,7 @@ alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --a
 alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
 
 # xcode
-alias xcodeselect='sudo xcode-select --switch /Volumes/MacApp/Applications/Xcode.app/Contents/Developer'
+alias xcodeselect='sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer'
 alias iosopen='open -a Simulator'
 alias ioslist='xcrun simctl list devices available'
 alias iosiphone8='open -a Simulator --args -CurrentDeviceUDID 4011447B-DF37-47A7-8C7D-C4E578B5B976 iPhone8'
@@ -231,8 +231,8 @@ alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 alias fclean="flutter clean"
 alias fkill="killall -9 dart"
 alias fdoctor='flutter doctor -v'
-alias fcreatelib="flutter create --template=package"
-alias fcreateapp="flutter create"
+alias fnewlib="flutter create --template=package"
+alias fnewapp="flutter create"
 alias frapp='flutter run --verbose'
 alias frappdev='flutter run -t lib/main_dev.dart --web-port=1234'
 alias frweb='flutter run --verbose --web-port=1234 -d chrome'
@@ -306,8 +306,8 @@ alias wsshbwg='ssh -p 27724 root@23.105.205.158'
 alias wsshcopybwg='ssh-copy-id -p 27724 root@23.105.205.158'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh root@108.160.134.57'
-alias wsshcopytmp='ssh-copy-id root@108.160.134.57'
+alias wsshtmp='ssh root@45.76.215.134'
+alias wsshcopytmp='ssh-copy-id root@45.76.215.134'
 
 # Firebase
 ## Firebase-tool
