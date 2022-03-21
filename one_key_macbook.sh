@@ -46,6 +46,11 @@ if [ ! -f /usr/local/bin/git ]; then
     brew install git
 fi
 
+## autoreconf
+if [ ! -f /usr/local/bin/autoreconf ]; then
+    brew install pkg-config poppler automake
+fi
+
 ## font-fira
 if [ ! -f  ~/Library/Fonts/FiraCode-Bold.ttf ]; then
     brew tap homebrew/cask-fonts

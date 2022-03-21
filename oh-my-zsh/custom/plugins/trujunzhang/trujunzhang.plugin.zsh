@@ -397,6 +397,13 @@ alias wdockps="docker ps -a"
 alias wdockrm='docker rm -f $(docker ps -a -q)'
 alias wdockimgrm='docker rmi $(docker images -q)'
 
+# v2ray
+# 查看端口 Port
+alias v2rayport='cat /etc/v2ray/config.json | grep port'
+# 查看 id (UUID)
+alias v2rayip='cat /etc/v2ray/config.json | grep id'
+alias v2raytime='date -R'
+
 # https://github.com/xieyezi/monia-cli
 alias fmoniacreate='monia create'
 alias fmoniainit='monia init'
