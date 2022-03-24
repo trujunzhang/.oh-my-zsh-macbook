@@ -58,21 +58,17 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
      docker-compose up -d
      cd "$CURRENT/USERS/Docker/docker-pure-ftpd"
      docker-compose up -d
-     # cd "$CURRENT/USERS/Docker/qbittorrent"
-     # docker-compose up -d
-     # mkdir -p /home/deploy/data/config/qBittorrent
-     # cp -r "$CURRENT/USERS/Docker/qbittorrent/qBittorrent.conf" /home/deploy/data/config/qBittorrent/qBittorrent.conf
 
 ## v2ray   
-     # mkdir -p /etc/v2ray
-     # cp -r "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
-     # docker run \
-     #        --restart=always \
-     #        -d --name v2ray \
-     #        -v /etc/v2ray:/etc/v2ray \
-     #        -p 8888:8888\
-     #        v2ray/official  v2ray \
-     #        -config=/etc/v2ray/config.json
+     mkdir -p /etc/v2ray
+     cp -r "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
+     docker run \
+            --restart=always \
+            -d --name v2ray \
+            -v /etc/v2ray:/etc/v2ray \
+            -p 8888:8888\
+            v2ray/official  v2ray \
+            -config=/etc/v2ray/config.json
 
 # yt-dlp
      python3 -m pip install --upgrade yt-dlp
