@@ -408,5 +408,6 @@ alias v2raytime='date -R'
 alias fmoniacreate='monia create'
 alias fmoniainit='monia init'
 
-
+# github
+alias wgithubflutter='cd /tmp && gcl https://github.com/flutter/flutter'
 
