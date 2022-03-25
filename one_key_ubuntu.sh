@@ -2,6 +2,12 @@
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cp /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu 
 #    cd .oh-my-zsh-macbook && git pull && cp -u /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
+#
+#
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && chmod +x one_key_ubuntu.sh && chmod +x bash/x_ui_install.sh
+#
+#    cd /root/.oh-my-zsh-macbook && ./one_key_ubuntu.sh
+#
 #    one_key_ubuntu
 ##################################################################
 
@@ -32,11 +38,11 @@ sudo apt install python-is-python3
 sudo apt install -y python3-pip
 
 # vpn
-wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
-        VPN_IPSEC_PSK='wh' \
-        VPN_USER='test' \
-        VPN_PASSWORD='test' \
-        sh vpnsetup.sh
+# wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
+#         VPN_IPSEC_PSK='wh' \
+#         VPN_USER='test' \
+#         VPN_PASSWORD='test' \
+#         sh vpnsetup.sh
 
 # zip a folder in Ubuntu Linux using the cli
       sudo apt install -y zip unzip
@@ -72,7 +78,10 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 
 ## v2ray(x_ui)
 ## https://github.com/vaxilu/x-ui/blob/main/install.sh
-    ( exec "./bash/x_ui_install.sh" )
+## port: 8765
+## port: 31266
+## b831381d-6324-4d53-ad4f-8cda48b30811
+     ( exec "./bash/x_ui_install.sh" )
 
 # yt-dlp
      python3 -m pip install --upgrade yt-dlp
