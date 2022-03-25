@@ -70,6 +70,10 @@ wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
             v2ray/official  v2ray \
             -config=/etc/v2ray/config.json
 
+## v2ray(x_ui)
+## https://github.com/vaxilu/x-ui/blob/main/install.sh
+    ( exec "./bash/x_ui_install.sh" )
+
 # yt-dlp
      python3 -m pip install --upgrade yt-dlp
 
