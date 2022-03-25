@@ -1,6 +1,10 @@
 ##################################################################
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
-#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cp /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu 
+#
+#
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cp /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu && cp /root/.oh-my-zsh-macbook/bash/x_ui_install.sh /usr/bin/x_ui_install && chmod +x /usr/bin/x_ui_install 
+#
+#
 #    cd .oh-my-zsh-macbook && git pull && cp -u /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
 #
 #
@@ -8,7 +12,10 @@
 #
 #    cd /root/.oh-my-zsh-macbook && ./one_key_ubuntu.sh
 #
-#    one_key_ubuntu
+#
+#    x_ui_install && one_key_ubuntu 
+#
+#
 ##################################################################
 
 # CURRENT=`pwd`
@@ -66,22 +73,22 @@ sudo apt install -y python3-pip
      docker-compose up -d
 
 ## v2ray   
-     mkdir -p /etc/v2ray
-     cp -r "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
-     docker run \
-            --restart=always \
-            -d --name v2ray \
-            -v /etc/v2ray:/etc/v2ray \
-            -p 8888:8888\
-            v2ray/official  v2ray \
-            -config=/etc/v2ray/config.json
+     # mkdir -p /etc/v2ray
+     # cp -r "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
+     # docker run \
+     #        --restart=always \
+     #        -d --name v2ray \
+     #        -v /etc/v2ray:/etc/v2ray \
+     #        -p 8888:8888\
+     #        v2ray/official  v2ray \
+     #        -config=/etc/v2ray/config.json
 
 ## v2ray(x_ui)
 ## https://github.com/vaxilu/x-ui/blob/main/install.sh
 ## port: 8765
 ## port: 31266
 ## b831381d-6324-4d53-ad4f-8cda48b30811
-     ( exec "./bash/x_ui_install.sh" )
+     # ( exec "./bash/x_ui_install.sh" )
 
 # yt-dlp
      python3 -m pip install --upgrade yt-dlp
