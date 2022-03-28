@@ -282,6 +282,7 @@ alias fcdpgconfig='cd packages/app_config'
 
 # install apk
 alias finstallapkrelease='adb install build/app/outputs/apk/release/app-arm64-v8a-release.apk'
+alias fopenapkrelease='open build/app/outputs/apk/release'
 
 # Global library
 # melos

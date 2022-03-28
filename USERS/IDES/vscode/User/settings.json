@@ -1182,5 +1182,6 @@
     "dart.warnWhenEditingFilesOutsideWorkspace": false,
     "dart.flutterHotReloadOnSave": "always",
     "dart.hotReloadOnSave": "always",
-    "dart.showInspectorNotificationsForWidgetErrors": false
+    "dart.showInspectorNotificationsForWidgetErrors": false,
+    "dart.warnWhenEditingFilesInPubCache": false
 }
