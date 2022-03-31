@@ -98,6 +98,10 @@ alias pegraph="pipenv graph"
 alias penv="python3 -m venv venv"
 alias peactive="source venv/bin/activate"
 
+# typescript
+## https://www.npmjs.com/package/create-typescript-project
+alias ynewtsapp='npm init typescript-project'
+
 # yarn.all
 alias yupdate='ncu -u'
 alias yinstall='yarn'

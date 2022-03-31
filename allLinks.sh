@@ -171,6 +171,9 @@ directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-m
 fileLink ".zsh(env)"  "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
 fileLink ".zsh(rc)"   "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink"  "$HOME/.zshrc"
 
+# sbcl(common lisp)
+fileLink ".sbcl(common lisp)"   "$TRUJUNZHANG_DOTFILES_HOME/sbclrc.symlink"  "$HOME/.sbclrc"
+
 # jetbrains's ideavim(config)
 fileLink ".ideavim(config)" "$TRUJUNZHANG_DOTFILES_HOME/ideavimrc.symlink" "$HOME/.ideavimrc"
 
