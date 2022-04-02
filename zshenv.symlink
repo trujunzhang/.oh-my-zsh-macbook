@@ -164,6 +164,8 @@ fi
 # Load RVM into a shell session *as a function*
 export PATH="$GEM_HOME/bin:$PATH"
 
+export PATH="/Users/djzhang/.roswell/bin:$PATH"
+
 # flutter 
 # export PUB_HOSTED_URL=https://pub.flutter-io.cn
 # export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn

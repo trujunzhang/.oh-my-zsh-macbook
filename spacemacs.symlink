@@ -155,6 +155,7 @@ This function should only modify configuration layer settings."
      osx
      better-defaults
      emacs-lisp
+     common-lisp   
      org
      (shell :variables
             shell-default-height 30
@@ -678,6 +679,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+  ;; common lisp  
+  (spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hooks)
 
   ;; Ranger
   (setq ranger-ignored-extensions '("mkv" "iso" "mp4" "sketch" ".DS_Store" "DS_Store"))
