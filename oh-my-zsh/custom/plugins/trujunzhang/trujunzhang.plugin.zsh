@@ -306,6 +306,16 @@ alias fgendoc='dartdoc'
 alias fhttpdoc='dhttpd --path doc/api'
 alias fhttpweb='dhttpd --path build/web'
 
+# python
+alias pjnote='jupyter notebook'
+
+# Conda
+alias cinfo='conda info'
+alias cenvlist='conda env list'
+alias clist='conda list'
+alias crevisionlist='conda list --revision'
+alias cactive='conda activate'
+
 # VPS
 alias wsshbwg='ssh -p 27724 root@23.105.205.158'
 alias wsshcopybwg='ssh-copy-id -p 27724 root@23.105.205.158'
@@ -322,10 +332,6 @@ alias fbdeploy='firebase deploy --only functions'
 
 ## Install, configure and integrate Local Emulator Suite
 alias femulatorsstart="firebase emulators:start"
-
-
-# python
-alias pjnote='jupyter notebook'
 
 # django
 alias djrun='python manage.py runserver'
