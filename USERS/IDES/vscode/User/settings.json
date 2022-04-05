@@ -1184,5 +1184,6 @@
     "dart.hotReloadOnSave": "always",
     "dart.showInspectorNotificationsForWidgetErrors": false,
     "dart.warnWhenEditingFilesInPubCache": false,
-    "security.workspace.trust.untrustedFiles": "newWindow"
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "terminal.integrated.inheritEnv": false
 }
