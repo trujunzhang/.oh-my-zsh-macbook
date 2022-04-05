@@ -56,6 +56,7 @@ export PATH="$HOME/bin:$PATH"
 
 # auto env
 # ======================================================================
+source $(brew --prefix autoenv)/activate.sh
 # source /usr/local/opt/autoenv/activate.sh
 # [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 

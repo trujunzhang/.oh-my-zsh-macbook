@@ -28,6 +28,12 @@ if ! command_exists ssh-copy-id; then
     brew install gpg ssh-copy-id
 fi
 
+## autoenv
+if [ ! -d  /usr/local/opt/autoenv ]; then
+    brew install autoenv
+fi
+
+## autojump
 if [ ! -d  ~/Library/autojump ]; then
     brew install autojump
 fi
