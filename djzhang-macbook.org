@@ -5,7 +5,7 @@
    |---------------+------|
    | xcode         | 21G  |
    | Organizations | 16G  |
-   |               |      |
+   | Applications  | 10G  |
    |---------------+------|
 
    |------+------|
@@ -17,3 +17,19 @@
    |      |      |
    |      |      |
    |------+------|
+
+
+* python
+   https://github.com/mrdbourke/m1-machine-learning-test
+   https://github.com/conda-forge/miniforge
+
+
+
+
+
+
+
+
+
+
+   

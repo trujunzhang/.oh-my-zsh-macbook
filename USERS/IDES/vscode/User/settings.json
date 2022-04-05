@@ -1183,5 +1183,6 @@
     "dart.flutterHotReloadOnSave": "always",
     "dart.hotReloadOnSave": "always",
     "dart.showInspectorNotificationsForWidgetErrors": false,
-    "dart.warnWhenEditingFilesInPubCache": false
+    "dart.warnWhenEditingFilesInPubCache": false,
+    "security.workspace.trust.untrustedFiles": "newWindow"
 }
