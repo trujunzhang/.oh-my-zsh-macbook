@@ -108,6 +108,11 @@ alias yinstall='yarn'
 alias ytest='yarn test'
 alias yserve='yarn serve'
 alias ydev='yarn dev'
+alias ystartclient='yarn start:client'
+alias ystart='yarn start'
+alias yrandroid='yarn android'
+alias yrios='yarn ios'
+alias yrweb='yarn web'
 alias ydebug='yarn debug'
 alias ybuild='yarn build'
 alias ystart='yarn start'
@@ -134,9 +139,6 @@ alias npmi='npm install --verbose'
 
 alias npmsvi='npm install --verbose --save-dev '
 alias npmsi='npm install --verbose --save '
-
-alias npmsc='yarn start:client'
-alias npmso='yarn start'
 
 # run dev
 alias npmd='npm run dev'
@@ -209,6 +211,7 @@ alias crunand="cocos run -p android"
 alias crunand86="cocos run -p android --ap android-21 --app-aib x86"
 
 # Expo
+alias expnewapp='expo init'
 alias exps="exp start"
 alias expios="exp ios"
 alias expand="exp android"
@@ -362,6 +365,8 @@ alias cocoapodsMaster="git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaP
 
 # clojure
 alias clnewapp='lein new app'
+alias clrepl='lein repl'
+alias cljar='lein uberjar'
 alias clrun='lein run'
 alias cltest='lein test'
 alias clsearch='lein search'
