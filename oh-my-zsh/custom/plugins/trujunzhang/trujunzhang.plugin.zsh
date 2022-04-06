@@ -426,5 +426,6 @@ alias fmoniacreate='monia create'
 alias fmoniainit='monia init'
 
 # github
+alias wsshgithub='ssh -T git@github.com'
 alias wgithubflutter='cd /tmp && gcl https://github.com/flutter/flutter'
 
