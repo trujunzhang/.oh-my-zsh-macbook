@@ -361,9 +361,10 @@ alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file:///Users/djzhang/Documen
 alias cocoapodsMaster="git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master"
 
 # clojure
-alias crun='lein run'
-alias ctest='lein test'
-alias csearch='lein search'
+alias clnewapp='lein new app'
+alias clrun='lein run'
+alias cltest='lein test'
+alias clsearch='lein search'
 
 # chemacs2
 # https://github.com/plexus/chemacs2
