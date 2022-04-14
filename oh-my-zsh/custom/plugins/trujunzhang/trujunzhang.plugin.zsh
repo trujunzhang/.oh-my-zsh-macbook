@@ -235,6 +235,7 @@ alias iosiphone13pro='open -a Simulator --args -CurrentDeviceUDID E7A90CEB-9487-
 alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 
 # Flutter
+alias fandroidclean='./gradlew clean '
 alias fclean="flutter clean"
 alias fkill="killall -9 dart"
 alias fdoctor='flutter doctor -v'
@@ -252,7 +253,7 @@ alias fbapk='flutter build apk --split-per-abi'
 alias fpget='flutter packages get'
 alias fpgetlock='rm -f pubspec.lock && flutter packages get'
 alias fprundevgetlock='rm pubspec.lock && flutter packages get && flutter run -t lib/main_dev.dart'
-alias fpupdate='flutter pub upgrade'
+alias fpupdate='flutter pub upgrade --major-versions'
 alias fbuildapk='flutter build apk --split-per-abi --verbose'
 # https://docs.flutter.dev/deployment/web
 alias fbuildweb='flutter build web'
@@ -260,7 +261,6 @@ alias fjson='flutter packages pub run json_model'
 # https://flutter.dev/docs/development/tools/web-renderers
 alias fwebrun='flutter run -d chrome --web-hostname localhost --web-port 5000'
 alias fwebrelease='flutter build web --release'
-# alias fpubspecupdate='flutter pub upgrade --major-versions'
 alias fpubspecupdate='flutter pub upgrade'
 alias fpubspecoutdated='flutter pub outdated'
 alias fdartupdate='dart pub upgrade --null-safety'

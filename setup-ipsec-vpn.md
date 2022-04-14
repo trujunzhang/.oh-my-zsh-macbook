@@ -1,6 +1,6 @@
 # https://bwh88.net/
 ================================================
-root password: UB9xLm5o6N90
+root password: j4VvJmccGLHF
 SSH port: 27724
 ================================================
 
