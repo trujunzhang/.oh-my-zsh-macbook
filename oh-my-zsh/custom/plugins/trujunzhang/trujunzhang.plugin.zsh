@@ -365,6 +365,7 @@ alias cocoapodsMaster="git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaP
 
 # clojure
 alias clnewapp='lein new app'
+alias clinstall='lein deps'
 alias clrepl='lein repl'
 alias cljar='lein uberjar'
 alias clrun='lein run'

@@ -6,21 +6,21 @@
    | xcode         | 21G  |
    | Organizations | 16G  |
    | Applications  | 10G  |
-   | Flutter SDK   | 3G   |
+   | Flutter SDK   | 4G   |
    |               |      |
    |---------------+------|
 
-   |----------+------+----------------------------------|
-   | name     | size | Folders                          |
-   |----------+------+----------------------------------|
-   | MacOS    | 120G |                                  |
-   |----------+------+----------------------------------|
-   | MacXcode | 30G  | Applications/XCode               |
-   | MacCache | 50G  | tmp,Caches,Developer,Flutter SDK |
-   | MacOrg   | 50G  | Organizations                    |
-   |          |      |                                  |
-   |          |      |                                  |
-   |----------+------+----------------------------------|
+   |----------+------+------------------------------------------|
+   | name     | size | Folders                                  |
+   |----------+------+------------------------------------------|
+   | MacOS    | 80G  |                                          |
+   |----------+------+------------------------------------------|
+   | MacXcode | 30G  | Applications/XCode                       |
+   | MacCache | 65G  | tmp,Caches,Developer,Flutter SDK,Movies  |
+   | MacOrg   | 50G  | Organizations                            |
+   |          |      |                                          |
+   |          |      |                                          |
+   |----------+------+------------------------------------------|
 
 
 * python

@@ -73,15 +73,15 @@ sudo apt install -y python3-pip
      docker-compose up -d
 
 ## v2ray   
-     # mkdir -p /etc/v2ray
-     # cp -r "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
-     # docker run \
-     #        --restart=always \
-     #        -d --name v2ray \
-     #        -v /etc/v2ray:/etc/v2ray \
-     #        -p 8888:8888\
-     #        v2ray/official  v2ray \
-     #        -config=/etc/v2ray/config.json
+      mkdir -p /etc/v2ray
+      cp -r "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
+      docker run \
+             --restart=always \
+             -d --name v2ray \
+             -v /etc/v2ray:/etc/v2ray \
+             -p 8888:8888\
+             v2ray/official  v2ray \
+             -config=/etc/v2ray/config.json
 
 ## v2ray(x_ui)
 ## https://github.com/vaxilu/x-ui/blob/main/install.sh
