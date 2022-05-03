@@ -286,6 +286,7 @@ alias fassets='fgen --no-watch -o ../packages/app_config/lib/src/resource.dart'
 alias fcdapp='cd app'
 alias fcddocwidget='cd doc_widget_app'
 alias fcdpgconfig='cd packages/app_config'
+alias fcdpgrest='cd packages/app_rest'
 
 # install apk
 alias finstallapkrelease='adb install build/app/outputs/apk/release/app-arm64-v8a-release.apk'
