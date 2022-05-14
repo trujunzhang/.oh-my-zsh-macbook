@@ -37,7 +37,7 @@ export PATH=$PATH:/Users/djzhang/Library/Android/ndk
 # ======================================================================
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
 export ANDROID_SDK_ROOT=/Users/djzhang/Library/Android/sdk
-export ANDROID_SDK_HOME=/Users/djzhang/Library/Android/sdk
+export ANDROID_USER_HOME=/Users/djzhang/Library/Android/sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
