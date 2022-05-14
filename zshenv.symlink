@@ -20,16 +20,27 @@ export GIT_EDITOR='nvim'
 # all export [PATH]
 # my custom bins
 export PATH="/Users/djzhang/Documents/Organizations/__APPLICATIONS/BinApps:$PATH"
+
 # ======================================================================
 # Android Studio installed automatically
 export ANDROID_HOME=/Users/djzhang/Library/Android/sdk
 export PATH=$PATH:/Users/djzhang/Library/Android/sdk/tools
 export PATH=$PATH:/Users/djzhang/Library/Android/sdk/platform-tools
+
 # Android~/android-ndk-r9d
 # ndk
 export ANDROID_NDK=/Users/djzhang/Library/Android/ndk
 export NDK_ROOT=/Users/djzhang/Library/Android/ndk
 export PATH=$PATH:/Users/djzhang/Library/Android/ndk
+
+# Android SDK
+# ======================================================================
+# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+export ANDROID_SDK_ROOT=/Users/djzhang/Library/Android/sdk
+export ANDROID_SDK_HOME=/Users/djzhang/Library/Android/sdk
+export PATH=$ANDROID_SDK_ROOT:$PATH
+export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+
 # others
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$PATH:/usr/local/sbin
@@ -125,14 +136,6 @@ export EXPO_DEBUG=true
 # emacs cask
 # ======================================================================
 export PATH="/Users/djzhang/.cask/bin:$PATH"
-
-# Android SDK
-# ======================================================================
-# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/Users/djzhang/Library/Android/sdk
-export ANDROID_SDK_HOME=/Users/djzhang/Library/Android/sdk
-export PATH=$ANDROID_SDK_ROOT:$PATH
-export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 # oh-my-zsh(with Homebrew)
 # ======================================================================
