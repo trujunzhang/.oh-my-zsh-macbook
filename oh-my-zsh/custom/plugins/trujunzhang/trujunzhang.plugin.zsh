@@ -416,6 +416,7 @@ alias whcroninfo="crontab -l"
 alias wdockps="docker ps -a"
 alias wdockrm='docker rm -f $(docker ps -a -q)'
 alias wdockimgrm='docker rmi $(docker images -q)'
+alias wdocklog='docker-compose logs --tail=all -f | grep'
 
 # v2ray
 # 查看端口 Port
