@@ -68,17 +68,16 @@ alias capd='cap production deploy --trace'
 
 # react-native.plugin
 
-alias rnand='react-native run-android'
+alias rnstart='npx react-native start'
+alias rnand='npx react-native run-android'
+alias rnios='npx react-native run-ios'
 alias rnios4s='react-native run-ios --simulator "iPhone 4s"'
 alias rnios5='react-native run-ios --simulator "iPhone 5"'
 alias rnios5s='react-native run-ios --simulator "iPhone 5s"'
-alias rnios='react-native run-ios'
 
 alias rnlnk='react-native link'
 
 alias rnapk='cd android && ./gradlew assembleRelease'
-
-alias rnios='react-native run-ios'
 
 alias rnandb='npm run android:build'
 alias rnandi='npm run android:install'
