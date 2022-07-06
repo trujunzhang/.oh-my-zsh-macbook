@@ -1185,5 +1185,6 @@
     "dart.showInspectorNotificationsForWidgetErrors": false,
     "dart.warnWhenEditingFilesInPubCache": false,
     "security.workspace.trust.untrustedFiles": "newWindow",
-    "terminal.integrated.inheritEnv": false
+    "terminal.integrated.inheritEnv": false,
+    "react-native-tools.showUserTips": false
 }

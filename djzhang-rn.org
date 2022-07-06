@@ -1,0 +1,20 @@
+
+* plugins
+** @react-navigation/native
+   https://reactnavigation.org
+
+*** blog   
+   https://www.knowledgehut.com/blog/web-development/react-navigation
+
+
+** react-native-bottom-sheet
+   https://github.com/gorhom/react-native-bottom-sheet
+
+   https://gorhom.github.io/react-native-bottom-sheet/
+
+
+   
+
+
+
+   
