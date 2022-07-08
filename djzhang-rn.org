@@ -1,3 +1,6 @@
+* App
+** Expo
+   
 
 * plugins
 ** @react-navigation/native
@@ -12,9 +15,22 @@
 
    https://gorhom.github.io/react-native-bottom-sheet/
 
-
+** React-redux
+   https://react-redux.js.org/introduction/getting-started
+   
    
 
+
+
+
+
+
+
+
+
+
+
+   
 
 
    
