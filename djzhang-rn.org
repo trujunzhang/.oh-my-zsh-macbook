@@ -1,5 +1,9 @@
 * App
+** React native
+   https://reactnative.dev/docs/typescript
+   
 ** Expo
+   https://docs.expo.dev/workflow/expo-cli/
    
 
 * plugins
@@ -17,8 +21,18 @@
 
 ** React-redux
    https://react-redux.js.org/introduction/getting-started
+
+*** Redux Toolkit   
+   https://redux-toolkit.js.org/introduction/getting-started
+
+*** reselect   
+   https://redux.js.org/usage/deriving-data-selectors
    
-   
+** React-native Firebase
+   https://rnfirebase.io/
+
+** react-redux-firebase
+   http://react-redux-firebase.com
 
 
 
