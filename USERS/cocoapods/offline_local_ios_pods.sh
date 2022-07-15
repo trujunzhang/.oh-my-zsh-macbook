@@ -1,15 +1,31 @@
 #!/usr/bin/env bash
 
+# AwesomeProject/ios/Pods/Local Podspecs
+
 echo "Bash version ${BASH_VERSION}..."
 
 CURRENT=`pwd`
 
 projectPath="${CURRENT}"
 echo "                         "
-echo "========================="
+echo "==============================================================="
 echo "$projectPath"
-echo "========================="
+echo "==============================================================="
 echo "                         "
+
+
+# ==========================================================================
+# get the valid podspecs fold path
+local_podspecs_path="${projectPath}/ios/Pods/Local Podspecs"
+
+local_podspecs_path_in_ios="${projectPath}/Pods/Local Podspecs"
+if [ -d "${local_podspecs_path_in_ios}" ]; then
+    local_podspecs_path="${local_podspecs_path_in_ios}"
+fi
+
+echo "{podspecs} path: $local_podspecs_path"
+echo "                         "
+# ==========================================================================
 
 # ==========================================================================
 # parse a JSON object within a shell script into an array
@@ -36,18 +52,28 @@ parseJson  "/Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macboo
 # Get the json array's length
 json_array_len=${#values[@]}
 echo "array_len=${json_array_len}"
+echo "                         "
 # ==========================================================================
 
 # seq FIRST INCREMENT LAST
 for i in $(seq 0 6 $((json_array_len-1)))
 do
-    echo "Welcome $i times"
-    echo "array_${i}=${values[${i}]}"
-    fileName=${values[$((i+3))]}
-    echo "fileName: $fileName"
+    # echo "Welcome $i times"
+    # echo "array_${i}=${values[${i}]}"
 
-    gitUrl=${values[$((i+4))]}
-    echo "gitUrl: $gitUrl"
+
+    fileName=${values[$((i+3))]}
+    # echo "fileName: $fileName"
+    podspecJsonPath="${local_podspecs_path}/${fileName}"
+
+    if [ -f "${podspecJsonPath}" ]; then
+        gitUrl=${values[$((i+4))]}
+        echo "gitUrl: $gitUrl"
+
+        echo "{podspec json} path: $podspecJsonPath"
+        # sed -i 's/$gitUrl/replace_string/' $podspecJsonPath
+    fi
+
 done
 
 
