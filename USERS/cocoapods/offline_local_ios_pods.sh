@@ -55,6 +55,8 @@ echo "array_len=${json_array_len}"
 echo "                         "
 # ==========================================================================
 
+offlineFolder="file:///Users/djzhang/Documents/Organizations/__CACHES/github"
+
 # seq FIRST INCREMENT LAST
 for i in $(seq 0 6 $((json_array_len-1)))
 do
@@ -67,11 +69,18 @@ do
     podspecJsonPath="${local_podspecs_path}/${fileName}"
 
     if [ -f "${podspecJsonPath}" ]; then
+        echo "{podspec json} path: $podspecJsonPath"
+
         gitUrl=${values[$((i+4))]}
         echo "gitUrl: $gitUrl"
 
-        echo "{podspec json} path: $podspecJsonPath"
-        # sed -i 's/$gitUrl/replace_string/' $podspecJsonPath
+        gitOfflineFold=${values[$((i+5))]}
+
+        replaceString="${offlineFolder}/${gitOfflineFold}"
+        echo "git offline fold: $replaceString"
+
+        # sed -i '' 's/${gitUrl}/${replaceString}/gi' "${podspecJsonPath}"
+        sed -i '' 's/source/wanghao/gi' "${podspecJsonPath}"
     fi
 
 done
