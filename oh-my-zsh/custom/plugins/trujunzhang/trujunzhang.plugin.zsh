@@ -75,7 +75,7 @@ alias rnios4s='react-native run-ios --simulator "iPhone 4s"'
 alias rnios5='react-native run-ios --simulator "iPhone 5"'
 alias rnios5s='react-native run-ios --simulator "iPhone 5s"'
 
-alias rnlnk='react-native link'
+alias rnlnk='npx react-native link'
 
 alias rnapk='cd android && ./gradlew assembleRelease'
 
@@ -84,6 +84,14 @@ alias rnandi='npm run android:install'
 alias rnandd='npm run android:device'
 alias rnandl='npm run android:logcat'
 alias rnands='npm run android:shake'
+
+alias rnnewapp='npx react-native init'
+
+# rebuild android/ios folders
+#  The solution if ur version of react-native >= 0.61.0 :
+#  $ sudo rm -rf android/ ios/
+#  $ yarn add react-native-eject
+#  $ npx react-native eject
 
 # python
 alias pnote="jupyter notebook"

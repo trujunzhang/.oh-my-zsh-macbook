@@ -343,5 +343,13 @@
         "filename": "Sentry.podspec.json",
         "git": "https://github.com/getsentry/sentry-cocoa.git",
         "folder": "sentry-cocoa"
+    },
+    {
+        "type": "git",
+        "name": "DoubleConversion",
+        "path": "1/5/8/DoubleConversion",
+        "filename": "DoubleConversion.podspec.json",
+        "git": "https://github.com/google/double-conversion.git",
+        "folder": "double-conversion"
     }
 ]

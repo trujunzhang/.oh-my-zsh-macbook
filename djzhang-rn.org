@@ -4,7 +4,13 @@
    
 ** Expo
    https://docs.expo.dev/workflow/expo-cli/
-   
+
+* Template
+** Expo
+   https://github.com/maetio/expo-template
+
+** RN
+   https://github.com/saheeranas/react-native-redux-boilerplate
 
 * plugins
 ** @react-navigation/native
