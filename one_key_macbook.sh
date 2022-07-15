@@ -97,6 +97,10 @@ fi
     # fi
 # fi
 
+# =============================
+# Flutter
+# =============================
+
 # flutter tool(getx style)
 cp -r "$CURRENT/bash/getx_style.sh" /usr/local/bin/getx_style
 chmod +x /usr/local/bin/getx_style
@@ -117,6 +121,10 @@ chmod +x /usr/local/bin/getx_widget
 cp -r "$CURRENT/bash/getx_rest.sh" /usr/local/bin/getx_rest
 chmod +x /usr/local/bin/getx_rest
 
-
+# ======================================
+# ios cocoapods for React native
+# ======================================
+cp -r "$CURRENT/USERS/cocoapods/local_ios_pods_offline.sh" /usr/local/bin/local_ios_pods_offline
+chmod +x /usr/local/bin/local_ios_pods_offline
 
 

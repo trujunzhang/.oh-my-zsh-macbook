@@ -28,7 +28,6 @@
         "name": "GoogleUtilities",
         "path": "0/8/4/GoogleUtilities",
         "filename": "GoogleUtilities.podspec.json",
-        "git-old": "https://github.com/firebase/firebase-ios-sdk.git",
         "git": "https://github.com/google/GoogleUtilities.git",
         "folder": "GoogleUtilities"
     },
