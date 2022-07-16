@@ -25,7 +25,6 @@ Furthermore add this in your Info.plist:
 
 Instead add this in your Podfile:
 
-
   #+BEGIN_SRC bash
 pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   #+END_SRC
