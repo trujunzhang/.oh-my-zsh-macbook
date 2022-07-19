@@ -13,20 +13,6 @@ echo "$projectPath"
 echo "==============================================================="
 echo "                         "
 
-
-# ==========================================================================
-# get the valid podspecs fold path
-local_podspecs_path="${projectPath}/ios/Pods/Local Podspecs"
-
-local_podspecs_path_in_ios="${projectPath}/Pods/Local Podspecs"
-if [ -d "${local_podspecs_path_in_ios}" ]; then
-    local_podspecs_path="${local_podspecs_path_in_ios}"
-fi
-
-echo "{podspecs} path: $local_podspecs_path"
-echo "                         "
-# ==========================================================================
-
 # ==========================================================================
 # parse a JSON object within a shell script into an array
 # https://stackoverflow.com/questions/38364261/parse-json-to-array-in-a-shell-script 
@@ -43,9 +29,10 @@ function  parseJson {
     done < "${jsonPath}"
 
     # declare -p values # print the array
+    # echo "                         "
 }
 
-parseJson  "/Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/config/offline.json"
+parseJson  "/Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/config/offline_rn.json"
 
 # echo "array_0=${values[0]}"
 
@@ -60,9 +47,10 @@ offlineFolder="file:///Users/djzhang/Documents/Organizations/__CACHES/github"
 # seq FIRST INCREMENT LAST
 for i in $(seq 0 6 $((json_array_len-1)))
 do
+    path=${values[$((i+2))]}
     fileName=${values[$((i+3))]}
     # echo "fileName: $fileName"
-    podspecJsonPath="${local_podspecs_path}/${fileName}"
+    podspecJsonPath="${projectPath}/${path}/${fileName}"
 
     if [ -f "${podspecJsonPath}" ]; then
         echo "                         "

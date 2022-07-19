@@ -441,10 +441,10 @@
     },
     {
         "type": "git",
-        "name": "RCT-Folly",
-        "path": "x/x/x/RCT-Folly",
-        "filename": "RCT-Folly.podspec.json",
-        "git": "https://github.com/facebook/folly.git",
-        "folder": "folly"
+        "name": "YogaKit",
+        "path": "9/4/7/YogaKit",
+        "filename": "YogaKit.podspec.json",
+        "git": "https://github.com/facebook/yoga.git",
+        "folder": "yoga"
     }
-]
+ ]
