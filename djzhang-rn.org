@@ -13,6 +13,15 @@
    https://github.com/saheeranas/react-native-redux-boilerplate
 
 * plugins
+** React i18next
+   https://react.i18next.com/
+
+*** i18next React Native Async Storage
+   https://www.npmjs.com/package/i18next-react-native-async-storage
+
+*** i18next-react-native-language-detector   
+   https://www.npmjs.com/package/@os-team/i18next-react-native-language-detector
+
 ** @react-navigation/native
    https://reactnavigation.org
 
@@ -33,17 +42,24 @@
 
 *** reselect   
    https://redux.js.org/usage/deriving-data-selectors
+
+** Firebase
+*** firebase
+   https://www.npmjs.com/package/firebase
    
-** React-native Firebase
+*** React-native Firebase
    https://rnfirebase.io/
 
-** react-redux-firebase
+*** react-redux-firebase
    http://react-redux-firebase.com
 
+** react-native-permissions
+   https://www.npmjs.com/package/react-native-permissions
 
+** react-native-image-picker
+  https://github.com/react-native-image-picker/react-native-image-picker
 
-
-
+ 
 
 
 

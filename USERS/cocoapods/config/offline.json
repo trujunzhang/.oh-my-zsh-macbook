@@ -129,6 +129,22 @@
     },
     {
         "type": "git",
+        "name": "FirebaseInstallations",
+        "path": "2/f/7/FirebaseInstallations",
+        "filename": "FirebaseInstallations.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "type": "git",
+        "name": "FirebaseCoreInternal",
+        "path": "7/9/1/FirebaseCoreInternal",
+        "filename": "FirebaseCoreInternal.podspec.json",
+        "git": "https://github.com/firebase/firebase-ios-sdk.git",
+        "folder": "firebase-ios-sdk"
+    },
+    {
+        "type": "git",
         "name": "FirebaseCoreDiagnostics",
         "path": "8/3/c/FirebaseCoreDiagnostics",
         "filename": "FirebaseCoreDiagnostics.podspec.json",
