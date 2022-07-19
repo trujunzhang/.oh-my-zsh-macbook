@@ -2,7 +2,8 @@ const fs = require('fs')
 
 let cocoapodsResposity = "/Users/djzhang/.cocoapods/repos/master/Specs/"
 let trunkResposity = "/Users/djzhang/.cocoapods/repos/trunk/Specs/"
-let offlineFolder = 'file:///Users/djzhang/Documents/Organizations/__CACHES/github/'
+let offlineGitFolder = 'file:///Users/djzhang/Documents/Organizations/__CACHES/github/'
+let offlineHttpFolder = 'http:localhost:8080/@http/'
 let jsonFile = 'config/offline.json'
 
 function getDirectories(path) {
@@ -11,20 +12,27 @@ function getDirectories(path) {
   });
 }
 
+// ========================================================
 function replaceToOffline(obj, line) {
-  const last = obj['source']['git']
-  // console.log('last: ' + last)
-  if (last === line['git']) {
-    obj['source']['git'] = offlineFolder + line['folder']
-    console.log('replace to: git=' + last)
+  const lastGit= obj['source']['git']
+  const lastHttp= obj['source']['http']
+  // console.log('lastGit: ' + lastGit)
+  if (line['type'] == 'git' && lastGit === line['git']) {
+    obj['source']['git'] = offlineGitFolder + line['folder']
+    console.log('replace to: git=' + lastGit)
+  if (line['type'] == 'http' && lastHttp === line['http']) {
+    obj['source']['http'] = offlineHttpFolder + line['folder']
+    console.log('replace to: http=' + lastHttp)
   }else {
-    //console.log('replace to: last=' + last)
+    //console.log('replace to: lastGit=' + lastGit)
   }
   return obj;
 }
+// ========================================================
 
 function offlineJsonFile(destFile, line) {
   try {
+    // First of all, read the json file.
     var obj = JSON.parse(fs.readFileSync(destFile, 'utf8'))
     const offlineObj = replaceToOffline(obj, line)
     const content = JSON.stringify(offlineObj, null, 4)
@@ -47,7 +55,7 @@ function replaceJsonFile(line,localPath){
 }
 
 function replaceEachFiles(line,spacesPath) {
-  if (line['type'] !== 'git' && line['type'] !== 'zip') {
+  if (line['type'] !== 'git' && line['type'] !== 'zip' && line['type'] !== 'http') {
     return
   }
   let localPath = spacesPath + line['path']
