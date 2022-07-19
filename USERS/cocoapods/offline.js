@@ -20,7 +20,7 @@ function replaceToOffline(obj, line) {
   if (line['type'] == 'git' && lastGit === line['git']) {
     obj['source']['git'] = offlineGitFolder + line['folder']
     console.log('replace to: git=' + lastGit)
-  if (line['type'] == 'http' && lastHttp === line['http']) {
+  } else if (line['type'] == 'http' && lastHttp === line['http']) {
     obj['source']['http'] = offlineHttpFolder + line['file']
     console.log('replace to: http=' + lastHttp)
   }else {
