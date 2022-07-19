@@ -398,5 +398,21 @@
         "filename": "Flipper-RSocket.podspec.json",
         "git": "https://github.com/rsocket/rsocket-cpp.git",
         "folder": "rsocket-cpp"
+    },
+    {
+        "type": "git",
+        "name": "Flipper-Folly",
+        "path": "5/7/2/Flipper-Folly",
+        "filename": "Flipper-Folly.podspec.json",
+        "git": "https://github.com/facebook/folly.git",
+        "folder": "folly"
+    },
+    {
+        "type": "git",
+        "name": "Flipper-Glog",
+        "path": "2/7/2/Flipper-Glog",
+        "filename": "Flipper-Glog.podspec.json",
+        "git": "https://github.com/lblasa/glog.git",
+        "folder": "glog"
     }
 ]
