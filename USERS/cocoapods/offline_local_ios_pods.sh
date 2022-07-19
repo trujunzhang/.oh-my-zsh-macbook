@@ -65,6 +65,7 @@ do
     podspecJsonPath="${local_podspecs_path}/${fileName}"
 
     if [ -f "${podspecJsonPath}" ]; then
+        echo "                         "
         echo "{podspec json} path: $podspecJsonPath"
 
         gitUrl=${values[$((i+4))]}
@@ -76,6 +77,8 @@ do
         echo "git offline fold: $replaceString"
 
         sed -i '' "s,$gitUrl,$replaceString,g" "${podspecJsonPath}"
+
+        echo "                         "
     fi
 
 done
