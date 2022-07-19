@@ -414,5 +414,13 @@
         "filename": "Flipper-Glog.podspec.json",
         "git": "https://github.com/lblasa/glog.git",
         "folder": "glog"
+    },
+    {
+        "type": "git",
+        "name": "FlipperKit",
+        "path": "3/2/5/FlipperKit",
+        "filename": "FlipperKit.podspec.json",
+        "git": "https://github.com/facebook/flipper.git",
+        "folder": "flipper"
     }
 ]
