@@ -422,5 +422,13 @@
         "filename": "FlipperKit.podspec.json",
         "git": "https://github.com/facebook/flipper.git",
         "folder": "flipper"
+    },
+    {
+        "type": "http",
+        "name": "OpenSSL-Universal",
+        "path": "e/d/6/OpenSSL-Universal",
+        "filename": "OpenSSL-Universal.podspec.json",
+        "http": "https://github.com/krzyzanowskim/OpenSSL/archive/1.1.1100.zip",
+        "file": "OpenSSL/1.1.1100.zip"
     }
 ]
