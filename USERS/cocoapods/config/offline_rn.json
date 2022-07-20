@@ -16,6 +16,14 @@
         "folder": "folly"
     },
     {
+        "type": "git",
+        "name": "glog",
+        "path": "node_modules/react-native/third-party-podspecs",
+        "filename": "glog.podspec",
+        "git": "https://github.com/google/glog.git",
+        "folder": "google-glog"
+    },
+    {
         "type": "http",
         "name": "boost",
         "path": "node_modules/react-native/third-party-podspecs",
