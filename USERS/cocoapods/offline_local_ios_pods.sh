@@ -42,11 +42,13 @@ echo "array_len=${json_array_len}"
 echo "                         "
 # ==========================================================================
 
-offlineFolder="file:///Users/djzhang/Documents/Organizations/__CACHES/github"
+offlineGitFolder="file:///Users/djzhang/Documents/Organizations/__CACHES/github"
+offlineHttpFolder='http://localhost:8080/@http'
 
 # seq FIRST INCREMENT LAST
 for i in $(seq 0 6 $((json_array_len-1)))
 do
+    type=${values[$((i+0))]}
     path=${values[$((i+2))]}
     fileName=${values[$((i+3))]}
     # echo "fileName: $fileName"
@@ -56,15 +58,31 @@ do
         echo "                         "
         echo "{podspec json} path: $podspecJsonPath"
 
-        gitUrl=${values[$((i+4))]}
-        echo "gitUrl: $gitUrl"
+        # Type is 'git'
+        if [ "$type" = "git" ]; then
+            gitUrl=${values[$((i+4))]}
+            echo "gitUrl: $gitUrl"
 
-        gitOfflineFold=${values[$((i+5))]}
+            gitOfflineFold=${values[$((i+5))]}
 
-        replaceString="${offlineFolder}/${gitOfflineFold}"
-        echo "git offline fold: $replaceString"
+            replaceString="${offlineGitFolder}/${gitOfflineFold}"
+            echo "git offline fold: $replaceString"
 
-        sed -i '' "s,$gitUrl,$replaceString,g" "${podspecJsonPath}"
+            sed -i '' "s,$gitUrl,$replaceString,g" "${podspecJsonPath}"
+        fi
+
+        # Type is 'http'
+        if [ "$type" = "http" ]; then
+            httpUrl=${values[$((i+4))]}
+            echo "httpUrl: $httpUrl"
+
+            httpOfflineFold=${values[$((i+5))]}
+
+            replaceString="${offlineHttpFolder}/${httpOfflineFold}"
+            echo "http offline fold: $replaceString"
+
+            sed -i '' "s,$httpUrl,$replaceString,g" "${podspecJsonPath}"
+        fi
 
         echo "                         "
     fi

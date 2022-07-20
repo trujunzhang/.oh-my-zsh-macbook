@@ -14,5 +14,13 @@
         "filename": "RCT-Folly.podspec",
         "git": "https://github.com/facebook/folly.git",
         "folder": "folly"
+    },
+    {
+        "type": "http",
+        "name": "boost",
+        "path": "node_modules/react-native/third-party-podspecs",
+        "filename": "boost.podspec",
+        "http": "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2",
+        "file": "boost/boost_1_76_0.tar.bz2"
     }
 ]

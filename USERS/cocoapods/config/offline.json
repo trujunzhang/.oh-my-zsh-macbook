@@ -446,5 +446,13 @@
         "filename": "YogaKit.podspec.json",
         "git": "https://github.com/facebook/yoga.git",
         "folder": "yoga"
+    },
+    {
+        "type": "git",
+        "name": "fmt",
+        "path": "7/6/3/fmt",
+        "filename": "fmt.podspec.json",
+        "git": "https://github.com/fmtlib/fmt.git",
+        "folder": "fmt"
     }
  ]
