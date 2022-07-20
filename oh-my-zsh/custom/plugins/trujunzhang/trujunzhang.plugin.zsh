@@ -111,7 +111,7 @@ alias ynewtsapp='npm init typescript-project'
 
 # yarn.all
 alias yupdate='ncu -u'
-alias yinstall='yarn'
+alias yinstall='yarn && offline_local_ios_pods'
 alias ytest='yarn test'
 alias yserve='yarn serve'
 alias ydev='yarn dev'
