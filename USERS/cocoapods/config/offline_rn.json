@@ -21,7 +21,7 @@
         "path": "node_modules/react-native/third-party-podspecs",
         "filename": "glog.podspec",
         "git": "https://github.com/google/glog.git",
-        "folder": "google-glog"
+        "folder": "glog-google"
     },
     {
         "type": "http",

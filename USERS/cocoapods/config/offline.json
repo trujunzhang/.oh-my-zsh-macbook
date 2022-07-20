@@ -429,7 +429,7 @@
         "path": "2/7/2/Flipper-Glog",
         "filename": "Flipper-Glog.podspec.json",
         "git": "https://github.com/lblasa/glog.git",
-        "folder": "glog"
+        "folder": "glog-lblasa"
     },
     {
         "type": "git",
@@ -437,7 +437,7 @@
         "path": "4/7/2/glog",
         "filename": "glog.podspec.json",
         "git": "https://github.com/google/glog.git",
-        "folder": "google-glog"
+        "folder": "glog-google"
     },
     {
         "type": "git",
