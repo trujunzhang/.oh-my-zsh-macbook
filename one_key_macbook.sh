@@ -71,7 +71,6 @@ if [ ! -d  ~/.nvm ]; then
     git clone file:///Users/djzhang/Documents/Organizations/IDES/nvm/localNVM .nvm
     cd ~/.nvm  && git checkout v0.39.0 && . ~/.nvm/nvm.sh && nvm install 16.14.2 && nvm use 16.14.2
     # cd ~/.nvm  && git checkout v0.39.0 && . ~/.nvm/nvm.sh && nvm install 18.2.0 && nvm use 18.2.0
-    # cd ~/.nvm  && git checkout v0.39.0 && . ~/.nvm/nvm.sh && nvm install 14.19.3 && nvm use 14.19.3
 fi    
 
 ## list
