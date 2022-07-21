@@ -86,6 +86,7 @@ alias rnandl='npm run android:logcat'
 alias rnands='npm run android:shake'
 
 alias rnnewapp='npx react-native init'
+alias rnnewtsapp='npx react-native init ieatta --version 0.68.2 --template react-native-template-typescript'
 
 # rebuild android/ios folders
 #  The solution if ur version of react-native >= 0.61.0 :
@@ -130,6 +131,7 @@ alias yarnita='yarn install && yarn test.web && yarn test.client'
 alias yarnta='yarn test.web && yarn test.client'
 
 alias yadd='yarn add'
+alias yaddexpo='npx install-expo-modules@latest'
 alias yrmnode_modules='rm -rf node_modules'
 
 alias yarnitc='yarn install && yarn test.client'
@@ -140,6 +142,7 @@ alias yarnab='yarn android:build'
 alias yarnai='yarn android:install'
 
 alias yupdate='ncu -u'
+alias ypodi='npx pod-install'
 
 # npm sketch-app
 alias npmrr="npm run sketch:render"

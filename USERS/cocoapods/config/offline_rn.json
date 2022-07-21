@@ -5,7 +5,7 @@
         "path": "node_modules/react-native/third-party-podspecs",
         "filename": "DoubleConversion.podspec",
         "git": "https://github.com/google/double-conversion.git",
-        "folder": "double-conversion"
+        "folder": "common/double-conversion"
     },
     {
         "type": "git",
@@ -13,7 +13,7 @@
         "path": "node_modules/react-native/third-party-podspecs",
         "filename": "RCT-Folly.podspec",
         "git": "https://github.com/facebook/folly.git",
-        "folder": "folly"
+        "folder": "common/folly"
     },
     {
         "type": "git",
@@ -21,7 +21,7 @@
         "path": "node_modules/react-native/third-party-podspecs",
         "filename": "glog.podspec",
         "git": "https://github.com/google/glog.git",
-        "folder": "glog-google"
+        "folder": "common/glog-google"
     },
     {
         "type": "http",
