@@ -110,12 +110,15 @@ sudo apt install -y python3-pip
 
 ## bash file
 
+### youtube cli
       cp -r "$CURRENT/bash/yl.sh" /usr/bin/yl
       sudo chmod +x /usr/bin/yl
 
       cp -r "$CURRENT/bash/ydlcron.sh" /usr/bin/ydlcron
       sudo chmod +x /usr/bin/ydlcron
 
-
+### github offline for cocoapods
+      cp -r "$CURRENT/USERS/cocoapods/generator_git_offline.sh" /usr/bin/generator_git_offline
+      sudo chmod +x /usr/bin/generator_git_offline
 
 
