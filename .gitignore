@@ -44,3 +44,5 @@ USERS/cocoapods/generate.json
 # vim
 nicknisi/vim/.netrwhist
 
+node_modules/
+package-lock.json

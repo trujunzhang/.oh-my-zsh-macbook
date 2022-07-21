@@ -85,6 +85,7 @@ alias rnandd='npm run android:device'
 alias rnandl='npm run android:logcat'
 alias rnands='npm run android:shake'
 
+alias rninfo='npx react-native info'
 alias rnnewapp='npx react-native init'
 alias rnnewtsapp='npx react-native init ieatta --version 0.68.2 --template react-native-template-typescript'
 
@@ -225,6 +226,7 @@ alias crunand86="cocos run -p android --ap android-21 --app-aib x86"
 
 # Expo
 alias expnewapp='expo init'
+alias expnewtsapp='npx create-expo-app -t expo-template-blank-typescript'
 alias exps="exp start"
 alias expios="exp ios"
 alias expand="exp android"
