@@ -2,6 +2,7 @@
 
 OUT_GIT_FOLD='/home/deploy/data/youtube/common'
 GITHUB_ZIP_FILE='/home/deploy/data/youtube/common.zip'
+END_TAG='/home/deploy/data/youtube/end.txt'
 
 # ========================================================= 
 # ready
@@ -9,6 +10,7 @@ GITHUB_ZIP_FILE='/home/deploy/data/youtube/common.zip'
 rm -rf $OUT_GIT_FOLD
 mkdir $OUT_GIT_FOLD
 rm -f $GITHUB_ZIP_FILE
+rm -f $END_TAG
 # ========================================================= 
 # clone
 # ========================================================= 
@@ -79,4 +81,7 @@ zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/protobuf/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/Flipper-Boost-iOSX/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/GTMAppAuth/.git
 
-
+# ========================================================= 
+# end
+# ========================================================= 
+touch $END_TAG
