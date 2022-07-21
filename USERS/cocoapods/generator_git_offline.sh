@@ -4,6 +4,12 @@ OUT_GIT_FOLD='/home/deploy/data/youtube/common'
 GITHUB_ZIP_FILE='/home/deploy/data/youtube/common.zip'
 
 # ========================================================= 
+# ready
+# ========================================================= 
+rm -rf $OUT_GIT_FOLD
+mkdir $OUT_GIT_FOLD
+rm -f $GITHUB_ZIP_FILE
+# ========================================================= 
 # clone
 # ========================================================= 
 git clone https://github.com/BranchMetrics/iOS-Deferred-Deep-Linking-SDK.git $OUT_GIT_FOLD 
