@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Requirements
 #   .1 the lastest macos
 #   .2 vpn
