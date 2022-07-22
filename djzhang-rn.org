@@ -47,7 +47,7 @@
 *** firebase
    https://www.npmjs.com/package/firebase
    
-*** React-native Firebase
+*** React-native-Firebase
    https://rnfirebase.io/
 
 *** react-redux-firebase
@@ -59,7 +59,8 @@
 ** react-native-image-picker
   https://github.com/react-native-image-picker/react-native-image-picker
 
- 
+** react-native-vision-camera
+   https://github.com/mrousavy/react-native-vision-camera
 
 
 

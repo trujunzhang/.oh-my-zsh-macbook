@@ -195,6 +195,7 @@ directoryLink  "dotenv(Express.js environment variables)"  "$ORGANIZATIONS_HOME/
 
 # **IDES(chemacs2[emacs-shim])
 # EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
+# https://github.com/plexus/chemacs2.git
 directoryLink "chemacs2(.emacs.d)"       "$EMACS_SHIM_HOME/chemacs2"                     "$HOME/.emacs.d"
 directoryLink "Doom(.doom.d)"            "$TRUJUNZHANG_DOTFILES_HOME/editors/.doom.d"    "$HOME/.doom.d"
 fileLink "chemacs2(.emacs-profile)"      "$EMACS_SHIM_HOME/.emacs-profile"               "$HOME/.emacs-profile"
