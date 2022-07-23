@@ -34,11 +34,13 @@ git clone https://github.com/lblasa/double-conversion.git                     $O
 git clone https://github.com/tonymillion/Reachability.git                     $OUT_GIT_FOLD/Reachability
 git clone https://github.com/libevent/libevent.git                            $OUT_GIT_FOLD/libevent
 git clone https://github.com/ccgus/fmdb.git                                   $OUT_GIT_FOLD/fmdb
-git clone https://github.com/lblasa/glog.git                                  $OUT_GIT_FOLD/glog
+# glog-lblasa
+git clone https://github.com/lblasa/glog.git                                  $OUT_GIT_FOLD/glog-lblasa
 git clone https://github.com/facebook/facebook-sdk-swift.git                  $OUT_GIT_FOLD/facebook-sdk-swift
 git clone https://github.com/google/GoogleUtilities.git                       $OUT_GIT_FOLD/GoogleUtilities
 git clone https://github.com/realm/realm-cocoa.git                            $OUT_GIT_FOLD/realm-cocoa
-git clone https://github.com/google/glog.git                                  $OUT_GIT_FOLD/glog
+# glog-google
+git clone https://github.com/google/glog.git                                  $OUT_GIT_FOLD/glog-google
 git clone https://github.com/robbiehanson/CocoaAsyncSocket.git                $OUT_GIT_FOLD/CocoaAsyncSocket
 git clone https://github.com/nanopb/nanopb.git                                $OUT_GIT_FOLD/nanopb
 git clone https://github.com/facebook/folly.git                               $OUT_GIT_FOLD/folly
@@ -69,11 +71,13 @@ zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/double-conversion/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/Reachability/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/libevent/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/fmdb/.git
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/glog/.git
+# glog-lblasa
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/glog-lblasa/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/facebook-sdk-swift/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/GoogleUtilities/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/realm-cocoa/.git
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/glog/.git
+# glog-google
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/glog-google/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/CocoaAsyncSocket/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/nanopb/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/folly/.git
