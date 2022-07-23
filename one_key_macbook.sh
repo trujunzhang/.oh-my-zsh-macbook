@@ -74,23 +74,23 @@ fi
 
 ## list
 if ! command_exists yarn; then
-    npm install -g yarn
-    npm install -g npm-check-updates
-    npm install -g monia-cli
-    npm install -g firebase-tools
+    npm install --location=global yarn
+    npm install --location=global npm-check-updates
+    npm install --location=global monia-cli
+    npm install --location=global firebase-tools
 fi    
 
 ## typescript
 if ! command_exists tsc; then
-    npm install -g typescript typescript-formatter tern js-beautify eslint 
+    npm install --location=global typescript typescript-formatter tern js-beautify eslint 
 fi    
 
 # expo
 if ! command_exists expo; then
     # https://docs.expo.dev/get-started/installation/
-    npm install -g expo-cli 
+    npm install --location=global expo-cli 
     # https://docs.expo.dev/build/setup/
-    npm install -g eas-cli
+    npm install --location=global eas-cli
 fi    
 
 # cocoapods
