@@ -1186,5 +1186,6 @@
     "dart.warnWhenEditingFilesInPubCache": false,
     "security.workspace.trust.untrustedFiles": "newWindow",
     "terminal.integrated.inheritEnv": false,
-    "react-native-tools.showUserTips": false
+    "react-native-tools.showUserTips": false,
+    "json.schemas": []
 }

@@ -227,9 +227,11 @@ alias crunand86="cocos run -p android --ap android-21 --app-aib x86"
 # Expo
 alias expnewapp='expo init'
 alias expnewtsapp='npx create-expo-app -t expo-template-blank-typescript'
-alias exps="exp start"
+alias expstart="exp start"
 alias expios="exp ios"
 alias expand="exp android"
+alias expdoctor='expo doctor --fix-dependencies'
+alias expprebuild='expo prebuild --clean'
 
 # Emacs
 # alias emacs='open -a /Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Emacs.app $1'
