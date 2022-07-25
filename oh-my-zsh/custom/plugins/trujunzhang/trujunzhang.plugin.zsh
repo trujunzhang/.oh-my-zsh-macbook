@@ -131,9 +131,11 @@ alias yarntw='yarn test.web'
 alias yarnita='yarn install && yarn test.web && yarn test.client'
 alias yarnta='yarn test.web && yarn test.client'
 
+alias ylint='yarn lint'
+alias ylintfix='yarn lint-fix'
 alias yadd='yarn add'
 alias yaddexpo='npx install-expo-modules@latest'
-alias yrmnode_modules='rm -rf node_modules'
+alias ydlnode_modules='rm -rf node_modules'
 
 alias yarnitc='yarn install && yarn test.client'
 alias yarnitw='yarn install && yarn test.web'

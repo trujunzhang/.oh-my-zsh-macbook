@@ -13,6 +13,13 @@
    https://github.com/saheeranas/react-native-redux-boilerplate
 
 * plugins
+** Expo-Location
+   https://docs.expo.dev/versions/latest/sdk/location/
+   https://github.com/expo/expo/tree/master/packages/expo-location
+
+*** blog
+   https://chafikgharbi.com/expo-location-tracking/
+   
 ** React i18next
    https://react.i18next.com/
 
