@@ -29,12 +29,15 @@
 *** i18next-react-native-language-detector   
    https://www.npmjs.com/package/@os-team/i18next-react-native-language-detector
 
-** @react-navigation/native
+** Navigation   
+*** Drawer navigation
+   https://reactnavigation.org/docs/drawer-based-navigation/
+   
+*** @react-navigation/native
    https://reactnavigation.org
 
-*** blog   
+**** blog   
    https://www.knowledgehut.com/blog/web-development/react-navigation
-
 
 ** react-native-bottom-sheet
    https://github.com/gorhom/react-native-bottom-sheet
