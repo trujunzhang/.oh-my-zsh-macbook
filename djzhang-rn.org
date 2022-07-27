@@ -13,6 +13,13 @@
    https://github.com/saheeranas/react-native-redux-boilerplate
 
 * plugins
+** UI
+*** Native-Base
+   https://docs.nativebase.io/
+
+**** Custom Font    
+   https://docs.nativebase.io/customizing-fonts
+
 ** Expo-Location
    https://docs.expo.dev/versions/latest/sdk/location/
    https://github.com/expo/expo/tree/master/packages/expo-location
