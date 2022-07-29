@@ -235,6 +235,12 @@ alias expand="exp android"
 alias expdoctor='expo doctor --fix-dependencies'
 alias expprebuild='expo prebuild --clean'
 
+# Expo(eas)
+alias easLogin='eas login'
+alias easBuildAndroid='eas build --platform android'
+alias easBuildIOS='eas build --platform ios'
+alias easBuildAll='eas build --platform all'
+
 # Emacs
 # alias emacs='open -a /Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Emacs.app $1'
 # alias emacsd="emacs -debug-init"

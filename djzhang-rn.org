@@ -70,6 +70,9 @@
 *** react-redux-firebase
    http://react-redux-firebase.com
 
+*** Google signin
+   https://github.com/react-native-google-signin/google-signin
+
 ** react-native-permissions
    https://www.npmjs.com/package/react-native-permissions
 
