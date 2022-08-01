@@ -7,6 +7,6 @@
     {
         "type": "application",
         "name": "emacs",
-        "path": "Emaccs"
+        "path": "Emacs"
     }
 ]

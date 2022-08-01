@@ -32,12 +32,15 @@ echo "                         "
 # seq FIRST INCREMENT LAST
 for i in $(seq 0 3 $((json_array_len-1)))
 do
+    sleep 2
+
     name=${values[$((i+1))]}
     application=${values[$((i+2))]}
 
     echo "name: $name"
     echo "application: $application"
+    echo "                         "
 
-
+    open -a "$application"
 
 done
