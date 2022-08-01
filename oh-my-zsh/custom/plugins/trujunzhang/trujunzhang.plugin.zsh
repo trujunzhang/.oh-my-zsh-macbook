@@ -234,6 +234,7 @@ alias expios="exp ios"
 alias expand="exp android"
 alias expdoctor='expo doctor --fix-dependencies'
 alias expprebuild='expo prebuild --clean'
+alias expdevclient='expo start --dev-client'
 
 # Expo(eas)
 alias easLogin='eas login'

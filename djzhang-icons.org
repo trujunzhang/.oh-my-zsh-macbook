@@ -8,6 +8,8 @@
 * font_awesome_flutter
    https://fontawesome.com/v5.15/icons?d=gallery&p=2
 
+* Feather
+   https://feathericons.com/
    
 
 
