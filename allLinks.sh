@@ -274,3 +274,8 @@ chmod +x /usr/local/bin/getx_rest
 fileLink "Cocoapods(offline)"      "$CURRENT/bash/offline_local_ios_pods.sh"         /usr/local/bin/offline_local_ios_pods
 chmod +x /usr/local/bin/offline_local_ios_pods
 
+# ======================================
+# Run custom apps
+# ======================================
+fileLink "Apps(custom)"      "$CURRENT/USERS/system/run_my_apps.sh"         /usr/local/bin/run_my_apps
+chmod +x /usr/local/bin/run_my_apps
