@@ -45,9 +45,9 @@ function  fileLink {
     if [ ! -f "${dest}" ]
     then
         ln -s "${src}"  "${dest}"
-        echo "Directory does not exist. ${msg}"
+        echo "File does not exist. ${msg}"
     else
-        echo "Directory already exist. ${msg}"
+        echo "File already exist. ${msg}"
     fi
     
 }

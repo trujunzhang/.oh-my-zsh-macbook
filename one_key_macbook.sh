@@ -107,34 +107,3 @@ fi
     # fi
 # fi
 
-# =============================
-# Flutter
-# =============================
-
-# flutter tool(getx style)
-cp -r "$CURRENT/bash/getx_style.sh" /usr/local/bin/getx_style
-chmod +x /usr/local/bin/getx_style
-
-# flutter tool(getx page)
-cp -r "$CURRENT/bash/getx_page.sh" /usr/local/bin/getx_page
-chmod +x /usr/local/bin/getx_page
-
-# flutter tool(getx page no binding)
-cp -r "$CURRENT/bash/getx_page_no_binding.sh" /usr/local/bin/getx_page_no_binding
-chmod +x /usr/local/bin/getx_page_no_binding
-
-# flutter tool(getx widget)
-cp -r "$CURRENT/bash/getx_widget.sh" /usr/local/bin/getx_widget
-chmod +x /usr/local/bin/getx_widget
-
-# flutter tool(getx rest)
-cp -r "$CURRENT/bash/getx_rest.sh" /usr/local/bin/getx_rest
-chmod +x /usr/local/bin/getx_rest
-
-# ======================================
-# ios cocoapods for React native
-# ======================================
-cp -r "$CURRENT/USERS/cocoapods/offline_local_ios_pods.sh" /usr/local/bin/offline_local_ios_pods
-chmod +x /usr/local/bin/offline_local_ios_pods
-
-
