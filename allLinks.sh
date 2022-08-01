@@ -105,7 +105,7 @@ mkdir "$USER_PROFILE_DJZHANG_HOME/.local/share"
 # ====================================================================
 
 # shell that run when os startup.
-fileLink "shellstartup.config"  "$TRUJUNZHANG_DOTFILES_HOME/USERS/system/shellstartup.config" "$HOME/shellstartup.config"
+fileLink "shellstartup.json"  "$TRUJUNZHANG_DOTFILES_HOME/USERS/system/shellstartup.json" "$HOME/shellstartup.json"
 
 # https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
 # directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"

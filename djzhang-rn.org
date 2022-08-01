@@ -13,6 +13,9 @@
    https://github.com/saheeranas/react-native-redux-boilerplate
 
 * plugins
+** timeago.js
+   https://timeago.org/
+    
 ** GeoDistance
    https://github.com/nwhite89/GeoDistance
 
