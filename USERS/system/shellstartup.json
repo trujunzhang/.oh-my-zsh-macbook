@@ -2,11 +2,13 @@
     {
         "type": "application",
         "name": "atom",
-        "application": "Atom"
+        "application": "Atom",
+        "enable": "1"
     },
     {
         "type": "application",
         "name": "emacs",
-        "path": "Emacs"
+        "path": "Emacs",
+        "enable": "0"
     }
 ]

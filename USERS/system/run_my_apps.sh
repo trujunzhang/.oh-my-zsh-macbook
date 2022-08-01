@@ -30,17 +30,20 @@ echo "                         "
 
 
 # seq FIRST INCREMENT LAST
-for i in $(seq 0 3 $((json_array_len-1)))
+for i in $(seq 0 4 $((json_array_len-1)))
 do
     sleep 2
 
     name=${values[$((i+1))]}
     application=${values[$((i+2))]}
+    enable=${values[$((i+3))]}
 
     echo "name: $name"
     echo "application: $application"
     echo "                         "
 
-    open -a "$application"
+    if [ "$enable" = "1" ]; then
+        open -a "$application"
+    fi
 
 done
