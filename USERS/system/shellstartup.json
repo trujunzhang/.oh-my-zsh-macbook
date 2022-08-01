@@ -1,5 +1,12 @@
 [
     {
-
+        "type": "application",
+        "name": "atom",
+        "application": "Atom"
+    },
+    {
+        "type": "application",
+        "name": "emacs",
+        "path": "Emaccs"
     }
 ]

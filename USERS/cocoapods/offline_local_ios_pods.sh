@@ -17,7 +17,7 @@ echo "                         "
 # parse a JSON object within a shell script into an array
 # https://stackoverflow.com/questions/38364261/parse-json-to-array-in-a-shell-script 
 declare -a values # declare the array                                                                                                                                                                  
-function  parseJson {
+function parseJson {
     jsonPath=$1
 
     # Read each line and use regex parsing (with Bash's `=~` operator)

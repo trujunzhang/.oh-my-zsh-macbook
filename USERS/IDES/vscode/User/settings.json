@@ -1173,7 +1173,8 @@
         "editor.defaultFormatter": "vscode.html-language-features"
     },
     "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
+        "*.ipynb": "jupyter.notebook.ipynb",
+        "*.scpt": "default"
     },
     "workbench.colorTheme": "Visual Studio Light",
     "diffEditor.ignoreTrimWhitespace": false,
