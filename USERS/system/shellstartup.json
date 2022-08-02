@@ -1,14 +1,14 @@
 [
     {
         "type": "application",
-        "name": "atom",
-        "application": "Atom",
+        "name": "emacs",
+        "path": "Emacs",
         "enable": "1"
     },
     {
         "type": "application",
-        "name": "emacs",
-        "path": "Emacs",
-        "enable": "0"
+        "name": "atom",
+        "application": "Atom",
+        "enable": "1"
     }
 ]
