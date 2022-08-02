@@ -271,7 +271,7 @@ chmod +x /usr/local/bin/getx_rest
 # ======================================
 # ios cocoapods for React native
 # ======================================
-fileLink "Cocoapods(offline)"      "$CURRENT/bash/offline_local_ios_pods.sh"         /usr/local/bin/offline_local_ios_pods
+fileLink "Cocoapods(offline)"      "$CURRENT/USERS/cocoapods/offline_local_ios_pods.sh"         /usr/local/bin/offline_local_ios_pods
 chmod +x /usr/local/bin/offline_local_ios_pods
 
 # ======================================
