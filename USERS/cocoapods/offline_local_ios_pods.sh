@@ -2,13 +2,14 @@
 
 # AwesomeProject/ios/Pods/Local Podspecs
 
-echo "Bash version ${BASH_VERSION}..."
 
 CURRENT=`pwd`
 
 projectPath="${CURRENT}"
 echo "                         "
 echo "==============================================================="
+echo "Bash version ${BASH_VERSION}..."
+echo "                         "
 echo "$projectPath"
 echo "==============================================================="
 echo "                         "
