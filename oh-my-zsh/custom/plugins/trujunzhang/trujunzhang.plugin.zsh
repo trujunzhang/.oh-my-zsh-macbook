@@ -189,6 +189,11 @@ alias npmpubdoc="npm run doc:publish"
 # npm-scripts-info
 alias npminfo="npm run info"
 
+# gradle
+alias gradleClean='./gradlew clean'
+alias gradleBundleRelease='./gradlew bundleRelease'
+alias gradleAssembleRelease='./gradlew assembleRelease'
+
 # gitbook.plugin
 
 alias gitbs='gitbook serve'
@@ -261,7 +266,6 @@ alias iosiphone13pro='open -a Simulator --args -CurrentDeviceUDID E7A90CEB-9487-
 alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 
 # Flutter
-alias fandroidclean='./gradlew clean '
 alias fclean="flutter clean"
 alias fkill="killall -9 dart"
 alias fdoctor='flutter doctor -v'
