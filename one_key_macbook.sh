@@ -65,6 +65,12 @@ if [ ! -f  ~/Library/Fonts/FiraCode-Bold.ttf ]; then
     brew install --cask font-fira-code
 fi
 
+## React-native & Expo
+if ! command_exists watchman; then
+    brew install bundletool
+    brew install watchman
+fi
+
 # nvm(node.js)
 if [ ! -d  ~/.nvm ]; then
     cd ~/ && rm -rf .nvm 
