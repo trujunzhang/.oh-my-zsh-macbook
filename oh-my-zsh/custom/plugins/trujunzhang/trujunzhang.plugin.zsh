@@ -231,6 +231,10 @@ alias crunand="cocos run -p android"
 
 alias crunand86="cocos run -p android --ap android-21 --app-aib x86"
 
+# bundletool
+alias bundleApks='chmod +x bundletool/build_apk.sh & sh bundletool/build_apk.sh'
+alias bundleInstall='bundletool install-apks --apks='
+
 # Expo
 alias expnewapp='expo init'
 alias expnewtsapp='npx create-expo-app -t expo-template-blank-typescript'
@@ -240,6 +244,7 @@ alias expand="exp android"
 alias expdoctor='expo doctor --fix-dependencies'
 alias expprebuild='expo prebuild --clean'
 alias expdevclient='expo start --dev-client'
+alias expandroidkeystore='expo fetch:android:keystore'
 
 # Expo(eas)
 alias easLogin='eas login'
