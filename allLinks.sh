@@ -230,19 +230,13 @@ directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.
 directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
 # directoryLink ".m2(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2"               "$HOME/.m2"
 
-# User's profile
-# directoryLink "Alfred 3(profile)"             "$USERPROFILE_HOME/ApplicationSupport/Alfred 3"            "$PATH_SYSTEM_APPLICATION_SUPPORT/Alfred 3"
-# directoryLink "BetterTouchTool(profile)"      "$USERPROFILE_HOME/ApplicationSupport/BetterTouchTool"     "$PATH_SYSTEM_APPLICATION_SUPPORT/BetterTouchTool"
-# directoryLink "com.trankynam.aText(profile)"  "$USERPROFILE_HOME/ApplicationSupport/com.trankynam.aText" "$PATH_SYSTEM_APPLICATION_SUPPORT/com.trankynam.aText"
-# directoryLink "Firefox(profile)"              "$USERPROFILE_HOME/ApplicationSupport/Firefox"             "$PATH_SYSTEM_APPLICATION_SUPPORT/Firefox"
-# directoryLink "Sublime Text 3(profile)"       "$USERPROFILE_HOME/ApplicationSupport/Sublime Text 3"      "$PATH_SYSTEM_APPLICATION_SUPPORT/Sublime Text 3"
-# directoryLink "Vivaldi(profile)"              "$USERPROFILE_HOME/ApplicationSupport/Vivaldi"             "$PATH_SYSTEM_APPLICATION_SUPPORT/Vivaldi"
-
-
 # pending(the following)
 # ====================================
 # directoryLink "CocoaPods(Library/Caches)"  "$TRUJUNZHANG_DOTFILES_HOME/lib/CocoaPods" "$HOME/Library/Caches/CocoaPods"
 # directoryLink ".cocoapods" "$TRUJUNZHANG_DOTFILES_HOME/lib/responsitory.cocoapods" "$HOME/.cocoapods"
+
+# Node.js
+fileLink "Yarn(config)"       "$CURRENT/yarnrc.symlink"          "$HOME/.yarnrc"
 
 # =============================
 # Flutter
