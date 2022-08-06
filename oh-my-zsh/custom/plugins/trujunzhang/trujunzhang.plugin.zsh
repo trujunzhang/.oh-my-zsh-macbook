@@ -231,6 +231,10 @@ alias crunand="cocos run -p android"
 
 alias crunand86="cocos run -p android --ap android-21 --app-aib x86"
 
+# Homebrew
+alias brewUpgrade='brew upgrade'
+alias brewOutDated='brew outdated'
+
 # bundletool
 alias bundleApks='chmod +x bundletool/build_apk.sh & sh bundletool/build_apk.sh'
 alias bundleInstall='bundletool install-apks --apks='
