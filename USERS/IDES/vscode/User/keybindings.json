@@ -71,5 +71,9 @@
     {
       "key": "cmd+e",
       "command": "workbench.action.quickOpen"
+    },
+    {
+      "key": "cmd+shift+l",
+      "command": "workbench.action.toggleSidebarVisibility"
     }
 ]
