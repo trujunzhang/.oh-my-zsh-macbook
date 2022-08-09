@@ -61,7 +61,7 @@ if [ ! -f /usr/local/bin/autoreconf ]; then
 fi
 
 ## font-fira
-if [ ! -f  ~/Library/Fonts/FiraCode-Bold.ttf ]; then
+if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
     brew tap homebrew/cask-fonts
     brew install --cask font-fira-code
 fi
