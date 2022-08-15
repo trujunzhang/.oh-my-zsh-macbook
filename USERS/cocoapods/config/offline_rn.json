@@ -30,5 +30,13 @@
         "filename": "boost.podspec",
         "http": "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2",
         "file": "boost/boost_1_76_0.tar.bz2"
+    },
+    {
+        "type": "httpxxx",
+        "name": "expo-modules-core",
+        "path": "node_modules/expo-modules-core/android",
+        "filename": "build.gradle",
+        "http": "https://github.com",
+        "file": ""
     }
 ]
