@@ -40,6 +40,11 @@ if [ ! -d  ~/Library/autojump ]; then
     brew install autojump
 fi
 
+## nginx
+if [ ! -d  /usr/local/etc/nginx ]; then
+    brew install nginx
+fi
+
 ## emacs
 if [ ! -d  /usr/local/opt/emacs-plus@29 ]; then
     ## https://github.com/d12frosted/homebrew-emacs-plus
