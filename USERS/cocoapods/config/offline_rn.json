@@ -38,5 +38,13 @@
         "filename": "build.gradle",
         "http": "https://github.com",
         "file": ""
+    },
+    {
+        "type": "http",
+        "name": "boost",
+        "path": "node_modules/expo-modules-core/android",
+        "filename": "build.gradle",
+        "http": "https://boostorg.jfrog.io/artifactory/main",
+        "file": "main"
     }
 ]
