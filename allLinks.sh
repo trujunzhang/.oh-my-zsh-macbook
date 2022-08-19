@@ -273,3 +273,10 @@ chmod +x /usr/local/bin/offline_local_ios_pods
 # ======================================
 fileLink "Apps(custom)"      "$CURRENT/USERS/system/run_my_apps.sh"         /usr/local/bin/run_my_apps
 chmod +x /usr/local/bin/run_my_apps
+
+# Nginx downloads
+directoryLink "nginx(Download)"   "/Users/djzhang/Documents/Organizations/__CACHES/github/@http"     "/usr/local/var/www/@http"
+
+
+
+
