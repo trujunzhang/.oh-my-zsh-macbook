@@ -32,19 +32,27 @@
         "file": "boost/boost_1_76_0.tar.bz2"
     },
     {
-        "type": "httpxxx",
-        "name": "expo-modules-core",
-        "path": "node_modules/expo-modules-core/android",
-        "filename": "build.gradle",
-        "http": "https://github.com",
-        "file": ""
-    },
-    {
         "type": "http",
         "name": "boost",
         "path": "node_modules/expo-modules-core/android",
         "filename": "build.gradle",
         "http": "https://boostorg.jfrog.io/artifactory/main",
         "file": "main"
+    },
+    {
+        "type": "http",
+        "name": "facebook-folly",
+        "path": "node_modules/expo-modules-core/android",
+        "filename": "build.gradle",
+        "http": "https://github.com/facebook",
+        "file": "facebook"
+    },
+    {
+        "type": "http",
+        "name": "google/double-conversion",
+        "path": "node_modules/expo-modules-core/android",
+        "filename": "build.gradle",
+        "http": "https://github.com/google",
+        "file": "google"
     }
 ]
