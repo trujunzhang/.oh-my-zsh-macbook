@@ -1,0 +1,7 @@
+* miniforge3
+   https://github.com/conda-forge/miniforge
+
+   $ brew install miniforge
+
+
+
