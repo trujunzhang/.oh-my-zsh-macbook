@@ -1,6 +1,12 @@
 [
     {
         "type": "application",
+        "name": "myCMDs",
+        "path": "myCMDs",
+        "enable": "1"
+    },
+    {
+        "type": "application",
         "name": "emacs",
         "path": "Emacs",
         "enable": "1"
