@@ -2,8 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Mount</key>
-    <string>user:password@192.168.0.10</string>
+    <key>t1_cmd1</key>
+    <string>j appExpo</string>
+    <key>t1_cmd1xxx</key>
+    <string>j appExpo</string>
+    <key>t1_cmd2</key>
+    <string></string>
+    <key>t1_cmd2xxx</key>
+    <string></string>
+    <key>t1_cmd3</key>
+    <string>androidopenxxx</string>
+    <key>t1_cmd3xxx</key>
+    <string></string>
     <key>RaidFolder</key>
     <string>/Volumes/QNAP-RAID/FILES</string>
     <key>RaidSYM</key>
