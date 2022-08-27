@@ -257,6 +257,9 @@ alias easBuildLocalApkProduction='eas build --local --output bundletool/app_rele
 alias easBuildIOS='eas build --platform ios'
 alias easBuildAll='eas build --platform all'
 
+# Expo(eas)(Update)
+alias easUpdateConfigure='eas update:configure'
+
 # Emacs
 # alias emacs='open -a /Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Emacs.app $1'
 # alias emacsd="emacs -debug-init"
