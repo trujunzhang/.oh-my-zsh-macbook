@@ -3,20 +3,28 @@
 <plist version="1.0">
 <dict>
     <key>t1_cmd1</key>
-    <string>j appExpo</string>
-    <key>t1_cmd1xxx</key>
-    <string>j appExpo</string>
+    <string>androidopen</string>
     <key>t1_cmd2</key>
     <string></string>
-    <key>t1_cmd2xxx</key>
-    <string></string>
     <key>t1_cmd3</key>
-    <string>androidopenxxx</string>
-    <key>t1_cmd3xxx</key>
     <string></string>
-    <key>RaidFolder</key>
-    <string>/Volumes/QNAP-RAID/FILES</string>
-    <key>RaidSYM</key>
-    <string>~/Desktop/RAID</string>
+    <key>t1_cmd4</key>
+    <string></string>
+    <key>t2_cmd1</key>
+    <string></string>
+    <key>t2_cmd2</key>
+    <string></string>
+    <key>t2_cmd3</key>
+    <string></string>
+    <key>t2_cmd4</key>
+    <string></string>
+    <key>t3_cmd1</key>
+    <string>j appExpo</string>
+    <key>t3_cmd2</key>
+    <string>vsc</string>
+    <key>t3_cmd3</key>
+    <string>yrandroid</string>
+    <key>t3_cmd4</key>
+    <string></string>
 </dict>
 </plist>
