@@ -108,7 +108,7 @@ mkdir "$USER_PROFILE_DJZHANG_HOME/.local/share"
 fileLink "shellstartup.json"  "$TRUJUNZHANG_DOTFILES_HOME/USERS/system/shellstartup.json" "$HOME/shellstartup.json"
 
 # plist that run terminal cmds
-fileLink "terminalcmds.plist"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/terminalcmds.plist" "$HOME/terminalcmds.plist"
+fileLink "terminalcmds.plist"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/terminals/terminalcmds.plist" "$HOME/terminalcmds.plist"
 
 # https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
 # directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
@@ -239,42 +239,42 @@ directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.
 # directoryLink ".cocoapods" "$TRUJUNZHANG_DOTFILES_HOME/lib/responsitory.cocoapods" "$HOME/.cocoapods"
 
 # Node.js
-fileLink "Yarn(config)"       "$CURRENT/yarnrc.symlink"          "$HOME/.yarnrc"
+fileLink "Yarn(config)"       "$TRUJUNZHANG_DOTFILES_HOME/yarnrc.symlink"          "$HOME/.yarnrc"
 
 # =============================
 # Flutter
 # =============================
 
 # flutter tool(getx style)
-fileLink "Getx(style)"           "$CURRENT/bash/getx_style.sh"         /usr/local/bin/getx_style
+fileLink "Getx(style)"           "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_style.sh"         /usr/local/bin/getx_style
 chmod +x /usr/local/bin/getx_style
 
 # flutter tool(getx page)
-fileLink "Getx(page)"             "$CURRENT/bash/getx_page.sh"         /usr/local/bin/getx_page
+fileLink "Getx(page)"             "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_page.sh"         /usr/local/bin/getx_page
 chmod +x /usr/local/bin/getx_page
 
 # flutter tool(getx page no binding)
-fileLink "Getx(page_no_binding)"  "$CURRENT/bash/getx_page_no_binding.sh"   /usr/local/bin/getx_page_no_binding
+fileLink "Getx(page_no_binding)"  "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_page_no_binding.sh"   /usr/local/bin/getx_page_no_binding
 chmod +x /usr/local/bin/getx_page_no_binding
 
 # flutter tool(getx widget)
-fileLink "Getx(widget)"            "$CURRENT/bash/getx_widget.sh"         /usr/local/bin/getx_widget
+fileLink "Getx(widget)"            "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_widget.sh"         /usr/local/bin/getx_widget
 chmod +x /usr/local/bin/getx_widget
 
 # flutter tool(getx rest)
-fileLink "Getx(rest)"              "$CURRENT/bash/getx_rest.sh"         /usr/local/bin/getx_rest
+fileLink "Getx(rest)"              "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_rest.sh"         /usr/local/bin/getx_rest
 chmod +x /usr/local/bin/getx_rest
 
 # ======================================
 # ios cocoapods for React native
 # ======================================
-fileLink "Cocoapods(offline)"      "$CURRENT/USERS/cocoapods/offline_local_ios_pods.sh"         /usr/local/bin/offline_local_ios_pods
+fileLink "Cocoapods(offline)"      "$TRUJUNZHANG_DOTFILES_HOME/USERS/cocoapods/offline_local_ios_pods.sh"         /usr/local/bin/offline_local_ios_pods
 chmod +x /usr/local/bin/offline_local_ios_pods
 
 # ======================================
 # Run custom apps
 # ======================================
-fileLink "Apps(custom)"      "$CURRENT/USERS/system/run_my_apps.sh"         /usr/local/bin/run_my_apps
+fileLink "Apps(custom)"      "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/run_my_apps.sh"         /usr/local/bin/run_my_apps
 chmod +x /usr/local/bin/run_my_apps
 
 # Nginx downloads

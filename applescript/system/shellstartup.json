@@ -1,8 +1,8 @@
 [
     {
         "type": "application",
-        "name": "myCMDs",
-        "path": "myCMDs",
+        "name": "myCMDsAndroid",
+        "path": "myCMDsAndroid",
         "enable": "1"
     },
     {
