@@ -105,7 +105,7 @@ mkdir "$USER_PROFILE_DJZHANG_HOME/.local/share"
 # ====================================================================
 
 # shell that run when os startup.
-fileLink "shellstartup.json"  "$TRUJUNZHANG_DOTFILES_HOME/USERS/system/shellstartup.json" "$HOME/shellstartup.json"
+fileLink "shellstartup.json"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/shellstartup.json" "$HOME/shellstartup.json"
 
 # plist that run terminal cmds
 fileLink "terminalcmds.plist"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/terminals/terminalcmds.plist" "$HOME/terminalcmds.plist"
