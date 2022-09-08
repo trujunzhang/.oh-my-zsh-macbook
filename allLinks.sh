@@ -123,8 +123,9 @@ fileLink "settings.json(vscode)"     "$VSCODE_USERS_HOME/settings.json"      "$D
 fileLink "projects.json(vscode)"     "$VSCODE_HOME/projects.json"            "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager/projects.json"
 
 # IDES(atom)
-fileLink "config.cson(atom)"  "$ATOM_HOME_SOURCE/config.cson" "$ATOM_HOME_DEST/config.cson"
-fileLink "keymap.cson(atom)"  "$ATOM_HOME_SOURCE/keymap.cson" "$ATOM_HOME_DEST/keymap.cson"
+fileLink "config.cson(atom)"    "$ATOM_HOME_SOURCE/config.cson" "$ATOM_HOME_DEST/config.cson"
+fileLink "keymap.cson(atom)"    "$ATOM_HOME_SOURCE/keymap.cson" "$ATOM_HOME_DEST/keymap.cson"
+fileLink "projects.cson(atom)"  "$ATOM_HOME_SOURCE/projects.cson" "$ATOM_HOME_DEST/projects.cson"
 
 # IDES(Sublime)
 mkdir -p "$SUBLIME_SUPPORT_USER"
