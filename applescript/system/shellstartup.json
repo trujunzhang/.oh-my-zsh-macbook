@@ -3,7 +3,7 @@
         "type": "application",
         "name": "myCMDsAndroid",
         "path": "myCMDsAndroid",
-        "enable": "0"
+        "enable": "1"
     },
     {
         "type": "application",
