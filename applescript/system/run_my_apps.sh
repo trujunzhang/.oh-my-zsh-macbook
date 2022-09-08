@@ -47,3 +47,7 @@ do
     fi
 
 done
+
+mkdir -p /tmp/xxx
+mkdir -p /tmp/yyy
+
