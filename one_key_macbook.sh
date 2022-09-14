@@ -45,6 +45,11 @@ if [ ! -d  /usr/local/etc/nginx ]; then
     brew install nginx
 fi
 
+## direnv
+if [ ! -f  /usr/local/bin/direnv ]; then
+    brew install direnv
+fi
+
 ## emacs
 if [ ! -d  /usr/local/opt/emacs-plus@29 ]; then
     ## https://github.com/d12frosted/homebrew-emacs-plus

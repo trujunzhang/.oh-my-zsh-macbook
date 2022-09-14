@@ -10,10 +10,6 @@
     ]
     followSymlinks: false
     telemetryConsent: "no"
-    themes: [
-      "atom-dark-ui"
-      "monokai"
-    ]
   dart:
     sdkLocation: "/Users/djzhang/Documents/dartSDK"
   "exception-reporting":
