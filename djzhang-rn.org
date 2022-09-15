@@ -85,8 +85,10 @@
 ** react-native-image-picker
   https://github.com/react-native-image-picker/react-native-image-picker
 
-** react-native-vision-camera
-   https://github.com/mrousavy/react-native-vision-camera
+** React-native-maps
+   https://github.com/react-native-maps/react-native-maps
+   https://docs.expo.dev/versions/latest/sdk/map-view/
+   
 
 
 

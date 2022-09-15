@@ -47,6 +47,7 @@ fi
 
 ## direnv
 if [ ! -f  /usr/local/bin/direnv ]; then
+    # https://direnv.net/#getting-started
     brew install direnv
 fi
 
