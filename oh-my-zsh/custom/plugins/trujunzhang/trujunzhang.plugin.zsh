@@ -252,9 +252,10 @@ alias expandroidkeystore='expo fetch:android:keystore'
 
 # Expo(eas)
 alias easLogin='eas login'
+alias easPublish_Apk_Production='eas update --branch production --message "Updating the app"'
 alias easBuild_OnlineApk_Preview='eas build --platform android --profile preview --no-wait'
 alias easBuild_OnlineApk_Production='eas build --platform android --profile production --no-wait'
-alias easBuildLocalApkProduction='eas build --local --output bundletool/app_release.apk --platform android --profile production'
+alias easBuild_LocalApk_Production='eas build --local --output bundletool/app_release.apk --platform android --profile production'
 alias easBuildIOS='eas build --platform ios'
 alias easBuildAll='eas build --platform all'
 
