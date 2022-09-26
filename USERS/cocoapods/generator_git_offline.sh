@@ -50,6 +50,7 @@ git clone https://github.com/google/GTMAppAuth.git                            $O
 
 git clone https://github.com/libuv/libuv.git                                  $OUT_GIT_FOLD/libuv
 git clone https://github.com/SDWebImage/SDWebImage.git                        $OUT_GIT_FOLD/SDWebImage
+git clone https://github.com/SDWebImage/SDWebImageWebPCoder.git               $OUT_GIT_FOLD/SDWebImageWebPCoder
 # ========================================================= 
 # zip
 # ========================================================= 
@@ -89,6 +90,7 @@ zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/GTMAppAuth/.git
 
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/libuv/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/SDWebImage/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/SDWebImageWebPCoder/.git
 # ========================================================= 
 # end
 # ========================================================= 

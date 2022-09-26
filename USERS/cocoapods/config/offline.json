@@ -486,5 +486,13 @@
         "filename": "SDWebImage.podspec.json",
         "git": "https://github.com/SDWebImage/SDWebImage.git",
         "folder": "@common/SDWebImage"
+    },
+    {
+        "type": "git",
+        "name": "SDWebImageWebPCoder",
+        "path": "e/9/d/SDWebImageWebPCoder",
+        "filename": "SDWebImageWebPCoder.podspec.json",
+        "git": "https://github.com/SDWebImage/SDWebImageWebPCoder.git",
+        "folder": "@common/SDWebImageWebPCoder"
     }
  ]
