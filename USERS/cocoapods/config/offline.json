@@ -1,11 +1,11 @@
 [
     {
-        "type": "http",
-        "name": "OpenSSL-Universal",
-        "path": "e/d/6/OpenSSL-Universal",
-        "filename": "OpenSSL-Universal.podspec.json",
-        "http": "https://github.com/krzyzanowskim/OpenSSL/archive/1.1.1100.zip",
-        "file": "OpenSSL/1.1.1100.zip"
+        "type": "git",
+        "name": "BoringSSL-GRPC",
+        "path": "f/8/8/BoringSSL-GRPC",
+        "filename": "BoringSSL-GRPC.podspec.json",
+        "git": "https://github.com/google/boringssl.git",
+        "folder": "@spec/boringssl"
     },
     {
         "type": "git",
@@ -13,7 +13,7 @@
         "path": "9/1/0/gRPC-Core",
         "filename": "gRPC-Core.podspec.json",
         "git": "https://github.com/grpc/grpc.git",
-        "folder": "@common/grpc"
+        "folder": "@spec/grpc"
     },
     {
         "type": "git",
@@ -21,7 +21,15 @@
         "path": "c/8/7/gRPC-C++",
         "filename": "gRPC-C++.podspec.json",
         "git": "https://github.com/grpc/grpc.git",
-        "folder": "@common/grpc"
+        "folder": "@spec/grpc"
+    },
+    {
+        "type": "http",
+        "name": "OpenSSL-Universal",
+        "path": "e/d/6/OpenSSL-Universal",
+        "filename": "OpenSSL-Universal.podspec.json",
+        "http": "https://github.com/krzyzanowskim/OpenSSL/archive/1.1.1100.zip",
+        "file": "OpenSSL/1.1.1100.zip"
     },
     {
         "type": "git",
@@ -94,14 +102,6 @@
         "filename": "Bolts.podspec.json",
         "git": "https://github.com/BoltsFramework/Bolts-ObjC.git",
         "folder": "@common/Bolts-ObjC"
-    },
-    {
-        "type": "git",
-        "name": "BoringSSL-GRPC",
-        "path": "f/8/8/BoringSSL-GRPC",
-        "filename": "BoringSSL-GRPC.podspec.json",
-        "git": "https://github.com/google/boringssl.git",
-        "folder": "@spec/boringssl"
     },
     {
         "type": "git",
@@ -495,4 +495,4 @@
         "git": "https://github.com/SDWebImage/SDWebImageWebPCoder.git",
         "folder": "@common/SDWebImageWebPCoder"
     }
- ]
+]
