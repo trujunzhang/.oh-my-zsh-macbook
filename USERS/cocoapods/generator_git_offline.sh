@@ -48,6 +48,7 @@ git clone https://github.com/protocolbuffers/protobuf.git                     $O
 git clone https://github.com/priteshrnandgaonkar/Flipper-Boost-iOSX.git       $OUT_GIT_FOLD/Flipper-Boost-iOSX
 git clone https://github.com/google/GTMAppAuth.git                            $OUT_GIT_FOLD/GTMAppAuth
 
+git clone https://github.com/libuv/libuv.git                                  $OUT_GIT_FOLD/libuv
 # ========================================================= 
 # zip
 # ========================================================= 
@@ -84,6 +85,8 @@ zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/folly/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/protobuf/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/Flipper-Boost-iOSX/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/GTMAppAuth/.git
+
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/libuv/.git
 
 # ========================================================= 
 # end

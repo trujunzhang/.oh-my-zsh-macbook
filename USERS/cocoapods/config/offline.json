@@ -470,5 +470,13 @@
         "filename": "libevent.podspec.json",
         "git": "https://github.com/libevent/libevent.git",
         "folder": "@common/libevent"
+    },
+    {
+        "type": "git",
+        "name": "Libuv-gRPC",
+        "path": "c/8/0/Libuv-gRPC",
+        "filename": "Libuv-gRPC.podspec.json",
+        "git": "https://github.com/libuv/libuv.git",
+        "folder": "@common/libuv"
     }
  ]
