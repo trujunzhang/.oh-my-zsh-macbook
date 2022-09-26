@@ -484,7 +484,7 @@
         "name": "SDWebImage",
         "path": "1/1/7/SDWebImage",
         "filename": "SDWebImage.podspec.json",
-        "git": "https://github.com/libuv/libuv.git",
-        "folder": "@common/libuv"
-    },
+        "git": "https://github.com/SDWebImage/SDWebImage.git",
+        "folder": "@common/SDWebImage"
+    }
  ]
