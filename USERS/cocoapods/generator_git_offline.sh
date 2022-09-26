@@ -49,6 +49,7 @@ git clone https://github.com/priteshrnandgaonkar/Flipper-Boost-iOSX.git       $O
 git clone https://github.com/google/GTMAppAuth.git                            $OUT_GIT_FOLD/GTMAppAuth
 
 git clone https://github.com/libuv/libuv.git                                  $OUT_GIT_FOLD/libuv
+git clone https://github.com/SDWebImage/SDWebImage.git                        $OUT_GIT_FOLD/SDWebImage
 # ========================================================= 
 # zip
 # ========================================================= 
@@ -87,7 +88,7 @@ zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/Flipper-Boost-iOSX/.git
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/GTMAppAuth/.git
 
 zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/libuv/.git
-
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/SDWebImage/.git
 # ========================================================= 
 # end
 # ========================================================= 

@@ -478,5 +478,13 @@
         "filename": "Libuv-gRPC.podspec.json",
         "git": "https://github.com/libuv/libuv.git",
         "folder": "@common/libuv"
-    }
+    },
+    {
+        "type": "git",
+        "name": "SDWebImage",
+        "path": "1/1/7/SDWebImage",
+        "filename": "SDWebImage.podspec.json",
+        "git": "https://github.com/libuv/libuv.git",
+        "folder": "@common/libuv"
+    },
  ]
