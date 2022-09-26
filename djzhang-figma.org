@@ -13,5 +13,9 @@
 * NativeBase v3.2
   https://www.figma.com/file/bQALKnStpdEZcPp9eJZhG8/NativeBase-v3.2-Design-Kit-(Community)?node-id=659%3A74
 
+* Tailwind CSS UI (Community)
+  https://www.figma.com/file/hpscqrgtiv6v41nbrI6fCV/Tailwind-CSS-UI-(Community)?node-id=335%3A533
+
+
 
 
