@@ -13,7 +13,7 @@
         "path": "9/1/0/gRPC-Core",
         "filename": "gRPC-Core.podspec.json",
         "git": "https://github.com/grpc/grpc.git",
-        "folder": "@spec/grpc"
+        "folder": "@spec/grpc-branch"
     },
     {
         "type": "git",
@@ -21,7 +21,7 @@
         "path": "c/8/7/gRPC-C++",
         "filename": "gRPC-C++.podspec.json",
         "git": "https://github.com/grpc/grpc.git",
-        "folder": "@spec/grpc"
+        "folder": "@spec/grpc-branch"
     },
     {
         "type": "http",
