@@ -37,12 +37,12 @@ rm -rf  "$GRPC_THIRD_FOLD/zlib"
 # ========================================================= 
 git submodule add "$THIRD_PARTY_URL/abseil-cpp"                 third_party/abseil-cpp
 git submodule add "$THIRD_PARTY_URL/benchmark"                  third_party/benchmark
-git submodule add "$THIRD_PARTY_URL/bloaty"                     third_party/bloaty
-git submodule add "$THIRD_PARTY_URL/boringssl-with-bazel"       third_party/boringssl-with-bazel
-git submodule add "$THIRD_PARTY_URL/cares"                      third_party/cares
-git submodule add "$THIRD_PARTY_URL/envoy-api"                  third_party/envoy-api
-git submodule add "$THIRD_PARTY_URL/googleapis"                 third_party/googleapis
-git submodule add "$THIRD_PARTY_URL/googletest"                 third_party/googletest
+# git submodule add "$THIRD_PARTY_URL/bloaty"                     third_party/bloaty
+# git submodule add "$THIRD_PARTY_URL/boringssl-with-bazel"       third_party/boringssl-with-bazel
+# git submodule add "$THIRD_PARTY_URL/cares"                      third_party/cares
+# git submodule add "$THIRD_PARTY_URL/envoy-api"                  third_party/envoy-api
+# git submodule add "$THIRD_PARTY_URL/googleapis"                 third_party/googleapis
+# git submodule add "$THIRD_PARTY_URL/googletest"                 third_party/googletest
 git submodule add "$THIRD_PARTY_URL/libuv"                      third_party/libuv
 git submodule add "$THIRD_PARTY_URL/opencensus-proto"           third_party/opencensus-proto
 git submodule add "$THIRD_PARTY_URL/opentelemetry"              third_party/opentelemetry

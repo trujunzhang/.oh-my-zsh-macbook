@@ -400,6 +400,7 @@ alias dfpython="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh
 alias drunvpn="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drv="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drunonekeymac="rm -rf ~/.nvm && cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook && ./one_key_macbook.sh"
+alias drungrpc_branch="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
 alias drunoffline="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
 alias drunhttp='cd /Users/djzhang/Documents/Organizations/__CACHES/github && python3 -m http.server --cgi 8080'
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
