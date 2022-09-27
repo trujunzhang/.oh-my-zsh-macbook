@@ -3,8 +3,11 @@
 GRPC_GIT_URL="https://github.com/grpc/grpc.git"
 GRPC_BRANCH="V1.44.0"
 
-git clone "$GRPC_GIT_URL" "/home/deploy/data/youtube/grpc"
+WORK_SPACE="/home/deploy/data/youtube"
+GRPC_BRANCH_ZIP_FILE="$WORK_SPACE/grpc_branch.zip"
 
-git clone "/home/deploy/data/youtube/grpc" "/home/deploy/data/youtube/grpc-branch" --template= --single-branch --depth 1 --branch "$GRPC_BRANCH"
+git clone "$GRPC_GIT_URL" "$WORK_SPACE/grpc"
 
+git clone "$WORK_SPACE/grpc" "$WORK_SPACE/grpc-branch" --template= --single-branch --depth 1 --branch "$GRPC_BRANCH"
 
+zip -r "$GRPC_BRANCH_ZIP_FILE" "$WORK_SPACE/grpc-branch" 
