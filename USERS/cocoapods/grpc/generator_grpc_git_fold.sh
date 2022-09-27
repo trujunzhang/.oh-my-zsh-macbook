@@ -51,4 +51,7 @@ git submodule add "$THIRD_PARTY_URL/re2"                        third_party/re2
 git submodule add "$THIRD_PARTY_URL/xds"                        third_party/xds
 git submodule add "$THIRD_PARTY_URL/zlib"                       third_party/zlib
 
+git add . 
+git commit -m 'add moduls' 
+
 git checkout -b v1.44.0
