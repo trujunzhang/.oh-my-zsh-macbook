@@ -6,7 +6,10 @@ THIRD_PARTY_URL="file:///Users/djzhang/Documents/Organizations/__CACHES/github/@
 
 cd "$GRPC_FOLD"
 
-# Create git repository
+# ready 
+rm -rf .git
+
+# create git repository
 git init 
 git add . 
 git commit -m 'first commit' 
@@ -62,6 +65,7 @@ echo "Bash version ${BASH_VERSION}..."
 echo "==============================================================="
 
 rm .gitmodules
+touch .gitmodules
 
 echo "                         "
 echo "rm sub modules folds"
