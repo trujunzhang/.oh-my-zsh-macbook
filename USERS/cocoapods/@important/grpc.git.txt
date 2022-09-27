@@ -1,0 +1,16 @@
+file:///Users/djzhang/Documents/Organizations/__CACHES/github/@spec/grpc/third_party
+
+
+
+$ /usr/bin/git clone file:///Users/djzhang/Documents/Organizations/__CACHES/github/@spec/grpc /var/folders/gy/vq1j0q3d30v9lq66z23kb8fm0000gn/T/d20220926-44617-11wlo55
+     --template= --single-branch --depth 1 --branch v1.44.0
+
+
+
+
+git clone /home/deploy/data/youtube/grpc /home/deploy/data/youtube/grpc-branch --template= --single-branch --depth 1 --branch v1.44.0
+
+
+
+
+git init && git add . && git commit -m 'first commit' && git checkout -b v1.44.0
