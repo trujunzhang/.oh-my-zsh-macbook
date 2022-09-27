@@ -12,6 +12,7 @@
 #### common shells    
 #    cp /root/.oh-my-zsh-macbook/USERS/cocoapods/generator_git_offline.sh /usr/bin/generator_git_offline && chmod +x /usr/bin/generator_git_offline 
 #    cp /root/.oh-my-zsh-macbook/USERS/cocoapods/grpc/generator_grpc_git_offline.sh /usr/bin/generator_grpc_git_offline && chmod +x /usr/bin/generator_grpc_git_offline 
+#    cp /root/.oh-my-zsh-macbook/USERS/cocoapods/grpc/git_clone_grpc_branch.sh /usr/bin/git_clone_grpc_branch && chmod +x /usr/bin/git_clone_grpc_branch 
 #
 #
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && chmod +x one_key_ubuntu.sh && chmod +x bash/x_ui_install.sh
