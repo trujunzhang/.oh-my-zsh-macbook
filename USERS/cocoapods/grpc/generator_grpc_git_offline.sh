@@ -14,29 +14,25 @@ rm -f $END_TAG
 # ========================================================= 
 # clone
 # ========================================================= 
-
+	url = https://github.com/abseil/abseil-cpp.git
 	url = https://github.com/google/benchmark
-	url = https://github.com/libuv/libuv.git
-	url = https://github.com/envoyproxy/data-plane-api.git
-	url = https://github.com/abseil/abseil-cpp.git
-	url = https://github.com/open-telemetry/opentelemetry-proto.git
 	url = https://github.com/google/bloaty.git
-	url = https://github.com/abseil/abseil-cpp.git
-	url = https://github.com/aquynh/capstone.git
-	url = https://github.com/nico/demumble.git
-	url = https://github.com/google/googletest.git
-	url = https://github.com/protocolbuffers/protobuf.git
-	url = https://github.com/google/re2
-	url = https://github.com/madler/zlib
-	url = https://github.com/madler/zlib
-	url = https://github.com/google/re2.git
-	url = https://github.com/google/boringssl.git
-	url = https://github.com/c-ares/c-ares.git
+	url = https://github.com/google/boringssl.git                         boringssl-with-bazel
+	url = https://github.com/c-ares/c-ares.git                            cares
+	url = https://github.com/envoyproxy/data-plane-api.git                envoy-api
 	url = https://github.com/googleapis/googleapis.git
+	url = https://github.com/google/googletest.git
+	url = https://github.com/libuv/libuv.git
 	url = https://github.com/census-instrumentation/opencensus-proto.git
-	url = https://github.com/google/googletest.git
-	url = https://github.com/cncf/xds.git
+	url = https://github.com/open-telemetry/opentelemetry-proto.git       opentelemetry
 	url = https://github.com/protocolbuffers/protobuf.git
-	url = https://github.com/google/benchmark.git
-	url = https://github.com/google/googletest.git
+	url = https://github.com/google/re2.git
+	url = https://github.com/cncf/xds.git
+	url = https://github.com/madler/zlib
+
+
+
+
+	# url = https://github.com/aquynh/capstone.git
+	# url = https://github.com/nico/demumble.git
 
