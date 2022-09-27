@@ -59,6 +59,9 @@ function git_add_submodules {
 echo "                         "
 echo "==============================================================="
 echo "Bash version ${BASH_VERSION}..."
+echo "==============================================================="
+
+rm .gitmodules
 
 echo "                         "
 echo "rm sub modules folds"
