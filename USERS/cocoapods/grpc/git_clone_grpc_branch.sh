@@ -4,7 +4,7 @@ GRPC_GIT_URL="https://github.com/grpc/grpc.git"
 GRPC_BRANCH="V1.44.0"
 
 WORK_SPACE="/home/deploy/data/youtube"
-GRPC_BRANCH_ZIP_FILE="$WORK_SPACE/grpc_branch.zip"
+GRPC_BRANCH_ZIP_FILE="$WORK_SPACE/grpc-branch.zip"
 
 git clone "$GRPC_GIT_URL" "$WORK_SPACE/grpc"
 
