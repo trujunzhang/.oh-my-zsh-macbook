@@ -50,10 +50,10 @@ function git_add_submodules {
        #git submodule add "$THIRD_PARTY_URL/envoy-api"                  third_party/envoy-api
        #git submodule add "$THIRD_PARTY_URL/googleapis"                 third_party/googleapis
        #git submodule add "$THIRD_PARTY_URL/googletest"                 third_party/googletest
-       git submodule add "$THIRD_PARTY_URL/libuv"                      third_party/libuv
-       git submodule add "$THIRD_PARTY_URL/opencensus-proto"           third_party/opencensus-proto
-       git submodule add "$THIRD_PARTY_URL/opentelemetry"              third_party/opentelemetry
-       git submodule add "$THIRD_PARTY_URL/protobuf"                   third_party/protobuf
+       # git submodule add "$THIRD_PARTY_URL/libuv"                      third_party/libuv
+       # git submodule add "$THIRD_PARTY_URL/opencensus-proto"           third_party/opencensus-proto
+       # git submodule add "$THIRD_PARTY_URL/opentelemetry"              third_party/opentelemetry
+       # git submodule add "$THIRD_PARTY_URL/protobuf"                   third_party/protobuf
        git submodule add "$THIRD_PARTY_URL/re2"                        third_party/re2
        git submodule add "$THIRD_PARTY_URL/xds"                        third_party/xds
        git submodule add "$THIRD_PARTY_URL/zlib"                       third_party/zlib
