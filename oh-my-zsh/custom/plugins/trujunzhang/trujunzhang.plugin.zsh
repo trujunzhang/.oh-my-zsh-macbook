@@ -87,7 +87,7 @@ alias rnands='npm run android:shake'
 
 alias rninfo='npx react-native info'
 alias rnnewapp='npx react-native init'
-alias rnnewtsapp='npx react-native init ieatta --version 0.68.2 --template react-native-template-typescript'
+alias rnnewtsapp='npx react-native init my_app --version 0.69.5 --template react-native-template-typescript'
 
 # rebuild android/ios folders
 #  The solution if ur version of react-native >= 0.61.0 :
