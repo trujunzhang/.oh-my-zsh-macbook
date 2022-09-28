@@ -132,6 +132,8 @@ alias yarntw='yarn test.web'
 alias yarnita='yarn install && yarn test.web && yarn test.client'
 alias yarnta='yarn test.web && yarn test.client'
 
+alias ytailwatch='yarn dev:tailwind'
+
 alias ylint='yarn lint'
 alias ylintfix='yarn lint-fix'
 alias yadd='yarn add'
