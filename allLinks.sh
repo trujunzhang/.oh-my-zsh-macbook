@@ -245,6 +245,10 @@ fileLink "Yarn(config)"       "$TRUJUNZHANG_DOTFILES_HOME/yarnrc.symlink"       
 # cocoapods(Repository)
 directoryLink ".cocoapods(Repository)"   "/Volumes/MacDevelop/.cocoapods/Specs/Specs"           "$HOME/.cocoapods/repos/trunk/Specs"
 
+# cocoapods(Github)
+directoryLink ".cocoapods(github[@common])"   "/Volumes/MacDevelop/.github/@common"    "$HOME/Documents/Organizations/__CACHES/github/@common"   
+directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec"        "$HOME/Documents/Organizations/__CACHES/github/@spec"   
+
 # =============================
 # Flutter
 # =============================
