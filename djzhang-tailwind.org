@@ -1,0 +1,16 @@
+* projects
+** Tailwind CSS Crash Course For Beginners in 1 Hour
+    https://www.youtube.com/watch?v=yWCMI3dsSog
+    figma file: https://drive.google.com/file/d/19h4G4Bf63r4Ve6mMxW-YLCQkdSEMTpfv/view
+    source code: https://github.com/phithounsavanh/Tailwind-CSS-Crash-Course-For-Beginners-in-1-Hour
+
+* Code Commerce    
+** Build a React JS Website with Tailwind CSS - Beginner Tutorial Learning Tailwind CSS
+    https://www.youtube.com/watch?v=TVQnhcVFTVs
+    source code: https://github.com/fireclint/cloud-app-react
+
+** Build A React JS Travel Website Using Tailwind CSS - Front End - Start to Finish    
+   https://www.youtube.com/watch?v=gXdHvoWvViQ
+   source code: https://github.com/fireclint/react-travel-tailwind
+
+    
