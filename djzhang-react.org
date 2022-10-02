@@ -1,0 +1,14 @@
+* Libraries
+** react-icons
+   https://react-icons.github.io/react-icons/
+
+** heroicons
+   https://heroicons.com
+
+** react-scroll
+   https://github.com/fisshy/react-scroll
+
+
+
+
+   
