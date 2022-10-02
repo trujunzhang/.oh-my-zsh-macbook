@@ -33,11 +33,38 @@ if [ ! -d  "/Applications/Brave Browser.app" ]; then
     brew install --cask brave-browser
 fi
 
+# =========================================
+# apps
+# =========================================
+if [ ! -d  "/Applications/Kodi.app" ]; then
+    brew install --cask kodi
+fi
+
+if [ ! -d  "/Applications/Todoist.app" ]; then
+    brew install --cask todoist
+fi
+
+if [ ! -d  "/Applications/Figma.app" ]; then
+    brew install --cask figma
+fi
+
+
+# =========================================
+# required password
+# =========================================
 if [ ! -d  "/Applications/Microsoft Edge.app" ]; then
     brew install --cask microsoft-edge
 fi
 
-# =========================================
-# apps
-# =========================================
-    brew install --cask kodi
+if [ ! -d  "/Applications/Adobe Creative Cloud" ]; then
+    brew install --cask adobe-creative-cloud
+fi
+
+
+
+
+
+
+
+
+
