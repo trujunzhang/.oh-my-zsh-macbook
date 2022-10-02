@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-# Requirements
-#   .1 the lastest macos
-#   .2 vpn
-#   .3 xcode command line tools
-#   .4 .oh-my-zsh
-#   .5 ./allLinks
-
 CURRENT=`pwd` 
 
 # Import function files.

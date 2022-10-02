@@ -1,24 +1,10 @@
 #!/usr/bin/env bash
 
-# Requirements
-#   .1 the lastest macos
-#   .2 vpn
-#   .3 xcode command line tools
-#   .4 .oh-my-zsh
-#   .5 ./allLinks
-
 CURRENT=`pwd` 
 
 # Import function files.
 source ./bash/files-functions.sh
 source ./bash/tools.sh
-
-# copy 'homebrew'
-# if [ -d  ~/Desktop/ZIP/Homebrew ]; then
-#     if [ ! -d  /usr/local/Homebrew ]; then
-        # mv ~/Desktop/ZIP/Homebrew /usr/local/Homebrew
-#     fi
-# fi
 
 # homebrew
 if ! command_exists brew; then
