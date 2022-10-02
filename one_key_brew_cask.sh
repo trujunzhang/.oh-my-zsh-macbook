@@ -68,6 +68,10 @@ if [ ! -d  "/Applications/VLC.app" ]; then
     brew install --cask vlc
 fi
 
+# if [ ! -d  "/Applications/Skype.app" ]; then
+#     brew install --cask skype
+# fi
+
 # =========================================
 # required password
 # =========================================
@@ -79,7 +83,12 @@ if [ ! -d  "/Applications/Adobe Creative Cloud" ]; then
     brew install --cask adobe-creative-cloud
 fi
 
-
+# =========================================
+# apps
+# =========================================
+# if [ ! -d  "/Applications/BaiduNetdisk.app" ]; then
+    # brew install --cask baidunetdisk
+# fi
 
 
 
