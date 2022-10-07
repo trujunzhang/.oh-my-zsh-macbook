@@ -249,6 +249,12 @@ directoryLink ".cocoapods(Repository)"   "/Volumes/MacDevelop/.cocoapods/Specs/S
 directoryLink ".cocoapods(github[@common])"   "/Volumes/MacDevelop/.github/@common"    "$HOME/Documents/Organizations/__CACHES/github/@common"   
 directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec"        "$HOME/Documents/Organizations/__CACHES/github/@spec"   
 
+# cocoapods(Cache)
+if [ -d "$HOME/Library/Caches/CocoaPods" ]; then
+    mv "$HOME/Library/Caches/CocoaPods" "$HOME/Library/Caches/CocoaPods_bak"
+fi
+directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"           "$HOME/Library/Caches/CocoaPods"
+
 # =============================
 # Flutter
 # =============================
