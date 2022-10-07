@@ -107,6 +107,9 @@ alias pegraph="pipenv graph"
 alias penv="python3 -m venv venv"
 alias peactive="source venv/bin/activate"
 
+# gatsby
+alias gatsbynewtsapp='npm init gatsby -ts'
+
 # typescript
 ## https://www.npmjs.com/package/create-typescript-project
 alias ynewtsapp='npm init typescript-project'

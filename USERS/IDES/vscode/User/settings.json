@@ -1,5 +1,4 @@
 {
-    "workbench.editor.enablePreview": false,
     "git.enableSmartCommit": true,
     "files.autoSave": "afterDelay",
     "workbench.startupEditor": "newUntitledFile",
@@ -1188,5 +1187,7 @@
     "security.workspace.trust.untrustedFiles": "newWindow",
     "terminal.integrated.inheritEnv": false,
     "react-native-tools.showUserTips": false,
-    "json.schemas": []
+    "json.schemas": [],
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.editor.enablePreview": false
 }
