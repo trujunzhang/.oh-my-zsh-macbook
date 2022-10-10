@@ -4,20 +4,20 @@
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
 #
 #
-#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cp /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu && cp /root/.oh-my-zsh-macbook/bash/x_ui_install.sh /usr/bin/x_ui_install && chmod +x /usr/bin/x_ui_install 
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cp /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu && cp /$HOME/.oh-my-zsh-macbook/bash/x_ui_install.sh /usr/bin/x_ui_install && chmod +x /usr/bin/x_ui_install 
 #
 #
-#    cd .oh-my-zsh-macbook && git pull && cp -u /root/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
+#    cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
 #
 #### common shells    
-#    cp /root/.oh-my-zsh-macbook/USERS/cocoapods/generator_git_offline.sh /usr/bin/generator_git_offline && chmod +x /usr/bin/generator_git_offline 
-#    cp /root/.oh-my-zsh-macbook/USERS/cocoapods/grpc/generator_grpc_git_offline.sh /usr/bin/generator_grpc_git_offline && chmod +x /usr/bin/generator_grpc_git_offline 
-#    cp /root/.oh-my-zsh-macbook/USERS/cocoapods/grpc/git_clone_grpc_branch.sh /usr/bin/git_clone_grpc_branch && chmod +x /usr/bin/git_clone_grpc_branch 
+#    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/generator_git_offline.sh /usr/bin/generator_git_offline && chmod +x /usr/bin/generator_git_offline 
+#    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/grpc/generator_grpc_git_offline.sh /usr/bin/generator_grpc_git_offline && chmod +x /usr/bin/generator_grpc_git_offline 
+#    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/grpc/git_clone_grpc_branch.sh /usr/bin/git_clone_grpc_branch && chmod +x /usr/bin/git_clone_grpc_branch 
 #
 #
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && chmod +x one_key_ubuntu.sh && chmod +x bash/x_ui_install.sh
 #
-#    cd /root/.oh-my-zsh-macbook && ./one_key_ubuntu.sh
+#    cd /$HOME/.oh-my-zsh-macbook && ./one_key_ubuntu.sh
 #
 #
 #    x_ui_install && one_key_ubuntu 
@@ -25,23 +25,23 @@
 #
 ##################################################################
 # CURRENT=`pwd`
-CURRENT='/root/.oh-my-zsh-macbook'
+CURRENT='/$HOME/.oh-my-zsh-macbook'
 
 # Oh My Zsh
 sudo apt install -y zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
-rm /root/.zshrc
-cp -r "$CURRENT/zshrc_ubuntu.symlink" /root/.zshrc
+rm "/$HOME/.zshrc"
+cp -r "$CURRENT/zshrc_ubuntu.symlink" "/$HOME/.zshrc"
 
 ## plugins
 
-if [ -d /root/.oh-my-zsh/custom/plugins/trujunzhang ]; then
-    rm -rf /root/.oh-my-zsh/custom/plugins/trujunzhang
+if [ -d "/$HOME/.oh-my-zsh/custom/plugins/trujunzhang" ]; then
+    rm -rf "/$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
 fi
 
-cp -r "$CURRENT/oh-my-zsh/custom/plugins/trujunzhang"  /root/.oh-my-zsh/custom/plugins/trujunzhang 
+cp -r "$CURRENT/oh-my-zsh/custom/plugins/trujunzhang"  "/$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
 
 # Tools
 sudo apt install -y curl vim
