@@ -24,8 +24,6 @@
 #
 #
 ##################################################################
-# CURRENT=`pwd`
-CURRENT='/$HOME/.oh-my-zsh-macbook'
 
 # Oh My Zsh
 sudo apt install -y zsh
@@ -33,7 +31,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
 rm "/$HOME/.zshrc"
-cp -r "$CURRENT/zshrc_ubuntu.symlink" "/$HOME/.zshrc"
+cp -r "$HOME/.oh-my-zsh-macbook/zshrc_ubuntu.symlink" "/$HOME/.zshrc"
 
 ## plugins
 
@@ -41,7 +39,7 @@ if [ -d "/$HOME/.oh-my-zsh/custom/plugins/trujunzhang" ]; then
     rm -rf "/$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
 fi
 
-cp -r "$CURRENT/oh-my-zsh/custom/plugins/trujunzhang"  "/$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
+cp -r "$HOME/.oh-my-zsh-macbook/oh-my-zsh/custom/plugins/trujunzhang"  "/$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
 
 # Tools
 sudo apt install -y curl vim
@@ -73,14 +71,14 @@ sudo apt install -y python3-pip
      sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
   
 ## docker-pure-ftpd & qbittorrent
-     cd "$CURRENT/USERS/Docker/docker-transmission"
+     cd "$HOME/.oh-my-zsh-macbook/USERS/Docker/docker-transmission"
      docker-compose up -d
-     cd "$CURRENT/USERS/Docker/docker-pure-ftpd"
+     cd "$HOME/.oh-my-zsh-macbook/USERS/Docker/docker-pure-ftpd"
      docker-compose up -d
 
 ## v2ray   
      #  mkdir -p /etc/v2ray
-     #  cp -r "$CURRENT/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
+     #  cp -r "$HOME/.oh-my-zsh-macbook/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
      #  docker run \
      #         --restart=always \
      #         -d --name v2ray \
@@ -116,14 +114,14 @@ sudo apt install -y python3-pip
 ## bash file
 
 ### youtube cli
-      cp -r "$CURRENT/bash/yl.sh" /usr/bin/yl
+      cp -r "$HOME/.oh-my-zsh-macbook/bash/yl.sh" /usr/bin/yl
       sudo chmod +x /usr/bin/yl
 
-      cp -r "$CURRENT/bash/ydlcron.sh" /usr/bin/ydlcron
+      cp -r "$HOME/.oh-my-zsh-macbook/bash/ydlcron.sh" /usr/bin/ydlcron
       sudo chmod +x /usr/bin/ydlcron
 
 ### github offline for cocoapods
-      cp -r "$CURRENT/USERS/cocoapods/generator_git_offline.sh" /usr/bin/generator_git_offline
+      cp -r "$HOME/.oh-my-zsh-macbook/USERS/cocoapods/generator_git_offline.sh" /usr/bin/generator_git_offline
       sudo chmod +x /usr/bin/generator_git_offline
 
 
