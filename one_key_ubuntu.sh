@@ -41,6 +41,8 @@ fi
 
 cp -r "$HOME/.oh-my-zsh-macbook/oh-my-zsh/custom/plugins/trujunzhang"  "/$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
 
+source .zshrc
+
 # Tools
 sudo apt install -y curl vim
 
