@@ -11,6 +11,10 @@
    英文字体使用Roboto,中文字体使用Noto。
    小知识：Noto有个中文名字叫思源黑体，并且是一个开源免费的字体，所以小伙伴以后就不要再用微软雅黑啦。
 
+* Prototype
+** xiaopiu
+   https://www.xiaopiu.com/
+   
    
 * Adobe XD
 ** plugins
@@ -22,7 +26,28 @@
 
    https://github.com/adamcoulombe/Global-Font-Replace-for-Adobe-XD
 
-* Prototype
-** xiaopiu
-   https://www.xiaopiu.com/
+* Figma
+** plugins  
+
+*** Batch Styler
+   https://www.figma.com/community/plugin/818203235789864127
+
+*** Export Original Images
+   https://www.figma.com/community/plugin/973190386632562805/Export-Original-Images
+   
+* Sketch
+** plugins
+
+*** Sketch runner
+   https://sketchrunner.com
+
+*** Fontily(Sketch plugin for finding & replacing fonts for Sketch 3+)
+   https://github.com/partyka1/Fontily
+
+*** Export Original Images
+   https://medium.com/@harrisrobin/how-to-extract-your-original-images-from-your-sketch-files-1a3d989b0eaa
+
+   
+
+
    

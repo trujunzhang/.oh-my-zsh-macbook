@@ -18,15 +18,3 @@
 ** Tailwind CSS UI (Community)
   https://www.figma.com/file/hpscqrgtiv6v41nbrI6fCV/Tailwind-CSS-UI-(Community)?node-id=335%3A533
 
-
-* plugins  
-
-** Batch Styler
-   https://www.figma.com/community/plugin/818203235789864127
-
-** Export Original Images
-   https://www.figma.com/community/plugin/973190386632562805/Export-Original-Images
-   
-
-
-
