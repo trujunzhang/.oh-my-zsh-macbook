@@ -5,10 +5,7 @@
     "vim.leader": "<space>",
     "vim.visualModeKeyBindings": [
         {
-            "before": [
-                "<leader>",
-                "<space>"
-            ],
+            "before": ["<leader>", "<space>"],
             "after": [],
             "commands": [
                 {
@@ -18,11 +15,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                ";",
-                ";"
-            ],
+            "before": ["<leader>", ";", ";"],
             "after": [],
             "commands": [
                 {
@@ -32,20 +25,11 @@
             ]
         },
         {
-            "before": [
-                "f",
-                "d"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+            "before": ["f", "d"],
+            "after": ["<Esc>"]
         },
         {
-            "before": [
-                "<leader>",
-                "j",
-                "="
-            ],
+            "before": ["<leader>", "j", "="],
             "after": [],
             "commands": [
                 {
@@ -57,10 +41,7 @@
     ],
     "vim.normalModeKeyBindings": [
         {
-            "before": [
-                "<leader>",
-                "<space>"
-            ],
+            "before": ["<leader>", "<space>"],
             "after": [],
             "commands": [
                 {
@@ -70,10 +51,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "<tab>"
-            ],
+            "before": ["<leader>", "<tab>"],
             "after": [],
             "commands": [
                 {
@@ -83,11 +61,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                ";",
-                ";"
-            ],
+            "before": ["<leader>", ";", ";"],
             "after": [],
             "commands": [
                 {
@@ -97,10 +71,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "'"
-            ],
+            "before": ["<leader>", "'"],
             "after": [],
             "commands": [
                 {
@@ -110,10 +81,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "/"
-            ],
+            "before": ["<leader>", "/"],
             "after": [],
             "commands": [
                 {
@@ -123,10 +91,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "1"
-            ],
+            "before": ["<leader>", "1"],
             "after": [],
             "commands": [
                 {
@@ -136,10 +101,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "2"
-            ],
+            "before": ["<leader>", "2"],
             "after": [],
             "commands": [
                 {
@@ -149,10 +111,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "3"
-            ],
+            "before": ["<leader>", "3"],
             "after": [],
             "commands": [
                 {
@@ -162,10 +121,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "4"
-            ],
+            "before": ["<leader>", "4"],
             "after": [],
             "commands": [
                 {
@@ -175,10 +131,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "5"
-            ],
+            "before": ["<leader>", "5"],
             "after": [],
             "commands": [
                 {
@@ -188,10 +141,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "6"
-            ],
+            "before": ["<leader>", "6"],
             "after": [],
             "commands": [
                 {
@@ -201,10 +151,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "7"
-            ],
+            "before": ["<leader>", "7"],
             "after": [],
             "commands": [
                 {
@@ -214,10 +161,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "8"
-            ],
+            "before": ["<leader>", "8"],
             "after": [],
             "commands": [
                 {
@@ -227,11 +171,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "b",
-                "b"
-            ],
+            "before": ["<leader>", "b", "b"],
             "after": [],
             "commands": [
                 {
@@ -241,11 +181,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "b",
-                "d"
-            ],
+            "before": ["<leader>", "b", "d"],
             "after": [],
             "commands": [
                 {
@@ -255,11 +191,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "b",
-                "n"
-            ],
+            "before": ["<leader>", "b", "n"],
             "after": [],
             "commands": [
                 {
@@ -269,11 +201,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "b",
-                "p"
-            ],
+            "before": ["<leader>", "b", "p"],
             "after": [],
             "commands": [
                 {
@@ -283,11 +211,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "b",
-                "s"
-            ],
+            "before": ["<leader>", "b", "s"],
             "after": [],
             "commands": [
                 {
@@ -297,11 +221,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "e",
-                "l"
-            ],
+            "before": ["<leader>", "e", "l"],
             "after": [],
             "commands": [
                 {
@@ -311,11 +231,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "e",
-                "n"
-            ],
+            "before": ["<leader>", "e", "n"],
             "after": [],
             "commands": [
                 {
@@ -325,11 +241,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "e",
-                "p"
-            ],
+            "before": ["<leader>", "e", "p"],
             "after": [],
             "commands": [
                 {
@@ -339,11 +251,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "f",
-                "e"
-            ],
+            "before": ["<leader>", "f", "e"],
             "after": [],
             "commands": [
                 {
@@ -353,11 +261,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "f",
-                "f"
-            ],
+            "before": ["<leader>", "f", "f"],
             "after": [],
             "commands": [
                 {
@@ -373,11 +277,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "f",
-                "r"
-            ],
+            "before": ["<leader>", "f", "r"],
             "after": [],
             "commands": [
                 {
@@ -387,11 +287,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "f",
-                "s"
-            ],
+            "before": ["<leader>", "f", "s"],
             "after": [],
             "commands": [
                 {
@@ -401,11 +297,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "f",
-                "t"
-            ],
+            "before": ["<leader>", "f", "t"],
             "after": [],
             "commands": [
                 {
@@ -415,11 +307,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "f",
-                "y"
-            ],
+            "before": ["<leader>", "f", "y"],
             "after": [],
             "commands": [
                 {
@@ -429,11 +317,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "b"
-            ],
+            "before": ["<leader>", "g", "b"],
             "after": [],
             "commands": [
                 {
@@ -443,11 +327,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "c"
-            ],
+            "before": ["<leader>", "g", "c"],
             "after": [],
             "commands": [
                 {
@@ -457,11 +337,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "d"
-            ],
+            "before": ["<leader>", "g", "d"],
             "after": [],
             "commands": [
                 {
@@ -471,11 +347,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "f"
-            ],
+            "before": ["<leader>", "g", "f"],
             "after": [],
             "commands": [
                 {
@@ -485,11 +357,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "i"
-            ],
+            "before": ["<leader>", "g", "i"],
             "after": [],
             "commands": [
                 {
@@ -499,11 +367,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "m"
-            ],
+            "before": ["<leader>", "g", "m"],
             "after": [],
             "commands": [
                 {
@@ -513,11 +377,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "p"
-            ],
+            "before": ["<leader>", "g", "p"],
             "after": [],
             "commands": [
                 {
@@ -527,11 +387,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "s"
-            ],
+            "before": ["<leader>", "g", "s"],
             "after": [],
             "commands": [
                 {
@@ -541,11 +397,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "S"
-            ],
+            "before": ["<leader>", "g", "S"],
             "after": [],
             "commands": [
                 {
@@ -555,11 +407,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "g",
-                "U"
-            ],
+            "before": ["<leader>", "g", "U"],
             "after": [],
             "commands": [
                 {
@@ -569,11 +417,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "h",
-                "d"
-            ],
+            "before": ["<leader>", "h", "d"],
             "after": [],
             "commands": [
                 {
@@ -583,11 +427,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "i",
-                "s"
-            ],
+            "before": ["<leader>", "i", "s"],
             "after": [],
             "commands": [
                 {
@@ -597,11 +437,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "j",
-                "="
-            ],
+            "before": ["<leader>", "j", "="],
             "after": [],
             "commands": [
                 {
@@ -611,54 +447,19 @@
             ]
         },
         {
-            "before": [
-                "leader",
-                "j",
-                "j"
-            ],
-            "after": [
-                "leader",
-                "leader",
-                "s"
-            ]
+            "before": ["leader", "j", "j"],
+            "after": ["leader", "leader", "s"]
         },
         {
-            "before": [
-                "leader",
-                "j",
-                "l"
-            ],
-            "after": [
-                "leader",
-                "leader",
-                "leader",
-                "b",
-                "d",
-                "j",
-                "k"
-            ]
+            "before": ["leader", "j", "l"],
+            "after": ["leader", "leader", "leader", "b", "d", "j", "k"]
         },
         {
-            "before": [
-                "leader",
-                "j",
-                "w"
-            ],
-            "after": [
-                "leader",
-                "leader",
-                "leader",
-                "b",
-                "d",
-                "w"
-            ]
+            "before": ["leader", "j", "w"],
+            "after": ["leader", "leader", "leader", "b", "d", "w"]
         },
         {
-            "before": [
-                "<leader>",
-                "l",
-                "d"
-            ],
+            "before": ["<leader>", "l", "d"],
             "after": [],
             "commands": [
                 {
@@ -668,11 +469,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "p",
-                "f"
-            ],
+            "before": ["<leader>", "p", "f"],
             "after": [],
             "commands": [
                 {
@@ -682,11 +479,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "p",
-                "l"
-            ],
+            "before": ["<leader>", "p", "l"],
             "after": [],
             "commands": [
                 {
@@ -696,11 +489,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "p",
-                "p"
-            ],
+            "before": ["<leader>", "p", "p"],
             "after": [],
             "commands": [
                 {
@@ -710,11 +499,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "p",
-                "t"
-            ],
+            "before": ["<leader>", "p", "t"],
             "after": [],
             "commands": [
                 {
@@ -724,11 +509,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "q",
-                "f"
-            ],
+            "before": ["<leader>", "q", "f"],
             "after": [],
             "commands": [
                 {
@@ -738,11 +519,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "q",
-                "q"
-            ],
+            "before": ["<leader>", "q", "q"],
             "after": [],
             "commands": [
                 {
@@ -752,11 +529,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "q",
-                "r"
-            ],
+            "before": ["<leader>", "q", "r"],
             "after": [],
             "commands": [
                 {
@@ -766,11 +539,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "r",
-                "s"
-            ],
+            "before": ["<leader>", "r", "s"],
             "after": [],
             "commands": [
                 {
@@ -780,11 +549,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "s",
-                "e"
-            ],
+            "before": ["<leader>", "s", "e"],
             "after": [],
             "commands": [
                 {
@@ -794,11 +559,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "s",
-                "j"
-            ],
+            "before": ["<leader>", "s", "j"],
             "after": [],
             "commands": [
                 {
@@ -808,11 +569,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "s",
-                "p"
-            ],
+            "before": ["<leader>", "s", "p"],
             "after": [],
             "commands": [
                 {
@@ -822,11 +579,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "s",
-                "P"
-            ],
+            "before": ["<leader>", "s", "P"],
             "after": [],
             "commands": [
                 {
@@ -836,11 +589,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "T",
-                "F"
-            ],
+            "before": ["<leader>", "T", "F"],
             "after": [],
             "commands": [
                 {
@@ -850,11 +599,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "T",
-                "m"
-            ],
+            "before": ["<leader>", "T", "m"],
             "after": [],
             "commands": [
                 {
@@ -864,11 +609,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "T",
-                "s"
-            ],
+            "before": ["<leader>", "T", "s"],
             "after": [],
             "commands": [
                 {
@@ -878,11 +619,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "T",
-                "t"
-            ],
+            "before": ["<leader>", "T", "t"],
             "after": [],
             "commands": [
                 {
@@ -892,10 +629,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "v"
-            ],
+            "before": ["<leader>", "v"],
             "after": [],
             "commands": [
                 {
@@ -905,10 +639,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "V"
-            ],
+            "before": ["<leader>", "V"],
             "after": [],
             "commands": [
                 {
@@ -918,11 +649,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "-"
-            ],
+            "before": ["<leader>", "w", "-"],
             "after": [],
             "commands": [
                 {
@@ -932,11 +659,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "/"
-            ],
+            "before": ["<leader>", "w", "/"],
             "after": [],
             "commands": [
                 {
@@ -946,11 +669,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "d"
-            ],
+            "before": ["<leader>", "w", "d"],
             "after": [],
             "commands": [
                 {
@@ -960,11 +679,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "h"
-            ],
+            "before": ["<leader>", "w", "h"],
             "after": [],
             "commands": [
                 {
@@ -974,11 +689,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "H"
-            ],
+            "before": ["<leader>", "w", "H"],
             "after": [],
             "commands": [
                 {
@@ -988,11 +699,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "j"
-            ],
+            "before": ["<leader>", "w", "j"],
             "after": [],
             "commands": [
                 {
@@ -1002,11 +709,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "k"
-            ],
+            "before": ["<leader>", "w", "k"],
             "after": [],
             "commands": [
                 {
@@ -1016,11 +719,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "l"
-            ],
+            "before": ["<leader>", "w", "l"],
             "after": [],
             "commands": [
                 {
@@ -1030,11 +729,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "L"
-            ],
+            "before": ["<leader>", "w", "L"],
             "after": [],
             "commands": [
                 {
@@ -1044,11 +739,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "m"
-            ],
+            "before": ["<leader>", "w", "m"],
             "after": [],
             "commands": [
                 {
@@ -1058,11 +749,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "v"
-            ],
+            "before": ["<leader>", "w", "v"],
             "after": [],
             "commands": [
                 {
@@ -1072,11 +759,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "w"
-            ],
+            "before": ["<leader>", "w", "w"],
             "after": [],
             "commands": [
                 {
@@ -1086,11 +769,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "w",
-                "W"
-            ],
+            "before": ["<leader>", "w", "W"],
             "after": [],
             "commands": [
                 {
@@ -1100,11 +779,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "x",
-                "s"
-            ],
+            "before": ["<leader>", "x", "s"],
             "after": [],
             "commands": [
                 {
@@ -1114,11 +789,7 @@
             ]
         },
         {
-            "before": [
-                "<leader>",
-                "x",
-                "w"
-            ],
+            "before": ["<leader>", "x", "w"],
             "after": [],
             "commands": [
                 {
@@ -1130,13 +801,8 @@
     ],
     "vim.insertModeKeyBindings": [
         {
-            "before": [
-                "f",
-                "d"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+            "before": ["f", "d"],
+            "after": ["<Esc>"]
         }
     ],
     "vim.easymotion": true,
@@ -1155,9 +821,7 @@
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
-        "editor.rulers": [
-            80
-        ],
+        "editor.rulers": [80],
         "editor.selectionHighlight": false,
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
@@ -1189,5 +853,6 @@
     "react-native-tools.showUserTips": false,
     "json.schemas": [],
     "liveServer.settings.donotShowInfoMsg": true,
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "editor.bracketPairColorization.enabled": true
 }

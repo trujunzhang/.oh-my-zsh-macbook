@@ -9,7 +9,7 @@
         "type": "application",
         "name": "emacs",
         "path": "Emacs",
-        "enable": "1"
+        "enable": "0"
     },
     {
         "type": "application",
