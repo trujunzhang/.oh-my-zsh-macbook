@@ -256,10 +256,8 @@ fi
 directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"           "$HOME/Library/Caches/CocoaPods"
 
 # xcode(Developer)
-if [ -d "$HOME/Library/Developer" ]; then
-    mv "$HOME/Library/Developer" "$HOME/Library/Developer_BAK"
-fi
-directoryLink ".xcode(Developer)"   "/Volumes/MacDevelop/.Developer"           "$HOME/Library/Developer"
+# directoryLink ".xcode(Developer)"   "/Volumes/MacDevelop/.Developer"           "$HOME/Library/Developer"
+# directoryLink ".xcode(CoreSimulator)"   "/Volumes/MacDevelop/.Developer/CoreSimulator"           "$HOME/Library/Developer/CoreSimulator"
 
 # =============================
 # Flutter
