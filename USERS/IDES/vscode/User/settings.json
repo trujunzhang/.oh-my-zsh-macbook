@@ -854,5 +854,8 @@
     "json.schemas": [],
     "liveServer.settings.donotShowInfoMsg": true,
     "workbench.editor.enablePreview": false,
-    "editor.bracketPairColorization.enabled": true
+    "editor.bracketPairColorization.enabled": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
