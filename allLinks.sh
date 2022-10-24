@@ -251,7 +251,7 @@ directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec" 
 
 # cocoapods(Cache)
 if [ -d "$HOME/Library/Caches/CocoaPods" ]; then
-    mv "$HOME/Library/Caches/CocoaPods" "$HOME/Library/Caches/CocoaPods_bak"
+    # mv "$HOME/Library/Caches/CocoaPods" "$HOME/Library/Caches/CocoaPods_bak"
 fi
 directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"           "$HOME/Library/Caches/CocoaPods"
 
