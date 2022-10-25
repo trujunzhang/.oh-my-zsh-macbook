@@ -69,3 +69,5 @@ if ! command_exists watchman; then
     brew install watchman
 fi
 
+## Finally, restart the nginx.
+brew services restart nginx

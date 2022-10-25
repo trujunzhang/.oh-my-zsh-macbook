@@ -43,9 +43,9 @@ if [ ! -d  "/Applications/Kodi.app" ]; then
     brew install --cask kodi
 fi
 
-if [ ! -d  "/Applications/Todoist.app" ]; then
-    brew install --cask todoist
-fi
+# if [ ! -d  "/Applications/Todoist.app" ]; then
+    # brew install --cask todoist
+# fi
 
 if [ ! -d  "/Applications/Figma.app" ]; then
     brew install --cask figma

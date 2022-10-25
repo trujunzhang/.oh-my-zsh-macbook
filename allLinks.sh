@@ -229,10 +229,9 @@ fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.syml
 # directoryLink "sketch(app)"    "$SKETCH_APP"          "$SYSTEM_APPLICATION/Sketch.app"
 
 # Android Environment
-directoryLink "sdk(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android"   "$HOME/Library/Android"
-directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android"          "$HOME/.android"
-directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
-# directoryLink ".m2(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.m2"               "$HOME/.m2"
+# directoryLink "sdk(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android"   "$HOME/Library/Android"
+# directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android"          "$HOME/.android"
+# directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
 
 # pending(the following)
 # ====================================
@@ -243,6 +242,7 @@ directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.
 fileLink "Yarn(config)"       "$TRUJUNZHANG_DOTFILES_HOME/yarnrc.symlink"          "$HOME/.yarnrc"
 
 # cocoapods(Repository)
+mkdir -p "$HOME/.cocoapods/repos/trunk"
 directoryLink ".cocoapods(Repository)"   "/Volumes/MacDevelop/.cocoapods/Specs/Specs"           "$HOME/.cocoapods/repos/trunk/Specs"
 
 # cocoapods(Github)
@@ -250,9 +250,9 @@ directoryLink ".cocoapods(github[@common])"   "/Volumes/MacDevelop/.github/@comm
 directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec"        "$HOME/Documents/Organizations/__CACHES/github/@spec"   
 
 # cocoapods(Cache)
-if [ -d "$HOME/Library/Caches/CocoaPods" ]; then
+# if [ -d "$HOME/Library/Caches/CocoaPods" ]; then
     # mv "$HOME/Library/Caches/CocoaPods" "$HOME/Library/Caches/CocoaPods_bak"
-fi
+# fi
 directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"           "$HOME/Library/Caches/CocoaPods"
 
 # xcode(Developer)
