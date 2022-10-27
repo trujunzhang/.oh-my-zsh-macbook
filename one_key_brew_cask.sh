@@ -55,10 +55,10 @@ if [ ! -d  "/Applications/Zeplin.app" ]; then
     brew install --cask zeplin
 fi
 
-if [ ! -d  "/Applications/WeChat.app" ]; then
-    brew install --cask wechat
+# if [ ! -d  "/Applications/WeChat.app" ]; then
+    # brew install --cask wechat
     # brew install --cask qq
-fi
+# fi
 
 if [ ! -d  "/Applications/Sourcetree.app" ]; then
     brew install --cask sourcetree
