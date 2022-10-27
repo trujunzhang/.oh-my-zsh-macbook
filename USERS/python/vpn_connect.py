@@ -5,12 +5,13 @@ import threading
 import urllib.request
 
 
-def checkInternetUrllib(url='http://google.com', timeout=3):
+def checkInternetUrllib():
     try:
-        urllib.request.urlopen(url, timeout=timeout)
+        urllib.request.urlopen('http://google.com', timeout=5) 
+        print ('true')
         return True
-    except Exception as e:
-        print(e)
+    except:
+        print ('false')
         return False
 
 # https://stackoverflow.com/questions/42499299/python-threading-multiple-while-true-loops
