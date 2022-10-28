@@ -1,5 +1,6 @@
 * oh-my-zsh
    $ curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o oh-my-zsh-install.sh
 
-
+* homebrew 
+   $ curl https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o homebrew_install.sh
    
