@@ -19,4 +19,6 @@ subprocess.call(["networksetup","-disconnectpppoeservice","VPN (L2TP)"])
 while True:
     if not checkInternetUrllib() :
        subprocess.call(["networksetup","-connectpppoeservice","VPN (L2TP)"]) 
-    time.sleep(15)
+    time.sleep(20)
+
+
