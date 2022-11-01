@@ -290,7 +290,7 @@ alias iosiphone8='open -a Simulator --args -CurrentDeviceUDID 4011447B-DF37-47A7
 alias iosiphone14pro='open -a Simulator --args -CurrentDeviceUDID 72CFAFB2-E1BA-4C0D-B865-2369CCA1444E iPhone14pro'
 alias iosiphone14promaxabc='ioskill && sleep 3 && open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone14promax'
 alias iosiphone14promax='open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone14promax'
-alias iosiphone3se='open -a Simulator --args -CurrentDeviceUDID 402CC91D-4FE9-41B7-8559-6C5F29CD4C19 iPhone3se'
+alias iosiphone3se='open -a Simulator --args -CurrentDeviceUDID 0181C659-4100-4DD1-B141-48C7A00B3EE9 iPhone3se'
 alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 
 # Flutter
