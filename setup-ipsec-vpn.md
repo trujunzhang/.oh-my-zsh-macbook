@@ -11,7 +11,8 @@ root password: n!X6y_%5D%Y,MS)L
 
 # All values MUST be placed inside 'single quotes'
 # DO NOT use these special characters within values: \ " '
-wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
+// wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
+wget https://get.vpnsetup.net -O vpnsetup.sh && sudo \
 VPN_IPSEC_PSK='wh' \
 VPN_USER='test' \
 VPN_PASSWORD='test' \
