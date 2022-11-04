@@ -12,3 +12,7 @@
      sudo chmod +x /usr/local/bin/docker-compose
      sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
   
+## docker-ipsec-vpn-server
+     cd "$HOME/.oh-my-zsh-macbook/USERS/Docker/docker-ipsec-vpn-server"
+     docker-compose up -d  
+
