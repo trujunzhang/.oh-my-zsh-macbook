@@ -9,6 +9,12 @@
 #
 #    cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
 #
+# 
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_vpn.sh /usr/bin/one_key_vpn && chmod +x /usr/bin/one_key_vpn
+# 
+#    cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_vpn.sh /usr/bin/one_key_vpn && chmod +x /usr/bin/one_key_vpn
+#
+# 
 #### common shells    
 #    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/generator_git_offline.sh /usr/bin/generator_git_offline && chmod +x /usr/bin/generator_git_offline 
 #    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/grpc/generator_grpc_git_offline.sh /usr/bin/generator_grpc_git_offline && chmod +x /usr/bin/generator_grpc_git_offline 
