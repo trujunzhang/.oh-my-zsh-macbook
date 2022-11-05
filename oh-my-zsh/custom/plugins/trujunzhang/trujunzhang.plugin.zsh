@@ -87,7 +87,9 @@ alias rnands='npm run android:shake'
 
 alias rninfo='npx react-native info'
 alias rnnewapp='npx react-native init'
-alias rnnewtsapp='npx react-native init my_app --version 0.69.5 --template react-native-template-typescript'
+function rnnewtsapp {
+    npx react-native init $1 --version 0.69.5 --template react-native-template-typescript --skip-install 
+}
 
 # rebuild android/ios folders
 #  The solution if ur version of react-native >= 0.61.0 :
@@ -290,7 +292,7 @@ alias iosiphone8='open -a Simulator --args -CurrentDeviceUDID 4011447B-DF37-47A7
 alias iosiphone14pro='open -a Simulator --args -CurrentDeviceUDID 72CFAFB2-E1BA-4C0D-B865-2369CCA1444E iPhone14pro'
 alias iosiphone14promaxabc='ioskill && sleep 3 && open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone14promax'
 alias iosiphone14promax='open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone14promax'
-alias iosiphone3se='open -a Simulator --args -CurrentDeviceUDID 0181C659-4100-4DD1-B141-48C7A00B3EE9 iPhone3se'
+alias iosiphone3se='open -a Simulator --args -CurrentDeviceUDID 9AF53831-AF2E-4F84-AC62-91D4FB2A0E76 iPhone3se'
 alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
 
 # Flutter
@@ -386,7 +388,7 @@ alias wsshlocal='ssh ubuntu@'
 alias wsshcopylocal='ssh-copy-id ubuntu@'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh root@141.164.55.132'
+alias wsshtmp='ssh root@141.164.63.54'
 alias wsshcopytmp='ssh-copy-id root@'
 
 # Firebase

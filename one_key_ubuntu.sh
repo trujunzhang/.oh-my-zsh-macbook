@@ -10,7 +10,7 @@
 #    cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
 #
 # 
-#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_vpn.sh /usr/bin/one_key_vpn && chmod +x /usr/bin/one_key_vpn
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_vpn.sh /usr/bin/one_key_vpn && chmod +x /usr/bin/one_key_vpn && one_key_vpn
 # 
 #    cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_vpn.sh /usr/bin/one_key_vpn && chmod +x /usr/bin/one_key_vpn
 #
