@@ -382,13 +382,13 @@ alias crevisionlist='conda list --revision'
 alias cactive='conda activate'
 
 # VPS
-alias wsshbwg='ssh -p 27724 root@23.105.205.158'
-alias wsshcopybwg='ssh-copy-id -p 27724 root@23.105.205.158'
+alias wsshbwg='ssh -p 27724 root@23.105.209.109'
+alias wsshcopybwg='ssh-copy-id -p 27724 root@23.105.209.109'
 alias wsshlocal='ssh ubuntu@'
 alias wsshcopylocal='ssh-copy-id ubuntu@'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh root@141.164.63.54'
+alias wsshtmp='ssh root@78.141.198.121'
 alias wsshcopytmp='ssh-copy-id root@'
 
 # Firebase
