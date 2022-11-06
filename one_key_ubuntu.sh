@@ -33,7 +33,13 @@
 
 # Oh My Zsh
 sudo apt install -y zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Setup zsh as default shell
+chsh -s /usr/bin/zsh
+echo $SHELL
+
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/ohmyzsh/ohmyzsh.git "/$HOME/.oh-my-zsh"
 
 #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
 rm "/$HOME/.zshrc"
