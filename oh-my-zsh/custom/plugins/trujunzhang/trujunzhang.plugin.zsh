@@ -248,6 +248,9 @@ alias brewOutDated='brew outdated'
 alias bundleApks='chmod +x bundletool/build_apk.sh & sh bundletool/build_apk.sh'
 alias bundleInstall='bundletool install-apks --apks='
 
+# watchman
+alias watchmanClean='watchman watch-del-all'
+
 # Expo
 alias expnewapp='expo init'
 alias expnewtsapp='npx create-expo-app -t expo-template-blank-typescript'
