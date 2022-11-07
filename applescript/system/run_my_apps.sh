@@ -32,7 +32,6 @@ echo "                         "
 # seq FIRST INCREMENT LAST
 for i in $(seq 0 4 $((json_array_len-1)))
 do
-    sleep 2
 
     name=${values[$((i+1))]}
     application=${values[$((i+2))]}
@@ -46,8 +45,13 @@ do
         open -a "$application"
     fi
 
+    sleep 2
 done
 
 mkdir -p /tmp/xxx
+mkdir -p /tmp/xxx/123
+mkdir -p /tmp/xxx/234
 mkdir -p /tmp/yyy
+mkdir -p /tmp/yyy/123
+mkdir -p /tmp/yyy/234
 
