@@ -154,7 +154,10 @@ alias yarnab='yarn android:build'
 alias yarnai='yarn android:install'
 
 alias yupdate='ncu -u'
+
+# cocoapods
 alias ypodi='npx pod-install'
+alias podSpacsUpdate='cd /Volumes/MacDevelop/.cocoapods/Specs && git pull'
 
 # npm sketch-app
 alias npmrr="npm run sketch:render"
