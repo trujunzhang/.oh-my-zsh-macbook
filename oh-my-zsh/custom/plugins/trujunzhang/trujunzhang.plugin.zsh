@@ -254,7 +254,8 @@ alias watchmanClean='watchman watch-del-all'
 # Expo
 alias expnewapp='expo init'
 alias expnewtsapp='npx create-expo-app -t expo-template-blank-typescript'
-alias expstart="exp start"
+alias expUpdate='EXPO_BETA=1 expo-cli upgrade'
+alias expstart="exp start -c"
 alias expios="exp ios"
 alias expand="exp android"
 alias expdoctor='expo doctor --fix-dependencies'

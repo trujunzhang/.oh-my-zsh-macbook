@@ -9,12 +9,12 @@
         "type": "application",
         "name": "emacs",
         "path": "Emacs",
-        "enable": "1"
+        "enable": "0"
     },
     {
         "type": "application",
         "name": "atom",
         "application": "Atom",
-        "enable": "1"
+        "enable": "0"
     }
 ]
