@@ -395,7 +395,7 @@ alias wsshlocal='ssh ubuntu@'
 alias wsshcopylocal='ssh-copy-id ubuntu@'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh root@78.141.198.121'
+alias wsshtmp='ssh root@141.164.52.168'
 alias wsshcopytmp='ssh-copy-id root@'
 
 # Firebase
