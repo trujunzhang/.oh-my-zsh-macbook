@@ -30,6 +30,9 @@
 #
 #
 ##################################################################
+command_exists () {
+    type "$1" &> /dev/null ;
+}
 
 function install_zsh {
     # Oh My Zsh
@@ -79,18 +82,19 @@ function prepare_system {
 function install_docker_apps {
     # All dockers    
     ##  Installing Docker
-    sudo apt install -y docker.io
-    sudo systemctl start docker
-    sudo systemctl enable docker
+if ! command_exists docker; then
+     sudo apt install -y docker.io
+     sudo systemctl start docker
+     sudo systemctl enable docker
+fi
 
-    ## Installing Docker-compose
-       # https://docs.docker.com/compose/install/
-
-    if [ ! -f  /usr/bin/docker-compose ]; then
-         sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-         sudo chmod +x /usr/local/bin/docker-compose
-         sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-    fi
+## Installing Docker-compose
+# https://docs.docker.com/compose/install/
+if ! command_exists docker-compose; then
+     sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+     sudo chmod +x /usr/local/bin/docker-compose
+     sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+fi
       
     ## docker-pure-ftpd & qbittorrent
     cd "$HOME/.oh-my-zsh-macbook/USERS/Docker/docker-transmission"
