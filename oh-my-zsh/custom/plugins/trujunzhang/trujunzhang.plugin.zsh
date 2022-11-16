@@ -395,7 +395,7 @@ alias wsshlocal='ssh ubuntu@'
 alias wsshcopylocal='ssh-copy-id ubuntu@'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh root@149.28.143.33'
+alias wsshtmp='ssh root@45.77.243.122'
 alias wsshcopytmp='ssh-copy-id root@'
 
 # Firebase
@@ -489,6 +489,9 @@ alias wdockps="docker ps -a"
 alias wdockrm='docker rm -f $(docker ps -a -q)'
 alias wdockimgrm='docker rmi $(docker images -q)'
 alias wdocklog='docker-compose logs --tail=all -f | grep'
+
+#vps
+alias pingPort='telnet 45.77.243.122 8888'
 
 # v2ray
 # 查看端口 Port
