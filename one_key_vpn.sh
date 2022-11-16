@@ -22,3 +22,14 @@
 ## docker-ipsec-vpn-server
      cd "$HOME/.oh-my-zsh-macbook/USERS/Docker/docker-ipsec-vpn-server"
      docker-compose up -d  
+
+    ## v2ray   
+      mkdir -p /etc/v2ray
+      cp -r "$HOME/.oh-my-zsh-macbook/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
+      docker run \
+             --restart=always \
+             -d --name v2ray \
+             -v /etc/v2ray:/etc/v2ray \
+             -p 8888:8888 \
+             v2ray/official  v2ray \
+             -config=/etc/v2ray/config.json
