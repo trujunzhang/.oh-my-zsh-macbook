@@ -105,6 +105,8 @@ sudo apt install -y python3-pip
 ## https://github.com/vaxilu/x-ui/blob/main/install.sh
 ## port: 8765
 ## port: 31266
+#     config_account="djzhang"
+#     config_password="wanghao720"
 ## b831381d-6324-4d53-ad4f-8cda48b30811
      # ( exec "./bash/x_ui_install.sh" )
 
