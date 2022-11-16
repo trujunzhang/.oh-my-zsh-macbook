@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # How to Configure Uncomplicated Firewall
-   sudo apt-get install -y ufw
-   echo "y" | sudo ufw enable
-   sudo ufw allow 22/tcp
-   sudo ufw allow 8765/tcp
-   sudo ufw allow 8888/tcp
+#    sudo apt-get install -y ufw
+#    echo "y" | sudo ufw enable
+#    sudo ufw allow 22/tcp
+#    sudo ufw allow 8765/tcp
+#    sudo ufw allow 8888/tcp
 
 # All dockers    
 ##  Installing Docker
