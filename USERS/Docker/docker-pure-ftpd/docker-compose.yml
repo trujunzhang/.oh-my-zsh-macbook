@@ -21,7 +21,7 @@ services:
     environment:
       PUBLICHOST: "localhost"
       FTP_USER_NAME: djzhang
-      FTP_USER_PASS: wanghaoFTP720
+      FTP_USER_PASS: wanghao720
       FTP_USER_HOME: /home/deploy
 # also for ssl/tls:
 #      ADDED_FLAGS: "--tls=2"
