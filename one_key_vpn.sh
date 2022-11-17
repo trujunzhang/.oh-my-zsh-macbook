@@ -9,7 +9,7 @@ command_exists () {
    echo "y" | sudo ufw enable
    sudo ufw allow 22/tcp
    sudo ufw allow 8765/tcp
-   sudo ufw allow 8888/tcp
+   sudo ufw allow 31743/tcp
    sudo ufw allow 9091/tcp
 
 # All dockers    
@@ -39,6 +39,6 @@ fi
      #         --restart=always \
      #         -d --name v2ray \
      #         -v /etc/v2ray:/etc/v2ray \
-     #         -p 8888:8888 \
+     #         -p 31743:31743 \
      #         v2ray/official  v2ray \
      #         -config=/etc/v2ray/config.json

@@ -491,7 +491,7 @@ alias wdockimgrm='docker rmi $(docker images -q)'
 alias wdocklog='docker-compose logs --tail=all -f | grep'
 
 #vps
-alias pingPort='telnet 45.77.243.122 8888'
+alias pingPort='telnet 45.77.243.122 31743'
 
 # v2ray
 # 查看端口 Port

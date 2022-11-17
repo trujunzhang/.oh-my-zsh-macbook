@@ -109,14 +109,14 @@ fi
     #         --restart=always \
     #         -d --name v2ray \
     #         -v /etc/v2ray:/etc/v2ray \
-    #         -p 8888:8888 \
+    #         -p 31743:31743 \
     #         v2ray/official  v2ray \
     #         -config=/etc/v2ray/config.json
 
     ## v2ray(x_ui)
     ## https://github.com/vaxilu/x-ui/blob/main/install.sh
     ## port: 8765
-    ## port: 31266
+    ## port: 31743
     #     config_account="djzhang"
     #     config_password="wanghao720"
     ## b831381d-6324-4d53-ad4f-8cda48b30811
