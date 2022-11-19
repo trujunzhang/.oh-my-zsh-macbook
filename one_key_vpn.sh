@@ -31,12 +31,12 @@ fi
      docker-compose up -d  
 
     ## v2ray   
-     #  mkdir -p /etc/v2ray
-     #  cp -r "$HOME/.oh-my-zsh-macbook/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
-     #  docker run \
-     #         --restart=always \
-     #         -d --name v2ray \
-     #         -v /etc/v2ray:/etc/v2ray \
-     #         -p 31743:31743 \
-     #         v2ray/official  v2ray \
-     #         -config=/etc/v2ray/config.json
+      mkdir -p /etc/v2ray
+      cp -r "$HOME/.oh-my-zsh-macbook/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
+      docker run \
+             --restart=always \
+             -d --name v2ray \
+             -v /etc/v2ray:/etc/v2ray \
+             -p 31743:31743 \
+             v2ray/official  v2ray \
+             -config=/etc/v2ray/config.json
