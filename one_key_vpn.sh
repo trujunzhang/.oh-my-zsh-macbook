@@ -5,15 +5,10 @@ command_exists () {
 }
 
 # How to Configure Uncomplicated Firewall
-   sudo apt-get install -y ufw
-   echo "y" | sudo ufw enable
-#    sudo ufw allow 22/tcp
-#    sudo ufw allow 8765/tcp
-#    sudo ufw allow 31743/tcp
-#    sudo ufw allow 31743/udp
-#    sudo ufw allow 9091/tcp
-   sudo ufw allow 1:65535/tcp
-   sudo ufw allow 1:65535/udp
+#    sudo apt-get install -y ufw
+#    echo "y" | sudo ufw enable
+#    sudo ufw allow 1:65535/tcp
+#    sudo ufw allow 1:65535/udp
 
 # All dockers    
 ##  Installing Docker
