@@ -46,7 +46,7 @@ function install_zsh {
     git clone https://github.com/ohmyzsh/ohmyzsh.git "/$HOME/.oh-my-zsh"
 
     #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
-    rm "/$HOME/.zshrc"
+    rm "$HOME/.zshrc"
     cp -r "$HOME/.oh-my-zsh-macbook/zshrc_ubuntu.symlink" "/$HOME/.zshrc"
 
     ## plugins
