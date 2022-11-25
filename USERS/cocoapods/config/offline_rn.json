@@ -54,5 +54,13 @@
         "filename": "build.gradle",
         "http": "https://github.com/google",
         "file": "google"
+    },
+    {
+        "type": "http",
+        "name": "hermes-engine",
+        "path": "node_modules/react-native/sdks/hermes-engine",
+        "filename": "hermes-engine.podspec",
+        "http": "https://github.com/facebook",
+        "file": "facebook"
     }
 ]
