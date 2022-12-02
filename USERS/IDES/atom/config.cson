@@ -22,3 +22,4 @@
       showInStatusBar: true
   welcome:
     showOnStartup: false
+    showSunsettingOnStartup: false
