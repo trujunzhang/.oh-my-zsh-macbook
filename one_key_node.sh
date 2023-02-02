@@ -13,6 +13,8 @@ if [ ! -d  ~/.nvm ]; then
     cd ~/.nvm  && git checkout v0.39.0 && . ~/.nvm/nvm.sh && nvm install 16.16.0 && nvm use 16.16.0
 fi    
 
+    npm install --location=global prettier
+
 ## list
 # if ! command_exists yarn; then
     npm install --location=global yarn
