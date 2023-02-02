@@ -2,8 +2,7 @@
 
 CURRENT=`pwd`
 # Folders in Home.
-USER_PROFILE_DJZHANG_HOME="/Users/djzhang"
-ORGANIZATIONS_HOME="$USER_PROFILE_DJZHANG_HOME/Documents/Organizations"
+ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
 
 # ====================================================================
 # ====================================================================
@@ -70,7 +69,7 @@ VSCODE_USERS_HOME="$VSCODE_HOME/User"
 DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
 ### IDES(Atom)
 ATOM_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/atom"
-ATOM_HOME_DEST="$USER_PROFILE_DJZHANG_HOME/.atom"
+ATOM_HOME_DEST="$HOME/.atom"
 ### IDES(Sublime)
 SUBLIME_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/sublime"
 ### /Users/djzhang/Library/Application\ Support/Sublime\ Text\ /Packages/User
@@ -88,16 +87,14 @@ source ./bash/files-functions.sh
 
 # Applications
 SYSTEM_APPLICATION="/Applications"
-SKETCH_APP="/Users/djzhang/Documents/Organizations/__APPLICATIONS/XD/Sketch.app"
-
 
 # ====================================================================
 # ====================================================================
 #         All folder
 # ====================================================================
 # ====================================================================
-mkdir "$USER_PROFILE_DJZHANG_HOME/.local"
-mkdir "$USER_PROFILE_DJZHANG_HOME/.local/share"
+mkdir "$HOME/.local"
+mkdir "$HOME/.local/share"
 # ====================================================================
 # ====================================================================
 #         All Links
@@ -224,9 +221,6 @@ fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.syml
 # Tmux(All)
 # fileLink "tmux(config)"       "$TMUX_CONFIG"          "$HOME/.tmux.conf"
 # fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL"    "$HOME/.tmux.conf.local"
-
-# Application Links
-# directoryLink "sketch(app)"    "$SKETCH_APP"          "$SYSTEM_APPLICATION/Sketch.app"
 
 # Android Environment
 # directoryLink "sdk(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android"   "$HOME/Library/Android"

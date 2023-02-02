@@ -389,8 +389,8 @@ alias crevisionlist='conda list --revision'
 alias cactive='conda activate'
 
 # VPS
-alias wsshbwg='ssh -p 27724 root@23.105.209.109'
-alias wsshcopybwg='ssh-copy-id -p 27724 root@23.105.209.109'
+alias wsshbwg='ssh -p 27449 root@176.122.172.101'
+alias wsshcopybwg='ssh-copy-id -p 27449 root@176.122.172.101'
 alias wsshlocal='ssh ubuntu@'
 alias wsshcopylocal='ssh-copy-id ubuntu@'
 # alias wsshtmp='ssh root@'

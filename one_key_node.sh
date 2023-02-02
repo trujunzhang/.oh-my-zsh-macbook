@@ -14,22 +14,23 @@ if [ ! -d  ~/.nvm ]; then
 fi    
 
 ## list
-if ! command_exists yarn; then
+# if ! command_exists yarn; then
     npm install --location=global yarn
     npm install --location=global npm-check-updates
     npm install --location=global monia-cli
-    npm install --location=global firebase-tools
-fi    
+    # npm install --location=global firebase-tools
+# fi    
 
 ## typescript
-if ! command_exists tsc; then
+# if ! command_exists tsc; then
     npm install --location=global typescript typescript-formatter tern js-beautify eslint 
-fi    
+# fi    
 
 # expo
-if ! command_exists expo; then
+# if ! command_exists expo; then
     # https://docs.expo.dev/get-started/installation/
     npm install --location=global expo-cli 
     # https://docs.expo.dev/build/setup/
     npm install --location=global eas-cli
-fi    
+# fi    
+

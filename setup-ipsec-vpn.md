@@ -1,6 +1,6 @@
 # https://bwh88.net/
 ================================================
-root password: es2YiYjT7Ol1
+root password: IB4CY1iirTO3
 SSH port: 27724
 ================================================
 
@@ -11,7 +11,6 @@ root password: n!X6y_%5D%Y,MS)L
 
 # All values MUST be placed inside 'single quotes'
 # DO NOT use these special characters within values: \ " '
-// wget https://git.io/vpnsetup -O vpnsetup.sh && sudo \
 wget https://get.vpnsetup.net -O vpnsetup.sh && sudo \
 VPN_IPSEC_PSK='wh' \
 VPN_USER='test' \
