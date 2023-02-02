@@ -112,8 +112,8 @@ fileLink "terminalcmds.plist"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/terminals
 
 # IDES(VSCode|Webstorm)
 # https://github.com/VSpaceCode/VSpaceCode
-mkdir "/Users/djzhang/Library/Application Support/Code"
-mkdir "/Users/djzhang/Library/Application Support/Code/User"
+mkdir "$HOME/Library/Application Support/Code"
+mkdir "$HOME/Library/Application Support/Code/User"
 directoryLink  "snippet(vscode)"     "$VSCODE_USERS_HOME/snippets"           "$DEST_VSCODE_USER_HOME/snippets"
 fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json"   "$DEST_VSCODE_USER_HOME/keybindings.json"
 fileLink "settings.json(vscode)"     "$VSCODE_USERS_HOME/settings.json"      "$DEST_VSCODE_USER_HOME/settings.json"
@@ -135,7 +135,7 @@ LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
 ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 
 # IDE(Sublime Merge)
-ln -s "//Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
+ln -s "$HOME/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 
 # Path
 fileLink   "studio(path)"   "$ORGANIZATIONS_HOME/__APPLICATIONS/BinApps/studio"   "/usr/local/bin/studio"
@@ -290,7 +290,7 @@ fileLink "Apps(custom)"      "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/run_
 chmod +x /usr/local/bin/run_my_apps
 
 # Nginx downloads
-directoryLink "nginx(Download)"   "/Users/djzhang/Documents/Organizations/__CACHES/github/@http"     "/usr/local/var/www/@http"
+directoryLink "nginx(Download)"   "$HOME/Documents/Organizations/__CACHES/github/@http"     "/usr/local/var/www/@http"
 
 
 
