@@ -869,5 +869,7 @@
     },
     "[vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "git.openRepositoryInParentFolders": "always",
+    "git.confirmSync": false
 }

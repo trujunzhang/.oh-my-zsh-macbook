@@ -1,3 +1,11 @@
+* Emacs
+
+** shim
+   chemacs2: https://github.com/plexus/chemacs2.git
+   spacemacs: https://github.com/syl20bnr/spacemacs
+   doom-emacs: https://github.com/hlissner/doom-emacs
+
+
 * vscode
 
 ** Json to Dart Model  
