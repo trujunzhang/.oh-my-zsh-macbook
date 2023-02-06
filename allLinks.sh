@@ -135,7 +135,7 @@ LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
 ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 
 # IDE(Sublime Merge)
-ln -s "$HOME/Documents/Organizations/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
+# ln -s "$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 
 # Path
 fileLink   "studio(path)"   "$ORGANIZATIONS_HOME/__APPLICATIONS/BinApps/studio"   "/usr/local/bin/studio"
@@ -227,11 +227,6 @@ fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.syml
 # directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android"          "$HOME/.android"
 # directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
 
-# pending(the following)
-# ====================================
-# directoryLink "CocoaPods(Library/Caches)"  "$TRUJUNZHANG_DOTFILES_HOME/lib/CocoaPods" "$HOME/Library/Caches/CocoaPods"
-# directoryLink ".cocoapods" "$TRUJUNZHANG_DOTFILES_HOME/lib/responsitory.cocoapods" "$HOME/.cocoapods"
-
 # Node.js
 fileLink "Yarn(config)"       "$TRUJUNZHANG_DOTFILES_HOME/yarnrc.symlink"          "$HOME/.yarnrc"
 
@@ -240,18 +235,11 @@ mkdir -p "$HOME/.cocoapods/repos/trunk"
 directoryLink ".cocoapods(Repository)"   "/Volumes/MacDevelop/.cocoapods/Specs/Specs"           "$HOME/.cocoapods/repos/trunk/Specs"
 
 # cocoapods(Github)
-directoryLink ".cocoapods(github[@common])"   "/Volumes/MacDevelop/.github/@common"    "$HOME/Documents/Organizations/__CACHES/github/@common"   
-directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec"        "$HOME/Documents/Organizations/__CACHES/github/@spec"   
+directoryLink ".cocoapods(github[@common])"   "/Volumes/MacDevelop/.github/@common"    "$ORGANIZATIONS_HOME/__CACHES/github/@common"   
+directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec"        "$ORGANIZATIONS_HOME/__CACHES/github/@spec"   
 
 # cocoapods(Cache)
-# if [ -d "$HOME/Library/Caches/CocoaPods" ]; then
-    # mv "$HOME/Library/Caches/CocoaPods" "$HOME/Library/Caches/CocoaPods_bak"
-# fi
 directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"           "$HOME/Library/Caches/CocoaPods"
-
-# xcode(Developer)
-# directoryLink ".xcode(Developer)"   "/Volumes/MacDevelop/.Developer"           "$HOME/Library/Developer"
-# directoryLink ".xcode(CoreSimulator)"   "/Volumes/MacDevelop/.Developer/CoreSimulator"           "$HOME/Library/Developer/CoreSimulator"
 
 # =============================
 # Flutter
@@ -290,7 +278,7 @@ fileLink "Apps(custom)"      "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/run_
 chmod +x /usr/local/bin/run_my_apps
 
 # Nginx downloads
-directoryLink "nginx(Download)"   "$HOME/Documents/Organizations/__CACHES/github/@http"     "/usr/local/var/www/@http"
+directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
 
 
 
