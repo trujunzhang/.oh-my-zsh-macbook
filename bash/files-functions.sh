@@ -24,8 +24,11 @@ function  directoryLink {
     then
         echo "Directory already exist. ${msg}"
     else
-        ln -s "${src}"  "${dest}"
-        echo "Directory does not exist. ${msg}"
+        if [ -d "${src}" ]
+        then
+            ln -s "${src}"  "${dest}"
+            echo "Directory does not exist. ${msg}"
+        fi
     fi
     
 }
@@ -46,8 +49,11 @@ function  fileLink {
     then
         echo "File already exist. ${msg}"
     else
-        ln -s "${src}"  "${dest}"
-        echo "File does not exist. ${msg}"
+        if [ -f "${src}" ]
+        then
+            ln -s "${src}"  "${dest}"
+            echo "File does not exist. ${msg}"
+        fi
     fi
     
 }
