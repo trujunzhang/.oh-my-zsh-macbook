@@ -20,12 +20,12 @@ function  directoryLink {
     printf "src=%s\n" "${src}"
     printf "dest=%s\n" "${dest}"
     
-    if [ ! -d "${dest}" ]
+    if [ -d "${dest}" ]
     then
+        echo "Directory already exist. ${msg}"
+    else
         ln -s "${src}"  "${dest}"
         echo "Directory does not exist. ${msg}"
-    else
-        echo "Directory already exist. ${msg}"
     fi
     
 }
@@ -42,12 +42,12 @@ function  fileLink {
     printf "src=%s\n" "${src}"
     printf "dest=%s\n" "${dest}"
     
-    if [ ! -f "${dest}" ]
+    if [ -f "${dest}" ]
     then
+        echo "File already exist. ${msg}"
+    else
         ln -s "${src}"  "${dest}"
         echo "File does not exist. ${msg}"
-    else
-        echo "File already exist. ${msg}"
     fi
     
 }
