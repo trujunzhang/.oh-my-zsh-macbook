@@ -2,7 +2,15 @@
 
 CURRENT=`pwd`
 # Folders in Home.
-ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
+
+if [[ $(uname -m) == 'arm64' ]]; then
+  echo M2
+fi
+
+if [[ $(uname -m) == 'x86_64' ]]; then
+    echo Mackook
+    ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
+fi
 
 # ====================================================================
 # ====================================================================
@@ -279,6 +287,4 @@ chmod +x /usr/local/bin/run_my_apps
 
 # Nginx downloads
 directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
-
-
 
