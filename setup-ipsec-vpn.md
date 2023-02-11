@@ -21,6 +21,11 @@ sh vpnsetup.sh
 ================================================
 [[vps]]
 
+Cloudflare 优选 IP:
+https://github.com/badafans/better-cloudflare-ip
+
+curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o cf.sh && chmod +x cf.sh && ./cf.sh
+
 [DEG] 请设置域名: 
 Input your domain here: [一級domain]
 
