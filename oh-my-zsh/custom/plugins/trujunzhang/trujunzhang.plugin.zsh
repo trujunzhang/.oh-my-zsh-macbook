@@ -505,6 +505,9 @@ alias v2raytime='date -R'
 alias fmoniacreate='monia create'
 alias fmoniainit='monia init'
 
+# oh-my-zsh
+alias zshupdate='omz update'
+
 # github
 alias wsshgithub='ssh -T git@github.com'
 alias wgithubflutter='cd /tmp && gcl https://github.com/flutter/flutter'

@@ -21,6 +21,12 @@ sh vpnsetup.sh
 ================================================
 [[vps]]
 
+[DEG] 请设置域名: 
+Input your domain here: [一級domain]
+
+https://holy-sea-effc.trujunzhang.workers.dev/
+holy-sea-effc.trujunzhang.workers.dev
+
 /root/cert/myv2ray.xyz.cer
 /root/cert/myv2ray.xyz.key
 

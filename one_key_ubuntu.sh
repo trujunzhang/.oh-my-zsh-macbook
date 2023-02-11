@@ -43,7 +43,7 @@ function install_zsh {
     echo $SHELL
 
     # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    git clone https://github.com/ohmyzsh/ohmyzsh.git "/$HOME/.oh-my-zsh"
+    git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh"
 
     #Theme: https://github.com/ohmyzsh/ohmyzsh/wiki/themes
     rm "$HOME/.zshrc"
