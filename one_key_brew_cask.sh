@@ -47,6 +47,10 @@ fi
     # brew install --cask todoist
 # fi
 
+if [ ! -d  "/Applications/Notion.app" ]; then
+    brew install --cask notion
+fi
+
 if [ ! -d  "/Applications/Figma.app" ]; then
     brew install --cask figma
 fi
