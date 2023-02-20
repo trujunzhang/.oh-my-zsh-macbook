@@ -33,7 +33,7 @@ function parseJson {
     # echo "                         "
 }
 
-parseJson  "/Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/config/offline_rn.json"
+parseJson  "$HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/config/offline_rn.json"
 
 # echo "array_0=${values[0]}"
 
@@ -43,7 +43,7 @@ echo "array_len=${json_array_len}"
 echo "                         "
 # ==========================================================================
 
-offlineGitFolder="file:///Users/djzhang/Documents/Organizations/__CACHES/github"
+offlineGitFolder="file://$HOME/Documents/Organizations/__CACHES/github"
 offlineHttpFolder='http://localhost:8080/@http'
 
 # seq FIRST INCREMENT LAST

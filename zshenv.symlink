@@ -19,25 +19,25 @@ export GIT_EDITOR='nvim'
 
 # all export [PATH]
 # my custom bins
-export PATH="/Users/djzhang/Documents/Organizations/__APPLICATIONS/BinApps:$PATH"
+export PATH="$HOME/Documents/Organizations/__APPLICATIONS/BinApps:$PATH"
 
 # ======================================================================
 # Android Studio installed automatically
-export ANDROID_HOME=/Users/djzhang/Library/Android/sdk
-export PATH=$PATH:/Users/djzhang/Library/Android/sdk/tools
-export PATH=$PATH:/Users/djzhang/Library/Android/sdk/platform-tools
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$HOME/Library/Android/sdk/tools
+export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 
 # Android~/android-ndk-r9d
 # ndk
-export ANDROID_NDK=/Users/djzhang/Library/Android/ndk
-export NDK_ROOT=/Users/djzhang/Library/Android/ndk
-export PATH=$PATH:/Users/djzhang/Library/Android/ndk
+export ANDROID_NDK=$HOME/Library/Android/ndk
+export NDK_ROOT=$HOME/Library/Android/ndk
+export PATH=$PATH:$HOME/Library/Android/ndk
 
 # Android SDK
 # ======================================================================
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/Users/djzhang/Library/Android/sdk
-export ANDROID_USER_HOME=/Users/djzhang/Library/Android/sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_USER_HOME=$HOME/Library/Android/sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
@@ -58,7 +58,7 @@ export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 alias composer="php /usr/local/bin/composer.phar"
 
 # ieatta's firebase json configure.
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/djzhang/Documents/Organizations/__SDKS/FIREBASE/service-account-file.json"
+export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Documents/Organizations/__SDKS/FIREBASE/service-account-file.json"
 
 # bin folder in User's home.
 export PATH="$HOME/bin:$PATH"
@@ -92,7 +92,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 # ======================================================================
-#export PATH="/Users/djzhang/.pyenv/bin:$PATH"
+#export PATH="$HOME/.pyenv/bin:$PATH"
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
 
@@ -138,7 +138,7 @@ export EXPO_DEBUG=true
 
 # emacs cask
 # ======================================================================
-export PATH="/Users/djzhang/.cask/bin:$PATH"
+export PATH="$HOME/.cask/bin:$PATH"
 
 # oh-my-zsh(with Homebrew)
 # ======================================================================
@@ -149,7 +149,7 @@ export PATH="/Users/djzhang/.cask/bin:$PATH"
 LEIN_JVM_OPTS="-Dmaven.wagon.rto=1800000"
 
 # Light Table
-export LT_HOME="/Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/lighttable"
+export LT_HOME="$HOME/Documents/Organizations/__APPLICATIONS/IDES/lighttable"
 
 # BEGIN set common environment variables #####################################
 export VISUAL=vim
@@ -171,7 +171,7 @@ fi
 # Load RVM into a shell session *as a function*
 export PATH="$GEM_HOME/bin:$PATH"
 
-export PATH="/Users/djzhang/.roswell/bin:$PATH"
+export PATH="$HOME/.roswell/bin:$PATH"
 
 # flutter 
 # export PUB_HOSTED_URL=https://pub.flutter-io.cn

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR='/Users/djzhang/Documents/Organizations/__CACHES/github/@spec/_master/grpc/.git/modules'
+DIR='$HOME/Documents/Organizations/__CACHES/github/@spec/_master/grpc/.git/modules'
 OUT_GIT_FILE='/tmp/xxx/grpc.txt'
 
 rm -f $OUT_GIT_FILE

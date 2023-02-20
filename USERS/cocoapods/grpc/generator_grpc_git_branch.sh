@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-GRPC_FOLD="/Users/djzhang/Documents/Organizations/__CACHES/github/@spec/grpc-branch"
+GRPC_FOLD="$HOME/Documents/Organizations/__CACHES/github/@spec/grpc-branch"
 GRPC_THIRD_FOLD="$GRPC_FOLD/third_party"
-THIRD_PARTY_URL="file:///Users/djzhang/Documents/Organizations/__CACHES/github/@spec/grpc_third"
+THIRD_PARTY_URL="file://$HOME/Documents/Organizations/__CACHES/github/@spec/grpc_third"
 
 cd "$GRPC_FOLD"
 

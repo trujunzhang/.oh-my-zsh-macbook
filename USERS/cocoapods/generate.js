@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-let cocoapodsResposity = "/Users/djzhang/.cocoapods/repos/master/Specs/"
+let cocoapodsResposity = process.env.HOME + "/.cocoapods/repos/master/Specs/"
 let folderNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
 // let folderNumbers = ['0']
 

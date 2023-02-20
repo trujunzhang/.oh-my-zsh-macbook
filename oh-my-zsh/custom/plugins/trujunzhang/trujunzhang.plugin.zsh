@@ -231,7 +231,7 @@ alias iph7="ios-sim start --devicetypeid com.apple.CoreSimulator.SimDeviceType.i
 
 # cocos
 # $ which cocos
-# $ /Users/djzhang/Library/cocos2d/sdk/tools/cocos2d-console/bin/cocos
+# $ $HOME/Library/cocos2d/sdk/tools/cocos2d-console/bin/cocos
 
 alias cpnew="cocos new MyAndroidGame -p com.MyCompany.MyGame -l cpp  -t binary"
 
@@ -279,7 +279,7 @@ alias eas_Build_All='eas build --platform all'
 alias easUpdateConfigure='eas update:configure'
 
 # Emacs
-# alias emacs='open -a /Users/djzhang/Documents/Organizations/__APPLICATIONS/IDES/Emacs.app $1'
+# alias emacs='open -a $HOME/Documents/Organizations/__APPLICATIONS/IDES/Emacs.app $1'
 # alias emacsd="emacs -debug-init"
 
 # geny motion
@@ -418,13 +418,13 @@ alias neovimcheck="nvim +checkhealth"
 alias neovimplugininstall="nvim +PlugInstall"
 
 # djzhang's cmd
-alias dfpython="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python"
-alias drunvpn="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
-alias drv="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
-alias drunonekeymac="rm -rf ~/.nvm && cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook && ./one_key_macbook.sh"
-alias drungrpc_branch="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
-alias drunoffline="cd /Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
-alias drunhttp='cd /Users/djzhang/Documents/Organizations/__CACHES/github && python3 -m http.server --cgi 8080'
+alias dfpython="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python"
+alias drunvpn="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
+alias drv="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
+alias drunonekeymac="rm -rf ~/.nvm && cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook && ./one_key_macbook.sh"
+alias drungrpc_branch="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
+alias drunoffline="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
+alias drunhttp='cd $HOME/Documents/Organizations/__CACHES/github && python3 -m http.server --cgi 8080'
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 
@@ -432,7 +432,7 @@ alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b tmp"
 
 # nvm
-alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file:///Users/djzhang/Documents/Organizations/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.38.0 && . ~/.nvm/nvm.sh && nvm install 12.13.1 && nvm use 12.13.1 && npm install -g yarn"
+alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$HOME/Documents/Organizations/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.38.0 && . ~/.nvm/nvm.sh && nvm install 12.13.1 && nvm use 12.13.1 && npm install -g yarn"
 
 # cocoapods
 # https://blog.csdn.net/qq_41110569/article/details/106501098
@@ -453,9 +453,9 @@ alias emacsdoom="emacs --with-profile=doom"
 alias emacsspace="emacs --with-profile=spacemacs"
 alias etspace="echo 'spacemacs' > ~/.emacs-profile"
 alias etdoom="echo 'doom' > ~/.emacs-profile"
-alias edoominstall="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom install"
-alias edoomsync="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom sync"
-alias edoomdoctor="/Users/djzhang/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom doctor"
+alias edoominstall="$HOME/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom install"
+alias edoomsync="$HOME/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom sync"
+alias edoomdoctor="$HOME/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom doctor"
 
 # 
 # youtube-dl(pending)
