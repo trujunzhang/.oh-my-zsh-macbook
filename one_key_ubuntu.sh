@@ -119,7 +119,7 @@ fi
     ## port: 31743
     #     config_account="djzhang"
     #     config_password="wanghao720"
-    ## b831381d-6324-4d53-ad4f-8cda48b30811
+    ## ad389d71-80cb-4eba-b292-2960b43e5ced
     # ( exec "./bash/x_ui_install.sh" )
 
     ## factory
