@@ -50,6 +50,7 @@ offlineHttpFolder='http://localhost:8080/@http'
 for i in $(seq 0 6 $((json_array_len-1)))
 do
     type=${values[$((i+0))]}
+    title=${values[$((i+1))]}
     path=${values[$((i+2))]}
     fileName=${values[$((i+3))]}
     # echo "fileName: $fileName"
@@ -58,6 +59,7 @@ do
     if [ -f "${podspecJsonPath}" ]; then
         echo "                         "
         echo "{podspec json} path: $podspecJsonPath"
+        echo "name: $title"
 
         # Type is 'git'
         if [ "$type" = "git" ]; then
