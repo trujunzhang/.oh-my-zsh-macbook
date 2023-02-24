@@ -83,9 +83,9 @@ if [ ! -d  "/Applications/Microsoft Edge.app" ]; then
     brew install --cask microsoft-edge
 fi
 
-if [ ! -d  "/Applications/Adobe Creative Cloud" ]; then
-    brew install --cask adobe-creative-cloud
-fi
+# if [ ! -d  "/Applications/Adobe Creative Cloud" ]; then
+#     brew install --cask adobe-creative-cloud
+# fi
 
 # =========================================
 # apps
