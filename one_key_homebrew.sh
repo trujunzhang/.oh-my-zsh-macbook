@@ -12,9 +12,9 @@ if ! command_exists brew; then
 fi
 
 ## list
-if ! command_exists ssh-copy-id; then
-    brew install gpg ssh-copy-id
-fi
+# if ! command_exists ssh-copy-id; then
+    # brew install gpg ssh-copy-id
+# fi
 
 ## autoenv
 if [ ! -d  /usr/local/opt/autoenv ]; then
