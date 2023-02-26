@@ -16,5 +16,11 @@
         "name": "atom",
         "application": "Atom",
         "enable": "0"
-    }
+    },
+    {
+        "type": "application",
+        "name": "BetterTouchTool",
+        "application": "BetterTouchTool",
+        "enable": "1"
+    }    
 ]
