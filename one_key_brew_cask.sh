@@ -13,6 +13,16 @@ source ./bash/tools.sh
 if [ ! -d  "/Applications/Visual Studio Code.app" ]; then
     brew install --cask visual-studio-code
 fi
+
+
+# =========================================
+# System
+# =========================================
+if [ ! -d  "/Applications/Raycast.app" ]; then
+    brew install --cask raycast
+fi
+
+
 # =========================================
 # Web browse
 # =========================================

@@ -880,5 +880,6 @@
     "lightrun.sendSourceFullPath": true,
     "[python]": {
         "editor.formatOnType": true
-    }
+    },
+    "update.showReleaseNotes": false
 }
