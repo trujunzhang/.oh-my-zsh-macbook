@@ -85,9 +85,9 @@ if [ ! -d  "/Applications/VLC.app" ]; then
     brew install --cask vlc
 fi
 
-if [ ! -d  "/Applications/iTerm.app" ]; then
-    brew install --cask iterm2
-fi
+# if [ ! -d  "/Applications/iTerm.app" ]; then
+#     brew install --cask iterm2
+# fi
 
 # if [ ! -d  "/Applications/Skype.app" ]; then
 #     brew install --cask skype
