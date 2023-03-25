@@ -22,6 +22,9 @@ if [ ! -d  "/Applications/Raycast.app" ]; then
     brew install --cask raycast
 fi
 
+if [ ! -d  "/Applications/AlDente.app" ]; then
+    brew install --cask aldente
+fi
 
 # =========================================
 # Web browse
