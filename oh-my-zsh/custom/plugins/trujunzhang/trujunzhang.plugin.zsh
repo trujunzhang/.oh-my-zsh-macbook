@@ -512,3 +512,6 @@ alias zshupdate='omz update'
 alias wsshgithub='ssh -T git@github.com'
 alias wgithubflutter='cd /tmp && gcl https://github.com/flutter/flutter'
 
+# clone website
+alias clonewebsite="wget --mirror --convert-links --wait=2"
+
