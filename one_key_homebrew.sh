@@ -57,6 +57,11 @@ if [ ! -f /usr/local/bin/autoreconf ]; then
     brew install pkg-config poppler automake
 fi
 
+## wget
+if [ ! -f /usr/local/bin/wget ]; then
+    brew install wget
+fi
+
 ## font-fira
 if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
     brew tap homebrew/cask-fonts
