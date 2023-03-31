@@ -262,6 +262,7 @@ alias expstart="exp start -c"
 alias expios="exp ios"
 alias expand="exp android"
 alias expdoctor='expo doctor --fix-dependencies'
+alias expfix="npx expo install --fix"
 alias expprebuild='expo prebuild --clean'
 alias expdevclient='expo start --dev-client'
 alias expandroidkeystore='expo fetch:android:keystore'
