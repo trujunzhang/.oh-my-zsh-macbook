@@ -516,3 +516,12 @@ alias wgithubflutter='cd /tmp && gcl https://github.com/flutter/flutter'
 # clone website
 alias clonewebsite="wget --mirror --convert-links --wait=2"
 
+# vscode
+alias visualstudiocodeExport="code --list-extensions |
+xargs -L 1 echo code --install-extension |
+sed 's/$/ --force/' |
+sed '\$!s/$/ \&/' > /tmp/install-extensions.sh"
+
+
+
+
