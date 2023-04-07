@@ -1,0 +1,9 @@
+* 使用 express 和 vue3 搭建的支持 ChatGPT 双模型演示网页
+
+* How to deploy a chatgpt-web on the vps
+  https://github.com/Chanzhaoyu/chatgpt-web
+  https://hub.docker.com/r/chenzhaoyu94/chatgpt-web
+
+** docker-compose 
+   >> cd USERS/Docker/docker-chatgpt-web
+   >> docker-compose up -d
