@@ -21,8 +21,12 @@ code --install-extension aaron-bond.better-comments
 code --install-extension mikestead.dotenv 
 code --install-extension ms-vscode.live-server 
 code --install-extension kisstkondoros.vscode-gutter-preview
-code --install-extension moalamri.inline-fold
 code --install-extension pflannery.vscode-versionlens
+
+# =================================
+# Chatgpt
+# =================================
+code --install-extension easycodeai.chatgpt-gpt4-gpt3-vscode
 
 # =================================
 # Javascript
