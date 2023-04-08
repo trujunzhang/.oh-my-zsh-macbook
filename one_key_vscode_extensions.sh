@@ -1,63 +1,76 @@
 #!/usr/bin/env bash
 
-# =================================
-# Tools
-# =================================
-code --install-extension vscodevim.vim 
-code --install-extension junv.recent-files 
-code --install-extension dzhavat.bracket-pair-toggler 
-code --install-extension naumovs.color-highlight 
-code --install-extension donjayamanne.githistory 
-code --install-extension johnguo.columnpaste 
+myArray=(
+    
+
+    # =================================
+    # Tools
+    # =================================
+    "vscodevim.vim"
+    "junv.recent-files"
+    "dzhavat.bracket-pair-toggler"
+    "naumovs.color-highlight"
+    "donjayamanne.githistory"
+    "johnguo.columnpaste"
 
 
-# =================================
-# Dev
-# =================================
-code --install-extension formulahendry.auto-rename-tag 
-code --install-extension esbenp.prettier-vscode 
-code --install-extension dbaeumer.vscode-eslint 
-code --install-extension aaron-bond.better-comments 
-code --install-extension mikestead.dotenv 
-code --install-extension ms-vscode.live-server 
-code --install-extension kisstkondoros.vscode-gutter-preview
-code --install-extension pflannery.vscode-versionlens
+    # =================================
+    # Dev
+    # =================================
+    "formulahendry.auto-rename-tag"
+    "esbenp.prettier-vscode"
+    "dbaeumer.vscode-eslint"
+    "aaron-bond.better-comments" 
+    "mikestead.dotenv"
+    "ms-vscode.live-server" 
+    "kisstkondoros.vscode-gutter-preview"
+    "pflannery.vscode-versionlens"
 
-# =================================
-# Chatgpt
-# =================================
-code --install-extension easycodeai.chatgpt-gpt4-gpt3-vscode
+    # =================================
+    # Chatgpt
+    # =================================
+    "easycodeai.chatgpt-gpt4-gpt3-vscode"
 
-# =================================
-# Javascript
-# =================================
-code --install-extension xabikos.JavaScriptSnippets 
+    # =================================
+    # Javascript
+    # =================================
+    "xabikos.JavaScriptSnippets"
 
-# =================================
-# React
-# =================================
-code --install-extension byCedric.vscode-expo 
-code --install-extension RajdeepChandra.reactnativesnippets 
-code --install-extension dsznajder.es7-react-js-snippets 
-code --install-extension jundat95.react-native-snippet 
-code --install-extension msjsdiag.vscode-react-native 
+    # =================================
+    # React
+    # =================================
+    "byCedric.vscode-expo"
+    "RajdeepChandra.reactnativesnippets"
+    "dsznajder.es7-react-js-snippets"
+    "jundat95.react-native-snippet"
+    "msjsdiag.vscode-react-native"
 
-# =================================
-# Flutter
-# =================================
-code --install-extension Dart-Code.flutter 
-code --install-extension Dart-Code.dart-code 
-code --install-extension Nash.awesome-flutter-snippets 
-code --install-extension alexisvt.flutter-snippets 
-code --install-extension hirantha.json-to-dart 
+    # =================================
+    # Flutter
+    # =================================
+    "Dart-Code.flutter"
+    "Dart-Code.dart-code"
+    "Nash.awesome-flutter-snippets"
+    "alexisvt.flutter-snippets"
+    "hirantha.json-to-dart"
 
-# =================================
-# Vue
-# =================================
-code --install-extension octref.vetur 
+    # =================================
+    # Vue
+    # =================================
+    "octref.vetur"
 
-# =================================
-# Tailwind
-# =================================
-code --install-extension bradlc.vscode-tailwindcss 
+    # =================================
+    # Tailwind
+    # =================================
+    "bradlc.vscode-tailwindcss"
 
+)
+
+Params=$1
+
+echo "${Params}"
+
+for i in ${!myArray[@]}; do
+#   echo "element $i is ${myArray[$i]}"
+  code --install-extension ${myArray[$i]} "${Params}"
+done
