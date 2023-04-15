@@ -22,8 +22,12 @@ if [ ! -d  "/Applications/Raycast.app" ]; then
     brew install --cask raycast
 fi
 
-if [ ! -d  "/Applications/AlDente.app" ]; then
-    brew install --cask aldente
+if [[ $(uname -m) == 'x86_64' ]]; then
+    # macOS tool to limit maximum charging percentage
+    # https://github.com/davidwernhart/AlDente-Charge-Limiter
+    if [ ! -d  "/Applications/AlDente.app" ]; then
+         brew install --cask aldente
+    fi
 fi
 
 # =========================================
