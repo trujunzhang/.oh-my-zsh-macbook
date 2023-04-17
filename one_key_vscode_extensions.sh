@@ -32,6 +32,13 @@ myArray=(
     "easycodeai.chatgpt-gpt4-gpt3-vscode"
 
     # =================================
+    # Node
+    # =================================
+    # Jest
+    # https://itnext.io/debug-your-tests-in-typescript-with-visual-studio-code-911a4cada9cd 
+    "kavod-io.vscode-jest-test-adapter"
+
+    # =================================
     # Javascript
     # =================================
     "xabikos.JavaScriptSnippets"
