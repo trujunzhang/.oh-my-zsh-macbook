@@ -2,13 +2,15 @@ const fs = require('fs')
 
 const { readdirSync } = require('fs');
 
-const getFileList = (dirName) => {
+const dictionary = {}
+const getFileList = (dirName, root) => {
     let files = [];
     const items = readdirSync(dirName, { withFileTypes: true });
 
     for (const item of items) {
         if (item.isDirectory()) {
-            files = [...files, ...getFileList(`${dirName}/${item.name}`)];
+            subFiles = getFileList(`${dirName}/${item.name}`, false);
+            dictionary[item.name] = subFiles
         } else {
             files.push(`${dirName}/${item.name}`);
         }
@@ -17,9 +19,11 @@ const getFileList = (dirName) => {
     return files;
 };
 
-const files = getFileList('assets');
+const rootFiles = getFileList('assets', true);
+dictionary['assets'] = subFiles
 
-console.log(files);
+// console.log(rootFiles);
+console.log(rootFiles);
 
 
 const imageFileNames = () => {
