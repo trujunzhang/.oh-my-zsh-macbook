@@ -9,8 +9,13 @@ const getFileList = (dirName) => {
 
     for (const item of items) {
         if (item.isDirectory()) {
-            const subProperties = getFileList(`${dirName}/${item.name}`);
+            const path = `${dirName}/${item.name}`
+            const subProperties = getFileList(path);
+            const split = path.replace('assets/', '').split('/')
+            // console.log('path:', path)
+            // console.log('length:', length)
             dict[item.name] = {
+                level: split,
                 folder: true,
                 value: subProperties
             }
@@ -26,9 +31,11 @@ const getFileList = (dirName) => {
         .map((key) => {
             const object = dict[key]
             if (object.folder === true) {
+                const level = object.level
+                const margin = level.map((item) => { return "    " })
                 return `${key}: {
-                    ${object.value}
-                }`
+${margin}${object.value}
+${margin}}`
             }
             return `${key}: require('@app-assets/${object.value}')`
         })
@@ -41,7 +48,7 @@ const getFileList = (dirName) => {
 
 const rootProperties = getFileList('assets');
 
-console.log(rootProperties);
+// console.log(rootProperties);
 
 const generate = () => {
 
