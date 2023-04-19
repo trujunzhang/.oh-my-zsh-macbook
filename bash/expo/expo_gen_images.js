@@ -2,62 +2,46 @@ const fs = require('fs')
 
 const { readdirSync } = require('fs');
 
-const dictionary = {}
 
-const getFileList = (dirName, root) => {
-    let files = [];
+const getFileList = (dirName) => {
     let dict = {};
     const items = readdirSync(dirName, { withFileTypes: true });
 
     for (const item of items) {
         if (item.isDirectory()) {
-            subFiles = getFileList(`${dirName}/${item.name}`, false);
-            // dictionary[item.name] = subFiles
+            const subProperties = getFileList(`${dirName}/${item.name}`);
+            dict[item.name] = {
+                folder: true,
+                value: subProperties
+            }
         } else {
-            files.push(`${dirName}/${item.name}`.replace('assets/', ''));
-            dict[item.name.replace('.png', '').replace('.jpg', '')] = `${dirName}/${item.name}`.replace('assets/', '');
+            dict[item.name.replace('.png', '').replace('.jpg', '').replace('-', '_')] = {
+                folder: false,
+                value: `${dirName}/${item.name}`.replace('assets/', '')
+            };
         }
     }
 
     let properties = Object.keys(dict)
         .map((key) => {
-            return `${key}: require('@app-assets/${dict[key]}')`
+            const object = dict[key]
+            if (object.folder === true) {
+                return `${key}: {${object.value}'}`
+            }
+            return `${key}: require('@app-assets/${object.value}')`
         })
         .join(',\n  ')
 
-    console.log('properties', properties)
+    // console.log('properties', properties)
 
-    // console.log('dict', Object.keys(dict));
-
-    return files;
+    return properties;
 };
 
-const rootFiles = getFileList('assets', true);
-// dictionary['assets'] = rootFiles
+const properties = getFileList('assets');
 
-// console.log(rootFiles);
-// console.log(Object.keys(dictionary));
-
-
-const imageFileNames = () => {
-    const array = fs
-        .readdirSync('assets')
-        .filter((file) => {
-            return file.endsWith('.png') || file.endsWith('.jpg')
-        })
-        .map((file) => {
-            return file.replace('@2x.png', '').replace('@3x.png', '')
-        })
-
-    return Array.from(new Set(array))
-}
+console.log(properties);
 
 const generate = () => {
-    let properties = imageFileNames()
-        .map((name) => {
-            return `${name}: require('./images/${name}.png')`
-        })
-        .join(',\n  ')
 
     const string = `export const Images = {
   ${properties}
