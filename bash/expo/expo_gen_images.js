@@ -7,13 +7,14 @@ const getFileList = (dirName) => {
     let dict = {};
     const items = readdirSync(dirName, { withFileTypes: true });
 
+    const split = dirName.replace('assets/', '').replace('assets', '').split('/').filter(i => i)
+    // console.log('dirName', dirName)
+    // console.log('split', split.length)
+
     for (const item of items) {
         if (item.isDirectory()) {
             const path = `${dirName}/${item.name}`
             const subProperties = getFileList(path);
-            const split = path.replace('assets/', '').split('/')
-            // console.log('path:', path)
-            // console.log('length:', length)
             dict[item.name] = {
                 level: split,
                 folder: true,
@@ -21,6 +22,7 @@ const getFileList = (dirName) => {
             }
         } else {
             dict[item.name.replace('.png', '').replace('.jpg', '').replaceAll('-', '_')] = {
+                level: split,
                 folder: false,
                 value: `${dirName}/${item.name}`.replace('assets/', '')
             };
@@ -30,14 +32,14 @@ const getFileList = (dirName) => {
     let properties = Object.keys(dict)
         .map((key) => {
             const object = dict[key]
+            const margin = object.level.map((item) => { return "    " }).join('')
+
             if (object.folder === true) {
-                const level = object.level
-                const margin = level.map((item) => { return "    " })
                 return `${key}: {
-${margin}${object.value}
+${object.value}
 ${margin}}`
             }
-            return `${key}: require('@app-assets/${object.value}')`
+            return `${margin}${key}: require('@app-assets/${object.value}')`
         })
         .join(',\n  ')
 
