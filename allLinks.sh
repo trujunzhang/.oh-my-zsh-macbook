@@ -257,23 +257,23 @@ directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"     
 # =============================
 
 # flutter tool(getx style)
-fileLink "Getx(style)"           "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_style.sh"         /usr/local/bin/getx_style
+fileLink "Getx(style)"           "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_style.sh"         /usr/local/bin/getx_style
 chmod +x /usr/local/bin/getx_style
 
 # flutter tool(getx page)
-fileLink "Getx(page)"             "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_page.sh"         /usr/local/bin/getx_page
+fileLink "Getx(page)"             "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page.sh"         /usr/local/bin/getx_page
 chmod +x /usr/local/bin/getx_page
 
 # flutter tool(getx page no binding)
-fileLink "Getx(page_no_binding)"  "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_page_no_binding.sh"   /usr/local/bin/getx_page_no_binding
+fileLink "Getx(page_no_binding)"  "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page_no_binding.sh"   /usr/local/bin/getx_page_no_binding
 chmod +x /usr/local/bin/getx_page_no_binding
 
 # flutter tool(getx widget)
-fileLink "Getx(widget)"            "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_widget.sh"         /usr/local/bin/getx_widget
+fileLink "Getx(widget)"            "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_widget.sh"         /usr/local/bin/getx_widget
 chmod +x /usr/local/bin/getx_widget
 
 # flutter tool(getx rest)
-fileLink "Getx(rest)"              "$TRUJUNZHANG_DOTFILES_HOME/bash/getx_rest.sh"         /usr/local/bin/getx_rest
+fileLink "Getx(rest)"              "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_rest.sh"         /usr/local/bin/getx_rest
 chmod +x /usr/local/bin/getx_rest
 
 # ======================================
