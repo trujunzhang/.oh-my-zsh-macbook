@@ -15,7 +15,7 @@ const getFileList = (dirName) => {
                 value: subProperties
             }
         } else {
-            dict[item.name.replace('.png', '').replace('.jpg', '').replace('-', '_')] = {
+            dict[item.name.replace('.png', '').replace('.jpg', '').replaceAll('-', '_')] = {
                 folder: false,
                 value: `${dirName}/${item.name}`.replace('assets/', '')
             };
@@ -26,7 +26,9 @@ const getFileList = (dirName) => {
         .map((key) => {
             const object = dict[key]
             if (object.folder === true) {
-                return `${key}: {${object.value}'}`
+                return `${key}: {
+                    ${object.value}
+                }`
             }
             return `${key}: require('@app-assets/${object.value}')`
         })
@@ -37,14 +39,14 @@ const getFileList = (dirName) => {
     return properties;
 };
 
-const properties = getFileList('assets');
+const rootProperties = getFileList('assets');
 
-console.log(properties);
+console.log(rootProperties);
 
 const generate = () => {
 
     const string = `export const Images = {
-  ${properties}
+  ${rootProperties}
 }
 
 `
