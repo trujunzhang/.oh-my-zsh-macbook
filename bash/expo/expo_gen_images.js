@@ -27,12 +27,12 @@ const getFileList = (dirName, root) => {
 
     console.log('properties', properties)
 
-    console.log('dict', Object.keys(dict));
+    // console.log('dict', Object.keys(dict));
 
     return files;
 };
 
-// const rootFiles = getFileList('assets', true);
+const rootFiles = getFileList('assets', true);
 // dictionary['assets'] = rootFiles
 
 // console.log(rootFiles);
