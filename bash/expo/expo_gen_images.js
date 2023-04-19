@@ -13,16 +13,15 @@ const getFileList = (dirName) => {
 
     for (const item of items) {
         if (item.isDirectory()) {
-            const path = `${dirName}/${item.name}`
-            const subProperties = getFileList(path);
+            const subProperties = getFileList(`${dirName}/${item.name}`);
             dict[item.name] = {
-                level: split,
+                level: split.length,
                 folder: true,
                 value: subProperties
             }
         } else {
             dict[item.name.replace('.png', '').replace('.jpg', '').replaceAll('-', '_')] = {
-                level: split,
+                level: split.length,
                 folder: false,
                 value: `${dirName}/${item.name}`.replace('assets/', '')
             };
@@ -32,14 +31,23 @@ const getFileList = (dirName) => {
     let properties = Object.keys(dict)
         .map((key) => {
             const object = dict[key]
-            const margin = object.level.map((item) => { return "    " }).join('')
+            const rootMargins = [
+                "",
+                "  ",
+                "    ",
+            ]
+            const margins = [
+                "",
+                "  ",
+                "    ",
+            ]
 
             if (object.folder === true) {
-                return `${key}: {
-${object.value}
-${margin}}`
+                return `${rootMargins[object.level]}${key}: {
+${'  '}${object.value}
+${'  '}${rootMargins[object.level]}}`
             }
-            return `${margin}${key}: require('@app-assets/${object.value}')`
+            return `${margins[object.level]}${key}: require('@app-assets/${object.value}')`
         })
         .join(',\n  ')
 
@@ -57,7 +65,6 @@ const generate = () => {
     const string = `export const Images = {
   ${rootProperties}
 }
-
 `
 
     fs.writeFileSync('plugins/app-config/images.ts', string, 'utf8')
