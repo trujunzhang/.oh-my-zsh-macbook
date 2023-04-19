@@ -3,27 +3,40 @@ const fs = require('fs')
 const { readdirSync } = require('fs');
 
 const dictionary = {}
+
 const getFileList = (dirName, root) => {
     let files = [];
+    let dict = {};
     const items = readdirSync(dirName, { withFileTypes: true });
 
     for (const item of items) {
         if (item.isDirectory()) {
             subFiles = getFileList(`${dirName}/${item.name}`, false);
-            dictionary[item.name] = subFiles
+            // dictionary[item.name] = subFiles
         } else {
-            files.push(`${dirName}/${item.name}`);
+            files.push(`${dirName}/${item.name}`.replace('assets/', ''));
+            dict[item.name.replace('.png', '').replace('.jpg', '')] = `${dirName}/${item.name}`.replace('assets/', '');
         }
     }
+
+    let properties = Object.keys(dict)
+        .map((key) => {
+            return `${key}: require('@app-assets/${dict[key]}')`
+        })
+        .join(',\n  ')
+
+    console.log('properties', properties)
+
+    console.log('dict', Object.keys(dict));
 
     return files;
 };
 
-const rootFiles = getFileList('assets', true);
-dictionary['assets'] = subFiles
+// const rootFiles = getFileList('assets', true);
+// dictionary['assets'] = rootFiles
 
 // console.log(rootFiles);
-console.log(rootFiles);
+// console.log(Object.keys(dictionary));
 
 
 const imageFileNames = () => {
