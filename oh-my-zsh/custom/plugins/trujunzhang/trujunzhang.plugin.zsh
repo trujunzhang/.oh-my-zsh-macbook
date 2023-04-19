@@ -267,6 +267,9 @@ alias expprebuild='expo prebuild --clean'
 alias expdevclient='expo start --dev-client'
 alias expandroidkeystore='expo fetch:android:keystore'
 
+# Expo generator
+alias expogenimages="node $TRUJUNZHANG_DOTFILES_HOME/bash/expo/expo_gen_images.js"
+
 # Expo(eas)
 alias easLogin='eas login'
 alias eas_Publish_Apk_Production='eas update --branch production --message "Updating the app"'
