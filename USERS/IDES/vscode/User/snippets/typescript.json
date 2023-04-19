@@ -1,0 +1,16 @@
+{
+    "Print to console": {
+        "prefix": "myrnfc",
+        "body": ["console.log('$1');", "$2"],
+        "description": "Log output to console"
+    },
+    "ListAria": {
+        "prefix": ["mylistAria"],
+        "body": ["role='list'"],
+        "description": "Add `role='list'` to identify a list of items."
+    },
+    "hello": {
+        "prefix": "hello",
+        "body": "$BLOCK_COMMENT_START Hello World $BLOCK_COMMENT_END"
+    }
+}

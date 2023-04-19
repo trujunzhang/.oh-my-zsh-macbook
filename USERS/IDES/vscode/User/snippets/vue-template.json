@@ -1,9 +1,0 @@
-{
-    "Vue for loop": {
-        "prefix": "vfor",
-        "description": "Vue for loop",
-        "body": [
-            "v-for=\"(${1:item}, index) in ${1:item}s)\" :key=\"index\""
-        ]
-    }
-}
