@@ -3,14 +3,18 @@
 CURRENT=`pwd`
 # Folders in Home.
 
-if [[ $(uname -m) == 'arm64' ]]; then
-  echo M2
-fi
-
-if [[ $(uname -m) == 'x86_64' ]]; then
-    echo Mackook
-    ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
-fi
+echo "                         "
+echo "==============================================================="
+echo "Bash version ${BASH_VERSION}...           "
+echo "                                          "
+echo "** CURRENT:                                "
+echo "$CURRENT"
+echo "** ORGANIZATIONS_HOME:                     "
+echo "$ORGANIZATIONS_HOME"
+echo "** TRUJUNZHANG_DOTFILES_HOME:              "
+echo "$TRUJUNZHANG_DOTFILES_HOME"
+echo "==============================================================="
+echo "                                          "
 
 # ====================================================================
 # ====================================================================
@@ -21,10 +25,9 @@ fi
 # Home(All)
 # ======================================
 # ORGANIZATIONS_APPLICATION_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/Applications"
-TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 
 # User's profile
-USERPROFILE_HOME="$ORGANIZATIONS_HOME/__UserProfile"
+# USERPROFILE_HOME="$ORGANIZATIONS_HOME/__UserProfile"
 PATH_SYSTEM_APPLICATION_SUPPORT="$HOME/Library/Application Support"
 
 # *Links(dot_vim)
