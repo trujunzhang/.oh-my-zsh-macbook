@@ -22,8 +22,8 @@ const getFileList = (dirName) => {
                 }
             }
         } else {
-            if (item.name.includes('.png') || item.name.includes('.jpg')) {
-                dict[item.name.replace('.png', '').replace('.jpg', '').replaceAll('-', '_')] = {
+            if (item.name.includes('.png') || item.name.includes('.jpg') || item.name.includes('.svg')) {
+                dict[item.name.replace('.png', '').replace('.jpg', '').replace('.svg', '').replaceAll('-', '_')] = {
                     level: split.length,
                     folder: false,
                     value: `${dirName}/${item.name}`.replace('assets/', '')
