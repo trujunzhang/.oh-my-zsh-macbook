@@ -67,7 +67,7 @@ const generate = () => {
 }
 `
 
-    fs.writeFileSync('plugins/app-config/images.ts', string, 'utf8')
+    fs.writeFileSync('plugins/app-config/res/images.ts', string, 'utf8')
 }
 
 generate()
