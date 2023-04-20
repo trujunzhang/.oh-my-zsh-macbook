@@ -43,11 +43,11 @@ const getFileList = (dirName) => {
             ]
 
             if (object.folder === true) {
-                return `${rootMargins[object.level]}${key}: {
+                return `${rootMargins[object.level]}${key.toUpperCase()}: {
 ${'  '}${object.value}
 ${'  '}${rootMargins[object.level]}}`
             }
-            return `${margins[object.level]}${key}: require('@app-assets/${object.value}')`
+            return `${margins[object.level]}${key.toUpperCase()}: require('@app-assets/${object.value}')`
         })
         .join(',\n  ')
 
@@ -62,7 +62,7 @@ const rootProperties = getFileList('assets');
 
 const generate = () => {
 
-    const string = `export const Images = {
+    const string = `export const images = {
   ${rootProperties}
 }
 `
