@@ -14,17 +14,21 @@ const getFileList = (dirName) => {
     for (const item of items) {
         if (item.isDirectory()) {
             const subProperties = getFileList(`${dirName}/${item.name}`);
-            dict[item.name] = {
-                level: split.length,
-                folder: true,
-                value: subProperties
+            if (subProperties.trim() !== '') { // not empty string
+                dict[item.name] = {
+                    level: split.length,
+                    folder: true,
+                    value: subProperties
+                }
             }
         } else {
-            dict[item.name.replace('.png', '').replace('.jpg', '').replaceAll('-', '_')] = {
-                level: split.length,
-                folder: false,
-                value: `${dirName}/${item.name}`.replace('assets/', '')
-            };
+            if (item.name.includes('.png') || item.name.includes('.jpg')) {
+                dict[item.name.replace('.png', '').replace('.jpg', '').replaceAll('-', '_')] = {
+                    level: split.length,
+                    folder: false,
+                    value: `${dirName}/${item.name}`.replace('assets/', '')
+                };
+            }
         }
     }
 
