@@ -24,20 +24,23 @@ const getFileList = (dirName) => {
 
 getFileList('assets');
 
-let imports = Object.values(dict).join('\n')
+let importRows = Object.values(dict).join('\n')
 
-let exports = Object.keys(dict)
-    .map((key) => {
-        return `${key} // ${key}`
+let exportRows = Object.keys(dict)
+    .map((key, index) => {
+        if (index >= Object.keys(dict).length - 1) { // Last row
+            return `${key} // ${key}`
+        }
+        return `${key}, // ${key}`
     })
-    .join(',\n  ')
+    .join('\n  ')
 
 const generate = () => {
 
-    const string = `${imports}
+    const string = `${importRows}
 
 export const svgs = {
-${exports}
+  ${exportRows}
 }
 `
 
