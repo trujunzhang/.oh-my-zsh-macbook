@@ -17,10 +17,6 @@ export GIT_EDITOR='nvim'
 # uninstall by removing these lines or running `tabtab uninstall yo`
 # [[ -f /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh ]] && . /usr/local/lib/node_modules/yo/node_modules/tabtab/.completions/yo.zsh
 
-# all export [PATH]
-# my custom bins
-export PATH="$HOME/Documents/Organizations/__APPLICATIONS/BinApps:$PATH"
-
 # ======================================================================
 # Android Studio installed automatically
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -56,9 +52,6 @@ export PATH="/Applications/VirtualBox.app/Contents/MacOS:$PATH"
 # php's composer
 # https://duvien.com/blog/installing-composer-mac-osx
 alias composer="php /usr/local/bin/composer.phar"
-
-# ieatta's firebase json configure.
-export GOOGLE_APPLICATION_CREDENTIALS="$HOME/Documents/Organizations/__SDKS/FIREBASE/service-account-file.json"
 
 # bin folder in User's home.
 export PATH="$HOME/bin:$PATH"
@@ -148,9 +141,6 @@ export PATH="$HOME/.cask/bin:$PATH"
 # LEIN Coljure
 LEIN_JVM_OPTS="-Dmaven.wagon.rto=1800000"
 
-# Light Table
-export LT_HOME="$HOME/Documents/Organizations/__APPLICATIONS/IDES/lighttable"
-
 # BEGIN set common environment variables #####################################
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -193,4 +183,16 @@ fi
 
 export TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 
+# macvim
+alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
+
+# all export [PATH]
+# my custom bins
+export PATH="$ORGANIZATIONS_HOME/__APPLICATIONS/BinApps:$PATH"
+
+# ieatta's firebase json configure.
+export GOOGLE_APPLICATION_CREDENTIALS="$ORGANIZATIONS_HOME/__SDKS/FIREBASE/service-account-file.json"
+
+# Light Table
+export LT_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable"
 

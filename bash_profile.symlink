@@ -68,9 +68,6 @@ export PATH="$PATH:$HOME/Documents/flutter/bin"
 export PATH="$PATH:$HOME/Documents/flutter/bin/cache/dart-sdk/bin"
 export PATH="$PATH:$HOME/Documents/flutter/.pub-cache/bin"
 
-# macvim
-alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
-
 # xcode
 alias iosopen='open -a Simulator'
 
