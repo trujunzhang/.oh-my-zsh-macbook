@@ -26,9 +26,19 @@ getFileList('assets');
 
 let imports = Object.values(dict).join('\n')
 
+let exports = Object.keys(dict)
+    .map((key) => {
+        return `${key} // ${key}`
+    })
+    .join(',\n  ')
+
 const generate = () => {
 
     const string = `${imports}
+
+export const svgs = {
+${exports}
+}
 `
 
     fs.writeFileSync('plugins/app-config/res/svgs.ts', string, 'utf8')
