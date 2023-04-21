@@ -287,14 +287,14 @@ alias eas_Build_All='eas build --platform all'
 alias easUpdateConfigure='eas update:configure'
 
 # Emacs
-# alias emacs='open -a $HOME/Documents/Organizations/__APPLICATIONS/IDES/Emacs.app $1'
+# alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
 # alias emacsd="emacs -debug-init"
 
 # geny motion
 alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'genymotion'"
 
 # macvim
-alias gvim='$HOME/Documents/Organizations/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
+alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
 
 # xcode
 alias xcodeselect='sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer'
@@ -426,13 +426,13 @@ alias neovimcheck="nvim +checkhealth"
 alias neovimplugininstall="nvim +PlugInstall"
 
 # djzhang's cmd
-alias dfpython="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python"
-alias drunvpn="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
-alias drv="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
-alias drunonekeymac="rm -rf ~/.nvm && cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook && ./one_key_macbook.sh"
-alias drungrpc_branch="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
-alias drunoffline="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
-alias drunhttp='cd $HOME/Documents/Organizations/__CACHES/github && python3 -m http.server --cgi 8080'
+alias dfpython="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python"
+alias drunvpn="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
+alias drv="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
+alias drunonekeymac="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./one_key_macbook.sh"
+alias drungrpc_branch="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
+alias drunoffline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
+alias drunhttp='cd $ORGANIZATIONS_HOME/__CACHES/github && python3 -m http.server --cgi 8080'
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 
@@ -440,7 +440,7 @@ alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b tmp"
 
 # nvm
-alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$HOME/Documents/Organizations/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.38.0 && . ~/.nvm/nvm.sh && nvm install 12.13.1 && nvm use 12.13.1 && npm install -g yarn"
+alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.38.0 && . ~/.nvm/nvm.sh && nvm install 12.13.1 && nvm use 12.13.1 && npm install -g yarn"
 
 # cocoapods
 # https://blog.csdn.net/qq_41110569/article/details/106501098
@@ -461,9 +461,9 @@ alias emacsdoom="emacs --with-profile=doom"
 alias emacsspace="emacs --with-profile=spacemacs"
 alias etspace="echo 'spacemacs' > ~/.emacs-profile"
 alias etdoom="echo 'doom' > ~/.emacs-profile"
-alias edoominstall="$HOME/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom install"
-alias edoomsync="$HOME/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom sync"
-alias edoomdoctor="$HOME/Documents/Organizations/IDES/emacs-shim/doom-emacs/bin/doom doctor"
+alias edoominstall="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom install"
+alias edoomsync="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom sync"
+alias edoomdoctor="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom doctor"
 
 # 
 # youtube-dl(pending)
