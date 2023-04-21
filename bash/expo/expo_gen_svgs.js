@@ -20,28 +20,15 @@ const getFileList = (dirName) => {
             }
         }
     }
-
-    // let properties = Object.keys(dict)
-    //     .map((key) => {
-    //         const object = dict[key]
-    //         return `${margins[object.level]}${key.toUpperCase()}: require('@app-assets/${object.value}')`
-    //     })
-    //     .join(',\n  ')
-
 };
 
 getFileList('assets');
 
-let imports = Object.value(dict)
-    .map((value) => {
-        return value
-    })
-    .join('\n  ')
+let imports = Object.values(dict).join('\n')
 
 const generate = () => {
 
-    const string = `
-  ${imports}
+    const string = `${imports}
 `
 
     fs.writeFileSync('plugins/app-config/res/svgs.ts', string, 'utf8')
