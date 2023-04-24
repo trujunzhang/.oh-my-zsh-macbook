@@ -839,7 +839,7 @@
         "*.ipynb": "jupyter.notebook.ipynb",
         "*.scpt": "default"
     },
-    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.colorTheme": "GitHub Light Default",
     "diffEditor.ignoreTrimWhitespace": false,
     "jsonToDart.codeGenerator": "JSON",
     "jsonToDart.targetDirectory.path": "/src/entities",
@@ -886,5 +886,8 @@
         "source.fixAll.eslint": true
     },
     "eslint.validate": ["typescript"],
-    "window.restoreFullscreen": true
+    "window.restoreFullscreen": true,
+    "editor.fontFamily": "FiraCode-Retina",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14
 }
