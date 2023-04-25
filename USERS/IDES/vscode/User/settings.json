@@ -889,5 +889,8 @@
     "window.restoreFullscreen": true,
     "editor.fontFamily": "FiraCode-Retina",
     "editor.fontLigatures": true,
-    "editor.fontSize": 14
+    "editor.fontSize": 14,
+    "explorer.autoRevealExclude": {
+        "**/node_modules": false
+    }
 }
