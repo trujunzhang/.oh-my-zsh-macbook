@@ -273,6 +273,7 @@ alias expandroidkeystore='expo fetch:android:keystore'
 alias expoProjectUpdate="yinstall && yupdate && yinstall && expUpdate && yinstall && expdoctor && yinstall"
 alias expogenimages="node $TRUJUNZHANG_DOTFILES_HOME/bash/expo/expo_gen_images.js"
 alias expogensvgs="node $TRUJUNZHANG_DOTFILES_HOME/bash/expo/expo_gen_svgs.js"
+alias expogenfonts="node $TRUJUNZHANG_DOTFILES_HOME/bash/expo/expo_gen_fonts.js"
 
 # Expo(eas)
 alias easLogin='eas login'
