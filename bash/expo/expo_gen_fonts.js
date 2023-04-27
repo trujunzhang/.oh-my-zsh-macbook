@@ -29,7 +29,7 @@ const _generateFontsConsts = (fontType, fontUpper) => {
 */
 /* {thin} */
 export const ${fontType.toUpperCase()}_THIN = '${fontType}-thin'
-export const ${fontType.toUpperCase()}_THIN_ITALIC = '${fontType}-thin_italic'
+export const ${fontType.toUpperCase()}_THIN_ITALIC = '${fontType}-thin-italic'
 /* {light} */
 export const ${fontType.toUpperCase()}_LIGHT = '${fontType}-light'
 export const ${fontType.toUpperCase()}_LIGHT_ITALIC = '${fontType}-light-italic'
@@ -61,7 +61,7 @@ export const ${fontType.toUpperCase()}_BLACK_ITALIC = '${fontType}-black-italic'
 */
 /* {thin} */
 export const FONT_${fontType.toUpperCase()}_THIN = 'font-${fontType}-thin'
-export const FONT_${fontType.toUpperCase()}_THIN_ITALIC = 'font-${fontType}-thin_italic'
+export const FONT_${fontType.toUpperCase()}_THIN_ITALIC = 'font-${fontType}-thin-italic'
 /* {light} */
 export const FONT_${fontType.toUpperCase()}_LIGHT = 'font-${fontType}-light'
 export const FONT_${fontType.toUpperCase()}_LIGHT_ITALIC = 'font-${fontType}-light-italic'

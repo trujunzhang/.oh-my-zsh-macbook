@@ -3,6 +3,19 @@
 CURRENT=`pwd`
 # Folders in Home.
 
+
+if [[ $(uname -m) == 'arm64' ]]; then
+  # echo M2
+fi
+
+if [[ $(uname -m) == 'x86_64' ]]; then
+    # echo Mackook
+    ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
+fi
+
+TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
+
+
 echo "                         "
 echo "==============================================================="
 echo "Bash version ${BASH_VERSION}...           "
