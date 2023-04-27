@@ -32,9 +32,10 @@ myArray=(
     "pflannery.vscode-versionlens"
 
     # =================================
-    # Chatgpt
+    # AI (Chatgpt,CodeWhisperer)
     # =================================
     "easycodeai.chatgpt-gpt4-gpt3-vscode"
+    "amazonwebservices.aws-toolkit-vscode"
 
     # =================================
     # Node
@@ -42,6 +43,7 @@ myArray=(
     # Jest
     # https://itnext.io/debug-your-tests-in-typescript-with-visual-studio-code-911a4cada9cd 
     "kavod-io.vscode-jest-test-adapter"
+    "izdt.javascript-unit-test-snippet"
 
     # =================================
     # Javascript
