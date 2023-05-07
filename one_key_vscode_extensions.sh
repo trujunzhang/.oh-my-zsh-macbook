@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 myArray=(
-    
+
 
     # =================================
     # Themes
@@ -25,9 +25,9 @@ myArray=(
     "formulahendry.auto-rename-tag"
     "esbenp.prettier-vscode"
     "dbaeumer.vscode-eslint"
-    "aaron-bond.better-comments" 
+    "aaron-bond.better-comments"
     "mikestead.dotenv"
-    "ms-vscode.live-server" 
+    "ms-vscode.live-server"
     "kisstkondoros.vscode-gutter-preview"
     "pflannery.vscode-versionlens"
 
@@ -41,9 +41,12 @@ myArray=(
     # Node
     # =================================
     # Jest
-    # https://itnext.io/debug-your-tests-in-typescript-with-visual-studio-code-911a4cada9cd 
+    # https://itnext.io/debug-your-tests-in-typescript-with-visual-studio-code-911a4cada9cd
     "kavod-io.vscode-jest-test-adapter"
     "izdt.javascript-unit-test-snippet"
+
+    # mocha(test)
+    "hbenl.vscode-mocha-test-adapter"
 
     # =================================
     # Javascript
