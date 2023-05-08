@@ -46,7 +46,7 @@ myArray=(
     "izdt.javascript-unit-test-snippet"
 
     # mocha(test)
-    "hbenl.vscode-mocha-test-adapter"
+    # "hbenl.vscode-mocha-test-adapter"
 
     # =================================
     # Javascript
