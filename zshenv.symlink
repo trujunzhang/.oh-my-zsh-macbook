@@ -1,4 +1,10 @@
 
+if [[ $(uname -m) == 'arm64' ]]; then
+  # echo M2
+  # Adding this to my .zshrc solved the problem on a machine with Apple M2 CPU:
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
+
 export DOTFILES=$HOME/.dotfiles
 export CONFIGDIR="$HOME/.config"
 export LOCALDIR="$HOME/.local"
