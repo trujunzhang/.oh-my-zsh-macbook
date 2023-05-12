@@ -42,7 +42,8 @@ echo "                                          "
 
 # User's profile
 # USERPROFILE_HOME="$ORGANIZATIONS_HOME/__UserProfile"
-PATH_SYSTEM_APPLICATION_SUPPORT="$HOME/Library/Application Support"
+PATH_USERPROFILE_LIBRARY="$HOME/Library"
+PATH_USERPROFILE_APPLICATION_SUPPORT="$HOME/Library/Application Support"
 
 
 # *Links(Caches)
@@ -207,7 +208,7 @@ function link_symlink {
   # .oh-my-zsh
   # directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
 
-  directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang"  "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
+  directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang"    "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
   # directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"                                             "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
 
   # zshrc(rc)
@@ -345,8 +346,9 @@ function link_mac_user {
   directoryLink "android(sdk)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/Android"            "$HOME_MAC_USER_PATH/Library/Android"
 
   # ios
-  directoryLink "ios(.cocoapods)"     "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"     "$HOME_MAC_USER_PATH/.cocoapods"
-  directoryLink "ios(.offline-git)"   "$HOME_PROFILE_BACKUP_PATH/dev-ios/__CACHES"       "$ORGANIZATIONS_HOME/__CACHES"
+  directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME_MAC_USER_PATH/.cocoapods"
+  directoryLink "ios(.offline-git)"        "$HOME_PROFILE_BACKUP_PATH/dev-ios/__CACHES"             "$ORGANIZATIONS_HOME/__CACHES"
+  directoryLink "ios(Library-Caches)"      "$HOME_PROFILE_BACKUP_PATH/dev-ios/Caches/CocoaPods"     "$PATH_USERPROFILE_LIBRARY/Caches/CocoaPods"
 
 }
 
