@@ -344,6 +344,7 @@ function link_mac_user {
 
 }
 
+mkdir '/usr/local/bin'
 
 link_applescript
 link_vim
