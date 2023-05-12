@@ -331,7 +331,8 @@ function link_run_apps_shell {
 
 # Nginx downloads
 function link_nginx_http {
-  directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
+  # directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
+  directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"       "/opt/homebrew/var/www/@http"
 }
 
 function link_mac_user {
@@ -344,7 +345,7 @@ function link_mac_user {
 
 }
 
-mkdir '/usr/local/bin'
+# mkdir '/usr/local/bin'
 
 link_applescript
 link_vim
