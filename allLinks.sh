@@ -126,44 +126,48 @@ mkdir "$HOME/.local/share"
 # ====================================================================
 # ====================================================================
 
-# shell that run when os startup.
-fileLink "shellstartup.json"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/shellstartup.json" "$HOME/shellstartup.json"
+function link_applescript {
+  # shell that run when os startup.
+  fileLink "shellstartup.json"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/shellstartup.json" "$HOME/shellstartup.json"
 
-# plist that run terminal cmds
-fileLink "terminalcmds.plist"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/terminals/terminalcmds.plist" "$HOME/terminalcmds.plist"
+  # plist that run terminal cmds
+  fileLink "terminalcmds.plist"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/terminals/terminalcmds.plist" "$HOME/terminalcmds.plist"
+}
 
 # https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
 # directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
 
-# IDES(VSCode|Webstorm)
-# https://github.com/VSpaceCode/VSpaceCode
-mkdir "$HOME/Library/Application Support/Code"
-mkdir "$HOME/Library/Application Support/Code/User"
-directoryLink  "snippet(vscode)"     "$VSCODE_USERS_HOME/snippets"           "$DEST_VSCODE_USER_HOME/snippets"
-fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json"   "$DEST_VSCODE_USER_HOME/keybindings.json"
-fileLink "settings.json(vscode)"     "$VSCODE_USERS_HOME/settings.json"      "$DEST_VSCODE_USER_HOME/settings.json"
-fileLink "projects.json(vscode)"     "$VSCODE_HOME/projects.json"            "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager/projects.json"
+function link_ide_configs {
+  # IDES(VSCode|Webstorm)
+  # https://github.com/VSpaceCode/VSpaceCode
+  mkdir "$HOME/Library/Application Support/Code"
+  mkdir "$HOME/Library/Application Support/Code/User"
+  directoryLink  "snippet(vscode)"     "$VSCODE_USERS_HOME/snippets"           "$DEST_VSCODE_USER_HOME/snippets"
+  fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json"   "$DEST_VSCODE_USER_HOME/keybindings.json"
+  fileLink "settings.json(vscode)"     "$VSCODE_USERS_HOME/settings.json"      "$DEST_VSCODE_USER_HOME/settings.json"
+  fileLink "projects.json(vscode)"     "$VSCODE_HOME/projects.json"            "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager/projects.json"
 
-# IDES(atom)
-fileLink "config.cson(atom)"    "$ATOM_HOME_SOURCE/config.cson" "$ATOM_HOME_DEST/config.cson"
-fileLink "keymap.cson(atom)"    "$ATOM_HOME_SOURCE/keymap.cson" "$ATOM_HOME_DEST/keymap.cson"
-fileLink "projects.cson(atom)"  "$ATOM_HOME_SOURCE/projects.cson" "$ATOM_HOME_DEST/projects.cson"
+  # IDES(atom)
+  fileLink "config.cson(atom)"    "$ATOM_HOME_SOURCE/config.cson" "$ATOM_HOME_DEST/config.cson"
+  fileLink "keymap.cson(atom)"    "$ATOM_HOME_SOURCE/keymap.cson" "$ATOM_HOME_DEST/keymap.cson"
+  fileLink "projects.cson(atom)"  "$ATOM_HOME_SOURCE/projects.cson" "$ATOM_HOME_DEST/projects.cson"
 
-# IDES(Sublime)
-mkdir -p "$SUBLIME_SUPPORT_USER"
-fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_HOME_SOURCE/Preferences.sublime-settings" "$SUBLIME_SUPPORT_USER/Preferences.sublime-settings"
-SUBLIME_APP_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
-ln -sv "$SUBLIME_APP_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
+  # IDES(Sublime)
+  mkdir -p "$SUBLIME_SUPPORT_USER"
+  fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_HOME_SOURCE/Preferences.sublime-settings" "$SUBLIME_SUPPORT_USER/Preferences.sublime-settings"
+  SUBLIME_APP_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
+  ln -sv "$SUBLIME_APP_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
 
-# IDES(LightTable)
-LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
-ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
+  # IDES(LightTable)
+  LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
+  ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 
-# IDE(Sublime Merge)
-# ln -s "$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
+  # IDE(Sublime Merge)
+  # ln -s "$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 
-# Path
-fileLink   "studio(path)"   "$ORGANIZATIONS_HOME/__APPLICATIONS/BinApps/studio"   "/usr/local/bin/studio"
+  # Path
+  fileLink   "studio(path)"   "$ORGANIZATIONS_HOME/__APPLICATIONS/BinApps/studio"   "/usr/local/bin/studio"
+}
 
 # nginx default site
 # directoryLink  "nginx(site)"         "$CACHES_HOME/www"    "/usr/local/var/www"
@@ -190,118 +194,146 @@ mkdir "$HOME/.config"
 # .oh-my-zsh
 # directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
 
-directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang"  "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
-# directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"                                             "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
+function link_symlink {
+  directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang"  "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
+  # directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"                                             "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
 
-# zshrc(rc)
-fileLink ".zsh(env)"  "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
-fileLink ".zsh(rc)"   "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink"  "$HOME/.zshrc"
+  # zshrc(rc)
+  fileLink ".zsh(env)"  "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
+  fileLink ".zsh(rc)"   "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink"  "$HOME/.zshrc"
 
-# sbcl(common lisp)
-fileLink ".sbcl(common lisp)"   "$TRUJUNZHANG_DOTFILES_HOME/sbclrc.symlink"  "$HOME/.sbclrc"
+  # sbcl(common lisp)
+  fileLink ".sbcl(common lisp)"   "$TRUJUNZHANG_DOTFILES_HOME/sbclrc.symlink"  "$HOME/.sbclrc"
 
-# jetbrains's ideavim(config)
-fileLink ".ideavim(config)" "$TRUJUNZHANG_DOTFILES_HOME/ideavimrc.symlink" "$HOME/.ideavimrc"
+  # jetbrains's ideavim(config)
+  fileLink ".ideavim(config)" "$TRUJUNZHANG_DOTFILES_HOME/ideavimrc.symlink" "$HOME/.ideavimrc"
 
-# editor(config)
-fileLink ".editor(config)"  "$TRUJUNZHANG_DOTFILES_HOME/editorconfig.symlink" "$HOME/.editorconfig"
+  # editor(config)
+  fileLink ".editor(config)"  "$TRUJUNZHANG_DOTFILES_HOME/editorconfig.symlink" "$HOME/.editorconfig"
 
-# git(config)
-fileLink ".git(config)"     "$TRUJUNZHANG_DOTFILES_HOME/gitconfig.symlink" "$HOME/.gitconfig"
-fileLink ".git(global)"     "$TRUJUNZHANG_DOTFILES_HOME/gitignore_global.symlink" "$HOME/.gitignore_global"
+  # git(config)
+  fileLink ".git(config)"     "$TRUJUNZHANG_DOTFILES_HOME/gitconfig.symlink" "$HOME/.gitconfig"
+  fileLink ".git(global)"     "$TRUJUNZHANG_DOTFILES_HOME/gitignore_global.symlink" "$HOME/.gitignore_global"
 
-# bash
-fileLink ".bash(profile)"   "$TRUJUNZHANG_DOTFILES_HOME/bash_profile.symlink"  "$HOME/.bash_profile"
-fileLink ".bash(rc)"        "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink"  "$HOME/.bashrc"
+  # bash
+  fileLink ".bash(profile)"   "$TRUJUNZHANG_DOTFILES_HOME/bash_profile.symlink"  "$HOME/.bash_profile"
+  fileLink ".bash(rc)"        "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink"  "$HOME/.bashrc"
 
-directoryLink  "dotenv(Express.js environment variables)"  "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
+  directoryLink  "dotenv(Express.js environment variables)"  "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
 
-# **IDES(purcell's emacs.d)
-# directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
+  # **IDES(purcell's emacs.d)
+  # directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
 
-# **IDES(chemacs2[emacs-shim])
-# EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
-# https://github.com/plexus/chemacs2.git
-directoryLink "chemacs2(.emacs.d)"       "$EMACS_SHIM_HOME/chemacs2"                     "$HOME/.emacs.d"
-directoryLink "Doom(.doom.d)"            "$TRUJUNZHANG_DOTFILES_HOME/editors/.doom.d"    "$HOME/.doom.d"
-fileLink "chemacs2(.emacs-profile)"      "$EMACS_SHIM_HOME/.emacs-profile"               "$HOME/.emacs-profile"
-fileLink "chemacs2(.emacs-profiles.el)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/.emacs-profiles.el" "$HOME/.emacs-profiles.el"
+  # **IDES(chemacs2[emacs-shim])
+  # EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
+  # https://github.com/plexus/chemacs2.git
+  directoryLink "chemacs2(.emacs.d)"       "$EMACS_SHIM_HOME/chemacs2"                     "$HOME/.emacs.d"
+  directoryLink "Doom(.doom.d)"            "$TRUJUNZHANG_DOTFILES_HOME/editors/.doom.d"    "$HOME/.doom.d"
+  fileLink "chemacs2(.emacs-profile)"      "$EMACS_SHIM_HOME/.emacs-profile"               "$HOME/.emacs-profile"
+  fileLink "chemacs2(.emacs-profiles.el)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/.emacs-profiles.el" "$HOME/.emacs-profiles.el"
 
-# spacemacs(All)
-# directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"                          "$HOME/.emacs.d"
-fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
+  # spacemacs(All)
+  # directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"                          "$HOME/.emacs.d"
+  fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
 
-## spacemacs(plugins)
-# directoryLink "emacs_layout(trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"    "$HOME/.emacs.d/private/trujunzhang-workspace"
-# directoryLink "emacs_layout(dart-layer)"   "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/dart-layer"               "$HOME/.emacs.d/private/dart-layer"
-# directoryLink "w3m(third Layout)"          "$SPACEMACS_W3M_HOME"                                                "$HOME/.emacs.d/private/w3m"
-# directoryLink "vue(third Layout)"        "$SPACEMACS_VUE_HOME"                                                "$HOME/.emacs.d/private/vue"
-## spacemacs(Snippets)
-# directoryLink "emacs(My Snippet)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/mySnippets"  "$HOME/.emacs.d/private/mySnippets"
+  ## spacemacs(plugins)
+  # directoryLink "emacs_layout(trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"    "$HOME/.emacs.d/private/trujunzhang-workspace"
+  # directoryLink "emacs_layout(dart-layer)"   "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/dart-layer"               "$HOME/.emacs.d/private/dart-layer"
+  # directoryLink "w3m(third Layout)"          "$SPACEMACS_W3M_HOME"                                                "$HOME/.emacs.d/private/w3m"
+  # directoryLink "vue(third Layout)"        "$SPACEMACS_VUE_HOME"                                                "$HOME/.emacs.d/private/vue"
+  ## spacemacs(Snippets)
+  # directoryLink "emacs(My Snippet)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/mySnippets"  "$HOME/.emacs.d/private/mySnippets"
 
-# spacevim(All)(pending)
-# directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/SpaceVim.d"       "$HOME/.SpaceVim.d"
-# fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
+  # spacevim(All)(pending)
+  # directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/SpaceVim.d"       "$HOME/.SpaceVim.d"
+  # fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
 
-# Tmux(All)
-# fileLink "tmux(config)"       "$TMUX_CONFIG"          "$HOME/.tmux.conf"
-# fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL"    "$HOME/.tmux.conf.local"
+  # Tmux(All)
+  # fileLink "tmux(config)"       "$TMUX_CONFIG"          "$HOME/.tmux.conf"
+  # fileLink "tmux(config.local)" "$TMUX_CONFIG_LOCAL"    "$HOME/.tmux.conf.local"
 
-# Android Environment
-# directoryLink "sdk(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android"   "$HOME/Library/Android"
-# directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android"          "$HOME/.android"
-# directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
+  # Android Environment
+  # directoryLink "sdk(Android)"       "/Volumes/Data/ALLNew_Macbook/Users/djzhang/Library/Android"   "$HOME/Library/Android"
+  # directoryLink ".android(Android)"  "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.android"          "$HOME/.android"
+  # directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
 
-# Node.js
-fileLink "Yarn(config)"       "$TRUJUNZHANG_DOTFILES_HOME/yarnrc.symlink"          "$HOME/.yarnrc"
+  # Node.js
+  fileLink "Yarn(config)"       "$TRUJUNZHANG_DOTFILES_HOME/yarnrc.symlink"          "$HOME/.yarnrc"
+}
 
-# cocoapods(Repository)
-mkdir -p "$HOME/.cocoapods/repos/trunk"
-# directoryLink ".cocoapods(Repository)"   "/Volumes/MacDevelop/.cocoapods/Specs/Specs"           "$HOME/.cocoapods/repos/trunk/Specs"
+function link_cocoapods {
+  # cocoapods(Repository)
+  mkdir -p "$HOME/.cocoapods/repos/trunk"
+  # directoryLink ".cocoapods(Repository)"   "/Volumes/MacDevelop/.cocoapods/Specs/Specs"           "$HOME/.cocoapods/repos/trunk/Specs"
 
-# cocoapods(Github)
-# directoryLink ".cocoapods(github[@common])"   "/Volumes/MacDevelop/.github/@common"    "$ORGANIZATIONS_HOME/__CACHES/github/@common"   
-# directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec"        "$ORGANIZATIONS_HOME/__CACHES/github/@spec"   
+  # cocoapods(Github)
+  # directoryLink ".cocoapods(github[@common])"   "/Volumes/MacDevelop/.github/@common"    "$ORGANIZATIONS_HOME/__CACHES/github/@common"   
+  # directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec"        "$ORGANIZATIONS_HOME/__CACHES/github/@spec"   
 
-# cocoapods(Cache)
-# directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"           "$HOME/Library/Caches/CocoaPods"
+  # cocoapods(Cache)
+  # directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"           "$HOME/Library/Caches/CocoaPods"
+}
 
 # =============================
 # Flutter
 # =============================
 
-# flutter tool(getx style)
-fileLink "Getx(style)"           "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_style.sh"         /usr/local/bin/getx_style
-chmod +x /usr/local/bin/getx_style
+function link_getx_shell {
+  # flutter tool(getx style)
+  fileLink "Getx(style)"           "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_style.sh"         /usr/local/bin/getx_style
+  chmod +x /usr/local/bin/getx_style
 
-# flutter tool(getx page)
-fileLink "Getx(page)"             "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page.sh"         /usr/local/bin/getx_page
-chmod +x /usr/local/bin/getx_page
+  # flutter tool(getx page)
+  fileLink "Getx(page)"             "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page.sh"         /usr/local/bin/getx_page
+  chmod +x /usr/local/bin/getx_page
 
-# flutter tool(getx page no binding)
-fileLink "Getx(page_no_binding)"  "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page_no_binding.sh"   /usr/local/bin/getx_page_no_binding
-chmod +x /usr/local/bin/getx_page_no_binding
+  # flutter tool(getx page no binding)
+  fileLink "Getx(page_no_binding)"  "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page_no_binding.sh"   /usr/local/bin/getx_page_no_binding
+  chmod +x /usr/local/bin/getx_page_no_binding
 
-# flutter tool(getx widget)
-fileLink "Getx(widget)"            "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_widget.sh"         /usr/local/bin/getx_widget
-chmod +x /usr/local/bin/getx_widget
+  # flutter tool(getx widget)
+  fileLink "Getx(widget)"            "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_widget.sh"         /usr/local/bin/getx_widget
+  chmod +x /usr/local/bin/getx_widget
 
-# flutter tool(getx rest)
-fileLink "Getx(rest)"              "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_rest.sh"         /usr/local/bin/getx_rest
-chmod +x /usr/local/bin/getx_rest
+  # flutter tool(getx rest)
+  fileLink "Getx(rest)"              "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_rest.sh"         /usr/local/bin/getx_rest
+  chmod +x /usr/local/bin/getx_rest
+}
 
 # ======================================
 # ios cocoapods for React native
 # ======================================
-fileLink "Cocoapods(offline)"      "$TRUJUNZHANG_DOTFILES_HOME/USERS/cocoapods/offline_local_ios_pods.sh"         /usr/local/bin/offline_local_ios_pods
-chmod +x /usr/local/bin/offline_local_ios_pods
+
+function link_pods_shell {
+  fileLink "Cocoapods(offline)"      "$TRUJUNZHANG_DOTFILES_HOME/USERS/cocoapods/offline_local_ios_pods.sh"         /usr/local/bin/offline_local_ios_pods
+  chmod +x /usr/local/bin/offline_local_ios_pods
+}
 
 # ======================================
 # Run custom apps
 # ======================================
-fileLink "Apps(custom)"      "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/run_my_apps.sh"         /usr/local/bin/run_my_apps
-chmod +x /usr/local/bin/run_my_apps
+function link_run_apps_shell {
+  fileLink "Apps(custom)"      "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/run_my_apps.sh"         /usr/local/bin/run_my_apps
+  chmod +x /usr/local/bin/run_my_apps
+}
 
 # Nginx downloads
-directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
+function link_nginx_http {
+  directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
+}
+
+link_applescript
+link_ide_configs
+link_symlink
+link_cocoapods
+link_getx_shell
+link_pods_shell
+link_run_apps_shell
+link_nginx_http
+
+
+
+
+
+
 
