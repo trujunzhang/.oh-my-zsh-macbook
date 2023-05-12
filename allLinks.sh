@@ -273,9 +273,9 @@ function link_symlink {
   fileLink "Yarn(config)"       "$TRUJUNZHANG_DOTFILES_HOME/yarnrc.symlink"          "$HOME/.yarnrc"
 }
 
-function link_cocoapods {
+# function link_cocoapods {
   # cocoapods(Repository)
-  mkdir -p "$HOME/.cocoapods/repos/trunk"
+  # mkdir -p "$HOME/.cocoapods/repos/trunk"
   # directoryLink ".cocoapods(Repository)"   "/Volumes/MacDevelop/.cocoapods/Specs/Specs"           "$HOME/.cocoapods/repos/trunk/Specs"
 
   # cocoapods(Github)
@@ -284,7 +284,7 @@ function link_cocoapods {
 
   # cocoapods(Cache)
   # directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"           "$HOME/Library/Caches/CocoaPods"
-}
+# }
 
 # =============================
 # Flutter
@@ -334,17 +334,31 @@ function link_nginx_http {
   directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
 }
 
+function link_mac_user {
+  HOME_MAC_USER_PATH="/Volumes/MacUser/djzhang"
+  HOME_PROFILE_BACKUP_PATH="/Volumes/MacWork/ProfileBackup"
+
+
+  directoryLink "android(avd)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/.android"     "$HOME_MAC_USER_PATH/.android"
+  directoryLink "ios(.cocoapods)"   "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"     "$HOME_MAC_USER_PATH/.cocoapods"
+
+}
+
+
 link_applescript
 link_vim
 link_ide_configs
 link_vim
 link_symlink
-link_cocoapods
+# link_cocoapods
 link_getx_shell
 link_pods_shell
 link_run_apps_shell
 link_nginx_http
-
+if [[ $(uname -m) == 'arm64' ]]; then
+  # echo M2
+  link_mac_user
+fi
 
 
 
