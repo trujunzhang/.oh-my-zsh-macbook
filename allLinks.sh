@@ -44,11 +44,6 @@ echo "                                          "
 # USERPROFILE_HOME="$ORGANIZATIONS_HOME/__UserProfile"
 PATH_SYSTEM_APPLICATION_SUPPORT="$HOME/Library/Application Support"
 
-# *Links(dot_vim)
-# ======================================
-VIM_ALL_HOME="$TRUJUNZHANG_DOTFILES_HOME/nicknisi/vim"
-# ==Items==
-DOT_VIM_RC="$VIM_ALL_HOME/init.vim"
 
 # *Links(Caches)
 # ======================================
@@ -57,51 +52,7 @@ CACHES_HOME="$ORGANIZATIONS_HOME/__CACHES"
 LIBRARY_YARN_HOME="$CACHES_HOME/Yarn"
 LIBRARY_COCOAPODS_HOME="$CACHES_HOME/CocoaPods"
 
-# *Links(IDES)
-# ======================================
-IDES_HOME="$ORGANIZATIONS_HOME/IDES"
-# **IDES(chemacs2[emacs-shim])
-EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
-# **IDES(zsh)
-OH_MY_ZSH_HOME="$IDES_HOME/oh-my-zsh"
-# ==Items==
-OH_MY_ZSH_IDE_HOME="$OH_MY_ZSH_HOME/oh-my-zsh"
-POWER_LEVEL_9K_HOME="$OH_MY_ZSH_HOME/powerlevel9k"
-# **IDES(purcell's emacs.d)
-PURCELL_EMACS_HOME="$TRUJUNZHANG_DOTFILES_HOME/purcell/emacs.d"
-# **IDES(spacemacs)
-SPACEMACS_HOME="$IDES_HOME/spacemacs"
-# ==Items==
-SPACEMACS_IDE_HOME="$SPACEMACS_HOME/spacemacs"
-SPACEMACS_W3M_HOME="$SPACEMACS_HOME/venmos/w3m-layer"
-SPACEMACS_VUE_HOME="$SPACEMACS_HOME/lawrsp/vue-layer"
-### IDES(cocoapods)
-COCOAPODS_HOME="$IDES_HOME/cocoapods/.cocoapods"
-### IDES(ENVS)
-ENVS_HOME="$IDES_HOME/ENVS"
-# ==Items==
-# git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-PYENV_HOME="$ENVS_HOME/pyenv"
 
-### IDES(HOME)
-### /Users/djzhang/Library/Application Support/**
-DEST_APPLICATION_SUPPOR="$HOME/Library/Application Support"
-IDES_TRUJUNZHANG_HOME="$TRUJUNZHANG_DOTFILES_HOME/USERS/IDES"
-### IDES(VSCODE)
-VSCODE_HOME="$IDES_TRUJUNZHANG_HOME/vscode"
-VSCODE_USERS_HOME="$VSCODE_HOME/User"
-### /Users/djzhang/Library/Application Support/Code/User
-DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
-### IDES(Atom)
-ATOM_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/atom"
-ATOM_HOME_DEST="$HOME/.atom"
-### IDES(Sublime)
-SUBLIME_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/sublime"
-### /Users/djzhang/Library/Application\ Support/Sublime\ Text\ /Packages/User
-SUBLIME_SUPPORT_USER="$DEST_APPLICATION_SUPPOR/Sublime Text/Packages/User"
-
-# Trujunzhag's vimrc
-VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
 
 # Trujunzhag's tmux
 TMUX_CONFIG="$TRUJUNZHANG_DOTFILES_HOME/tmux.conf.symlink"
@@ -134,10 +85,35 @@ function link_applescript {
   fileLink "terminalcmds.plist"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/terminals/terminalcmds.plist" "$HOME/terminalcmds.plist"
 }
 
-# https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
-# directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
+function link_vim {
+  # Trujunzhag's vimrc
+  VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
+
+  # https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
+  # directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
+}
 
 function link_ide_configs {
+  ### IDES(HOME)
+  ### /Users/djzhang/Library/Application Support/**
+  DEST_APPLICATION_SUPPOR="$HOME/Library/Application Support"
+  IDES_TRUJUNZHANG_HOME="$TRUJUNZHANG_DOTFILES_HOME/USERS/IDES"
+  ### IDES(VSCODE)
+  VSCODE_HOME="$IDES_TRUJUNZHANG_HOME/vscode"
+  VSCODE_USERS_HOME="$VSCODE_HOME/User"
+  ### /Users/djzhang/Library/Application Support/Code/User
+  DEST_VSCODE_USER_HOME="$DEST_APPLICATION_SUPPOR/Code/User"
+  ### IDES(Atom)
+  ATOM_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/atom"
+  ATOM_HOME_DEST="$HOME/.atom"
+  ### IDES(Sublime)
+  SUBLIME_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/sublime"
+  ### /Users/djzhang/Library/Application\ Support/Sublime\ Text\ /Packages/User
+  SUBLIME_SUPPORT_USER="$DEST_APPLICATION_SUPPOR/Sublime Text/Packages/User"
+
+
+
+
   # IDES(VSCode|Webstorm)
   # https://github.com/VSpaceCode/VSpaceCode
   mkdir "$HOME/Library/Application Support/Code"
@@ -173,6 +149,13 @@ function link_ide_configs {
 # directoryLink  "nginx(site)"         "$CACHES_HOME/www"    "/usr/local/var/www"
 
 function link_vim {
+  # *Links(dot_vim)
+  # ======================================
+  VIM_ALL_HOME="$TRUJUNZHANG_DOTFILES_HOME/nicknisi/vim"
+  # ==Items==
+  DOT_VIM_RC="$VIM_ALL_HOME/init.vim"
+
+
   # DOT_VIM
   mkdir "$HOME/.config"
   # directoryLink  "vim(.vim)"         "$VIM_ALL_HOME"    "$HOME/.vim"
@@ -190,13 +173,40 @@ function link_vim {
 # trujunzhang's profile
 # directoryLink  "Application(djzhang)"  "$ORGANIZATIONS_APPLICATION_HOME"  "$HOME/Applications"
 
-# cocoapods(ruby)
-# directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
-
-# .oh-my-zsh
-# directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
-
 function link_symlink {
+  # *Links(IDES)
+  # ======================================
+  IDES_HOME="$ORGANIZATIONS_HOME/IDES"
+  # **IDES(chemacs2[emacs-shim])
+  EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
+  # **IDES(zsh)
+  OH_MY_ZSH_HOME="$IDES_HOME/oh-my-zsh"
+  # ==Items==
+  OH_MY_ZSH_IDE_HOME="$OH_MY_ZSH_HOME/oh-my-zsh"
+  POWER_LEVEL_9K_HOME="$OH_MY_ZSH_HOME/powerlevel9k"
+  # **IDES(purcell's emacs.d)
+  PURCELL_EMACS_HOME="$TRUJUNZHANG_DOTFILES_HOME/purcell/emacs.d"
+  # **IDES(spacemacs)
+  SPACEMACS_HOME="$IDES_HOME/spacemacs"
+  # ==Items==
+  SPACEMACS_IDE_HOME="$SPACEMACS_HOME/spacemacs"
+  SPACEMACS_W3M_HOME="$SPACEMACS_HOME/venmos/w3m-layer"
+  SPACEMACS_VUE_HOME="$SPACEMACS_HOME/lawrsp/vue-layer"
+  ### IDES(cocoapods)
+  COCOAPODS_HOME="$IDES_HOME/cocoapods/.cocoapods"
+  ### IDES(ENVS)
+  ENVS_HOME="$IDES_HOME/ENVS"
+  # ==Items==
+  # git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+  PYENV_HOME="$ENVS_HOME/pyenv"
+
+
+  # cocoapods(ruby)
+  # directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
+
+  # .oh-my-zsh
+  # directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
+
   directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang"  "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
   # directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"                                             "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
 
@@ -325,6 +335,7 @@ function link_nginx_http {
 }
 
 link_applescript
+link_vim
 link_ide_configs
 link_vim
 link_symlink
