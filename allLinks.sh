@@ -339,8 +339,12 @@ function link_mac_user {
   HOME_MAC_USER_PATH="/Volumes/MacUser/djzhang"
   HOME_PROFILE_BACKUP_PATH="/Volumes/MacWork/ProfileBackup"
 
-
+  # android 
   directoryLink "android(avd)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/.android"     "$HOME_MAC_USER_PATH/.android"
+  directoryLink "android(avd)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/Gradle/.gradle"     "$HOME_MAC_USER_PATH/.gradle"
+  directoryLink "android(sdk)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/Android"     "$HOME_MAC_USER_PATH/Library/Android"
+
+  # ios
   directoryLink "ios(.cocoapods)"   "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"     "$HOME_MAC_USER_PATH/.cocoapods"
 
 }
