@@ -172,11 +172,13 @@ function link_ide_configs {
 # nginx default site
 # directoryLink  "nginx(site)"         "$CACHES_HOME/www"    "/usr/local/var/www"
 
-# DOT_VIM
-mkdir "$HOME/.config"
-# directoryLink  "vim(.vim)"         "$VIM_ALL_HOME"    "$HOME/.vim"
-# directoryLink  "neovim(config)"    "$VIM_ALL_HOME"    "$HOME/.config/nvim"
-# fileLink       "vim(.vimrc)"       "$DOT_VIM_RC"      "$HOME/.vimrc"
+function link_vim {
+  # DOT_VIM
+  mkdir "$HOME/.config"
+  # directoryLink  "vim(.vim)"         "$VIM_ALL_HOME"    "$HOME/.vim"
+  # directoryLink  "neovim(config)"    "$VIM_ALL_HOME"    "$HOME/.config/nvim"
+  # fileLink       "vim(.vimrc)"       "$DOT_VIM_RC"      "$HOME/.vimrc"
+}
 
 # $USERPROFILE/Library/Caches
 # directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/Caches/Yarn"
@@ -324,6 +326,7 @@ function link_nginx_http {
 
 link_applescript
 link_ide_configs
+link_vim
 link_symlink
 link_cocoapods
 link_getx_shell
