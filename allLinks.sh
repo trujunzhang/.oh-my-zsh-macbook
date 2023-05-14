@@ -350,6 +350,9 @@ function link_mac_user {
   directoryLink "ios(.offline-git)"        "$HOME_PROFILE_BACKUP_PATH/dev-ios/__CACHES"             "$ORGANIZATIONS_HOME/__CACHES"
   directoryLink "ios(Library-Caches)"      "$HOME_PROFILE_BACKUP_PATH/dev-ios/Caches/CocoaPods"     "$PATH_USERPROFILE_LIBRARY/Caches/CocoaPods"
 
+  # org
+  directoryLink "org(TRUJUNZHANG)"          "$HOME_PROFILE_BACKUP_PATH/org/TRUJUNZHANG"           "$ORGANIZATIONS_HOME/TRUJUNZHANG"
+
 }
 
 # mkdir '/usr/local/bin'
