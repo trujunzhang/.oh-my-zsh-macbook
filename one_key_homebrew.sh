@@ -44,7 +44,7 @@ if [ ! -d  /usr/local/opt/emacs-plus@29 ]; then
     brew tap d12frosted/emacs-plus
     brew install emacs-plus@29 --with-spacemacs-icon
     brew link emacs-plus@29
-    open /usr/local/opt/emacs-plus@29
+    # open /usr/local/opt/emacs-plus@29
 fi
 
 ## git
