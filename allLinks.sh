@@ -353,6 +353,8 @@ function link_mac_user {
   # org
   directoryLink "org(TRUJUNZHANG)"          "$HOME_PROFILE_BACKUP_PATH/org/TRUJUNZHANG"           "$ORGANIZATIONS_HOME/TRUJUNZHANG"
 
+  # Parallels Desktop
+  directoryLink "win11(Parallels Desktop)"    "/Volumes/MacGame/VMDesktop/Windows 11.pvm"           "$HOME_MAC_USER_PATH/Parallels/Windows 11.pvm"
 }
 
 # mkdir '/usr/local/bin'
