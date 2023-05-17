@@ -157,6 +157,9 @@ function install_cocoapods_tools {
     sudo chmod +x /usr/bin/generator_git_offline
 }
 
+# first of all, update the system.
+sudo apt-get update
+
 install_zsh
 prepare_system
 install_docker_apps

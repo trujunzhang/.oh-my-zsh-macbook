@@ -404,7 +404,7 @@ alias wsshlocal='ssh ubuntu@'
 alias wsshcopylocal='ssh-copy-id ubuntu@'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh ubuntu@38.54.107.62'
+alias wsshtmp='ssh ubuntu@38.54.108.30'
 alias wsshcopytmp='ssh-copy-id root@'
 alias wsshdns='ssh root@ok.myv2ray.xyz'
 
