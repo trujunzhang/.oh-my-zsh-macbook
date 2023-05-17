@@ -7,7 +7,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - TRANSMISSION_WEB_HOME=/combustion-release/ #optional
       - USER=djzhang #optional
       - PASS=wanghao720 #optional
     volumes:

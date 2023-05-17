@@ -4,7 +4,7 @@
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
 #
 #
-#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cp /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu && cp /$HOME/.oh-my-zsh-macbook/bash/x_ui_install.sh /usr/bin/x_ui_install && chmod +x /usr/bin/x_ui_install 
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && sudo cp /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && sudo chmod +x /usr/bin/one_key_ubuntu && sudo cp /$HOME/.oh-my-zsh-macbook/bash/x_ui_install.sh /usr/bin/x_ui_install && sudo chmod +x /usr/bin/x_ui_install 
 #
 #
 #    cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
@@ -39,7 +39,7 @@ function install_zsh {
     sudo apt install -y zsh
 
     # Setup zsh as default shell
-    chsh -s /usr/bin/zsh
+    sudo chsh -s /usr/bin/zsh
     echo $SHELL
 
     # sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -98,9 +98,9 @@ fi
       
     ## docker-pure-ftpd & qbittorrent
     cd "$HOME/.oh-my-zsh-macbook/USERS/Docker/docker-transmission"
-    docker-compose up -d
+    sudo docker-compose up -d
     cd "$HOME/.oh-my-zsh-macbook/USERS/Docker/docker-pure-ftpd"
-    docker-compose up -d
+    sudo docker-compose up -d
 
     ## v2ray   
     #  mkdir -p /etc/v2ray
@@ -124,13 +124,13 @@ fi
 
     ## factory
     ## https://github.com/yukilzw/factory
-   git clone https://github.com/trujunzhang/factory /tmp/factory
-   cd /tmp/factory
-   docker build -t factory . 
-   docker run \
-          --restart=always \
-          -p 1236:1236 \
-          -d factory:latest
+   ## git clone https://github.com/trujunzhang/factory /tmp/factory
+   ## cd /tmp/factory
+   ## docker build -t factory . 
+   ## docker run \
+   ##       --restart=always \
+   ##       -p 1236:1236 \
+   ##       -d factory:latest
 }
 
 function install_youtube_download {
