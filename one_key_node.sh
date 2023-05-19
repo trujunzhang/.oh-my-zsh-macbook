@@ -10,7 +10,9 @@ source ./bash/tools.sh
 if [ ! -d  ~/.nvm ]; then
     cd ~/ && rm -rf .nvm 
     git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm
-    cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 18.12.0 && nvm use 18.12.0
+    cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh 
+    nvm install 16.16
+    nvm install 18.12.0 && nvm use 18.12.0 # default node.js
 fi    
 
     npm install --location=global prettier
