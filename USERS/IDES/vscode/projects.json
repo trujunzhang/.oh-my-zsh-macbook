@@ -1,65 +1,16 @@
 [
-   {
-    "name": "global-sketch-lerna(ROOT)",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-sketch-lerna",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  },
-  {
-    "name": "global-politicl-lerna(ROOT)",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  },
-  {
-    "name": "global-ieatta-lerna(ROOT)",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-ieatta-lerna",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  },
-  {
-    "name": "web-app(politicl)",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna/packages/appWeb/app",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  },
-  {
-    "name": "web-app(ieatta)",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-ieatta-lerna/packages/appWeb/app",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  },
-  {
-    "name": "client-app(politicl)",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna/packages/appClient/app",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  },
-  {
-    "name": "client-app(ieatta)",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-ieatta-lerna/packages/appClient/app",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  },
-  {
-    "name": "appLibs",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna/packages/appLibrary/appLibs",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  },
-  {
-    "name": "appSharedComps",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna/packages/appLibrary/appSharedComps",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  }
+	{
+		"name": "oh-my-zsh-macbook",
+		"rootPath": "/Volumes/MacWork/ProfileBackup/org/TRUJUNZHANG/_oh-my-zsh-macbook",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "appExpo",
+		"rootPath": "/Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/appExpo",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	}
 ]

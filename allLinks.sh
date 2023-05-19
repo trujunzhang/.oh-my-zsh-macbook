@@ -119,6 +119,7 @@ function link_ide_configs {
   # https://github.com/VSpaceCode/VSpaceCode
   mkdir "$HOME/Library/Application Support/Code"
   mkdir "$HOME/Library/Application Support/Code/User"
+  mkdir "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager"
   directoryLink  "snippet(vscode)"     "$VSCODE_USERS_HOME/snippets"           "$DEST_VSCODE_USER_HOME/snippets"
   fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json"   "$DEST_VSCODE_USER_HOME/keybindings.json"
   fileLink "settings.json(vscode)"     "$VSCODE_USERS_HOME/settings.json"      "$DEST_VSCODE_USER_HOME/settings.json"
