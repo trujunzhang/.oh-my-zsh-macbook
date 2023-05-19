@@ -9,10 +9,15 @@ myArray=(
     "github.github-vscode-theme"
 
     # =================================
+    # Projects and Files
+    # =================================
+    "junv.recent-files"
+    "alefragnani.project-manager"
+
+    # =================================
     # Tools
     # =================================
     "vscodevim.vim"
-    "junv.recent-files"
     "dzhavat.bracket-pair-toggler"
     "naumovs.color-highlight"
     "donjayamanne.githistory"

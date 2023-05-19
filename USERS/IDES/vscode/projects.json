@@ -49,13 +49,6 @@
     "enabled": true
   },
   {
-    "name": "client-shared",
-    "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna/packages/appClient/sharedComps",
-    "paths": [],
-    "group": "",
-    "enabled": true
-  },
-  {
     "name": "appLibs",
     "rootPath": "/Users/djzhang/Documents/Organizations/__CODING/CURRENT/__GLOBALS/global-politicl-lerna/packages/appLibrary/appLibs",
     "paths": [],
