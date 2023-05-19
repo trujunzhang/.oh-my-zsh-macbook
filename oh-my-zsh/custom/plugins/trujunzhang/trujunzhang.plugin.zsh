@@ -441,7 +441,7 @@ alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b tmp"
 
 # nvm
-alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.38.0 && . ~/.nvm/nvm.sh && nvm install 12.13.1 && nvm use 12.13.1 && npm install -g yarn"
+alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
 
 # cocoapods
 # https://blog.csdn.net/qq_41110569/article/details/106501098
