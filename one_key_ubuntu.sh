@@ -144,16 +144,16 @@ function install_youtube_download {
     ## bash file
 
     ### youtube cli
-    cp -r "$HOME/.oh-my-zsh-macbook/bash/yl.sh" /usr/bin/yl
+    sudo cp -r "$HOME/.oh-my-zsh-macbook/bash/yl.sh" /usr/bin/yl
     sudo chmod +x /usr/bin/yl
 
-    cp -r "$HOME/.oh-my-zsh-macbook/bash/ydlcron.sh" /usr/bin/ydlcron
+    sudo cp -r "$HOME/.oh-my-zsh-macbook/bash/ydlcron.sh" /usr/bin/ydlcron
     sudo chmod +x /usr/bin/ydlcron
 }
 
 function install_cocoapods_tools {
     ### github offline for cocoapods
-    cp -r "$HOME/.oh-my-zsh-macbook/USERS/cocoapods/generator_git_offline.sh" /usr/bin/generator_git_offline
+    sudo cp -r "$HOME/.oh-my-zsh-macbook/USERS/cocoapods/generator_git_offline.sh" /usr/bin/generator_git_offline
     sudo chmod +x /usr/bin/generator_git_offline
 }
 
