@@ -1,21 +1,21 @@
 [
 	{
 		"name": "oh-my-zsh-macbook",
-		"rootPath": "/Volumes/MacWork/ProfileBackup/org/TRUJUNZHANG/_oh-my-zsh-macbook",
+		"rootPath": "~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook",
 		"paths": [],
 		"tags": [],
 		"enabled": true
 	},
 	{
 		"name": "appExpo",
-		"rootPath": "/Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/appExpo",
+		"rootPath": "~/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/appExpo",
 		"paths": [],
 		"tags": [],
 		"enabled": true
 	},
 	{
 		"name": "appNext",
-		"rootPath": "/Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/appNext",
+		"rootPath": "~/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/appNext",
 		"paths": [],
 		"tags": [],
 		"enabled": true
