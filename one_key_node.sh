@@ -33,7 +33,7 @@ fi
 # fi    
 
 # supabase
-    npm install --location=global supabase
+    # npm install --location=global supabase
 
 # expo
 # if ! command_exists expo; then
