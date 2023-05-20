@@ -32,6 +32,9 @@ fi
     npm install --location=global typescript typescript-formatter tern js-beautify eslint 
 # fi    
 
+# supabase
+    npm install --location=global supabase
+
 # expo
 # if ! command_exists expo; then
     # https://docs.expo.dev/get-started/installation/
