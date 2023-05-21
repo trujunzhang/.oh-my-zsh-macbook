@@ -89,6 +89,10 @@ if [ ! -d  "/Applications/VLC.app" ]; then
     brew install --cask vlc
 fi
 
+if [ ! -d  "/Applications/Docker.app" ]; then
+    brew install --cask docker
+fi
+
 # if [ ! -d  "/Applications/iTerm.app" ]; then
 #     brew install --cask iterm2
 # fi
