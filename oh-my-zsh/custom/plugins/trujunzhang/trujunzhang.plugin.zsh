@@ -443,6 +443,11 @@ alias dgitreset="git init && git add . && git commit -m 'first commit' && git ch
 # nvm
 alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
 
+# supabase
+function supabase_gen {
+    supabase gen types typescript --project-id $1 --schema public > types/supabase.ts
+}
+
 # cocoapods
 # https://blog.csdn.net/qq_41110569/article/details/106501098
 alias cocoapodsMaster="git clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git master"
