@@ -445,7 +445,7 @@ alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/ID
 
 # supabase
 function supabase_gen {
-    supabase gen types typescript --project-id $1 --schema public > types/supabase.ts
+    supabase gen types typescript --project-id $1 --schema public > plugins/app-supabase/types/supabase.ts
 }
 
 # cocoapods
