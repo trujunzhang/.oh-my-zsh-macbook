@@ -93,6 +93,10 @@ if [ ! -d  "/Applications/Docker.app" ]; then
     brew install --cask docker
 fi
 
+if [ ! -d  "/Applications/pgAdmin 4.app" ]; then
+    brew install --cask pgadmin4
+fi
+
 # if [ ! -d  "/Applications/iTerm.app" ]; then
 #     brew install --cask iterm2
 # fi
