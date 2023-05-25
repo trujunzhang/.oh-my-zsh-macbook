@@ -26,5 +26,12 @@
 		"paths": [],
 		"tags": [],
 		"enabled": true
+	},
+	{
+		"name": "postgresql-supabase",
+		"rootPath": "~/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/postgresql-supabase",
+		"paths": [],
+		"tags": [],
+		"enabled": true
 	}
 ]
