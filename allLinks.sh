@@ -352,6 +352,7 @@ function link_mac_user {
   directoryLink "ios(Library-Caches)"      "$HOME_PROFILE_BACKUP_PATH/dev-ios/Caches/CocoaPods"     "$PATH_USERPROFILE_LIBRARY/Caches/CocoaPods"
 
   # org
+  directoryLink "org(__APPLICATIONS)"       "$HOME_PROFILE_BACKUP_PATH/org/__APPLICATIONS"        "$ORGANIZATIONS_HOME/__APPLICATIONS"
   directoryLink "org(TRUJUNZHANG)"          "$HOME_PROFILE_BACKUP_PATH/org/TRUJUNZHANG"           "$ORGANIZATIONS_HOME/TRUJUNZHANG"
 
   # Parallels Desktop
