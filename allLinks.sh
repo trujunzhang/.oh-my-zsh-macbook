@@ -216,6 +216,9 @@ function link_symlink {
   fileLink ".zsh(env)"  "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
   fileLink ".zsh(rc)"   "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink"  "$HOME/.zshrc"
 
+  # zshrc(theme)
+  fileLink ".zsh(powerlevel10k)"  "$TRUJUNZHANG_DOTFILES_HOME/p10k.zsh.symlink" "$HOME/.p10k.zsh"
+
   # sbcl(common lisp)
   fileLink ".sbcl(common lisp)"   "$TRUJUNZHANG_DOTFILES_HOME/sbclrc.symlink"  "$HOME/.sbclrc"
 
