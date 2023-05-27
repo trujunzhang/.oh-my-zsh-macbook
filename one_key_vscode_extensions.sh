@@ -14,10 +14,18 @@ myArray=(
     "junv.recent-files"
     "alefragnani.project-manager"
 
+
+    # =================================
+    # Vim shortcut
+    # =================================
+    "vscodevim.vim"
+    # https://github.com/VSpaceCode/VSpaceCode
+    # https://vspacecode.github.io/docs/
+    "vspacecode.vspacecode"
+
     # =================================
     # Tools
     # =================================
-    "vscodevim.vim"
     "dzhavat.bracket-pair-toggler"
     "naumovs.color-highlight"
     "donjayamanne.githistory"

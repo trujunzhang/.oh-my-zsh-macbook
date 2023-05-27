@@ -1,90 +1,130 @@
 {
-  "git.enableSmartCommit": true,
-  "files.autoSave": "afterDelay",
-  "workbench.startupEditor": "newUntitledFile",
-  "typescript.updateImportsOnFileMove.enabled": "never",
-  "extensions.ignoreRecommendations": true,
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[dart]": {
+    // Vim easymotion is required for Jump menu - <SPC> j
+    "vim.easymotion": true,
+    // Use system clipboard for vim
+    "vim.useSystemClipboard": true,
+    // Trigger the main which key menu with in the active editor with vim
+    // This cannot be put into keybindings.json because it will
+    // create conflict with Vim.
+    // https://github.com/stevenguh/spacecode/issues/3
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "commands": ["vspacecode.space"]
+        },
+        {
+            "before": [","],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "commands": ["vspacecode.space"]
+        },
+        {
+            "before": [","],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+    "git.enableSmartCommit": true,
+    "files.autoSave": "afterDelay",
+    "workbench.startupEditor": "newUntitledFile",
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "extensions.ignoreRecommendations": true,
     "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.rulers": [80],
-    "editor.selectionHighlight": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
-  },
-  "python.showStartPage": false,
-  "git.ignoreMissingGitWarning": true,
-  "dart.debugExternalLibraries": false,
-  "dart.debugSdkLibraries": false,
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb",
-    "*.scpt": "default"
-  },
-  "workbench.colorTheme": "GitHub Light Default",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "jsonToDart.codeGenerator": "JSON",
-  "jsonToDart.targetDirectory.path": "/src/entities",
-  "dart.warnWhenEditingFilesOutsideWorkspace": false,
-  "dart.flutterHotReloadOnSave": "always",
-  "dart.hotReloadOnSave": "always",
-  "dart.showInspectorNotificationsForWidgetErrors": false,
-  "dart.warnWhenEditingFilesInPubCache": false,
-  "security.workspace.trust.untrustedFiles": "newWindow",
-  "terminal.integrated.inheritEnv": false,
-  "react-native-tools.showUserTips": false,
-  "json.schemas": [],
-  "liveServer.settings.donotShowInfoMsg": true,
-  "workbench.editor.enablePreview": false,
-  "editor.bracketPairColorization.enabled": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "git.openRepositoryInParentFolders": "always",
-  "git.confirmSync": false,
-  "lightrun.certificatePinningList": [
-    "515a630cfd1fb908e30087bcc20b7413ad146b9bf2b23d3aaa72c28e45b24fb2",
-    "ee80811b38e7e6c2dc4cc372cbea86bd86b446b012e427f2e19bf094afba5d12"
-  ],
-  "lightrun.serverURL": "https://app.lightrun.com",
-  "lightrun.sendSourceFullPath": true,
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "update.showReleaseNotes": false,
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "eslint.validate": ["typescript"],
-  "window.restoreFullscreen": true,
-  "editor.fontFamily": "FiraCode-Retina",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "explorer.autoRevealExclude": {
-    "**/node_modules": false
-  }
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [80],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "python.showStartPage": false,
+    "git.ignoreMissingGitWarning": true,
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb",
+        "*.scpt": "default"
+    },
+    "workbench.colorTheme": "GitHub Light Default",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "jsonToDart.codeGenerator": "JSON",
+    "jsonToDart.targetDirectory.path": "/src/entities",
+    "dart.warnWhenEditingFilesOutsideWorkspace": false,
+    "dart.flutterHotReloadOnSave": "always",
+    "dart.hotReloadOnSave": "always",
+    "dart.showInspectorNotificationsForWidgetErrors": false,
+    "dart.warnWhenEditingFilesInPubCache": false,
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "terminal.integrated.inheritEnv": false,
+    "react-native-tools.showUserTips": false,
+    "json.schemas": [],
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.editor.enablePreview": false,
+    "editor.bracketPairColorization.enabled": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.openRepositoryInParentFolders": "always",
+    "git.confirmSync": false,
+    "lightrun.certificatePinningList": [
+        "515a630cfd1fb908e30087bcc20b7413ad146b9bf2b23d3aaa72c28e45b24fb2",
+        "ee80811b38e7e6c2dc4cc372cbea86bd86b446b012e427f2e19bf094afba5d12"
+    ],
+    "lightrun.serverURL": "https://app.lightrun.com",
+    "lightrun.sendSourceFullPath": true,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "update.showReleaseNotes": false,
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["typescript"],
+    "window.restoreFullscreen": true,
+    "editor.fontFamily": "FiraCode-Retina",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "explorer.autoRevealExclude": {
+        "**/node_modules": false
+    }
 }
