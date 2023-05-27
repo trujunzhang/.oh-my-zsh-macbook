@@ -2,14 +2,6 @@
   "git.enableSmartCommit": true,
   "files.autoSave": "afterDelay",
   "workbench.startupEditor": "newUntitledFile",
-  "vim.leader": "<space>",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["f", "d"],
-      "after": ["<Esc>"]
-    }
-  ],
-  "vim.easymotion": true,
   "typescript.updateImportsOnFileMove.enabled": "never",
   "extensions.ignoreRecommendations": true,
   "editor.formatOnSave": true,
@@ -18,9 +10,6 @@
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[sass]": {
-    "editor.defaultFormatter": "michelemelluso.code-beautifier"
   },
   "[dart]": {
     "editor.formatOnSave": true,
