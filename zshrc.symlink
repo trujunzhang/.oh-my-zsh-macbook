@@ -73,6 +73,9 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(trujunzhang autojump git brew nvm history pyenv vscode zsh-autosuggestions zsh-syntax-highlighting web-search)
 
+zstyle ':omz:plugins:nvm' lazy yes
+zstyle ':omz:plugins:nvm' autoload yes
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
