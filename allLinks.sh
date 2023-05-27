@@ -262,7 +262,7 @@ function link_symlink {
   # directoryLink "emacs(My Snippet)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/mySnippets"  "$HOME/.emacs.d/private/mySnippets"
 
   # spacevim(All)(pending)
-  # directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/SpaceVim.d"       "$HOME/.SpaceVim.d"
+  directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/SpaceVim.d"       "$HOME/.SpaceVim.d"
   # fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
 
   # Tmux(All)
