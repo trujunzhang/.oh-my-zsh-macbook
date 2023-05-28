@@ -28,6 +28,10 @@
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
     bootstrap_before = "myspacevim#before"
+    colorscheme = "gruvbox"
+
+[[layers]]
+  name = "colorscheme"
 
 # Enable autocomplete layer
 [[layers]]
