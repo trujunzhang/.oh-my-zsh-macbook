@@ -46,6 +46,9 @@ function install_global_npm {
     # https://docs.expo.dev/build/setup/
     npm install --location=global eas-cli
     # fi    
+
+    # neovim
+    npm install --location=global neovim
 }
 
     nvm use "$node_global"
