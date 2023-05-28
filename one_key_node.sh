@@ -6,8 +6,8 @@ CURRENT=`pwd`
 source ./bash/files-functions.sh
 source ./bash/tools.sh
 
-node_global="20.0.0"
-# node_global="18.12.0"
+# node_global="20.0.0"
+node_global="18.12.0"
 node_old="16.16"
 
 # nvm(node.js)
