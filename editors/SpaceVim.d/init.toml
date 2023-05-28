@@ -15,7 +15,7 @@
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
-    enable_guicolors = false
+    enable_guicolors = true
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
     statusline_separator = "nil"
@@ -27,6 +27,7 @@
     statusline_unicode_symbols = false
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
+    bootstrap_before = "myspacevim#before"
 
 # Enable autocomplete layer
 [[layers]]
@@ -52,6 +53,15 @@ name = "ctrlp"
 
 [[layers]]
   name = "lang#python"
+
+[[layers]]
+# https://spacevim.org/layers/edit/
+  name = 'edit'
+  autosave_timeout = 300000
+
+# [[custom_plugins]]
+# https://github.com/907th/vim-auto-save
+# name = "907th/vim-auto-save"
 
 # [[custom_plugins]]
 # name = "dart-lang/dart-vim-plugin"
