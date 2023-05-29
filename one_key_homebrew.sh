@@ -68,6 +68,11 @@ if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
     brew install --cask font-fira-code
 fi
 
+## yabai
+if [ ! -f  /opt/homebrew/bin/yabai ]; then
+    brew install koekeishiya/formulae/yabai
+fi
+
 ## React-native & Expo
 if ! command_exists watchman; then
     brew install bundletool
