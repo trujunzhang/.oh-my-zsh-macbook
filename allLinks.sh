@@ -228,6 +228,10 @@ function link_symlink {
   # editor(config)
   fileLink ".editor(config)"  "$TRUJUNZHANG_DOTFILES_HOME/editorconfig.symlink" "$HOME/.editorconfig"
 
+  # window management(yabai/skhdrc)
+  fileLink ".window(yabai)"  "$TRUJUNZHANG_DOTFILES_HOME/yabairc.symlink" "$HOME/.yabairc"
+  fileLink ".window(skhdrc)"  "$TRUJUNZHANG_DOTFILES_HOME/skhdrc.symlink" "$HOME/.skhdrc"
+
   # git(config)
   fileLink ".git(config)"     "$TRUJUNZHANG_DOTFILES_HOME/gitconfig.symlink" "$HOME/.gitconfig"
   fileLink ".git(global)"     "$TRUJUNZHANG_DOTFILES_HOME/gitignore_global.symlink" "$HOME/.gitignore_global"
