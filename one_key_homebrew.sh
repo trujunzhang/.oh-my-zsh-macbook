@@ -33,7 +33,7 @@ if [ ! -d  ~/Library/autojump ]; then
 fi
 
 ## nginx
-if [ ! -d  "$HOMEBREW_BIN/bin/nginx" ]; then
+if [ ! -f  "$HOMEBREW_BIN/bin/nginx" ]; then
     brew install nginx
 fi
 
