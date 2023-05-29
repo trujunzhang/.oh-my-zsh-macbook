@@ -11,13 +11,19 @@ if ! command_exists brew; then
     ( exec "./bash/homebrew_install.sh" )
 fi
 
+HOMEBREW_BIN="/usr/local"
+if [[ $(uname -m) == 'arm64' ]]; then
+    # echo M2
+    HOMEBREW_BIN="/opt/homebrew"
+fi
+
 ## list
 # if ! command_exists ssh-copy-id; then
     # brew install gpg ssh-copy-id
 # fi
 
 ## autoenv
-if [ ! -d  /usr/local/opt/autoenv ]; then
+if [ ! -d  "$HOMEBREW_BIN/opt/autoenv" ]; then
     brew install autoenv
 fi
 
@@ -27,18 +33,18 @@ if [ ! -d  ~/Library/autojump ]; then
 fi
 
 ## nginx
-if [ ! -d  /usr/local/etc/nginx ]; then
+if [ ! -d  "$HOMEBREW_BIN/bin/nginx" ]; then
     brew install nginx
 fi
 
 ## direnv
-if [ ! -f  /usr/local/bin/direnv ]; then
+if [ ! -f  "$HOMEBREW_BIN/bin/direnv" ]; then
     # https://direnv.net/#getting-started
     brew install direnv
 fi
 
 ## emacs
-if [ ! -d  /usr/local/opt/emacs-plus@29 ]; then
+if [ ! -d  "$HOMEBREW_BIN/opt/emacs-plus@29" ]; then
     ## https://github.com/d12frosted/homebrew-emacs-plus
     ## url = https://github.com/emacs-mirror/emacs.git
     brew tap d12frosted/emacs-plus
@@ -48,17 +54,17 @@ if [ ! -d  /usr/local/opt/emacs-plus@29 ]; then
 fi
 
 ## git
-if [ ! -f /usr/local/bin/git ]; then
+if [ ! -f "$HOMEBREW_BIN/bin/git" ]; then
     brew install git
 fi
 
 ## autoreconf
-if [ ! -f /usr/local/bin/autoreconf ]; then
+if [ ! -f "$HOMEBREW_BIN/bin/autoreconf" ]; then
     brew install pkg-config poppler automake
 fi
 
 ## wget
-if [ ! -f /usr/local/bin/wget ]; then
+if [ ! -f "$HOMEBREW_BIN/bin/wget" ]; then
     brew install wget
 fi
 
@@ -69,13 +75,13 @@ if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
 fi
 
 ## yabai
-if [ ! -f  /opt/homebrew/bin/yabai ]; then
+if [ ! -f  "$HOMEBREW_BIN/bin/yabai" ]; then
     brew install koekeishiya/formulae/yabai
     # yabai --start-service
 fi
 
 ## skhd
-if [ ! -f  /opt/homebrew/bin/skhd ]; then
+if [ ! -f  "$HOMEBREW_BIN/bin/skhd" ]; then
     brew install koekeishiya/formulae/skhd
     # skhd --start-service
 fi

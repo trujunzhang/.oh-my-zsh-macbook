@@ -5,7 +5,7 @@ CURRENT=`pwd`
 
 
 if [[ $(uname -m) == 'arm64' ]]; then
-  # echo M2
+    # echo M2
     ORGANIZATIONS_HOME="$HOME/Documents/Organizations"  
 fi
 
