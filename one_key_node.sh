@@ -49,6 +49,7 @@ function install_global_npm {
 
     # neovim
     npm install --location=global neovim
+    npm install --location=global typescript-language-server
 }
 
     nvm use "$node_global"
