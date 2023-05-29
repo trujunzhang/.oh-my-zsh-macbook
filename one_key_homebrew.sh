@@ -71,6 +71,13 @@ fi
 ## yabai
 if [ ! -f  /opt/homebrew/bin/yabai ]; then
     brew install koekeishiya/formulae/yabai
+    # yabai --start-service
+fi
+
+## skhd
+if [ ! -f  /opt/homebrew/bin/skhd ]; then
+    brew install koekeishiya/formulae/skhd
+    # skhd --start-service
 fi
 
 ## React-native & Expo
