@@ -97,9 +97,15 @@ if [ ! -d  "/Applications/pgAdmin 4.app" ]; then
     brew install --cask pgadmin4
 fi
 
-# if [ ! -d  "/Applications/iTerm.app" ]; then
-#     brew install --cask iterm2
-# fi
+if [ ! -d  "/Applications/kitty.app" ]; then
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+fi
+
+if [[ $(uname -m) == 'arm64' ]]; then
+    if [ ! -d  "/Applications/iTerm.app" ]; then
+        brew install --cask iterm2
+    fi
+fi
 
 # if [ ! -d  "/Applications/Skype.app" ]; then
 #     brew install --cask skype
