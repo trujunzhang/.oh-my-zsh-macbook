@@ -80,12 +80,9 @@ function link_applescript {
   fileLink "terminalcmds.plist"  "$TRUJUNZHANG_DOTFILES_HOME/applescript/terminals/terminalcmds.plist" "$HOME/terminalcmds.plist"
 }
 
-function link_vim {
-  # Trujunzhag's vimrc
-  VIMRC_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/vimrc"
-
-  # https://github.com/trujunzhang/vimrc(forked from  https://github.com/amix/vimrc)
-  # directoryLink  "vimrc(vim)"  "$VIMRC_HOME"  "$HOME/.vim_runtime"
+function link_config_fold {
+  directoryLink  "config(kitty)"  "$TRUJUNZHANG_DOTFILES_HOME/config/kitty"  "$HOME/.config/kitty"
+  directoryLink  "config(mpv)"  "$TRUJUNZHANG_DOTFILES_HOME/config/mpv"  "$HOME/.config/mpv"
 }
 
 function link_ide_configs {
@@ -105,8 +102,6 @@ function link_ide_configs {
   SUBLIME_HOME_SOURCE="$IDES_TRUJUNZHANG_HOME/sublime"
   ### /Users/djzhang/Library/Application\ Support/Sublime\ Text\ /Packages/User
   SUBLIME_SUPPORT_USER="$DEST_APPLICATION_SUPPOR/Sublime Text/Packages/User"
-
-
 
 
   # IDES(VSCode|Webstorm)
@@ -150,7 +145,6 @@ function link_vim {
   VIM_ALL_HOME="$TRUJUNZHANG_DOTFILES_HOME/nicknisi/vim"
   # ==Items==
   DOT_VIM_RC="$VIM_ALL_HOME/init.vim"
-
 
   # DOT_VIM
   mkdir "$HOME/.config"
@@ -373,7 +367,7 @@ mkdir -p "$HOME/.config"
 
 
 link_applescript
-link_vim
+link_config_fold
 link_ide_configs
 link_vim
 link_symlink
