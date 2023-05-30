@@ -1276,7 +1276,7 @@ c.url.searchengines = {
 ## The page(s) to open at the start.
 ## Type: List of FuzzyUrl, or FuzzyUrl
 # c.url.start_pages = ['https://start.duckduckgo.com']
-c.url.start_pages = ['https://www.startpage.com/']
+c.url.start_pages = ['https://www.google.com/']
 
 ## The URL parameters to strip with `:yank url`.
 ## Type: List of String
