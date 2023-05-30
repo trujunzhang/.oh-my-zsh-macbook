@@ -147,10 +147,17 @@ function link_vim {
   DOT_VIM_RC="$VIM_ALL_HOME/init.vim"
 
   # DOT_VIM
-  mkdir "$HOME/.config"
   # directoryLink  "vim(.vim)"         "$VIM_ALL_HOME"    "$HOME/.vim"
   # directoryLink  "neovim(config)"    "$VIM_ALL_HOME"    "$HOME/.config/nvim"
   # fileLink       "vim(.vimrc)"       "$DOT_VIM_RC"      "$HOME/.vimrc"
+
+  # spacevim(All)(pending)
+  directoryLink "SpaceVim(git)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.SpaceVim"
+  directoryLink "SpaceVim(vim)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.vim"
+  directoryLink "SpaceVim(nvim)"           "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.config/nvim"
+
+  directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/SpaceVim.d"       "$HOME/.SpaceVim.d"
+  # fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
 }
 
 # $USERPROFILE/Library/Caches
@@ -253,9 +260,6 @@ function link_symlink {
   ## spacemacs(Snippets)
   # directoryLink "emacs(My Snippet)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/mySnippets"  "$HOME/.emacs.d/private/mySnippets"
 
-  # spacevim(All)(pending)
-  directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/SpaceVim.d"       "$HOME/.SpaceVim.d"
-  # fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
 
   # Tmux(All)
   # fileLink "tmux(config)"       "$TMUX_CONFIG"          "$HOME/.tmux.conf"
