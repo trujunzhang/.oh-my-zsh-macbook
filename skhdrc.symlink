@@ -1,4 +1,4 @@
-fn - return : open -na /Applications/Notion.app
+fn - f12 : open -na /Applications/Notion.app
 rcmd - m : open -na /Applications/Notion.app
 
 alt - return : "/Applications/iTerm.app/Contents/MacOS/iTerm2"
