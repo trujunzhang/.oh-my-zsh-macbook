@@ -107,6 +107,10 @@ if [[ $(uname -m) == 'arm64' ]]; then
     fi
 fi
 
+if [ ! -d  "/Applications/qutebrowser.app" ]; then
+    brew install --cask qutebrowser
+fi
+
 # if [ ! -d  "/Applications/Skype.app" ]; then
 #     brew install --cask skype
 # fi
