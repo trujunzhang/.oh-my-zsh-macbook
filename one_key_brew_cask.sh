@@ -85,9 +85,9 @@ if [ ! -d  "/Applications/Sourcetree.app" ]; then
     brew install --cask sourcetree
 fi
 
-if [ ! -d  "/Applications/VLC.app" ]; then
-    brew install --cask vlc
-fi
+# if [ ! -d  "/Applications/VLC.app" ]; then
+    # brew install --cask vlc
+# fi
 
 if [ ! -d  "/Applications/Docker.app" ]; then
     brew install --cask docker
