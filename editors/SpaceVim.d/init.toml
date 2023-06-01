@@ -27,6 +27,9 @@
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
     bootstrap_before = "myspacevim#before"
+    # project manage
+    project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '!node_packages/']
+    
 
 [[layers]]
   name = "colorscheme"
