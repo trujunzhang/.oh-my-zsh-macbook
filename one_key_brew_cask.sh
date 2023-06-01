@@ -81,6 +81,10 @@ fi
     # brew install --cask qq
 # fi
 
+if [ ! -d  "/Applications/SpaceLauncher.app" ]; then
+    brew install --cask spacelauncher
+fi
+
 if [ ! -d  "/Applications/Sourcetree.app" ]; then
     brew install --cask sourcetree
 fi
