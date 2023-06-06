@@ -537,6 +537,7 @@ xargs -L 1 echo code --install-extension |
 sed 's/$/ --force/' |
 sed '\$!s/$/ \&/' > /tmp/install-extensions.sh"
 
-
+# conda
+alias condaUpdate='conda update -n base -c conda-forge conda'
 
 
