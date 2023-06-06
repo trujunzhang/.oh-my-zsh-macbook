@@ -74,7 +74,7 @@ myArray=(
     # =================================
     # React
     # =================================
-    "byCedric.vscode-expo"
+    "expo.vscode-expo-tools"
     "RajdeepChandra.reactnativesnippets"
     "dsznajder.es7-react-js-snippets"
     "jundat95.react-native-snippet"
