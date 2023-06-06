@@ -226,3 +226,8 @@ export GOOGLE_APPLICATION_CREDENTIALS="$ORGANIZATIONS_HOME/__SDKS/FIREBASE/servi
 # Light Table
 export LT_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable"
 
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
