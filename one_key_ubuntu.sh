@@ -158,6 +158,7 @@ function install_cocoapods_tools {
 }
 
 function setup_extend_disk {
+    # https://superuser.com/questions/134734/how-to-mount-a-drive-from-terminal-in-ubuntu
     sudo mkfs.ext4 /dev/vdb
     sudo mkdir /media/Name_of_directory
     sudo mount /dev/vdb /media/Name_of_directory
