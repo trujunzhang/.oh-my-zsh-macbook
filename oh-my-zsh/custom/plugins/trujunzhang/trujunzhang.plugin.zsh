@@ -404,7 +404,7 @@ alias wsshlocal='ssh ubuntu@'
 alias wsshcopylocal='ssh-copy-id ubuntu@'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh ubuntu@38.60.251.54'
+alias wsshtmp='ssh ubuntu@38.54.16.72'
 alias wsshcopytmp='ssh-copy-id root@'
 alias wsshdns='ssh root@ok.myv2ray.xyz'
 
@@ -540,4 +540,4 @@ sed '\$!s/$/ \&/' > /tmp/install-extensions.sh"
 # conda
 alias condaUpdate='conda update -n base -c conda-forge conda'
 
-
+alias vpsDownload="wget https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.10.3-stable.zip "
