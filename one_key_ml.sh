@@ -5,7 +5,7 @@
 source ~/miniforge3/bin/activate
 conda activate tf_m1
 
-function install_global_npm {
+function install_global_ml {
 	# 7. Install TensorFlow dependencies from Apple Conda channel.
 
 	conda install -c apple tensorflow-deps
@@ -26,3 +26,5 @@ function install_global_npm {
 
 	conda install jupyter pandas numpy matplotlib scikit-learn
 }
+
+install_global_ml
