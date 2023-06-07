@@ -157,6 +157,15 @@ function install_cocoapods_tools {
     sudo chmod +x /usr/bin/generator_git_offline
 }
 
+function setup_extend_disk {
+    sudo mkfs.ext4 /dev/vdb
+    sudo mkdir /media/Name_of_directory
+    sudo mount /dev/vdb /media/Name_of_directory
+
+    sudo rm -rf '/home/deploy/data/torrent'
+    sudo ln -s '/media/Name_of_directory' '/home/deploy/data/torrent'
+}
+
 # first of all, update the system.
 sudo apt-get update
 
@@ -166,3 +175,4 @@ install_docker_apps
 install_youtube_download
 install_cocoapods_tools
 
+setup_extend_disk
