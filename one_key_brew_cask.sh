@@ -93,12 +93,14 @@ fi
     # brew install --cask vlc
 # fi
 
-if [ ! -d  "/Applications/Docker.app" ]; then
-    brew install --cask docker
-fi
+if [[ $(uname -m) == 'arm64' ]]; then
+    if [ ! -d  "/Applications/Docker.app" ]; then
+        brew install --cask docker
+    fi
 
-if [ ! -d  "/Applications/pgAdmin 4.app" ]; then
-    brew install --cask pgadmin4
+    if [ ! -d  "/Applications/pgAdmin 4.app" ]; then
+        brew install --cask pgadmin4
+    fi
 fi
 
 if [ ! -d  "/Applications/kitty.app" ]; then
