@@ -356,6 +356,9 @@ function link_mac_user {
   directoryLink "org(TRUJUNZHANG)"          "$HOME_PROFILE_BACKUP_PATH/org/TRUJUNZHANG"           "$ORGANIZATIONS_HOME/TRUJUNZHANG"
   directoryLink "org(coding)"               "$HOME_PROFILE_BACKUP_PATH/org/__CODING"              "$ORGANIZATIONS_HOME/__CODING"
 
+  # home
+  directoryLink "home(miniforge3)"          "$HOME_PROFILE_BACKUP_PATH/home/miniforge3"            "$HOME_MAC_USER_PATH/miniforge3"
+
   # Parallels Desktop
   directoryLink "win11(Parallels Desktop)"    "/Volumes/MacGame/VMDesktop/Windows 11.pvm"           "$HOME_MAC_USER_PATH/Parallels/Windows 11.pvm"
 }
