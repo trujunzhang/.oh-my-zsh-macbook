@@ -33,5 +33,12 @@
 		"paths": [],
 		"tags": [],
 		"enabled": true
+	},
+	{
+		"name": "sbExpo",
+		"rootPath": "~/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/sbExpo",
+		"paths": [],
+		"tags": [],
+		"enabled": true
 	}
 ]
