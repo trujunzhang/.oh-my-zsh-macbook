@@ -84,6 +84,10 @@ function link_config_fold {
   directoryLink  "config(kitty)"         "$TRUJUNZHANG_DOTFILES_HOME/config/kitty"             "$HOME/.config/kitty"
   directoryLink  "config(mpv)"           "$TRUJUNZHANG_DOTFILES_HOME/config/mpv"               "$HOME/.config/mpv"
   directoryLink  "config(qutebrowser)"   "$TRUJUNZHANG_DOTFILES_HOME/config/qutebrowser"       "$HOME/.config/qutebrowser"
+
+  # SpaceLauncher
+  mkdir -p "$PATH_USERPROFILE_APPLICATION_SUPPORT/name.guoc.SpaceLauncher"
+  fileLink  "config(SpaceLauncher)"  "$TRUJUNZHANG_DOTFILES_HOME/config/SpaceLauncher/configuration.json"             "$PATH_USERPROFILE_APPLICATION_SUPPORT/name.guoc.SpaceLauncher/configuration.json"
 }
 
 function link_ide_configs {
@@ -107,9 +111,9 @@ function link_ide_configs {
 
   # IDES(VSCode|Webstorm)
   # https://github.com/VSpaceCode/VSpaceCode
-  mkdir "$HOME/Library/Application Support/Code"
-  mkdir "$HOME/Library/Application Support/Code/User"
-  mkdir "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager"
+  mkdir -p "$HOME/Library/Application Support/Code"
+  mkdir -p "$HOME/Library/Application Support/Code/User"
+  mkdir -p "$DEST_VSCODE_USER_HOME/globalStorage/alefragnani.project-manager"
   directoryLink  "snippet(vscode)"     "$VSCODE_USERS_HOME/snippets"           "$DEST_VSCODE_USER_HOME/snippets"
   fileLink "keybindings.json(vscode)"  "$VSCODE_USERS_HOME/keybindings.json"   "$DEST_VSCODE_USER_HOME/keybindings.json"
   fileLink "settings.json(vscode)"     "$VSCODE_USERS_HOME/settings.json"      "$DEST_VSCODE_USER_HOME/settings.json"
