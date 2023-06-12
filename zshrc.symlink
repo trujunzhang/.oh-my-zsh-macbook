@@ -137,6 +137,8 @@ alias tns='tmux new-session -s'
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+
+if [[ $(uname -m) == 'arm64' ]]; then
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Volumes/MacUser/djzhang/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -153,6 +155,29 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 conda activate tf_m1
+fi
+
+
+if [[ $(uname -m) == 'x86_64' ]]; then
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/djzhang/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/djzhang/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/djzhang/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/djzhang/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+fi
+
+
+
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
