@@ -89,7 +89,13 @@ function link_config_fold {
   mkdir -p "$PATH_USERPROFILE_APPLICATION_SUPPORT/name.guoc.SpaceLauncher"
   fileLink  "config(SpaceLauncher)"  "$TRUJUNZHANG_DOTFILES_HOME/config/SpaceLauncher/configuration.json"             "$PATH_USERPROFILE_APPLICATION_SUPPORT/name.guoc.SpaceLauncher/configuration.json"
 
-  directoryLink  "config(tmux)"   "$TRUJUNZHANG_DOTFILES_HOME/config/tmux"       "$HOME/.tmux"
+  fileLink  "config(tmux.conf)"   "$TRUJUNZHANG_DOTFILES_HOME/config/tmux/tmux.conf"       "$HOME/.tmux.conf"
+
+  # window management(yabai/skhdrc)
+  # fileLink ".window(yabai)"  "$TRUJUNZHANG_DOTFILES_HOME/yabairc.symlink" "$HOME/.yabairc"
+  # fileLink ".window(skhdrc)"  "$TRUJUNZHANG_DOTFILES_HOME/skhdrc.symlink" "$HOME/.skhdrc"
+  directoryLink  "config(yabai)"    "$TRUJUNZHANG_DOTFILES_HOME/config/yabai"       "$HOME/.config/yabai"
+  directoryLink  "config(skhd)"     "$TRUJUNZHANG_DOTFILES_HOME/config/skhd"       "$HOME/.config/skhd"
 }
 
 function link_ide_configs {
@@ -231,10 +237,6 @@ function link_symlink {
 
   # editor(config)
   fileLink ".editor(config)"  "$TRUJUNZHANG_DOTFILES_HOME/editorconfig.symlink" "$HOME/.editorconfig"
-
-  # window management(yabai/skhdrc)
-  fileLink ".window(yabai)"  "$TRUJUNZHANG_DOTFILES_HOME/yabairc.symlink" "$HOME/.yabairc"
-  fileLink ".window(skhdrc)"  "$TRUJUNZHANG_DOTFILES_HOME/skhdrc.symlink" "$HOME/.skhdrc"
 
   # git(config)
   fileLink ".git(config)"     "$TRUJUNZHANG_DOTFILES_HOME/gitconfig.symlink" "$HOME/.gitconfig"
