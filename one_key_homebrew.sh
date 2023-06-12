@@ -68,6 +68,17 @@ if [ ! -f "$HOMEBREW_BIN/bin/wget" ]; then
     brew install wget
 fi
 
+## tmux
+if [ ! -f "$HOMEBREW_BIN/bin/tmux" ]; then
+    brew install tmux
+fi
+
+## fzf
+if [ ! -f "$HOMEBREW_BIN/bin/fzf" ]; then
+    brew install fzf
+    $(brew --prefix)/opt/fzf/install
+fi
+
 ## font-fira
 if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
     brew tap homebrew/cask-fonts
