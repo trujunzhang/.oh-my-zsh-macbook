@@ -88,6 +88,8 @@ function link_config_fold {
   # SpaceLauncher
   mkdir -p "$PATH_USERPROFILE_APPLICATION_SUPPORT/name.guoc.SpaceLauncher"
   fileLink  "config(SpaceLauncher)"  "$TRUJUNZHANG_DOTFILES_HOME/config/SpaceLauncher/configuration.json"             "$PATH_USERPROFILE_APPLICATION_SUPPORT/name.guoc.SpaceLauncher/configuration.json"
+
+  directoryLink  "config(tmux)"   "$TRUJUNZHANG_DOTFILES_HOME/config/tmux"       "$HOME/.tmux"
 }
 
 function link_ide_configs {
