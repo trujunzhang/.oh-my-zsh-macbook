@@ -14,3 +14,6 @@
 * tmux
   url = https://github.com/koekeishiya/dotfiles
 
+** tmux plugins
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
