@@ -52,6 +52,11 @@ function install_global_npm {
     npm install --location=global typescript-language-server
 }
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
     nvm use "$node_global"
     install_global_npm
 
