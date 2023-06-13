@@ -28,7 +28,10 @@ function git_pull_nvm {
     git pull
 }
 
-git_pull_cocoapods
+if [ -d  "$HOME/.cocoapods/repos/trunk/Specs" ]; then
+    git_pull_cocoapods
+fi
+
 git_pull_spacemacs
 git_pull_spacevim
 git_pull_nvm
