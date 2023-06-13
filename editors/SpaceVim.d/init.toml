@@ -62,7 +62,8 @@ name = "ctrlp"
 [[layers]]
 # https://spacevim.org/layers/edit/
   name = 'edit'
-  autosave_timeout = 300000
+  # autosave_timeout = 300000
+  autosave_events = ['InsertLeave', 'TextChanged']
 
 # [[custom_plugins]]
 # https://github.com/907th/vim-auto-save
