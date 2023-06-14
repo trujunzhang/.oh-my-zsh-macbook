@@ -126,6 +126,10 @@ fi
 # autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
+# djzhang's bin
+# ======================================================================
+export PATH="$PATH:$HOME/.local/bin"
+
 # dart sdk
 # ======================================================================
 export PATH="$PATH:$HOME/Documents/dartSDK/bin"

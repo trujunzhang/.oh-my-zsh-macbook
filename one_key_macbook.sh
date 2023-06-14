@@ -16,7 +16,7 @@ source ./bash/tools.sh
 
 # cocoapods
 if ! command_exists pod; then
-    gem install cocoapods
+    gem install cocoapods --verbose
 fi    
 
 # firebase cli(pending)

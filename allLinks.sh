@@ -53,7 +53,9 @@ CACHES_HOME="$ORGANIZATIONS_HOME/__CACHES"
 LIBRARY_YARN_HOME="$CACHES_HOME/Yarn"
 LIBRARY_COCOAPODS_HOME="$CACHES_HOME/CocoaPods"
 
-
+# system shell(bin) fold
+# SYSTEM_BIN_PATH="/usr/bin"
+SYSTEM_BIN_PATH="$HOME/.local/bin"
 
 # Trujunzhag's tmux
 TMUX_CONFIG="$TRUJUNZHANG_DOTFILES_HOME/tmux.conf.symlink"
@@ -304,24 +306,24 @@ function link_symlink {
 
 function link_getx_shell {
   # flutter tool(getx style)
-  fileLink "Getx(style)"           "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_style.sh"         /usr/local/bin/getx_style
-  chmod +x /usr/local/bin/getx_style
+  fileLink "Getx(style)"           "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_style.sh"         "$SYSTEM_BIN_PATH/getx_style"
+  chmod +x "$SYSTEM_BIN_PATH/getx_style"
 
   # flutter tool(getx page)
-  fileLink "Getx(page)"             "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page.sh"         /usr/local/bin/getx_page
-  chmod +x /usr/local/bin/getx_page
+  fileLink "Getx(page)"             "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page.sh"         "$SYSTEM_BIN_PATH/getx_page"
+  chmod +x "$SYSTEM_BIN_PATH/getx_page"
 
   # flutter tool(getx page no binding)
-  fileLink "Getx(page_no_binding)"  "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page_no_binding.sh"   /usr/local/bin/getx_page_no_binding
-  chmod +x /usr/local/bin/getx_page_no_binding
+  fileLink "Getx(page_no_binding)"  "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_page_no_binding.sh"   "$SYSTEM_BIN_PATH/getx_page_no_binding"
+  chmod +x "$SYSTEM_BIN_PATH/getx_page_no_binding"
 
   # flutter tool(getx widget)
-  fileLink "Getx(widget)"            "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_widget.sh"         /usr/local/bin/getx_widget
-  chmod +x /usr/local/bin/getx_widget
+  fileLink "Getx(widget)"            "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_widget.sh"         "$SYSTEM_BIN_PATH/getx_widget"
+  chmod +x "$SYSTEM_BIN_PATH/getx_widget"
 
   # flutter tool(getx rest)
-  fileLink "Getx(rest)"              "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_rest.sh"         /usr/local/bin/getx_rest
-  chmod +x /usr/local/bin/getx_rest
+  fileLink "Getx(rest)"              "$TRUJUNZHANG_DOTFILES_HOME/bash/flutter/getx_rest.sh"         "$SYSTEM_BIN_PATH/getx_rest"
+  chmod +x "$SYSTEM_BIN_PATH/getx_rest"
 }
 
 # ======================================
@@ -329,23 +331,23 @@ function link_getx_shell {
 # ======================================
 
 function link_pods_shell {
-  fileLink "Cocoapods(offline)"      "$TRUJUNZHANG_DOTFILES_HOME/USERS/cocoapods/offline_local_ios_pods.sh"         /usr/local/bin/offline_local_ios_pods
-  chmod +x /usr/local/bin/offline_local_ios_pods
+  fileLink "Cocoapods(offline)"      "$TRUJUNZHANG_DOTFILES_HOME/USERS/cocoapods/offline_local_ios_pods.sh"         "$SYSTEM_BIN_PATH/offline_local_ios_pods"
+  chmod +x "$SYSTEM_BIN_PATH/offline_local_ios_pods"
 }
 
 # ======================================
 # Run custom apps
 # ======================================
 function link_run_apps_shell {
-  fileLink "Apps(custom)"      "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/run_my_apps.sh"         /usr/local/bin/run_my_apps
-  chmod +x /usr/local/bin/run_my_apps
+  fileLink "Apps(custom)"      "$TRUJUNZHANG_DOTFILES_HOME/applescript/system/run_my_apps.sh"         "$SYSTEM_BIN_PATH/run_my_apps"
+  chmod +x "$SYSTEM_BIN_PATH/run_my_apps"
 }
 
 # Nginx downloads
-function link_nginx_http {
+# function link_nginx_http {
   # directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
-  directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"       "/opt/homebrew/var/www/@http"
-}
+  # directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"       "/opt/homebrew/var/www/@http"
+# }
 
 function link_mac_user {
   HOME_MAC_USER_PATH="/Volumes/MacUser/djzhang"
@@ -382,6 +384,7 @@ function link_mac_user {
 # ====================================================================
 mkdir -p "$HOME/.local"
 mkdir -p "$HOME/.local/share"
+mkdir -p "$HOME/.local/bin"
 mkdir -p "$HOME/.config"
 
 
@@ -394,7 +397,7 @@ link_symlink
 link_getx_shell
 link_pods_shell
 link_run_apps_shell
-link_nginx_http
+# link_nginx_http
 if [[ $(uname -m) == 'arm64' ]]; then
   # echo M2
   link_mac_user

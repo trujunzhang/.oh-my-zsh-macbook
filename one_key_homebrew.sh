@@ -44,14 +44,14 @@ if [ ! -f  "$HOMEBREW_BIN/bin/direnv" ]; then
 fi
 
 ## emacs
-if [ ! -d  "$HOMEBREW_BIN/opt/emacs-plus@29" ]; then
-    ## https://github.com/d12frosted/homebrew-emacs-plus
-    ## url = https://github.com/emacs-mirror/emacs.git
-    brew tap d12frosted/emacs-plus
-    brew install emacs-plus@29 --with-spacemacs-icon
-    brew link emacs-plus@29
-    # open /usr/local/opt/emacs-plus@29
-fi
+# if [ ! -d  "$HOMEBREW_BIN/opt/emacs-plus@29" ]; then
+#     ## https://github.com/d12frosted/homebrew-emacs-plus
+#     ## url = https://github.com/emacs-mirror/emacs.git
+#     brew tap d12frosted/emacs-plus
+#     brew install emacs-plus@29 --with-spacemacs-icon
+#     brew link emacs-plus@29
+#     # open /usr/local/opt/emacs-plus@29
+# fi
 
 ## git
 if [ ! -f "$HOMEBREW_BIN/bin/git" ]; then
