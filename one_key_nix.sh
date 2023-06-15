@@ -41,3 +41,29 @@
 # https://github.com/NixOS/nix/issues/new?labels=installer&template=installer.md
 
 # Or get in touch with the community: https://nixos.org/community
+
+
+
+# Here's how to clean up the old backup file:
+
+# 1. Back up (copy) /etc/bashrc and /etc/bashrc.backup-before-nix
+#    to another location, just in case.
+
+# 2. Ensure /etc/bashrc.backup-before-nix does not have anything
+#    Nix-related in it. If it does, something is probably quite
+#    wrong. Please open an issue or get in touch immediately.
+
+# 3. Once you confirm /etc/bashrc is backed up and
+#    /etc/bashrc.backup-before-nix doesn't mention Nix, run:
+#    mv /etc/bashrc.backup-before-nix /etc/bashrc
+
+
+# error: file 'nixpkgs' was not found in the nix search path (add it using $nix_path or -i)
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable
+nix-channel --update --verbose
+
+echo $NIX_PATH
+nix --version
+
+
+
