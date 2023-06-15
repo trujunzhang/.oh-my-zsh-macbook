@@ -11,10 +11,10 @@ if ! command_exists brew; then
     ( exec "./bash/homebrew_install.sh" )
 fi
 
-HOMEBREW_BIN="/usr/local"
+HOMEBREW_HOME="/usr/local"
 if [[ $(uname -m) == 'arm64' ]]; then
     # echo M2
-    HOMEBREW_BIN="/opt/homebrew"
+    HOMEBREW_HOME="/opt/homebrew"
 fi
 
 ## list
@@ -23,7 +23,12 @@ fi
 # fi
 
 ## autoenv
-if [ ! -d  "$HOMEBREW_BIN/opt/autoenv" ]; then
+if [ ! -d  "$HOMEBREW_HOME/opt/neovim" ]; then
+    brew install neovim
+fi
+
+## autoenv
+if [ ! -d  "$HOMEBREW_HOME/opt/autoenv" ]; then
     brew install autoenv
 fi
 
@@ -33,18 +38,18 @@ if [ ! -d  ~/Library/autojump ]; then
 fi
 
 ## nginx
-if [ ! -f  "$HOMEBREW_BIN/bin/nginx" ]; then
+if [ ! -f  "$HOMEBREW_HOME/bin/nginx" ]; then
     brew install nginx
 fi
 
 ## direnv
-if [ ! -f  "$HOMEBREW_BIN/bin/direnv" ]; then
+if [ ! -f  "$HOMEBREW_HOME/bin/direnv" ]; then
     # https://direnv.net/#getting-started
     brew install direnv
 fi
 
 ## emacs
-# if [ ! -d  "$HOMEBREW_BIN/opt/emacs-plus@29" ]; then
+# if [ ! -d  "$HOMEBREW_HOME/opt/emacs-plus@29" ]; then
 #     ## https://github.com/d12frosted/homebrew-emacs-plus
 #     ## url = https://github.com/emacs-mirror/emacs.git
 #     brew tap d12frosted/emacs-plus
@@ -54,27 +59,27 @@ fi
 # fi
 
 ## git
-if [ ! -f "$HOMEBREW_BIN/bin/git" ]; then
+if [ ! -f "$HOMEBREW_HOME/bin/git" ]; then
     brew install git
 fi
 
 ## autoreconf
-if [ ! -f "$HOMEBREW_BIN/bin/autoreconf" ]; then
+if [ ! -f "$HOMEBREW_HOME/bin/autoreconf" ]; then
     brew install pkg-config poppler automake
 fi
 
 ## wget
-if [ ! -f "$HOMEBREW_BIN/bin/wget" ]; then
+if [ ! -f "$HOMEBREW_HOME/bin/wget" ]; then
     brew install wget
 fi
 
 ## tmux
-if [ ! -f "$HOMEBREW_BIN/bin/tmux" ]; then
+if [ ! -f "$HOMEBREW_HOME/bin/tmux" ]; then
     brew install tmux
 fi
 
 ## fzf
-if [ ! -f "$HOMEBREW_BIN/bin/fzf" ]; then
+if [ ! -f "$HOMEBREW_HOME/bin/fzf" ]; then
     brew install fzf
     $(brew --prefix)/opt/fzf/install
 fi
@@ -86,13 +91,13 @@ if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
 fi
 
 ## yabai
-if [ ! -f  "$HOMEBREW_BIN/bin/yabai" ]; then
+if [ ! -f  "$HOMEBREW_HOME/bin/yabai" ]; then
     brew install koekeishiya/formulae/yabai
     # yabai --start-service
 fi
 
 ## skhd
-if [ ! -f  "$HOMEBREW_BIN/bin/skhd" ]; then
+if [ ! -f  "$HOMEBREW_HOME/bin/skhd" ]; then
     brew install koekeishiya/formulae/skhd
     # skhd --start-service
 fi

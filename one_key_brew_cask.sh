@@ -93,6 +93,10 @@ if [ ! -d  "/Applications/Sourcetree.app" ]; then
     brew install --cask sourcetree
 fi
 
+if [ ! -d  "/Applications/mpv.app" ]; then
+    brew install --cask mpv
+fi
+
 # if [ ! -d  "/Applications/VLC.app" ]; then
     # brew install --cask vlc
 # fi
