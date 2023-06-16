@@ -299,6 +299,7 @@ alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vi
 
 # xcode
 alias xcodeselect='sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer'
+alias xcode_download_ios='xcodebuild -downloadPlatform iOS'
 alias iosdevices='xcrun simctl list devices --json'
 alias iosopen='open -a Simulator'
 
