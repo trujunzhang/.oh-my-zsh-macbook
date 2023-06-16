@@ -367,6 +367,7 @@ function link_mac_user {
   directoryLink "org(__APPLICATIONS)"       "$HOME_PROFILE_BACKUP_PATH/org/__APPLICATIONS"        "$ORGANIZATIONS_HOME/__APPLICATIONS"
   directoryLink "org(TRUJUNZHANG)"          "$HOME_PROFILE_BACKUP_PATH/org/TRUJUNZHANG"           "$ORGANIZATIONS_HOME/TRUJUNZHANG"
   directoryLink "org(coding)"               "$HOME_PROFILE_BACKUP_PATH/org/__CODING"              "$ORGANIZATIONS_HOME/__CODING"
+  directoryLink "org(IDES)"                 "$HOME_PROFILE_BACKUP_PATH/org/IDES"                  "$ORGANIZATIONS_HOME/IDES"
 
   # home
   directoryLink "home(miniforge3)"          "$HOME_PROFILE_BACKUP_PATH/home/miniforge3"            "$HOME_MAC_USER_PATH/miniforge3"
