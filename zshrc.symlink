@@ -154,7 +154,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-conda activate tf_m1
+    if type "conda" &> /dev/null ; then
+        conda activate tf_m1
+    fi
 fi
 
 
