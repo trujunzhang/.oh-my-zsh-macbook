@@ -124,7 +124,16 @@ fi
 # source activate 2.7.11
 
 # autojump
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+if [[ $(uname -m) == 'arm64' ]]; then
+    # echo M2
+    [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+fi
+
+if [[ $(uname -m) == 'x86_64' ]]; then
+    # echo Mackook
+    [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+fi
 
 # djzhang's bin
 # ======================================================================
