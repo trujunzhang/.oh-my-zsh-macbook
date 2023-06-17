@@ -9,6 +9,11 @@ source ./bash/tools.sh
 # https://formulae.brew.sh/cask/
 # https://github.com/buo/homebrew-cask-upgrade
 
+brew_apps=(
+
+
+
+)
 
 if [ ! -d  "/Applications/Visual Studio Code.app" ]; then
     brew install --cask visual-studio-code

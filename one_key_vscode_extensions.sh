@@ -105,7 +105,12 @@ Params=$1
 
 echo "${Params}"
 
-for i in ${!myArray[@]}; do
+# for i in ${!myArray[@]}; do
 #   echo "element $i is ${myArray[$i]}"
-  code --install-extension ${myArray[$i]} "${Params}"
+  # code --install-extension ${myArray[$i]} "${Params}"
+# done
+
+for (( i=0; i<${#myArray[@]}; i++ ));
+do
+    code --install-extension ${myArray[$i]} "${Params}"
 done
