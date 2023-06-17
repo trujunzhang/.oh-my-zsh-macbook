@@ -10,22 +10,41 @@ source ./bash/tools.sh
 # https://github.com/buo/homebrew-cask-upgrade
 
 brew_apps=(
+    # Editor
+    "Visual Studio Code.app"  "visual-studio-code"
 
-
+    # System tools
+    "Raycast.app" "raycast"
 
 )
 
-if [ ! -d  "/Applications/Visual Studio Code.app" ]; then
-    brew install --cask visual-studio-code
-fi
+
+Params="${1:-install}"
+
+echo "params = ${Params}"
+
+
+for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
+do
+    echo "element $i is ${brew_apps[$i+0]}"
+    echo "element $i is ${brew_apps[$i+1]}"
+
+    if [ ! -d  "/Applications/${brew_apps[$i+0]}" ]; then
+        brew install --cask ${brew_apps[$i+1]}
+    fi
+done
+
+# if [ ! -d  "/Applications/Visual Studio Code.app" ]; then
+    # brew install --cask visual-studio-code
+# fi
 
 
 # =========================================
 # System
 # =========================================
-if [ ! -d  "/Applications/Raycast.app" ]; then
-    brew install --cask raycast
-fi
+# if [ ! -d  "/Applications/Raycast.app" ]; then
+    # brew install --cask raycast
+# fi
 
 if [[ $(uname -m) == 'x86_64' ]]; then
     # macOS tool to limit maximum charging percentage
