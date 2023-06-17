@@ -39,17 +39,6 @@ do
     fi
 done
 
-# if [ ! -d  "/Applications/Visual Studio Code.app" ]; then
-    # brew install --cask visual-studio-code
-# fi
-
-
-# =========================================
-# System
-# =========================================
-# if [ ! -d  "/Applications/Raycast.app" ]; then
-    # brew install --cask raycast
-# fi
 
 if [[ $(uname -m) == 'x86_64' ]]; then
     # macOS tool to limit maximum charging percentage
