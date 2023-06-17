@@ -22,6 +22,7 @@
 #  - create a Nix volume and a LaunchDaemon to mount it
 #  - create a LaunchDaemon (at /Library/LaunchDaemons/org.nixos.nix-daemon.plist) for nix-daemon
 
+# sudo launchctl kickstart -k system/org.nixos.darwin-store
 
 # 4. Delete the files Nix added to your system:
 
