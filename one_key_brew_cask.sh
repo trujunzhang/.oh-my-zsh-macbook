@@ -18,11 +18,10 @@ brew_apps=(
 
 )
 
-
-Params="${1:-install}"
+DEFAULTVALUE="install"
+Params="${1:-$DEFAULTVALUE}"
 
 echo "params = ${Params}"
-
 
 for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
 do
@@ -30,7 +29,13 @@ do
     echo "element $i is ${brew_apps[$i+1]}"
 
     if [ ! -d  "/Applications/${brew_apps[$i+0]}" ]; then
-        brew install --cask ${brew_apps[$i+1]}
+
+        if [ "$Params" = "$DEFAULTVALUE" ]; then
+            brew install --cask ${brew_apps[$i+1]}
+        else
+            brew reinstall --cask ${brew_apps[$i+1]}
+        fi
+
     fi
 done
 
