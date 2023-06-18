@@ -14,7 +14,17 @@ brew_apps=(
     "Visual Studio Code.app"  "visual-studio-code"
 
     # System tools
-    "Raycast.app" "raycast"
+    "Raycast.app"             "raycast"
+
+    # Web browser
+    "Google Chrome.app"       "google-chrome"
+    "Vivaldi.app"             "vivaldi"
+    "Opera.app"               "opera"
+    "Firefox.app"             "firefox"
+    "Brave Browser.app"       "brave-browser"
+    "qutebrowser.app"         "qutebrowser"
+
+
 
 )
 
@@ -49,38 +59,11 @@ if [[ $(uname -m) == 'x86_64' ]]; then
 fi
 
 # =========================================
-# Web browse
-# =========================================
-if [ ! -d  "/Applications/Google Chrome.app" ]; then
-    brew install --cask google-chrome
-fi
-
-if [ ! -d  "/Applications/Vivaldi.app" ]; then
-    brew install --cask vivaldi
-fi
-
-if [ ! -d  "/Applications/Opera.app" ]; then
-    brew install --cask opera
-fi
-
-if [ ! -d  "/Applications/Firefox.app" ]; then
-    brew install --cask firefox
-fi
-
-if [ ! -d  "/Applications/Brave Browser.app" ]; then
-    brew install --cask brave-browser
-fi
-
-# =========================================
 # apps
 # =========================================
 if [ ! -d  "/Applications/Kodi.app" ]; then
     brew install --cask kodi
 fi
-
-# if [ ! -d  "/Applications/Todoist.app" ]; then
-    # brew install --cask todoist
-# fi
 
 if [ ! -d  "/Applications/Notion.app" ]; then
     brew install --cask notion
@@ -139,9 +122,6 @@ if [[ $(uname -m) == 'arm64' ]]; then
     fi
 fi
 
-if [ ! -d  "/Applications/qutebrowser.app" ]; then
-    brew install --cask qutebrowser
-fi
 
 # if [ ! -d  "/Applications/Skype.app" ]; then
 #     brew install --cask skype
