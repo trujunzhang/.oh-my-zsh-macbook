@@ -19,31 +19,59 @@ fi
 
 brew_apps=(
     ## autoenv
-    "fold"    "opt/neovim"            "neovim"
+    "opt/neovim"            "neovim"
 
     ## autoenv
-    "fold"    "opt/autoenv"            "autoenv"
+    "opt/autoenv"            "autoenv"
 
     ## nginx
-    "file"    "bin/nginx"              "nginx"
+    "opt/nginx"              "nginx"
 
     ## direnv
     # https://direnv.net/#getting-started
-    "file"    "bin/direnv"             "direnv"
+    "opt/direnv"             "direnv"
 
+    ## git
+    "opt/git"                "git"
 
+    ## autoreconf
+    "opt/autoreconf"        "pkg-config poppler automake"
+
+    ## wget
+    "opt/wget"              "wget"
+
+    ## tmux
+    "opt/tmux"              "tmux"
+
+    ## autojump
+    "opt/autojump"          "autojump"
+
+    ## yabai
+    "opt/yabai"             "yabai"
+    # yabai --start-service
+
+    ## skhd
+    "opt/skhd"              "skhd"
+    # skhd --start-service
+
+    ## React-native & Expo
+    "opt/watch"              "bundletool watchman"
 )
+
+for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
+do
+    echo "element $i is ${brew_apps[$i+0]}"
+    echo "element $i is ${brew_apps[$i+1]}"
+
+    if [ ! -d  "$HOMEBREW_HOME/${brew_apps[$i+0]}" ]; then
+        brew install ${brew_apps[$i+1]} 
+    fi
+done
+
 ## list
 # if ! command_exists ssh-copy-id; then
     # brew install gpg ssh-copy-id
 # fi
-
-## autojump
-if [ ! -d  ~/Library/autojump ]; then
-    brew install autojump
-fi
-
-
 
 ## emacs
 # if [ ! -d  "$HOMEBREW_HOME/opt/emacs-plus@29" ]; then
@@ -55,28 +83,8 @@ fi
 #     # open /usr/local/opt/emacs-plus@29
 # fi
 
-## git
-if [ ! -f "$HOMEBREW_HOME/bin/git" ]; then
-    brew install git
-fi
-
-## autoreconf
-if [ ! -f "$HOMEBREW_HOME/bin/autoreconf" ]; then
-    brew install pkg-config poppler automake
-fi
-
-## wget
-if [ ! -f "$HOMEBREW_HOME/bin/wget" ]; then
-    brew install wget
-fi
-
-## tmux
-if [ ! -f "$HOMEBREW_HOME/bin/tmux" ]; then
-    brew install tmux
-fi
-
 ## fzf
-if [ ! -f "$HOMEBREW_HOME/bin/fzf" ]; then
+if [ ! -d "$HOMEBREW_HOME/opt/fzf" ]; then
     brew install fzf
     $(brew --prefix)/opt/fzf/install
 fi
@@ -87,23 +95,6 @@ if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
     brew install --cask font-fira-code
 fi
 
-## yabai
-if [ ! -f  "$HOMEBREW_HOME/bin/yabai" ]; then
-    brew install koekeishiya/formulae/yabai
-    # yabai --start-service
-fi
-
-## skhd
-if [ ! -f  "$HOMEBREW_HOME/bin/skhd" ]; then
-    brew install koekeishiya/formulae/skhd
-    # skhd --start-service
-fi
-
-## React-native & Expo
-if ! command_exists watchman; then
-    brew install bundletool
-    brew install watchman
-fi
 
 ## Finally, restart the nginx.
 brew services restart nginx

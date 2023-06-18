@@ -15,7 +15,6 @@ brew_apps=(
     "Emacs.app"               "emacs"
     "Sourcetree.app"          "sourcetree"
 
-
     # System tools
     "Raycast.app"             "raycast"
     "SpaceLauncher.app"       "spacelauncher"
