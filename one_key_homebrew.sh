@@ -17,36 +17,33 @@ if [[ $(uname -m) == 'arm64' ]]; then
     HOMEBREW_HOME="/opt/homebrew"
 fi
 
+brew_apps=(
+    ## autoenv
+    "dir"      "opt/neovim"            "neovim"
+
+    ## autoenv
+    "dir"     "opt/autoenv"            "autoenv"
+
+    ## nginx
+    "file"    "bin/nginx"              "nginx"
+
+    ## direnv
+    # https://direnv.net/#getting-started
+    "file"    "bin/direnv"             "direnv"
+
+
+)
 ## list
 # if ! command_exists ssh-copy-id; then
     # brew install gpg ssh-copy-id
 # fi
-
-## autoenv
-if [ ! -d  "$HOMEBREW_HOME/opt/neovim" ]; then
-    brew install neovim
-fi
-
-## autoenv
-if [ ! -d  "$HOMEBREW_HOME/opt/autoenv" ]; then
-    brew install autoenv
-fi
 
 ## autojump
 if [ ! -d  ~/Library/autojump ]; then
     brew install autojump
 fi
 
-## nginx
-if [ ! -f  "$HOMEBREW_HOME/bin/nginx" ]; then
-    brew install nginx
-fi
 
-## direnv
-if [ ! -f  "$HOMEBREW_HOME/bin/direnv" ]; then
-    # https://direnv.net/#getting-started
-    brew install direnv
-fi
 
 ## emacs
 # if [ ! -d  "$HOMEBREW_HOME/opt/emacs-plus@29" ]; then
