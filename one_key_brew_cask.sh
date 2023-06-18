@@ -12,9 +12,15 @@ source ./bash/tools.sh
 brew_apps=(
     # Editor
     "Visual Studio Code.app"  "visual-studio-code"
+    "Emacs.app"               "emacs"
+    "Sourcetree.app"          "sourcetree"
+
 
     # System tools
     "Raycast.app"             "raycast"
+    "SpaceLauncher.app"       "spacelauncher"
+    "Notion.app"              "notion"
+    # "BaiduNetdisk.app"        "baidunetdisk"
 
     # Web browser
     "Google Chrome.app"       "google-chrome"
@@ -24,8 +30,27 @@ brew_apps=(
     "Brave Browser.app"       "brave-browser"
     "qutebrowser.app"         "qutebrowser"
 
+    # =========================================
+    # required password
+    # =========================================
+    "Microsoft Edge.app"      "microsoft-edge"
 
 
+    # Video player
+    "Kodi.app"                "kodi"
+    "VLC.app"                 "vlc"
+    "mpv.app"                 "mpv"
+
+
+    # Design apps
+    "Figma.app"               "figma"
+    "Zeplin.app"              "zeplin"
+    # "Adobe Creative Cloud"    "adobe-creative-cloud"
+
+    # chat apps
+    "Skype.app"               "skype"
+    # "WeChat.app"              "wechat"
+    # "QQ.app"                  "qq"
 )
 
 DEFAULTVALUE="install"
@@ -49,7 +74,6 @@ do
     fi
 done
 
-
 if [[ $(uname -m) == 'x86_64' ]]; then
     # macOS tool to limit maximum charging percentage
     # https://github.com/davidwernhart/AlDente-Charge-Limiter
@@ -61,47 +85,6 @@ fi
 # =========================================
 # apps
 # =========================================
-if [ ! -d  "/Applications/Kodi.app" ]; then
-    brew install --cask kodi
-fi
-
-if [ ! -d  "/Applications/Notion.app" ]; then
-    brew install --cask notion
-fi
-
-if [ ! -d  "/Applications/Figma.app" ]; then
-    brew install --cask figma
-fi
-
-if [ ! -d  "/Applications/Zeplin.app" ]; then
-    brew install --cask zeplin
-fi
-
-# if [ ! -d  "/Applications/WeChat.app" ]; then
-    # brew install --cask wechat
-    # brew install --cask qq
-# fi
-
-if [ ! -d  "/Applications/SpaceLauncher.app" ]; then
-    brew install --cask spacelauncher
-fi
-
-if [ ! -d  "/Applications/Emacs.app" ]; then
-    brew install --cask emacs
-fi
-
-if [ ! -d  "/Applications/Sourcetree.app" ]; then
-    brew install --cask sourcetree
-fi
-
-if [ ! -d  "/Applications/mpv.app" ]; then
-    brew install --cask mpv
-fi
-
-# if [ ! -d  "/Applications/VLC.app" ]; then
-    # brew install --cask vlc
-# fi
-
 if [[ $(uname -m) == 'arm64' ]]; then
     if [ ! -d  "/Applications/Docker.app" ]; then
         brew install --cask docker
@@ -110,42 +93,15 @@ if [[ $(uname -m) == 'arm64' ]]; then
     if [ ! -d  "/Applications/pgAdmin 4.app" ]; then
         brew install --cask pgadmin4
     fi
-fi
 
-if [ ! -d  "/Applications/kitty.app" ]; then
-    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-fi
-
-if [[ $(uname -m) == 'arm64' ]]; then
     if [ ! -d  "/Applications/iTerm.app" ]; then
         brew install --cask iterm2
     fi
 fi
 
-
-# if [ ! -d  "/Applications/Skype.app" ]; then
-#     brew install --cask skype
-# fi
-
-# =========================================
-# required password
-# =========================================
-if [ ! -d  "/Applications/Microsoft Edge.app" ]; then
-    brew install --cask microsoft-edge
+if [ ! -d  "/Applications/kitty.app" ]; then
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 fi
-
-# if [ ! -d  "/Applications/Adobe Creative Cloud" ]; then
-#     brew install --cask adobe-creative-cloud
-# fi
-
-# =========================================
-# apps
-# =========================================
-# if [ ! -d  "/Applications/BaiduNetdisk.app" ]; then
-    # brew install --cask baidunetdisk
-# fi
-
-
 
 
 
