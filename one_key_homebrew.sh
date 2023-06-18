@@ -95,6 +95,5 @@ if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
     brew install --cask font-fira-code
 fi
 
-
 ## Finally, restart the nginx.
 brew services restart nginx
