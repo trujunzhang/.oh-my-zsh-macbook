@@ -19,10 +19,10 @@ fi
 
 brew_apps=(
     ## autoenv
-    "dir"      "opt/neovim"            "neovim"
+    "fold"    "opt/neovim"            "neovim"
 
     ## autoenv
-    "dir"     "opt/autoenv"            "autoenv"
+    "fold"    "opt/autoenv"            "autoenv"
 
     ## nginx
     "file"    "bin/nginx"              "nginx"
