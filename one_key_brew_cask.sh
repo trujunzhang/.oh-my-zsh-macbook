@@ -35,12 +35,10 @@ brew_apps=(
     # =========================================
     "Microsoft Edge.app"      "microsoft-edge"
 
-
     # Video player
     "Kodi.app"                "kodi"
     "VLC.app"                 "vlc"
     "mpv.app"                 "mpv"
-
 
     # Design apps
     "Figma.app"               "figma"
@@ -58,19 +56,22 @@ Params="${1:-$DEFAULTVALUE}"
 
 echo "params = ${Params}"
 
+function install_brew_app {
+    app=$1
+    if [ "$Params" = "$DEFAULTVALUE" ]; then
+        brew install --cask ${app}
+    else
+        brew reinstall --cask ${app}
+    fi
+}
+
 for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
 do
     echo "element $i is ${brew_apps[$i+0]}"
     echo "element $i is ${brew_apps[$i+1]}"
 
     if [ ! -d  "/Applications/${brew_apps[$i+0]}" ]; then
-
-        if [ "$Params" = "$DEFAULTVALUE" ]; then
-            brew install --cask ${brew_apps[$i+1]}
-        else
-            brew reinstall --cask ${brew_apps[$i+1]}
-        fi
-
+        install_brew_app ${brew_apps[$i+1]} 
     fi
 done
 
@@ -78,7 +79,7 @@ if [[ $(uname -m) == 'x86_64' ]]; then
     # macOS tool to limit maximum charging percentage
     # https://github.com/davidwernhart/AlDente-Charge-Limiter
     if [ ! -d  "/Applications/AlDente.app" ]; then
-         brew install --cask aldente
+         install_brew_app aldente
     fi
 fi
 
@@ -87,15 +88,15 @@ fi
 # =========================================
 if [[ $(uname -m) == 'arm64' ]]; then
     if [ ! -d  "/Applications/Docker.app" ]; then
-        brew install --cask docker
+        install_brew_app docker
     fi
 
     if [ ! -d  "/Applications/pgAdmin 4.app" ]; then
-        brew install --cask pgadmin4
+        install_brew_app pgadmin4
     fi
 
     if [ ! -d  "/Applications/iTerm.app" ]; then
-        brew install --cask iterm2
+        install_brew_app iterm2
     fi
 fi
 
