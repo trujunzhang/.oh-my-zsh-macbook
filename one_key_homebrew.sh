@@ -35,27 +35,30 @@ brew_apps=(
     "opt/git"                "git"
 
     ## autoreconf
-    "opt/autoreconf"        "pkg-config poppler automake"
+    "opt/automake"           "pkg-config poppler automake"
 
     ## wget
-    "opt/wget"              "wget"
+    "opt/wget"               "wget"
 
     ## tmux
-    "opt/tmux"              "tmux"
+    "opt/tmux"               "tmux"
 
     ## autojump
-    "opt/autojump"          "autojump"
+    "opt/autojump"           "autojump"
 
     ## yabai
-    "opt/yabai"             "yabai"
+    "opt/yabai"              "yabai"
     # yabai --start-service
 
     ## skhd
-    "opt/skhd"              "skhd"
+    "opt/skhd"               "skhd"
     # skhd --start-service
 
     ## React-native & Expo
-    "opt/watch"              "bundletool watchman"
+    "opt/watchman"           "bundletool watchman"
+
+    ## fzf
+    "opt/fzf"                "fzf"
 )
 
 for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
@@ -85,14 +88,7 @@ done
 
 ## fzf
 if [ ! -d "$HOMEBREW_HOME/opt/fzf" ]; then
-    brew install fzf
     $(brew --prefix)/opt/fzf/install
-fi
-
-## font-fira
-if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
-    brew tap homebrew/cask-fonts
-    brew install --cask font-fira-code
 fi
 
 ## Finally, restart the nginx.
