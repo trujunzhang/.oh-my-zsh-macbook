@@ -543,3 +543,11 @@ sed '\$!s/$/ \&/' > /tmp/install-extensions.sh"
 alias condaUpdate='conda update -n base -c conda-forge conda'
 
 alias vpsDownload="wget https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_arm64_3.10.3-stable.zip "
+
+# bitbucket
+# https://bitbucket.org/blog/ssh-host-key-changes
+alias bitbucket_update_ssh="ssh-keygen -R bitbucket.org && curl https://bitbucket.org/site/ssh"
+alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
+
+
+
