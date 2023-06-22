@@ -32,12 +32,10 @@ node_apps=(
     # fi    
 
     ## typescript
-    # if ! command_exists tsc; then
-    "typescript typescript-formatter tern js-beautify eslint"
-    # fi    
+    "typescript tern js-beautify eslint"
 
     # supabase
-    # "supabase
+    # "supabase"
 
     # expo
     # if ! command_exists expo; then
@@ -53,7 +51,7 @@ node_apps=(
 
     # spacemacs typescript-mode
     # https://develop.spacemacs.org/layers/+lang/typescript/README.html
-    ""
+    "tslint typescript-formatter"
 
 )
 

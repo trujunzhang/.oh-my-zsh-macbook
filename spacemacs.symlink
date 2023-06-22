@@ -80,7 +80,7 @@ This function should only modify configuration layer settings."
             js2-basic-offset 4)
 
      (typescript :variables
-                 typescript-backend 'lsp
+                 typescript-backend 'tide
                  typescript-fmt-tool 'prettier
                  typescript-linter 'eslint)
      (vue :variables
