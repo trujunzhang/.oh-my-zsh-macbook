@@ -12,7 +12,7 @@ source ./bash/tools.sh
 brew_apps=(
     # Editor
     "Visual Studio Code.app"  "visual-studio-code"
-    "Emacs.app"               "emacs"
+    # "Emacs.app"               "emacs"
     "Sourcetree.app"          "sourcetree"
 
     # System tools

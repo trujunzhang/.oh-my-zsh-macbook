@@ -549,5 +549,6 @@ alias vpsDownload="wget https://storage.googleapis.com/flutter_infra_release/rel
 alias bitbucket_update_ssh="ssh-keygen -R bitbucket.org && curl https://bitbucket.org/site/ssh"
 alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 
-
+# homebrew
+alias binstall-emacs="brew tap d12frosted/emacs-plus && brew install emacs-plus@29 --with-spacemacs-icon && brew link emacs-plus@29"
 
