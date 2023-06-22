@@ -20,36 +20,52 @@ if [ ! -d  ~/.nvm ]; then
     nvm install "$node_old"
 fi    
 
-function install_global_npm {
-    npm install --location=global prettier
+node_apps=(
+    "prettier"
 
     ## list
     # if ! command_exists yarn; then
-    npm install --location=global yarn
-    npm install --location=global npm-check-updates
-    npm install --location=global monia-cli
-    npm install --location=global firebase-tools
+    "yarn"
+    "npm-check-updates"
+    "monia-cli"
+    "firebase-tools"
     # fi    
 
     ## typescript
     # if ! command_exists tsc; then
-    npm install --location=global typescript typescript-formatter tern js-beautify eslint 
+    "typescript typescript-formatter tern js-beautify eslint"
     # fi    
 
     # supabase
-    # npm install --location=global supabase
+    # "supabase
 
     # expo
     # if ! command_exists expo; then
     # https://docs.expo.dev/get-started/installation/
-    npm install --location=global expo-cli 
+    "expo-cli"
     # https://docs.expo.dev/build/setup/
-    npm install --location=global eas-cli
+    "eas-cli"
     # fi    
 
     # neovim
-    npm install --location=global neovim
-    npm install --location=global typescript-language-server
+    "neovim"
+    "typescript-language-server"
+
+    # spacemacs typescript-mode
+    # https://develop.spacemacs.org/layers/+lang/typescript/README.html
+    ""
+
+)
+
+
+function install_global_npm {
+
+    for (( i=0; i<${#node_apps[@]}; i=i+1 ));
+    do
+        echo "element $i is ${node_apps[$i]}"
+        npm install --location=global ${node_apps[$i]} 
+    done
+
 }
 
 # nvm
