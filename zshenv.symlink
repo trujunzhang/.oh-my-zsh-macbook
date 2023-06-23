@@ -217,11 +217,13 @@ export PKG_CONFIG_PATH=/usr/local/Cellar/zlib/1.2.8/lib/pkgconfig:/usr/local/lib
 if [[ $(uname -m) == 'arm64' ]]; then
   # echo M2
   export ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
+  export HOMEBREW_HOME="/opt/homebrew"
 fi
 
 if [[ $(uname -m) == 'x86_64' ]]; then
     # echo Mackook
     export ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
+    expport HOMEBREW_HOME="/usr/local"
 fi
 
 export TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"

@@ -344,10 +344,10 @@ function link_run_apps_shell {
 }
 
 # Nginx downloads
-# function link_nginx_http {
+function link_nginx_http {
   # directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
-  # directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"       "/opt/homebrew/var/www/@http"
-# }
+  directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"       "$HOMEBREW_HOME/var/www/@http"
+}
 
 function link_mac_user {
   HOME_MAC_USER_PATH="/Volumes/MacUser/djzhang"
@@ -398,7 +398,7 @@ link_symlink
 link_getx_shell
 link_pods_shell
 link_run_apps_shell
-# link_nginx_http
+link_nginx_http
 if [[ $(uname -m) == 'arm64' ]]; then
   # echo M2
   link_mac_user

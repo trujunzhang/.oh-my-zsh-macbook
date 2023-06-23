@@ -90,9 +90,9 @@ if [[ $(uname -m) == 'arm64' ]]; then
         install_brew_app docker
     fi
 
-    if [ ! -d  "/Applications/pgAdmin 4.app" ]; then
-        install_brew_app pgadmin4
-    fi
+    # if [ ! -d  "/Applications/pgAdmin 4.app" ]; then
+    #     install_brew_app pgadmin4
+    # fi
 
     if [ ! -d  "/Applications/iTerm.app" ]; then
         install_brew_app iterm2
