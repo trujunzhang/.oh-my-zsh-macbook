@@ -64,14 +64,14 @@ function install_brew_app {
         fi
     elif [ "$Params" = "$DEFAULTVALUE" ]; then
         if [ ! -d  "/Applications/${name}" ]; then
-            brew install --cask ${app}
+            brew install --cask "${app}"
         fi
     elif [ "$Params" = "fix" ]; then
         if [ ! -d  "/Applications/${name}" ]; then
-            brew reinstall --cask ${app}
+            brew reinstall --cask "${app}"
         fi
     else
-        brew reinstall --cask ${app}
+        brew reinstall --cask "${app}"
     fi
 }
 
@@ -80,7 +80,7 @@ do
     echo "element $i is ${brew_apps[$i+0]}"
     echo "element $i is ${brew_apps[$i+1]}"
 
-    install_brew_app ${brew_apps[$i+0]} ${brew_apps[$i+1]} 
+    install_brew_app "${brew_apps[$i+0]}" "${brew_apps[$i+1]}" 
 done
 
 if [[ $(uname -m) == 'x86_64' ]]; then
