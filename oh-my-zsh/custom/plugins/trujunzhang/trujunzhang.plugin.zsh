@@ -551,5 +551,5 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 
 # homebrew
 # brew services start d12frosted/emacs-plus/emacs-plus@30
-alias binstall-emacs="brew tap d12frosted/emacs-plus && brew install emacs-plus@30 --with-spacemacs-icon && brew link emacs-plus@30 && ln -s /opt/homebrew/opt/emacs-plus@30/Emacs.app /Applications"
+alias binstall-emacs="brew tap d12frosted/emacs-plus && brew install emacs-plus@30 --with-spacemacs-icon && brew link emacs-plus@30 && ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications"
 
