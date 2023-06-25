@@ -1,12 +1,6 @@
 [
     {
         "type": "application",
-        "name": "kitty",
-        "application": "kitty",
-        "enable": "1"
-    }, 
-    {
-        "type": "application",
         "name": "myCMDsAndroid",
         "path": "myCMDsAndroid",
         "enable": "0"
@@ -17,6 +11,12 @@
         "path": "Emacs",
         "enable": "0"
     },
+    {
+        "type": "application",
+        "name": "kitty",
+        "application": "kitty",
+        "enable": "1"
+    }, 
     {
         "type": "application",
         "name": "atom",
