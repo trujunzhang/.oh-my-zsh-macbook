@@ -223,7 +223,7 @@ fi
 if [[ $(uname -m) == 'x86_64' ]]; then
     # echo Mackook
     export ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
-    expport HOMEBREW_HOME="/usr/local"
+    export HOMEBREW_HOME="/usr/local"
 fi
 
 export TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
