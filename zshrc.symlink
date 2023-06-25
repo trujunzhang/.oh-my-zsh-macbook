@@ -71,7 +71,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(trujunzhang autojump git tmux fzf brew nvm history pyenv vscode zsh-autosuggestions zsh-syntax-highlighting web-search)
+plugins=(trujunzhang autojump git tmux fzf-tab fzf brew nvm history pyenv vscode zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:plugins:nvm' autoload yes
