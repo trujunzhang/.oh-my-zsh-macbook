@@ -32,18 +32,18 @@
     
 
 [[layers]]
-name = "colorscheme"
+  name = "colorscheme"
 
 # Enable autocomplete layer
 [[layers]]
-name = 'autocomplete'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "cycle"
+  name = 'autocomplete'
+  auto-completion-return-key-behavior = "complete"
+  auto-completion-tab-key-behavior = "cycle"
 
 [[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
 
 # [[layers]]
 # SpaceVim provides five fuzzy find tools, each of them is configured 
@@ -51,7 +51,7 @@ default_height = 30
 # name = "ctrlp"
 
 [[layers]]
-name = "fzf"
+  name = "fzf"
 
 [[layers]]
   name = "lang#javascript"
@@ -63,7 +63,7 @@ name = "fzf"
   name = "lang#python"
 
 [[layers]]
-# https://spacevim.org/layers/edit/
+  # https://spacevim.org/layers/edit/
   name = 'edit'
   # autosave_timeout = 300000
   autosave_events = ['InsertLeave', 'TextChanged']
