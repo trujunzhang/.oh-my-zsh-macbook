@@ -190,3 +190,7 @@ fi
 #    tmux attach -t default || tmux new -s default
 #fi
 
+# tmux config:
+# session: mydefault
+# windows: defaultwin
+#          codingwin
