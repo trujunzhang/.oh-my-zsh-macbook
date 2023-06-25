@@ -26,10 +26,9 @@
     statusline_unicode_symbols = false
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
-    # bootstrap_before = "myspacevim#before"
+    bootstrap_before = "myspacevim#before"
     # project manage
     project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '!node_packages/']
-    
 
 [[layers]]
   name = "colorscheme"
@@ -62,15 +61,15 @@
 [[layers]]
   name = "lang#python"
 
-[[layers]]
-  # https://spacevim.org/layers/edit/
-  name = 'edit'
-  # autosave_timeout = 300000
-  autosave_events = ['InsertLeave', 'TextChanged']
+#[[layers]]
+#  # https://spacevim.org/layers/edit/
+#  name = 'edit'
+#  # autosave_timeout = 300000
+#  autosave_events = ['InsertLeave', 'TextChanged']
 
-# [[custom_plugins]]
-# https://github.com/907th/vim-auto-save
-# name = "907th/vim-auto-save"
+[[custom_plugins]]
+  # https://github.com/907th/vim-auto-save
+  name = "907th/vim-auto-save"
 
 # [[custom_plugins]]
 # name = "dart-lang/dart-vim-plugin"
