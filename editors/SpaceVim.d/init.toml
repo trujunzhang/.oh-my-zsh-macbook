@@ -30,7 +30,7 @@
     bootstrap_after = 'myspacevim#after'
     bootstrap_before = "myspacevim#before"
     # project manage
-    project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '!node_packages/']
+    project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '!node_packages/', '.projectile']
 
 [[layers]]
   name = "colorscheme"
