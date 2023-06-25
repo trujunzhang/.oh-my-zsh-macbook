@@ -26,6 +26,8 @@
     statusline_unicode_symbols = false
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
+    # Bootstrap Functions
+    bootstrap_after = 'myspacevim#after'
     bootstrap_before = "myspacevim#before"
     # project manage
     project_rooter_patterns = ['.git/', '_darcs/', '.hg/', '.bzr/', '.svn/', '!node_packages/']
@@ -43,11 +45,6 @@
   name = 'shell'
   default_position = 'top'
   default_height = 30
-
-# [[layers]]
-# SpaceVim provides five fuzzy find tools, each of them is configured 
-# in a layer(unite, denite, leaderf, ctrlp and fzf layer).
-# name = "ctrlp"
 
 [[layers]]
   name = "fzf"
