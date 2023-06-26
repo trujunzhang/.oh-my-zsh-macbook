@@ -84,8 +84,10 @@ This function should only modify configuration layer settings."
                  typescript-backend 'tide
                  typescript-fmt-tool 'prettier
                  typescript-linter 'eslint)
-     (vue :variables
-          vue-backend 'lsp)
+     react
+
+     ;; (vue :variables
+     ;;      vue-backend 'lsp)
      
      (python :variables
              python-test-runner 'pytest
