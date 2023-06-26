@@ -76,6 +76,7 @@ This function should only modify configuration layer settings."
            dart-backend 'lsp
            lsp-dart-sdk-dir "~/Documents/flutter/bin/cache/dart-sdk")
      tide
+     react
      (javascript :variables
             javascript-backend 'tide
             js2-basic-offset 2)
@@ -84,7 +85,6 @@ This function should only modify configuration layer settings."
                  typescript-backend 'tide
                  typescript-fmt-tool 'prettier
                  typescript-linter 'eslint)
-     react
 
      ;; (vue :variables
      ;;      vue-backend 'lsp)
