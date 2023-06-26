@@ -113,6 +113,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # use nvim, but don't make me think about it
 alias vim="nvim"
 alias vi="nvim"
+alias e="emacs -nw ."
 
 # tmux aliases
 alias ta='tmux attach'
