@@ -642,6 +642,18 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil then byte-compile some of Spacemacs files.
    dotspacemacs-byte-compile nil))
 
+;; 设置缩进为2个空格
+(defun my-setup-indent (n)
+  (setq c-basic-offset n)
+  (setq coffee-tab-width n)
+  (setq javascript-indent-level n)
+  (setq js-indent-level n)
+  (setq web-mode-markup-indent-offset n)
+  (setq web-mode-css-indent-offset n)
+  (setq web-mode-code-indent-offset n)
+  (setq css-indent-offset n)
+  (setq typescript-indent-level n))
+
 (defun dotspacemacs/user-env ()
   "Environment variables setup.
 This function defines the environment variables for your Emacs session. By
@@ -654,6 +666,7 @@ See the header of this file for more information."
     (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
     (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
   (xterm-mouse-mode 1)
+  (my-setup-indent 2)
   (setq-default
 
    ;; js2-mode
