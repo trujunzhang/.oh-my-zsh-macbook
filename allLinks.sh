@@ -262,8 +262,8 @@ function link_symlink {
   fileLink "chemacs2(.emacs-profiles.el)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/.emacs-profiles.el" "$HOME/.emacs-profiles.el"
 
   # spacemacs(All)
-  # directoryLink  "spacemacs(.emacs.d)"  "$SPACEMACS_IDE_HOME"                          "$HOME/.emacs.d"
-  fileLink ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
+  fileLink      ".spacemacs(profile)"        "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink"             "$HOME/.spacemacs"
+  directoryLink ".spacemacs(fold)"           "$TRUJUNZHANG_DOTFILES_HOME/editors/spacemacs/spacemacs.d" "$HOME/.spacemacs.d"
 
   ## spacemacs(plugins)
   # directoryLink "emacs_layout(trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"    "$HOME/.emacs.d/private/trujunzhang-workspace"
