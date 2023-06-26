@@ -54,7 +54,7 @@ This function should only modify configuration layer settings."
 
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '("~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/editors/spacemacs.d")
+   dotspacemacs-configuration-layer-path '("~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/editors/spacemacs/local")
    
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
