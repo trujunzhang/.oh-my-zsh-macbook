@@ -341,9 +341,10 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         material
-                         leuven
+                         material-light
                          solarized-light
+                         leuven
+                         material
                          leuven
                          monokai
                          spacemacs-light
@@ -374,12 +375,12 @@ It should only modify the values of Spacemacs settings."
 
    dotspacemacs-default-font '(("Fira Code"
                                 ;; :size 16
-                                :size 14
+                                :size 15
                                 :weight normal
                                 :width normal
                                 :powerline-scale 1.1)
                                ("Fira Code Symbol"
-                                :size 14
+                                :size 15
                                 :weight normal
                                 :width normal
                                 :powerline-scale 1.1))
