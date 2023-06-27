@@ -728,6 +728,7 @@ before packages are loaded."
 
     ;; global keys 
     (global-set-key (kbd "H-b") 'tide-jump-to-definition)
+    (global-set-key (kbd "H-/") 'spacemacs/comment-or-uncomment-lines)
 
     ;; hooks
     (add-hook 'before-save-hook 'tide-format-before-save)
