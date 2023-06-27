@@ -295,7 +295,7 @@ alias easUpdateConfigure='eas update:configure'
 alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'genymotion'"
 
 # macvim
-alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
+# alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
 
 # xcode
 alias xcodeselect='sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer'
