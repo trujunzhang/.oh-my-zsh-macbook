@@ -14,6 +14,13 @@
 		"enabled": true
 	},
 	{
+		"name": "sbNext",
+		"rootPath": "~/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/sbNext",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
 		"name": "appNext",
 		"rootPath": "~/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/appNext",
 		"paths": [],
