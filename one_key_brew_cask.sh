@@ -11,6 +11,7 @@ source ./bash/tools.sh
 
 brew_apps=(
     # Editor
+    "MacVim.app"              "macvim"
     "Visual Studio Code.app"  "visual-studio-code"
     # "Emacs.app"               "emacs"
     "Sourcetree.app"          "sourcetree"
