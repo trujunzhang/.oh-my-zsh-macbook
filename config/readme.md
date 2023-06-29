@@ -17,3 +17,12 @@
 ** tmux plugins
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+** neovim
+  https://github.com/craftzdog/dotfiles-public
+  dotfiles-public/.config/nvim
+
+
+
+
+
+  

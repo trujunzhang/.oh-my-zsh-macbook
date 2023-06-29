@@ -98,6 +98,9 @@ function link_config_fold {
   # fileLink ".window(skhdrc)"  "$TRUJUNZHANG_DOTFILES_HOME/skhdrc.symlink" "$HOME/.skhdrc"
   directoryLink  "config(yabai)"    "$TRUJUNZHANG_DOTFILES_HOME/config/yabai"       "$HOME/.config/yabai"
   directoryLink  "config(skhd)"     "$TRUJUNZHANG_DOTFILES_HOME/config/skhd"       "$HOME/.config/skhd"
+
+  # nvim
+  directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim"
 }
 
 function link_ide_configs {
@@ -167,9 +170,9 @@ function link_vim {
   # fileLink       "vim(.vimrc)"       "$DOT_VIM_RC"      "$HOME/.vimrc"
 
   # spacevim(All)(pending)
-  directoryLink "SpaceVim(git)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.SpaceVim"
-  directoryLink "SpaceVim(vim)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.vim"
-  directoryLink "SpaceVim(nvim)"           "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.config/nvim"
+  # directoryLink "SpaceVim(git)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.SpaceVim"
+  # directoryLink "SpaceVim(vim)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.vim"
+  # directoryLink "SpaceVim(nvim)"           "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.config/nvim"
 
   directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/SpaceVim.d"       "$HOME/.SpaceVim.d"
   # fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
