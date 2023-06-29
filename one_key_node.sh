@@ -21,6 +21,7 @@ if [ ! -d  ~/.nvm ]; then
 fi    
 
 node_apps=(
+    "eslint_d"
     "prettier"
 
     ## list

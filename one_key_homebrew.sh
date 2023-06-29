@@ -19,8 +19,8 @@ fi
 
 brew_apps=(
     ## neovim
-    "tree-sitter"           "tree-sitter"   
-    "prettierd"             "fsouza/prettierd/prettierd"   
+    "opt/tree-sitter"           "tree-sitter"   
+    "opt/prettierd"             "fsouza/prettierd/prettierd"   
 
     ## fish
     "opt/fish"              "fish"
