@@ -18,6 +18,9 @@ if [[ $(uname -m) == 'arm64' ]]; then
 fi
 
 brew_apps=(
+    ## fish
+    "opt/fish"              "fish"
+
     ## autoenv
     "opt/neovim"            "neovim"
 
