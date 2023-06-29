@@ -18,6 +18,10 @@ if [[ $(uname -m) == 'arm64' ]]; then
 fi
 
 brew_apps=(
+    ## neovim
+    "tree-sitter"           "tree-sitter"   
+    "prettierd"             "fsouza/prettierd/prettierd"   
+
     ## fish
     "opt/fish"              "fish"
 
