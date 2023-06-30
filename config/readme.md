@@ -20,7 +20,9 @@
 ** neovim
   https://github.com/craftzdog/dotfiles-public
   dotfiles-public/.config/nvim
-
+**** tailwindcss-language-server
+  https://elijahmanor.com/blog/neovim-tailwindcss
+  $LspInstall tailwindcss
 
 
 
