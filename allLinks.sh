@@ -226,9 +226,12 @@ function link_symlink {
   # cocoapods(ruby)
   # directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
 
+  # .oh-my-fish
+  rm -rf "$HOME/.config/fish/functions/trujunzhang.fish"
+  fileLink  "oh-my-fish(functions:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang/trujunzhang.plugin.zsh"    "$HOME/.config/fish/functions/trujunzhang.fish"
+
   # .oh-my-zsh
   # directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
-
 
   rm -rf "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
   directoryLink  "oh-my-zsh(plugin:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang"    "$HOME/.oh-my-zsh/custom/plugins/trujunzhang"
