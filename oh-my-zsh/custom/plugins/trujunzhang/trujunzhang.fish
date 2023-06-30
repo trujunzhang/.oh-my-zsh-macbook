@@ -87,9 +87,9 @@ alias rnands='npm run android:shake'
 
 alias rninfo='npx react-native info'
 alias rnnewapp='npx react-native init'
-function rnnewtsapp {
-    npx react-native init $1 --version 0.69.5 --template react-native-template-typescript --skip-install 
-}
+# function rnnewtsapp {
+#     npx react-native init $1 --version 0.69.5 --template react-native-template-typescript --skip-install 
+# }
 
 # rebuild android/ios folders
 #  The solution if ur version of react-native >= 0.61.0 :
@@ -446,11 +446,11 @@ alias dgitreset="git init && git add . && git commit -m 'first commit' && git ch
 alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
 
 # supabase
-function supabase_gen {
-    dest_fold=plugins/app-supabase/types
-    mkdir -p "$dest_fold"
-    supabase gen types typescript --project-id $1 --schema public > "$dest_fold/supabase.ts"
-}
+# function supabase_gen {
+#     dest_fold=plugins/app-supabase/types
+#     mkdir -p "$dest_fold"
+#     supabase gen types typescript --project-id $1 --schema public > "$dest_fold/supabase.ts"
+# }
 
 # cocoapods
 # https://blog.csdn.net/qq_41110569/article/details/106501098
@@ -534,10 +534,10 @@ alias wgithubflutter='cd /tmp && gcl https://github.com/flutter/flutter'
 alias clonewebsite="wget --mirror --convert-links --wait=2"
 
 # vscode
-alias visualstudiocodeExport="code --list-extensions |
-xargs -L 1 echo code --install-extension |
-sed 's/$/ --force/' |
-sed '\$!s/$/ \&/' > /tmp/install-extensions.sh"
+# alias visualstudiocodeExport="code --list-extensions |
+# xargs -L 1 echo code --install-extension |
+# sed 's/$/ --force/' |
+# sed '\$!s/$/ \&/' > /tmp/install-extensions.sh"
 
 # conda
 alias condaUpdate='conda update -n base -c conda-forge conda'
@@ -551,12 +551,12 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 
 # homebrew
 # brew services start d12frosted/emacs-plus/emacs-plus@30
-function binstall-emacs {
-    if [ ! -d  "$HOMEBREW_HOME/opt/emacs-plus@30" ]; then
-        brew tap d12frosted/emacs-plus  
-        brew install emacs-plus@30 --with-spacemacs-icon 
-        brew link emacs-plus@30  
-    fi
-    ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications
-}
+# function binstall-emacs 
+#     if [ ! -d  "$HOMEBREW_HOME/opt/emacs-plus@30" ]; then
+#         brew tap d12frosted/emacs-plus  
+#         brew install emacs-plus@30 --with-spacemacs-icon 
+#         brew link emacs-plus@30  
+#     fi
+#     ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications
+# end
 
