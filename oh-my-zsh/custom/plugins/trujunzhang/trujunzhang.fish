@@ -310,7 +310,7 @@ alias iosiphone14pro='open -a Simulator --args -CurrentDeviceUDID 72CFAFB2-E1BA-
 alias iosiphone14promaxabc='ioskill && sleep 3 && open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone14promax'
 alias iosiphone14promax='open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone14promax'
 alias iosiphone3se='open -a Simulator --args -CurrentDeviceUDID 9AF53831-AF2E-4F84-AC62-91D4FB2A0E76 iPhone3se'
-alias androidopen='${ANDROID_SDK_ROOT}/emulator/emulator -avd  genymotion'
+alias androidopen='$ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion'
 
 # Flutter
 alias fclean="flutter clean"
