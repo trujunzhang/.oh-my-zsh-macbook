@@ -19,7 +19,7 @@ lvim.plugins = {
     "nvim-telescope/telescope-project.nvim",
     event = "BufWinEnter",
     setup = function()
-      vim.cmd [[packadd telescope.nvim]]
+      -- vim.cmd [[packadd telescope.nvim]]
     end,
   },
   {
