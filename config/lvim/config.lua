@@ -1,6 +1,7 @@
 -- additional plugins
 reload "user.plugins"
 reload "user.autosave"
+reload "user.kmaps-common"
 reload "user.options"
 reload "user.keymaps"
 reload "user.autocommands"
