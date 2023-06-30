@@ -10,6 +10,8 @@ fish_app=(
     "patrickf1/fzf.fish"
     "jorgebucaran/nvm.fish"
     "budimanjojo/tmux.fish"
+
+    "edc/bass"
 )
 
 
