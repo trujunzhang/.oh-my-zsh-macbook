@@ -16,6 +16,7 @@ lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
 lvim.format_on_save.enabled = false
+-- lvim.format_on_save.enabled = true
 lvim.builtin.lualine.sections.lualine_a = { "mode" }
 -- lvim.builtin.lualine.options.theme = "gruvbox-material"
 lvim.transparent_window = false
