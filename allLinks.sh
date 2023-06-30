@@ -97,11 +97,14 @@ function link_config_fold {
   # fileLink ".window(yabai)"  "$TRUJUNZHANG_DOTFILES_HOME/yabairc.symlink" "$HOME/.yabairc"
   # fileLink ".window(skhdrc)"  "$TRUJUNZHANG_DOTFILES_HOME/skhdrc.symlink" "$HOME/.skhdrc"
   directoryLink  "config(yabai)"    "$TRUJUNZHANG_DOTFILES_HOME/config/yabai"       "$HOME/.config/yabai"
-  directoryLink  "config(skhd)"     "$TRUJUNZHANG_DOTFILES_HOME/config/skhd"       "$HOME/.config/skhd"
+  directoryLink  "config(skhd)"     "$TRUJUNZHANG_DOTFILES_HOME/config/skhd"        "$HOME/.config/skhd"
 
   # nvim
   directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim"
   directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.vim"
+
+  # fish
+  directoryLink  "config(vlc)"     "$TRUJUNZHANG_DOTFILES_HOME/config/fish"       "$HOME/.config/fish"
 
   # apps
   directoryLink  "config(vlc)"     "$TRUJUNZHANG_DOTFILES_HOME/config/vlc"       "$HOME/.config/vlc"
