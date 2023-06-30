@@ -19,6 +19,15 @@ packer.startup(function(use)
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
   }
+  use({
+    "Pocco81/auto-save.nvim",
+    config = function()
+       require("auto-save").setup {
+        -- your config goes here
+        -- or just leave it empty :)
+       }
+    end
+  })
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
