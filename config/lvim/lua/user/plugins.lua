@@ -9,11 +9,18 @@ lvim.plugins = {
   {
     "Pocco81/auto-save.nvim",
     config = function()
-       require("auto-save").setup {
+      require("auto-save").setup {
         -- your config goes here
         -- or just leave it empty :)
-       }
+      }
     end
+  },
+  {
+    "nvim-telescope/telescope-project.nvim",
+    event = "BufWinEnter",
+    setup = function()
+      vim.cmd [[packadd telescope.nvim]]
+    end,
   },
   {
     "norcalli/nvim-colorizer.lua",
