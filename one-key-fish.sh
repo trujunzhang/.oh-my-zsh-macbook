@@ -14,6 +14,7 @@ fish_app=(
     "edc/bass"
 )
 
+# fisher install "jorgebucaran/fisher" "jethrokuan/z" "patrickf1/fzf.fish" "jorgebucaran/nvm.fish" "budimanjojo/tmux.fish" "edc/bass"
 
 for (( i=0; i<${#fish_app[@]}; i++ ));
 do
@@ -23,11 +24,10 @@ done
 
 omf_app=(
     "brew"
-
     "bobthefish"
-
 )
 
+# omf install  "brew" "bobthefish"
 
 for (( i=0; i<${#omf_app[@]}; i++ ));
 do
