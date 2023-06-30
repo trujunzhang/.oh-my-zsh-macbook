@@ -35,6 +35,7 @@ keymap("n", "<m-tab>", "<c-6>", opts)
 -- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 
+mapbuf('n', 'ff', '<cmd>lua vim.lsp.buf.format({ async = false })<CR>', opt)
 -- rename
 mapbuf('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opt)
 -- code action
