@@ -1,5 +1,6 @@
 -- additional plugins
 reload "user.plugins"
+reload "user.project"
 reload "user.autosave"
 reload "user.kmaps-common"
 reload "user.options"

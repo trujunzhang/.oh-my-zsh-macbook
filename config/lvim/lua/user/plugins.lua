@@ -18,9 +18,9 @@ lvim.plugins = {
   {
     "nvim-telescope/telescope-project.nvim",
     event = "BufWinEnter",
-    setup = function()
+    -- setup = function()
       -- vim.cmd [[packadd telescope.nvim]]
-    end,
+    -- end,
   },
   {
     "norcalli/nvim-colorizer.lua",
