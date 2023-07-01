@@ -61,5 +61,7 @@ mapbuf('n', '<leader>=', '<cmd>lua vim.lsp.buf.formatting()<CR>', opt)
 -- mapbuf('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opt)
 -- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 
+-- mapbuf('n', 'll', <cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects")
+--   ["p"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
 return M
