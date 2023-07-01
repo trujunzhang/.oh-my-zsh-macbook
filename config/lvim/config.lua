@@ -18,5 +18,12 @@ reload "user.shortcut"
 -- reload "user.chatgpt"
 -- reload "user.neoai"
 
--- snippet
+-- snippets
+-- refer:
+--    https://github.com/sambergo/lunarvim-snippet-examples
 require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/vscode-es7-javascript-react-snippets" } }
+require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/my-snippets" } }
+
+
+
+
