@@ -17,3 +17,6 @@ reload "user.shortcut"
 
 -- reload "user.chatgpt"
 -- reload "user.neoai"
+
+-- snippet
+require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/vscode-es7-javascript-react-snippets" } }

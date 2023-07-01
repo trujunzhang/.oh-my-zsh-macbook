@@ -1,32 +1,34 @@
-* kitty:
+# kitty:
   url = https://github.com/koekeishiya/dotfiles
-** kitty-theme
+## kitty-theme
   https://github.com/dexpota/kitty-themes
 
-* mpv
+# mpv
   url = https://github.com/Argon-/mpv-config with gitmodules
   url = https://github.com/Eisa01/mpv-scripts
 
-* qutebrowser
+# qutebrowser
   url = https://github.com/juliusHuelsmann/Config 
   fold = .config/qutebrowser
 
-* tmux
+# tmux
   url = https://github.com/koekeishiya/dotfiles
 
-** tmux plugins
+## tmux plugins
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-** neovim
+## neovim
   https://github.com/craftzdog/dotfiles-public
   dotfiles-public/.config/nvim
-**** tailwindcss-language-server
+#### tailwindcss-language-server
   https://elijahmanor.com/blog/neovim-tailwindcss
   $LspInstall tailwindcss
 
-** lunarvim
+# lunarvim
   url = https://github.com/adibhanna/lvim-config
 
+## snippet
+  git clone https://github.com/dsznajder/vscode-es7-javascript-react-snippets config/lvim/snippets
 
 
   
