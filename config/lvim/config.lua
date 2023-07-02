@@ -24,6 +24,10 @@ reload "user.shortcut"
 require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/vscode-es7-javascript-react-snippets" } }
 require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/my-snippets" } }
 
-
-
-
+-- set notimeout
+-- set encoding=utf-8
+vim.cmd([[
+set shiftwidth=2
+set autoindent
+set smartindent
+]])
