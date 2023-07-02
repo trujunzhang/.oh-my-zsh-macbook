@@ -560,3 +560,5 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 #     ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications
 # end
 
+alias l="lvim"
+alias vsc="code ."
