@@ -192,6 +192,7 @@ fi
 #fi
 
 # tmux config:
+# https://tmuxcheatsheet.com/
 # session: mydefault
 # windows: defaultwin
 #          codingwin
