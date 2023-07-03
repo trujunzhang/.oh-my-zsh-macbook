@@ -87,9 +87,11 @@ alias rnands='npm run android:shake'
 
 alias rninfo='npx react-native info'
 alias rnnewapp='npx react-native init'
-# function rnnewtsapp {
-#     npx react-native init $1 --version 0.69.5 --template react-native-template-typescript --skip-install 
-# }
+
+function rnnewtsapp 
+     set app_name $argv[1]
+     npx react-native init "$app_name" --version 0.69.5 --template react-native-template-typescript --skip-install 
+end
 
 # rebuild android/ios folders
 #  The solution if ur version of react-native >= 0.61.0 :
@@ -446,11 +448,12 @@ alias dgitreset="git init && git add . && git commit -m 'first commit' && git ch
 alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
 
 # supabase
-# function supabase_gen {
-#     dest_fold=plugins/app-supabase/types
-#     mkdir -p "$dest_fold"
-#     supabase gen types typescript --project-id $1 --schema public > "$dest_fold/supabase.ts"
-# }
+function supabase_gen 
+     set project-id $argv[1]
+     set dest_fold "plugins/app-supabase/types"
+     mkdir -p "$dest_fold"
+     supabase gen types typescript --project-id "$project-id" --schema public > "$dest_fold/supabase.ts"
+end
 
 # cocoapods
 # https://blog.csdn.net/qq_41110569/article/details/106501098
