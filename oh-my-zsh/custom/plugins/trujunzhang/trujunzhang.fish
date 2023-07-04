@@ -567,3 +567,17 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 
 alias l="lvim"
 alias vsc="code ."
+
+# brew 
+alias bcubc='brew upgrade --cask && brew cleanup'
+alias bcubo='brew update && brew outdated --cask'
+alias bcubc='brew upgrade --cask && brew cleanup'
+alias brewp='brew pin'
+alias brewsp='brew list --pinned'
+alias bubc='brew upgrade --verbose && brew cleanup --verbose'
+alias bugbc='brew upgrade --greedy && brew cleanup'
+alias bubo='brew update --verbose && brew outdated --verbose'
+alias bubu='bubo && bubc'
+alias bubug='bubo && bugbc'
+alias bfu='brew upgrade --formula'
+alias buz='brew uninstall --zap'
