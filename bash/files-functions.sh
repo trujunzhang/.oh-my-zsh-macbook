@@ -26,7 +26,7 @@ function  directoryLink {
     printf "action=%s\n" "${Param}"
 
 
-    if [ -d "${dest}" ] then
+    if [ -d "${dest}" ]; then
         if [ "$Param" = "delete" ]; then
             rm -rf "${dest}"
         fi
@@ -60,7 +60,7 @@ function  fileLink {
     printf "dest=%s\n" "${dest}"
     printf "action=%s\n" "${Param}"
 
-    if [ -f "${dest}" ] then
+    if [ -f "${dest}" ]; then
         if [ "$Param" = "delete" ]; then
             rm -rf "${dest}"
         fi
