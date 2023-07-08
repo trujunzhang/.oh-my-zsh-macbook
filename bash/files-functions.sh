@@ -9,16 +9,28 @@ function func1 {
     printf "fun=%s,book=%s\n" "${fun}" "${book}"
 }
 
+DEFAULTACTION="ignore"
+
 function  directoryLink {
     
     msg=$1
     src=$2
     dest=$3
+
+    Param="${4:-$DEFAULTACTION}"
     
     echo ""
     printf "msg=%s\n" "${msg}"
     printf "src=%s\n" "${src}"
     printf "dest=%s\n" "${dest}"
+    printf "action=%s\n" "${Param}"
+
+
+    if [ -d "${dest}" ] then
+        if [ "$Param" = "delete" ]; then
+            rm -rf "${dest}"
+        fi
+    fi
     
     if [ -d "${dest}" ]
     then
@@ -39,11 +51,20 @@ function  fileLink {
     msg=$1
     src=$2
     dest=$3
+
+    Param="${4:-$DEFAULTACTION}"
     
     echo ""
     printf "msg=%s\n" "${msg}"
     printf "src=%s\n" "${src}"
     printf "dest=%s\n" "${dest}"
+    printf "action=%s\n" "${Param}"
+
+    if [ -f "${dest}" ] then
+        if [ "$Param" = "delete" ]; then
+            rm -rf "${dest}"
+        fi
+    fi
     
     if [ -f "${dest}" ]
     then
