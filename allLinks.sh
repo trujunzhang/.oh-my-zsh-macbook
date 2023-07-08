@@ -100,8 +100,8 @@ function link_config_fold {
   directoryLink  "config(skhd)"     "$TRUJUNZHANG_DOTFILES_HOME/config/skhd"        "$HOME/.config/skhd"
 
   # nvim
-  directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim"
-  directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.vim"
+  # directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim"
+  # directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.vim"
 
   # lvim
   directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim"       "$HOME/.config/lvim"
@@ -150,12 +150,12 @@ function link_ide_configs {
   # IDES(Sublime)
   mkdir -p "$SUBLIME_SUPPORT_USER"
   fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_HOME_SOURCE/Preferences.sublime-settings" "$SUBLIME_SUPPORT_USER/Preferences.sublime-settings"
-  SUBLIME_APP_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
-  ln -sv "$SUBLIME_APP_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
+  # SUBLIME_APP_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
+  # ln -sv "$SUBLIME_APP_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
 
   # IDES(LightTable)
-  LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
-  ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
+  # LIGHT_TABLE_APP="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable/light"
+  # ln -sv "$LIGHT_TABLE_APP" "/usr/local/bin/light"
 
   # IDE(Sublime Merge)
   # ln -s "$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
@@ -184,7 +184,7 @@ function link_vim {
   # directoryLink "SpaceVim(vim)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.vim"
   # directoryLink "SpaceVim(nvim)"           "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.config/nvim"
 
-  directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/SpaceVim.d"       "$HOME/.SpaceVim.d"
+  # directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/SpaceVim.d"       "$HOME/.SpaceVim.d"
   # fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
 }
 
