@@ -126,5 +126,8 @@
     "explorer.autoRevealExclude": {
         "**/node_modules": false
     },
-    "workbench.colorTheme": "GitHub Light Default"
+    "workbench.colorTheme": "GitHub Light Default",
+    "aws.suppressPrompts": {
+        "yamlExtPrompt": true
+    }
 }
