@@ -149,7 +149,7 @@ function link_ide_configs {
 
   # IDES(Sublime)
   mkdir -p "$SUBLIME_SUPPORT_USER"
-  fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_HOME_SOURCE/Preferences.sublime-settings" "$SUBLIME_SUPPORT_USER/Preferences.sublime-settings"
+  fileLink "Preferences.sublime-settings(sublime)"  "$SUBLIME_HOME_SOURCE/Preferences.sublime-settings" "$SUBLIME_SUPPORT_USER/Preferences.sublime-settings"  "delete"
   # SUBLIME_APP_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Text.app/Contents"
   # ln -sv "$SUBLIME_APP_HOME/SharedSupport/bin/subl" "/usr/local/bin/subl"
 
@@ -161,7 +161,7 @@ function link_ide_configs {
   # ln -s "$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Sublime Merge.app/Contents/SharedSupport/bin/smerge" ~/bin/smerge
 
   # Path
-  fileLink   "studio(path)"   "$ORGANIZATIONS_HOME/__APPLICATIONS/BinApps/studio"   "/usr/local/bin/studio"
+  # fileLink   "studio(path)"   "$ORGANIZATIONS_HOME/__APPLICATIONS/BinApps/studio"   "/usr/local/bin/studio"
 }
 
 # nginx default site
@@ -230,8 +230,7 @@ function link_symlink {
   # directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
 
   # .oh-my-fish
-  rm -rf "$HOME/.config/fish/functions/trujunzhang.fish"
-  fileLink  "oh-my-fish(functions:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang/trujunzhang.fish"    "$HOME/.config/fish/functions/trujunzhang.fish"
+  fileLink  "oh-my-fish(functions:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang/trujunzhang.fish"    "$HOME/.config/fish/functions/trujunzhang.fish"   "delete"    
 
   # .oh-my-zsh
   # directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
