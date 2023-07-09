@@ -18,6 +18,9 @@ if [[ $(uname -m) == 'arm64' ]]; then
 fi
 
 brew_apps=(
+    ## supabase
+    "opt/supabase"              "supabase/tap/supabase"
+
     ## v2ray
     "opt/v2ray-core"            "v2ray-core"
 
@@ -29,18 +32,20 @@ brew_apps=(
     "opt/ripgrep"               "ripgrep"
     ## neovim(lazygit)
     "opt/lazygit"               "jesseduffield/lazygit/lazygit"
+    ## neovim(fzf)
+    "opt/fzf"                   "fzf"
 
     ## fish
-    "opt/fish"              "fish"
+    "opt/fish"                  "fish"
 
     ## autoenv
-    "opt/neovim"            "neovim"
+    "opt/neovim"                "neovim"
 
     ## autoenv
-    "opt/autoenv"            "autoenv"
+    "opt/autoenv"               "autoenv"
 
     ## nginx
-    "opt/nginx"              "nginx"
+    "opt/nginx"                 "nginx"
 
     ## direnv
     # https://direnv.net/#getting-started
@@ -71,9 +76,6 @@ brew_apps=(
 
     ## React-native & Expo
     "opt/watchman"           "bundletool watchman"
-
-    ## fzf
-    "opt/fzf"                "fzf"
 )
 
 for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
