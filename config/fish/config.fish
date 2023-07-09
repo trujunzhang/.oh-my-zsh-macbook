@@ -16,3 +16,20 @@ if [ -f $HOME/.config/fish/functions/trujunzhang.fish ]
   source $HOME/.config/fish/functions/trujunzhang.fish
 end
 
+
+# if "$(uname -m)" == 'arm64'  
+# end
+
+# echo "arm macos system!"
+
+# >>> conda initialize >>>
+# Refer:
+#    https://stackoverflow.com/questions/34280113/add-conda-to-path-in-fish
+eval "$HOME/miniforge3/bin/conda" "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
+if type "conda" &> /dev/null 
+    conda activate tf_m1
+end
+
+
