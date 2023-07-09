@@ -27,6 +27,8 @@ brew_apps=(
     ## neovim(telescope)
     "opt/fd"                    "fd"
     "opt/ripgrep"               "ripgrep"
+    ## neovim(lazygit)
+    "opt/lazygit"               "jesseduffield/lazygit/lazygit"
 
     ## fish
     "opt/fish"              "fish"
