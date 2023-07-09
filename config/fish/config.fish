@@ -25,7 +25,9 @@ end
 # >>> conda initialize >>>
 # Refer:
 #    https://stackoverflow.com/questions/34280113/add-conda-to-path-in-fish
-eval "$HOME/miniforge3/bin/conda" "shell.fish" "hook" $argv | source
+if [ -f $HOME/miniforge3/bin/conda ]
+    eval "$HOME/miniforge3/bin/conda" "shell.fish" "hook" $argv | source
+end
 # <<< conda initialize <<<
 
 if type "conda" &> /dev/null 
