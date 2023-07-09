@@ -18,9 +18,15 @@ if [[ $(uname -m) == 'arm64' ]]; then
 fi
 
 brew_apps=(
+    ## v2ray
+    "opt/v2ray-core"            "v2ray-core"
+
     ## neovim
     "opt/tree-sitter"           "tree-sitter"   
     "opt/prettierd"             "fsouza/prettierd/prettierd"   
+    ## neovim(telescope)
+    "opt/fd"                    "fd"
+    "opt/ripgrep"               "ripgrep"
 
     ## fish
     "opt/fish"              "fish"

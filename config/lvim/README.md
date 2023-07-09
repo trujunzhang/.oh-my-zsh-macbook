@@ -2,6 +2,9 @@
 
 https://www.lunarvim.org/
 
+# neovim commands
+  $ checkhealth telescope
+
 # split windows
 Ctrl+W, S (case does not matter) for horizontal splitting
 
