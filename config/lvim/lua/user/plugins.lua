@@ -19,7 +19,7 @@ lvim.plugins = {
     "nvim-telescope/telescope-project.nvim",
     event = "BufWinEnter",
     -- setup = function()
-      -- vim.cmd [[packadd telescope.nvim]]
+    -- vim.cmd [[packadd telescope.nvim]]
     -- end,
   },
   {
@@ -49,6 +49,10 @@ lvim.plugins = {
     config = function()
       require("symbols-outline").setup()
     end,
+  },
+  {
+    "microsoft/vscode-js-debug",
+    build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
   },
   "mxsdev/nvim-dap-vscode-js",
   {
