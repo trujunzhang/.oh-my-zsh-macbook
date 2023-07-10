@@ -161,19 +161,6 @@ function link_ide_configs {
 # nginx default site
 # directoryLink  "nginx(site)"         "$CACHES_HOME/www"    "/usr/local/var/www"
 
-function link_vim {
-  # *Links(dot_vim)
-  # ======================================
-
-  # spacevim(All)(pending)
-  # directoryLink "SpaceVim(git)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.SpaceVim"
-  # directoryLink "SpaceVim(vim)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.vim"
-  # directoryLink "SpaceVim(nvim)"           "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.config/nvim"
-
-  # directoryLink "SpaceVim.d(UserProfile)"  "$TRUJUNZHANG_DOTFILES_HOME/editors/SpaceVim.d"       "$HOME/.SpaceVim.d"
-  # fileLink "gvimrc(MacVim)"                "$TRUJUNZHANG_DOTFILES_HOME/gvimrc.symlink"   "$HOME/.gvimrc"
-}
-
 # $USERPROFILE/Library/Caches
 # directoryLink  "Caches(Yarn)"       "$LIBRARY_YARN_HOME"         "$HOME/Library/Caches/Yarn"
 # directoryLink  "Caches(CocoaPods)"  "$LIBRARY_COCOAPODS_HOME"    "$HOME/Library/Caches/CocoaPods"
@@ -392,7 +379,6 @@ mkdir -p "$HOME/.config"
 link_applescript
 link_config_fold
 link_ide_configs
-link_vim
 link_symlink
 # link_cocoapods
 link_getx_shell
