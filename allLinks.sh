@@ -94,14 +94,8 @@ function link_config_fold {
   fileLink  "config(tmux.conf)"   "$TRUJUNZHANG_DOTFILES_HOME/config/tmux/tmux.conf"       "$HOME/.tmux.conf"
 
   # window management(yabai/skhdrc)
-  # fileLink ".window(yabai)"  "$TRUJUNZHANG_DOTFILES_HOME/yabairc.symlink" "$HOME/.yabairc"
-  # fileLink ".window(skhdrc)"  "$TRUJUNZHANG_DOTFILES_HOME/skhdrc.symlink" "$HOME/.skhdrc"
   directoryLink  "config(yabai)"    "$TRUJUNZHANG_DOTFILES_HOME/config/yabai"       "$HOME/.config/yabai"
   directoryLink  "config(skhd)"     "$TRUJUNZHANG_DOTFILES_HOME/config/skhd"        "$HOME/.config/skhd"
-
-  # nvim
-  # directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim"
-  # directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.vim"
 
   # lvim
   directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim"       "$HOME/.config/lvim"
@@ -170,14 +164,6 @@ function link_ide_configs {
 function link_vim {
   # *Links(dot_vim)
   # ======================================
-  VIM_ALL_HOME="$TRUJUNZHANG_DOTFILES_HOME/nicknisi/vim"
-  # ==Items==
-  DOT_VIM_RC="$VIM_ALL_HOME/init.vim"
-
-  # DOT_VIM
-  # directoryLink  "vim(.vim)"         "$VIM_ALL_HOME"    "$HOME/.vim"
-  # directoryLink  "neovim(config)"    "$VIM_ALL_HOME"    "$HOME/.config/nvim"
-  # fileLink       "vim(.vimrc)"       "$DOT_VIM_RC"      "$HOME/.vimrc"
 
   # spacevim(All)(pending)
   # directoryLink "SpaceVim(git)"            "$ORGANIZATIONS_HOME/IDES/vim-shim/SpaceVim"           "$HOME/.SpaceVim"
