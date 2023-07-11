@@ -14,6 +14,7 @@ reload "user.inlay-hints"
 reload "user.functions"
 reload "user.dial"
 reload "user.shortcut"
+reload "user.dap-debug"
 
 -- reload "user.chatgpt"
 -- reload "user.neoai"
