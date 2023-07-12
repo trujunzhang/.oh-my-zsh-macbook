@@ -67,7 +67,7 @@ function link_envs {
       echo "element $i is ${project_dest}"
 
       
-      fileLink  "env($project_env)"  "${fold_source}/${project_env}/.env" "${fold_dest}/${project_dest}/.env"
+      fileLink  "env($project_env)"  "${fold_source}/${project_env}/env" "${fold_dest}/${project_dest}/.env"
     done
 
 
