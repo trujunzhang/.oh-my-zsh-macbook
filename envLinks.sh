@@ -37,7 +37,7 @@ WORKING_FOLD="$ORGANIZATIONS_HOME/__CODING/WORKING"
 ENV_PROJECT_FOLD="$WORKING_FOLD/projects_envs"
 
 envs_global_flutter_ieatta=(
-    "sbNext"     "packages/sbNext"
+    "sbNext/env"     "packages/sbNext/.env.local"
 )
 
 function link_envs {
@@ -67,7 +67,7 @@ function link_envs {
       echo "element $i is ${project_dest}"
 
       
-      fileLink  "env($project_env)"  "${fold_source}/${project_env}/env" "${fold_dest}/${project_dest}/.env"
+      fileLink  "env($project_env)"  "${fold_source}/${project_env}" "${fold_dest}/${project_dest}"
     done
 
 
