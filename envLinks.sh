@@ -49,26 +49,26 @@ function link_envs {
   fold_dest="$WORKING_FOLD/$dest_name"
   
 
-echo "                         "
-echo "=================================================================================="
-echo "source fold: $fold_source"
-echo "dest   fold: $fold_dest"
-echo "=================================================================================="
-echo "                                          "
+  echo "                         "
+  echo "=================================================================================="
+  echo "source fold: $fold_source"
+  echo "dest   fold: $fold_dest"
+  echo "=================================================================================="
+  echo "                                          "
 
 # echo "${envs_array[*]}"
 
-for (( i=2; i<${#envs_array[@]}; i=i+2 ));
-do
-  project_env="${envs_array[$i+0]}"
-  project_dest="${envs_array[$i+1]}"
+    for (( i=2; i<${#envs_array[@]}; i=i+2 ));
+    do
+      project_env="${envs_array[$i+0]}"
+      project_dest="${envs_array[$i+1]}"
 
-  echo "element $i is ${project_env}"
-  echo "element $i is ${project_dest}"
+      echo "element $i is ${project_env}"
+      echo "element $i is ${project_dest}"
 
-    
-  # fileLink  "env($env_project)"  "$source_fold/"
-done
+      
+      fileLink  "env($project_env)"  "${fold_source}/${project_env}/.env" "${fold_dest}/${project_dest}/.env"
+    done
 
 
 }
