@@ -25,7 +25,7 @@ require("dap-vscode-js").setup({
   -- log_console_level = vim.log.levels.ERROR -- Logging level for output to console. Set to false to disable console output.
 })
 
-for _, language in ipairs({ "typescript", "javascript" }) do
+for _, language in ipairs({ "typescript", "javascript", "typescriptreact" }) do
   require("dap").configurations[language] = {
     {
       type = "pwa-node",
@@ -50,19 +50,19 @@ for _, language in ipairs({ "typescript", "javascript" }) do
       userDataDir = "${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir"
     } ,   
     {
-    type = "pwa-node",
-    request = "launch",
-    name = "Debug Jest Tests",
-    -- trace = true, -- include debugger info
-    runtimeExecutable = "node",
-    runtimeArgs = {
-      "./node_modules/jest/bin/jest.js",
-      "--runInBand",
-    },
-    rootPath = "${workspaceFolder}",
-    cwd = "${workspaceFolder}",
-    console = "integratedTerminal",
-    internalConsoleOptions = "neverOpen",
+      type = "pwa-node",
+      request = "launch",
+      name = "Debug Jest Tests",
+      -- trace = true, -- include debugger info
+      runtimeExecutable = "node",
+      runtimeArgs = {
+        "./node_modules/jest/bin/jest.js",
+        "--runInBand",
+      },
+      rootPath = "${workspaceFolder}",
+      cwd = "${workspaceFolder}",
+      console = "integratedTerminal",
+      internalConsoleOptions = "neverOpen",
     }        
   }
 end
