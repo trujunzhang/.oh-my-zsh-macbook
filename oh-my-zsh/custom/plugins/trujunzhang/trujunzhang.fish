@@ -555,7 +555,7 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 
 # homebrew
 # brew services start d12frosted/emacs-plus/emacs-plus@30
- function binstall-emacs 
+function binstall-emacs 
    if not test -d  "$HOMEBREW_HOME/opt/emacs-plus@30" 
          brew tap d12frosted/emacs-plus  
          brew install emacs-plus@30 --with-spacemacs-icon 
@@ -569,6 +569,7 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 # neovim
 alias l="lvim"
 alias vsc="code ."
+
 function killvim 
     kill $(ps aux | grep 'neovim' | awk '{print $2}')
 end

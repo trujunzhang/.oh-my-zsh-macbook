@@ -10,6 +10,13 @@ end
 # export PATH=$ANDROID_SDK_ROOT:$PATH
 # export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
+# djzhang's bin
+# ======================================================================
+# export PATH="$PATH:$HOME/.local/bin"
+fish_add_path "$HOME/.local/bin" 
+
+# environment variable
+set -g -x ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
 
 # Aliases
 if [ -f $HOME/.config/fish/functions/trujunzhang.fish ]
