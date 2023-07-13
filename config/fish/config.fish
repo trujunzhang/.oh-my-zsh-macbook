@@ -20,7 +20,15 @@ end
 # if "$(uname -m)" == 'arm64'  
 # end
 
-# echo "arm macos system!"
+# switch "$(uname -m)"
+#     case "x86_64"
+#         echo "wanghao x86_64"
+#     case '*'
+#         echo I have no idea what a $animal is
+# end
+
+# echo "arm macos system! $(uname -m)"
+# echo "arm macos system! $(uname)"
 
 # >>> conda initialize >>>
 # Refer:
