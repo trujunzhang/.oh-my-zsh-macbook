@@ -434,6 +434,7 @@ alias dfpython="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/pyth
 alias drunvpn="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drv="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drunonekeymac="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./one_key_macbook.sh"
+alias drunonekeyenv="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./envLinks.sh"
 alias drungrpc_branch="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
 alias drunlocalgitpull="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash && ./local_git_update.sh"
 alias drunoffline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
