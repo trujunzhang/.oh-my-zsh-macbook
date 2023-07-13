@@ -11,11 +11,12 @@ if ! command_exists brew; then
     ( exec "./bash/homebrew_install.sh" )
 fi
 
-HOMEBREW_HOME="/usr/local"
-if [[ $(uname -m) == 'arm64' ]]; then
-    # echo M2
-    HOMEBREW_HOME="/opt/homebrew"
-fi
+# HOMEBREW_HOME="/usr/local"
+# if [[ $(uname -m) == 'arm64' ]]; then
+#     # echo M2
+#     HOMEBREW_HOME="/opt/homebrew"
+# fi
+HOMEBREW_HOME="$(brew --prefix)"
 
 brew_apps=(
     ## supabase

@@ -12,17 +12,10 @@ end
 
 # djzhang's bin
 # ======================================================================
-# export PATH="$PATH:$HOME/.local/bin"
 fish_add_path "$HOME/.local/bin" 
 
 # environment variable
 set -g -x ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
-
-# Aliases
-if [ -f $HOME/.config/fish/functions/trujunzhang.fish ]
-  source $HOME/.config/fish/functions/trujunzhang.fish
-end
-
 
 # if "$(uname -m)" == 'arm64'  
 # end
@@ -37,6 +30,9 @@ end
 # echo "arm macos system! $(uname -m)"
 # echo "arm macos system! $(uname)"
 
+# ======================================================================
+# Python environment
+# ======================================================================
 # >>> conda initialize >>>
 # Refer:
 #    https://stackoverflow.com/questions/34280113/add-conda-to-path-in-fish
@@ -49,4 +45,10 @@ if type "conda" &> /dev/null
     conda activate tf_m1
 end
 
-
+# ======================================================================
+# finally
+# ======================================================================
+# Aliases
+if [ -f $HOME/.config/fish/functions/trujunzhang.fish ]
+  source $HOME/.config/fish/functions/trujunzhang.fish
+end
