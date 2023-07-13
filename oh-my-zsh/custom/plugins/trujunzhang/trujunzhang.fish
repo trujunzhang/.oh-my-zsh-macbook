@@ -566,8 +566,12 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
    end
  end
 
+# neovim
 alias l="lvim"
 alias vsc="code ."
+function killvim 
+    kill $(ps aux | grep 'neovim' | awk '{print $2}')
+end
 
 # brew 
 alias bcubc='brew upgrade --cask && brew cleanup'
