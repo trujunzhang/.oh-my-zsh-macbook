@@ -20,7 +20,10 @@ Ctrl+W, j (or k, h, l; lowercase) to switch to adjacent window (down, up, left, 
 
 g? toggles help, showing all the mappings and their actions.
 
+# replace
+If you want to search and replace the pattern in the entire file, use the percentage character % as a range. This character indicates a range from the first to the last line of the file:
 
+:%s/foo/bar/g
 
 
 
