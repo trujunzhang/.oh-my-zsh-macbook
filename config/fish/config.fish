@@ -5,10 +5,11 @@ end
 # Android SDK
 # ======================================================================
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-# export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-# export ANDROID_USER_HOME=$HOME/Library/Android/sdk
-# export PATH=$ANDROID_SDK_ROOT:$PATH
-# export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+set -g -x ANDROID_SDK_ROOT "$HOME/Library/Android/sdk"
+set -g -x ANDROID_USER_HOME "$HOME/Library/Android/sdk"
+fish_add_path "$ANDROID_SDK_ROOT"
+fish_add_path "$ANDROID_SDK_ROOT/tools"
+fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 
 # djzhang's bin
 # ======================================================================
