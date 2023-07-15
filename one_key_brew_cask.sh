@@ -20,6 +20,7 @@ brew_apps=(
     "Raycast.app"             "raycast"
     "SpaceLauncher.app"       "spacelauncher"
     "Notion.app"              "notion"
+    "Warp.app"                "warp"
     # "BaiduNetdisk.app"        "baidunetdisk"
 
     # Web browser
@@ -59,7 +60,12 @@ echo "params = ${Params}"
 function install_brew_app {
     name=$1
     app=$2
-    if [ "$Params" = "open" ]; then
+
+    if [ "$Params" = "delete" ]; then
+        if [ -d  "/Applications/${name}" ]; then
+            delete "/Applications/${name}" 
+        fi
+    elif [ "$Params" = "open" ]; then
         if [ -d  "/Applications/${name}" ]; then
             open "/Applications/${name}" 
         fi
