@@ -17,6 +17,7 @@ brew_apps=(
     "Sourcetree.app"          "sourcetree"
 
     # System tools
+    "V2rayU.app"              "v2rayu"
     "Raycast.app"             "raycast"
     "SpaceLauncher.app"       "spacelauncher"
     "Notion.app"              "notion"
