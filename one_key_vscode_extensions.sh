@@ -62,6 +62,12 @@ myArray=(
     # "hbenl.vscode-mocha-test-adapter"
 
     # =================================
+    # Sanity 
+    # =================================
+    "sanity-io.vscode-sanity"
+    "hdoro.sanity-snippets"
+
+    # =================================
     # Javascript
     # =================================
     "xabikos.JavaScriptSnippets"

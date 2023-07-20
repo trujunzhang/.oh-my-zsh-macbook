@@ -24,6 +24,11 @@ node_apps=(
     "eslint_d"
     "prettier"
 
+    # cli 
+    "netlify-cli"      # https://docs.netlify.com/cli/get-started/
+    "vercel"           # https://vercel.com/docs/cli
+    "sanity@latest"    # https://www.sanity.io/docs/cli
+
     ## list
     # if ! command_exists yarn; then
     "yarn"
