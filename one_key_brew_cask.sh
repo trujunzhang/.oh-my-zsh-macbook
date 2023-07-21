@@ -63,7 +63,7 @@ function install_brew_app {
 
     if [ "$Params" = "delete" ]; then
         if [ -d  "/Applications/${name}" ]; then
-            delete "/Applications/${name}" 
+            sudo rm -rf "/Applications/${name}" 
         fi
     elif [ "$Params" = "open" ]; then
         if [ -d  "/Applications/${name}" ]; then
