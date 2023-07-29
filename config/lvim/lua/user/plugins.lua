@@ -16,6 +16,9 @@ lvim.plugins = {
     end
   },
   {
+    'nvim-lua/plenary.nvim'
+  },
+  {
     "windwp/nvim-spectre",
     event = "BufRead",
     config = function()
