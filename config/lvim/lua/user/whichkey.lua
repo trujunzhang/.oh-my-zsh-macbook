@@ -300,6 +300,10 @@ local config = function()
       },
       s = {
         name = "Search",
+        a = { "<cmd>lua require("spectre").open_visual({select_word=true})<CR>" },
+        d = { "<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>" },
+        e = { "<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>" },
+        g = { "<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>" },
         b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
         c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
         f = { "<cmd>Telescope find_files<cr>", "Find File" },
