@@ -35,3 +35,12 @@
 
 
 
+# hermes-engine
+
+https://repo1.maven.org/maven2/com/facebook
+http://localhost:8080/@http/facebook/react/react-native-artifacts/0.71.2/react-native-artifacts-0.71.2-hermes-ios-debug.tar.gz 
+
+https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/0.71.2/react-native-artifacts-0.71.2-hermes-ios-debug.tar.gz 
+
+https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/0.71.2/react-native-artifacts-0.71.2-hermes-ios-debug.tar.gz 
+
