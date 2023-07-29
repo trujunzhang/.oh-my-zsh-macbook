@@ -49,6 +49,7 @@ myArray=(
     # =================================
     "easycodeai.chatgpt-gpt4-gpt3-vscode"
     "amazonwebservices.aws-toolkit-vscode"
+    "github.copilot"
 
     # =================================
     # Node
