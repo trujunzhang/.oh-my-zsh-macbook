@@ -37,6 +37,8 @@ brew_apps=(
     "opt/lazygit"               "jesseduffield/lazygit/lazygit"
     ## neovim(fzf)
     "opt/fzf"                   "fzf"
+    ## neovim(spectre)
+    "opt/gnu-sed"               "gnu-sed"
 
     ## fish
     "opt/fish"                  "fish"
