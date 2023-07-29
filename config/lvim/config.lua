@@ -15,6 +15,7 @@ reload "user.functions"
 reload "user.dial"
 reload "user.shortcut"
 reload "user.dap-debug"
+-- reload "user.spectre"
 
 -- reload "user.chatgpt"
 -- reload "user.neoai"
