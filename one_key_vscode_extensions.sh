@@ -7,6 +7,7 @@ myArray=(
     # Themes
     # =================================
     "github.github-vscode-theme"
+    "dracula-theme.theme-dracula"
 
     # =================================
     # Projects and Files
