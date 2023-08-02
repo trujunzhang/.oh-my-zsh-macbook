@@ -39,6 +39,9 @@ ENV_PROJECT_FOLD="$WORKING_FOLD/projects_envs"
 envs_global_flutter_ieatta=(
     "sbNext/env"     "packages/sbNext/.env.local"
 )
+envs_github=(
+    "trujunzhang/env.example"     "@github/trujunzhang/.env.local"
+)
 
 function link_envs {
   source_name=$1 
@@ -56,7 +59,7 @@ function link_envs {
   echo "=================================================================================="
   echo "                                          "
 
-# echo "${envs_array[*]}"
+  # echo "${envs_array[*]}"
 
     for (( i=2; i<${#envs_array[@]}; i=i+2 ));
     do
@@ -73,7 +76,8 @@ function link_envs {
 
 }
 
-link_envs "global-flutter-ieatta" "global-flutter-ieatta" "${envs_global_flutter_ieatta[@]}" 
+link_envs "global-flutter-ieatta" "global-flutter-ieatta"  "${envs_global_flutter_ieatta[@]}" 
+link_envs "github"                "@SharedPackage"         "${envs_github[@]}" 
 
 
 
