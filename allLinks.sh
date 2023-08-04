@@ -98,8 +98,8 @@ function link_config_fold {
   directoryLink  "config(skhd)"     "$TRUJUNZHANG_DOTFILES_HOME/config/skhd"        "$HOME/.config/skhd"
 
   # lvim
-  directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-abzcoding"       "$HOME/.config/lvim"
-  # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-adibhanna"       "$HOME/.config/lvim"
+  # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-abzcoding"       "$HOME/.config/lvim"
+  directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-adibhanna"       "$HOME/.config/lvim"
 
   # fish
   directoryLink  "config(vlc)"     "$TRUJUNZHANG_DOTFILES_HOME/config/fish"       "$HOME/.config/fish"
