@@ -24,7 +24,7 @@
   https://elijahmanor.com/blog/neovim-tailwindcss
   $LspInstall tailwindcss
 
-# lunarvim
+# lunarvim(lvim-adibhanna)
   url = https://github.com/adibhanna/lvim-config
 
 ## snippet
