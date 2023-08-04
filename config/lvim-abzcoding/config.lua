@@ -73,11 +73,6 @@ lvim.builtin.bigfile.active = true
 -- WARN: mind plugin is deprecated ( use with caution )
 lvim.builtin.mind = { active = false, root_path = "~/.mind" } -- enable/disable mind.nvim
 
--- djzhang's config
-  reload "user.autosave"
-  reload "user.shortcut"
-  reload "user.project"
-
 -- Custom User Config
 -- =========================================
 local user = vim.env.USER
@@ -116,7 +111,7 @@ require("user.builtin").config()
 -- StatusLine
 -- =========================================
 if lvim.builtin.fancy_statusline.active then
-  require("user.lualine").config()
+  -- require("user.lualine").config()
 end
 
 -- Debugging
@@ -137,7 +132,7 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
   "rust_analyzer",
   "taplo",
   "texlab",
-  "tsserver",
+  -- "tsserver",
   "yamlls",
 })
 require("user.null_ls").config()
@@ -153,3 +148,10 @@ require("user.autocommands").config()
 -- Additional Keybindings
 -- =========================================
 require("user.keybindings").config()
+
+-- djzhang's config
+  reload "user.autosave"
+  reload "user.shortcut"
+  reload "user.project"
+  reload "user.lsp"
+
