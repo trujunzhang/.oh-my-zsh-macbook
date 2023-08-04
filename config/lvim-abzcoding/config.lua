@@ -73,6 +73,9 @@ lvim.builtin.bigfile.active = true
 -- WARN: mind plugin is deprecated ( use with caution )
 lvim.builtin.mind = { active = false, root_path = "~/.mind" } -- enable/disable mind.nvim
 
+-- djzhang's config
+  reload "user.autosave"
+
 -- Custom User Config
 -- =========================================
 local user = vim.env.USER
