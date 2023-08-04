@@ -76,6 +76,7 @@ lvim.builtin.mind = { active = false, root_path = "~/.mind" } -- enable/disable 
 -- djzhang's config
   reload "user.autosave"
   reload "user.shortcut"
+  reload "user.project"
 
 -- Custom User Config
 -- =========================================
