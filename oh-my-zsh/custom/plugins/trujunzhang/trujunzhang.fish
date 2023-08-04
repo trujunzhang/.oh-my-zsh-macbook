@@ -588,3 +588,6 @@ alias bubu='bubo && bubc'
 alias bubug='bubo && bugbc'
 alias bfu='brew upgrade --formula'
 alias buz='brew uninstall --zap'
+
+# lunarvim
+alias lvimUpdateReset="lvim +LvimUpdate +LvimCacheReset +q"
