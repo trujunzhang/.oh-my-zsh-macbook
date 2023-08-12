@@ -27,8 +27,11 @@
 # lunarvim(lvim-adibhanna)
   url = https://github.com/adibhanna/lvim-config
 
-# lunarvim(lvim-abzcoding)
+# lunarvim(lvim-abzcoding)(error???)
   url = https://github.com/abzcoding/lvim
+
+# lunarvim(lvim-ChristianChiarulli)
+  url = https://github.com/ChristianChiarulli/lvim
 
 ## snippet
   git clone https://github.com/dsznajder/vscode-es7-javascript-react-snippets config/lvim/snippets
