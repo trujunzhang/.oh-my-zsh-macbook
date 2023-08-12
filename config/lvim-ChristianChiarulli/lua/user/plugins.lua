@@ -19,12 +19,12 @@ lvim.plugins = {
   -- },
   "andymass/vim-matchup",
   "lunarvim/synthwave84.nvim",
-  {
-    "kndndrj/nvim-dbee",
-    build = function()
-      require("dbee").install()
-    end,
-  },
+  -- {
+  --   "kndndrj/nvim-dbee",
+  --   build = function()
+  --     require("dbee").install()
+  --   end,
+  -- },
   "kkharji/sqlite.lua",
   { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
   { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
