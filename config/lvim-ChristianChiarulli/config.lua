@@ -39,3 +39,9 @@ reload "user.modicator"
 
 -- djzhang's config
 reload "user.autosave"
+
+-- snippets
+-- refer:
+--    https://github.com/sambergo/lunarvim-snippet-examples
+require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/vscode-es7-javascript-react-snippets" } }
+require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/my-snippets" } }
