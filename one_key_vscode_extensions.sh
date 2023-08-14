@@ -50,7 +50,8 @@ myArray=(
     # =================================
     "easycodeai.chatgpt-gpt4-gpt3-vscode"
     "amazonwebservices.aws-toolkit-vscode"
-    "github.copilot"
+    # "github.copilot"
+    "codeium.codeium"
 
     # =================================
     # Node
@@ -96,11 +97,11 @@ myArray=(
     # =================================
     # Flutter
     # =================================
-    "Dart-Code.flutter"
-    "Dart-Code.dart-code"
-    "Nash.awesome-flutter-snippets"
-    "alexisvt.flutter-snippets"
-    "hirantha.json-to-dart"
+    # "Dart-Code.flutter"
+    # "Dart-Code.dart-code"
+    # "Nash.awesome-flutter-snippets"
+    # "alexisvt.flutter-snippets"
+    # "hirantha.json-to-dart"
 
     # =================================
     # Vue
