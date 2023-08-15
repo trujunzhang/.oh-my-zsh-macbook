@@ -338,6 +338,13 @@ function link_nginx_http {
   directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"       "$HOMEBREW_HOME/var/www/@http"
 }
 
+function link_mac_app_cloud {
+  HOME_ONE_DRIVE_APP_CLOUD="$HOME/Library/CloudStorage/OneDrive-Personal/AppCloud"
+  directoryLink "cloud(Pieces.os)"   "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.os"       "$HOME/Library/com.pieces.os"
+  directoryLink "cloud(Pieces.app)"  "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.pfd"      "$HOME/Library/com.pieces.pfd"
+}
+
+
 function link_mac_user {
   HOME_MAC_USER_PATH="/Volumes/MacUser/djzhang"
   HOME_PROFILE_BACKUP_PATH="/Volumes/MacWork/ProfileBackup"
@@ -387,6 +394,7 @@ link_getx_shell
 link_pods_shell
 link_run_apps_shell
 link_nginx_http
+link_mac_app_cloud 
 if [[ $(uname -m) == 'arm64' ]]; then
   # echo M2
   link_mac_user
