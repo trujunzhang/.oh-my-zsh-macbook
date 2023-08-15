@@ -346,11 +346,10 @@ function link_mac_app_cloud {
 
 
 function link_mac_user {
-  ORIGINAL_USER_HOME="/Users/djzhang"
   HOME_PROFILE_BACKUP_PATH="/Volumes/MacWork/ProfileBackup"
 
   # android 
-  directoryLink "android(avd-fold)"  "$ORIGINAL_USER_HOME/.android"                             "$HOME/.android"
+  directoryLink "android(avd-fold)"  "/Users/djzhang/.android"                             "$HOME/.android"
   directoryLink "android(avd)"       "$HOME_PROFILE_BACKUP_PATH/dev-android/.android"           "$HOME/.android"
   directoryLink "android(avd)"       "$HOME_PROFILE_BACKUP_PATH/dev-android/Gradle/.gradle"     "$HOME/.gradle"
   directoryLink "android(sdk)"       "$HOME_PROFILE_BACKUP_PATH/dev-android/Android"            "$HOME/Library/Android"
