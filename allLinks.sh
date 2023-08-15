@@ -339,25 +339,24 @@ function link_nginx_http {
 }
 
 function link_mac_app_cloud {
-  HOME_ONE_DRIVE_APP_CLOUD="$HOME/Library/CloudStorage/OneDrive-Personal/AppCloud"
-  directoryLink "cloud(Pieces.os)"   "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.os"       "$HOME/Library/com.pieces.os"
-  directoryLink "cloud(Pieces.app)"  "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.pfd"      "$HOME/Library/com.pieces.pfd"
+  HOME_ONE_DRIVE_APP_CLOUD="$PATH_USERPROFILE_LIBRARY/CloudStorage/OneDrive-Personal/AppCloud"
+  directoryLink "cloud(Pieces.os)"   "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.os"       "$PATH_USERPROFILE_LIBRARY/com.pieces.os"
+  directoryLink "cloud(Pieces.app)"  "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.pfd"      "$PATH_USERPROFILE_LIBRARY/com.pieces.pfd"
 }
 
 
 function link_mac_user {
-  HOME_MAC_USER_PATH="/Volumes/MacUser/djzhang"
   HOME_PROFILE_BACKUP_PATH="/Volumes/MacWork/ProfileBackup"
 
   # android 
-  directoryLink "android(avd)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/.android"           "$HOME_MAC_USER_PATH/.android"
-  directoryLink "android(avd)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/Gradle/.gradle"     "$HOME_MAC_USER_PATH/.gradle"
-  directoryLink "android(sdk)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/Android"            "$HOME_MAC_USER_PATH/Library/Android"
+  directoryLink "android(avd)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/.android"           "$HOME/.android"
+  directoryLink "android(avd)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/Gradle/.gradle"     "$HOME/.gradle"
+  directoryLink "android(sdk)"      "$HOME_PROFILE_BACKUP_PATH/dev-android/Android"            "$HOME/Library/Android"
 
   # ios
-  directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME_MAC_USER_PATH/.cocoapods"
+  directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME/.cocoapods"
   directoryLink "ios(.offline-git)"        "$HOME_PROFILE_BACKUP_PATH/dev-ios/__CACHES"             "$ORGANIZATIONS_HOME/__CACHES"
-  directoryLink "ios(Library-Caches)"      "$HOME_PROFILE_BACKUP_PATH/dev-ios/Caches/CocoaPods"     "$PATH_USERPROFILE_LIBRARY/Caches/CocoaPods"
+  # directoryLink "ios(Library-Caches)"      "$HOME_PROFILE_BACKUP_PATH/dev-ios/Caches/CocoaPods"     "$PATH_USERPROFILE_LIBRARY/Caches/CocoaPods"
 
   # org
   directoryLink "org(__APPLICATIONS)"       "$HOME_PROFILE_BACKUP_PATH/org/__APPLICATIONS"        "$ORGANIZATIONS_HOME/__APPLICATIONS"
@@ -366,10 +365,10 @@ function link_mac_user {
   directoryLink "org(IDES)"                 "$HOME_PROFILE_BACKUP_PATH/org/IDES"                  "$ORGANIZATIONS_HOME/IDES"
 
   # home
-  directoryLink "home(miniforge3)"          "$HOME_PROFILE_BACKUP_PATH/home/miniforge3"            "$HOME_MAC_USER_PATH/miniforge3"
+  directoryLink "home(miniforge3)"          "$HOME_PROFILE_BACKUP_PATH/home/miniforge3"            "$HOME/miniforge3"
 
   # Parallels Desktop
-  directoryLink "win11(Parallels Desktop)"    "/Volumes/MacGame/VMDesktop/Windows 11.pvm"           "$HOME_MAC_USER_PATH/Parallels/Windows 11.pvm"
+  directoryLink "win11(Parallels Desktop)"    "/Volumes/MacGame/VMDesktop/Windows 11.pvm"           "$HOME/Parallels/Windows 11.pvm"
 }
 
 # mkdir '/usr/local/bin'
