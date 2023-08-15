@@ -21,6 +21,7 @@ brew_apps=(
     "Raycast.app"             "raycast"
     "SpaceLauncher.app"       "spacelauncher"
     "Notion.app"              "notion"
+    "OneDrive.app"            "onedrive"
     # "BaiduNetdisk.app"        "baidunetdisk"
 
     # Web browser
