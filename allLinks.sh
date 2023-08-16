@@ -15,7 +15,7 @@ if [[ $(uname -m) == 'x86_64' ]]; then
 fi
 
 TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
-
+HOMEBREW_HOME="$(brew --prefix)"
 
 echo "                         "
 echo "=================================================================================="
@@ -73,6 +73,10 @@ SYSTEM_APPLICATION="/Applications"
 #         All Links
 # ====================================================================
 # ====================================================================
+
+function link_homebrew {
+  fileLink "brew(fish)"  "$HOMEBREW_HOME/bin/fish" "$SYSTEM_BIN_PATH/fish"  "delete"
+}
 
 function link_applescript {
   # shell that run when os startup.
@@ -385,6 +389,7 @@ mkdir -p "$HOME/.local/bin"
 mkdir -p "$HOME/.config"
 
 
+link_homebrew
 link_applescript
 link_config_fold
 link_ide_configs
