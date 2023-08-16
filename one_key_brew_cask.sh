@@ -38,8 +38,8 @@ brew_apps=(
     "Microsoft Edge.app"      "microsoft-edge"
 
     # Video player
-    "Kodi.app"                "kodi"
-    "VLC.app"                 "vlc"
+    # "Kodi.app"                "kodi"
+    # "VLC.app"                 "vlc"
     "mpv.app"                 "mpv"
 
     # Design apps
