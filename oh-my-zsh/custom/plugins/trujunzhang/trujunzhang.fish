@@ -88,9 +88,9 @@ alias rnands='npm run android:shake'
 alias rninfo='npx react-native info'
 alias rnnewapp='npx react-native init'
 
-function rnnewtsapp 
+function rnnewtsapp
      set app_name $argv[1]
-     npx react-native init "$app_name" --version 0.69.5 --template react-native-template-typescript --skip-install 
+     npx react-native init "$app_name" --version 0.69.5 --template react-native-template-typescript --skip-install
 end
 
 # rebuild android/ios folders
@@ -450,7 +450,7 @@ alias dgitreset="git init && git add . && git commit -m 'first commit' && git ch
 alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
 
 # supabase
-function supabase_gen 
+function supabase_gen
      set project-id $argv[1]
      set dest_fold "plugins/app-supabase/types"
      mkdir -p "$dest_fold"
@@ -480,7 +480,7 @@ alias edoominstall="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom inst
 alias edoomsync="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom sync"
 alias edoomdoctor="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom doctor"
 
-# 
+#
 # youtube-dl(pending)
 # https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/
 #
@@ -556,26 +556,27 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 
 # homebrew
 # brew services start d12frosted/emacs-plus/emacs-plus@30
-function binstall-emacs 
-   if not test -d  "$HOMEBREW_HOME/opt/emacs-plus@30" 
-         brew tap d12frosted/emacs-plus  
-         brew install emacs-plus@30 --with-spacemacs-icon 
-         brew link emacs-plus@30  
+function binstall-emacs
+   if not test -d  "$HOMEBREW_HOME/opt/emacs-plus@30"
+         brew tap d12frosted/emacs-plus
+         brew install emacs-plus@30 --with-spacemacs-icon
+         brew link emacs-plus@30
    end
-   if not test -d  "/Applications/Emacs.app" 
+   if not test -d  "/Applications/Emacs.app"
       ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications
    end
  end
 
 # neovim
 alias l="lvim"
+alias n="nvim"
 alias vsc="code ."
 
-function killvim 
+function killvim
     kill $(ps aux | grep 'neovim' | awk '{print $2}')
 end
 
-# brew 
+# brew
 alias bcubc='brew upgrade --cask && brew cleanup'
 alias bcubo='brew update && brew outdated --cask'
 alias bcubc='brew upgrade --cask && brew cleanup'

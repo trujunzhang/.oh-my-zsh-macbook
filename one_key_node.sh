@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CURRENT=`pwd` 
+CURRENT=`pwd`
 
 # Import function files.
 source ./bash/files-functions.sh
@@ -12,19 +12,19 @@ node_old="16.15.1"
 
 # nvm(node.js)
 if [ ! -d  ~/.nvm ]; then
-    cd ~/ && rm -rf .nvm 
+    cd ~/ && rm -rf .nvm
     git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm
-    cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh 
+    cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh
     nvm install "$node_global"
     nvm alias default "$node_global" # default node.js
     nvm install "$node_old"
-fi    
+fi
 
 node_apps=(
     "eslint_d"
     "prettier"
 
-    # cli 
+    # cli
     "netlify-cli"      # https://docs.netlify.com/cli/get-started/
     "vercel"           # https://vercel.com/docs/cli
     "sanity@latest"    # https://www.sanity.io/docs/cli
@@ -35,7 +35,7 @@ node_apps=(
     "npm-check-updates"
     "monia-cli"
     "firebase-tools"
-    # fi    
+    # fi
 
     ## typescript
     "typescript tern js-beautify eslint"
@@ -49,11 +49,12 @@ node_apps=(
     "expo-cli"
     # https://docs.expo.dev/build/setup/
     "eas-cli"
-    # fi    
+    # fi
 
     # neovim
     "neovim"
     "typescript-language-server"
+    "vscode-langservers-extracted" # Ready:"vscode-eslint-language-server"
 
     # spacemacs typescript-mode
     # https://develop.spacemacs.org/layers/+lang/typescript/README.html
@@ -67,7 +68,7 @@ function install_global_npm {
     for (( i=0; i<${#node_apps[@]}; i=i+1 ));
     do
         echo "element $i is ${node_apps[$i]}"
-        npm install --location=global ${node_apps[$i]} 
+        npm install --location=global ${node_apps[$i]}
     done
 
 }

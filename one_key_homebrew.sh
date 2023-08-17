@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CURRENT=`pwd` 
+CURRENT=`pwd`
 
 # Import function files.
 source ./bash/files-functions.sh
@@ -28,8 +28,8 @@ brew_apps=(
     "opt/v2ray-core"            "v2ray-core"
 
     ## neovim
-    "opt/tree-sitter"           "tree-sitter"   
-    "opt/prettierd"             "fsouza/prettierd/prettierd"   
+    "opt/tree-sitter"           "tree-sitter"
+    "opt/prettierd"             "fsouza/prettierd/prettierd"
     ## neovim(telescope)
     "opt/fd"                    "fd"
     "opt/ripgrep"               "ripgrep"
@@ -81,6 +81,10 @@ brew_apps=(
 
     ## React-native & Expo
     "opt/watchman"           "bundletool watchman"
+
+    ## neovim
+    # https://github.com/universal-ctags/ctags
+    "opt/universal-ctags"    "universal-ctags"
 )
 
 for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
@@ -89,7 +93,7 @@ do
     echo "element $i is ${brew_apps[$i+1]}"
 
     if [ ! -d  "$HOMEBREW_HOME/${brew_apps[$i+0]}" ]; then
-        brew install ${brew_apps[$i+1]} 
+        brew install ${brew_apps[$i+1]}
     fi
 done
 
