@@ -55,6 +55,7 @@ node_apps=(
     "neovim"
     "typescript-language-server"
     "vscode-langservers-extracted" # Ready:"vscode-eslint-language-server"
+    "emmet-ls"
 
     # spacemacs typescript-mode
     # https://develop.spacemacs.org/layers/+lang/typescript/README.html
