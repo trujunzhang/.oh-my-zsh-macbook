@@ -9,7 +9,7 @@ M.ui = {
   theme = "chadracula",
   theme_toggle = { "chadracula", "one_light" },
   lsp_semantic_tokens = false,
-  statusline = core.statusline,
+  -- statusline = core.statusline,
   tabufline = core.tabufline,
 
   cmp = {
