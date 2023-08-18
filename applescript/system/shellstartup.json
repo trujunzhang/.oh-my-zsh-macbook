@@ -3,7 +3,7 @@
     "type": "application",
     "name": "kitty",
     "application": "kitty",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",

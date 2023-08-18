@@ -85,6 +85,7 @@ brew_apps=(
     ## neovim
     # https://github.com/universal-ctags/ctags
     "opt/universal-ctags"    "universal-ctags"
+    "opt/lua"                "lua"
 )
 
 for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
