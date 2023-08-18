@@ -124,7 +124,7 @@ M.text = {
       " New line",
     },
   },
-
+  
   n = {
     ["<leader>cc"] = { "<cmd> ColorcolumnToggle <CR>", " Toggle ColorColumn display" },
     -- Navigate
@@ -232,6 +232,9 @@ M.window = {
 }
 
 M.general = {
+  -- p = {
+  --   ["<leader>b"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
+  -- },
   n = {
     [";"] = { ":", "󰘳 Enter command mode", opts = { nowait = true } },
     ["<leader>q"] = { "<cmd>q<CR>", "󰗼 Close" },

@@ -3,6 +3,17 @@ local cmp_opt = require "custom.configs.cmp"
 
 ---@type NvPluginSpec[]
 local plugins = {
+  ----------------------------------------- djzhang's plugins ------------------------------------------
+  -- project.nvim
+  {
+    "ahmedkhalf/project.nvim",
+    config = function()
+      require("plugins.configs.project").setup()
+    end,
+    enabled = true,
+    event = "VimEnter",
+    cmd = "Telescope projects",
+  },
   ----------------------------------------- override plugins ------------------------------------------
   {
     "neovim/nvim-lspconfig",
