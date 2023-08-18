@@ -83,4 +83,4 @@ g.VM_maps = {
 o.statuscolumn = "%=%l%s%C"
 o.emoji = false
 
-vim.g.vscode_snippets_path="~/.config/nvim/plugins/snippets"
+vim.g.vscode_snippets_path="~/.config/nvim-snippets"

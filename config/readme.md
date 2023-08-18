@@ -33,6 +33,9 @@
 # lunarvim(lvim-ChristianChiarulli)
   url = https://github.com/ChristianChiarulli/lvim
 
+# nvim(NvChad)
+  url = https://github.com/BrunoKrugel/dotfiles
+
 ## snippet
   git clone https://github.com/dsznajder/vscode-es7-javascript-react-snippets config/lvim/snippets
 

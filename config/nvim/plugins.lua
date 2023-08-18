@@ -8,7 +8,7 @@ local plugins = {
   {
     "ahmedkhalf/project.nvim",
     config = function()
-      require("plugins.configs.project").setup()
+      require("custom.configs.project").setup()
     end,
     enabled = true,
     event = "VimEnter",

@@ -101,6 +101,9 @@ function link_config_fold {
   directoryLink  "config(yabai)"    "$TRUJUNZHANG_DOTFILES_HOME/config/yabai"       "$HOME/.config/yabai"
   directoryLink  "config(skhd)"     "$TRUJUNZHANG_DOTFILES_HOME/config/skhd"        "$HOME/.config/skhd"
 
+  # nvim-snippet
+  directoryLink  "nvim(snippets)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets"       "$HOME/.config/nvim-snippets"
+
   # lvim
   # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-abzcoding"       "$HOME/.config/lvim"
   # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-adibhanna"       "$HOME/.config/lvim"

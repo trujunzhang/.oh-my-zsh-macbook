@@ -23,8 +23,8 @@ reload "user.dap-debug"
 -- snippets
 -- refer:
 --    https://github.com/sambergo/lunarvim-snippet-examples
-require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/vscode-es7-javascript-react-snippets" } }
-require("luasnip/loaders/from_vscode").load { paths = { "~/.config/lvim/snippets/my-snippets" } }
+require("luasnip/loaders/from_vscode").load { paths = { "~/.config/nvim-snippets/vscode-es7-javascript-react-snippets" } }
+require("luasnip/loaders/from_vscode").load { paths = { "~/.config/nvim-snippets/my-snippets" } }
 
 -- set notimeout
 -- set encoding=utf-8
