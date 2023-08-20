@@ -62,13 +62,13 @@ autocmd("BufEnter", {
 })
 
 -- Prefetch tabnine
-autocmd("BufRead", {
-  group = augroup("prefetch", { clear = true }),
-  pattern = "*",
-  callback = function()
-    require("cmp_tabnine"):prefetch(vim.fn.expand "%:p")
-  end,
-})
+-- autocmd("BufRead", {
+--   group = augroup("prefetch", { clear = true }),
+--   pattern = "*",
+--   callback = function()
+--     require("cmp_tabnine"):prefetch(vim.fn.expand "%:p")
+--   end,
+-- })
 
 -- Don't auto comment new line
 autocmd("BufEnter", {

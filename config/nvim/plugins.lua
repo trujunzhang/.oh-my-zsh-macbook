@@ -1,5 +1,5 @@
 local overrides = require "custom.configs.overrides"
-local cmp_opt = require "custom.configs.cmp"
+-- local cmp_opt = require "custom.configs.cmp"
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -111,39 +111,41 @@ local plugins = {
   },
   {
     "hrsh7th/nvim-cmp",
-    opts = cmp_opt.cmp,
+    opts = function()
+      return require("custom.configs.cmp").cmp
+    end,
+    -- opts = cmp_opt.cmp,
     dependencies = {
       "delphinus/cmp-ctags",
       "hrsh7th/cmp-nvim-lsp-document-symbol",
       -- "hrsh7th/cmp-copilot",
       "ray-x/cmp-treesitter",
-      -- {
-      --     'Exafunction/codeium.vim',
-      --     config = function ()
-      --       -- Change '<C-g>' here to any keycode you like.
-      --       -- vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-      --       vim.keymap.set('i', '<Right>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-      --       vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-      --       vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-      --       vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-      --     end
-      -- },
       {
-        "tzachar/cmp-tabnine",
-        build = "./install.sh",
-        config = function()
-          local tabnine = require "cmp_tabnine.config"
-          tabnine:setup {
-            max_lines = 1000,
-            max_num_results = 3,
-            sort = true,
-            show_prediction_strength = true,
-            run_on_every_keystroke = true,
-            snipper_placeholder = "..",
-            ignored_file_types = {},
-          }
-        end,
+          'Exafunction/codeium.vim',
+          config = function ()
+            -- Change '<C-g>' here to any keycode you like.
+            -- vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+            vim.keymap.set('i', '<Right>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+            vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+            vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+            vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+          end
       },
+     -- {
+     --   'codota/tabnine-nvim', 
+     --   build = "./dl_binaries.sh",
+     --   config = function()
+     --     require('tabnine').setup({
+     --       disable_auto_comment=true,
+     --       accept_keymap="<Right>",
+     --       dismiss_keymap = "<C-]>",
+     --       debounce_ms = 800,
+     --       suggestion_color = {gui = "#808080", cterm = 244},
+     --       exclude_filetypes = {"TelescopePrompt"},
+     --       log_file_path = nil, -- absolute path to Tabnine log file
+     --     })
+     --     end,
+     -- }, 
       {
         "L3MON4D3/LuaSnip",
         config = function(_, opts)
