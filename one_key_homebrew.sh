@@ -86,6 +86,8 @@ brew_apps=(
     # https://github.com/universal-ctags/ctags
     "opt/universal-ctags"    "universal-ctags"
     "opt/lua"                "lua"
+    # https://deno.land/
+    "opt/deno"               "deno"
 )
 
 for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
