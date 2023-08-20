@@ -44,3 +44,6 @@ nicknisi/vim/.netrwhist
 
 node_modules/
 package-lock.json
+
+# nvchad
+.luarc.json
