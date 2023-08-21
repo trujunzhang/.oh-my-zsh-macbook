@@ -180,13 +180,13 @@ M.mason = {
     "yaml-language-server",
 
     -- golang
-    "gopls",
-    "goimports",
-    "golines",
-    "gomodifytags",
-    "impl",
-    "iferr",
-    "staticcheck",
+    -- "gopls",
+    -- "goimports",
+    -- "golines",
+    -- "gomodifytags",
+    -- "impl",
+    -- "iferr",
+    -- "staticcheck",
   },
 
   ui = {
