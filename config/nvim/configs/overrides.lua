@@ -293,7 +293,7 @@ M.telescope = {
     "harpoon",
     "noice",
     "ast_grep",
-    "ctags_plus",
+    -- "ctags_plus",
     "luasnip",
   },
   extensions = {

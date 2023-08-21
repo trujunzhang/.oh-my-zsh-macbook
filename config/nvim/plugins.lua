@@ -60,7 +60,7 @@ local plugins = {
     opts = overrides.telescope,
     dependencies = {
       "debugloop/telescope-undo.nvim",
-      "gnfisher/nvim-telescope-ctags-plus",
+      -- "gnfisher/nvim-telescope-ctags-plus",
       "tom-anders/telescope-vim-bookmarks.nvim",
       "benfowler/telescope-luasnip.nvim",
       "Marskey/telescope-sg",
@@ -116,7 +116,7 @@ local plugins = {
     end,
     -- opts = cmp_opt.cmp,
     dependencies = {
-      "delphinus/cmp-ctags",
+      -- "delphinus/cmp-ctags",
       "hrsh7th/cmp-nvim-lsp-document-symbol",
       -- "hrsh7th/cmp-copilot",
       "ray-x/cmp-treesitter",
@@ -132,7 +132,7 @@ local plugins = {
           end
       },
      -- {
-     --   'codota/tabnine-nvim', 
+     --   'codota/tabnine-nvim',
      --   build = "./dl_binaries.sh",
      --   config = function()
      --     require('tabnine').setup({
@@ -145,7 +145,7 @@ local plugins = {
      --       log_file_path = nil, -- absolute path to Tabnine log file
      --     })
      --     end,
-     -- }, 
+     -- },
       {
         "L3MON4D3/LuaSnip",
         config = function(_, opts)
@@ -1003,11 +1003,11 @@ local plugins = {
     },
   },
   ----------------------------------------- completions plugins ------------------------------------------
-  {
-    "ludovicchabant/vim-gutentags",
-    event = "BufReadPost",
-  },
   -- {
+  --   "ludovicchabant/vim-gutentags",
+  --   event = "BufReadPost",
+  -- },
+  -- -- {
   --   "github/copilot.vim",
   --   lazy = false,
   --   config = function()
