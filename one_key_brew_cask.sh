@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CURRENT=`pwd` 
+CURRENT=`pwd`
 
 # Import function files.
 source ./bash/files-functions.sh
@@ -22,6 +22,7 @@ brew_apps=(
     "SpaceLauncher.app"       "spacelauncher"
     "Notion.app"              "notion"
     "OneDrive.app"            "onedrive"
+    "Hammerspoon.app"         "hammerspoon"
     # "BaiduNetdisk.app"        "baidunetdisk"
 
     # Web browser
@@ -64,11 +65,11 @@ function install_brew_app {
 
     if [ "$Params" = "delete" ]; then
         if [ -d  "/Applications/${name}" ]; then
-            sudo rm -rf "/Applications/${name}" 
+            sudo rm -rf "/Applications/${name}"
         fi
     elif [ "$Params" = "open" ]; then
         if [ -d  "/Applications/${name}" ]; then
-            open "/Applications/${name}" 
+            open "/Applications/${name}"
         fi
     elif [ "$Params" = "$DEFAULTVALUE" ]; then
         if [ ! -d  "/Applications/${name}" ]; then
@@ -88,7 +89,7 @@ do
     echo "element $i is ${brew_apps[$i+0]}"
     echo "element $i is ${brew_apps[$i+1]}"
 
-    install_brew_app "${brew_apps[$i+0]}" "${brew_apps[$i+1]}" 
+    install_brew_app "${brew_apps[$i+0]}" "${brew_apps[$i+1]}"
 done
 
 if [[ $(uname -m) == 'x86_64' ]]; then
