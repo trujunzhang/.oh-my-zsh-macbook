@@ -52,6 +52,10 @@ brew_apps=(
     ## nginx
     "opt/nginx"                 "nginx"
 
+    ## jenkins-lts
+    # https://www.jenkins.io/download/lts/macos
+    "opt/jenkins"              "jenkins-lts"
+
     ## direnv
     # https://direnv.net/#getting-started
     "opt/direnv"             "direnv"
