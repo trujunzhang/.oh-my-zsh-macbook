@@ -18,6 +18,7 @@ fold_apps=(
     "$ORGANIZATIONS_HOME/IDES/emacs-shim/spacemacs"
     "$ORGANIZATIONS_HOME/IDES/nvm/localNVM"
     "$HOME/.local/share/lunarvim/lvim"
+    "$HOME/.config/nvim"
     # "$HOME/.local/share/omf"
   )
 
