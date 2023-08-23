@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-myArray=(
+vsExtensionsArray=(
 
 
     # =================================
@@ -51,7 +51,7 @@ myArray=(
     "easycodeai.chatgpt-gpt4-gpt3-vscode"
     "amazonwebservices.aws-toolkit-vscode"
     # "github.copilot"
-    # "codeium.codeium"
+    "codeium.codeium"
     "Codium.codium"   # https://www.codium.ai
 
     # =================================
@@ -120,16 +120,19 @@ Params=$1
 
 echo "${Params}"
 
+## get length of $vsExtentionsArray
+len=${#vsExtensionsArray[@]}
+
 function install_vs_extensions {
-    for (( i=0; i<${#myArray[@]}; i++ ));
+    for (( i=0; i<${#vsExtensionsArray[@]}; i++ ));
     do
         echo "                         "
         echo "==============================================================="
-        echo "element $i is ${myArray[$i]}"
+        echo "element $((i+1)) of ${len} is ${vsExtensionsArray[$i]}"
         echo "==============================================================="
         echo "                         "
 
-        code --install-extension ${myArray[$i]} "${Params}"
+        code --install-extension ${vsExtensionsArray[$i]} "${Params}"
     done
 }
 
