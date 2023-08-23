@@ -51,8 +51,8 @@ myArray=(
     "easycodeai.chatgpt-gpt4-gpt3-vscode"
     "amazonwebservices.aws-toolkit-vscode"
     # "github.copilot"
-    "codeium.codeium"
-    # "Codium.codium"   # https://www.codium.ai
+    # "codeium.codeium"
+    "Codium.codium"   # https://www.codium.ai
 
     # =================================
     # Node
@@ -120,12 +120,19 @@ Params=$1
 
 echo "${Params}"
 
-# for i in ${!myArray[@]}; do
-#   echo "element $i is ${myArray[$i]}"
-  # code --install-extension ${myArray[$i]} "${Params}"
-# done
+function install_vs_extensions {
+    for (( i=0; i<${#myArray[@]}; i++ ));
+    do
+        echo "                         "
+        echo "==============================================================="
+        echo "element $i is ${myArray[$i]}"
+        echo "==============================================================="
+        echo "                         "
 
-for (( i=0; i<${#myArray[@]}; i++ ));
-do
-    code --install-extension ${myArray[$i]} "${Params}"
-done
+        code --install-extension ${myArray[$i]} "${Params}"
+    done
+}
+
+
+rm -rf "$HOME/.vscode"
+install_vs_extensions

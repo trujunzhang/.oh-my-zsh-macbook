@@ -127,7 +127,7 @@
         "**/node_modules": false
     },
     "workbench.colorTheme.xxx": "GitHub Light Default",
-    "workbench.colorTheme": "Solarized Dark",
+    "workbench.colorTheme": "Dracula",
     "aws.suppressPrompts": {
         "yamlExtPrompt": true
     }
