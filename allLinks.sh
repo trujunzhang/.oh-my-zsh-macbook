@@ -6,7 +6,7 @@ CURRENT=`pwd`
 
 if [[ $(uname -m) == 'arm64' ]]; then
     # echo M2
-    ORGANIZATIONS_HOME="$HOME/Documents/Organizations"  
+    ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
 fi
 
 if [[ $(uname -m) == 'x86_64' ]]; then
@@ -117,6 +117,9 @@ function link_config_fold {
 
   # apps
   directoryLink  "config(vlc)"     "$TRUJUNZHANG_DOTFILES_HOME/config/vlc"       "$HOME/.config/vlc"
+
+  # nginx
+  fileLink  "config(nginx)"  "$TRUJUNZHANG_DOTFILES_HOME/USERS/homebrew/etc/nginx/nginx.conf"             "$HOMEBREW_HOME/etc/nginx/nginx.conf"  "delete"
 }
 
 function link_ide_configs {
@@ -215,7 +218,7 @@ function link_symlink {
   # directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
 
   # .oh-my-fish
-  fileLink  "oh-my-fish(functions:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang/trujunzhang.fish"    "$HOME/.config/fish/functions/trujunzhang.fish"   "delete"    
+  fileLink  "oh-my-fish(functions:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang/trujunzhang.fish"    "$HOME/.config/fish/functions/trujunzhang.fish"   "delete"
 
   # .oh-my-zsh
   # directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
@@ -292,8 +295,8 @@ function link_symlink {
   # directoryLink ".cocoapods(Repository)"   "/Volumes/MacDevelop/.cocoapods/Specs/Specs"           "$HOME/.cocoapods/repos/trunk/Specs"
 
   # cocoapods(Github)
-  # directoryLink ".cocoapods(github[@common])"   "/Volumes/MacDevelop/.github/@common"    "$ORGANIZATIONS_HOME/__CACHES/github/@common"   
-  # directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec"        "$ORGANIZATIONS_HOME/__CACHES/github/@spec"   
+  # directoryLink ".cocoapods(github[@common])"   "/Volumes/MacDevelop/.github/@common"    "$ORGANIZATIONS_HOME/__CACHES/github/@common"
+  # directoryLink ".cocoapods(github[@spec])"   "/Volumes/MacDevelop/.github/@spec"        "$ORGANIZATIONS_HOME/__CACHES/github/@spec"
 
   # cocoapods(Cache)
   # directoryLink ".cocoapods(Cache)"   "/Volumes/MacDevelop/.Caches/CocoaPods"           "$HOME/Library/Caches/CocoaPods"
@@ -358,7 +361,7 @@ function link_mac_app_cloud {
 function link_mac_user {
   HOME_PROFILE_BACKUP_PATH="/Volumes/MacWork/ProfileBackup"
 
-  # android 
+  # android
   directoryLink "android(avd-fold)"  "/Users/djzhang/.android"                                  "$HOME/.android"
   directoryLink "android(avd)"       "$HOME_PROFILE_BACKUP_PATH/dev-android/.android"           "$HOME/.android"
   directoryLink "android(avd)"       "$HOME_PROFILE_BACKUP_PATH/dev-android/Gradle/.gradle"     "$HOME/.gradle"
@@ -405,7 +408,7 @@ link_getx_shell
 link_pods_shell
 link_run_apps_shell
 link_nginx_http
-link_mac_app_cloud 
+link_mac_app_cloud
 if [[ $(uname -m) == 'arm64' ]]; then
   # echo M2
   link_mac_user

@@ -52,6 +52,7 @@ myArray=(
     "amazonwebservices.aws-toolkit-vscode"
     # "github.copilot"
     "codeium.codeium"
+    # "Codium.codium"   # https://www.codium.ai
 
     # =================================
     # Node
@@ -65,7 +66,7 @@ myArray=(
     # "hbenl.vscode-mocha-test-adapter"
 
     # =================================
-    # Sanity 
+    # Sanity
     # =================================
     "sanity-io.vscode-sanity"
     "hdoro.sanity-snippets"
