@@ -169,7 +169,7 @@ export REACT_NATIVE_MAX_WORKERS=2
 export EXPO_DEBUG=true
 
 ## Sentry(Expo)
-# export SENTRYCLI_LOCAL_CDNURL=http://localhost:8080/@http/sentry-cli
+# export SENTRYCLI_LOCAL_CDNURL=http://localhost:8000/@http/sentry-cli
 
 # emacs cask
 # ======================================================================

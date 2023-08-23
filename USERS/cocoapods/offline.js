@@ -3,7 +3,7 @@ const fs = require('fs')
 let cocoapodsResposity = process.env.HOME + "/.cocoapods/repos/master/Specs/"
 let trunkResposity = process.env.HOME + "/.cocoapods/repos/trunk/Specs/"
 let offlineGitFolder = 'file://' + process.env.HOME + '/Documents/Organizations/__CACHES/github/'
-let offlineHttpFolder = 'http://localhost:8080/@http/'
+let offlineHttpFolder = 'http://localhost:8000/@http/'
 let jsonFile = 'config/offline.json'
 
 function getDirectories(path) {
