@@ -88,7 +88,7 @@ alias rnands='npm run android:shake'
 alias rninfo='npx react-native info'
 alias rnnewapp='npx react-native init'
 function rnnewtsapp {
-    npx react-native init $1 --version 0.69.5 --template react-native-template-typescript --skip-install 
+    npx react-native init $1 --version 0.69.5 --template react-native-template-typescript --skip-install
 }
 
 # rebuild android/ios folders
@@ -475,7 +475,7 @@ alias edoominstall="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom inst
 alias edoomsync="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom sync"
 alias edoomdoctor="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom doctor"
 
-# 
+#
 # youtube-dl(pending)
 # https://ostechnix.com/youtube-dl-tutorial-with-examples-for-beginners/
 #
@@ -505,6 +505,7 @@ alias whcroninfo="crontab -l"
 
 # docker
 alias wdockps="docker ps -a"
+alias wdocklsimg="docker image ls"
 alias wdockrm='docker rm -f $(docker ps -a -q)'
 alias wdockimgrm='docker rmi $(docker images -q)'
 alias wdocklog='docker-compose logs --tail=all -f | grep'
@@ -553,9 +554,9 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 # brew services start d12frosted/emacs-plus/emacs-plus@30
 function binstall-emacs {
     if [ ! -d  "$HOMEBREW_HOME/opt/emacs-plus@30" ]; then
-        brew tap d12frosted/emacs-plus  
-        brew install emacs-plus@30 --with-spacemacs-icon 
-        brew link emacs-plus@30  
+        brew tap d12frosted/emacs-plus
+        brew install emacs-plus@30 --with-spacemacs-icon
+        brew link emacs-plus@30
     fi
     ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications
 }

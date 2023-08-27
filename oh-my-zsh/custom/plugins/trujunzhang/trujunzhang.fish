@@ -510,6 +510,7 @@ alias whcroninfo="crontab -l"
 
 # docker
 alias wdockps="docker ps -a"
+alias wdocklsimg="docker image ls"
 alias wdockrm='docker rm -f $(docker ps -a -q)'
 alias wdockimgrm='docker rmi $(docker images -q)'
 alias wdocklog='docker-compose logs --tail=all -f | grep'
