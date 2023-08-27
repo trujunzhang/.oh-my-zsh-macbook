@@ -1,6 +1,6 @@
 # https://bwh88.net/
 ================================================
-root password: IB4CY1iirTO3
+root password: Z3PdE3Guezgj
 SSH port: 27724
 ================================================
 
@@ -26,7 +26,7 @@ https://github.com/badafans/better-cloudflare-ip
 
 curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o cf.sh && chmod +x cf.sh && ./cf.sh
 
-[DEG] 请设置域名: 
+[DEG] 请设置域名:
 Input your domain here: [一級domain]
 
 https://holy-sea-effc.trujunzhang.workers.dev/
