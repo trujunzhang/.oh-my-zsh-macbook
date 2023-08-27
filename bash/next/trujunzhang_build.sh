@@ -7,7 +7,7 @@ if [ -f "$HOME/.ssh/id_rsa" ]; then
 fi
 
 
-docker_image_name="blog_trujunzhang"
+DOCKER_IMAGE="blog_trujunzhang"
 
 # First of all, clone the docker respository
 git clone https://github.com/trujunzhang/trujunzhang /tmp/trujunzhang
@@ -18,19 +18,20 @@ cp /tmp/projects_envs/github/trujunzhang/env.example /tmp/trujunzhang/.env.local
 
 # Build the docker image
 cd /tmp/trujunzhang
-docker build -t $docker_image_name .
+docker image rm $(DOCKER_IMAGE) || (echo "Image $(DOCKER_IMAGE) didn't exist so not removed."; exit 0)
+docker build -t $DOCKER_IMAGE.
 
 # stop runnin container(s)
-docker ps -q --filter "name=$docker_image_name" | xargs -r docker stop
+docker ps -q --filter "name=$DOCKER_IMAGE" | xargs -r docker stop
 # remove existing container(s)
-docker ps -aq --filter "name=$docker_image_name" | xargs -r docker rm
+docker ps -aq --filter "name=$DOCKER_IMAGE" | xargs -r docker rm
 
 docker run \
             --restart=always \
-            -d --name $docker_image_name \
+            -d --name $DOCKER_IMAGE \
             -v /etc/v2ray:/etc/v2ray \
             -p 80:3000\
-            $docker_image_name
+            $DOCKER_IMAGE
 
 
 # Why the "none" image appears in Docker and how can we avoid it
