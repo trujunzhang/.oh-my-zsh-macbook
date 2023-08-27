@@ -33,7 +33,8 @@ docker run \
             $docker_image_name
 
 
-
+# Why the "none" image appears in Docker and how can we avoid it
+docker rmi $(docker images -f "dangling=true" -q)
 
 
 
