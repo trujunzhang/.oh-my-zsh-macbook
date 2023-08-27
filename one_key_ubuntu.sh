@@ -4,21 +4,23 @@
 #    Welcome to Ubuntu 18.04 LTS (GNU/Linux 4.15.0-20-generic x86_64)
 #
 #
-#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && sudo cp /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && sudo chmod +x /usr/bin/one_key_ubuntu && sudo cp /$HOME/.oh-my-zsh-macbook/bash/x_ui_install.sh /usr/bin/x_ui_install && sudo chmod +x /usr/bin/x_ui_install 
+#    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && sudo cp /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && sudo chmod +x /usr/bin/one_key_ubuntu && sudo cp /$HOME/.oh-my-zsh-macbook/bash/x_ui_install.sh /usr/bin/x_ui_install && sudo chmod +x /usr/bin/x_ui_install
 #
 #
 #    cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_ubuntu.sh /usr/bin/one_key_ubuntu && chmod +x /usr/bin/one_key_ubuntu
 #
-# 
+#    cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/bash/next/trujunzhang_build.sh /usr/bin/trujunzhang_build && chmod +x /usr/bin/trujunzhang_build
+#
+#
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_vpn.sh /usr/bin/one_key_vpn && chmod +x /usr/bin/one_key_vpn && one_key_vpn
-# 
+#
 #    cd .oh-my-zsh-macbook && git pull && cp -u /$HOME/.oh-my-zsh-macbook/one_key_vpn.sh /usr/bin/one_key_vpn && chmod +x /usr/bin/one_key_vpn
 #
-# 
-#### common shells    
-#    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/generator_git_offline.sh /usr/bin/generator_git_offline && chmod +x /usr/bin/generator_git_offline 
-#    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/grpc/generator_grpc_git_offline.sh /usr/bin/generator_grpc_git_offline && chmod +x /usr/bin/generator_grpc_git_offline 
-#    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/grpc/git_clone_grpc_branch.sh /usr/bin/git_clone_grpc_branch && chmod +x /usr/bin/git_clone_grpc_branch 
+#
+#### common shells
+#    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/generator_git_offline.sh /usr/bin/generator_git_offline && chmod +x /usr/bin/generator_git_offline
+#    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/grpc/generator_grpc_git_offline.sh /usr/bin/generator_grpc_git_offline && chmod +x /usr/bin/generator_grpc_git_offline
+#    cp /$HOME/.oh-my-zsh-macbook/USERS/cocoapods/grpc/git_clone_grpc_branch.sh /usr/bin/git_clone_grpc_branch && chmod +x /usr/bin/git_clone_grpc_branch
 #
 #
 #    git clone https://github.com/trujunzhang/.oh-my-zsh-macbook && cd .oh-my-zsh-macbook && chmod +x one_key_ubuntu.sh && chmod +x bash/x_ui_install.sh
@@ -26,7 +28,7 @@
 #    cd /$HOME/.oh-my-zsh-macbook && ./one_key_ubuntu.sh
 #
 #
-#    x_ui_install && one_key_ubuntu 
+#    x_ui_install && one_key_ubuntu
 #
 #
 ##################################################################
@@ -80,7 +82,7 @@ function prepare_system {
 #         sh vpnsetup.sh
 
 function install_docker_apps {
-    # All dockers    
+    # All dockers
     ##  Installing Docker
 if ! command_exists docker; then
      sudo apt install -y docker.io
@@ -95,14 +97,14 @@ if ! command_exists docker-compose; then
      sudo chmod +x /usr/local/bin/docker-compose
      sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 fi
-      
+
     ## docker-pure-ftpd & qbittorrent
     cd "$HOME/.oh-my-zsh-macbook/USERS/Docker/docker-transmission"
     sudo docker-compose up -d
     cd "$HOME/.oh-my-zsh-macbook/USERS/Docker/docker-pure-ftpd"
     sudo docker-compose up -d
 
-    ## v2ray   
+    ## v2ray
     #  mkdir -p /etc/v2ray
     #  cp -r "$HOME/.oh-my-zsh-macbook/USERS/Docker/v2ray/etc/config.json" /etc/v2ray/config.json
     #  docker run \
@@ -126,7 +128,7 @@ fi
     ## https://github.com/yukilzw/factory
    ## git clone https://github.com/trujunzhang/factory /tmp/factory
    ## cd /tmp/factory
-   ## docker build -t factory . 
+   ## docker build -t factory .
    ## docker run \
    ##       --restart=always \
    ##       -p 1236:1236 \
@@ -137,7 +139,7 @@ function install_youtube_download {
     # yt-dlp
     python3 -m pip install --upgrade yt-dlp
 
-    ## usage   
+    ## usage
     sudo apt install -y ffmpeg
     mkdir -p /home/deploy/data/youtube
 
