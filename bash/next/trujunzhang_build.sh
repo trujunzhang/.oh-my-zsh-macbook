@@ -20,7 +20,7 @@ cp /tmp/projects_envs/github/trujunzhang/env.example /tmp/trujunzhang/.env.local
 cd /tmp/trujunzhang
 docker build -t $docker_image_name .
 
-docker run -p 3000:3000 $docker_image_name --restart=always
+docker run -p 3000:3000 -d $docker_image_name --restart=always
 
 
 
