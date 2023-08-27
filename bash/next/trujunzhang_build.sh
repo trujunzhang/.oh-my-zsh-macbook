@@ -20,7 +20,18 @@ cp /tmp/projects_envs/github/trujunzhang/env.example /tmp/trujunzhang/.env.local
 cd /tmp/trujunzhang
 docker build -t $docker_image_name .
 
-docker run -p 3000:3000 -d $docker_image_name --restart=always
+# stop runnin container(s)
+docker ps -q --filter "name=$docker_image_name" | xargs -r docker stop
+# remove existing container(s)
+docker ps -aq --filter "name=$docker_image_name" | xargs -r docker rm
+
+docker run \
+            --restart=always \
+            -d --name $docker_image_name \
+            -v /etc/v2ray:/etc/v2ray \
+            -p 80:3000\
+            $docker_image_name
+
 
 
 
