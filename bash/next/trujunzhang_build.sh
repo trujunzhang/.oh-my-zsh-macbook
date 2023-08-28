@@ -64,7 +64,6 @@ docker rmi $(docker images -f "dangling=true" -q)
 docker run \
             --restart=always \
             -d --name nextjs \
-            -v /etc/v2ray:/etc/v2ray \
             -p 3000:3000\
             nextjs
 
