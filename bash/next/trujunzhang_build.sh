@@ -6,7 +6,7 @@ if [ -f "$HOME/.ssh/id_rsa" ]; then
     chmod 400 "$HOME/.ssh/id_rsa"
 fi
 
-funtion install_ssl {
+function install_ssl {
     # Install Certbot.
     sudo apt-get update
     sudo apt-get install certbot
