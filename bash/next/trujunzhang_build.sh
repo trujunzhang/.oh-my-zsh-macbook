@@ -23,7 +23,7 @@ function install_ssl {
 }
 
 
-DOCKER_IMAGE="blog_trujunzhang"
+DOCKER_IMAGE="nextjs"
 
 install_ssl
 
@@ -38,6 +38,9 @@ cp /tmp/projects_envs/github/trujunzhang/env.example /tmp/trujunzhang/.env.local
 cd /tmp/trujunzhang
 # docker image rm $(DOCKER_IMAGE) || (echo "Image $(DOCKER_IMAGE) didn't exist so not removed."; exit 0)
 docker build -t "${DOCKER_IMAGE}" .
+
+docker build -t nextjs .
+docker build -t blog_nginx .
 
 # stop runnin container(s)
 docker ps -q --filter "name=$DOCKER_IMAGE" | xargs -r docker stop
@@ -57,6 +60,13 @@ docker-compose up -d
 # Why the "none" image appears in Docker and how can we avoid it
 docker rmi $(docker images -f "dangling=true" -q)
 
+
+docker run \
+            --restart=always \
+            -d --name nextjs \
+            -v /etc/v2ray:/etc/v2ray \
+            -p 3000:3000\
+            nextjs
 
 
 
