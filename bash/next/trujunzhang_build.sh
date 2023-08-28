@@ -37,7 +37,7 @@ cp /tmp/projects_envs/github/trujunzhang/env.example /tmp/trujunzhang/.env.local
 # Build the docker image
 cd /tmp/trujunzhang
 # docker image rm $(DOCKER_IMAGE) || (echo "Image $(DOCKER_IMAGE) didn't exist so not removed."; exit 0)
-docker build -t $DOCKER_IMAGE .
+docker build -t "${DOCKER_IMAGE}" .
 
 # stop runnin container(s)
 docker ps -q --filter "name=$DOCKER_IMAGE" | xargs -r docker stop
