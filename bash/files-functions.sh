@@ -12,26 +12,26 @@ function func1 {
 DEFAULTACTION="ignore"
 
 function  directoryLink {
-    
+
     msg=$1
     src=$2
     dest=$3
 
     Param="${4:-$DEFAULTACTION}"
-    
+
     echo ""
     printf "msg=%s\n" "${msg}"
     printf "src=%s\n" "${src}"
     printf "dest=%s\n" "${dest}"
     printf "action=%s\n" "${Param}"
 
-
-    if [ -d "${dest}" ]; then
+    # It is a symlink!
+    if [ -L "${dest}" ]; then
         if [ "$Param" = "delete" ]; then
-            rm -rf "${dest}"
+            rm "${dest}"
         fi
     fi
-    
+
     if [ -d "${dest}" ]
     then
         echo "Directory already exist. ${msg}"
@@ -42,30 +42,31 @@ function  directoryLink {
             echo "Directory does not exist. ${msg}"
         fi
     fi
-    
+
 }
 
 
 function  fileLink {
-    
+
     msg=$1
     src=$2
     dest=$3
 
     Param="${4:-$DEFAULTACTION}"
-    
+
     echo ""
     printf "msg=%s\n" "${msg}"
     printf "src=%s\n" "${src}"
     printf "dest=%s\n" "${dest}"
     printf "action=%s\n" "${Param}"
 
-    if [ -f "${dest}" ]; then
+    # It is a symlink!
+    if [ -L "${dest}" ]; then
         if [ "$Param" = "delete" ]; then
-            rm -rf "${dest}"
+            rm "${dest}"
         fi
     fi
-    
+
     if [ -f "${dest}" ]
     then
         echo "File already exist. ${msg}"
@@ -76,5 +77,5 @@ function  fileLink {
             echo "File does not exist. ${msg}"
         fi
     fi
-    
+
 }

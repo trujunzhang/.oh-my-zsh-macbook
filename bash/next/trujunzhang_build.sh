@@ -16,9 +16,7 @@ funtion install_ssl {
 
     # Run Certbot to generate the SSL certificate.
     # email: trujunzhang@gmail.com
-    if [ -d "/etc/letsencrypt"] ; then
-
-    else
+    if [ ! -d "/etc/letsencrypt"] ; then
         sudo certbot certonly --nginx -d trujunzhang.com
     fi
 
