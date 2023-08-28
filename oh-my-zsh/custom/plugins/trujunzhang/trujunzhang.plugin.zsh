@@ -520,6 +520,8 @@ alias v2rayport='cat /etc/v2ray/config.json | grep port'
 alias v2rayip='cat /etc/v2ray/config.json | grep id'
 alias v2raytime='date -R'
 
+alias linuxportscan="sudo lsof -i -P -n | grep LISTEN"
+
 # https://github.com/xieyezi/monia-cli
 alias fmoniacreate='monia create'
 alias fmoniainit='monia init'
