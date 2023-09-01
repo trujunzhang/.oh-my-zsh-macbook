@@ -32,6 +32,7 @@ brew_apps=(
     "Firefox.app"             "firefox"
     "Brave Browser.app"       "brave-browser"
     "qutebrowser.app"         "qutebrowser"
+    "Arc.app"                 "arc"
 
     # =========================================
     # required password
