@@ -142,7 +142,7 @@ alias ytailwatch='yarn dev:tailwind'
 
 alias ytscheck='yarn ts:check'
 alias ylint='yarn lint'
-alias ylintfix='yarn lint-fix'
+alias ylintfix='yarn lint:fix'
 alias yadd='yarn add'
 alias yadddev='yarn --dev add'
 alias yaddexpo='npx install-expo-modules@latest'
