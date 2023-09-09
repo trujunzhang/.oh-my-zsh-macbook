@@ -33,6 +33,7 @@ brew_apps=(
     "Brave Browser.app"       "brave-browser"
     "qutebrowser.app"         "qutebrowser"
     "Arc.app"                 "arc"
+    "ResponsivelyApp.app"     "responsively"
 
     # =========================================
     # required password
