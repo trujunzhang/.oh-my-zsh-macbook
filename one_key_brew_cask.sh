@@ -15,6 +15,7 @@ brew_apps=(
     "Visual Studio Code.app"  "visual-studio-code"
     # "Emacs.app"               "emacs"
     "Sourcetree.app"          "sourcetree"
+    "Insomnia.app"            "insomnia"
 
     # System tools
     "V2rayU.app"              "v2rayu"
