@@ -595,3 +595,6 @@ alias buz='brew uninstall --zap'
 
 # lunarvim
 alias lvimUpdateReset="lvim +LvimUpdate +LvimCacheReset +q"
+alias wrmvimsession="rm -rf $HOME/.local/share/nvim/sessions"
+
+
