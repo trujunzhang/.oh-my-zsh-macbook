@@ -61,6 +61,7 @@ vsExtensionsArray=(
     # https://itnext.io/debug-your-tests-in-typescript-with-visual-studio-code-911a4cada9cd
     "kavod-io.vscode-jest-test-adapter"
     "izdt.javascript-unit-test-snippet"
+    "orta.vscode-jest"
 
     # mocha(test)
     # "hbenl.vscode-mocha-test-adapter"
