@@ -138,5 +138,5 @@ function install_vs_extensions {
 }
 
 
-rm -rf "$HOME/.vscode"
+# rm -rf "$HOME/.vscode"
 install_vs_extensions
