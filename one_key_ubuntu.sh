@@ -178,4 +178,4 @@ install_docker_apps
 install_youtube_download
 install_cocoapods_tools
 
-setup_extend_disk
+# setup_extend_disk
