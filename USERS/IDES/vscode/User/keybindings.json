@@ -89,6 +89,10 @@
         "command": "editor.action.formatDocument"
     },
     {
+        "key": "cmd+alt+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
         "key": "cmd+r",
         "command": "workbench.action.debug.start"
     },
