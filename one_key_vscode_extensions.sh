@@ -73,6 +73,11 @@ vsExtensionsArray=(
     "hdoro.sanity-snippets"
 
     # =================================
+    # Design
+    # =================================
+    "figma.figma-vscode-extension"
+
+    # =================================
     # Javascript
     # =================================
     "xabikos.JavaScriptSnippets"
