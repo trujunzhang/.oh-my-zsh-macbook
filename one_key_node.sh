@@ -46,7 +46,7 @@ node_apps=(
     # expo
     # if ! command_exists expo; then
     # https://docs.expo.dev/get-started/installation/
-    "expo-cli"
+    # "expo-cli"
     # https://docs.expo.dev/build/setup/
     "eas-cli"
     # fi

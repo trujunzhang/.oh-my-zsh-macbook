@@ -24,8 +24,8 @@ brew_apps=(
     "Notion.app"              "notion"
     "OneDrive.app"            "onedrive"
     "Hammerspoon.app"         "hammerspoon"
-    "Authy.app"               "authy"
-    # "BaiduNetdisk.app"        "baidunetdisk"
+    "Authy Desktop.app"       "authy"
+    "BaiduNetdisk.app"        "baidunetdisk"
 
     # Web browser
     "Google Chrome.app"       "google-chrome"
