@@ -53,3 +53,6 @@ end
 if [ -f $HOME/.config/fish/functions/trujunzhang.fish ]
   source $HOME/.config/fish/functions/trujunzhang.fish
 end
+
+# https://rvm.io/integration/fish
+rvm default
