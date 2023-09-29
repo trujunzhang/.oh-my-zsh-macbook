@@ -70,5 +70,13 @@
         "filename": "hermes-engine.podspec",
         "http": "https://repo1.maven.org/maven2/com/facebook",
         "file": "facebook"
+    },
+    {
+        "type": "http",
+        "name": "hermes-engine(v0.71.3)",
+        "path": "node_modules/react-native/sdks/hermes-engine",
+        "filename": "hermes-utils.rb",
+        "http": "https://repo1.maven.org/maven2/com/facebook",
+        "file": "facebook"
     }    
 ]
