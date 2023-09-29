@@ -14,6 +14,7 @@ fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 # djzhang's bin
 # ======================================================================
 fish_add_path "$HOME/.local/bin" 
+fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps" 
 
 # environment variable
 set -g -x ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
