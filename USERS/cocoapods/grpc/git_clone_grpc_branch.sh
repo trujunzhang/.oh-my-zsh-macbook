@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 GRPC_GIT_URL="https://github.com/grpc/grpc.git"
-GRPC_BRANCH="v1.44.0"
+GRPC_BRANCH="v1.50.1"
 
 WORK_SPACE="/home/deploy/data/youtube"
 
