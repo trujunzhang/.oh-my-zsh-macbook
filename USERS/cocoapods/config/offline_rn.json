@@ -73,7 +73,7 @@
     },
     {
         "type": "http",
-        "name": "hermes-engine(v0.71.3)",
+        "name": "hermes-engine(v0.72)",
         "path": "node_modules/react-native/sdks/hermes-engine",
         "filename": "hermes-utils.rb",
         "http": "https://repo1.maven.org/maven2/com/facebook",
