@@ -33,21 +33,21 @@ git clone https://github.com/madler/zlib                                  $OUT_G
 # ========================================================= 
 # zip
 # ========================================================= 
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/abseil-cpp
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/benchmark
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/bloaty
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/boringssl-with-bazel
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/cares
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/envoy-api
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/googleapis
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/googletest
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/libuv 
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/opencensus-proto
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/opentelemetry
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/protobuf
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/re2
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/xds
-zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/zlib
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/abseil-cpp/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/benchmark/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/bloaty/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/boringssl-with-bazel/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/cares/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/envoy-api/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/googleapis/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/googletest/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/libuv/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/opencensus-proto/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/opentelemetry/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/protobuf/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/re2/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/xds/.git
+zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/zlib/.git
 
 	# git clone https://github.com/aquynh/capstone.git
 	# git clone https://github.com/nico/demumble.git
