@@ -20,7 +20,7 @@ HOMEBREW_HOME="$(brew --prefix)"
 
 brew_apps=(
     ## cocoapods(xcode)
-    "opt/cocoapods"             "cocoapods"
+    # "opt/cocoapods"             "cocoapods"
     ## supabase
     "opt/supabase"              "supabase/tap/supabase"
 
