@@ -20,6 +20,16 @@ echo "rvm default" >> ~/.config/fish/config.fish
 rvm install 3.0.6
 
 
+# Unable to require openssl, install OpenSSL and rebuild ruby (preferred) or use non-HTTPS sources
+brew install openssl
+rvm reinstall 3.0.6 --with-openssl-dir='brew --prefix openssl'
+
+
+
+
+
+
+
 
 
 
