@@ -88,11 +88,6 @@ alias rnands='npm run android:shake'
 alias rninfo='npx react-native info'
 alias rnnewapp='npx react-native init'
 
-function rnnewtsapp
-     set app_name $argv[1]
-     npx react-native init "$app_name" --version 0.69.5 --template react-native-template-typescript --skip-install
-end
-
 # rebuild android/ios folders
 #  The solution if ur version of react-native >= 0.61.0 :
 #  $ sudo rm -rf android/ ios/
