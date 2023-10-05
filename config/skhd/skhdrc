@@ -1,9 +1,3 @@
-f12 : open -na /Applications/Sketch.app
-rcmd - m : open -na /Applications/Notion.app
-
-# open terminal
-cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
-
 # open mpv with url from clipboard
 shift + cmd - m : mpv $(pbpaste)
 
