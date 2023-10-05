@@ -15,12 +15,19 @@ yabai -m space 4 --label notes
 yabai -m space 5 --label code
 # yabai -m space 6 --label media
 yabai -m space 6 --label vscode
-yabai -m space 7 --label social
+# yabai -m space 7 --label social
+yabai -m space 7 --label jetbrain
 yabai -m space 8 --label games
 
 # window rules
 yabai -m rule --add app="^kitty$" space=code
-yabai -m rule --add app="^Visual Studio Code$" space=vscode
+# yabai -m rule --add app="^Visual Studio Code$" space=vscode
+yabai -m rule --add app="^Code$" space=vscode
+
+# Jetbrains apps
+apps="^(IntelliJ IDEA|WebStorm|RubyMine|PyCharm|DataGrip)$"
+yabai -m rule --add app="${apps}" space=jetbrain  manage=off
+
 yabai -m rule --add app="^Mail$" space=mail
 yabai -m rule --add app="^Safari$" space=web
 yabai -m rule --add app="^Notes$" space=notes
