@@ -159,6 +159,9 @@ alias yupdate='ncu -u'
 alias ypodi='npx pod-install'
 alias podSpacsUpdate='cd /Volumes/MacDevelop/.cocoapods/Specs && git pull'
 
+# npm clean
+alias nclear="npm cache clear --force"
+
 # npm sketch-app
 alias npmrr="npm run sketch:render"
 
