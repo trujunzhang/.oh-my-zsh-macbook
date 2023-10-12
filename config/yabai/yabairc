@@ -18,7 +18,7 @@ yabai -m space 7 --label jetbrain
 yabai -m space 8 --label games
 
 # window rules
-yabai -m rule --add app="^figma$" space=design
+yabai -m rule --add app="^Figma$" space=design
 yabai -m rule --add app="^Elmedia Player$" space=media
 yabai -m rule --add app="^Google Chrome$" space=web
 
