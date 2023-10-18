@@ -54,7 +54,7 @@ brew_apps=(
 
     ## jenkins-lts
     # https://www.jenkins.io/download/lts/macos
-    "opt/jenkins"              "jenkins-lts"
+    "opt/jenkins-lts"           "jenkins-lts"
 
     ## direnv
     # https://direnv.net/#getting-started
