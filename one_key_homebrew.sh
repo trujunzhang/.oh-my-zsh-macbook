@@ -76,6 +76,8 @@ brew_apps=(
     "opt/autojump"           "autojump"
 
     ## yabai
+    # https://github.com/jqlang/jq
+    "opt/jq"                 "jq"
     "opt/yabai"              "yabai"
     # yabai --start-service
 
