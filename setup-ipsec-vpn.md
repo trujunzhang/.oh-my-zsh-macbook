@@ -41,12 +41,6 @@ myv2ray.xyz
 
 ok.myv2ray.xyz
 
-[[Global API Key]]
-
-709d52b173cfc053081feed3a95df576b8960
-
-[[709d52b173cfc053081feed3a95df576b8960]]
-
 ================================================
 
 IPsec VPN server is now ready for use!
