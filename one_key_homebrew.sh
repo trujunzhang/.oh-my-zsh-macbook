@@ -94,6 +94,8 @@ brew_apps=(
     "opt/lua"                "lua"
     # https://deno.land/
     "opt/deno"               "deno"
+
+    "opt/mkcert"             "mkcert"
 )
 
 for (( i=0; i<${#brew_apps[@]}; i=i+2 ));

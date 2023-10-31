@@ -290,7 +290,7 @@ M.telescope = {
     "frecency",
     "undo",
     "vim_bookmarks",
-    "harpoon",
+    -- "harpoon",
     "noice",
     "ast_grep",
     -- "ctags_plus",

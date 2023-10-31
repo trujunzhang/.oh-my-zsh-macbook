@@ -64,10 +64,10 @@ local plugins = {
       "tom-anders/telescope-vim-bookmarks.nvim",
       "benfowler/telescope-luasnip.nvim",
       "Marskey/telescope-sg",
-      {
-        "ThePrimeagen/harpoon",
-        cmd = "Harpoon",
-      },
+      -- {
+      --   "ThePrimeagen/harpoon",
+      --   cmd = "Harpoon",
+      -- },
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
