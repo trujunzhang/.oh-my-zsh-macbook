@@ -7,6 +7,18 @@
   },
   {
     "type": "application",
+    "name": "google chrome",
+    "application": "google chrome",
+    "enable": "1"
+  },
+  
+    "type": "application",
+    "name": "webstorm",
+    "application": "webstorm",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "myCMDsAndroid",
     "path": "myCMDsAndroid",
     "enable": "0"
