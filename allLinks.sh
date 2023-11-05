@@ -370,7 +370,7 @@ function link_mac_user {
   directoryLink "android(sdk)"       "$HOME_PROFILE_BACKUP_PATH/dev-android/Android"            "$HOME/Library/Android"
 
   # ios
-  directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME/.cocoapods"
+  # directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME/.cocoapods"
   directoryLink "ios(.offline-git)"        "$HOME_PROFILE_BACKUP_PATH/dev-ios/__CACHES"             "$ORGANIZATIONS_HOME/__CACHES"
   directoryLink "ios(.offline-git)"        "$HOME_MACMINI_PATH/dev-ios/__CACHES"                    "$ORGANIZATIONS_HOME/__CACHES"
   # directoryLink "ios(Library-Caches)"      "$HOME_PROFILE_BACKUP_PATH/dev-ios/Caches/CocoaPods"     "$PATH_USERPROFILE_LIBRARY/Caches/CocoaPods"
