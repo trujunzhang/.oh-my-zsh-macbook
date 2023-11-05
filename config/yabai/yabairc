@@ -20,6 +20,7 @@ yabai -m space 8 --label web
 # window rules
 yabai -m rule --add app="^Simulator$" space=common
 yabai -m rule --add app="^Elmedia Player$" space=media
+yabai -m rule --add app="^vlc$" space=media manage=off
 yabai -m rule --add app="^Figma$" space=design
 
 yabai -m rule --add app="^kitty$" space=terminal
