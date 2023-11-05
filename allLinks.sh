@@ -360,6 +360,7 @@ function link_mac_app_cloud {
 
 function link_mac_user {
   HOME_PROFILE_BACKUP_PATH="/Volumes/MacWork/ProfileBackup"
+  HOME_MACMINI_PATH="/Volumes/MacGame/MacMini"
 
   # android
   directoryLink "android(avd-fold)"  "/Users/djzhang/.android"                                  "$HOME/.android"
@@ -371,10 +372,12 @@ function link_mac_user {
   # ios
   directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME/.cocoapods"
   directoryLink "ios(.offline-git)"        "$HOME_PROFILE_BACKUP_PATH/dev-ios/__CACHES"             "$ORGANIZATIONS_HOME/__CACHES"
+  directoryLink "ios(.offline-git)"        "$HOME_MACMINI_PATH/dev-ios/__CACHES"                    "$ORGANIZATIONS_HOME/__CACHES"
   # directoryLink "ios(Library-Caches)"      "$HOME_PROFILE_BACKUP_PATH/dev-ios/Caches/CocoaPods"     "$PATH_USERPROFILE_LIBRARY/Caches/CocoaPods"
 
   # org
   directoryLink "org(__APPLICATIONS)"       "$HOME_PROFILE_BACKUP_PATH/org/__APPLICATIONS"        "$ORGANIZATIONS_HOME/__APPLICATIONS"
+  directoryLink "org(__APPLICATIONS)"       "$HOME_MACMINI_PATH/org/__APPLICATIONS"               "$ORGANIZATIONS_HOME/__APPLICATIONS"
   directoryLink "org(TRUJUNZHANG)"          "$HOME_PROFILE_BACKUP_PATH/org/TRUJUNZHANG"           "$ORGANIZATIONS_HOME/TRUJUNZHANG"
   directoryLink "org(coding)"               "$HOME_PROFILE_BACKUP_PATH/org/__CODING"              "$ORGANIZATIONS_HOME/__CODING"
   directoryLink "org(IDES)"                 "$HOME_PROFILE_BACKUP_PATH/org/IDES"                  "$ORGANIZATIONS_HOME/IDES"
