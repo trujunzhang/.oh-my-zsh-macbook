@@ -25,6 +25,3 @@ require "custom.utils.usercmd"
 require "custom.utils.neovide"
 require "custom.utils.options"
 -- require "custom.configs.statuscolumn"
-
-vim.o.cursorline = true
-vim.o.number = true
