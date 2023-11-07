@@ -14,7 +14,7 @@ fish_app=(
     "edc/bass"
 )
 
-# fisher install "jorgebucaran/fisher" "jethrokuan/z" "patrickf1/fzf.fish" "FabioAntunes/fish-nvm" "budimanjojo/tmux.fish" "edc/bass" "jhillyerd/plugin-git"
+# fisher install "jorgebucaran/fisher" "jethrokuan/z" "patrickf1/fzf.fish" "FabioAntunes/fish-nvm" "edc/bass" "budimanjojo/tmux.fish" "edc/bass" "jhillyerd/plugin-git"
 
 for (( i=0; i<${#fish_app[@]}; i++ ));
 do
