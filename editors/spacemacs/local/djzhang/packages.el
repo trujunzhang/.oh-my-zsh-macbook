@@ -90,8 +90,8 @@
     ;; codeium-completion-at-point is autoloaded, but you can
     ;; optionally set a timer, which might speed up things as the
     ;; codeium local language server takes ~0.2s to start up
-    ;; (add-hook 'emacs-startup-hook
-    ;;  (lambda () (run-with-timer 0.1 nil #'codeium-init)))
+    (add-hook 'emacs-startup-hook
+     (lambda () (run-with-timer 0.1 nil #'codeium-init)))
 
     ;; :defer t ;; lazy loading, if you want
     :config
