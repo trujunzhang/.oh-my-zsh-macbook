@@ -43,7 +43,9 @@
     ;; https://github.com/Davoodeh/dart-snippets    
     ;; dart-snippets
     ;; https://github.com/Exafunction/codeium.el
-    codeium
+    (codeium :location (recipe
+                          :fetcher github
+                          :repo "Exafunction/codeium.el"))
     ;; https://github.com/emacs-php/jetbrains.el   
     jetbrains
     ;; https://github.com/bbatsov/super-save   
