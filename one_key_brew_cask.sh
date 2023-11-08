@@ -26,6 +26,7 @@ brew_apps=(
     "Hammerspoon.app"         "hammerspoon"
     "Authy Desktop.app"       "authy"
     "BaiduNetdisk.app"        "baidunetdisk"
+    "Grammarly Editor.app"    "grammarly"
 
     # Web browser
     "Google Chrome.app"       "google-chrome"
@@ -45,7 +46,7 @@ brew_apps=(
     # Video player
     # "Kodi.app"                "kodi"
     # "VLC.app"                 "vlc"
-    "mpv.app"                 "mpv"
+    # "mpv.app"                 "mpv"
 
     # Design apps
     "Figma.app"               "figma"
