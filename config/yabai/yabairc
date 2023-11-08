@@ -18,6 +18,7 @@ yabai -m space 7 --label jetbrain
 yabai -m space 8 --label web
 
 # window rules
+yabai -m rule --add app="^Finder$" space=common
 yabai -m rule --add app="^Simulator$" space=common
 yabai -m rule --add app="^Emaca$" space=media
 yabai -m rule --add app="^Elmedia Player$" space=media
