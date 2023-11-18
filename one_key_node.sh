@@ -7,8 +7,8 @@ source ./bash/files-functions.sh
 source ./bash/tools.sh
 
 # node_global="20.0.0"
-node_global="18.16.0"
-node_old="16.15.1"
+node_global="20.9.0"
+node_old="16.16.0"
 
 # nvm(node.js)
 if [ ! -d  ~/.nvm ]; then
