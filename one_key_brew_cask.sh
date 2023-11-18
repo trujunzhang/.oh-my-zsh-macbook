@@ -16,6 +16,8 @@ brew_apps=(
     # "Emacs.app"               "emacs"
     "Sourcetree.app"          "sourcetree"
     "Insomnia.app"            "insomnia"
+    # https://fbflipper.com/
+    "Flipper.app"             "flipper"
 
     # System tools
     "V2rayU.app"              "v2rayu"
@@ -25,7 +27,7 @@ brew_apps=(
     "OneDrive.app"            "onedrive"
     "Hammerspoon.app"         "hammerspoon"
     "Authy Desktop.app"       "authy"
-    "BaiduNetdisk.app"        "baidunetdisk"
+    "BaiduNetdisk_mac.app"        "baidunetdisk"
     "Grammarly Editor.app"    "grammarly"
 
     # Web browser
