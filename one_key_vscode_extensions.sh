@@ -15,6 +15,10 @@ vsExtensionsArray=(
     "junv.recent-files"
     "alefragnani.project-manager"
 
+    # =================================
+    # Code Wrtite
+    # =================================
+    "aaron-bond.better-comments"
 
     # =================================
     # Vim shortcut
@@ -91,6 +95,11 @@ vsExtensionsArray=(
     # prisma
     # =================================
     "prisma.prisma"
+
+    # =================================
+    # typescript
+    # =================================
+    "yoavbls.pretty-ts-errors"
 
     # =================================
     # React
