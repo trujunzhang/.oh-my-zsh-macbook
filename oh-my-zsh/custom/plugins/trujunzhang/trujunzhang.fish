@@ -598,3 +598,10 @@ alias wrmvimsession="rm -rf $HOME/.local/share/nvim/sessions"
 
 # vpn
 alias wcloudflareip="curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o /tmp/cf.sh && chmod +x /tmp/cf.sh && cd /tmp && ./cf.sh"
+
+# git clone
+alias dcloneexpensify="git clone https://github.com/expensify/App.git expensify"
+
+
+
+
