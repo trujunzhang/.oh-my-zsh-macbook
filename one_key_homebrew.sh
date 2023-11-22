@@ -87,6 +87,8 @@ brew_apps=(
 
     ## React-native & Expo
     "opt/watchman"           "bundletool watchman"
+    # brew tap facebook/fb
+    "opt/idb-companion"      "idb-companion"
 
     ## neovim
     # https://github.com/universal-ctags/ctags
