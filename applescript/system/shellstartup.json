@@ -11,10 +11,16 @@
     "application": "google chrome",
     "enable": "1"
   },
-  
+  {
     "type": "application",
     "name": "webstorm",
     "application": "webstorm",
+    "enable": "1"
+  },
+  {
+    "type": "application",
+    "name": "flipper",
+    "application": "flipper",
     "enable": "1"
   },
   {
