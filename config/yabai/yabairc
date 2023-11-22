@@ -13,11 +13,11 @@ yabai -m space 3 --label design
 yabai -m space 4 --label debug
 yabai -m space 5 --label macos
 # monitor #2
-yabai -m space 6 --label terminal
+yabai -m space 6 --label mobile
 yabai -m space 7 --label code
 yabai -m space 8 --label jetbrain
 yabai -m space 9 --label web
-yabai -m space 10 --label mobile
+yabai -m space 10 --label terminal
 
 # window rules
 # monitor #1
