@@ -13,7 +13,7 @@ yabai -m space 3 --label design
 yabai -m space 4 --label debug
 yabai -m space 5 --label macos
 # monitor #2
-yabai -m space 6 --label mobile
+yabai -m space 6 --label xcode
 yabai -m space 7 --label code
 yabai -m space 8 --label jetbrain
 yabai -m space 9 --label web
@@ -34,7 +34,9 @@ yabai -m rule --add app="^kitty$" space=terminal
 yabai -m rule --add app="^Terminal$" space=terminal
 yabai -m rule --add app="^Code$" space=code
 
-yabai -m rule --add app="^Simulator$" space=mobile
+#yabai -m rule --add app="^Simulator$" space=mobile
+yabai -m rule --add app="^Xcode$"     space=xcode
+yabai -m rule --add app="^Simulator$" space=xcode
 
 # Jetbrains apps
 apps="^(IntelliJ IDEA|WebStorm|RubyMine|PyCharm|DataGrip)$"
