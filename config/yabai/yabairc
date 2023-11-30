@@ -11,22 +11,22 @@ yabai -m space 1 --label common
 yabai -m space 2 --label media
 yabai -m space 3 --label design
 yabai -m space 4 --label debug
-yabai -m space 5 --label macos
+yabai -m space 5 --label jetbrain
 # monitor #2
 yabai -m space 6 --label xcode
 yabai -m space 7 --label code
-yabai -m space 8 --label jetbrain
+yabai -m space 8 --label macos
 yabai -m space 9 --label web
 yabai -m space 10 --label terminal
 
 # window rules
 # monitor #1
+yabai -m rule --add app="^Finder$" space=common
 yabai -m rule --add app="^Emaca$" space=media
 yabai -m rule --add app="^Elmedia Player$" space=media
 yabai -m rule --add app="^vlc$" space=media manage=off
 yabai -m rule --add app="^Figma$" space=design
 yabai -m rule --add app="^Flipper$" space=debug
-yabai -m rule --add app="^Finder$" space=macos
 
 # window rules
 # monitor #2
