@@ -166,6 +166,7 @@ alias nclear="npm cache clear --force"
 alias npmrr="npm run sketch:render"
 
 # npm.plugin
+alias ninstall='npm install --verbose'
 alias npmi='npm install --verbose'
 
 alias npmsvi='npm install --verbose --save-dev '

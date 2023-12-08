@@ -59,7 +59,7 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false
+        "editor.wordBasedSuggestions": "off"
     },
     "python.showStartPage": false,
     "git.ignoreMissingGitWarning": true,
@@ -116,7 +116,7 @@
     "update.showReleaseNotes": false,
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
     },
     "eslint.validate": ["typescript"],
     "window.restoreFullscreen": true,
