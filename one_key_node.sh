@@ -14,7 +14,7 @@ node_old="16.16.0"
 if [ ! -d  ~/.nvm ]; then
     cd ~/ && rm -rf .nvm
     git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm
-    cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh
+    cd ~/.nvm  && git checkout v0.39.7 && . ~/.nvm/nvm.sh
     nvm install "$node_global"
     nvm alias default "$node_global" # default node.js
     nvm install "$node_old"
