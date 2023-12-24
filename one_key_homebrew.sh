@@ -43,7 +43,7 @@ brew_apps=(
     ## fish
     "opt/fish"                  "fish"
 
-    ## autoenv
+    ## neovim
     "opt/neovim"                "neovim"
 
     ## autoenv
@@ -55,6 +55,7 @@ brew_apps=(
     ## jenkins-lts
     # https://www.jenkins.io/download/lts/macos
     "opt/jenkins-lts"           "jenkins-lts"
+    "opt/fastlane"               "fastlane"
 
     ## direnv
     # https://direnv.net/#getting-started
