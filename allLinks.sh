@@ -360,6 +360,7 @@ function link_mac_app_cloud {
 
 function link_mac_user {
   HOME_PROFILE_BACKUP_PATH="/Volumes/MacWork/ProfileBackup"
+  HOME_MACGAME_PATH="/Volumes/MacGame"
   HOME_MACMINI_PATH="/Volumes/MacGame/MacMini"
 
   # android
@@ -386,7 +387,10 @@ function link_mac_user {
   directoryLink "home(miniforge3)"          "$HOME_PROFILE_BACKUP_PATH/home/miniforge3"            "$HOME/miniforge3"
 
   # Parallels Desktop
-  directoryLink "win11(Parallels Desktop)"    "/Volumes/MacGame/VMDesktop/Windows 11.pvm"           "$HOME/Parallels/Windows 11.pvm"
+  directoryLink "win11(Parallels Desktop)"  "$HOME_MACGAME_PATH/VMDesktop/Windows 11.pvm"           "$HOME/Parallels/Windows 11.pvm"
+
+  # jenkins
+  directoryLink "jenkins(profile)"          "$HOME_MACGAME_PATH/.jenkins"           "$HOME/.jenkins"
 }
 
 # mkdir '/usr/local/bin'
