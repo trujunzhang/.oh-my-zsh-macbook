@@ -42,6 +42,9 @@ envs_global_flutter_ieatta=(
 envs_github=(
     "trujunzhang/env.example"     "@github/trujunzhang/.env.local"
 )
+envs_ieatta_three_apps=(
+    ".env"         ".env"
+)
 
 function link_envs {
   source_name=$1 
@@ -78,6 +81,7 @@ function link_envs {
 
 link_envs "global-flutter-ieatta" "global-flutter-ieatta"  "${envs_global_flutter_ieatta[@]}" 
 link_envs "github"                "@SharedPackage"         "${envs_github[@]}" 
+link_envs "ieatta-three-apps"                "ieatta-three-apps"         "${envs_ieatta_three_apps[@]}" 
 
 
 
