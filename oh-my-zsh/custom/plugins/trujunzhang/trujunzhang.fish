@@ -166,7 +166,7 @@ alias nclear="npm cache clear --force"
 alias npmrr="npm run sketch:render"
 
 # npm.plugin
-alias ninstall='npm install --verbose'
+alias ninstall='npm install --verbose && offline_local_ios_pods'
 alias npmi='npm install --verbose'
 
 alias npmsvi='npm install --verbose --save-dev '
