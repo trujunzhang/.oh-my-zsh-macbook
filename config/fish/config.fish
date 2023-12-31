@@ -5,6 +5,7 @@ end
 # Android SDK
 # ======================================================================
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+set -g -x ANDROID_HOME "$HOME/Library/Android/sdk"
 set -g -x ANDROID_SDK_ROOT "$HOME/Library/Android/sdk"
 set -g -x ANDROID_USER_HOME "$HOME/Library/Android/sdk"
 fish_add_path "$ANDROID_SDK_ROOT"
