@@ -79,11 +79,11 @@ brew_apps=(
     ## yabai
     # https://github.com/jqlang/jq
     "opt/jq"                 "jq"
-    "opt/yabai"              "yabai"
+    "opt/yabai"              "koekeishiya/formulae/yabai"
     # yabai --start-service
 
     ## skhd
-    "opt/skhd"               "skhd"
+    "opt/skhd"               "koekeishiya/formulae/skhd"
     # skhd --start-service
 
     ## React-native & Expo
