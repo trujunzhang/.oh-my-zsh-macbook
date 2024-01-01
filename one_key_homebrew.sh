@@ -7,9 +7,9 @@ source ./bash/files-functions.sh
 source ./bash/tools.sh
 
 # homebrew
-if ! command_exists brew; then
-    ( exec "./bash/homebrew_install.sh" )
-fi
+# if ! command_exists brew; then
+    # ( exec "./bash/homebrew_install.sh" )
+# fi
 
 # HOMEBREW_HOME="/usr/local"
 # if [[ $(uname -m) == 'arm64' ]]; then
