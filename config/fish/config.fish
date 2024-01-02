@@ -36,6 +36,16 @@ set -g -x ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
 # echo "arm macos system! $(uname)"
 
 # ======================================================================
+# java environment
+# ======================================================================
+ # set up java with jenv 
+ # do not set JAVA_HOME here
+ set PATH $HOME/.jenv/bin $PATH
+ eval (jenv init - | source)
+
+# set -e JAVA_HOME ( jenv javahome )
+
+# ======================================================================
 # Python environment
 # ======================================================================
 # >>> conda initialize >>>
