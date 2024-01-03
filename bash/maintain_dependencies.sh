@@ -52,6 +52,10 @@ function lib_expo
 {
    libs=(
       "expo-build-properties"   "latest"
+
+      #  https://docs.expo.dev/tutorial/image-picker/
+      # "react-native-image-picker"       "^5.7.0"    // error
+      "expo-image-picker"       "latest"
    )
 
    install_dependencies "dependencies" "expo" "${libs[@]}"
@@ -71,7 +75,18 @@ function lib_firebase
    install_dependencies "dependencies" "npm" "${libs[@]}"
 }
 
+function lib_camera_picker
+{
+   libs=(
+   )
+
+   install_dependencies "dependencies" "npm" "${libs[@]}"
+}
+
+
 # Expo libraries
 lib_expo
 # Firebase libraries
 # lib_firebase
+# Camera and picker libraries
+# lib_camera_picker
