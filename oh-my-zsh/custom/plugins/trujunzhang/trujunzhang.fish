@@ -300,6 +300,7 @@ alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --a
 # alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
 
 # xcode
+alias rosetta_install='softwareupdate --install-rosetta'
 alias xcodeselect='sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer'
 alias xcode_download_ios='xcodebuild -downloadPlatform iOS'
 alias iosdevices='xcrun simctl list devices --json'
