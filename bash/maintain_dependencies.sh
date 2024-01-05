@@ -51,7 +51,7 @@ function install_dependencies
 function lib_expo
 {
    libs=(
-      # "expo-build-properties"   "latest"
+      "expo-build-properties"   "latest"
 
       "expo-image"              "latest"
    )
@@ -182,8 +182,8 @@ function lib_for_react_native
 
 function lib_firebase
 {
-   FIREBASE_VERSION="12.3.0"
-   # FIREBASE_VERSION="18.5.0"
+   # FIREBASE_VERSION="12.3.0"
+   FIREBASE_VERSION="18.5.0"
    libs=(
        "firebase"                               "10.7.1"
        "firebase-tools"                         "13.0.1"
