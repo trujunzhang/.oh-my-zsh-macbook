@@ -51,7 +51,7 @@ function install_dependencies
 function lib_expo
 {
    libs=(
-      "expo-build-properties"   "latest"
+      # "expo-build-properties"   "latest"
 
       "expo-image"              "latest"
    )
@@ -63,13 +63,13 @@ function lib_expo
 function lib_tools
 {
    libs=(
-      #   "expensify-common" "git+ssh://git@github.com/Expensify/expensify-common.git#ee14b3255da33d2b6924c357f43393251b6dc6d2"
+        "expensify-common" "git+ssh://git@github.com/Expensify/expensify-common.git#ee14b3255da33d2b6924c357f43393251b6dc6d2"
         "@onfido/react-native-sdk" "8.3.0"
         "@gorhom/portal" "1.0.14"
         "@kie/act-js" "2.0.1"
         "@kie/mock-github" "1.0.0"
         "@types/node" "18.14.0"
-        "@ua/react-native-airship" "15.2.6"
+        "@ua/react-native-airship" "15.3.1"
         "awesome-phonenumber" "5.4.0"
         "babel-polyfill" "6.26.0"
         "canvas-size" "1.2.6"
@@ -182,18 +182,20 @@ function lib_for_react_native
 
 function lib_firebase
 {
+   FIREBASE_VERSION="12.3.0"
+   # FIREBASE_VERSION="18.5.0"
    libs=(
        "firebase"                               "10.7.1"
        "firebase-tools"                         "13.0.1"
 
        # https://rnfirebase.io/
-       "@react-native-firebase/app"             "18.5.0"
-       "@react-native-firebase/auth"            "18.5.0"
-       "@react-native-firebase/firestore"       "18.5.0"
+       "@react-native-firebase/app"             "$FIREBASE_VERSION"
+       "@react-native-firebase/auth"            "$FIREBASE_VERSION"
+       "@react-native-firebase/firestore"       "$FIREBASE_VERSION"
 
-       "@react-native-firebase/analytics"      "18.5.0"
-        # "@react-native-firebase/crashlytics"    "18.5.0"  // stop, need crash id.
-       "@react-native-firebase/perf"           "18.5.0"
+       "@react-native-firebase/analytics"       "$FIREBASE_VERSION"
+        "@react-native-firebase/crashlytics"    "$FIREBASE_VERSION" # stop, need crash id.
+       "@react-native-firebase/perf"            "$FIREBASE_VERSION"
    )
    install_dependencies "dependencies" "npm" "${libs[@]}"
 }
@@ -277,7 +279,7 @@ function lib_camera_picker
 # lib_tools
 # lib_for_react
 # lib_for_react_native
-# lib_firebase
+lib_firebase
 # lib_intl
 # lib_navigation
 # lib_socials
@@ -500,7 +502,7 @@ function dev_lib_web_build
 # dev_lib_test
 # dev_lib_electron
 # dev_lib_storybook
-dev_lib_web_build
+# dev_lib_web_build
 
 # npx expo-doctor
 # expo doctor --fix-dependencies
