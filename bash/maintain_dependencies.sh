@@ -14,6 +14,20 @@
 # Use functions and variables from the utils script
 source scripts/shellUtils.sh
 
+# Note: 
+# Environ:
+   #  xcode v15.1
+   #  node v20.9.0
+# Libraries:
+# vision-camera
+# "react-native-vision-camera" "2.16.2"
+# "react-native-vision-camera": "^3.6.17",
+# image-picker
+# "react-native-image-picker" "5.1.0"
+# "react-native-image-picker": "7.1.0",
+   
+
+
 function install_dependencies
 {
     libType=$1
