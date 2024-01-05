@@ -172,6 +172,8 @@ alias npmi='npm install --verbose'
 alias npmsvi='npm install --verbose --save-dev '
 alias npmsi='npm install --verbose --save '
 
+alias npodi='npm run pod-install'
+
 # run dev
 alias npmd='npm run dev'
 alias npmda="npm run dev-all"
