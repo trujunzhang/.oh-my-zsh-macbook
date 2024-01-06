@@ -364,11 +364,14 @@ function link_mac_user {
   HOME_MACMINI_PATH="/Volumes/MacGame/MacMini"
 
   # android
-  directoryLink "android(avd-fold)"  "/Users/djzhang/.android"                                  "$HOME/.android"
-  directoryLink "android(avd)"       "$HOME_PROFILE_BACKUP_PATH/dev-android/.android"           "$HOME/.android"
-  directoryLink "android(gradle)"    "/Users/djzhang/.gradle"                                  "$HOME/.gradle"
-  # directoryLink "android(gradle)"       "$HOME_PROFILE_BACKUP_PATH/dev-android/Gradle/.gradle"     "$HOME/.gradle"
-  directoryLink "android(sdk)"       "$HOME_PROFILE_BACKUP_PATH/dev-android/Android"            "$HOME/Library/Android"
+  directoryLink "android(avd-fold)"      "/Users/djzhang/.android"                                  "$HOME/.android"
+  directoryLink "android(avd)"           "$HOME_PROFILE_BACKUP_PATH/dev-android/.android"           "$HOME/.android"
+
+  # directoryLink "android(gradle)"    "/Users/djzhang/.gradle"                                  "$HOME/.gradle"
+  # directoryLink "android(gradle)"    "$HOME_PROFILE_BACKUP_PATH/dev-android/Gradle/.gradle"     "$HOME/.gradle"
+  directoryLink "android(gradle)"      "$HOME_MACMINI_PATH/dev-android/.gradle"                    "$HOME/.gradle"
+
+  directoryLink "android(sdk)"         "$HOME_PROFILE_BACKUP_PATH/dev-android/Android"            "$HOME/Library/Android"
 
   # ios
   # directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME/.cocoapods"
