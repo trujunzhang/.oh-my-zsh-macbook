@@ -40,8 +40,10 @@ set -g -x ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
 # ======================================================================
  # set up java with jenv 
  # do not set JAVA_HOME here
- set PATH $HOME/.jenv/bin $PATH
- eval (jenv init - | source)
+if [ -d $HOME/.jenv ]
+    set PATH $HOME/.jenv/bin $PATH
+    eval (jenv init - | source)
+end
 
 # set -e JAVA_HOME ( jenv javahome )
 
