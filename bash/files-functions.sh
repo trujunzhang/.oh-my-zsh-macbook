@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 
-# For example:
-#    func1 ball mystery
-# ============================
-function func1 {
-    fun=$1
-    book=$2
-    printf "fun=%s,book=%s\n" "${fun}" "${book}"
-}
+source ./shellUtils.sh
 
 DEFAULTACTION="ignore"
 
@@ -19,11 +12,11 @@ function  directoryLink {
 
     Param="${4:-$DEFAULTACTION}"
 
-    echo ""
-    printf "msg=%s\n" "${msg}"
-    printf "src=%s\n" "${src}"
-    printf "dest=%s\n" "${dest}"
-    printf "action=%s\n" "${Param}"
+    info ""
+    info "msg=${msg}"
+    info "src=${src}"
+    info "dest=${dest}"
+    info "action=${Param}"
 
     # It is a symlink!
     if [ -L "${dest}" ]; then
@@ -34,12 +27,12 @@ function  directoryLink {
 
     if [ -d "${dest}" ]
     then
-        echo "Directory already exist. ${msg}"
+        error "Directory already exist. ${msg}"
     else
         if [ -d "${src}" ]
         then
             ln -s "${src}"  "${dest}"
-            echo "Directory does not exist. ${msg}"
+            success "Directory does not exist. ${msg}"
         fi
     fi
 
@@ -54,11 +47,11 @@ function  fileLink {
 
     Param="${4:-$DEFAULTACTION}"
 
-    echo ""
-    printf "msg=%s\n" "${msg}"
-    printf "src=%s\n" "${src}"
-    printf "dest=%s\n" "${dest}"
-    printf "action=%s\n" "${Param}"
+    info ""
+    info "msg=${msg}"
+    info "src=${src}"
+    info "dest=${dest}"
+    info "action=${Param}"
 
     # It is a symlink!
     if [ -L "${dest}" ]; then
@@ -69,12 +62,12 @@ function  fileLink {
 
     if [ -f "${dest}" ]
     then
-        echo "File already exist. ${msg}"
+        error "File already exist. ${msg}"
     else
         if [ -f "${src}" ]
         then
             ln -s "${src}"  "${dest}"
-            echo "File does not exist. ${msg}"
+            success "File does not exist. ${msg}"
         fi
     fi
 
