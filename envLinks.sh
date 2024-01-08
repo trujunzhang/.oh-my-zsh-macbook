@@ -1,37 +1,39 @@
 #!/usr/bin/env bash
 
+# Import function files.
+source ./bash/files-functions.sh
+
+source ./bash/shellUtils.sh
+
 CURRENT=`pwd`
 # Folders in Home.
 
 
 if [[ $(uname -m) == 'arm64' ]]; then
-    # echo M2
+    # info M2
     ORGANIZATIONS_HOME="$HOME/Documents/Organizations"  
 fi
 
 if [[ $(uname -m) == 'x86_64' ]]; then
-    # echo Mackook
+    # info Mackook
     ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
 fi
 
 TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 
 
-echo "                         "
-echo "=================================================================================="
-echo "Bash version ${BASH_VERSION}...           "
-echo "                                          "
-echo "** CURRENT:                                "
-echo "$CURRENT"
-echo "** ORGANIZATIONS_HOME:                     "
-echo "$ORGANIZATIONS_HOME"
-echo "** TRUJUNZHANG_DOTFILES_HOME:              "
-echo "$TRUJUNZHANG_DOTFILES_HOME"
-echo "=================================================================================="
-echo "                                          "
-
-# Import function files.
-source ./bash/files-functions.sh
+info "                         "
+info "=================================================================================="
+info "Bash version ${BASH_VERSION}...           "
+info "                                          "
+info "** CURRENT:                                "
+info "$CURRENT"
+info "** ORGANIZATIONS_HOME:                     "
+info "$ORGANIZATIONS_HOME"
+info "** TRUJUNZHANG_DOTFILES_HOME:              "
+info "$TRUJUNZHANG_DOTFILES_HOME"
+info "=================================================================================="
+info "                                          "
 
 WORKING_FOLD="$ORGANIZATIONS_HOME/__CODING/WORKING"
 ENV_PROJECT_FOLD="$WORKING_FOLD/projects_envs"
@@ -55,22 +57,22 @@ function link_envs {
   fold_dest="$WORKING_FOLD/$dest_name"
   
 
-  echo "                         "
-  echo "=================================================================================="
-  echo "source fold: $fold_source"
-  echo "dest   fold: $fold_dest"
-  echo "=================================================================================="
-  echo "                                          "
+  info "                         "
+  info "=================================================================================="
+  info "source fold: $fold_source"
+  info "dest   fold: $fold_dest"
+  info "=================================================================================="
+  info "                                          "
 
-  # echo "${envs_array[*]}"
+  # info "${envs_array[*]}"
 
     for (( i=2; i<${#envs_array[@]}; i=i+2 ));
     do
       project_env="${envs_array[$i+0]}"
       project_dest="${envs_array[$i+1]}"
 
-      echo "element $i is ${project_env}"
-      echo "element $i is ${project_dest}"
+      info "element $i is ${project_env}"
+      info "element $i is ${project_dest}"
 
       
       fileLink  "env($project_env)"  "${fold_source}/${project_env}" "${fold_dest}/${project_dest}"
