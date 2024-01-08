@@ -1,34 +1,39 @@
 #!/usr/bin/env bash
 
+# Import function files.
+source ./bash/files-functions.sh
+
+source ./bash/shellUtils.sh
+
 CURRENT=`pwd`
 # Folders in Home.
 
 
 if [[ $(uname -m) == 'arm64' ]]; then
-    # echo M2
+    # info M2
     ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
 fi
 
 if [[ $(uname -m) == 'x86_64' ]]; then
-    # echo Mackook
+    # info Mackook
     ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
 fi
 
 TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 HOMEBREW_HOME="$(brew --prefix)"
 
-echo "                         "
-echo "=================================================================================="
-echo "Bash version ${BASH_VERSION}...           "
-echo "                                          "
-echo "** CURRENT:                                "
-echo "$CURRENT"
-echo "** ORGANIZATIONS_HOME:                     "
-echo "$ORGANIZATIONS_HOME"
-echo "** TRUJUNZHANG_DOTFILES_HOME:              "
-echo "$TRUJUNZHANG_DOTFILES_HOME"
-echo "=================================================================================="
-echo "                                          "
+info "                         "
+info "=================================================================================="
+info "Bash version ${BASH_VERSION}...           "
+info "                                          "
+info "** CURRENT:                                "
+info "$CURRENT"
+info "** ORGANIZATIONS_HOME:                     "
+info "$ORGANIZATIONS_HOME"
+info "** TRUJUNZHANG_DOTFILES_HOME:              "
+info "$TRUJUNZHANG_DOTFILES_HOME"
+info "=================================================================================="
+info "                                          "
 
 # ====================================================================
 # ====================================================================
@@ -60,9 +65,6 @@ SYSTEM_BIN_PATH="$HOME/.local/bin"
 # Trujunzhag's tmux
 TMUX_CONFIG="$TRUJUNZHANG_DOTFILES_HOME/tmux.conf.symlink"
 TMUX_CONFIG_LOCAL="$TRUJUNZHANG_DOTFILES_HOME/tmux.conf.local.symlink"
-
-# Import function files.
-source ./bash/files-functions.sh
 
 # Applications
 SYSTEM_APPLICATION="/Applications"
@@ -421,7 +423,7 @@ link_run_apps_shell
 link_nginx_http
 link_mac_app_cloud
 if [[ $(uname -m) == 'arm64' ]]; then
-  # echo M2
+  # info M2
   link_mac_user
 fi
 
