@@ -7,6 +7,13 @@
 		"enabled": true
 	},
 	{
+		"name": "ieatta-three-apps",
+		"rootPath": "~/Documents/Organizations/__CODING/WORKING/ieatta-three-apps",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
 		"name": "appExpo",
 		"rootPath": "~/Documents/Organizations/__CODING/WORKING/global-flutter-ieatta/packages/appExpo",
 		"paths": [],
