@@ -173,7 +173,7 @@ alias npmsvi='npm install --verbose --save-dev '
 alias npmsi='npm install --verbose --save '
 
 alias npodi='npm run pod-install'
-alias nrrettier='npm run prettier'
+alias nrprettier='npm run prettier'
 
 # run dev
 alias npmd='npm run dev'
