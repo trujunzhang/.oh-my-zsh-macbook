@@ -21,7 +21,7 @@
     "type": "application",
     "name": "flipper",
     "application": "flipper",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
