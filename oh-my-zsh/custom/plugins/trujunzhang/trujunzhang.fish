@@ -607,6 +607,7 @@ alias wcloudflareip="curl https://raw.githubusercontent.com/badafans/better-clou
 
 # git clone
 alias dcloneexpensify="git clone https://github.com/expensify/App.git expensify"
+alias dcloneieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
 
 
 
