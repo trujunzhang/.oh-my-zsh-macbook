@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ./bash/shellUtils.sh
+
 vsExtensionsArray=(
 
 
@@ -133,7 +135,7 @@ vsExtensionsArray=(
 
 Params=$1
 
-echo "${Params}"
+info "${Params}"
 
 ## get length of $vsExtentionsArray
 len=${#vsExtensionsArray[@]}
@@ -141,11 +143,11 @@ len=${#vsExtensionsArray[@]}
 function install_vs_extensions {
     for (( i=0; i<${#vsExtensionsArray[@]}; i++ ));
     do
-        echo "                         "
-        echo "==============================================================="
-        echo "element $((i+1)) of ${len} is ${vsExtensionsArray[$i]}"
-        echo "==============================================================="
-        echo "                         "
+        info "                         "
+        info "==============================================================="
+        info "element $((i+1)) of ${len} is ${vsExtensionsArray[$i]}"
+        info "==============================================================="
+        info "                         "
 
         code --install-extension ${vsExtensionsArray[$i]} "${Params}"
     done
