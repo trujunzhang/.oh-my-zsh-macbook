@@ -11,7 +11,7 @@ source ./bash/tools.sh
 
 brew_apps=(
     # Editor
-    "MacVim.app"              "macvim"
+    # "MacVim.app"              "macvim"
     "Visual Studio Code.app"  "visual-studio-code"
     # "Emacs.app"               "emacs"
     "Sourcetree.app"          "sourcetree"
@@ -20,14 +20,14 @@ brew_apps=(
     "Flipper.app"             "flipper"
 
     # System tools
-    "V2rayU.app"              "v2rayu"
+    # "V2rayU.app"              "v2rayu"
     "Raycast.app"             "raycast"
     "SpaceLauncher.app"       "spacelauncher"
     "Notion.app"              "notion"
-    "OneDrive.app"            "onedrive"
+    # "OneDrive.app"            "onedrive"
     "Hammerspoon.app"         "hammerspoon"
     "Authy Desktop.app"       "authy"
-    "BaiduNetdisk_mac.app"        "baidunetdisk"
+    "BaiduNetdisk_mac.app"    "baidunetdisk"
     "Grammarly Editor.app"    "grammarly"
 
     # Web browser
