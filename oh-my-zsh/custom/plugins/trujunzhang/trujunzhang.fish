@@ -613,8 +613,10 @@ alias dcloneieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.gi
 
 # crossover
 function linkCrossOverBottle
-    bottle=$1
-    ln -s "/Volumes/MacGame/CrossOver/Bottles/${bottle}" "${HOME}/Library/Application Support/CrossOver/Bottles/${bottle}"  
+    set bottle $argv[1]
+    echo $bottle
+    # ln -s "/Volumes/MacGame/CrossOver/Bottles/$bottle" "$HOME/Library/Application Support/CrossOver/Bottles/$bottle"  
+    ln -s "/Volumes/MacGame/CrossOver/Bottles" "$HOME/Library/Application Support/CrossOver/Bottles"  
 end
 
 
