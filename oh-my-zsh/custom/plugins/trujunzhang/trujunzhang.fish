@@ -611,6 +611,10 @@ alias wcloudflareip="curl https://raw.githubusercontent.com/badafans/better-clou
 alias dcloneexpensify="git clone https://github.com/expensify/App.git expensify"
 alias dcloneieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
 
-
+# crossover
+function linkCrossOverBottle
+    bottle=$1
+    ln -s "/Volumes/MacGame/CrossOver/Bottles/${bottle}" "${HOME}/Library/Application Support/CrossOver/Bottles/${bottle}"  
+end
 
 
