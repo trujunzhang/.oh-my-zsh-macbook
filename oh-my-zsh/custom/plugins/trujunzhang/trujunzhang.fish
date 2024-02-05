@@ -616,7 +616,7 @@ function linkCrossOverBottle
     set bottle $argv[1]
     echo $bottle
     # ln -s "/Volumes/MacGame/CrossOver/Bottles/$bottle" "$HOME/Library/Application Support/CrossOver/Bottles/$bottle"  
-    ln -s "/Volumes/MacGame/CrossOver/Bottles" "$HOME/Library/Application Support/CrossOver/Bottles"  
+    ln -s "/Volumes/MacGame/crossover" "$HOME/Library/Application Support/CrossOver/Bottles"  
 end
 
 
