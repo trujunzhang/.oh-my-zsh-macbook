@@ -18,6 +18,7 @@ brew_apps=(
     "Insomnia.app"            "insomnia"
     # https://fbflipper.com/
     "Flipper.app"             "flipper"
+    "Realm Studio.app"        "mongodb-realm-studio"
 
     # System tools
     # "V2rayU.app"              "v2rayu"
