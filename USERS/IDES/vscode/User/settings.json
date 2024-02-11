@@ -132,5 +132,8 @@
         "yamlExtPrompt": true
     },
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "aws.telemetry": false
+    "aws.telemetry": false,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
