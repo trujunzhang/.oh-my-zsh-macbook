@@ -32,7 +32,6 @@ yabai -m rule --add app="^Flipper$" space=debug
 # monitor #2
 yabai -m rule --add app="^kitty$" space=terminal
 yabai -m rule --add app="^Terminal$" space=terminal
-yabai -m rule --add app="^Code$" space=code
 
 #yabai -m rule --add app="^Simulator$" space=mobile
 yabai -m rule --add app="^Xcode$"     space=xcode
@@ -42,6 +41,7 @@ yabai -m rule --add app="^qemu-system-aarch64$"     space=terminal
 # Jetbrains apps
 apps="^(IntelliJ IDEA|WebStorm|RubyMine|PyCharm|DataGrip)$"
 yabai -m rule --add app="${apps}" space=jetbrain  manage=off
+yabai -m rule --add app="^Code$" space=jetbrain
 
 yabai -m rule --add app="^Google Chrome$" space=web
 
