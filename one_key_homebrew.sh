@@ -52,6 +52,9 @@ brew_apps=(
     ## nginx
     "opt/nginx"                 "nginx"
 
+    ## pyenv
+    "opt/pyenv"                 "pyenv"
+
     ## jenkins-lts
     # https://www.jenkins.io/download/lts/macos
     "opt/jenkins-lts"           "jenkins-lts"
