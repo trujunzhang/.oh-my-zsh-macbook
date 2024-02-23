@@ -617,10 +617,9 @@ function linkCrossOverBottle
 end
 
 # djzhang's git
-alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b tmp"
 function dgitreset
     set currentGitPath "$PWD/.git"
-    echo $currentGitPath
+    echo "<.git> Path: $currentGitPath"
     if [ -d $currentGitPath ]
       echo "already have git repository"
     else
