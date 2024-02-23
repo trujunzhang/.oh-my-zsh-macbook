@@ -450,9 +450,6 @@ alias drunhttp='cd $ORGANIZATIONS_HOME/__CACHES/github && python3 -m http.server
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 
-# djzhang's git
-alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b tmp"
-
 # nvm
 alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
 
@@ -619,4 +616,15 @@ function linkCrossOverBottle
     ln -s "/Volumes/MacGame/crossover" "$HOME/Library/Application Support/CrossOver/Bottles"  
 end
 
+# djzhang's git
+alias dgitreset="git init && git add . && git commit -m 'first commit' && git checkout -b tmp"
+function dgitreset
+    set currentGitPath "$PWD/.git"
+    echo $currentGitPath
+    if [ -d $currentGitPath ]
+      echo "already have git repository"
+    else
+        git init && git add . && git commit -m 'first commit' && git checkout -b tmp
+    end
+end
 
