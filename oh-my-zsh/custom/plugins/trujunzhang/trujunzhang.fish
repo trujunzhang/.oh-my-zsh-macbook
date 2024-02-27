@@ -128,6 +128,7 @@ alias yallrios='bundle install && npm install && npm run pod-install && yarn ios
 alias yallrandroid='bundle install && npm install && yarn android'
 alias yripad='yarn ipad'
 alias yrweb='yarn web'
+alias yrstorybook='yarn storybook'
 alias yrmac='yarn desktop'
 alias ydebug='yarn debug'
 alias ybuild='yarn build'
