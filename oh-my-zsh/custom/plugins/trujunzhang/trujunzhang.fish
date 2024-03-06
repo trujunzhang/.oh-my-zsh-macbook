@@ -606,8 +606,10 @@ alias wrmvimsession="rm -rf $HOME/.local/share/nvim/sessions"
 alias wcloudflareip="curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o /tmp/cf.sh && chmod +x /tmp/cf.sh && cd /tmp && ./cf.sh"
 
 # git clone
-alias dcloneexpensify="git clone https://github.com/expensify/App.git expensify"
+alias dcloneexpensify="git clone https://github.com/expensify/App.git expensify && cd expensify"
 alias dcloneieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
+
+alias wcleanWebstorm="rm -rf $HOME/Library/Caches/JetBrains"
 
 # crossover
 function linkCrossOverBottle
