@@ -135,5 +135,6 @@
     "aws.telemetry": false,
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "jest.runMode": "deferred"
 }
