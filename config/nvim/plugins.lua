@@ -838,7 +838,7 @@ local plugins = {
     --       },
     --     },
     --   },
-    -- },
+    },
     config = function(_, opts)
       require("compiler").setup(opts)
     end,
