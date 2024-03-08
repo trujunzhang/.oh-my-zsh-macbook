@@ -129,6 +129,13 @@ done
 #     # open /usr/local/opt/emacs-plus@29
 # fi
 
+function install_emacs {
+    brew tap d12frosted/emacs-plus
+
+    # install latest stable release, with Spacemacs icon and native compilation
+    brew install emacs-plus --with-spacemacs-icon --with-native-comp
+}
+
 ## fzf
 if [ ! -d "$HOMEBREW_HOME/opt/fzf" ]; then
     $(brew --prefix)/opt/fzf/install
