@@ -821,24 +821,24 @@ local plugins = {
     "Zeioth/compiler.nvim",
     cmd = { "CompilerOpen", "CompilerToggleResults" },
     dependencies = {
-      {
-        "stevearc/overseer.nvim",
-        commit = "3047ede61cc1308069ad1184c0d447ebee92d749",
-        opts = {
-          task_list = {
-            direction = "bottom",
-            min_height = 25,
-            max_height = 25,
-            default_detail = 1,
-            bindings = {
-              ["q"] = function()
-                vim.cmd "OverseerClose"
-              end,
-            },
-          },
-        },
-      },
-    },
+    --   {
+    --     "stevearc/overseer.nvim",
+    --     commit = "3047ede61cc1308069ad1184c0d447ebee92d749",
+    --     opts = {
+    --       task_list = {
+    --         direction = "bottom",
+    --         min_height = 25,
+    --         max_height = 25,
+    --         default_detail = 1,
+    --         bindings = {
+    --           ["q"] = function()
+    --             vim.cmd "OverseerClose"
+    --           end,
+    --         },
+    --       },
+    --     },
+    --   },
+    -- },
     config = function(_, opts)
       require("compiler").setup(opts)
     end,
