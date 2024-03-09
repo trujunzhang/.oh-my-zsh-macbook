@@ -16,6 +16,16 @@ opt.termguicolors = true -- True color support
 opt.autoindent = true --- Good auto indent
 opt.backspace = "indent,eol,start" --- Making sure backspace works
 
+---- miscellaneous
+vim.opt.cursorline = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.shiftwidth = 4
+vim.opt.signcolumn = 'number'
+vim.opt.smartindent = true
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
+
 -- Map in dotyfile
 g.mapleader = " "
 g.maplocalleader = " "
