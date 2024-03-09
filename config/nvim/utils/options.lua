@@ -88,3 +88,5 @@ if g.neovide then
   vim.g.neovide_hide_mouse_when_typing = true
   vim.cmd("NeovideFocus")
 end
+
+g.vscode_snippets_path="~/.config/nvim-snippets"
