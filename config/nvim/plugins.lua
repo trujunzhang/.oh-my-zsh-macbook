@@ -37,6 +37,8 @@ local plugins = {
             vim.cmd("MasonInstall " .. table.concat(opts.ensure_installed, " "))
           end, {})
           require "custom.configs.lspconfig"
+          -- https://www.lazyvim.org/extras/formatting/prettier
+          table.insert(opts.ensure_installed, "prettier")
         end,
       },
       "williamboman/mason-lspconfig.nvim",
