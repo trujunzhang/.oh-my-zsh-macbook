@@ -319,16 +319,16 @@ M.text = {
       end,
       "󰑕 LSP rename",
     },
-    ["dd"] = {
-      function()
-        if vim.api.nvim_get_current_line():match "^%s*$" then
-          return '"_dd'
-        else
-          return "dd"
-        end
-      end,
-      "Smart dd",
-    },
+    -- ["dd"] = {
+    --   function()
+    --     if vim.api.nvim_get_current_line():match "^%s*$" then
+    --       return '"_dd'
+    --     else
+    --       return "dd"
+    --     end
+    --   end,
+    --   "Smart dd",
+    -- },
     ["<leader>rn"] = {
       function()
         return ":IncRename " .. vim.fn.expand "<cword>"
@@ -809,7 +809,7 @@ M.nvterm = {
     -- toggle in terminal mode
     ["<leader>h"] = {
       function()
-        require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm", size = 0.2 }
+        require("nvterm.terminal").toggle { pos = "sp", id = "htoggleTerm", size = 0.2 }
       end,
       " Toggle horizontal term",
     },
@@ -821,7 +821,8 @@ M.nvterm = {
     -- toggle in normal mode
     ["<leader>h"] = {
       function()
-        require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm", size = 0.2 }
+        -- require("nvterm.terminal").toggle { pos = "sp", id = "htoggleTerm", size = 0.2 }
+        require("nvterm.terminal").toggle "horizontal"
       end,
       " Toggle horizontal term",
     },
