@@ -1,5 +1,4 @@
 local neotest_ns = vim.api.nvim_create_namespace "neotest"
-local border = require "custom.utils.border"
 
 vim.diagnostic.config({
   virtual_text = {
@@ -12,9 +11,12 @@ vim.diagnostic.config({
 
 require("neotest").setup {
   adapters = {
-    require "neotest-go" {
-      args = { "-count=1", "-coverprofile coverage.out", "-covermode=count" },
-    },
+    -- require "neotest-go" {
+    --   experimental = {
+    --     test_table = true,
+    --   },
+    --   args = { "-count=1", "-coverprofile coverage.out", "-covermode=count" },
+    -- },
     require "neotest-jest" {
       jestCommand = "npm test --",
       env = { CI = true },
@@ -22,6 +24,11 @@ require("neotest").setup {
         return vim.fn.getcwd()
       end,
     },
+  },
+  quickfix = {
+    open = function()
+      vim.cmd('Trouble quickfix')
+    end,
   },
   diagnostic = {
     enabled = false,
@@ -54,6 +61,8 @@ require("neotest").setup {
   },
   status = {
     enabled = true,
+    signs = true, -- Sign after function signature
+    virtual_text = false
   },
   strategies = {
     integrated = {

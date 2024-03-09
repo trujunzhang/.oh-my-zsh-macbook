@@ -19,52 +19,101 @@ noice.setup {
   },
   popupmenu = {
     enabled = true, -- enables the Noice popupmenu UI
-    backend = "cmp", -- backend to use to show regular cmdline completions
+    backend = "nui", -- backend to use to show regular cmdline completions
   },
   routes = {
     {
       filter = {
-        event = "msg_show",
-        kind = "",
+        event = "lsp",
+        any = {
+          { find = "formatting" },
+          { find = "Diagnosing" },
+          { find = "Diagnostics" },
+          { find = "diagnostics" },
+          { find = "code_action" },
+          { find = "Processing full semantic tokens" },
+          { find = "symbols" },
+          { find = "completion" },
+        },
       },
       opts = { skip = true },
     },
     {
-      filter = { event = "msg_show", find = "%d+ more lines" },
-      opts = { skip = true },
-    },
-    {
-      filter = { event = "msg_show", find = "%d+ lines yanked" },
+      filter = {
+        event = "notify",
+        any = {
+          -- Neo-tree
+          { find = "Toggling hidden files: true" },
+          { find = "Toggling hidden files: false" },
+          { find = "Operation canceled" },
+          { find = "^No code actions available$" },
+
+          -- Telescope
+          { find = "Nothing currently selected" },
+          { find = "^No information available$" },
+          { find = "Highlight group" },
+          { find = "no manual entry for" },
+          { find = "not have parser for" },
+
+          -- ts
+          { find = "_ts_parse_query" },
+        },
+      },
       opts = { skip = true },
     },
     {
       filter = {
+        event = "msg_show",
+        kind = "",
         any = {
-          {
-            event = "msg_show",
-            kind = "",
-            find = "%d+ change;",
-          },
-          {
-            event = "msg_show",
-            kind = "",
-            find = "%d+ line less;",
-          },
-          {
-            event = "msg_show",
-            kind = "",
-            find = "%d+ fewer lines;?",
-          },
-          {
-            event = "msg_show",
-            kind = "",
-            find = "%d+ more lines?;",
-          },
-          {
-            event = "msg_show",
-            kind = "",
-            find = '".+" %d+L, %d+B',
-          },
+
+          -- Edit
+          { find = "%d+ less lines" },
+          { find = "%d+ fewer lines" },
+          { find = "%d+ more lines" },
+          { find = "%d+ change;" },
+          { find = "%d+ line less;" },
+          { find = "%d+ more lines?;" },
+          { find = "%d+ fewer lines;?" },
+          { find = '".+" %d+L, %d+B' },
+          { find = "%d+ lines yanked" },
+          { find = "^Hunk %d+ of %d+$" },
+          { find = "%d+L, %d+B$" },
+          { find = "^[/?].*" }, -- Searching up/down
+          { find = "E486: Pattern not found:" }, -- Searcingh not found
+          { find = "%d+ changes?;" }, -- Undoing/redoing
+          { find = "%d+ fewer lines" }, -- Deleting multiple lines
+          { find = "%d+ more lines" }, -- Undoing deletion of multiple lines
+          { find = "%d+ lines " }, -- Performing some other verb on multiple lines
+          { find = "Already at newest change" }, -- Redoing
+          { find = '"[^"]+" %d+L, %d+B' }, -- Saving
+
+          -- Save
+          { find = " bytes written" },
+
+          -- Redo/Undo
+          { find = " changes; before #" },
+          { find = " changes; after #" },
+          { find = "1 change; before #" },
+          { find = "1 change; after #" },
+
+          -- Yank
+          { find = " lines yanked" },
+
+          -- Move lines
+          { find = " lines moved" },
+          { find = " lines indented" },
+
+          -- Bulk edit
+          { find = " fewer lines" },
+          { find = " more lines" },
+          { find = "1 more line" },
+          { find = "1 line less" },
+
+          -- General messages
+          { find = "Already at newest change" }, -- Redoing
+          { find = "Already at oldest change" },
+          { find = "E21: Cannot make changes, 'modifiable' is off" },
         },
       },
       opts = { skip = true },
@@ -95,6 +144,9 @@ noice.setup {
         },
       },
     },
+    hover = {
+      silent = true,
+    },
     documentation = {
       opts = {
         border = {
@@ -115,7 +167,7 @@ noice.setup {
   views = {
     cmdline_popup = {
       position = {
-        row = 5,
+        row = 3,
         col = "50%",
       },
       size = {
@@ -153,3 +205,5 @@ noice.setup {
     inc_rename = true,
   },
 }
+
+-- dofile(vim.g.base46_cache .. "notify")

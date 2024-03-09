@@ -26,6 +26,18 @@ return {
     i(3, "else"),
   }),
 
+  s("testfunc", {
+    t "func Test_",
+    i(1, "FunctionName"),
+    t ({"(t *testing.T) {", "\tt.Run("}),
+    i(2, "Text"),
+    t ", func(t *testing.T) {",
+    t "\t",
+    i(0),
+    t {"","\t})"},
+    t { "", "}" },
+  }),
+
   s("trigger", {
     t { "if err != nil {", "\treturn " },
     i(1, "err"),
@@ -49,8 +61,6 @@ return {
   s("tt", {
     t 'fmt.Printf("',
     i(1),
-    t '\\n", ',
-    i(2),
     t ")",
   }),
 

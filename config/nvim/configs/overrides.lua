@@ -1,63 +1,118 @@
 local M = {}
 
+local function icon_multiple_filenames(filenames, opts)
+  local overrides = {}
+  for _, file in ipairs(filenames) do
+    overrides[file] = opts
+  end
+  return overrides
+end
+
+local function filenames_list(filename, extensions)
+  local filenames = {}
+  for _, ext in ipairs(extensions) do
+    table.insert(filenames, filename .. "." .. ext)
+  end
+  return filenames
+end
+
 M.devicons = {
-  override_by_filename = {
-    ["makefile"] = {
-      icon = "",
-      color = "#f1502f",
-      name = "Makefile",
+  override_by_filename = vim.tbl_extend(
+    "force",
+    {
+      ["yml"] = {
+        icon = "",
+        color = "#bbbbbb",
+        name = "Yml",
+      },
+      ["yaml"] = {
+        icon = "",
+        color = "#bbbbbb",
+        name = "Yaml",
+      },
+      ["scm"] = {
+        icon = "",
+        color = "#90a850",
+        name = "Query",
+      },
+      ["makefile"] = {
+        icon = "",
+        color = "#f1502f",
+        name = "Makefile",
+      },
+      ["mod"] = {
+        icon = "󰟓",
+        color = "#519aba",
+        name = "Mod",
+      },
+      ["yarn.lock"] = {
+        icon = "",
+        color = "#0288D1",
+        name = "Yarn",
+      },
+      ["sum"] = {
+        icon = "󰟓",
+        color = "#cbcb40",
+        name = "Sum",
+      },
+      [".gitignore"] = {
+        icon = "",
+        color = "#e24329",
+        name = "GitIgnore",
+      },
+      ["js"] = {
+        icon = "",
+        color = "#cbcb41",
+        name = "Js",
+      },
+      ["lock"] = {
+        icon = "",
+        color = "#bbbbbb",
+        name = "Lock",
+      },
+      ["package.json"] = {
+        icon = "",
+        color = "#e8274b",
+        name = "PackageJson",
+      },
+      [".eslintignore"] = {
+        icon = "󰱺",
+        color = "#e8274b",
+        name = "EslintIgnore",
+      },
+      ["tags"] = {
+        icon = "",
+        color = "#bbbbbb",
+        name = "Tags",
+      },
+      ["http"] = {
+        icon = "󰖟",
+        color = "#519aba",
+        name = "Http",
+      },
+      ["astro"] = {
+        icon = "",
+        color = "#f1502f",
+        name = "Astro",
+      },
     },
-    ["mod"] = {
-      icon = "󰟓",
-      color = "#519aba",
-      name = "Mod",
-    },
-    ["sum"] = {
-      icon = "󰟓",
-      color = "#cbcb40",
-      cterm_color = "185",
-      name = "Sum",
-    },
-    [".gitignore"] = {
-      icon = "",
-      color = "#e24329",
-      cterm_color = "196",
-      name = "GitIgnore",
-    },
-    ["js"] = {
-      icon = "",
-      color = "#cbcb41",
-      cterm_color = "185",
-      name = "Js",
-    },
-    ["lock"] = {
-      icon = "",
-      color = "#bbbbbb",
-      cterm_color = "250",
-      name = "Lock",
-    },
-    ["package.json"] = {
-      icon = "",
-      color = "#e8274b",
-      name = "PackageJson",
-    },
-    [".eslintignore"] = {
-      icon = "󰱺",
-      color = "#e8274b",
-      name = "EslintIgnore",
-    },
-    ["tags"] = {
-      icon = "",
-      color = "#bbbbbb",
-      cterm_color = "250",
-      name = "Tags",
-    },
-    ["http"] = {
-      icon = "󰖟",
-      color = "#519aba",
-      name = "Http",
-    },
-  },
+    icon_multiple_filenames(filenames_list("tailwind.config", { "js", "cjs", "ts", "cts" }), {
+      icon = "󱏿",
+      color = "#4DB6AC",
+      name = "tailwind",
+    }),
+    icon_multiple_filenames(filenames_list("vite.config", { "js", "cjs", "ts", "cts" }), {
+      icon = "󱐋",
+      color = "#FFAB00",
+      name = "ViteJS",
+    }),
+    icon_multiple_filenames(filenames_list(".eslintrc", { "js", "cjs", "yaml", "yml", "json" }), {
+      icon = "",
+      color = "#4b32c3",
+      cterm_color = "56",
+      name = "Eslintrc",
+    })
+  ),
 }
 
 M.treesitter = {
@@ -100,7 +155,7 @@ M.treesitter = {
   },
   query_linter = {
     enable = true,
-    use_virtual_text = false,
+    use_virtual_text = true,
     lint_events = { "BufWrite", "CursorHold" },
   },
   textsubjects = {
@@ -111,25 +166,19 @@ M.treesitter = {
       ["i;"] = "textsubjects-container-inner",
     },
   },
-  textobjects = {
-    select = {
-      enable = true,
-      lookahead = true,
-      include_surrounding_whitespace = true,
-      keymaps = {
-        ["af"] = { query = "@function.outer", desc = "ts: all function" },
-        ["if"] = { query = "@function.inner", desc = "ts: inner function" },
-        ["ac"] = { query = "@class.outer", desc = "ts: all class" },
-        ["ic"] = { query = "@class.inner", desc = "ts: inner class" },
-        ["aC"] = { query = "@conditional.outer", desc = "ts: all conditional" },
-        ["iC"] = { query = "@conditional.inner", desc = "ts: inner conditional" },
-        ["aH"] = { query = "@assignment.lhs", desc = "ts: assignment lhs" },
-        ["aL"] = { query = "@assignment.rhs", desc = "ts: assignment rhs" },
-      },
-    },
-  },
   tree_setter = {
     enable = true,
+  },
+  textobjects = {
+    swap = {
+      enable = true,
+      swap_next = {
+        ["sa"] = "@parameter.inner",
+      },
+      swap_previous = {
+        ["sA"] = "@parameter.inner",
+      },
+    },
   },
   rainbow = {
     enable = true,
@@ -141,10 +190,6 @@ M.treesitter = {
       javascript = "rainbow-tags-react",
       tsx = "rainbow-tags",
     },
-  },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
   },
   autotag = {
     enable = true,
@@ -163,14 +208,11 @@ M.mason = {
     "typescript-language-server",
     "prettier",
     "eslint-lsp",
-    "css-lsp",
-    "html-lsp",
     "emmet-ls",
+    "rustywind",
 
     -- Spell
-    "codespell",
     "marksman",
-    "grammarly-languageserver",
 
     -- Json
     "jsonlint",
@@ -186,7 +228,6 @@ M.mason = {
     -- "gomodifytags",
     -- "impl",
     -- "iferr",
-    -- "staticcheck",
   },
 
   ui = {
@@ -206,6 +247,33 @@ M.mason = {
       uninstall_server = "X",
       cancel_installation = "<C-c>",
     },
+  },
+}
+
+M.nvterm = {
+  terminals = {
+    shell = vim.o.shell,
+    list = {},
+    type_opts = {
+      float = {
+        relative = "editor",
+        row = 0.1,
+        col = 0.1,
+        width = 0.8,
+        height = 0.7,
+        border = "single",
+      },
+      horizontal = { location = "rightbelow", split_ratio = 0.3 },
+      vertical = { location = "rightbelow", split_ratio = 0.25 },
+    },
+  },
+  behavior = {
+    autoclose_on_quit = {
+      enabled = false,
+      confirm = true,
+    },
+    close_on_exit = true,
+    auto_insert = true,
   },
 }
 
@@ -236,16 +304,31 @@ M.nvimtree = {
       error = "",
     },
   },
-  system_open = { cmd = "thunar" },
   sync_root_with_cwd = true,
   renderer = {
     highlight_opened_files = "name",
     highlight_git = true,
+    -- root_folder_label = ":~",
     group_empty = true,
+    indent_markers = {
+      enable = false,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
+      },
+    },
     icons = {
       show = {
         git = true,
       },
+      web_devicons = {
+        folder = {
+          enable = true, -- Special folder devicon icons
+          color = true,
+        },
+      },
+      -- git_placement = 'signcolumn',
       glyphs = {
         git = {
           unstaged = "",
@@ -261,6 +344,12 @@ M.nvimtree = {
       },
     },
   },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+      resize_window = false,
+    },
+  },
   tab = {
     sync = {
       open = true,
@@ -271,6 +360,16 @@ M.nvimtree = {
 
 M.telescope = {
   defaults = {
+    preview = {
+      filetype_hook = function(_, bufnr, opts)
+        -- don't display jank pdf previews
+        if opts.ft == "pdf" then
+          require("telescope.previewers.utils").set_preview_message(bufnr, opts.winid, "Not displaying " .. opts.ft)
+          return false
+        end
+        return true
+      end,
+    },
     file_ignore_patterns = {
       "node_modules",
       ".docker",
@@ -281,27 +380,39 @@ M.telescope = {
       "tags",
       "mocks",
       "refactoring",
+      "^.git/",
+      "^./.git/",
+      "^node_modules/",
+      "^build/",
+      "^dist/",
+      "^target/",
+      "^vendor/",
+      "^lazy%-lock%.json$",
+      "^package%-lock%.json$",
+    },
+    layout_config = {
+      horizontal = {
+        prompt_position = "bottom",
+      },
     },
   },
   extensions_list = {
     "themes",
     "terms",
     "notify",
-    "frecency",
     "undo",
-    "vim_bookmarks",
-    -- "harpoon",
-    "noice",
     "ast_grep",
     -- "ctags_plus",
     "luasnip",
+    "import",
+    "fzf",
   },
   extensions = {
     fzf = {
-      fuzzy = true,
       override_generic_sorter = true,
       override_file_sorter = true,
       case_mode = "smart_case",
+      fuzzy = true,
     },
     ast_grep = {
       command = {
@@ -312,50 +423,10 @@ M.telescope = {
       grep_open_files = false,
       lang = nil,
     },
-    lazy = {
-      show_icon = true,
-      mappings = {
-        open_in_browser = "<C-o>",
-        open_in_file_browser = "<M-b>",
-        open_in_find_files = "<C-f>",
-        open_in_live_grep = "<C-g>",
-        open_plugins_picker = "<C-b>",
-        open_lazy_root_find_files = "<C-r>f",
-        open_lazy_root_live_grep = "<C-r>g",
-      },
+    import = {
+      insert_at_top = true,
     },
   },
-}
-
-local hl_list = {}
-for i, color in pairs { "#662121", "#767621", "#216631", "#325a5e", "#324b7b", "#562155" } do
-  local name = "IndentBlanklineIndent" .. i
-  vim.api.nvim_set_hl(0, name, { fg = color })
-  table.insert(hl_list, name)
-end
-
-M.blankline = {
-  filetype_exclude = {
-    "help",
-    "terminal",
-    "lspinfo",
-    "TelescopePrompt",
-    "TelescopeResults",
-    "nvcheatsheet",
-    "lsp-installer",
-    "norg",
-    "Empty",
-    "",
-  },
-  buftype_exclude = { "terminal", "nofile" },
-  show_end_of_line = true,
-  show_foldtext = true,
-  show_trailing_blankline_indent = false,
-  show_first_indent_level = true,
-  show_current_context = true,
-  show_current_context_start = true,
-  -- Uncomment this line to enable rainbown identation
-  -- char_highlight_list = hl_list,
 }
 
 M.colorizer = {
@@ -369,6 +440,17 @@ M.colorizer = {
     RRGGBBAA = true,
     rgb_fn = true,
     tailwind = true,
+    RGB = true,
+    RRGGBB = true,
+    AARRGGBB = true,
+    hsl_fn = true,
+    css = true,
+    css_fn = true,
+    mode = "background",
+    sass = { enable = true, parsers = { "css" } },
+    mode = "background", -- Available methods are false / true / "normal" / "lsp" / "both"
+    virtualtext = "■",
+    always_update = true,
   },
 }
 
