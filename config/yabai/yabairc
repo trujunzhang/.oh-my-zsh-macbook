@@ -30,7 +30,8 @@ yabai -m rule --add app="^Flipper$" space=debug
 
 # window rules
 # monitor #2
-yabai -m rule --add app="^kitty$" space=terminal
+yabai -m rule --add app="^kitty$" space=debug
+# yabai -m rule --add app="^kitty$" space=terminal
 yabai -m rule --add app="^Terminal$" space=terminal
 
 #yabai -m rule --add app="^Simulator$" space=mobile
