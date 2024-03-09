@@ -30,7 +30,7 @@ omf_app=(
 # omf install  "brew" "bobthefish"
 
 # theme: bobthefish
-# set -g theme_nerd_fonts yes
+# font_family: MesloLGS NF
 
 for (( i=0; i<${#omf_app[@]}; i++ ));
 do
