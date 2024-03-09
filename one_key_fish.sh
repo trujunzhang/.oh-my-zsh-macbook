@@ -29,6 +29,9 @@ omf_app=(
 
 # omf install  "brew" "bobthefish"
 
+# theme: bobthefish
+# set -g theme_nerd_fonts yes
+
 for (( i=0; i<${#omf_app[@]}; i++ ));
 do
     omf install ${omf_app[$i]} 
