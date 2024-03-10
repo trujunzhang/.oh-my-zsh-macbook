@@ -36,6 +36,9 @@
 # nvim(NvChad)
   url = https://github.com/BrunoKrugel/dotfiles
 
+# nvim(NvChad)
+  url = https://github.com/wSedlacek/nvim
+
 ## snippet
   git clone https://github.com/dsznajder/vscode-es7-javascript-react-snippets config/lvim/snippets
 

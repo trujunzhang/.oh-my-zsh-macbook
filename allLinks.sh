@@ -112,7 +112,8 @@ function link_config_fold {
   directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-ChristianChiarulli"       "$HOME/.config/lvim"
 
   # nvim
-  directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim/lua/custom"
+  # directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim/lua/custom"
+  directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim"
 
   # fish
   directoryLink  "config(vlc)"     "$TRUJUNZHANG_DOTFILES_HOME/config/fish"       "$HOME/.config/fish"
