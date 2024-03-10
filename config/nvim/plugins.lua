@@ -280,12 +280,21 @@ local plugins = {
     ft = { "html", "svelte", "astro", "vue", "typescriptreact" },
   },
   ----------------------------------------- enhance plugins ------------------------------------------
+  -- {
+  --   "okuuva/auto-save.nvim",
+  --   event = { "InsertLeave", "TextChanged" },
+  --   config = function()
+  --     require "custom.configs.autosave"
+  --   end,
+  -- },
   {
-    "okuuva/auto-save.nvim",
-    event = { "InsertLeave", "TextChanged" },
+    "Pocco81/auto-save.nvim",
     config = function()
-      require "custom.configs.autosave"
-    end,
+      require("auto-save").setup {
+        -- your config goes here
+        -- or just leave it empty :)
+      }
+    end
   },
   {
     "RRethy/vim-illuminate",
