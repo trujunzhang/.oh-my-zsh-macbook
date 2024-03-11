@@ -134,6 +134,8 @@ function install_emacs {
 
     # install latest stable release, with Spacemacs icon and native compilation
     brew install emacs-plus --with-spacemacs-icon --with-native-comp
+
+    osascript -e 'tell application "Finder" to make alias file to posix file "/opt/homebrew/opt/emacs-plus@29/Emacs.app" at POSIX file "/Applications"'
 }
 
 ## fzf
