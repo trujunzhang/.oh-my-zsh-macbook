@@ -47,7 +47,7 @@ brew_apps=(
     "opt/neovim"                "neovim"
 
     ## autoenv
-    "opt/autoenv"               "autoenv"
+    # "opt/autoenv"               "autoenv"
 
     ## nginx
     "opt/nginx"                 "nginx"
