@@ -173,6 +173,8 @@ alias npmrr="npm run sketch:render"
 alias ninstall='npm install --verbose'
 alias npmi='npm install --verbose'
 
+alias nvscode_langservers='npm i -g vscode-langservers-extracted'
+
 alias npmsvi='npm install --verbose --save-dev '
 alias npmsi='npm install --verbose --save '
 
