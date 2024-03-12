@@ -13,6 +13,12 @@
 --   vim.fn.stdpath "config" .. "/lua/custom/snippets/vscode/typescript",
 -- }
 
-vim.g.vscode_snippets_path = "~/.config/nvim-snippets"
-vim.g.vscode_snippets_exclude = { "all" }
-vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets/lua"
+-- vim.g.vscode_snippets_path = "~/.config/nvim-snippets"
+-- vim.g.vscode_snippets_exclude = { "all" }
+-- vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/snippets/lua"
+
+vim.g.vscode_snippets_path = {
+  "~/.config/nvim-snippets/debug-snippets",
+  -- "~/.config/nvim-snippets/",
+  -- "~/.config/nvim-snippets/"
+}

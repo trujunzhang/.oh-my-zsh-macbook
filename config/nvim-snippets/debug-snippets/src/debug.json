@@ -1,0 +1,32 @@
+{
+  "background color of component": {
+    "prefix": "djbg",
+    "body": [
+      "{backgroundColor:'$0'}"
+    ],
+    "description": "set background color"
+  },
+  "print log": {
+    "prefix": "djmsg",
+    "body": [
+      "// import Log from '@libs/Log';",
+      "Log.info('')",
+      "Log.info('================================')",
+      "Log.info(`imgUri: ${${imgUri}}`)",
+      "Log.info('================================')",
+      "Log.info('')"
+    ],
+    "description": "set background color"
+  },
+  "print log on the web console": {
+    "prefix": "djconsole",
+    "body": [
+      "console.log('')",
+      "console.log('================================')",
+      "console.log(`imgUri: ${${imgUri}}`)",
+      "console.log('================================')",
+      "console.log('')"
+    ],
+    "description": "set background color"
+  }
+}

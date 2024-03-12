@@ -96,8 +96,9 @@ brew_apps=(
 
     ## neovim
     # https://github.com/universal-ctags/ctags
-    "opt/universal-ctags"    "universal-ctags"
-    "opt/lua"                "lua"
+    "opt/universal-ctags"                    "universal-ctags"
+    "opt/lua"                                "lua"
+    "opt/lua-language-server"                "lua-language-server"
     # https://deno.land/
     "opt/deno"               "deno"
 

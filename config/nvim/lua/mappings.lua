@@ -433,15 +433,15 @@ end, {
 })
 
 -- Compile
-map("n", "<D-b>", "<cmd>CompilerOpen<cr>", {
-  desc = "Open compiler",
-})
-map("n", "<D-B>", "<cmd>CompilerStop<cr><cmd>CompilerRedo<cr>", {
-  desc = "Stop and redo",
-})
-map("n", "<D-r>", "<cmd>CompilerToggleResults<cr>", {
-  desc = "Toggle results",
-})
+-- map("n", "<D-b>", "<cmd>CompilerOpen<cr>", {
+  -- desc = "Open compiler",
+-- })
+-- map("n", "<D-B>", "<cmd>CompilerStop<cr><cmd>CompilerRedo<cr>", {
+--   desc = "Stop and redo",
+-- })
+-- map("n", "<D-r>", "<cmd>CompilerToggleResults<cr>", {
+--   desc = "Toggle results",
+-- })
 
 -- Terminal
 
@@ -491,7 +491,33 @@ local unmap = vim.keymap.del
 unmap("n", "<leader>rn")
 unmap("t", "<Esc>")
 
+-- Comment
+map("n", 
+  -- "<leader>/", 
+  "<D-/>", 
+  function()
+  require("Comment.api").toggle.linewise.current()
+end, { desc = "Comment Toggle" })
+
 -- djzhang's shortcut
 map("n", "<leader>qq", "<<CMD>qa!<CR>", {
   desc = "󰗼 Exit",
 })
+
+map('n', 
+  "<D-b>", 
+  '<cmd>lua require"telescope.builtin".lsp_definitions()<CR>', {
+  desc = 
+      "󰑊 Go to definition",
+  noremap=true, silent=true})
+
+map("n", 
+  '<LEADER>jd', 
+      function()
+        vim.lsp.buf.definition()
+      end,
+{
+  desc = 
+      "󰑊 Go to definition",
+}
+)

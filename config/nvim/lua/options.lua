@@ -23,4 +23,4 @@ vim.opt.pumheight = 8
 
 vim.opt.swapfile = false
 -- vim.opt.mouse = nil
-vim.opt.mouse="a"
+vim.opt.mouse = "a"
