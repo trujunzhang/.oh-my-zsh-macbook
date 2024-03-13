@@ -15,6 +15,7 @@ return {
       "swift",
       "bash",
       "regex",
+      "python",
     },
     indent = {
       enable = true,

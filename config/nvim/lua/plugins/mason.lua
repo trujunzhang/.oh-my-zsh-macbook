@@ -3,6 +3,7 @@ return {
   "williamboman/mason.nvim",
   opts = {
     ensure_installed = {
+      "pyre",
       "lua-language-server",
       "html-lsp",
       "prettier",

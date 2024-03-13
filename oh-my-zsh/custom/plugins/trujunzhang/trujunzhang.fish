@@ -577,6 +577,11 @@ function binstall-emacs
    end
  end
 
+function binstall-nerd-font
+  brew tap homebrew/cask-fonts
+  brew install font-hack-nerd-font
+end
+
 # neovim
 alias l="lvim"
 alias n="nvim"
