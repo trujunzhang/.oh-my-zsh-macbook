@@ -17,6 +17,12 @@ end
 M.default_diagnostic_config = {
   signs = {
     active = true,
+    text = {
+      [vim.diagnostic.severity.ERROR] = kind.icons.error,
+      [vim.diagnostic.severity.WARN] = kind.icons.warn,
+      [vim.diagnostic.severity.INFO] = kind.icons.info,
+      [vim.diagnostic.severity.HINT] = kind.icons.hint,
+    },
     values = {
       { name = "DiagnosticSignError", text = kind.icons.error },
       { name = "DiagnosticSignWarn", text = kind.icons.warn },
@@ -266,7 +272,11 @@ M.config = function()
 
   -- IndentBlankline
   -- =========================================
-  require("user.indent_blankline").config()
+  if lvim.builtin.indentlines.mine then
+    require("user.indent_blankline").setup()
+  elseif lvim.builtin.indentlines.active then
+    require("user.indent_blankline").config()
+  end
 
   -- LSP
   -- =========================================
@@ -279,7 +289,7 @@ M.config = function()
 
   lvim.lsp.buffer_mappings.normal_mode["ga"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" }
   lvim.lsp.buffer_mappings.normal_mode["gA"] = {
-    "<cmd>lua if vim.bo.filetype == 'rust' then vim.cmd[[RustHoverActions]] else vim.lsp.codelens.run() end<CR>",
+    "<cmd>lua if vim.bo.filetype == 'rust' then vim.cmd[[RustLsp hover actions]] else vim.lsp.codelens.run() end<CR>",
     "CodeLens Action",
   }
   lvim.lsp.buffer_mappings.normal_mode["gt"] = { "<cmd>lua vim.lsp.buf.type_definition()<CR>", "Goto Type Definition" }
@@ -316,22 +326,8 @@ M.config = function()
       vim.lsp.handlers["textDocument/hover"] = noice_util.protect(require("noice.lsp.hover").on_hover)
     end
   else
-    local float_config = {
-      focusable = true,
-      style = "minimal",
-      border = {
-        { "╔", "FloatBorder" },
-        { "═", "FloatBorder" },
-        { "╗", "FloatBorder" },
-        { "║", "FloatBorder" },
-        { "╝", "FloatBorder" },
-        { "═", "FloatBorder" },
-        { "╚", "FloatBorder" },
-        { "║", "FloatBorder" },
-      },
-    }
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float_config)
-    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float_config)
+    vim.lsp.handlers["textDocument/hover"] = M.enhanced_float_handler(vim.lsp.handlers.hover)
+    vim.lsp.handlers["textDocument/signatureHelp"] = M.enhanced_float_handler(vim.lsp.handlers.signature_help)
   end
 
   -- NvimTree
@@ -378,8 +374,10 @@ M.config = function()
   lvim.builtin.treesitter.context_commentstring.enable = true
   local languages = vim.tbl_flatten {
     { "bash", "c", "c_sharp", "cmake", "comment", "cpp", "css", "d", "dart" },
-    { "dockerfile", "elixir", "elm", "erlang", "fennel", "fish", "go", "gomod" },
-    { "gomod", "graphql", "hcl", "vimdoc", "html", "java", "javascript", "jsdoc" },
+    -- { "dockerfile", "elixir", "elm", "erlang", "fennel", "fish", "go", "gomod" },
+    { "dockerfile", "elixir", "elm", "erlang", "fennel", "fish"},
+    -- { "gomod", "graphql", "hcl", "vimdoc", "html", "java", "javascript", "jsdoc" },
+    { "graphql", "hcl", "vimdoc", "html", "java", "javascript", "jsdoc" },
     { "json", "jsonc", "julia", "kotlin", "latex", "ledger", "lua", "make" },
     { "markdown", "markdown_inline", "nix", "ocaml", "perl", "php", "python" },
     { "query", "r", "regex", "rego", "ruby", "rust", "scala", "scss", "solidity" },
@@ -604,9 +602,6 @@ M.config = function()
     if lvim.builtin.file_browser.active then
       telescope.load_extension "file_browser"
     end
-    if lvim.builtin.persistence.active then
-      telescope.load_extension "persisted"
-    end
   end
 
   -- WhichKey
@@ -774,9 +769,8 @@ M.show_documentation = function()
   elseif vim.tbl_contains({ "man" }, filetype) then
     vim.cmd("Man " .. vim.fn.expand "<cword>")
   elseif filetype == "rust" then
-    local found, rt = pcall(require, "rust-tools")
-    if found then
-      rt.hover_actions.hover_actions()
+    if lvim.builtin.rust_programming.active then
+      vim.cmd.RustLsp { "hover", "actions" }
     else
       vim.lsp.buf.hover()
     end
@@ -851,19 +845,14 @@ M.lsp_on_attach_callback = function(client, _)
       "Clippy",
     }
     if lvim.builtin.rust_programming.active then
-      mappings["lA"] = { "<Cmd>RustHoverActions<CR>", "Hover Actions" }
-      mappings["lm"] = { "<Cmd>RustExpandMacro<CR>", "Expand Macro" }
-      mappings["lH"] = { "<Cmd>RustToggleInlayHints<CR>", "Toggle Inlay Hints" }
-      mappings["le"] = { "<Cmd>RustRunnables<CR>", "Runnables" }
-      mappings["lD"] = { "<cmd>RustDebuggables<Cr>", "Debuggables" }
-      mappings["lP"] = { "<cmd>RustParentModule<Cr>", "Parent Module" }
-      mappings["lv"] = { "<cmd>RustViewCrateGraph<Cr>", "View Crate Graph" }
-      mappings["lR"] = {
-        "<cmd>lua require('rust-tools/workspace_refresh')._reload_workspace_from_cargo_toml()<Cr>",
-        "Reload Workspace",
-      }
-      mappings["lc"] = { "<Cmd>RustOpenCargo<CR>", "Open Cargo" }
-      mappings["lo"] = { "<Cmd>RustOpenExternalDocs<CR>", "Open External Docs" }
+      mappings["lA"] = { "<Cmd>RustLsp hover actions<CR>", "Hover Actions" }
+      mappings["lm"] = { "<Cmd>RustLsp expandMacro<CR>", "Expand Macro" }
+      mappings["le"] = { "<Cmd>RustLsp runnables<CR>", "Runnables" }
+      mappings["lD"] = { "<cmd>RustLsp debuggables<Cr>", "Debuggables" }
+      mappings["lP"] = { "<cmd>RustLsp parentModule<Cr>", "Parent Module" }
+      mappings["lv"] = { "<cmd>RustLsp crateGraph<Cr>", "View Crate Graph" }
+      mappings["lR"] = { "<cmd>RustLsp flyCheck<Cr>", "Reload Workspace" }
+      mappings["lc"] = { "<Cmd>RustLsp openCargo<CR>", "Open Cargo" }
     end
   elseif client.name == "taplo" then
     if lvim.builtin.rust_programming.active then
@@ -910,6 +899,77 @@ M.lsp_on_attach_callback = function(client, _)
     end
   end
   which_key.register(mappings, opts)
+end
+
+M.enhanced_float_handler = function(handler)
+  return function(err, result, ctx, config)
+    local buf, win = handler(
+      err,
+      result,
+      ctx,
+      vim.tbl_deep_extend("force", config or {}, {
+        border = "rounded",
+        max_height = math.floor(vim.o.lines * 0.5),
+        max_width = math.floor(vim.o.columns * 0.4),
+      })
+    )
+
+    if not buf or not win then
+      return
+    end
+
+    -- Conceal everything.
+    vim.wo[win].concealcursor = "n"
+
+    -- Extra highlights.
+    for l, line in ipairs(vim.api.nvim_buf_get_lines(buf, 0, -1, false)) do
+      for pattern, hl_group in pairs {
+        ["|%S-|"] = "@text.reference",
+        ["@%S+"] = "@parameter",
+        ["^%s*(Parameters:)"] = "@text.title",
+        ["^%s*(Return:)"] = "@text.title",
+        ["^%s*(See also:)"] = "@text.title",
+        ["{%S-}"] = "@parameter",
+      } do
+        local from = 1 ---@type integer?
+        while from do
+          local to
+          from, to = line:find(pattern, from)
+          if from then
+            vim.api.nvim_buf_set_extmark(buf, md_namespace, l - 1, from - 1, {
+              end_col = to,
+              hl_group = hl_group,
+            })
+          end
+          from = to and to + 1 or nil
+        end
+      end
+    end
+
+    -- Add keymaps for opening links.
+    if not vim.b[buf].markdown_keys then
+      vim.keymap.set("n", "K", function()
+        -- Vim help links.
+        local url = (vim.fn.expand "<cWORD>" --[[@as string]]):match "|(%S-)|"
+        if url then
+          return vim.cmd.help(url)
+        end
+
+        -- Markdown links.
+        local col = vim.api.nvim_win_get_cursor(0)[2] + 1
+        local from, to
+        from, to, url = vim.api.nvim_get_current_line():find "%[.-%]%((%S-)%)"
+        if from and col >= from and col <= to then
+          vim.system({ "open", url }, nil, function(res)
+            if res.code ~= 0 then
+              vim.notify("Failed to open URL" .. url, vim.log.levels.ERROR)
+            end
+          end)
+        end
+      end, { buffer = buf, silent = true })
+      vim.b[buf].markdown_keys = true
+    end
+  end
 end
 
 return M

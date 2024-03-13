@@ -51,8 +51,6 @@ M.config = function()
   vim.wo.foldmethod = "expr"
   vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
   vim.wo.foldlevel = 4
-  vim.wo.foldtext =
-    [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
   vim.wo.foldnestmax = 3
   vim.wo.foldminlines = 1
   vim.opt.guifont = "FiraCode Nerd Font:h13"
@@ -271,6 +269,18 @@ function _G.qftf(info)
     table.insert(ret, str)
   end
   return ret
+end
+
+function M.inlay_hints(buf, value)
+  local ih = vim.lsp.buf.inlay_hint or vim.lsp.inlay_hint
+  if type(ih) == "function" then
+    ih(buf, value)
+  elseif type(ih) == "table" and ih.enable then
+    if value == nil then
+      value = not ih.is_enabled(buf)
+    end
+    ih.enable(buf, value)
+  end
 end
 
 return M

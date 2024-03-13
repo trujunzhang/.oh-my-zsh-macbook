@@ -103,7 +103,7 @@ lvim.plugins = {
   - `lvim.builtin.dap.active = true`
 - sometimes instead of saving you jump trough jumplist 😢 just disable nvim-lastplace
   - `lvim.builtin.lastplace = { active = false }`
-- sometimes `compe-tabnine` doesn't play nice, you can disable it :)
+- sometimes `cmp-tabnine` doesn't play nice, you can disable it :)
   - `lvim.builtin.tabnine = { active = false }`
 - if you don't need testing, just disable it (use `ultest` or `neotest`)
   - `lvim.builtin.test_runner = { active = false, runner = "ultest" }`
@@ -115,7 +115,7 @@ lvim.plugins = {
   - `lvim.builtin.smooth_scroll= ""`
 - if you want an obvious focused window, and you don't get seizures from it
   - `lvim.builtin.nonumber_unfocus = true`
-- choose between [hop](https://github.com/phaazon/hop.nvim) and [leap](https://github.com/ggandor/leap.nvim) as your favorite motion provider
+- choose between [hop](https://github.com/phaazon/hop.nvim) and [leap](https://github.com/ggandor/leap.nvim) or [flash](https://github.com/folke/flash.nvim) as your favorite motion provider
   - `lvim.builtin.motion_provider = "hop"`
 - choose between [filename->incline](https://github.com/b0o/incline.nvim) and [treesitter->winbar](https://github.com/fgheng/winbar.nvim) or [navic](https://github.com/SmiteshP/nvim-navic) as your winbar provider
   - `lvim.builtin.winbar_provider = "treesitter"`
@@ -231,8 +231,6 @@ lvim # run :Lazy sync
 You can use [mason](mason) to install these:
 
 ```shell
-brew install luarocks
-luarocks install luacheck  # if you want to use luacheck
 cargo install selene  # if you want to use selene instead of luacheck
 brew install hadolint  # if you want to lint dockerfiles
 pip install vim-vint  # for vim linting
@@ -392,15 +390,14 @@ _Symbols Outline_
 - [vim match-up](https://github.com/andymass/vim-matchup)
 - [Markdown Preview for (Neo)vim](https://github.com/iamcco/markdown-preview.nvim)
 - [Zen Mode](https://github.com/folke/zen-mode.nvim)
-- [rust-tools](https://github.com/simrat39/rust-tools.nvim)
-- [nvim-spectre](https://github.com/windwp/nvim-spectre)
+- [rustaceanvim](https://github.com/mrcjkb/rustaceanvim)
+- [nvim-spectre](https://github.com/nvim-pack/nvim-spectre)
 - [colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
 - [Neogen](https://github.com/danymat/neogen)
 - [Vimtex](https://github.com/lervag/vimtex)
 - [typescript.nvim](https://github.com/jose-elias-alvarez/typescript.nvim)
 - [flutter-tools.nvim](https://github.com/akinsho/flutter-tools.nvim)
 - [NeoClip](https://github.com/AckslD/nvim-neoclip.lua)
-- [Telescope live grep args](nvim-telescope/telescope-live-grep-args.nvim)
 - [fidget](https://github.com/j-hui/fidget.nvim)
 - [clangd_extensions.nvim](https://github.com/p00f/clangd_extensions.nvim)
 - [crates.nvim](https://github.com/Saecki/crates.nvim)
@@ -410,9 +407,10 @@ _Symbols Outline_
 ### Optional Plugins
 
 - [Hop](https://github.com/phaazon/hop.nvim)
+- [Flash](https://github.com/folke/flash.nvim)
 - [Leap](https://github.com/ggandor/leap.nvim)
 - [remember.nvim](https://github.com/vladdoster/remember.nvim)
-- [Tabnine](https://github.com/tzachar/compe-tabnine)
+- [Tabnine](https://github.com/tzachar/cmp-tabnine)
 - [Persistence](https://github.com/olimorris/persisted.nvim)
 - [Presence](https://github.com/andweeb/presence.nvim)
 - [Orgmode.nvim](https://github.com/kristijanhusak/orgmode.nvim)
@@ -452,7 +450,11 @@ _Symbols Outline_
 - [inc-rename](https://github.com/smjonas/inc-rename.nvim)
 - [hlargs.nvim](https://github.com/m-demare/hlargs.nvim)
 - [cmake-tools.nvim](https://github.com/Civitasv/cmake-tools.nvim)
-- [mind.nvim](https://github.com/phaazon/mind.nvim)
+- [mind.nvim](https://github.com/Selyss/mind.nvim)
+- [wtf.nvim](https://github.com/piersolenski/wtf.nvim)
+- [backseat.nvim](https://github.com/james1236/backseat.nvim)
+- [outline.nvim](https://github.com/hedyhli/outline.nvim)
+- [typescript-tools.nvim](https://github.com/pmizio/typescript-tools.nvim)
 
 </details>
 
@@ -518,15 +520,15 @@ Note that,
 
 ### Motion
 
-| Key                         | Mode | Action                  | Plugin or Mapping                                             |
-| --------------------------- | :--: | ----------------------- | ------------------------------------------------------------- |
-| <kbd>f</kbd>                |  𝐍   | find next character     | <small>HopChar1CurrentLineAC</small> or <small>leap_f</small> |
-| <kbd>F</kbd>                |  𝐍   | find previous character | <small>HopChar1CurrentLineBC</small> or <small>leap_F</small> |
-| <kbd>s</kbd>                |  𝐍   | find character          | <small>HopChar2MW</small> or <small>leap_s</small>            |
-| <kbd>S</kbd>                |  𝐍   | find word               | <small>HopWordMW</small> or <small>leap_S</small>             |
-| <kbd>Alt</kbd>+<kbd>a</kbd> |  𝐈   | select all              | <small>ggVG</small>                                           |
-| <kbd>Alt</kbd>+<kbd>a</kbd> |  𝐍   | increment number        | <small>C-A</small>                                            |
-| <kbd>Alt</kbd>+<kbd>x</kbd> |  𝐍   | decrement number        | <small>C-X</small>                                            |
+| Key                         | Mode | Action                  | Plugin or Mapping                                                                                 |
+| --------------------------- | :--: | ----------------------- | ------------------------------------------------------------------------------------------------- |
+| <kbd>f</kbd>                |  𝐍   | find next character     | <small>HopChar1CurrentLineAC</small> or <small>leap_f</small> or <small>Flash.CharActions</small> |
+| <kbd>F</kbd>                |  𝐍   | find previous character | <small>HopChar1CurrentLineBC</small> or <small>leap_F</small> or <small>Flash.CharActions</small> |
+| <kbd>s</kbd>                |  𝐍   | find character          | <small>HopChar2MW</small> or <small>leap_s</small> or <small>require("flash").jump()</small>      |
+| <kbd>S</kbd>                |  𝐍   | find word               | <small>HopWordMW</small> or <small>leap_S</small> or <small>2char jump</small>                    |
+| <kbd>Alt</kbd>+<kbd>a</kbd> |  𝐈   | select all              | <small>ggVG</small>                                                                               |
+| <kbd>Alt</kbd>+<kbd>a</kbd> |  𝐍   | increment number        | <small>C-A</small>                                                                                |
+| <kbd>Alt</kbd>+<kbd>x</kbd> |  𝐍   | decrement number        | <small>C-X</small>                                                                                |
 
 ### LSP
 
@@ -785,4 +787,5 @@ Note that,
 # Troubleshooting
 
 1. Check your neovim version. Are you on the newest nightly version?
-2. Reset your packer cache, and update lvim.
+2. make sure to run `:Lazy sync`
+3. Reset your Lunarvim cache using `:LvimCacheReset`

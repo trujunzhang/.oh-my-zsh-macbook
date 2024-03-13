@@ -28,32 +28,30 @@ M.config = function()
     )
   end
 
-  -- NOTE: using bigfile.nvim instead of this autocmd
+  vim.cmd [[
+  " disable syntax highlighting in big files
+  function! DisableSyntaxTreesitter()
+      echo("Big file, disabling syntax, treesitter and folding")
+      if exists(':TSBufDisable')
+          exec 'TSBufDisable autotag'
+          exec 'TSBufDisable highlight'
+      endif
 
-  --   vim.cmd [[
-  -- " disable syntax highlighting in big files
-  -- function! DisableSyntaxTreesitter()
-  --     echo("Big file, disabling syntax, treesitter and folding")
-  --     if exists(':TSBufDisable')
-  --         exec 'TSBufDisable autotag'
-  --         exec 'TSBufDisable highlight'
-  --     endif
+      set foldmethod=manual
+      syntax clear
+      syntax off
+      filetype off
+      set noundofile
+      set noswapfile
+      set noloadplugins
+      set lazyredraw
+  endfunction
 
-  --     set foldmethod=manual
-  --     syntax clear
-  --     syntax off
-  --     filetype off
-  --     set noundofile
-  --     set noswapfile
-  --     set noloadplugins
-  --     set lazyredraw
-  -- endfunction
-
-  -- augroup BigFileDisable
-  --     autocmd!
-  --     autocmd BufReadPre,FileReadPre * if getfsize(expand("%")) > 1024 * 1024 | exec DisableSyntaxTreesitter() | endif
-  -- augroup END
-  --   ]]
+  augroup BigFileDisable
+      autocmd!
+      autocmd BufReadPre,FileReadPre * if getfsize(expand("%")) > 1024 * 1024 | exec DisableSyntaxTreesitter() | endif
+  augroup END
+    ]]
   create_aucmd("BufWinEnter", {
     group = "_lvim_user",
     pattern = "*.md",
@@ -196,18 +194,6 @@ M.make_run = function()
         "<leader>m",
         "<cmd>lua require('lvim.core.terminal')._exec_toggle({cmd='echo \"compile :pepelaugh:\";read',count=2,direction='float'})<cr>"
       )
-    end,
-  })
-  create_aucmd("FileType", {
-    group = "_lvim_user",
-    pattern = "rust",
-    callback = function()
-      vim.keymap.set(
-        "n",
-        "<leader>m",
-        "<cmd>lua require('lvim.core.terminal')._exec_toggle({cmd='cargo build;read',count=2,direction='float'})<CR>"
-      )
-      vim.keymap.set("n", "<leader>r", "<cmd>lua require('rust-tools.runnables').runnables()<CR>")
     end,
   })
 end

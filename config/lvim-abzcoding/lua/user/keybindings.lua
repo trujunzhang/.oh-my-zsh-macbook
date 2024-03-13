@@ -13,6 +13,32 @@ M.set_wezterm_keybindings = function()
   lvim.keys.visual_mode["≈"] = lvim.keys.visual_mode["<A-x>"]
 end
 
+M.fzf_projects = function()
+  local fzf_lua = require "fzf-lua"
+  local history = require "project_nvim.utils.history"
+  fzf_lua.fzf_exec(function(cb)
+    local results = history.get_recent_projects()
+    for _, e in ipairs(results) do
+      cb(e)
+    end
+    cb()
+  end, {
+    actions = {
+      ["default"] = {
+        function(selected)
+          fzf_lua.files { cwd = selected[1] }
+        end,
+      },
+      ["ctrl-d"] = {
+        function(selected)
+          history.delete_project { value = selected[1] }
+        end,
+        fzf_lua.actions.resume,
+      },
+    },
+  })
+end
+
 M.set_terminal_keymaps = function()
   local opts = { noremap = true }
   vim.api.nvim_buf_set_keymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)
@@ -307,7 +333,8 @@ M.config = function()
   lvim.builtin.which_key.mappings["h"] = { "<cmd>nohlsearch<CR>", "󰸱 No Highlight" }
   lvim.builtin.which_key.mappings.g.name = " Git"
   if vim.fn.has "nvim-0.10" == 1 then
-    lvim.builtin.which_key.mappings["I"] = { "<cmd>lua vim.lsp.inlay_hint(0)<cr>", " Toggle Inlay" }
+
+    lvim.builtin.which_key.mappings["I"] = { "<cmd>lua require('user.neovim').inlay_hints()<cr>", " Toggle Inlay" }
   end
   lvim.builtin.which_key.mappings.l.name = " LSP"
   lvim.builtin.which_key.mappings["f"] = {
@@ -380,6 +407,8 @@ M.config = function()
     lvim.builtin.which_key.mappings["o"] = { "<cmd>SymbolsOutline<cr>", " Symbol Outline" }
   elseif lvim.builtin.tag_provider == "vista" then
     lvim.builtin.which_key.mappings["o"] = { "<cmd>Vista!!<cr>", "Vista" }
+  elseif lvim.builtin.tag_provider == "outline" then
+    lvim.builtin.which_key.mappings["o"] = { "<cmd>Outline<cr>", " Outline" }
   end
   lvim.builtin.which_key.mappings.L.name = " LunarVim"
   lvim.builtin.which_key.mappings.p.name = " Lazy"

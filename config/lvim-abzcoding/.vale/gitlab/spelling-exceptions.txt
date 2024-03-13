@@ -5,6 +5,7 @@ Alertmanager
 Algolia
 Alibaba
 Aliyun
+Amcache
 Ansible
 Anthos
 Anycast
@@ -26,8 +27,10 @@ Bamboo
 Bazel
 Bepa
 Bhyve
+Binance
 Bitbucket
 Blankline
+Blockchain
 Bootloader
 Bootsnap
 Bugzilla
@@ -57,6 +60,7 @@ Corosync
 Coursier
 Crossplane
 CrowdIn
+Cryptocurrency
 Cyber
 DDOS
 Dangerfile
@@ -68,6 +72,7 @@ Deserialization
 Deserializer
 DevOps
 Disqus
+Distroless
 Divio
 Dockerfile
 Dockerfiles
@@ -76,14 +81,17 @@ Dockerized
 Dockerizing
 Dpl
 Dreamweaver
+Duqu
 EDR
 ETag
 Ecto
 Elasticsearch
+Ethereum
 Excon
 Exfiltrate
 Facebook
 Falco
+Fargate
 Fastzip
 Figma
 Filebeat
@@ -93,6 +101,7 @@ Floatline
 Flowdock
 Fluentd
 Forgerock
+Frontrunning
 Fugit
 Gantt
 Gemfile
@@ -126,10 +135,14 @@ Haswell
 Helm
 Heroku
 Herokuish
+Heuristical
 Hexo
 HipChat
+Hyperledger
+IPSec
 Iglu
 Immer
+Incentivized
 Ingress
 Inode
 Istio
@@ -148,6 +161,7 @@ Kargadan
 Karma
 Kerberos
 Keycloak
+Keylog
 Keymap
 Kibana
 Kinesis
@@ -184,7 +198,11 @@ Markdown
 Matomo
 Mattermost
 Memorystore
+Merkle
+Metasploit
+Meterpreter
 Microsoft
+Mimikatz
 MinIO
 Minikube
 ModSecurity
@@ -200,6 +218,7 @@ Nginx
 Nokogiri
 Nurtch
 OAuth
+OPSEC
 Octokit
 Okta
 OmniAuth
@@ -217,7 +236,9 @@ Pipfile
 Pipfiles
 Piwik
 Poedit
+Ponzi
 PostgreSQL
+Prefetch
 Prettifier
 Pritaly
 Priyanka
@@ -236,6 +257,7 @@ Redcarpet
 Redis
 Redmine
 Restlet
+Retpoline
 Rubinius
 Rubix
 Rubocop
@@ -250,6 +272,7 @@ Semgrep
 Sendmail
 Sentry
 Shibboleth
+Shimcache
 Shodan
 Shopify
 Sidekiq
@@ -270,8 +293,10 @@ Splunk
 SpotBugs
 Stackdriver
 Stackprof
+Stuxnet
 Superblock
 Sysbench
+Sysmon
 TODO
 Tabnine
 Thanos
@@ -363,6 +388,8 @@ blockquoting
 boolean
 booleans
 bootkit
+bootloader
+bootsector
 browsable
 bufferline
 bugfix
@@ -400,6 +427,7 @@ compilable
 composable
 config
 configs
+crackable
 cron
 cronjob
 cronjobs
@@ -410,6 +438,7 @@ crosslinked
 crosslinking
 crosslinks
 crt
+crypto
 cyber
 cybersecurity
 datasource
@@ -467,6 +496,7 @@ fastlane
 favicon
 favorited
 ffuf
+filesystem
 filetype
 filetypes
 firewalled
@@ -517,8 +547,10 @@ issuables
 jQuery
 jasmine-jquery
 javascript
+journaling
 jq
 jsdom
+json
 julia
 jumplist
 kanban
@@ -951,6 +983,7 @@ upstreams
 upvote
 upvoted
 upvotes
+utilize
 validator
 validators
 vendored
