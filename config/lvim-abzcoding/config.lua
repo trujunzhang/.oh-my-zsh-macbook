@@ -135,9 +135,16 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
   "rust_analyzer",
   "taplo",
   "texlab",
-  "tsserver",
+  -- "tsserver",
   "yamlls",
 })
+
+lvim.builtin.treesitter.ignore_install = { "kotlin", 'c', 'cmake', 'ocaml', 'php', 'rust' }
+lvim.builtin.treesitter.ensure_installed = { "ruby" }
+lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.highlight.enable = true
+lvim.builtin.nvimtree.setup.open_on_setup = false
+
 require("user.null_ls").config()
 
 -- Additional Plugins
