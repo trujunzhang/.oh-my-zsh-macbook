@@ -50,7 +50,7 @@ M.config = function()
       cond = function()
         local _time = os.date "*t"
         return ((_time.hour >= 21 and _time.hour < 24) or (_time.hour >= 0 and _time.hour < 1))
-          and lvim.builtin.time_based_themes
+            and lvim.builtin.time_based_themes
       end,
     },
     {
@@ -199,23 +199,22 @@ M.config = function()
     },
     {
       "olimorris/persisted.nvim",
-      event = "BufReadPre",
-      lazy = true,
+      -- event = "BufReadPre",
+      event = "VimEnter",
+      lazy = false,
       config = function()
         require("user.persist").config()
       end,
-      -- enabled = lvim.builtin.persistence.active,
-      enabled = true,
+      enabled = lvim.builtin.persistence.active
     },
     {
       "andweeb/presence.nvim",
       config = function()
         require("user.presence").config()
       end,
-      enabled = lvim.builtin.presence.active,
-      -- enabled = true,
+      enabled = lvim.builtin.presence.active
     },
-    { "mfussenegger/nvim-jdtls", ft = "java" },
+    { "mfussenegger/nvim-jdtls",     ft = "java" },
     {
       "kristijanhusak/orgmode.nvim",
       keys = { "go", "gC" },
@@ -292,9 +291,9 @@ M.config = function()
       event = { "BufReadPost", "BufNew" },
       enabled = (lvim.builtin.test_runner.active and lvim.builtin.test_runner.runner == "neotest"),
     },
-    { "nvim-neotest/neotest-go", event = { "BufEnter *.go" } },
+    { "nvim-neotest/neotest-go",     event = { "BufEnter *.go" } },
     { "nvim-neotest/neotest-python", event = { "BufEnter *.py" } },
-    { "rouge8/neotest-rust", event = { "BufEnter *.rs" } },
+    { "rouge8/neotest-rust",         event = { "BufEnter *.rs" } },
     {
       "rcarriga/vim-ultest",
       cmd = { "Ultest", "UltestSummary", "UltestNearest" },
