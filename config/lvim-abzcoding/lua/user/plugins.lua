@@ -291,9 +291,9 @@ M.config = function()
       event = { "BufReadPost", "BufNew" },
       enabled = (lvim.builtin.test_runner.active and lvim.builtin.test_runner.runner == "neotest"),
     },
-    { "nvim-neotest/neotest-go",     event = { "BufEnter *.go" } },
+--     { "nvim-neotest/neotest-go",     event = { "BufEnter *.go" } },
     { "nvim-neotest/neotest-python", event = { "BufEnter *.py" } },
-    { "rouge8/neotest-rust",         event = { "BufEnter *.rs" } },
+--     { "rouge8/neotest-rust",         event = { "BufEnter *.rs" } },
     {
       "rcarriga/vim-ultest",
       cmd = { "Ultest", "UltestSummary", "UltestNearest" },
@@ -303,14 +303,14 @@ M.config = function()
       event = { "BufEnter *_test.*,*_spec.*,*est_*.*" },
       enabled = (lvim.builtin.test_runner.active and lvim.builtin.test_runner.runner == "ultest"),
     },
-    {
-      "akinsho/flutter-tools.nvim",
-      dependencies = "nvim-lua/plenary.nvim",
-      config = function()
-        require("user.flutter_tools").config()
-      end,
-      ft = "dart",
-    },
+--     {
+--       "akinsho/flutter-tools.nvim",
+--       dependencies = "nvim-lua/plenary.nvim",
+--       config = function()
+--         require("user.flutter_tools").config()
+--       end,
+--       ft = "dart",
+--     },
     {
       "RishabhRD/nvim-cheat.sh",
       dependencies = "RishabhRD/popfix",
@@ -384,25 +384,25 @@ M.config = function()
       event = "BufRead",
       enabled = lvim.builtin.smooth_scroll == "cinnamon",
     },
-    {
-      "github/copilot.vim",
-      config = function()
-        require("user.copilot").config()
-      end,
-      enabled = lvim.builtin.sell_your_soul_to_devil.active or lvim.builtin.sell_your_soul_to_devil.prada,
-    },
-    {
-      "zbirenbaum/copilot.lua",
-      dependencies = { "zbirenbaum/copilot-cmp", "nvim-cmp" },
-      config = function()
-        local cmp_source = { name = "copilot", group_index = 2 }
-        table.insert(lvim.builtin.cmp.sources, cmp_source)
-        vim.defer_fn(function()
-          require("copilot").setup()
-        end, 100)
-      end,
-      enabled = lvim.builtin.sell_your_soul_to_devil.prada,
-    },
+--     {
+--       "github/copilot.vim",
+--       config = function()
+--         require("user.copilot").config()
+--       end,
+--       enabled = lvim.builtin.sell_your_soul_to_devil.active or lvim.builtin.sell_your_soul_to_devil.prada,
+--     },
+--     {
+--       "zbirenbaum/copilot.lua",
+--       dependencies = { "zbirenbaum/copilot-cmp", "nvim-cmp" },
+--       config = function()
+--         local cmp_source = { name = "copilot", group_index = 2 }
+--         table.insert(lvim.builtin.cmp.sources, cmp_source)
+--         vim.defer_fn(function()
+--           require("copilot").setup()
+--         end, 100)
+--       end,
+--       enabled = lvim.builtin.sell_your_soul_to_devil.prada,
+--     },
     {
       "ThePrimeagen/harpoon",
       dependencies = {
@@ -534,20 +534,20 @@ M.config = function()
       event = "BufReadPost",
       enabled = lvim.builtin.tag_provider == "vista",
     },
-    {
-      "p00f/clangd_extensions.nvim",
-      ft = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
-      enabled = lvim.builtin.cpp_programming.active,
-    },
-    {
-      "saecki/crates.nvim",
-      event = { "BufRead Cargo.toml" },
-      dependencies = { { "nvim-lua/plenary.nvim" } },
-      config = function()
-        require("user.crates").config()
-      end,
-      enabled = lvim.builtin.rust_programming.active,
-    },
+--     {
+--       "p00f/clangd_extensions.nvim",
+--       ft = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
+--       enabled = lvim.builtin.cpp_programming.active,
+--     },
+--     {
+--       "saecki/crates.nvim",
+--       event = { "BufRead Cargo.toml" },
+--       dependencies = { { "nvim-lua/plenary.nvim" } },
+--       config = function()
+--         require("user.crates").config()
+--       end,
+--       enabled = lvim.builtin.rust_programming.active,
+--     },
     {
       "hrsh7th/cmp-cmdline",
       enabled = lvim.builtin.fancy_wild_menu.active,
@@ -569,15 +569,23 @@ M.config = function()
       enabled = lvim.builtin.dressing.active,
       event = "BufWinEnter",
     },
-    {
-      "kdheepak/cmp-latex-symbols",
-      dependencies = "hrsh7th/nvim-cmp",
-      ft = "tex",
-    },
+--     {
+--       "kdheepak/cmp-latex-symbols",
+--       dependencies = "hrsh7th/nvim-cmp",
+--       ft = "tex",
+--     },
     {
       "ThePrimeagen/refactoring.nvim",
       lazy = true,
-      ft = { "typescript", "javascript", "lua", "c", "cpp", "go", "python", "java", "php" },
+      ft = {
+      "typescript",
+      "javascript",
+      "lua",
+--       "c", "cpp", "go",
+      "python",
+      "java"
+--       "php"
+      },
       event = "BufReadPost",
       config = function()
         require("refactoring").setup {}
@@ -746,14 +754,14 @@ M.config = function()
       end,
       event = { "BufReadPost", "BufNew" },
     },
-    {
-      "Civitasv/cmake-tools.nvim",
-      config = function()
-        require("user.cle").cmake_config()
-      end,
-      ft = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
-      enabled = lvim.builtin.cpp_programming.active,
-    },
+--     {
+--       "Civitasv/cmake-tools.nvim",
+--       config = function()
+--         require("user.cle").cmake_config()
+--       end,
+--       ft = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
+--       enabled = lvim.builtin.cpp_programming.active,
+--     },
     {
       "raimon49/requirements.txt.vim",
       event = "VeryLazy",

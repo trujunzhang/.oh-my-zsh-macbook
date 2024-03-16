@@ -111,6 +111,8 @@ function link_config_fold {
   # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-adibhanna"       "$HOME/.config/lvim"
   # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-ChristianChiarulli"       "$HOME/.config/lvim"
 
+  directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim"       "$HOME/.local/share/lunarvim/lvim"
+
   # nvim
   # directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim/lua/custom"
   directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim"
