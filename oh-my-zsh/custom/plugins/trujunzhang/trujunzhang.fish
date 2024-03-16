@@ -617,13 +617,14 @@ alias dcloneexpensify="git clone https://github.com/expensify/App.git expensify 
 alias dcloneieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
 
 alias wcleanWebstorm="rm -rf $HOME/Library/Caches/JetBrains"
+alias wcleanLVimCache="rm -rf $HOME/.cache/lvim/ && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"
 
 # crossover
 function linkCrossOverBottle
     set bottle $argv[1]
     echo $bottle
-    # ln -s "/Volumes/MacGame/CrossOver/Bottles/$bottle" "$HOME/Library/Application Support/CrossOver/Bottles/$bottle"  
-    ln -s "/Volumes/MacGame/crossover" "$HOME/Library/Application Support/CrossOver/Bottles"  
+    # ln -s "/Volumes/MacGame/CrossOver/Bottles/$bottle" "$HOME/Library/Application Support/CrossOver/Bottles/$bottle"
+    ln -s "/Volumes/MacGame/crossover" "$HOME/Library/Application Support/CrossOver/Bottles"
 end
 
 # djzhang's git
