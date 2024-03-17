@@ -174,24 +174,24 @@ M.config = function()
       end,
     }
   end
-  if lvim.builtin.fancy_wild_menu.active then
-    local cmdline_opts = {
-      mapping = cmp.mapping.preset.cmdline {},
-      sources = {
-        { name = "cmdline" },
-        { name = "path" },
-      },
-    }
-    if lvim.builtin.noice.active then
-      cmdline_opts.window = {
-        completion = {
-          border = cmp_border,
-          winhighlight = "Search:None",
-        },
-      }
-    end
-    cmp.setup.cmdline(":", cmdline_opts)
-  end
+  -- if lvim.builtin.fancy_wild_menu.active then
+  --   local cmdline_opts = {
+  --     mapping = cmp.mapping.preset.cmdline {},
+  --     sources = {
+  --       { name = "cmdline" },
+  --       { name = "path" },
+  --     },
+  --   }
+  --   if lvim.builtin.noice.active then
+  --     cmdline_opts.window = {
+  --       completion = {
+  --         border = cmp_border,
+  --         winhighlight = "Search:None",
+  --       },
+  --     }
+  --   end
+  --   cmp.setup.cmdline(":", cmdline_opts)
+  -- end
   cmp.setup.filetype("toml", {
     sources = cmp.config.sources({
       { name = "nvim_lsp", max_item_count = 8 },
@@ -210,20 +210,20 @@ M.config = function()
       { name = "buffer", max_item_count = 5, keyword_length = 5 },
     }),
   })
-  if lvim.builtin.sell_your_soul_to_devil.active then
-    local function t(str)
-      return vim.api.nvim_replace_termcodes(str, true, true, true)
-    end
+  -- if lvim.builtin.sell_your_soul_to_devil.active then
+  --   local function t(str)
+  --     return vim.api.nvim_replace_termcodes(str, true, true, true)
+  --   end
 
-    lvim.builtin.cmp.mapping["<c-h>"] = cmp.mapping(function()
-      vim.api.nvim_feedkeys(vim.fn["copilot#Accept"](t "<Tab>"), "n", true)
-    end)
-    lvim.keys.insert_mode["<M-]>"] = { "<Plug>(copilot-next)", { silent = true } }
-    lvim.keys.insert_mode["<M-[>"] = { "<Plug>(copilot-previous)", { silent = true } }
-    lvim.keys.insert_mode["<M-\\>"] = { "<Cmd>vertical Copilot panel<CR>", { silent = true } }
-    lvim.builtin.cmp.mapping["<Tab>"] = cmp.mapping(M.tab, { "i", "c" })
-    lvim.builtin.cmp.mapping["<S-Tab>"] = cmp.mapping(M.shift_tab, { "i", "c" })
-  end
+  --   lvim.builtin.cmp.mapping["<c-h>"] = cmp.mapping(function()
+  --     vim.api.nvim_feedkeys(vim.fn["copilot#Accept"](t "<Tab>"), "n", true)
+  --   end)
+  --   lvim.keys.insert_mode["<M-]>"] = { "<Plug>(copilot-next)", { silent = true } }
+  --   lvim.keys.insert_mode["<M-[>"] = { "<Plug>(copilot-previous)", { silent = true } }
+  --   lvim.keys.insert_mode["<M-\\>"] = { "<Cmd>vertical Copilot panel<CR>", { silent = true } }
+  --   lvim.builtin.cmp.mapping["<Tab>"] = cmp.mapping(M.tab, { "i", "c" })
+  --   lvim.builtin.cmp.mapping["<S-Tab>"] = cmp.mapping(M.shift_tab, { "i", "c" })
+  -- end
 
   -- Comment
   -- =========================================

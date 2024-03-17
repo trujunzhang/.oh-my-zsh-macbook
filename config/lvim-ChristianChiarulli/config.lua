@@ -26,8 +26,6 @@ reload "user.neogit"
 reload "user.colorizer"
 reload "user.lualine"
 reload "user.tabnine"
--- reload "user.copilot"
--- reload "user.chatgpt"
 reload "user.whichkey"
 reload "user.neoai"
 reload "user.cmp"
@@ -35,13 +33,3 @@ reload "user.nvimtree"
 reload "nostr"
 reload "user.astro-tools"
 reload "user.matchup"
-reload "user.modicator"
-
--- djzhang's config
-reload "user.autosave"
-
--- snippets
--- refer:
---    https://github.com/sambergo/lunarvim-snippet-examples
-require("luasnip/loaders/from_vscode").load { paths = { "~/.config/nvim-snippets/vscode-es7-javascript-react-snippets" } }
-require("luasnip/loaders/from_vscode").load { paths = { "~/.config/nvim-snippets/my-snippets" } }

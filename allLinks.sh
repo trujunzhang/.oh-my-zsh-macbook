@@ -107,9 +107,9 @@ function link_config_fold {
   directoryLink  "nvim(snippets)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets"       "$HOME/.config/nvim-snippets"
 
   # lvim
-  directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-abzcoding"       "$HOME/.config/lvim"
+  # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-abzcoding"       "$HOME/.config/lvim"
   # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-adibhanna"       "$HOME/.config/lvim"
-  # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-ChristianChiarulli"       "$HOME/.config/lvim"
+  directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-ChristianChiarulli"       "$HOME/.config/lvim"
 
   directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-branch"       "$HOME/.local/share/lunarvim/lvim"
   # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-master"       "$HOME/.local/share/lunarvim/lvim"

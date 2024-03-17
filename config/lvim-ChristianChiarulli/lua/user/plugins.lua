@@ -1,28 +1,16 @@
 -- Additional Plugins
 lvim.plugins = {
   {
-    'Exafunction/codeium.vim',
-    config = function ()
-      -- Change '<C-g>' here to any keycode you like.
-      -- vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-      vim.keymap.set('i', '<Right>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-      vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-      vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-    end
-  },
-  {
-    "Pocco81/auto-save.nvim",
+    "rose-pine/neovim",
+    name = "rose-pine",
     config = function()
-      require("auto-save").setup {
-        -- your config goes here
-        -- or just leave it empty :)
-      }
-    end
-  },
-  {
-    "mawkler/modicator.nvim",
-    event = "ColorScheme",
+      require("user.theme").rose_pine()
+      lvim.colorscheme = "rose-pine-dawn"
+    end,
+    cond = function()
+      local _time = os.date "*t"
+      return (_time.hour >= 1 and _time.hour < 9) 
+    end,
   },
   "HiPhish/nvim-ts-rainbow2",
   -- {
@@ -30,17 +18,10 @@ lvim.plugins = {
   -- },
   "andymass/vim-matchup",
   "lunarvim/synthwave84.nvim",
-  -- {
-  --   "kndndrj/nvim-dbee",
-  --   build = function()
-  --     require("dbee").install()
-  --   end,
-  -- },
   "kkharji/sqlite.lua",
   { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
   { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
   { url = "git@github.com:LunarVim/primer.nvim.git" },
-  -- { "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
@@ -81,7 +62,6 @@ lvim.plugins = {
   "jose-elias-alvarez/typescript.nvim",
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
-  -- "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
     version = "v0.3.0",
@@ -123,12 +103,6 @@ lvim.plugins = {
       require("copilot_cmp").setup()
     end,
   },
-  -- {
-  --   "tzachar/cmp-tabnine",
-  --   event = "BufRead",
-  --   build = "./install.sh",
-  -- },
-
   "MunifTanjim/nui.nvim",
   "Bryley/neoai.nvim",
   "mfussenegger/nvim-dap-python",
