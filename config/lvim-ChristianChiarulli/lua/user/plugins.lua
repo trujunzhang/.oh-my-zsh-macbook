@@ -13,6 +13,8 @@ lvim.plugins = {
   { url = "git@github.com:LunarVim/primer.nvim.git" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
+  "roobert/tailwindcss-colorizer-cmp.nvim",
+  "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",
   "opalmay/vim-smoothie",
   {
