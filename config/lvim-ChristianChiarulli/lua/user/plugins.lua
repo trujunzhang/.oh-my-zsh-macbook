@@ -19,8 +19,6 @@ lvim.plugins = {
   { url = "git@github.com:LunarVim/primer.nvim.git" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
-  "roobert/tailwindcss-colorizer-cmp.nvim",
-  -- "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",
   "opalmay/vim-smoothie",
   {
@@ -30,41 +28,18 @@ lvim.plugins = {
   "windwp/nvim-ts-autotag",
   "kylechui/nvim-surround",
   "christianchiarulli/harpoon",
-  "NvChad/nvim-colorizer.lua",
   "moll/vim-bbye",
   "folke/todo-comments.nvim",
   "windwp/nvim-spectre",
-  "f-person/git-blame.nvim",
-  "ruifm/gitlinker.nvim",
-  "mattn/vim-gist",
-  "mattn/webapi-vim",
-  "folke/zen-mode.nvim",
   {
     "lvimuser/lsp-inlayhints.nvim",
     branch = "anticonceal",
   },
-  "lunarvim/darkplus.nvim",
   "kevinhwang91/nvim-bqf",
-  "is0n/jaq-nvim",
   "nacro90/numb.nvim",
-  "neogitorg/neogit",
-  "sindrets/diffview.nvim",
   "jose-elias-alvarez/typescript.nvim",
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
-  {
-    "saecki/crates.nvim",
-    version = "v0.3.0",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("crates").setup {
-        null_ls = {
-          enabled = true,
-          name = "crates.nvim",
-        },
-      }
-    end,
-  },
   "MunifTanjim/nui.nvim",
   {
     "jinh0/eyeliner.nvim",
@@ -76,10 +51,6 @@ lvim.plugins = {
   },
   { "christianchiarulli/telescope-tabs", branch = "chris" },
   "monaqa/dial.nvim",
-  {
-    "0x100101/lab.nvim",
-    build = "cd js && npm ci",
-  },
   "MunifTanjim/nui.nvim",
   "Bryley/neoai.nvim",
   "mfussenegger/nvim-dap-python",
@@ -90,12 +61,4 @@ lvim.plugins = {
     event = "BufRead",
   },
   "ThePrimeagen/vim-be-good",
-  -- "folke/noice.nvim",
-  -- "rcarriga/nvim-notify",
-
-  -- https://github.com/jose-elias-alvarez/typescript.nvim
-  -- "rmagatti/auto-session",
-  -- "rmagatti/session-lens"
-  -- "christianchiarulli/nvim-ts-rainbow",
-  -- "karb94/neoscroll.nvim",
 }
