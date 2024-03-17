@@ -128,6 +128,8 @@ lvim.builtin.which_key.mappings["l"] = {
 }
 lvim.builtin.which_key.mappings["t"] = {
   name = "Tab",
+  f = { "<cmd>ToggleTerm<cr>", "Floating terminal" },
+  h = { "<cmd>2ToggleTerm size=30 direction=horizontal<cr>", "Split horizontal" },
   t = {
     "<cmd>lua require('telescope').extensions['telescope-tabs'].list_tabs(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal', prompt_title='Tabs'})<cr>",
     "Find Tab",
