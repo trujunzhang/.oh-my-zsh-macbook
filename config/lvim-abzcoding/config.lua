@@ -4,13 +4,13 @@ lvim.leader = " "
 -- lvim.colorscheme = "tokyonight" -- set to a custom theme
 lvim.colorscheme = "rose-pine-dawn"   -- set to a custom theme
 lvim.builtin.time_based_themes = true -- set false to use your own configured theme
-lvim.transparent_window = false       -- enable/disable transparency
+lvim.transparent_window = false -- enable/disable transparency
 lvim.debug = false
 vim.lsp.set_log_level "error"
 lvim.log.level = "warn"
 require("user.neovim").config()
--- lvim.lsp.code_lens_refresh = true
-lvim.lsp.installer.setup.automatic_installation = true
+lvim.lsp.code_lens_refresh = true
+lvim.lsp.installer.setup.automatic_installation = false
 
 -- Customization
 -- =========================================
@@ -76,7 +76,6 @@ lvim.builtin.indentlines.mine = true -- NOTE: using v3 till fixed upstream in lu
 lvim.builtin.mind = { active = false, root_path = "~/.mind" } -- enable/disable mind.nvim
 lvim.builtin.symbols_usage = { active = false } -- enable/disable symbols-usage.nvim
 
-
 -- Custom User Config
 -- =========================================
 local user = vim.env.USER
@@ -90,17 +89,23 @@ end
 if lvim.builtin.winbar_provider == "navic" then
   vim.opt.showtabline = 1
   lvim.keys.normal_mode["<tab>"] =
-  "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>"
+    "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal'})<cr>"
   lvim.builtin.bufferline.active = false
   lvim.builtin.breadcrumbs.active = true
 end
+if lvim.builtin.breadcrumbs.active and lvim.builtin.noice.active then
+  table.insert(lvim.builtin.breadcrumbs.winbar_filetype_exclude, "vim")
+end
 lvim.builtin.nvimtree.active = lvim.builtin.tree_provider == "nvimtree"
 lvim.builtin.latex = {
-  view_method = "skim",                                                       -- change to zathura if you are on linux
+  view_method = "skim", -- change to zathura if you are on linux
   preview_exec = "/Applications/Skim.app/Contents/SharedSupport/displayline", -- change this to zathura as well
-  rtl_support = true,                                                         -- if you want to use xelatex, it's a bit slower but works very well for RTL langs
-  active = false,                                                             -- set to true to enable
+  rtl_support = true, -- if you want to use xelatex, it's a bit slower but works very well for RTL langs
+  active = false, -- set to true to enable
 }
+if lvim.builtin.cursorline.active then
+  lvim.lsp.document_highlight = false
+end
 
 -- Override Lunarvim defaults
 -- =========================================
@@ -126,37 +131,13 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
   "gopls",
   "golangci_lint_ls",
   "jdtls",
-  -- "pyright",
+  "pyright",
   "rust_analyzer",
   "taplo",
   "texlab",
-  -- "tsserver",
+  "tsserver",
   "yamlls",
 })
-
--- vim.list_extend(lvim.lsp.automatic_configuration.automatic_installation, { "tsserver" })
-
--- lvim.builtin.nvimtree.setup.open_on_setup = false
-lvim.builtin.treesitter.ignore_install = { "kotlin", 'c', 'cmake', 'ocaml', 'php', 'rust' }
-lvim.builtin.treesitter.ensure_installed = {
-  "vim",
-  "lua",
-  "html",
-  "css",
-  "javascript",
-  "typescript",
-  -- "tsx",
-  -- "markdown",
-  -- "markdown_inline",
-  -- "swift",
-  "bash",
-  "regex",
-  "python"
-}
-lvim.builtin.treesitter.highlight.enabled = true
-lvim.builtin.treesitter.highlight.enable = true
-lvim.builtin.treesitter.auto_install = true
-
 require("user.null_ls").config()
 
 -- Additional Plugins

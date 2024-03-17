@@ -32,8 +32,8 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup { { name = "black" } }
 -- lvim.format_on_save.pattern = { "*.py" }
 
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup { { command = "flake8", args = { "--ignore=E203,E501" }, filetypes = { "python" } } }
+-- local linters = require "lvim.lsp.null-ls.linters"
+-- linters.setup { { command = "flake8", args = { "--ignore=E203,E501" }, filetypes = { "python" } } }
 
 local opts = {
   mode = "n", -- NORMAL mode

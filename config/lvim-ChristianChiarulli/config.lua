@@ -32,3 +32,4 @@ reload "user.astro-tools"
 reload "user.matchup"
 reload "user.format"
 reload "user.python"
+require("user.bufferline").config()
