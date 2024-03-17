@@ -13,19 +13,14 @@ lvim.plugins = {
     end,
   },
   "HiPhish/nvim-ts-rainbow2",
-  -- {
-  --   dir = "/Users/chris/Repos/bookmark.nvim",
-  -- },
   "andymass/vim-matchup",
   "lunarvim/synthwave84.nvim",
-  "kkharji/sqlite.lua",
   { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
   { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
   { url = "git@github.com:LunarVim/primer.nvim.git" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
-  -- "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",
   "opalmay/vim-smoothie",
@@ -36,7 +31,6 @@ lvim.plugins = {
   "windwp/nvim-ts-autotag",
   "kylechui/nvim-surround",
   "christianchiarulli/harpoon",
-  -- "MattesGroeger/vim-bookmarks",
   "NvChad/nvim-colorizer.lua",
   "moll/vim-bbye",
   "folke/todo-comments.nvim",
@@ -56,9 +50,6 @@ lvim.plugins = {
   "nacro90/numb.nvim",
   "neogitorg/neogit",
   "sindrets/diffview.nvim",
-  "simrat39/rust-tools.nvim",
-  "olexsmir/gopher.nvim",
-  "leoluz/nvim-dap-go",
   "jose-elias-alvarez/typescript.nvim",
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
@@ -76,7 +67,6 @@ lvim.plugins = {
     end,
   },
   "MunifTanjim/nui.nvim",
-  "jackMort/ChatGPT.nvim",
   {
     "jinh0/eyeliner.nvim",
     config = function()
@@ -90,18 +80,6 @@ lvim.plugins = {
   {
     "0x100101/lab.nvim",
     build = "cd js && npm ci",
-  },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua" },
-    config = function()
-      require("copilot_cmp").setup()
-    end,
   },
   "MunifTanjim/nui.nvim",
   "Bryley/neoai.nvim",
