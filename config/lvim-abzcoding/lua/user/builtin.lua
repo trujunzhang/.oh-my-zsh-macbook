@@ -280,12 +280,12 @@ M.config = function()
 
   -- LSP
   -- =========================================
-  if lvim.builtin.go_programming.active then
-    require("lvim.lsp.manager").setup("golangci_lint_ls", {
-      on_init = require("lvim.lsp").common_on_init,
-      capabilities = require("lvim.lsp").common_capabilities(),
-    })
-  end
+  -- if lvim.builtin.go_programming.active then
+  --   require("lvim.lsp.manager").setup("golangci_lint_ls", {
+  --     on_init = require("lvim.lsp").common_on_init,
+  --     capabilities = require("lvim.lsp").common_capabilities(),
+  --   })
+  -- end
 
   lvim.lsp.buffer_mappings.normal_mode["ga"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "Code Action" }
   lvim.lsp.buffer_mappings.normal_mode["gA"] = {

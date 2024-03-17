@@ -7,15 +7,20 @@ M.config = function()
   end
   lvim.plugins = {
     -- {
-    --   "folke/tokyonight.nvim",
+    --   'Exafunction/codeium.vim',
+    --   dependencies = "hrsh7th/nvim-cmp",
+    --   -- Run :Codeium Auth to set up the plugin and start using Codeium.
     --   config = function()
-    --     require("user.theme").tokyonight()
-    --     vim.cmd [[colorscheme tokyonight]]
+    --     -- Change '<C-g>' here to any keycode you like.
+    --     -- vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+    --     -- vim.keymap.set('i', '<Right>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+    --     vim.keymap.set('i', '<Tab>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+    --     vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+    --     vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+    --     vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
     --   end,
-    --   cond = function()
-    --     local _time = os.date "*t"
-    --     return (_time.hour >= 9 and _time.hour < 17) and lvim.builtin.time_based_themes
-    --   end,
+    --   lazy = true,
+    --   event = "InsertEnter"
     -- },
     {
       "rose-pine/neovim",
@@ -114,22 +119,6 @@ M.config = function()
       enabled = lvim.builtin.tag_provider == "symbols-outline",
     },
     {
-      "tzachar/cmp-tabnine",
-      build = "./install.sh",
-      dependencies = "hrsh7th/nvim-cmp",
-      config = function()
-        local tabnine = require "cmp_tabnine.config"
-        tabnine:setup {
-          max_lines = 1000,
-          max_num_results = 10,
-          sort = true,
-        }
-      end,
-      lazy = true,
-      event = "InsertEnter",
-      enabled = lvim.builtin.tabnine.active,
-    },
-    {
       "folke/twilight.nvim",
       lazy = true,
       config = function()
@@ -152,20 +141,6 @@ M.config = function()
         vim.g.matchup_matchparen_deferred = 1
         vim.g.matchup_matchparen_offscreen = { method = "popup" }
       end,
-    },
-    -- {
-    --   "iamcco/markdown-preview.nvim",
-    --   build = "cd app && npm install",
-    --   ft = "markdown",
-    -- },
-    {
-      "mrcjkb/rustaceanvim",
-      version = "^3",
-      init = function()
-        require("user.rust_tools").config()
-      end,
-      ft = { "rust", "rs" },
-      enabled = lvim.builtin.rust_programming.active,
     },
     {
       "abzcoding/lsp_lines.nvim",
@@ -214,16 +189,6 @@ M.config = function()
       end,
       enabled = lvim.builtin.presence.active
     },
-    { "mfussenegger/nvim-jdtls",     ft = "java" },
-    {
-      "kristijanhusak/orgmode.nvim",
-      keys = { "go", "gC" },
-      ft = { "org" },
-      config = function()
-        require("user.orgmode").setup()
-      end,
-      enabled = lvim.builtin.orgmode.active,
-    },
     {
       "danymat/neogen",
       lazy = true,
@@ -243,23 +208,6 @@ M.config = function()
       enabled = (lvim.builtin.test_runner.active and lvim.builtin.test_runner.runner == "ultest"),
     },
     {
-      -- NOTE: This plugin is not maintained anymore, you might wanna use https://github.com/pmizio/typescript-tools.nvim
-      "jose-elias-alvarez/typescript.nvim",
-      ft = {
-        "javascript",
-        "javascriptreact",
-        "javascript.jsx",
-        "typescript",
-        "typescriptreact",
-        "typescript.tsx",
-      },
-      lazy = true,
-      config = function()
-        require("user.tss").config()
-      end,
-      enabled = (lvim.builtin.web_programming.active and lvim.builtin.web_programming.extra == "typescript.nvim"),
-    },
-    {
       "vuki656/package-info.nvim",
       config = function()
         require("package-info").setup()
@@ -267,18 +215,6 @@ M.config = function()
       lazy = true,
       event = { "BufReadPre", "BufNew" },
       enabled = lvim.builtin.web_programming.active,
-    },
-    {
-      "lervag/vimtex",
-      init = function()
-        require("user.tex").init()
-      end,
-      config = function()
-        vim.cmd "call vimtex#init()"
-      end,
-      ft = "tex",
-      event = "VeryLazy",
-      enabled = lvim.builtin.latex.active,
     },
     {
       "nvim-neotest/neotest",
@@ -291,9 +227,7 @@ M.config = function()
       event = { "BufReadPost", "BufNew" },
       enabled = (lvim.builtin.test_runner.active and lvim.builtin.test_runner.runner == "neotest"),
     },
---     { "nvim-neotest/neotest-go",     event = { "BufEnter *.go" } },
     { "nvim-neotest/neotest-python", event = { "BufEnter *.py" } },
---     { "rouge8/neotest-rust",         event = { "BufEnter *.rs" } },
     {
       "rcarriga/vim-ultest",
       cmd = { "Ultest", "UltestSummary", "UltestNearest" },
@@ -303,14 +237,6 @@ M.config = function()
       event = { "BufEnter *_test.*,*_spec.*,*est_*.*" },
       enabled = (lvim.builtin.test_runner.active and lvim.builtin.test_runner.runner == "ultest"),
     },
---     {
---       "akinsho/flutter-tools.nvim",
---       dependencies = "nvim-lua/plenary.nvim",
---       config = function()
---         require("user.flutter_tools").config()
---       end,
---       ft = "dart",
---     },
     {
       "RishabhRD/nvim-cheat.sh",
       dependencies = "RishabhRD/popfix",
@@ -384,25 +310,6 @@ M.config = function()
       event = "BufRead",
       enabled = lvim.builtin.smooth_scroll == "cinnamon",
     },
---     {
---       "github/copilot.vim",
---       config = function()
---         require("user.copilot").config()
---       end,
---       enabled = lvim.builtin.sell_your_soul_to_devil.active or lvim.builtin.sell_your_soul_to_devil.prada,
---     },
---     {
---       "zbirenbaum/copilot.lua",
---       dependencies = { "zbirenbaum/copilot-cmp", "nvim-cmp" },
---       config = function()
---         local cmp_source = { name = "copilot", group_index = 2 }
---         table.insert(lvim.builtin.cmp.sources, cmp_source)
---         vim.defer_fn(function()
---           require("copilot").setup()
---         end, 100)
---       end,
---       enabled = lvim.builtin.sell_your_soul_to_devil.prada,
---     },
     {
       "ThePrimeagen/harpoon",
       dependencies = {
@@ -464,11 +371,6 @@ M.config = function()
       end,
       event = "BufReadPost",
       enabled = lvim.builtin.hlslens.active,
-    },
-    {
-      "chrisbra/csv.vim",
-      ft = { "csv" },
-      enabled = lvim.builtin.csv_support,
     },
     {
       "nvim-treesitter/nvim-treesitter-textobjects",
@@ -534,20 +436,6 @@ M.config = function()
       event = "BufReadPost",
       enabled = lvim.builtin.tag_provider == "vista",
     },
---     {
---       "p00f/clangd_extensions.nvim",
---       ft = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
---       enabled = lvim.builtin.cpp_programming.active,
---     },
---     {
---       "saecki/crates.nvim",
---       event = { "BufRead Cargo.toml" },
---       dependencies = { { "nvim-lua/plenary.nvim" } },
---       config = function()
---         require("user.crates").config()
---       end,
---       enabled = lvim.builtin.rust_programming.active,
---     },
     {
       "hrsh7th/cmp-cmdline",
       enabled = lvim.builtin.fancy_wild_menu.active,
@@ -569,11 +457,6 @@ M.config = function()
       enabled = lvim.builtin.dressing.active,
       event = "BufWinEnter",
     },
---     {
---       "kdheepak/cmp-latex-symbols",
---       dependencies = "hrsh7th/nvim-cmp",
---       ft = "tex",
---     },
     {
       "ThePrimeagen/refactoring.nvim",
       lazy = true,
@@ -652,32 +535,6 @@ M.config = function()
       },
       enabled = lvim.builtin.noice.active,
     },
-    -- {
-    --   "olexsmir/gopher.nvim",
-    --   config = function()
-    --     require("gopher").setup {
-    --       commands = {
-    --         go = "go",
-    --         gomodifytags = "gomodifytags",
-    --         gotests = "gotests",
-    --         impl = "impl",
-    --         iferr = "iferr",
-    --       },
-    --     }
-    --   end,
-    --   ft = { "go", "gomod" },
-    --   event = { "BufRead", "BufNew" },
-    --   enabled = lvim.builtin.go_programming.active,
-    -- },
-    -- {
-    --   "leoluz/nvim-dap-go",
-    --   config = function()
-    --     require("dap-go").setup()
-    --   end,
-    --   ft = { "go", "gomod" },
-    --   event = { "BufRead", "BufNew" },
-    --   enabled = lvim.builtin.go_programming.active,
-    -- },
     {
       "AckslD/swenv.nvim",
       enabled = lvim.builtin.python_programming.active,
@@ -754,14 +611,6 @@ M.config = function()
       end,
       event = { "BufReadPost", "BufNew" },
     },
---     {
---       "Civitasv/cmake-tools.nvim",
---       config = function()
---         require("user.cle").cmake_config()
---       end,
---       ft = { "c", "cpp", "objc", "objcpp", "h", "hpp" },
---       enabled = lvim.builtin.cpp_programming.active,
---     },
     {
       "raimon49/requirements.txt.vim",
       event = "VeryLazy",

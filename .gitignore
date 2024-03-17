@@ -41,7 +41,8 @@ USERS/cocoapods/generate.json
 
 # vim
 nicknisi/vim/.netrwhist
-config/lvim
+config/lvim-master
+config/lvim-branch
 
 node_modules/
 package-lock.json

@@ -9,8 +9,8 @@ lvim.debug = false
 vim.lsp.set_log_level "error"
 lvim.log.level = "warn"
 require("user.neovim").config()
-lvim.lsp.code_lens_refresh = true
-lvim.lsp.installer.setup.automatic_installation = false
+-- lvim.lsp.code_lens_refresh = true
+-- lvim.lsp.installer.setup.automatic_installation = true
 
 -- Customization
 -- =========================================
@@ -39,7 +39,6 @@ lvim.builtin.cursorline = { active = false }                                    
 lvim.builtin.motion_provider =
 "hop"                                                                                    -- change this to use different motion providers ( hop or leap or flash)
 lvim.builtin.hlslens = { active = false }                                                -- enable/disable hlslens
-lvim.builtin.csv_support = false                                                         -- enable/disable csv support
 lvim.builtin.sidebar = { active = false }                                                -- enable/disable sidebar
 lvim.builtin.task_runner =
 ""                                                                                       -- change this to use different task runners ( "async_tasks" or "overseer" or "")
@@ -67,10 +66,8 @@ lvim.builtin.lir.active = false
 lvim.builtin.breadcrumbs.active = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.noice = { active = false }                                      -- enables noice.nvim and inc-rename.nvim
-lvim.builtin.go_programming = { active = false }                             -- gopher.nvim + nvim-dap-go
 lvim.builtin.python_programming = { active = false }                         -- swenv.nvim + nvim-dap-python + requirements.txt.vim
 lvim.builtin.web_programming = { active = false, extra = "typescript.nvim" } -- (typescript.nvim or typescript-tools.nvim) + package-info.nvim
-lvim.builtin.rust_programming = { active = false }                           -- rustaceanvim + crates.nvim
 lvim.builtin.cpp_programming = { active = false }                            -- clangd_extensions.nvim + make-tools.nvim
 lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.borderless_cmp = false
@@ -136,7 +133,7 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
   "gopls",
   "golangci_lint_ls",
   "jdtls",
-  "pyright",
+  -- "pyright",
   "rust_analyzer",
   "taplo",
   "texlab",
@@ -144,9 +141,11 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, {
   "yamlls",
 })
 
+-- vim.list_extend(lvim.lsp.automatic_configuration.automatic_installation, { "tsserver" })
+
 -- lvim.builtin.nvimtree.setup.open_on_setup = false
-lvim.builtin.treesitter.ignore_install = { "kotlin", 'c', 'cmake', 'ocaml', 'php', 'rust' }
-lvim.builtin.treesitter.ensure_installed = {
+-- lvim.builtin.treesitter.ignore_install = { "kotlin", 'c', 'cmake', 'ocaml', 'php', 'rust' }
+-- lvim.builtin.treesitter.ensure_installed = {
   -- "vim",
   -- "lua",
   -- "html",
@@ -160,10 +159,10 @@ lvim.builtin.treesitter.ensure_installed = {
   -- "bash",
   -- "regex",
   -- "python"
-}
+-- }
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.treesitter.highlight.enable = true
-lvim.builtin.treesitter.auto_install = false
+lvim.builtin.treesitter.auto_install = true
 
 require("user.null_ls").config()
 
