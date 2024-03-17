@@ -12,7 +12,7 @@
 -- end
 
 lvim.builtin.treesitter.ensure_installed = {
-  "java",
+  -- "java",
   "python",
   "javascript",
 }
