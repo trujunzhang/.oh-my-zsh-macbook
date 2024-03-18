@@ -67,7 +67,12 @@ function M.smart_quit()
       end
     end)
   else
-    vim.cmd "q!"
+    -- if #vim.api.nvim_list_wins() == 1 and vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil then
+        -- vim.cmd "NvimTreeClose"
+    -- end
+        -- vim.cmd "quit"
+    -- vim.cmd "q!"
+    vim.cmd "qa"
   end
 end
 

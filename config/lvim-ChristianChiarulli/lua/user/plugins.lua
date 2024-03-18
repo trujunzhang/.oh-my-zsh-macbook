@@ -8,13 +8,15 @@ lvim.plugins = {
       lvim.colorscheme = "rose-pine-dawn"
     end
   },
+  "kkharji/sqlite.lua",
   "HiPhish/nvim-ts-rainbow2",
   "lunarvim/synthwave84.nvim",
+  { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
   { url = "git@github.com:LunarVim/primer.nvim.git" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
-  "nvim-treesitter/nvim-treesitter-textobjects",
+  -- "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",
   "opalmay/vim-smoothie",
   {
@@ -61,7 +63,7 @@ lvim.plugins = {
   {
     'rmagatti/auto-session',
     config = function()
-      vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+      -- vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
       require("auto-session").setup {
         log_level = "error",
         auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},

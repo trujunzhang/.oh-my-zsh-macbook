@@ -48,17 +48,17 @@ M.get_bookmarks = function()
   -- return all
 end
 
-lvim.builtin.which_key.mappings["."] = {
-  '<cmd>lua require("user.sqtest2").add_bookmark("/Users/chris/.config/lvim/config.lua", "3,4")<CR>',
-  "Comment",
-}
+-- lvim.builtin.which_key.mappings["."] = {
+--   '<cmd>lua require("user.sqtest2").add_bookmark("/Users/chris/.config/lvim/config.lua", "3,4")<CR>',
+--   "Comment",
+-- }
 
-lvim.builtin.which_key.mappings["a"] = {
-  '<cmd>lua require("user.sqtest2").get_bookmarks()<CR>',
-  "Comment",
-}
+-- lvim.builtin.which_key.mappings["a"] = {
+--   '<cmd>lua require("user.sqtest2").get_bookmarks()<CR>',
+--   "Comment",
+-- }
 
-vim.api.nvim_command "autocmd VimLeave * lua db:close()"
+-- vim.api.nvim_command "autocmd VimLeave * lua db:close()"
 
 return M
 

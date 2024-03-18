@@ -6,6 +6,7 @@ lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 lvim.builtin.which_key.mappings["h"] = { "<cmd>nohlsearch<cr>", "nohl" }
 lvim.builtin.which_key.mappings["o"] = { "<cmd>AerialToggle!<cr>", "Outline" }
 lvim.builtin.which_key.mappings["q"] = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" }
+-- lvim.builtin.which_key.mappings["q"] = { '<cmd>confirm q<CR>', "Quit" }
 lvim.builtin.which_key.mappings["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" }
 -- lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
 lvim.builtin.which_key.mappings["gy"] = "Link"
