@@ -24,3 +24,5 @@ vim.opt.pumheight = 8
 vim.opt.swapfile = false
 -- vim.opt.mouse = nil
 vim.opt.mouse = "a"
+
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
