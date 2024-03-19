@@ -13,6 +13,6 @@ formatters.setup {
 }
 
 lvim.format_on_save.enabled = true
-lvim.format_on_save.pattern = { "*.js", "*.jsx", "*.ts", "*.tsx"}
+lvim.format_on_save.pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.lua"}
 
 
