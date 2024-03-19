@@ -33,11 +33,14 @@
 # lunarvim(lvim-ChristianChiarulli)
   url = https://github.com/ChristianChiarulli/lvim
 
-# nvim(NvChad)
+# nvim-BrunoKrugel(NvChad)
   url = https://github.com/BrunoKrugel/dotfiles
 
-# nvim(NvChad)
+# nvim-wSedlacek(NvChad)
   url = https://github.com/wSedlacek/nvim
+
+# nvim-2kabhishek
+  url = https://github.com/2KAbhishek/nvim2k
 
 ## snippet
   git clone https://github.com/dsznajder/vscode-es7-javascript-react-snippets config/lvim/snippets
