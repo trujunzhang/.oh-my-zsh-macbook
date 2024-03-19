@@ -13,7 +13,7 @@ emacs.d/auto-save-list
 
 .DS_Store
 
-lib/
+# lib/
 lib/spacemacs/
 
 emacs.d/vendors/matlab-emacs/
