@@ -33,17 +33,36 @@ cmp.setup({
             behavior = cmp.ConfirmBehavior.Replace,
             select = false,
         }),
-        ['<Tab>'] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-                cmp.select_next_item()
-            elseif luasnip.expandable() then
-                luasnip.expand()
-            elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
+
+        ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() and cmp.get_active_entry() then
+                -- completion if a cmp item is selected
+                cmp.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace })
+            elseif vim.fn.exists('b:_codeium_completions') ~= 0 then
+                -- accept codeium completion if visible
+                vim.fn['codeium#Accept']()
+                fallback()
+            elseif cmp.visible() then
+                -- select first item if visible
+                cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace })
             else
                 fallback()
             end
-        end, { 'i', 's' }),
+        end, {
+            "i",
+            "s",
+        }),
+        -- ['<Tab>'] = cmp.mapping(function(fallback)
+        --     if cmp.visible() then
+        --         cmp.select_next_item()
+        --     elseif luasnip.expandable() then
+        --         luasnip.expand()
+        --     elseif luasnip.expand_or_jumpable() then
+        --         luasnip.expand_or_jump()
+        --     else
+        --         fallback()
+        --     end
+        -- end, { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
@@ -82,7 +101,7 @@ cmp.setup({
         { name = 'path' },
         { name = 'nvim_lua' },
         { name = 'luasnip', keyword_length = 2 },
-        { name = 'buffer', keyword_length = 3 },
+        { name = 'buffer',  keyword_length = 3 },
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,

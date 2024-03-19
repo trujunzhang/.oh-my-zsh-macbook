@@ -70,12 +70,6 @@ local plugins = {
 
     -- Language
     {
-        'weizheheng/ror.nvim',
-        branch = 'main',
-        ft = 'ruby',
-    },
-    { 'tpope/vim-rails', ft = 'ruby' },
-    {
         'mfussenegger/nvim-dap',
         dependencies = {
             'rcarriga/nvim-dap-ui',
@@ -193,17 +187,22 @@ local plugins = {
             'L3MON4D3/LuaSnip',
             'rafamadriz/friendly-snippets',
             'saadparwaiz1/cmp_luasnip',
+            {
+                'Exafunction/codeium.vim',
+                -- Run :Codeium Auth to set up the plugin and start using Codeium.
+                config = function()
+                    -- Change '<C-g>' here to any keycode you like.
+                    -- vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+                    -- vim.keymap.set('i', '<Right>', function () return vim.fn['codeium#Accept']() end, { expr = true })
+                    vim.keymap.set('i', '<Tab>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+                    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+                    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+                    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+                end
+            },
         },
         config = load_config('lang.cmp'),
-        event = 'InsertEnter',
-    },
-    {
-        'zbirenbaum/copilot.lua',
-        dependencies = {
-            'zbirenbaum/copilot-cmp',
-        },
-        config = load_config('lang.copilot'),
-        event = 'InsertEnter',
+        -- event = 'InsertEnter',
     },
 
     -- Tools
@@ -384,6 +383,26 @@ local plugins = {
     {
         'tpope/vim-fugitive',
         cmd = 'Git',
+    },
+    --  djzhang's plugins
+    {
+        'rmagatti/auto-session',
+        config = function()
+            vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+            require("auto-session").setup {
+                log_level = "error",
+                auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+            }
+        end
+    },
+    {
+        "okuuva/auto-save.nvim",
+        cmd = "ASToggle",                         -- optional for lazy loading on command
+        event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
+        opts = {
+            -- your config goes here
+            -- or just leave it empty :)
+        },
     },
 }
 
