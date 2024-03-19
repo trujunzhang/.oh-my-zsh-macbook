@@ -11,6 +11,8 @@ lvim.builtin.which_key.mappings["/"] = { '<cmd>lua require("Comment.api").toggle
 -- lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
 lvim.builtin.which_key.mappings["gy"] = "Link"
 
+lvim.builtin.which_key.mappings["p"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" }
+
 lvim.builtin.which_key.mappings['b'] = {
     name = " Buffer",
     ["1"] = { "<Cmd>BufferLineGoToBuffer 1<CR>", "goto 1" },
