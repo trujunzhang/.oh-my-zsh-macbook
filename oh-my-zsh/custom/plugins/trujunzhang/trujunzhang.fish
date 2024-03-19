@@ -616,8 +616,9 @@ alias wcloudflareip="curl https://raw.githubusercontent.com/badafans/better-clou
 alias dcloneexpensify="git clone https://github.com/expensify/App.git expensify && cd expensify"
 alias dcloneieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
 
-alias wcleanWebstorm="rm -rf $HOME/Library/Caches/JetBrains"
-alias wcleanLVimCache="rm -rf $HOME/.cache/lvim/ && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"
+alias wclean_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
+alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"
+alias wclean_nvimCache="rm -rf $HOME/.cache/nvim && rm -rf $HOME/.local/state/nvim && rm -rf $HOME/.local/share/nvim"
 
 # crossover
 function linkCrossOverBottle
