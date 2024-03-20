@@ -1,6 +1,12 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 
+local status_cmp_ok, cmp_types = pcall(require, "cmp.types.cmp")
+if not status_cmp_ok then
+  return
+end
+local SelectBehavior = cmp_types.SelectBehavior
+
 require('luasnip/loaders/from_vscode').lazy_load()
 
 local icons = require('lib.icons')
@@ -17,6 +23,8 @@ cmp.setup({
         end,
     },
     mapping = {
+        ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = SelectBehavior.Select }), { 'i' }),
+        ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = SelectBehavior.Select }), { 'i' }),
         ['<C-k>'] = cmp.mapping.select_prev_item(),
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-1), { 'i', 'c' }),
@@ -34,7 +42,7 @@ cmp.setup({
             select = false,
         }),
 
-        ["<Tab>"] = cmp.mapping(function(fallback)
+        ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() and cmp.get_active_entry() then
                 -- completion if a cmp item is selected
                 cmp.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace })
@@ -49,8 +57,8 @@ cmp.setup({
                 fallback()
             end
         end, {
-            "i",
-            "s",
+            'i',
+            's',
         }),
         -- ['<Tab>'] = cmp.mapping(function(fallback)
         --     if cmp.visible() then
@@ -101,7 +109,7 @@ cmp.setup({
         { name = 'path' },
         { name = 'nvim_lua' },
         { name = 'luasnip', keyword_length = 2 },
-        { name = 'buffer',  keyword_length = 3 },
+        { name = 'buffer', keyword_length = 3 },
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,

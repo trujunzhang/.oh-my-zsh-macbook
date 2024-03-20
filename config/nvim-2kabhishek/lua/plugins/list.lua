@@ -4,6 +4,8 @@ local function load_config(package)
     end
 end
 
+local slow_format_filetypes = { 'typescript', 'javascript' }
+
 local plugins = {
     -- UI
     {
@@ -194,11 +196,19 @@ local plugins = {
                     -- Change '<C-g>' here to any keycode you like.
                     -- vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true })
                     -- vim.keymap.set('i', '<Right>', function () return vim.fn['codeium#Accept']() end, { expr = true })
-                    vim.keymap.set('i', '<Tab>', function() return vim.fn['codeium#Accept']() end, { expr = true })
-                    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-                    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-                    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-                end
+                    vim.keymap.set('i', '<Tab>', function()
+                        return vim.fn['codeium#Accept']()
+                    end, { expr = true })
+                    vim.keymap.set('i', '<c-;>', function()
+                        return vim.fn['codeium#CycleCompletions'](1)
+                    end, { expr = true })
+                    vim.keymap.set('i', '<c-,>', function()
+                        return vim.fn['codeium#CycleCompletions'](-1)
+                    end, { expr = true })
+                    vim.keymap.set('i', '<c-x>', function()
+                        return vim.fn['codeium#Clear']()
+                    end, { expr = true })
+                end,
             },
         },
         config = load_config('lang.cmp'),
@@ -388,20 +398,71 @@ local plugins = {
     {
         'rmagatti/auto-session',
         config = function()
-            vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-            require("auto-session").setup {
-                log_level = "error",
-                auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-            }
-        end
+            vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
+            require('auto-session').setup({
+                log_level = 'error',
+                auto_session_suppress_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
+            })
+        end,
     },
     {
-        "okuuva/auto-save.nvim",
-        cmd = "ASToggle",                         -- optional for lazy loading on command
-        event = { "InsertLeave", "TextChanged" }, -- optional for lazy loading on trigger events
+        'okuuva/auto-save.nvim',
+        cmd = 'ASToggle', -- optional for lazy loading on command
+        event = { 'InsertLeave', 'TextChanged' }, -- optional for lazy loading on trigger events
         opts = {
             -- your config goes here
             -- or just leave it empty :)
+        },
+    },
+    {
+        'stevearc/conform.nvim',
+        event = { 'BufWritePre' },
+        cmd = { 'ConformInfo' },
+        opts = {
+            formatters_by_ft = {
+                lua = { 'stylua' },
+                rust = { 'rustfmt' },
+                terraform = { 'terraform_fmt' },
+                javascript = { { 'prettierd', 'prettier' } },
+                typescript = { { 'prettierd', 'prettier' } },
+                json = { 'prettierd' },
+                html = { { 'prettierd', 'prettier' } },
+                scss = { { 'prettierd', 'prettier' } },
+                css = { { 'prettierd', 'prettier' } },
+                markdown = { 'markdownlint' },
+                ocaml = { 'ocamlformat' },
+                sql = { 'pg_format' },
+                swift = { 'swift_format' },
+                proto = { 'buf' },
+                yaml = { { 'prettierd', 'prettier' } },
+            },
+
+            format_on_save = function(bufnr)
+                -- Disable with a global or buffer-local variable
+                if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                    return
+                end
+
+                if slow_format_filetypes[vim.bo[bufnr].filetype] then
+                    return
+                end
+
+                local function on_format(err)
+                    if err and err:match('timeout$') then
+                        slow_format_filetypes[vim.bo[bufnr].filetype] = true
+                    end
+                end
+
+                return { timeout_ms = 500, lsp_fallback = true }, on_format
+            end,
+
+            format_after_save = function(bufnr)
+                if not slow_format_filetypes[vim.bo[bufnr].filetype] then
+                    return
+                end
+
+                return { lsp_fallback = true }
+            end,
         },
     },
 }

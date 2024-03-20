@@ -120,6 +120,7 @@ local mappings = {
     Q = { '<cmd>qa!<cr>', icons.ui.Power .. 'Force Quit!' },
     w = { '<cmd>w<cr>', icons.ui.Save .. 'Save' },
     x = { '<cmd>x<cr>', icons.ui.Pencil .. 'Write and Quit' },
+    -- ['/'] = { '<Plug>(comment_toggle_linewise_current)', 'Comment toggle current line' },
     c = {
         name = icons.ui.NeoVim .. 'Config',
         c = { '<cmd>CccConvert<cr>', 'Convert Color' },
