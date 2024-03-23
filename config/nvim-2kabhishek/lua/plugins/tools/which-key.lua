@@ -1,5 +1,6 @@
 local which_key = require('which-key')
 local icons = require('lib.icons')
+local nvim_tree_api = require('nvim-tree.api')
 
 local setup = {
     plugins = {
@@ -115,7 +116,13 @@ local opts = {
 }
 
 local mappings = {
-    e = { '<cmd>NvimTreeToggle<cr>', icons.documents.OpenFolder .. 'Explorer' },
+    -- e = { '<cmd>NvimTreeToggle<cr>', icons.documents.OpenFolder .. 'Explorer' },
+    e = {
+        function()
+            return nvim_tree_api.tree.open()
+        end,
+        icons.documents.OpenFolder .. 'Explorer',
+    },
     q = { '<cmd>qa!<cr>', icons.ui.Close .. 'Quit' },
     Q = { '<cmd>qa!<cr>', icons.ui.Power .. 'Force Quit!' },
     w = { '<cmd>w<cr>', icons.ui.Save .. 'Save' },
