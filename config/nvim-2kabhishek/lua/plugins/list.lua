@@ -155,12 +155,12 @@ local plugins = {
         config = load_config('lang.lspconfig'),
         event = { 'BufReadPre', 'BufNewFile' },
     },
-    {
-        'dgagn/diagflow.nvim',
-        -- event = 'LspAttach', --- This is what I use personnally and it works great
-        opts = {},
-        -- config = load_config('lang.diagflow'),
-    },
+    -- {
+    --     'dgagn/diagflow.nvim',
+    --     -- event = 'LspAttach', --- This is what I use personnally and it works great
+    --     opts = {},
+    --     -- config = load_config('lang.diagflow'),
+    -- },
     {
         'folke/neodev.nvim',
         ft = { 'lua', 'vim' },
@@ -171,11 +171,11 @@ local plugins = {
         config = load_config('lang.lspsaga'),
         event = 'LspAttach',
     },
-    {
-        'Maan2003/lsp_lines.nvim',
-        config = load_config('lang.lsp-lines'),
-        event = 'LspAttach',
-    },
+    -- {
+    --     'Maan2003/lsp_lines.nvim',
+    --     config = load_config('lang.lsp-lines'),
+    --     event = 'LspAttach',
+    -- },
     {
         'williamboman/mason.nvim',
         config = load_config('lang.mason'),
@@ -430,6 +430,15 @@ local plugins = {
         'stevearc/conform.nvim',
         event = { 'BufWritePre' },
         cmd = { 'ConformInfo' },
+        config = function()
+            require("conform").setup({
+                format_on_save = {
+                  -- These options will be passed to conform.format()
+                  timeout_ms = 1000,
+                  lsp_fallback = true,
+                },
+              })
+        end,
         opts = {
             formatters_by_ft = {
                 lua = { 'stylua' },
