@@ -156,6 +156,12 @@ local plugins = {
         event = { 'BufReadPre', 'BufNewFile' },
     },
     {
+        'dgagn/diagflow.nvim',
+        -- event = 'LspAttach', --- This is what I use personnally and it works great
+        opts = {},
+        -- config = load_config('lang.diagflow'),
+    },
+    {
         'folke/neodev.nvim',
         ft = { 'lua', 'vim' },
         config = load_config('lang.neodev'),

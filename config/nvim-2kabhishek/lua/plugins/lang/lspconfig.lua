@@ -29,6 +29,16 @@ lspconfig.pyright.setup({
     root_dir = lspconfig.util.root_pattern('package.json'),
 })
 
+-- lspconfig.eslint.setup({
+--     --- ...
+--     on_attach = function(client, bufnr)
+--         vim.api.nvim_create_autocmd('BufWritePre', {
+--             buffer = bufnr,
+--             command = 'EslintFixAll',
+--         })
+--     end,
+-- })
+
 require('mason-lspconfig').setup({
     ensure_installed = installed_servers,
     handlers = {
@@ -54,4 +64,14 @@ require('mason-lspconfig').setup({
             })
         end,
     },
+})
+
+lspconfig.eslint.setup({
+    --- ...
+    on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd('BufWritePre', {
+            buffer = bufnr,
+            command = 'EslintFixAll',
+        })
+    end,
 })
