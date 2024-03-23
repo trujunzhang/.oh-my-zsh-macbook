@@ -1,3 +1,12 @@
+local function open_nvim_tree()
+    -- open the tree
+    -- require("nvim-tree.api").tree.open()
+    -- require("nvim-tree.api").tree.open({ focus = false, find_file = false, })
+    require('nvim-tree.api').tree.toggle({ focus = false, find_file = false })
+end
+
+vim.api.nvim_create_autocmd({ 'VimEnter' }, { callback = open_nvim_tree })
+
 local function augroup(name)
     return vim.api.nvim_create_augroup('nvim2k_' .. name, { clear = true })
 end

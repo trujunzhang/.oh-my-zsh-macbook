@@ -21,6 +21,14 @@ for type, icon in pairs(signs) do
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = '' })
 end
 
+lspconfig.pyright.setup({
+    on_attach = function(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+    end,
+    capabilities = lsp_capabilities,
+    root_dir = lspconfig.util.root_pattern('package.json'),
+})
+
 require('mason-lspconfig').setup({
     ensure_installed = installed_servers,
     handlers = {
