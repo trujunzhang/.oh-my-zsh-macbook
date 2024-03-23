@@ -37,6 +37,11 @@ local plugins = {
         event = { 'BufReadPre', 'BufNewFile' },
     },
     {
+        'RRethy/vim-illuminate',
+        config = load_config('ui.illuminate'),
+        event = { 'BufReadPre', 'BufNewFile' },
+    },
+    {
         'rcarriga/nvim-notify',
         config = load_config('ui.notify'),
         event = 'VeryLazy',
