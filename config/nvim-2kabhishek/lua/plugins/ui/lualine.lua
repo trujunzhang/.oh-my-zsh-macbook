@@ -177,14 +177,14 @@ lualine.setup({
         },
     },
     -- extensions = { 'quickfix', 'man', 'mason', 'lazy', 'toggleterm', 'nvim-tree' },
-    tabline = {
-        lualine_a = {},
-        lualine_b = { mode(), buffers },
-        lualine_c = {},
-        lualine_x = { diff_icons, branch },
-        lualine_y = { searchcount, selectioncount },
-        lualine_z = {},
-    },
+    -- tabline = {
+    --     lualine_a = {},
+    --     lualine_b = { mode(), buffers },
+    --     lualine_c = {},
+    --     lualine_x = { diff_icons, branch },
+    --     lualine_y = { searchcount, selectioncount },
+    --     lualine_z = {},
+    -- },
     sections = {
         lualine_a = {},
         lualine_b = {},

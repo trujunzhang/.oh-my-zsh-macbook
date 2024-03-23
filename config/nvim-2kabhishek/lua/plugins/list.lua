@@ -14,7 +14,12 @@ local plugins = {
         lazy = false,
         priority = 1000,
     },
-    { 'akinsho/bufferline.nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
+    {
+        'akinsho/bufferline.nvim',
+        config = load_config('ui.bufferline'),
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        event = 'BufAdd',
+    },
     {
         'nvim-lualine/lualine.nvim',
         config = load_config('ui.lualine'),
@@ -117,13 +122,6 @@ local plugins = {
         config = load_config('lang.surround'),
         event = { 'BufReadPre', 'BufNewFile' },
     },
-    {
-        'echasnovski/mini.ai',
-        version = '*',
-        config = load_config('lang.ai'),
-        event = { 'BufReadPre', 'BufNewFile' },
-    },
-
     -- Tresitter
     {
         'nvim-treesitter/nvim-treesitter',
@@ -215,7 +213,7 @@ local plugins = {
             },
         },
         config = load_config('lang.cmp'),
-        -- event = 'InsertEnter',
+        event = 'InsertEnter',
     },
 
     -- Tools
