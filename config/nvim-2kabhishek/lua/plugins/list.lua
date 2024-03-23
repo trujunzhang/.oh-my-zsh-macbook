@@ -14,6 +14,7 @@ local plugins = {
         lazy = false,
         priority = 1000,
     },
+    { 'akinsho/bufferline.nvim', dependencies = 'nvim-tree/nvim-web-devicons' },
     {
         'nvim-lualine/lualine.nvim',
         config = load_config('ui.lualine'),
