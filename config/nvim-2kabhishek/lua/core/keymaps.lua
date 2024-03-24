@@ -69,3 +69,11 @@ map('i', ';', ';<c-g>u')
 
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+
+map('n', 'gt',
+    "<cmd>lua vim.lsp.buf.format({ async = true })<cr>",
+opts)
+
+
+
+

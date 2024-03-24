@@ -428,16 +428,17 @@ local plugins = {
     },
     {
         'stevearc/conform.nvim',
-        event = { 'BufWritePre' },
+        enabled = false,
+        -- event = { 'BufWritePre' },
         cmd = { 'ConformInfo' },
         config = function()
-            require("conform").setup({
+            require('conform').setup({
                 format_on_save = {
-                  -- These options will be passed to conform.format()
-                  timeout_ms = 1000,
-                  lsp_fallback = true,
+                    -- These options will be passed to conform.format()
+                    timeout_ms = 1000,
+                    lsp_fallback = true,
                 },
-              })
+            })
         end,
         opts = {
             formatters_by_ft = {
