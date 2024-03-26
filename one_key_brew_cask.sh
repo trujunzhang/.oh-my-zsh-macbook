@@ -37,7 +37,7 @@ brew_apps=(
     "Opera.app"               "opera"
     "Firefox.app"             "firefox"
     "Brave Browser.app"       "brave-browser"
-    "qutebrowser.app"         "qutebrowser"
+    # "qutebrowser.app"         "qutebrowser"
     "Arc.app"                 "arc"
     "ResponsivelyApp.app"     "responsively"
 
