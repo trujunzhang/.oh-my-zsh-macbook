@@ -4,9 +4,17 @@ local function load_config(package)
     end
 end
 
+function merge_table(table1, table2)
+	for _, value in ipairs(table2) do
+		table1[#table1+1] = value
+	end
+	return table1
+end
+
+
 local slow_format_filetypes = { 'typescript', 'javascript' }
 
-local plugins = {
+local plugins_UI = {
     -- UI
     {
         'navarasu/onedark.nvim',
@@ -41,7 +49,7 @@ local plugins = {
         config = load_config('ui.illuminate'),
         event = { 'BufReadPre', 'BufNewFile' },
     },
-    {
+   {
         'rcarriga/nvim-notify',
         config = load_config('ui.notify'),
         event = 'VeryLazy',
@@ -81,6 +89,9 @@ local plugins = {
         cmd = { 'ZenMode', 'Twilight' },
     },
 
+
+}
+local plugins_Language = {
     -- Language
     {
         'mfussenegger/nvim-dap',
@@ -127,7 +138,11 @@ local plugins = {
         config = load_config('lang.surround'),
         event = { 'BufReadPre', 'BufNewFile' },
     },
-    -- Tresitter
+
+
+}
+local plugins_Treesitter = {
+   -- Tresitter
     {
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
@@ -145,7 +160,11 @@ local plugins = {
         'ckolkey/ts-node-action',
         dependencies = { 'nvim-treesitter' },
     },
-    -- LSP
+
+
+}
+local plugins_LSP = {
+   -- LSP
     {
         'neovim/nvim-lspconfig',
         dependencies = {
@@ -188,6 +207,10 @@ local plugins = {
         event = { 'BufReadPre', 'BufNewFile' },
     },
 
+
+}
+
+local plugins_Completion = {
     -- Completion
     {
         'hrsh7th/nvim-cmp',
@@ -227,6 +250,9 @@ local plugins = {
         event = 'InsertEnter',
     },
 
+
+}
+local plugins_Tools = {
     -- Tools
     {
         'nvim-tree/nvim-tree.lua',
@@ -356,6 +382,9 @@ local plugins = {
         enabled = false,
     },
 
+
+}
+local plugins_Telescope = {
     -- Telescope
     {
         'nvim-telescope/telescope.nvim',
@@ -385,6 +414,10 @@ local plugins = {
         cmd = 'Nerdy',
     },
 
+
+}
+
+local plugins_Git = {
     -- Git
     {
         '2kabhishek/co-author.nvim',
@@ -406,7 +439,10 @@ local plugins = {
         'tpope/vim-fugitive',
         cmd = 'Git',
     },
-    --  djzhang's plugins
+
+}
+local plugins_djzhang = {
+   --  djzhang's plugins
     {
         'rmagatti/auto-session',
         config = function()
@@ -488,6 +524,18 @@ local plugins = {
         },
     },
 }
+
+local merged_table = merge_table(plugins_UI, plugins_Language)
+merged_table = merge_table(merged_table, plugins_Treesitter)
+merged_table = merge_table(merged_table, plugins_LSP)
+merged_table = merge_table(merged_table, plugins_Completion)
+merged_table = merge_table(merged_table, plugins_Tools)
+merged_table = merge_table(merged_table, plugins_Telescope)
+merged_table = merge_table(merged_table, plugins_Git)
+merged_table = merge_table(merged_table, plugins_djzhang)
+
+local plugins = merged_table
+
 
 local lsp_servers = {
     'bashls',
