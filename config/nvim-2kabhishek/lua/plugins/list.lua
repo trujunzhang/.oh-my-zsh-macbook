@@ -15,11 +15,20 @@ local slow_format_filetypes = { 'typescript', 'javascript' }
 
 local plugins_UI = {
     -- UI
+    -- {
+    --     'navarasu/onedark.nvim',
+    --     config = load_config('ui.onedark'),
+    --     lazy = false,
+    --     priority = 1000,
+    -- },
     {
-        'navarasu/onedark.nvim',
-        config = load_config('ui.onedark'),
-        lazy = false,
-        priority = 1000,
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = function()
+            require("user.theme").rose_pine()
+            vim.cmd("colorscheme rose-pine-dawn")
+            -- lvim.colorscheme = "rose-pine-dawn"
+        end
     },
     {
         'akinsho/bufferline.nvim',
