@@ -110,6 +110,7 @@ local plugins_Language = {
     {
         'nvim-neotest/neotest',
         dependencies = {
+            "nvim-neotest/nvim-nio",
             'olimorris/neotest-rspec',
             'haydenmeade/neotest-jest',
         },
@@ -333,11 +334,11 @@ local plugins_Tools = {
         end,
         cmd = 'Hardtime',
     },
-    {
-        'chrisgrieser/nvim-spider',
-        config = load_config('tools.spider'),
-        event = { 'BufReadPre', 'BufNewFile' },
-    },
+    -- {
+    --     'chrisgrieser/nvim-spider',
+    --     config = load_config('tools.spider'),
+    --     event = { 'BufReadPre', 'BufNewFile' },
+    -- },
     {
         'folke/which-key.nvim',
         config = load_config('tools.which-key'),
