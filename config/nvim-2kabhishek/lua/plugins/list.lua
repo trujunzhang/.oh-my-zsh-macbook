@@ -22,13 +22,13 @@ local plugins_UI = {
     --     priority = 1000,
     -- },
     {
-        "rose-pine/neovim",
-        name = "rose-pine",
+        'rose-pine/neovim',
+        name = 'rose-pine',
         config = function()
-            require("user.theme").rose_pine()
-            vim.cmd("colorscheme rose-pine-dawn")
+            require('user.theme').rose_pine()
+            vim.cmd('colorscheme rose-pine-dawn')
             -- lvim.colorscheme = "rose-pine-dawn"
-        end
+        end,
     },
     {
         'akinsho/bufferline.nvim',
@@ -110,7 +110,7 @@ local plugins_Language = {
     {
         'nvim-neotest/neotest',
         dependencies = {
-            "nvim-neotest/nvim-nio",
+            'nvim-neotest/nvim-nio',
             'olimorris/neotest-rspec',
             'haydenmeade/neotest-jest',
         },
@@ -260,6 +260,17 @@ local plugins_Tools = {
         },
         config = load_config('tools.nvim-tree'),
         cmd = 'NvimTreeToggle',
+    },
+    {
+        'razak17/tailwind-fold.nvim',
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        opts = {
+            min_chars = 50,
+        },
+        ft = { 'html', 'svelte', 'astro', 'vue', 'typescriptreact' },
+        keys = {
+            { '<leader>lb', '<cmd>TailwindFoldToggle<cr>', desc = 'Fold/Unfold tailwind classes' },
+        },
     },
     {
         'windwp/nvim-spectre',
@@ -437,21 +448,21 @@ local plugins_Git = {
 }
 local plugins_javascript = {
     {
-        "pmizio/typescript-tools.nvim",
+        'pmizio/typescript-tools.nvim',
         ft = {
-          "javascript",
-          "typescript",
-          "javascriptreact",
-          "typescriptreact",
+            'javascript',
+            'typescript',
+            'javascriptreact',
+            'typescriptreact',
         },
         dependencies = {
-          "OlegGulevskyy/better-ts-errors.nvim",
+            'OlegGulevskyy/better-ts-errors.nvim',
         },
         config = load_config('lang.ts'),
         -- config = function()
         --   require "custom.configs.ts"
         -- end,
-      },
+    },
 }
 local plugins_djzhang = {
     --  djzhang's plugins
