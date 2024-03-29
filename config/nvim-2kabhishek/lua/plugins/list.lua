@@ -435,6 +435,24 @@ local plugins_Git = {
         cmd = 'Git',
     },
 }
+local plugins_javascript = {
+    {
+        "pmizio/typescript-tools.nvim",
+        ft = {
+          "javascript",
+          "typescript",
+          "javascriptreact",
+          "typescriptreact",
+        },
+        dependencies = {
+          "OlegGulevskyy/better-ts-errors.nvim",
+        },
+        config = load_config('lang.ts'),
+        -- config = function()
+        --   require "custom.configs.ts"
+        -- end,
+      },
+}
 local plugins_djzhang = {
     --  djzhang's plugins
     {
@@ -526,6 +544,7 @@ merged_table = merge_table(merged_table, plugins_Completion)
 merged_table = merge_table(merged_table, plugins_Tools)
 merged_table = merge_table(merged_table, plugins_Telescope)
 merged_table = merge_table(merged_table, plugins_Git)
+merged_table = merge_table(merged_table, plugins_javascript)
 merged_table = merge_table(merged_table, plugins_djzhang)
 
 local plugins = merged_table
