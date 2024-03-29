@@ -466,16 +466,16 @@ local plugins_javascript = {
 }
 local plugins_djzhang = {
     --  djzhang's plugins
-    {
-        'rmagatti/auto-session',
-        config = function()
-            vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
-            require('auto-session').setup({
-                log_level = 'error',
-                auto_session_suppress_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
-            })
-        end,
-    },
+    -- {
+    --     'rmagatti/auto-session',
+    --     config = function()
+    --         vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
+    --         require('auto-session').setup({
+    --             log_level = 'error',
+    --             auto_session_suppress_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
+    --         })
+    --     end,
+    -- },
     {
         'okuuva/auto-save.nvim',
         cmd = 'ASToggle', -- optional for lazy loading on command
@@ -485,67 +485,67 @@ local plugins_djzhang = {
             -- or just leave it empty :)
         },
     },
-    {
-        'stevearc/conform.nvim',
-        enabled = false,
-        -- event = { 'BufWritePre' },
-        cmd = { 'ConformInfo' },
-        config = function()
-            require('conform').setup({
-                format_on_save = {
-                    -- These options will be passed to conform.format()
-                    timeout_ms = 1000,
-                    lsp_fallback = true,
-                },
-            })
-        end,
-        opts = {
-            formatters_by_ft = {
-                lua = { 'stylua' },
-                rust = { 'rustfmt' },
-                terraform = { 'terraform_fmt' },
-                javascript = { { 'prettierd', 'prettier' } },
-                typescript = { { 'prettierd', 'prettier' } },
-                json = { 'prettierd' },
-                html = { { 'prettierd', 'prettier' } },
-                scss = { { 'prettierd', 'prettier' } },
-                css = { { 'prettierd', 'prettier' } },
-                markdown = { 'markdownlint' },
-                ocaml = { 'ocamlformat' },
-                sql = { 'pg_format' },
-                swift = { 'swift_format' },
-                proto = { 'buf' },
-                yaml = { { 'prettierd', 'prettier' } },
-            },
+    -- {
+    --     'stevearc/conform.nvim',
+    --     enabled = false,
+    --     -- event = { 'BufWritePre' },
+    --     cmd = { 'ConformInfo' },
+    --     config = function()
+    --         require('conform').setup({
+    --             format_on_save = {
+    --                 -- These options will be passed to conform.format()
+    --                 timeout_ms = 1000,
+    --                 lsp_fallback = true,
+    --             },
+    --         })
+    --     end,
+    --     opts = {
+    --         formatters_by_ft = {
+    --             lua = { 'stylua' },
+    --             rust = { 'rustfmt' },
+    --             terraform = { 'terraform_fmt' },
+    --             javascript = { { 'prettierd', 'prettier' } },
+    --             typescript = { { 'prettierd', 'prettier' } },
+    --             json = { 'prettierd' },
+    --             html = { { 'prettierd', 'prettier' } },
+    --             scss = { { 'prettierd', 'prettier' } },
+    --             css = { { 'prettierd', 'prettier' } },
+    --             markdown = { 'markdownlint' },
+    --             ocaml = { 'ocamlformat' },
+    --             sql = { 'pg_format' },
+    --             swift = { 'swift_format' },
+    --             proto = { 'buf' },
+    --             yaml = { { 'prettierd', 'prettier' } },
+    --         },
 
-            format_on_save = function(bufnr)
-                -- Disable with a global or buffer-local variable
-                if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-                    return
-                end
+    --         format_on_save = function(bufnr)
+    --             -- Disable with a global or buffer-local variable
+    --             if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+    --                 return
+    --             end
 
-                if slow_format_filetypes[vim.bo[bufnr].filetype] then
-                    return
-                end
+    --             if slow_format_filetypes[vim.bo[bufnr].filetype] then
+    --                 return
+    --             end
 
-                local function on_format(err)
-                    if err and err:match('timeout$') then
-                        slow_format_filetypes[vim.bo[bufnr].filetype] = true
-                    end
-                end
+    --             local function on_format(err)
+    --                 if err and err:match('timeout$') then
+    --                     slow_format_filetypes[vim.bo[bufnr].filetype] = true
+    --                 end
+    --             end
 
-                return { timeout_ms = 500, lsp_fallback = true }, on_format
-            end,
+    --             return { timeout_ms = 500, lsp_fallback = true }, on_format
+    --         end,
 
-            format_after_save = function(bufnr)
-                if not slow_format_filetypes[vim.bo[bufnr].filetype] then
-                    return
-                end
+    --         format_after_save = function(bufnr)
+    --             if not slow_format_filetypes[vim.bo[bufnr].filetype] then
+    --                 return
+    --             end
 
-                return { lsp_fallback = true }
-            end,
-        },
-    },
+    --             return { lsp_fallback = true }
+    --         end,
+    --     },
+    -- },
 }
 
 local merged_table = merge_table(plugins_UI, plugins_Language)
