@@ -8,6 +8,7 @@ source ./bash/tools.sh
 
 node_global="20.10.0"
 node_old="16.16.0"
+node_for_nvim="18"
 
 # nvm(node.js)
 if [ ! -d ~/.nvm ]; then
@@ -17,6 +18,7 @@ if [ ! -d ~/.nvm ]; then
 	nvm install "$node_global"
 	nvm alias default "$node_global" # default node.js
 	nvm install "$node_old"
+	nvm install "$node_for_nvim"
 fi
 
 node_apps=(

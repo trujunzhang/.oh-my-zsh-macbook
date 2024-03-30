@@ -25,7 +25,7 @@ brew_apps=(
     "opt/supabase"              "supabase/tap/supabase"
 
     ## v2ray
-    "opt/v2ray-core"            "v2ray-core"
+    # "opt/v2ray-core"            "v2ray-core"
 
     ## neovim
     "opt/tree-sitter"           "tree-sitter"
@@ -92,7 +92,7 @@ brew_apps=(
     ## React-native & Expo
     "opt/watchman"           "bundletool watchman"
     # brew tap facebook/fb
-    "opt/idb-companion"      "idb-companion"
+    # "opt/idb-companion"      "idb-companion"
 
     ## neovim
     # https://github.com/universal-ctags/ctags
@@ -101,6 +101,7 @@ brew_apps=(
     "opt/lua-language-server"                "lua-language-server"
     # https://deno.land/
     "opt/deno"               "deno"
+    "opt/rust"               "rust"
 
     "opt/mkcert"             "mkcert"
 )

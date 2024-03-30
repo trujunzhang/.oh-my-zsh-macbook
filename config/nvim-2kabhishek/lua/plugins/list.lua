@@ -103,6 +103,12 @@ local plugins_Language = {
         'mfussenegger/nvim-dap',
         dependencies = {
             'rcarriga/nvim-dap-ui',
+            "mxsdev/nvim-dap-vscode-js",
+            {
+                "microsoft/vscode-js-debug",
+                version = "1.x",
+                build = "npm i && npm run compile vsDebugServerBundle && mv dist out"
+            }
         },
         config = load_config('lang.dap'),
         cmd = { 'DapUIToggle', 'DapToggleRepl', 'DapToggleBreakpoint' },
