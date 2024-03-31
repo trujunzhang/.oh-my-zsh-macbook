@@ -123,6 +123,7 @@ local mappings = {
         end,
         icons.documents.OpenFolder .. 'Explorer',
     },
+    ['<Tab>'] = { '<cmd>b#<cr>', icons.ui.Pencil .. 'Tab Previous' },
     q = { '<cmd>qa!<cr>', icons.ui.Close .. 'Quit' },
     Q = { '<cmd>qa!<cr>', icons.ui.Power .. 'Force Quit!' },
     w = { '<cmd>w<cr>', icons.ui.Save .. 'Save' },
@@ -181,7 +182,7 @@ local mappings = {
         -- S = { '<cmd>lua require("dbee").store("json", "buffer", { extra_arg = 0 })<cr>', 'To JSON' },
         -- t = { '<cmd>lua require("dbee").store("table", "buffer", { extra_arg = 0 })<cr>', 'To Table' },
     },
-   d = {
+    d = {
         name = icons.ui.Bug .. 'Debug',
         b = { '<cmd>DapToggleBreakpoint<cr>', 'Breakpoint' },
         c = { '<cmd>DapContinue<cr>', 'Continue' },
@@ -277,7 +278,7 @@ local mappings = {
     },
 
     j = {
-        name = 'JavaScript',
+        name = icons.ui.Gear .. 'JavaScript',
         -- s = { '<cmd>lua require("package-info").show()<cr>', "Show package info" },
         -- h = { '<cmd>lua require("package-info").hide()<cr>', "Hide package info" },
         g = { '<cmd>lua require("package-info").toggle()<cr>', 'Toggle package info' },
