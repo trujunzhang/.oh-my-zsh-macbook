@@ -8,7 +8,7 @@
   url = https://github.com/Eisa01/mpv-scripts
 
 # qutebrowser
-  url = https://github.com/juliusHuelsmann/Config 
+  url = https://github.com/juliusHuelsmann/Config
   fold = .config/qutebrowser
 
 # tmux
@@ -42,8 +42,11 @@
 # nvim-2kabhishek
   url = https://github.com/2KAbhishek/nvim2k
 
+# nvim-nikolovlazar
+  url = https://github.com/nikolovlazar/dotfiles
+
 ## snippet
   git clone https://github.com/dsznajder/vscode-es7-javascript-react-snippets config/lvim/snippets
 
 
-  
+

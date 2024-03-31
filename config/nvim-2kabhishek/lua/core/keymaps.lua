@@ -22,7 +22,7 @@ map('t', 'JJ', '<C-\\><C-n>', opts)
 map({ 'v', 'x' }, 'p', '"_dP', opts)
 
 -- Do not copy on x
-map({ 'v', 'x' }, 'x', '"_x', opts)
+-- map({ 'v', 'x' }, 'x', '"_x', opts)
 
 -- Increment/decrement
 map({ 'n', 'v', 'x' }, '-', '<C-x>', opts)
