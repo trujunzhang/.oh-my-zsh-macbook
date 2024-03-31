@@ -191,7 +191,8 @@ local mappings = {
         O = { '<cmd>DapStepOut<cr>', 'Out' },
         r = { '<cmd>DapToggleRepl<cr>', 'Repl' },
         R = { '<cmd>DapRestartFrame<cr>', 'Restart Frame' },
-        t = { '<cmd>DapUIToggle<cr>', 'Debugger' },
+        u = { '<cmd>DapUIToggle<cr>', 'Debugger' },
+        t = { '<cmd>lua require"jester".debug()<cr>', 'Debug cursor jtest' },
         x = { '<cmd>DapTerminate<cr>', 'Exit' },
     },
     f = {

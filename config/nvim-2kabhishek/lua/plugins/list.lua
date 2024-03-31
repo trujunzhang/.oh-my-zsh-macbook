@@ -103,6 +103,7 @@ local plugins_Language = {
         'mfussenegger/nvim-dap',
         dependencies = {
             'rcarriga/nvim-dap-ui',
+            'David-Kunz/jester',
             "mxsdev/nvim-dap-vscode-js",
             {
                 "microsoft/vscode-js-debug",
