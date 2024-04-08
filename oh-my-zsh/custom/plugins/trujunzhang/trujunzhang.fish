@@ -180,6 +180,10 @@ alias npmsi='npm install --verbose --save '
 
 alias npodi='npm run pod-install'
 alias nrprettier='npm run prettier'
+alias nrweb='npm run web'
+alias nrios='npm run ios'
+alias nripad='npm run ipad'
+alias nrandroid='npm run android'
 
 # run dev
 alias npmd='npm run dev'
@@ -613,8 +617,9 @@ alias wrmvimsession="rm -rf $HOME/.local/share/nvim/sessions"
 alias wcloudflareip="curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o /tmp/cf.sh && chmod +x /tmp/cf.sh && cd /tmp && ./cf.sh"
 
 # git clone
-alias dcloneexpensify="git clone https://github.com/expensify/App.git expensify && cd expensify"
-alias dcloneieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
+alias dclone_expensify="git clone https://github.com/expensify/App.git expensify && cd expensify"
+alias dclone_ieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
+alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-fixed.git usedExpApp && cd usedExpApp"
 
 alias wclean_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
 alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"

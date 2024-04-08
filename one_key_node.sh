@@ -9,6 +9,7 @@ source ./bash/tools.sh
 node_global="20.10.0"
 node_old="16.16.0"
 node_for_nvim="18"
+node_for_old_expensify="20.9.0"
 
 # nvm(node.js)
 if [ ! -d ~/.nvm ]; then
@@ -19,6 +20,7 @@ if [ ! -d ~/.nvm ]; then
 	nvm alias default "$node_global" # default node.js
 	nvm install "$node_old"
 	nvm install "$node_for_nvim"
+	nvm install "$node_for_old_expensify"
 fi
 
 node_apps=(
