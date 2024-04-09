@@ -184,6 +184,7 @@ alias nrweb='npm run web'
 alias nrios='npm run ios'
 alias nripad='npm run ipad'
 alias nrandroid='npm run android'
+alias nrbuild-android='npm run android-build'
 
 # run dev
 alias npmd='npm run dev'

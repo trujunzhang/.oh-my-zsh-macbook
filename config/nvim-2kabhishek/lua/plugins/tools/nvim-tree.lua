@@ -82,6 +82,16 @@ nvim_tree.setup({
     },
     update_focused_file = { enable = true, update_cwd = true, ignore_list = {} },
     git = { enable = true, ignore = true, timeout = 500 },
+    -- disable window_picker for
+    -- explorer to work well with
+    -- window splits
+    actions = {
+        open_file = {
+            window_picker = {
+                enable = false,
+            },
+        },
+    },
     view = {
         width = 40,
         side = 'left',
