@@ -28,7 +28,7 @@ util.get_root_dir = function()
     end
 end
 
-util.get_file_type = function(extension)
+util.get_file_type_cmd = function(extension)
     local root = util.get_root_dir()
 
     if extension == 'arb' and root then
@@ -44,4 +44,9 @@ util.get_file_type = function(extension)
     return ''
 end
 
+util.is_present = function(bin)
+    return vim.fn.executable(bin) == 1
+end
+
 return util
+
