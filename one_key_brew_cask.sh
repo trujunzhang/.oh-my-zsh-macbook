@@ -113,8 +113,7 @@ if [[ $(uname -m) == 'arm64' ]]; then
     install_brew_app "Docker.app" docker
 
     # install_brew_app "pgAdmin 4.app" pgadmin4
-
-    install_brew_app "iTerm.app" iterm2
+    # install_brew_app "iTerm.app" iterm2
 fi
 
 ## font-fira
