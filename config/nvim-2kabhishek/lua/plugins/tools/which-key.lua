@@ -455,7 +455,14 @@ local no_leader_mappings = {
     ['<S-h>'] = { '<cmd>bprevious<cr>', 'Previous Buffer' },
     ['<S-l>'] = { '<cmd>bnext<cr>', 'Next Buffer' },
 
-    ['<C-h>'] = { '<C-w>h', 'Move Left' },
+    -- ['<C-h>'] = { '<C-w>h', 'Move Left' },
+    ['<C-h>'] = {
+        function()
+            local nvim_tree_api = require('nvim-tree.api')
+            return nvim_tree_api.tree.open()
+        end,
+        icons.documents.OpenFolder .. 'Explorer',
+    },
     ['<C-j>'] = { '<C-w>j', 'Move Down' },
     ['<C-k>'] = { '<C-w>k', 'Move Up' },
     ['<C-l>'] = { '<C-w>l', 'Move Right' },

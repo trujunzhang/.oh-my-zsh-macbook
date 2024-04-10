@@ -11,7 +11,7 @@ yabai -m space 1 --label common
 yabai -m space 2 --label media
 yabai -m space 3 --label design
 yabai -m space 4 --label debug
-yabai -m space 5 --label jetbrain
+yabai -m space 5 --label jetbrains
 # monitor #2
 yabai -m space 6 --label xcode
 yabai -m space 7 --label code
@@ -32,7 +32,7 @@ yabai -m rule --add app="^Flipper$" space=debug
 # monitor #2
 yabai -m rule --add app="^kitty$" space=debug
 # yabai -m rule --add app="^kitty$" space=terminal
-yabai -m rule --add app="^Terminal$" space=terminal
+yabai -m rule --add app="^Terminal$" space=terminal manage=off
 
 #yabai -m rule --add app="^Simulator$" space=mobile
 yabai -m rule --add app="^Xcode$"     space=xcode
@@ -41,8 +41,8 @@ yabai -m rule --add app="^qemu-system-aarch64$"     space=terminal
 
 # Jetbrains apps
 apps="^(IntelliJ IDEA|WebStorm|RubyMine|PyCharm|DataGrip)$"
-yabai -m rule --add app="${apps}" space=jetbrain  manage=off
-yabai -m rule --add app="^Code$" space=jetbrain
+yabai -m rule --add app="${apps}" space=jetbrains  manage=off
+yabai -m rule --add app="^Code$" space=jetbrains
 
 yabai -m rule --add app="^Google Chrome$" space=web
 
