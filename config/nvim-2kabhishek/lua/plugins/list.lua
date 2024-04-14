@@ -104,12 +104,12 @@ local plugins_Language = {
         dependencies = {
             'rcarriga/nvim-dap-ui',
             'David-Kunz/jester',
-            "mxsdev/nvim-dap-vscode-js",
+            'mxsdev/nvim-dap-vscode-js',
             {
-                "microsoft/vscode-js-debug",
-                version = "1.x",
-                build = "npm i && npm run compile vsDebugServerBundle && mv dist out"
-            }
+                'microsoft/vscode-js-debug',
+                version = '1.x',
+                build = 'npm i && npm run compile vsDebugServerBundle && mv dist out',
+            },
         },
         config = load_config('lang.dap'),
         cmd = { 'DapUIToggle', 'DapToggleRepl', 'DapToggleBreakpoint' },
@@ -227,7 +227,12 @@ local plugins_Completion = {
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-cmdline',
             'hrsh7th/cmp-nvim-lua',
-            'L3MON4D3/LuaSnip',
+            {
+                'L3MON4D3/LuaSnip',
+                config = function()
+                    require('luasnip/loaders/from_vscode').load({ paths = { '~/.config/nvim-snippets/debug-snippets' } })
+                end,
+            },
             'rafamadriz/friendly-snippets',
             'saadparwaiz1/cmp_luasnip',
             {
