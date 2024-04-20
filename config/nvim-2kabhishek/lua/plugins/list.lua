@@ -600,6 +600,7 @@ local null_ls_sources = {
 }
 
 local lsp_servers = {
+    'clangd',
     'bashls',
     'jsonls',
     'lua_ls',

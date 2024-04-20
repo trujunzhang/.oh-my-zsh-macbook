@@ -24,9 +24,10 @@ for _, language in ipairs({ 'typescript', 'javascript', 'svelte' }) do
             type = 'pwa-node',
             -- attach to an already running node process with --inspect flag
             -- default port: 9222
+            port = 8081,
             request = 'attach',
             -- allows us to pick the process using a picker
-            processId = require('dap.utils').pick_process,
+            -- processId = require('dap.utils').pick_process,
             -- name of the debug action you have to select for this config
             name = 'Attach debugger to existing `node --inspect` process',
             -- for compiled languages like TypeScript or Svelte.js
@@ -58,12 +59,12 @@ for _, language in ipairs({ 'typescript', 'javascript', 'svelte' }) do
         },
         {
             type = 'pwa-chrome',
-            name = 'Launch Chrome to debug client',
+            name = 'Launch Chrome to debug Ieatta client',
             request = 'launch',
-            url = 'http://localhost:5173',
+            url = 'http://dev.ieatta.com:8082',
             sourceMaps = true,
             protocol = 'inspector',
-            port = 9222,
+            port = 9000,
             webRoot = '${workspaceFolder}/src',
             -- skip files from vite's hmr
             skipFiles = { '**/node_modules/**/*', '**/@vite/*', '**/src/client/*', '**/src/*' },

@@ -29,16 +29,6 @@ lspconfig.pyright.setup({
     root_dir = lspconfig.util.root_pattern('package.json'),
 })
 
--- lspconfig.eslint.setup({
---     --- ...
---     on_attach = function(client, bufnr)
---         vim.api.nvim_create_autocmd('BufWritePre', {
---             buffer = bufnr,
---             command = 'EslintFixAll',
---         })
---     end,
--- })
-
 require('mason-lspconfig').setup({
     ensure_installed = installed_servers,
     handlers = {
@@ -74,4 +64,29 @@ lspconfig.eslint.setup({
             command = 'EslintFixAll',
         })
     end,
+})
+
+local lsp_flags = {
+    -- This is the default in Nvim 0.7+
+    debounce_text_changes = 150,
+}
+
+lsp_capabilities.offsetEncoding = { "utf-16" }
+
+lspconfig['clangd'].setup({
+    capabilities = lsp_capabilities,
+    -- on_attach = on_attach,
+    filetypes = { 'h', 'c', 'cpp', 'cc', 'objc', 'objcpp' },
+    flags = lsp_flags,
+    cmd = { 'clangd', '--background-index' },
+    single_file_support = true,
+    root_dir = lspconfig.util.root_pattern(
+        '.clangd',
+        '.clang-tidy',
+        '.clang-format',
+        'compile_commands.json',
+        'compile_flags.txt',
+        'configure.ac',
+        '.git'
+    ),
 })
