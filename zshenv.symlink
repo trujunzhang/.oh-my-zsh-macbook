@@ -66,7 +66,7 @@ export PATH="$HOME/bin:$PATH"
 
 # auto env
 # ======================================================================
-source $(brew --prefix autoenv)/activate.sh
+# source $(brew --prefix autoenv)/activate.sh
 # source /usr/local/opt/autoenv/activate.sh
 # [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
@@ -196,7 +196,7 @@ fi
 # rvm
 # Step1: Install GPG
 #        http://mac-tutorials.net/2020/01/08/step-step-mac-catalina-install-gpg/2/
-# Step2: 
+# Step2:
 #        http://rvm.io/
 # ======================================================================
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
@@ -205,7 +205,7 @@ export PATH="$GEM_HOME/bin:$PATH"
 
 export PATH="$HOME/.roswell/bin:$PATH"
 
-# flutter 
+# flutter
 # export PUB_HOSTED_URL=https://pub.flutter-io.cn
 # export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 

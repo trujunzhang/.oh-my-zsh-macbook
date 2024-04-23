@@ -124,6 +124,7 @@ local mappings = {
         icons.documents.OpenFolder .. 'Explorer',
     },
     ['<Tab>'] = { '<cmd>b#<cr>', icons.ui.Pencil .. 'Tab Previous' },
+    ['<Space>'] = { '<cmd>b#<cr>', icons.ui.Pencil .. 'Tab Previous' },
     q = { '<cmd>qa!<cr>', icons.ui.Close .. 'Quit' },
     Q = { '<cmd>qa!<cr>', icons.ui.Power .. 'Force Quit!' },
     w = { '<cmd>w<cr>', icons.ui.Save .. 'Save' },
