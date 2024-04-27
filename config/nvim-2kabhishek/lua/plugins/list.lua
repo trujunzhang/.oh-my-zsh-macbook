@@ -15,19 +15,12 @@ local slow_format_filetypes = { 'typescript', 'javascript' }
 
 local plugins_UI = {
     -- UI
-    -- {
-    --     'navarasu/onedark.nvim',
-    --     config = load_config('ui.onedark'),
-    --     lazy = false,
-    --     priority = 1000,
-    -- },
     {
         'rose-pine/neovim',
         name = 'rose-pine',
         config = function()
             require('user.theme').rose_pine()
             vim.cmd('colorscheme rose-pine-dawn')
-            -- lvim.colorscheme = "rose-pine-dawn"
         end,
     },
     {
@@ -99,31 +92,31 @@ local plugins_UI = {
 }
 local plugins_Language = {
     -- Language
-    {
-        'mfussenegger/nvim-dap',
-        dependencies = {
-            'rcarriga/nvim-dap-ui',
-            'David-Kunz/jester',
-            'mxsdev/nvim-dap-vscode-js',
-            {
-                'microsoft/vscode-js-debug',
-                version = '1.x',
-                build = 'npm i && npm run compile vsDebugServerBundle && mv dist out',
-            },
-        },
-        config = load_config('lang.dap'),
-        cmd = { 'DapUIToggle', 'DapToggleRepl', 'DapToggleBreakpoint' },
-    },
-    {
-        'nvim-neotest/neotest',
-        dependencies = {
-            'nvim-neotest/nvim-nio',
-            'olimorris/neotest-rspec',
-            'haydenmeade/neotest-jest',
-        },
-        config = load_config('lang.neotest'),
-        cmd = 'Neotest',
-    },
+    -- {
+    --     'mfussenegger/nvim-dap',
+    --     dependencies = {
+    --         'rcarriga/nvim-dap-ui',
+    --         'David-Kunz/jester',
+    --         'mxsdev/nvim-dap-vscode-js',
+    --         {
+    --             'microsoft/vscode-js-debug',
+    --             version = '1.x',
+    --             build = 'npm i && npm run compile vsDebugServerBundle && mv dist out',
+    --         },
+    --     },
+    --     config = load_config('lang.dap'),
+    --     cmd = { 'DapUIToggle', 'DapToggleRepl', 'DapToggleBreakpoint' },
+    -- },
+    -- {
+    --     'nvim-neotest/neotest',
+    --     dependencies = {
+    --         'nvim-neotest/nvim-nio',
+    --         'olimorris/neotest-rspec',
+    --         'haydenmeade/neotest-jest',
+    --     },
+    --     config = load_config('lang.neotest'),
+    --     cmd = 'Neotest',
+    -- },
     {
         'michaelb/sniprun',
         build = 'bash ./install.sh',
@@ -172,12 +165,6 @@ local plugins_Treesitter = {
         'ckolkey/ts-node-action',
         dependencies = { 'nvim-treesitter' },
     },
-    {
-        'ggandor/leap.nvim',
-        config = function()
-            require('leap').create_default_mappings()
-        end,
-    },
 }
 
 local plugins_LSP = {
@@ -191,12 +178,6 @@ local plugins_LSP = {
         config = load_config('lang.lspconfig'),
         event = { 'BufReadPre', 'BufNewFile' },
     },
-    -- {
-    --     'dgagn/diagflow.nvim',
-    --     -- event = 'LspAttach', --- This is what I use personnally and it works great
-    --     opts = {},
-    --     -- config = load_config('lang.diagflow'),
-    -- },
     {
         'folke/neodev.nvim',
         ft = { 'lua', 'vim' },
@@ -374,14 +355,14 @@ local plugins_Tools = {
         config = load_config('tools.which-key'),
         event = 'VeryLazy',
     },
-    {
-        'iamcco/markdown-preview.nvim',
-        build = function()
-            vim.fn['mkdp#util#install']()
-        end,
-        ft = 'markdown',
-        cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview' },
-    },
+    -- {
+    --     'iamcco/markdown-preview.nvim',
+    --     build = function()
+    --         vim.fn['mkdp#util#install']()
+    --     end,
+    --     ft = 'markdown',
+    --     cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview' },
+    -- },
     {
         'uga-rosa/ccc.nvim',
         config = load_config('tools.ccc'),
@@ -478,9 +459,6 @@ local plugins_javascript = {
             'OlegGulevskyy/better-ts-errors.nvim',
         },
         config = load_config('lang.ts'),
-        -- config = function()
-        --   require "custom.configs.ts"
-        -- end,
     },
 }
 local plugins_djzhang = {
