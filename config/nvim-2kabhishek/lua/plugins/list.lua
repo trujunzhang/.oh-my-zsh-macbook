@@ -172,7 +172,14 @@ local plugins_Treesitter = {
         'ckolkey/ts-node-action',
         dependencies = { 'nvim-treesitter' },
     },
+    {
+        'ggandor/leap.nvim',
+        config = function()
+            require('leap').create_default_mappings()
+        end,
+    },
 }
+
 local plugins_LSP = {
     -- LSP
     {

@@ -342,9 +342,24 @@ local mappings = {
         u = { '<cmd>Lazy update<cr>', 'Update' },
         x = { '<cmd>Lazy clean<cr>', 'Clean' },
     },
+
+    -- spectre
+    -- vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
+    --     desc = "Toggle Spectre"
+    -- })
+    -- vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
+    --     desc = "Search current word"
+    -- })
+    -- vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
+    --     desc = "Search current word"
+    -- })
+    -- vim.keymap.set('n', '<leader>sf', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
+    --     desc = "Search on current file"
+    -- })
     r = {
         name = icons.diagnostics.Hint .. 'Refactor',
-        b = { "<cmd>lua require('spectre').open_file_search()<cr>", 'Replace Buffer' },
+        b = { "<cmd>lua require('spectre').open_file_search({select_word=true})<cr>", 'Spectre Replace Buffer' },
+        c = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", 'Spectre Search current word' },
         e = { "<cmd>lua require('refactoring').refactor('Extract Block')<CR>", 'Extract Block' },
         f = { "<cmd>lua require('refactoring').refactor('Extract Block To File')<CR>", 'Extract To File' },
         i = { "<cmd>lua require('refactoring').refactor('Inline Variable')<CR>", 'Inline Variable' },
