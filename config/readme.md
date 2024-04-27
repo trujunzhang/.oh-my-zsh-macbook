@@ -45,6 +45,9 @@
 # nvim-nikolovlazar
   url = https://github.com/nikolovlazar/dotfiles
 
+# nvim-kohane27
+  url = https://github.com/kohane27/nvim-config
+
 ## snippet
   git clone https://github.com/dsznajder/vscode-es7-javascript-react-snippets config/lvim/snippets
 
