@@ -132,6 +132,8 @@ local plugins_Language = {
         config = load_config('lang.autopairs'),
         event = 'InsertEnter',
     },
+}
+local plugins_Mini = {
     {
         'echasnovski/mini.comment',
         version = '*',
@@ -143,6 +145,14 @@ local plugins_Language = {
         'echasnovski/mini.surround',
         version = '*',
         config = load_config('lang.surround'),
+        event = { 'BufReadPre', 'BufNewFile' },
+    },
+    {
+        'echasnovski/mini.animate',
+        version = '*',
+        config = function()
+            require('mini.animate').setup()
+        end,
         event = { 'BufReadPre', 'BufNewFile' },
     },
 }
@@ -253,6 +263,11 @@ local plugins_Completion = {
 }
 local plugins_Tools = {
     -- Tools
+    {
+        'mg979/vim-visual-multi',
+        config = load_config('tools.vim-visual-multi'),
+        event = { 'BufReadPre', 'BufNewFile' },
+    },
     {
         'nvim-tree/nvim-tree.lua',
         dependencies = {
@@ -546,6 +561,7 @@ local plugins_djzhang = {
 }
 
 local merged_table = merge_table(plugins_UI, plugins_Language)
+merged_table = merge_table(merged_table, plugins_Mini)
 merged_table = merge_table(merged_table, plugins_Treesitter)
 merged_table = merge_table(merged_table, plugins_LSP)
 merged_table = merge_table(merged_table, plugins_Completion)
