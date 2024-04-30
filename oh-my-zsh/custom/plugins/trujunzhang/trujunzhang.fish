@@ -587,11 +587,6 @@ function binstall-nerd-font
   brew install font-hack-nerd-font
 end
 
-# neovim
-alias l="lvim"
-alias n="nvim"
-alias vsc="code ."
-
 function killvim
     kill $(ps aux | grep 'neovim' | awk '{print $2}')
 end
@@ -644,4 +639,24 @@ function dgitreset
         git init && git add . && git commit -m 'first commit' && git checkout -b tmp
     end
 end
+
+# neovim
+alias l="lvim"
+# alias n="nvim"
+alias vsc="code ."
+
+# Switching Configs in Neovim
+# see: https://michaeluloth.com/neovim-switch-configs/
+
+alias NVIM_APPNAME='nvim-lazyvim nvim'
+alias vd='nvim' # default Neovim config
+alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
+alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
+alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
+alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
+alias v='NVIM_APPNAME=nvim-wSedlacek nvim' # NvChad
+alias n='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
+
+
+
 
