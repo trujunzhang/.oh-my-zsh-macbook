@@ -124,7 +124,6 @@ local mappings = {
         icons.documents.OpenFolder .. 'Explorer',
     },
     ['<Tab>'] = { '<cmd>b#<cr>', icons.ui.Pencil .. 'Tab Previous' },
-    ['<Space>'] = { '<cmd>b#<cr>', icons.ui.Pencil .. 'Tab Previous' },
     q = { '<cmd>qa!<cr>', icons.ui.Close .. 'Quit' },
     Q = { '<cmd>qa!<cr>', icons.ui.Power .. 'Force Quit!' },
     w = { '<cmd>w<cr>', icons.ui.Save .. 'Save' },
@@ -483,6 +482,9 @@ local no_leader_mappings = {
     ['<C-j>'] = { '<C-w>j', 'Move Down' },
     ['<C-k>'] = { '<C-w>k', 'Move Up' },
     ['<C-l>'] = { '<C-w>l', 'Move Right' },
+
+    ['<C-i>'] = { '<cmd>b#<cr>', 'Tab Previous' },
+    ['<C-r>'] = { '<cmd>lua require("telescope").extensions.menufacture.live_grep()<cr>', 'Find Text' },
 
     ['<C-Up>'] = { '<cmd>resize +10<cr>', 'Increase window height' },
     ['<C-Down>'] = { '<cmd>resize -10<cr>', 'Decrease window height' },

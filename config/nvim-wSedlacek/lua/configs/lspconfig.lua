@@ -3,15 +3,25 @@ local configs = require "nvchad.configs.lspconfig"
 local on_attach = configs.on_attach
 local on_init = configs.on_init
 local capabilities = configs.capabilities
-
 ---@diagnostic disable-next-line: different-requires
 local lspconfig = require "lspconfig"
 local util = require "lspconfig.util"
 
 require "configs.diagnostics"
 
--- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "marksman", "nxls", "ocamllsp", "sqlls", "sourcekit", "bufls" }
+local servers = {
+  "html",
+  "cssls",
+  "marksman",
+  "nxls",
+  "ocamllsp",
+  "sqlls",
+  "sourcekit",
+  "bufls",
+  "dockerls",
+  -- "biome",
+  "bashls",
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -23,7 +33,11 @@ end
 
 lspconfig.angularls.setup {
   on_init = on_init,
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    -- This conflicts with the tsserver lsp
+    client.server_capabilities.renameProvider = false
+    on_attach(client, bufnr)
+  end,
   capabilities = capabilities,
   root_dir = util.root_pattern("angular.json", "nx.json", "project.json", "nativescript.config.ts"),
 }
@@ -55,9 +69,7 @@ lspconfig.jsonls.setup {
     documentFormatting = false,
     json = {
       schemas = require("schemastore").json.schemas(),
-      validate = {
-        enable = true,
-      },
+      validate = { enable = true },
     },
   },
 }
@@ -65,35 +77,43 @@ lspconfig.jsonls.setup {
 lspconfig.eslint.setup {
   on_init = on_init,
   capabilities = capabilities,
-  on_attach = function(client, bufnr)
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      buffer = bufnr,
-      command = "EslintFixAll",
-    })
-    on_attach(client, bufnr)
-  end,
+  on_attach = on_attach,
+  root_dir = util.root_pattern ".git",
 }
 
-lspconfig.lua_ls.setup {
-  on_init = on_init,
-  on_attach = on_attach,
-  capabilities = capabilities,
+lspconfig.typos_lsp.setup {
+  on_init,
+  on_attach,
+  capabilities,
+  init_options = {
+    diagnosticSeverity = "Hint",
+  },
+}
 
+require("typescript-tools").setup {
+  on_init = function(client, bufnr)
+    on_init(client, bufnr)
+    vim.schedule(function()
+      vim.cmd.NxInit()
+    end)
+  end,
+  capabilities = capabilities,
+  on_attach = on_attach,
+  root_dir = util.root_pattern ".git",
   settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" },
-      },
-      workspace = {
-        library = {
-          [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-          [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
-          [vim.fn.stdpath "data" .. "/lazy/ui/nvchad_types"] = true,
-          [vim.fn.stdpath "data" .. "/lazy/lazy.nvim/lua/lazy"] = true,
-        },
-        maxPreload = 100000,
-        preloadFileSize = 10000,
-      },
+    complete_function_calls = false,
+    tsserver_file_preferences = {
+      includeinlayparameternamehints = "all",
+      includecompletionsformoduleexports = true,
+      quotepreference = "auto",
+    },
+    tsserver_format_options = {
+      allowincompletecompletions = false,
+      allowrenameofimportpath = false,
+    },
+    tsserver_plugins = {
+      "@monodon/typescript-nx-imports-plugin",
     },
   },
+  filetypes = { "angular", "typescript", "typescriptreact", "javascript", "javascriptreact" },
 }

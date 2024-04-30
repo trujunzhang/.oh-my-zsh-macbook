@@ -1,3 +1,4 @@
+
 local function load_config(package)
     return function()
         require('plugins.' .. package)
@@ -92,6 +93,31 @@ local plugins_UI = {
 }
 local plugins_Language = {
     -- Language
+    -- {
+    --     'mfussenegger/nvim-dap',
+    --     dependencies = {
+    --         'rcarriga/nvim-dap-ui',
+    --         'David-Kunz/jester',
+    --         'mxsdev/nvim-dap-vscode-js',
+    --         {
+    --             'microsoft/vscode-js-debug',
+    --             version = '1.x',
+    --             build = 'npm i && npm run compile vsDebugServerBundle && mv dist out',
+    --         },
+    --     },
+    --     config = load_config('lang.dap'),
+    --     cmd = { 'DapUIToggle', 'DapToggleRepl', 'DapToggleBreakpoint' },
+    -- },
+    -- {
+    --     'nvim-neotest/neotest',
+    --     dependencies = {
+    --         'nvim-neotest/nvim-nio',
+    --         'olimorris/neotest-rspec',
+    --         'haydenmeade/neotest-jest',
+    --     },
+    --     config = load_config('lang.neotest'),
+    --     cmd = 'Neotest',
+    -- },
     {
         'michaelb/sniprun',
         build = 'bash ./install.sh',
@@ -165,6 +191,11 @@ local plugins_LSP = {
         config = load_config('lang.lspsaga'),
         event = 'LspAttach',
     },
+    -- {
+    --     'Maan2003/lsp_lines.nvim',
+    --     config = load_config('lang.lsp-lines'),
+    --     event = 'LspAttach',
+    -- },
     {
         'williamboman/mason.nvim',
         config = load_config('lang.mason'),
@@ -322,11 +353,24 @@ local plugins_Tools = {
         end,
         cmd = 'Hardtime',
     },
+    -- {
+    --     'chrisgrieser/nvim-spider',
+    --     config = load_config('tools.spider'),
+    --     event = { 'BufReadPre', 'BufNewFile' },
+    -- },
     {
         'folke/which-key.nvim',
         config = load_config('tools.which-key'),
         event = 'VeryLazy',
     },
+    -- {
+    --     'iamcco/markdown-preview.nvim',
+    --     build = function()
+    --         vim.fn['mkdp#util#install']()
+    --     end,
+    --     ft = 'markdown',
+    --     cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview' },
+    -- },
     {
         'uga-rosa/ccc.nvim',
         config = load_config('tools.ccc'),
@@ -427,6 +471,16 @@ local plugins_javascript = {
 }
 local plugins_djzhang = {
     --  djzhang's plugins
+    -- {
+    --     'rmagatti/auto-session',
+    --     config = function()
+    --         vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
+    --         require('auto-session').setup({
+    --             log_level = 'error',
+    --             auto_session_suppress_dirs = { '~/', '~/Projects', '~/Downloads', '/' },
+    --         })
+    --     end,
+    -- },
     {
         'okuuva/auto-save.nvim',
         cmd = 'ASToggle', -- optional for lazy loading on command
@@ -436,6 +490,67 @@ local plugins_djzhang = {
             -- or just leave it empty :)
         },
     },
+    -- {
+    --     'stevearc/conform.nvim',
+    --     enabled = false,
+    --     -- event = { 'BufWritePre' },
+    --     cmd = { 'ConformInfo' },
+    --     config = function()
+    --         require('conform').setup({
+    --             format_on_save = {
+    --                 -- These options will be passed to conform.format()
+    --                 timeout_ms = 1000,
+    --                 lsp_fallback = true,
+    --             },
+    --         })
+    --     end,
+    --     opts = {
+    --         formatters_by_ft = {
+    --             lua = { 'stylua' },
+    --             rust = { 'rustfmt' },
+    --             terraform = { 'terraform_fmt' },
+    --             javascript = { { 'prettierd', 'prettier' } },
+    --             typescript = { { 'prettierd', 'prettier' } },
+    --             json = { 'prettierd' },
+    --             html = { { 'prettierd', 'prettier' } },
+    --             scss = { { 'prettierd', 'prettier' } },
+    --             css = { { 'prettierd', 'prettier' } },
+    --             markdown = { 'markdownlint' },
+    --             ocaml = { 'ocamlformat' },
+    --             sql = { 'pg_format' },
+    --             swift = { 'swift_format' },
+    --             proto = { 'buf' },
+    --             yaml = { { 'prettierd', 'prettier' } },
+    --         },
+
+    --         format_on_save = function(bufnr)
+    --             -- Disable with a global or buffer-local variable
+    --             if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+    --                 return
+    --             end
+
+    --             if slow_format_filetypes[vim.bo[bufnr].filetype] then
+    --                 return
+    --             end
+
+    --             local function on_format(err)
+    --                 if err and err:match('timeout$') then
+    --                     slow_format_filetypes[vim.bo[bufnr].filetype] = true
+    --                 end
+    --             end
+
+    --             return { timeout_ms = 500, lsp_fallback = true }, on_format
+    --         end,
+
+    --         format_after_save = function(bufnr)
+    --             if not slow_format_filetypes[vim.bo[bufnr].filetype] then
+    --                 return
+    --             end
+
+    --             return { lsp_fallback = true }
+    --         end,
+    --     },
+    -- },
 }
 
 local merged_table = merge_table(plugins_UI, plugins_Language)

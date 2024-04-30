@@ -1,7 +1,7 @@
 ---@type NvPluginSpec
 return {
   "nvim-focus/focus.nvim",
-  event = "BufEnter",
+  event = "VeryLazy",
   config = function()
     require("focus").setup {
       ui = {
@@ -10,19 +10,21 @@ return {
       },
     }
 
-    local ignore_filetypes = { "neo-tree", "NvimTree", "Outline" }
+    local ignore_filetypes = { "neo-tree", "NvimTree", "Outline", "qf", "Trouble", "DiffviewFiles" }
     local ignore_buftypes = { "nofile", "prompt", "popup" }
 
     local augroup = vim.api.nvim_create_augroup("FocusDisable", {
       clear = true,
     })
 
-    vim.api.nvim_create_autocmd("WinEnter", {
+    vim.api.nvim_create_autocmd({ "WinEnter", "WinNew" }, {
       group = augroup,
       callback = function(_)
-        if vim.tbl_contains(ignore_buftypes, vim.bo.buftype) then
-          vim.b.focus_disable = true
-        end
+        vim.schedule(function()
+          if vim.tbl_contains(ignore_buftypes, vim.bo.buftype) then
+            vim.b.focus_disable = true
+          end
+        end)
       end,
       desc = "Disable focus autoresize for BufType",
     })

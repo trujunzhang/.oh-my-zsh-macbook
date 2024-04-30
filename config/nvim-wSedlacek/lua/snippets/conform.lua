@@ -11,8 +11,8 @@ end, {
   bang = true,
 })
 vim.api.nvim_create_user_command("FormatEnable", function()
-  vim.b.disable_autoformat = false
-  vim.g.disable_autoformat = false
+  vim.b.disable_autoformat = true
+  vim.g.disable_autoformat = true
 end, {
   desc = "Re-enable autoformat-on-save",
 })
@@ -29,7 +29,9 @@ return {
       terraform = { "terraform_fmt" },
       javascript = { { "prettierd", "prettier" } },
       typescript = { { "prettierd", "prettier" } },
-      json = { "prettierd" },
+      json = { { "prettierd", "prettier" } },
+      jsonc = { { "prettierd", "prettier" } },
+
       html = { { "prettierd", "prettier" } },
       scss = { { "prettierd", "prettier" } },
       css = { { "prettierd", "prettier" } },
@@ -47,17 +49,7 @@ return {
         return
       end
 
-      if slow_format_filetypes[vim.bo[bufnr].filetype] then
-        return
-      end
-
-      local function on_format(err)
-        if err and err:match "timeout$" then
-          slow_format_filetypes[vim.bo[bufnr].filetype] = true
-        end
-      end
-
-      return { timeout_ms = 500, lsp_fallback = true }, on_format
+      return { timeout_ms = 500 }
     end,
 
     format_after_save = function(bufnr)

@@ -11,13 +11,12 @@ M.ui = {
 
   hl_override = highlights.override,
   hl_add = highlights.add,
-  lsp_semantic_tokens = true,
+
   lsp = {
-    signature = {
-      disabled = true,
-      silent = true,
-    },
+    semantic_tokens = false,
+    signature = true,
   },
+
   nvdash = {
     load_on_startup = true,
     header = fortune.get_fortune(48),
@@ -31,6 +30,7 @@ M.ui = {
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
   },
+
   integrations = {
     "blankline",
     "notify",
@@ -39,12 +39,9 @@ M.ui = {
     "mason",
     "codeactionmenu",
   },
-  telescope = {
-    style = "borderless",
-  },
-  cheatsheet = {
-    theme = "grid",
-  },
+
+  telescope = { style = "borderless" },
+  cheatsheet = { theme = "grid" },
   cmp = {
     style = "atom_colored",
     icons = true,
@@ -52,16 +49,42 @@ M.ui = {
     selected_item_bg = "simple",
   },
   tabufline = {
-    order = { "treeOffset", "buffers", "tabs" },
+    order = { "treeOffset", "buffers", "harpoon", "tabs" },
+    modules = {
+      harpoon = function()
+        local Harpoonline = require("harpoonline").setup {
+          icon = "",
+        }
+
+        local success, line = pcall(Harpoonline.format)
+        if not success then
+          return ""
+        end
+
+        return "%#TbFill#" .. line .. " "
+      end,
+    },
   },
 
   statusline = {
-    order = { "mode", "file", "git", "%=", "noice", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor" },
+    theme = "minimal",
+    separator_style = "round",
+    order = {
+      "mode",
+      "git",
+      "%=",
+      "lsp_msg",
+      "noice",
+      "%=",
+      "diagnostics",
+      "cwd",
+      "cursor",
+    },
     modules = {
       noice = function()
         local status = require("noice").api.status.mode.get()
         if status then
-          return "%##" .. status
+          return "%#NoiceVirtualText#" .. status
         end
 
         return "%##"

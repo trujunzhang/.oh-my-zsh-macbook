@@ -1,7 +1,5 @@
 require "nvchad.mappings"
 
--- add yours here
-
 local map = vim.keymap.set
 
 if vim.g.neovide then
@@ -61,12 +59,15 @@ end, {
 map("n", "J", "mzJ`z", {
   desc = "Remove line break",
 })
-map("n", "<C-d>", "<C-d>zz", {
-  desc = "Jump half page down",
+
+-- Resenters screen after jumping (Note scrol down add 1 line to correct for navic)
+map("n", "<C-d>", "<C-d>zz<C-y>", {
+  desc = "Jump Half page down",
 })
 map("n", "<C-u>", "<C-u>zz", {
-  desc = "Jump half page up",
+  desc = "Jump Half page up",
 })
+
 map("n", "n", "nzzzv", {
   desc = "Find next",
 })
@@ -103,7 +104,7 @@ end, {
 map("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
   desc = "Replace section",
 })
-map("n", "<leader>Q", "<cmd>xa<cr>", {
+map("n", "<leader>q", "<cmd>xa<cr>", {
   desc = "Save All and Quit",
 })
 map("n", "<C-w>f", "<cmd>FocusToggle<cr>", {
@@ -265,58 +266,50 @@ map("n", "<leader>sQ", "<cmd>lua require('persistence').stop()<cr>", {
 
 -- lspconfig
 
-map("n", "<leader>ld", "<cmd>TroubleToggle<cr>", {
-  desc = "Diagnostics",
+map("n", "<leader>lf", "<cmd>EslintFixAll<cr>", {
+  desc = "LSP Fix all",
+})
+map("n", "<leader>ld", "<cmd>TroubleToggle document_diagnostics<cr>", {
+  desc = "LSP Diagnostics",
 })
 map("n", "<leader>lt", "<CMD>TodoTrouble keywords=TODO,FIX,FIXME,BUG,TEST,NOTE<CR>", {
-  desc = "Todo/Fix/Fixme",
+  desc = "LSP Todo/Fix/Fixme",
 })
-map("n", "<leader>lD", function()
-  require("lsp_lines").toggle()
+map("n", "<leader>lR", function()
+  vim.diagnostic.reset()
+  vim.cmd [[LspRestart]]
 end, {
-  desc = "Toggle inline diagnostics",
-})
-map("n", "<leader>lR", "<cmd>LspRestart<cr>", {
-  desc = "Restart Language Server",
+  desc = "LSP Restart Language Server",
 })
 map("n", "<leader>ca", function()
   require("actions-preview").code_actions()
 end, {
-  desc = "LSP code action",
+  desc = "LSP Code action",
 })
 map("v", "<leader>ca", function()
   require("actions-preview").code_actions()
 end, {
-  desc = "LSP code action",
+  desc = "LSP Code action",
 })
 
 -- Telescope
 
-map("n", "<leader>fW", "<cmd>lua require('telescope.builtin').grep_string({ search = vim.fn.expand('<cword>') })<cr>", {
-  desc = "Find word under cursor",
-})
-map("n", "<leader>fp", "<cmd>Telescope projects<cr>", {
-  desc = "Find projects",
-})
-map("n", "<leader><leader>", function()
-  require("telescope").extensions.smart_open.smart_open {
-    cwd_only = true,
-    filename_first = false,
-  }
+map("n", "<leader>fW", function()
+  require("telescope.builtin").grep_string { search = vim.fn.expand "<cword>" }
 end, {
-  desc = "Smart open",
+  desc = "Telescope Find word under cursor",
 })
 map("n", "<leader>fs", "<cmd>Telescope ast_grep<cr>", {
-  desc = "Find AST",
+  desc = "Telescope Find AST",
 })
 map("n", "<leader>fi", "<cmd>Telescope import<cr>", {
-  desc = "Find import",
+  desc = "Telescope Find import",
 })
 map("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", {
-  desc = "Find keymaps",
+  desc = "Telescope Find keymaps",
 })
 map("n", "\\", "<cmd>Telescope resume<cr>", {
-  desc = "Resume last search",
+  desc = "Telescope Resume last search",
 })
 
 -- Search
@@ -387,22 +380,8 @@ map("n", "<leader>cj", "<cmd>lua require('treesj').toggle()<cr>", {
   desc = "Open block",
 })
 
--- obsidian
-map("n", "<leader>oo", "<cmd>ObsidianQuickSwitch<cr>", {
-  desc = "Open Obsididan",
-})
-map("n", "<leader>os", "<cmd>ObsidianSearch<cr>", {
-  desc = "Search Obsisdian",
-})
-map("n", "<leader>ot", "<cmd>ObsidianToday<cr>", {
-  desc = "Open Today",
-})
-map("n", "<leader>oy", "<cmd>ObsidianYesterday<cr>", {
-  desc = "Open Yesterday",
-})
-
 -- Quickfix
-map("n", "<leader>Q", function()
+map("n", "Q", function()
   local trouble = require "trouble"
   if trouble.is_open() then
     trouble.close()
@@ -433,15 +412,15 @@ end, {
 })
 
 -- Compile
--- map("n", "<D-b>", "<cmd>CompilerOpen<cr>", {
-  -- desc = "Open compiler",
--- })
--- map("n", "<D-B>", "<cmd>CompilerStop<cr><cmd>CompilerRedo<cr>", {
---   desc = "Stop and redo",
--- })
--- map("n", "<D-r>", "<cmd>CompilerToggleResults<cr>", {
---   desc = "Toggle results",
--- })
+map("n", "<D-b>", "<cmd>CompilerOpen<cr>", {
+  desc = "Open compiler",
+})
+map("n", "<D-B>", "<cmd>CompilerStop<cr><cmd>CompilerRedo<cr>", {
+  desc = "Stop and redo",
+})
+map("n", "<D-r>", "<cmd>CompilerToggleResults<cr>", {
+  desc = "Toggle results",
+})
 
 -- Terminal
 
@@ -470,7 +449,7 @@ end, { desc = "Terminal New vertical window" })
 map({ "n", "t" }, "<A-v>", function()
   require("nvchad.term").toggle { pos = "vsp", id = "vtoggleTerm", size = 1 }
 
-  -- Trigger siwtch back and forth to automatically resize
+  -- Trigger switch back and forth to automatically resize
   -- nvim-focus/focus.nvim
   vim.cmd [[wincmd h]]
   vim.cmd [[wincmd l]]
@@ -479,45 +458,23 @@ end, { desc = "Terminal Toggleable vertical term" })
 map({ "n", "t" }, "<A-h>", function()
   require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm", size = 1 }
 
-  -- Trigger siwtch back and forth to automatically resize
+  -- Trigger switch back and forth to automatically resize
   -- nvim-focus/focus.nvim
   vim.cmd [[wincmd k]]
   vim.cmd [[wincmd j]]
 end, { desc = "Terminal New horizontal term" })
+
+-- Snippets
+map("n", "<leader>se", function()
+  require("scissors").editSnippet()
+end, { desc = "Edit snippet" })
+
+map({ "n", "x" }, "<leader>sa", function()
+  require("scissors").addNewSnippet()
+end, { desc = "Add new snippet" })
 
 -- Remove default keymaps
 local unmap = vim.keymap.del
 
 unmap("n", "<leader>rn")
 unmap("t", "<Esc>")
-
--- Comment
-map("n", 
-  -- "<leader>/", 
-  "<D-/>", 
-  function()
-  require("Comment.api").toggle.linewise.current()
-end, { desc = "Comment Toggle" })
-
--- djzhang's shortcut
-map("n", "<leader>qq", "<<CMD>qa!<CR>", {
-  desc = "󰗼 Exit",
-})
-
-map('n', 
-  "<D-b>", 
-  '<cmd>lua require"telescope.builtin".lsp_definitions()<CR>', {
-  desc = 
-      "󰑊 Go to definition",
-  noremap=true, silent=true})
-
-map("n", 
-  '<LEADER>jd', 
-      function()
-        vim.lsp.buf.definition()
-      end,
-{
-  desc = 
-      "󰑊 Go to definition",
-}
-)

@@ -2,19 +2,12 @@
 return {
   "nvim-tree/nvim-tree.lua",
   opts = {
-    git = { enable = true },
+    git = { enable = false },
 
-    view = {
-      -- side = "right",
-      width = 30,
-    },
     renderer = {
       highlight_git = true,
-      icons = { show = { git = true } },
+      icons = { show = { git = false } },
     },
-  },
-  dependencies = {
-    "antosha417/nvim-lsp-file-operations",
-    'nvim-tree/nvim-web-devicons',
+    filters = { dotfiles = true },
   },
 }

@@ -26,7 +26,7 @@ if vim.g.neovide then
 
   vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_underline_automatic_scaling = true
-  vim.g.neovide_confirm_quit = true
+  vim.g.neovide_confirm_quit = false
   vim.g.neovide_profiler = false
   vim.g.neovide_cursor_vfx_mode = ""
 
@@ -34,17 +34,28 @@ if vim.g.neovide then
 
   if currect_directory == "/" then
     local path_to_desktop = "~/Code"
-
-    local vim_enter_group = vim.api.nvim_create_augroup("vim_enter_group", { clear = true })
-
-    vim.api.nvim_create_autocmd(
-      { "VimEnter" },
-      { pattern = "*", command = "cd " .. path_to_desktop, group = vim_enter_group }
-    )
+    vim.cmd("cd " .. path_to_desktop)
   end
 
   -- See https://github.com/neovide/neovide/issues/2330
   vim.schedule(function()
     vim.cmd "NeovideFocus"
   end)
+
+  -- https://github.com/neovide/neovide/issues/1771
+  vim.api.nvim_create_autocmd({ "BufLeave", "BufNew" }, {
+    callback = function()
+      vim.g.neovide_scroll_animation_length = 0
+      vim.g.neovide_cursor_animation_length = 0
+    end,
+  })
+
+  vim.api.nvim_create_autocmd({ "BufEnter", "BufNew" }, {
+    callback = function()
+      vim.fn.timer_start(32, function()
+        vim.g.neovide_scroll_animation_length = 0.3
+        vim.g.neovide_cursor_animation_length = 0.08
+      end)
+    end,
+  })
 end
