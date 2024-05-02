@@ -170,12 +170,12 @@ local plugins_LSP = {
         config = load_config('lang.mason'),
         cmd = 'Mason',
     },
-    {
-        'nvimtools/none-ls.nvim',
-        dependencies = { 'neovim/nvim-lspconfig', 'jay-babu/mason-null-ls.nvim' },
-        config = load_config('lang.null-ls'),
-        event = { 'BufReadPre', 'BufNewFile' },
-    },
+    -- {
+    --     'nvimtools/none-ls.nvim',
+    --     dependencies = { 'neovim/nvim-lspconfig', 'jay-babu/mason-null-ls.nvim' },
+    --     config = load_config('lang.null-ls'),
+    --     event = { 'BufReadPre', 'BufNewFile' },
+    -- },
 }
 
 local plugins_Completion = {
@@ -226,6 +226,11 @@ local plugins_Completion = {
 local plugins_Tools = {
     -- Tools
     {
+        'max397574/better-escape.nvim',
+        event = 'InsertEnter',
+        opts = {},
+    },
+    {
         'mg979/vim-visual-multi',
         config = load_config('tools.vim-visual-multi'),
         event = { 'BufReadPre', 'BufNewFile' },
@@ -250,7 +255,7 @@ local plugins_Tools = {
         },
     },
     {
-        'windwp/nvim-spectre',
+        'nvim-pack/nvim-spectre',
         config = load_config('tools.spectre'),
         cmd = 'Spectre',
     },
@@ -438,7 +443,14 @@ local plugins_djzhang = {
     },
 }
 
-local merged_table = merge_table(plugins_UI, plugins_Language)
+local Plugins_lazy = {
+    { 'LazyVim/LazyVim', import = 'lazyvim.plugins' },
+}
+
+local merged_table = {}
+merged_table = merge_table(merged_table, Plugins_lazy)
+merged_table = merge_table(merged_table, plugins_UI)
+merged_table = merge_table(merged_table, plugins_Language)
 merged_table = merge_table(merged_table, plugins_Mini)
 merged_table = merge_table(merged_table, plugins_Treesitter)
 merged_table = merge_table(merged_table, plugins_LSP)
