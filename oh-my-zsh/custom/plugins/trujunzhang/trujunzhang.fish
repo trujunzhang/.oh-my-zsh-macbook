@@ -1,42 +1,42 @@
 # Aliases in alphabetical order
 
-alias ma='meteor add'                  # Add a package to this project.
-alias map='meteor add-platform'        # Add a platform to this project.
-alias mad='meteor admin'               # Administrative commands.
-alias mau='meteor authorized'          # View or change authorized users and organizations for a site.
-alias mb='meteor build'                # Build this project for all platforms.
-alias mcl='meteor claim'               # Claim a site deployed with an old Meteor version.
-alias mca='meteor configure-android'   # Run the Android configuration tool from Meteor's ADK environment.
-alias mc='meteor create'               # Create a new project.
-alias mdb='meteor debug'               # Run the project, but suspend the server process for debugging.
-alias mde='meteor deploy'              # Deploy this project to Meteor.
-alias mis='meteor install-sdk'         # Installs SDKs for a platform.
-alias ml='meteor list'                 # List the packages explicitly used by your project.
-alias mlp='meteor list-platforms'      # List the platforms added to your project.
-alias mls='meteor list-sites'          # List sites for which you are authorized.
-alias mli='meteor login'               # Log in to your Meteor developer account.
-alias mlo='meteor logout'              # Log out of your Meteor developer account.
-alias mlog='meteor logs'               # Show logs for specified site.
-alias mm='meteor mongo'                # Connect to the Mongo database for the specified site.
-alias mp='meteor publish'              # Publish a new version of a package to the package server.
-alias mpa='meteor publish-for-arch'    # Builds an already-published package for a new platform.
-alias mpr='meteor publish-release'     # Publish a new meteor release to the package server.
-alias mr='meteor remove'               # Remove a package from this project.
-alias mrp='meteor remove-platform'     # Remove a platform from this project.
-alias mre='meteor reset'               # Reset the project state. Erases the local database.
-alias m='meteor run'                   # [default] Run this project in local development mode.
-alias ms='meteor search'               # Search through the package server database.
-alias msh='meteor shell'               # Launch a Node REPL for interactively evaluating server-side code.
-alias msw='meteor show'                # Show detailed information about a release or package.
-alias mt='meteor test-packages'        # Test one or more packages.
-alias mu='meteor update'               # Upgrade this project's dependencies to their latest versions.
-alias mw='meteor whoami'               # Prints the username of your Meteor developer account.
-alias mnp='meteor npm install --verbose'         # Run npm install after creating a new meteor project.
+alias ma='meteor add' # Add a package to this project.
+alias map='meteor add-platform' # Add a platform to this project.
+alias mad='meteor admin' # Administrative commands.
+alias mau='meteor authorized' # View or change authorized users and organizations for a site.
+alias mb='meteor build' # Build this project for all platforms.
+alias mcl='meteor claim' # Claim a site deployed with an old Meteor version.
+alias mca='meteor configure-android' # Run the Android configuration tool from Meteor's ADK environment.
+alias mc='meteor create' # Create a new project.
+alias mdb='meteor debug' # Run the project, but suspend the server process for debugging.
+alias mde='meteor deploy' # Deploy this project to Meteor.
+alias mis='meteor install-sdk' # Installs SDKs for a platform.
+alias ml='meteor list' # List the packages explicitly used by your project.
+alias mlp='meteor list-platforms' # List the platforms added to your project.
+alias mls='meteor list-sites' # List sites for which you are authorized.
+alias mli='meteor login' # Log in to your Meteor developer account.
+alias mlo='meteor logout' # Log out of your Meteor developer account.
+alias mlog='meteor logs' # Show logs for specified site.
+alias mm='meteor mongo' # Connect to the Mongo database for the specified site.
+alias mp='meteor publish' # Publish a new version of a package to the package server.
+alias mpa='meteor publish-for-arch' # Builds an already-published package for a new platform.
+alias mpr='meteor publish-release' # Publish a new meteor release to the package server.
+alias mr='meteor remove' # Remove a package from this project.
+alias mrp='meteor remove-platform' # Remove a platform from this project.
+alias mre='meteor reset' # Reset the project state. Erases the local database.
+alias m='meteor run' # [default] Run this project in local development mode.
+alias ms='meteor search' # Search through the package server database.
+alias msh='meteor shell' # Launch a Node REPL for interactively evaluating server-side code.
+alias msw='meteor show' # Show detailed information about a release or package.
+alias mt='meteor test-packages' # Test one or more packages.
+alias mu='meteor update' # Upgrade this project's dependencies to their latest versions.
+alias mw='meteor whoami' # Prints the username of your Meteor developer account.
+alias mnp='meteor npm install --verbose' # Run npm install after creating a new meteor project.
 
-alias mios='meteor run ios'         # Run npm install after creating a new meteor project.
-alias mandroid='meteor run android'         # Run npm install after creating a new meteor project.
+alias mios='meteor run ios' # Run npm install after creating a new meteor project.
+alias mandroid='meteor run android' # Run npm install after creating a new meteor project.
 
-alias mtest='meteor test --full-app --driver-package practicalmeteor:mocha --port 3100 --settings settings.json'  # This will execute all your *.app-test[s].* and *.app-spec[s].* files.
+alias mtest='meteor test --full-app --driver-package practicalmeteor:mocha --port 3100 --settings settings.json' # This will execute all your *.app-test[s].* and *.app-spec[s].* files.
 
 alias mm='npm run test-with-meteor-mocha'
 alias mps='npm run run-with-settings'
@@ -45,10 +45,10 @@ alias mpsmg='npm run run-with-settings-and-mongo'
 # alias mps='meteor debug --settings settings.json' # Run meteor for the politicl project with settings paras.
 alias mpps='meteor debug --production --settings settings.json' # Run meteor for the politicl project with settings paras.
 
-alias npmt='npm test'   # Run the test script from package.json.
+alias npmt='npm test' # Run the test script from package.json.
 alias npmtp="npm run test:puppeteer"
 
-alias psrun='php bin/console server:run'   # Run the test script from package.json.
+alias psrun='php bin/console server:run' # Run the test script from package.json.
 
 alias pslrun='php -S localhost:8080 -t web web/index.php'
 
@@ -463,10 +463,10 @@ alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/ID
 
 # supabase
 function supabase_gen
-     set project-id $argv[1]
-     set dest_fold "plugins/app-supabase/types"
-     mkdir -p "$dest_fold"
-     supabase gen types typescript --project-id "$project-id" --schema public > "$dest_fold/supabase.ts"
+    set project-id $argv[1]
+    set dest_fold plugins/app-supabase/types
+    mkdir -p "$dest_fold"
+    supabase gen types typescript --project-id "$project-id" --schema public >"$dest_fold/supabase.ts"
 end
 
 # cocoapods
@@ -572,19 +572,19 @@ alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 # homebrew
 # brew services start d12frosted/emacs-plus/emacs-plus@30
 function binstall-emacs
-   if not test -d  "$HOMEBREW_HOME/opt/emacs-plus@30"
-         brew tap d12frosted/emacs-plus
-         brew install emacs-plus@30 --with-spacemacs-icon --with-native-comp
-         brew link emacs-plus@30
-   end
-   if not test -d  "/Applications/Emacs.app"
-      ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications
-   end
- end
+    if not test -d "$HOMEBREW_HOME/opt/emacs-plus@30"
+        brew tap d12frosted/emacs-plus
+        brew install emacs-plus@30 --with-spacemacs-icon --with-native-comp
+        brew link emacs-plus@30
+    end
+    if not test -d "/Applications/Emacs.app"
+        ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications
+    end
+end
 
 function binstall-nerd-font
-  brew tap homebrew/cask-fonts
-  brew install font-hack-nerd-font
+    brew tap homebrew/cask-fonts
+    brew install font-hack-nerd-font
 end
 
 function killvim
@@ -620,13 +620,16 @@ alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-f
 alias wclean_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
 alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"
 alias wclean_nvimCache="rm -rf $HOME/.cache/nvim && rm -rf $HOME/.local/state/nvim && rm -rf $HOME/.local/share/nvim"
+alias wclean_nvim-wSedlacekCache="rm -rf $HOME/.cache/nvim-wSedlacek && rm -rf $HOME/.local/state/nvim-wSedlacek && rm -rf $HOME/.local/share/nvim-wSedlacek"
+alias wclean_nvim-2kabhishekCache="rm -rf $HOME/.cache/nvim-2kabhishek && rm -rf $HOME/.local/state/nvim-2kabhishek && rm -rf $HOME/.local/share/nvim-2kabhishek"
+alias wclean_all_nvim_cache="wclean_nvimCache && wclean_nvim-wSedlacekCache && wclean_nvim-2kabhishekCache"
 
 # crossover
 function linkCrossOverBottle
     set bottle $argv[1]
     echo $bottle
     # ln -s "/Volumes/MacGame/CrossOver/Bottles/$bottle" "$HOME/Library/Application Support/CrossOver/Bottles/$bottle"
-    ln -s "/Volumes/MacGame/crossover" "$HOME/Library/Application Support/CrossOver/Bottles"
+    ln -s /Volumes/MacGame/crossover "$HOME/Library/Application Support/CrossOver/Bottles"
 end
 
 # djzhang's git
@@ -634,7 +637,7 @@ function dgitreset
     set currentGitPath "$PWD/.git"
     echo "<.git> Path: $currentGitPath"
     if [ -d $currentGitPath ]
-      echo "already have git repository"
+        echo "already have git repository"
     else
         git init && git add . && git commit -m 'first commit' && git checkout -b tmp
     end
@@ -656,7 +659,3 @@ alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
 alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
 alias v='NVIM_APPNAME=nvim-wSedlacek nvim' # NvChad
 alias n='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
-
-
-
-

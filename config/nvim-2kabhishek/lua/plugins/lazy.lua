@@ -28,6 +28,7 @@ lazy.setup({
     dev = { path = '~/Projects/GitHub/', patterns = {}, fallback = false },
     -- install = { missing = true, colorscheme = { 'tokyonight', 'habamax' } },
     install = { missing = true, colorscheme = { 'rose-pine-dawn' } },
+    -- install = { missing = true },
 
     git = {
         log = { '--since=3 days ago' },
