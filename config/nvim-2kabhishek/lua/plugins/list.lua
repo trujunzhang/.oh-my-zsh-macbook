@@ -360,6 +360,70 @@ local plugins_Tools = {
     cmd = 'DBToggle',
     enabled = false,
   },
+  {
+    "kevinhwang91/nvim-ufo",
+    event = "VeryLazy",
+    dependencies = { "kevinhwang91/promise-async" },
+    opts = {
+      provider_selector = function(bufnr, filetype, buftype)
+        return { "lsp", "indent" }
+        -- return {'treesitter', 'indent'}
+      end,
+      preview = {
+        win_config = {
+          winblend = 0,
+          maxheight = 99,
+        },
+        mappings = {
+          scrollU = "<C-b>",
+          scrollD = "<C-f>",
+          jumpTop = "[",
+          jumpBot = "]",
+        },
+      },
+      -- adding folded line number instead of "..."
+      fold_virt_text_handler = function(virtText, lnum, endLnum, width, truncate)
+        local newVirtText = {}
+        local suffix = (" 󰁂 %d "):format(endLnum - lnum)
+        local sufWidth = vim.fn.strdisplaywidth(suffix)
+        local targetWidth = width - sufWidth
+        local curWidth = 0
+        for _, chunk in ipairs(virtText) do
+          local chunkText = chunk[1]
+          local chunkWidth = vim.fn.strdisplaywidth(chunkText)
+          if targetWidth > curWidth + chunkWidth then
+            table.insert(newVirtText, chunk)
+          else
+            chunkText = truncate(chunkText, targetWidth - curWidth)
+            local hlGroup = chunk[2]
+            table.insert(newVirtText, { chunkText, hlGroup })
+            chunkWidth = vim.fn.strdisplaywidth(chunkText)
+            -- str width returned from truncate() may less than 2nd argument, need padding
+            if curWidth + chunkWidth < targetWidth then
+              suffix = suffix .. (" "):rep(targetWidth - curWidth - chunkWidth)
+            end
+            break
+          end
+          curWidth = curWidth + chunkWidth
+        end
+        table.insert(newVirtText, { suffix, "MoreMsg" })
+        return newVirtText
+      end,
+    },
+    config = function(_, opts)
+      -- require("ufo").setup(opts)
+      require('ufo').setup({
+        provider_selector = function(bufnr, filetype, buftype)
+          return { 'treesitter', 'indent' }
+        end
+      })
+      -- using ufo provider needs to remap `zR` and `zM`
+      vim.keymap.set("n", "zR", require("ufo").openAllFolds)
+      vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
+      vim.keymap.set("n", "zr", require("ufo").openFoldsExceptKinds)
+      vim.keymap.set("n", "zk", require("ufo").peekFoldedLinesUnderCursor)
+    end,
+  }
 }
 local plugins_Telescope = {
   -- Telescope
@@ -454,7 +518,9 @@ local Plugins_lazy = {
   -- { import = 'lazyvim.plugins.extras.lang.typescript' },
   -- disable trouble
   -- { 'folke/trouble.nvim', enabled = false },
-  { 'folke/tokyonight.nvim',                          enabled = false },
+  { 'folke/tokyonight.nvim',       enabled = false },
+  { "folke/persistence.nvim",      enabled = false },
+  { "nvim-neo-tree/neo-tree.nvim", enabled = false },
 }
 
 local merged_table = {}
