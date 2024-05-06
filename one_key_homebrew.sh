@@ -75,6 +75,7 @@ brew_apps=(
 
     ## tmux
     "opt/tmux"               "tmux"
+    "opt/zellij"             "zellij"
 
     ## autojump
     "opt/autojump"           "autojump"

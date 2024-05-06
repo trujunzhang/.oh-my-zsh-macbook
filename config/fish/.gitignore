@@ -1,4 +1,5 @@
 completions
 conf.d
+conf.d-bak
 functions
 fish_variables
