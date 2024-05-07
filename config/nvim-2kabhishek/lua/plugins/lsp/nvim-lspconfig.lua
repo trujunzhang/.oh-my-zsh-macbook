@@ -18,6 +18,10 @@ return {
       "b0o/schemastore.nvim",
     },
 
+    {
+       "WhoIsSethDaniel/mason-tool-installer.nvim"
+    },
+
     -- Additional lua configuration
     -- { "folke/neodev.nvim" },
   },

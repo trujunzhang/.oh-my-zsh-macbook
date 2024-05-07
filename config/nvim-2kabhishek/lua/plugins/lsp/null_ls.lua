@@ -1,6 +1,7 @@
 return {
   -- formatters and linters when LSP is not present
   "nvimtools/none-ls.nvim",
+  enabled=false,
   event = "VeryLazy",
   dependencies = { "WhoIsSethDaniel/mason-tool-installer.nvim" },
   config = function()
