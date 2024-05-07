@@ -15,6 +15,10 @@ require("lazy").setup({
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
     -- { import = "lazyvim.plugins.extras.lang.json" },
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    -- { "folke/tokyonight.nvim", enabled = false },
+    { "stevearc/conform.nvim'", enabled = false },
+    { "folke/persistence.nvim", enabled = false },
+    -- { "nvim-neo-tree/neo-tree.nvim", enabled = false },
     -- import/override with your plugins
     -- { import = "plugins" },
     { import = "plugins.ui" },
