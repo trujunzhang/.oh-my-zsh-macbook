@@ -2,10 +2,19 @@ local lspconfig = require('lspconfig')
 local cmp_lsp = require('cmp_nvim_lsp')
 local icons = require('lib.icons').diagnostics
 
+local lsp_servers = {
+    'clangd',
+    'bashls',
+    'jsonls',
+    'lua_ls',
+    'typos_lsp', -- check typos
+    'vimls',
+}
+
 local auto_install = require('lib.util').get_user_config('auto_install', true)
 local installed_servers = {}
 if auto_install then
-    installed_servers = require('plugins.list').lsp_servers
+    installed_servers = lsp_servers
 end
 
 local lsp_capabilities = cmp_lsp.default_capabilities()
@@ -71,7 +80,7 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
-lsp_capabilities.offsetEncoding = { "utf-16" }
+lsp_capabilities.offsetEncoding = { 'utf-16' }
 
 lspconfig['clangd'].setup({
     capabilities = lsp_capabilities,

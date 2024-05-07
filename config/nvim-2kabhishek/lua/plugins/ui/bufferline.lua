@@ -1,15 +1,8 @@
-vim.opt.termguicolors = true
-require('bufferline').setup({
-    options = {
-        mode = 'buffers',
-        numbers = 'ordinal',
-        offsets = {
-            {
-                filetype = 'NvimTree',
-                text = 'File Explorer',
-                highlight = 'Directory',
-                separator = true,
-            },
-        },
-    },
-})
+return {
+  "akinsho/bufferline.nvim",
+  config = function()
+    require("plugins.ui.config.bufferline-config")
+  end,
+  dependencies = "nvim-tree/nvim-web-devicons",
+  event = "BufAdd",
+}

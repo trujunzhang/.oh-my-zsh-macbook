@@ -83,7 +83,7 @@ end
 
 if set -q ZELLIJ
 else
-    zellij attach -c
+    zellij attach -c djzhang-mac
 end
 
 # if status is-interactive
