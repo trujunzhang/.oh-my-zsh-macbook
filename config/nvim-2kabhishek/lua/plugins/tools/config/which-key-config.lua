@@ -492,7 +492,12 @@ local no_leader_mappings = {
   ["<C-Right>"] = { "<cmd>vertical resize +10<cr>", "Increase window width" },
 
   ["<C-f>"] = { "<cmd>Telescope find_files<cr>", "Find Files" },
-  ["<C-g>"] = { "<cmd>Fterm lazygit<cr>", "Lazygit" },
+  -- ["<C-g>"] = { "<cmd>Fterm lazygit<cr>", "Lazygit" },
+  ["<C-g>"] = { 
+        function ()
+            LazyVim.terminal.open({ "gitui" }, { cwd = LazyVim.root.get(), esc_esc = false, ctrl_hjkl = false })
+        end, 
+        "Lazygit" },
 
   ["["] = {
     name = icons.ui.ArrowLeft .. "Previous",

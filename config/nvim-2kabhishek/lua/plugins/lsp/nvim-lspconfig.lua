@@ -25,6 +25,20 @@ return {
     -- Additional lua configuration
     -- { "folke/neodev.nvim" },
   },
+  opts = {
+    servers = { eslint = {} },
+    setup = {
+      eslint = function()
+        require("lazyvim.util").lsp.on_attach(function(client)
+          if client.name == "eslint" then
+            client.server_capabilities.documentFormattingProvider = true
+          elseif client.name == "tsserver" then
+            client.server_capabilities.documentFormattingProvider = false
+          end
+        end)
+      end,
+    },
+  },
   config = function()
     require("mason").setup({
       ui = {
@@ -37,19 +51,19 @@ return {
         -- "angularls",
         "cssls",
         "emmet_ls",
-        "awk_ls",
+        -- "awk_ls",
         "bashls",
         "cssmodules_ls",
         "dockerls",
         "eslint", -- instead of `tsserver` or `eslint_d` in `null_ls` for better linting and react-specific linting rules
         "html",
-        "lemminx",
+        -- "lemminx",
         "pyright",
         "pylsp",
         "sqlls",
         "jsonls",
         "yamlls",
-        "terraformls",
+        -- "terraformls",
       },
       automatic_installation = true,
     })
