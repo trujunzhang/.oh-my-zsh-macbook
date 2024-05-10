@@ -4,6 +4,8 @@ keybinds {
         unbind "Ctrl o"
         unbind "Ctrl h"
         unbind "Ctrl g"
+        unbind "Ctrl n"
+        unbind "Ctrl b"
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }

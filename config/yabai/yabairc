@@ -37,7 +37,7 @@ yabai -m rule --add app="^Terminal$" space=terminal manage=off
 #yabai -m rule --add app="^Simulator$" space=mobile
 yabai -m rule --add app="^Xcode$"     space=xcode
 yabai -m rule --add app="^Simulator$" space=terminal
-yabai -m rule --add app="^qemu-system-aarch64$"     space=terminal
+yabai -m rule --add app="^qemu-system-aarch64$"     space=terminal manage=off
 
 # Jetbrains apps
 apps="^(IntelliJ IDEA|WebStorm|RubyMine|PyCharm|DataGrip)$"
