@@ -67,7 +67,8 @@ alias ecssh="sudo ssh -i "/Applications/scruby-ubuntu-virginia.pem" ubuntu@ec2-1
 alias capd='cap production deploy --trace'
 
 # react-native.plugin
-
+#
+alias set_node_env_production='export NODE_ENV=production'
 alias rnstart='npx react-native start'
 alias rnand='npx react-native run-android'
 alias rnios='npx react-native run-ios'

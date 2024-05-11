@@ -18,15 +18,16 @@ brew_apps=(
     "Insomnia.app"            "insomnia"
     # https://fbflipper.com/
     "Flipper.app"             "flipper"
-    "Realm Studio.app"        "mongodb-realm-studio"
-    "Zed.app"                 "zed"
+    # "Realm Studio.app"        "mongodb-realm-studio"
+    # "Zed.app"                 "zed"
+    "Obsidian.app"            "obsidian"
 
     # System tools
     # "V2rayU.app"              "v2rayu"
     "Raycast.app"             "raycast"
     "SpaceLauncher.app"       "spacelauncher"
     "Notion.app"              "notion"
-    # "OneDrive.app"            "onedrive"
+    "OneDrive.app"            "onedrive"
     "Hammerspoon.app"         "hammerspoon"
     "Authy Desktop.app"       "authy"
     "BaiduNetdisk_mac.app"    "baidunetdisk"
