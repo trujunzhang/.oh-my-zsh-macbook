@@ -106,6 +106,9 @@ function link_config_fold {
   # zellij
   directoryLink  "config(zellij)"     "$TRUJUNZHANG_DOTFILES_HOME/config/zellij"        "$HOME/.config/zellij"
 
+  # alacritty
+  directoryLink  "config(alacritty)"     "$TRUJUNZHANG_DOTFILES_HOME/config/alacritty"        "$HOME/.config/alacritty"
+
   # nvim-snippet
   directoryLink  "nvim(snippets)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets"       "$HOME/.config/nvim-snippets"
 

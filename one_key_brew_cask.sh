@@ -21,6 +21,7 @@ brew_apps=(
     # "Realm Studio.app"        "mongodb-realm-studio"
     # "Zed.app"                 "zed"
     "Obsidian.app"            "obsidian"
+    "Alacritty.app"           "alacritty"
 
     # System tools
     # "V2rayU.app"              "v2rayu"
