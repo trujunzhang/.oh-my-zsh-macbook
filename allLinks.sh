@@ -109,6 +109,9 @@ function link_config_fold {
   # alacritty
   directoryLink  "config(alacritty)"     "$TRUJUNZHANG_DOTFILES_HOME/config/alacritty"        "$HOME/.config/alacritty"
 
+  # sketchybar 
+  directoryLink  "config(sketchybar)"     "$TRUJUNZHANG_DOTFILES_HOME/config/sketchybar"        "$HOME/.config/sketchybar"
+
   # nvim-snippet
   directoryLink  "nvim(snippets)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets"       "$HOME/.config/nvim-snippets"
 

@@ -18,11 +18,16 @@ source ./bash/tools.sh
 # fi
 HOMEBREW_HOME="$(brew --prefix)"
 
+brew tap FelixKratz/formulae
+
 brew_apps=(
     ## cocoapods(xcode)
     # "opt/cocoapods"             "cocoapods"
     ## supabase
     "opt/supabase"              "supabase/tap/supabase"
+
+    # brew services start sketchybar
+    "opt/sketchybar"            "sketchybar"
 
     ## v2ray
     # "opt/v2ray-core"            "v2ray-core"
@@ -74,7 +79,7 @@ brew_apps=(
     "opt/wget"               "wget"
 
     ## tmux
-    "opt/tmux"               "tmux"
+    # "opt/tmux"               "tmux"
     "opt/zellij"             "zellij"
 
     ## autojump
