@@ -20,3 +20,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[http]
+	version = HTTP/2
+	postBuffer = 157286400
