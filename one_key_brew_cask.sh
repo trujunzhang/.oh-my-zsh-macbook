@@ -125,9 +125,9 @@ if [ ! -f  ~/Library/Fonts/FiraCode-Retina.ttf ]; then
     brew install --cask font-fira-code
 fi
 
-if [ ! -d  "/Applications/kitty.app" ]; then
-    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-fi
+# if [ ! -d  "/Applications/kitty.app" ]; then
+    # curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+# fi
 
 
 

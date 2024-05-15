@@ -28,6 +28,7 @@ brew_apps=(
 
     # brew services start sketchybar
     "opt/sketchybar"            "sketchybar"
+    "opt/thefuck"               "thefuck"
 
     ## v2ray
     # "opt/v2ray-core"            "v2ray-core"

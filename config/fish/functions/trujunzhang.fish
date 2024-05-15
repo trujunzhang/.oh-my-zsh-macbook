@@ -1,0 +1,1 @@
+/Volumes/MacUser/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/oh-my-zsh/custom/plugins/trujunzhang/trujunzhang.fish

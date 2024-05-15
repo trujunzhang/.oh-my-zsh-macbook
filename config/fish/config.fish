@@ -81,6 +81,8 @@ if [ -d $HOME/.rvm ]
     rvm default
 end
 
+set -x THEFUCK_OVERRIDDEN_ALIASES 'gsed,git'
+
 if set -q ZELLIJ
 else
     zellij attach -c djzhang-mac
