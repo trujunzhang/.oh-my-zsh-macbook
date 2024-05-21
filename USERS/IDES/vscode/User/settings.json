@@ -136,5 +136,6 @@
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "jest.runMode": "deferred"
+    "jest.runMode": "deferred",
+    "prisma.showPrismaDataPlatformNotification": false
 }

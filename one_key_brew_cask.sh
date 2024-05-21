@@ -19,7 +19,7 @@ brew_apps=(
     # https://fbflipper.com/
     "Flipper.app"             "flipper"
     # "Realm Studio.app"        "mongodb-realm-studio"
-    # "Zed.app"                 "zed"
+    "Zed.app"                 "zed"
     "Obsidian.app"            "obsidian"
     "Alacritty.app"           "alacritty"
 

@@ -106,6 +106,10 @@ function link_config_fold {
   # zellij
   directoryLink  "config(zellij)"     "$TRUJUNZHANG_DOTFILES_HOME/config/zellij"        "$HOME/.config/zellij"
 
+  # zed IDE
+  mkdir -rf '$HOME/.config/zed'
+  fileLink "config(zed-ide)"     "$TRUJUNZHANG_DOTFILES_HOME/config/zed/settings.json"        "$HOME/.config/zed/settings.json"
+
   # alacritty
   directoryLink  "config(alacritty)"     "$TRUJUNZHANG_DOTFILES_HOME/config/alacritty"        "$HOME/.config/alacritty"
 
