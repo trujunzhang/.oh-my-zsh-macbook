@@ -6,7 +6,7 @@ CURRENT=$(pwd)
 source ./bash/files-functions.sh
 source ./bash/tools.sh
 
-node_global="20.10.0"
+node_global="20.13.0"
 node_old="16.16.0"
 node_for_nvim="18"
 node_for_old_expensify="20.9.0"
