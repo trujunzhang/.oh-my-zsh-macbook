@@ -240,7 +240,7 @@ function link_symlink {
   # directoryLink  "cocoapods(respository)"  "$COCOAPODS_HOME"  "$HOME/.cocoapods"
 
   # .oh-my-fish
-  fileLink  "oh-my-fish(functions:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang/trujunzhang.fish"    "$HOME/.config/fish/functions/trujunzhang.fish"   "delete"
+  # fileLink  "oh-my-fish(functions:trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang/trujunzhang.fish"    "$HOME/.config/fish/functions/trujunzhang.fish"   "delete"
 
   # .oh-my-zsh
   # directoryLink  "oh-my-zsh(offline)"  "$OH_MY_ZSH_IDE_HOME"  "$HOME/.oh-my-zsh"
