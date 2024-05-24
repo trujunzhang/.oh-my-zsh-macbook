@@ -2,6 +2,16 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
+local function vim_map(mode, lhs, rhs, opts)
+  opts = opts or {}
+  opts.silent = opts.silent ~= false
+  vim.keymap.set(mode, lhs, rhs, opts)
+end
+
+-- Move to line beginning and end
+vim_map({ "n", "v", "x" }, "gl", "$", { desc = "End of line" })
+vim_map({ "n", "v", "x" }, "gh", "^", { desc = "Beginning of line" })
+
 if vim.g.neovide then
   vim.g.neovide_scale_factor = 0.9
 
@@ -104,7 +114,7 @@ end, {
 map("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], {
   desc = "Replace section",
 })
-map("n", "<leader>q", "<cmd>xa<cr>", {
+map("n", "<leader>Q", "<cmd>xa<cr>", {
   desc = "Save All and Quit",
 })
 map("n", "<C-w>f", "<cmd>FocusToggle<cr>", {
@@ -275,12 +285,34 @@ map("n", "<leader>ld", "<cmd>TroubleToggle document_diagnostics<cr>", {
 map("n", "<leader>lt", "<CMD>TodoTrouble keywords=TODO,FIX,FIXME,BUG,TEST,NOTE<CR>", {
   desc = "LSP Todo/Fix/Fixme",
 })
+
 map("n", "<leader>lR", function()
+  if vim.bo.filetype == "typescript" or vim.bo.filetype == "typescriptreact" then
+    require("vtsls").commands.restart_tsserver()
+  end
+
   vim.diagnostic.reset()
   vim.cmd [[LspRestart]]
 end, {
   desc = "LSP Restart Language Server",
 })
+
+map("n", "<leader>ci", function()
+  require("vtsls").commands.remove_unused_imports()
+end, {
+  desc = "TypeScript Remove Unused Imports",
+})
+map("n", "<leader>cI", function()
+  require("vtsls").commands.add_missing_imports()
+end, {
+  desc = "TypeScript Add Missing Imports",
+})
+map("n", "<leader>rf", function()
+  require("vtsls").commands.rename_file()
+end, {
+  desc = "TypeScript Rename File",
+})
+
 map("n", "<leader>ca", function()
   require("actions-preview").code_actions()
 end, {
@@ -312,22 +344,8 @@ map("n", "\\", "<cmd>Telescope resume<cr>", {
   desc = "Telescope Resume last search",
 })
 
--- Search
-map("n", "<leader>S", "<cmd>lua require('spectre').toggle()<cr>", {
-  desc = "Toggle Spectre",
-})
-map("n", "<leader>sw", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", {
-  desc = "Search current word",
-})
-map("n", "<leader>sp", "<cmd>lua require('spectre').open_file_search({select_word=true})<cr>", {
-  desc = "Search on current file",
-})
-map("v", "<leader>sw", "<esc><cmd>lua require('spectre').open_visual()<cr>", {
-  desc = "Search current word",
-})
-
 -- Harpoon
-map("n", "<leader>mm", "<cmd>lua require('harpoon'):list():append()<cr>", {
+map("n", "<leader>mm", "<cmd>lua require('harpoon'):list():add()<cr>", {
   desc = "Mark file",
 })
 map("n", "<leader>mt", "<cmd>Telescope harpoon marks<cr>", {
@@ -473,8 +491,10 @@ map({ "n", "x" }, "<leader>sa", function()
   require("scissors").addNewSnippet()
 end, { desc = "Add new snippet" })
 
+map("n", "<leader>qq", "<cmd>qa!<cr>", { desc = "Quit" })
+    -- q = { "<cmd>qa!<cr>", icons.ui.Close .. "Quit" },
+
 -- Remove default keymaps
 local unmap = vim.keymap.del
 
 unmap("n", "<leader>rn")
-unmap("t", "<Esc>")

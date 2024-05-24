@@ -6,7 +6,7 @@ local lsp_servers = {
   'clangd',
   'bashls',
   'jsonls',
-  'lua_ls',
+  -- 'lua_ls',
   'typos_lsp', -- check typos
   'vimls',
 }

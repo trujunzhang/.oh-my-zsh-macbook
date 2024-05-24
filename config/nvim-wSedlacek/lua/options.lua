@@ -11,5 +11,4 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "100"
 
 vim.opt.swapfile = false
--- vim.opt.mouse = nil
-vim.opt.mouse = "a"
+vim.opt.mouse = nil

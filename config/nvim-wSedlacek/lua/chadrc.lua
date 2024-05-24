@@ -6,8 +6,7 @@ local highlights = require "highlights"
 local fortune = require "fortune"
 
 M.ui = {
-  -- theme = "gatekeeper",
-  theme = "one_light",
+  theme = "oxocarbon",
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -52,7 +51,8 @@ M.ui = {
     order = { "treeOffset", "buffers", "harpoon", "tabs" },
     modules = {
       harpoon = function()
-        local Harpoonline = require("harpoonline").setup {
+        local Harpoonline = require "harpoonline"
+        Harpoonline.setup {
           icon = "",
         }
 
