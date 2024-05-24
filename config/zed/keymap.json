@@ -1,0 +1,32 @@
+[
+  {
+    "bindings": {
+      "alt-down": [
+        "workspace::SendKeystrokes",
+        "down down down down"
+      ],
+      "cmd-alt-c": [
+        "workspace::SendKeystrokes",
+        "cmd-shift-p copy relative path enter"
+      ],
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": [
+        "workspace::SendKeystrokes",
+        "escape"
+      ],
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "g h": "editor::MoveToBeginningOfLine",
+      "g l": "editor::MoveToEndOfLine",
+      "g t": "editor::Format",
+      "g r": "editor::FindAllReferences",
+    }
+  }
+]

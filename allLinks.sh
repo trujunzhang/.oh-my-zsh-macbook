@@ -109,6 +109,7 @@ function link_config_fold {
   # zed IDE
   mkdir -rf '$HOME/.config/zed'
   fileLink "config(zed-ide)"     "$TRUJUNZHANG_DOTFILES_HOME/config/zed/settings.json"        "$HOME/.config/zed/settings.json"
+  fileLink "config(zed-ide)"     "$TRUJUNZHANG_DOTFILES_HOME/config/zed/keymap.json"        "$HOME/.config/zed/keymap.json"
 
   # alacritty
   directoryLink  "config(alacritty)"     "$TRUJUNZHANG_DOTFILES_HOME/config/alacritty"        "$HOME/.config/alacritty"

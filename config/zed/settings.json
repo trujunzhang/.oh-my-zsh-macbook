@@ -12,12 +12,86 @@
   "ui_font_size": 12,
   "buffer_font_size": 10,
   "buffer_line_height": "standard",
-  "autosave": "on",
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "current_line_highlight": "all",
   "relative_line_numbers": true,
   "format_on_save": "language_server",
   "scrollbar": {
-    "show": "auto"
+    "show": "auto",
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "diagnostics": true
+  },
+  "env": {
+    "ZED": "1",
+    "KEY": "value1:value2"
+  },
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50
+  },
+  "languages": {
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "TSX": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    }
+  },
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "codeActionOnSave": {
+          "rules": [
+            "import/order"
+          ]
+        }
+      }
+    },
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "includeInlayParameterNameHints": "all",
+          "includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+          "includeInlayFunctionParameterTypeHints": true,
+          "includeInlayVariableTypeHints": true,
+          "includeInlayVariableTypeHintsWhenTypeMatchesName": false,
+          "includeInlayPropertyDeclarationTypeHints": true,
+          "includeInlayFunctionLikeReturnTypeHints": true,
+          "includeInlayEnumMemberValueHints": true
+        }
+      }
+    }
+  },
+  "formatter": {
+    "code_actions": {
+      // Use ESLint's --fix:
+      "source.fixAll.eslint": true,
+      // Organize imports on save:
+      "source.organizeImports": true
+    }
+  },
+  "git": {
+    "git_gutter": "hide"
   },
   "terminal": {
     "copy_on_select": true
