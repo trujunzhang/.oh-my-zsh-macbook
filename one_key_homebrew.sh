@@ -45,6 +45,8 @@ brew_apps=(
     "opt/fzf"                   "fzf"
     ## neovim(spectre)
     "opt/gnu-sed"               "gnu-sed"
+    "opt//buf"                  "bufbuild/buf/buf"
+    "opt/marksman"              "marksman"
 
     ## fish
     "opt/fish"                  "fish"
