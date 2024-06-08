@@ -105,6 +105,9 @@ function link_config_fold {
 
   # zellij
   directoryLink  "config(zellij)"     "$TRUJUNZHANG_DOTFILES_HOME/config/zellij"        "$HOME/.config/zellij"
+  
+  # v2ray-core
+  directoryLink  "source(v2ray-core)"     "$TRUJUNZHANG_DOTFILES_HOME/config/v2ray-core-4.31.0"        "$HOME/.config/v2ray-core"
 
   # zed IDE
   mkdir -rf '$HOME/.config/zed'

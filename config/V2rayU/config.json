@@ -1,0 +1,85 @@
+{
+  "log": {
+    "error": "/Volumes/MacUser/djzhang/.V2rayU/v2ray-core.log",
+    "access": "/Volumes/MacUser/djzhang/.V2rayU/v2ray-core.log",
+    "loglevel": "info"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "port": "1080",
+      "settings": {
+        "auth": "noauth",
+        "udp": false
+      }
+    },
+    {
+      "protocol": "http",
+      "listen": "127.0.0.1",
+      "port": "1087",
+      "settings": {
+        "timeout": 360
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "settings": {
+        "vnext": [
+          {
+            "port": 15318,
+            "address": "38.54.6.82",
+            "users": [
+              {
+                "security": "auto",
+                "alterId": 0,
+                "level": 0,
+                "id": "a5788b99-aa0d-4bba-f9b8-6dadb7a8964c"
+              }
+            ]
+          }
+        ]
+      },
+      "mux": {
+        "enabled": false,
+        "concurrency": 8
+      },
+      "protocol": "vmess",
+      "tag": "proxy",
+      "streamSettings": {
+        "network": "tcp",
+        "security": "none",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    },
+    {
+      "settings": {
+        "userLevel": 0,
+        "domainStrategy": "UseIP"
+      },
+      "protocol": "freedom",
+      "tag": "direct"
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "none"
+        }
+      }
+    }
+  ],
+  "dns": {},
+  "routing": {
+    "settings": {
+      "rules": [],
+      "domainStrategy": "AsIs"
+    }
+  }
+}
