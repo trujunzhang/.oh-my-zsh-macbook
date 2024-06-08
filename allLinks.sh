@@ -103,6 +103,9 @@ function link_config_fold {
   directoryLink  "config(yabai)"    "$TRUJUNZHANG_DOTFILES_HOME/config/yabai"       "$HOME/.config/yabai"
   directoryLink  "config(skhd)"     "$TRUJUNZHANG_DOTFILES_HOME/config/skhd"        "$HOME/.config/skhd"
 
+  # ruby-bundle
+  fileLink "config(bundle)"     "$TRUJUNZHANG_DOTFILES_HOME/config/bundle/config"        "$HOME/.bundle/config"
+  
   # zellij
   directoryLink  "config(zellij)"     "$TRUJUNZHANG_DOTFILES_HOME/config/zellij"        "$HOME/.config/zellij"
   
