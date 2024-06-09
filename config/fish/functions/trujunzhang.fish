@@ -606,6 +606,10 @@ alias bubug='bubo && bugbc'
 alias bfu='brew upgrade --formula'
 alias buz='brew uninstall --zap'
 
+# macos
+alias wh_shutdown_mac="sudo shutdown -h now"
+alias wh_restart_mac="sudo shutdown -r now"
+
 # lunarvim
 alias lvimUpdateReset="lvim +LvimUpdate +LvimCacheReset +q"
 alias wrmvimsession="rm -rf $HOME/.local/share/nvim/sessions"
