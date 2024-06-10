@@ -106,6 +106,10 @@ function link_config_fold {
   # ruby-bundle
   fileLink "config(bundle)"     "$TRUJUNZHANG_DOTFILES_HOME/config/bundle/config"        "$HOME/.bundle/config"
   
+  # Maven
+  mkdir -p "$HOME/.m2"
+  fileLink "config(Maven)"     "$TRUJUNZHANG_DOTFILES_HOME/config/maven/settings.xml"        "$HOME/.m2/settings.xml"
+  
   # zellij
   directoryLink  "config(zellij)"     "$TRUJUNZHANG_DOTFILES_HOME/config/zellij"        "$HOME/.config/zellij"
   

@@ -181,6 +181,7 @@ alias npmsi='npm install --verbose --save '
 
 alias npodi='npm run pod-install'
 alias nrprettier='npm run prettier'
+alias nrstart='npm run start'
 alias nrweb='npm run web'
 alias nrios='npm run ios'
 alias nripad='npm run ipad'
