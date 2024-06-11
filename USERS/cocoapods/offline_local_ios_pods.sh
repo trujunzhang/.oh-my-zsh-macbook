@@ -47,47 +47,51 @@ offlineGitFolder="file://$HOME/Documents/Organizations/__CACHES/github"
 offlineHttpFolder='http://localhost:8000/@http'
 
 # seq FIRST INCREMENT LAST
-for i in $(seq 0 6 $((json_array_len-1)))
+for i in $(seq 0 7 $((json_array_len-1)))
 do
-    type=${values[$((i+0))]}
-    title=${values[$((i+1))]}
-    path=${values[$((i+2))]}
-    fileName=${values[$((i+3))]}
-    # echo "fileName: $fileName"
-    podspecJsonPath="${projectPath}/${path}/${fileName}"
+    enable=${values[$((i+0))]}
 
-    if [ -f "${podspecJsonPath}" ]; then
-        echo "                         "
-        echo "{podspec json} path: $podspecJsonPath"
-        echo "name: $title"
+    if [ "$enable" = "true" ]; then
+        type=${values[$((i+1))]}
+        title=${values[$((i+2))]}
+        path=${values[$((i+3))]}
+        fileName=${values[$((i+4))]}
+        # echo "fileName: $fileName"
+        podspecJsonPath="${projectPath}/${path}/${fileName}"
 
-        # Type is 'git'
-        if [ "$type" = "git" ]; then
-            gitUrl=${values[$((i+4))]}
-            echo "gitUrl: $gitUrl"
+        if [ -f "${podspecJsonPath}" ]; then
+            echo "                         "
+            echo "{podspec json} path: $podspecJsonPath"
+            echo "name: $title"
 
-            gitOfflineFold=${values[$((i+5))]}
+            # Type is 'git'
+            if [ "$type" = "git" ]; then
+                gitUrl=${values[$((i+5))]}
+                echo "gitUrl: $gitUrl"
 
-            replaceString="${offlineGitFolder}/${gitOfflineFold}"
-            echo "git offline fold: $replaceString"
+                gitOfflineFold=${values[$((i+6))]}
 
-            sed -i '' "s,$gitUrl,$replaceString,g" "${podspecJsonPath}"
+                replaceString="${offlineGitFolder}/${gitOfflineFold}"
+                echo "git offline fold: $replaceString"
+
+                sed -i '' "s,$gitUrl,$replaceString,g" "${podspecJsonPath}"
+            fi
+
+            # Type is 'http'
+            if [ "$type" = "http" ]; then
+                httpUrl=${values[$((i+5))]}
+                echo "httpUrl: $httpUrl"
+
+                httpOfflineFold=${values[$((i+6))]}
+
+                replaceString="${offlineHttpFolder}/${httpOfflineFold}"
+                echo "http offline fold: $replaceString"
+
+                sed -i '' "s,$httpUrl,$replaceString,g" "${podspecJsonPath}"
+            fi
+
+            echo "                         "
         fi
-
-        # Type is 'http'
-        if [ "$type" = "http" ]; then
-            httpUrl=${values[$((i+4))]}
-            echo "httpUrl: $httpUrl"
-
-            httpOfflineFold=${values[$((i+5))]}
-
-            replaceString="${offlineHttpFolder}/${httpOfflineFold}"
-            echo "http offline fold: $replaceString"
-
-            sed -i '' "s,$httpUrl,$replaceString,g" "${podspecJsonPath}"
-        fi
-
-        echo "                         "
     fi
 
 done

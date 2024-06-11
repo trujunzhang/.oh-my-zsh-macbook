@@ -1,506 +1,569 @@
 [
-    {
-        "type": "git",
-        "name": "BoringSSL-GRPC",
-        "path": "f/8/8/BoringSSL-GRPC",
-        "filename": "BoringSSL-GRPC.podspec.json",
-        "git": "https://github.com/google/boringssl.git",
-        "folder": "@spec/boringssl"
-    },
-    {
-        "type": "git",
-        "name": "gRPC-Core",
-        "path": "9/1/0/gRPC-Core",
-        "filename": "gRPC-Core.podspec.json",
-        "git": "https://github.com/grpc/grpc.git",
-        "folder": "@spec/grpc-branch"
-    },
-    {
-        "type": "git",
-        "name": "gRPC-C++",
-        "path": "c/8/7/gRPC-C++",
-        "filename": "gRPC-C++.podspec.json",
-        "git": "https://github.com/grpc/grpc.git",
-        "folder": "@spec/grpc-branch"
-    },
-    {
-        "type": "http",
-        "name": "OpenSSL-Universal",
-        "path": "e/d/6/OpenSSL-Universal",
-        "filename": "OpenSSL-Universal.podspec.json",
-        "http": "https://github.com/krzyzanowskim/OpenSSL/archive/1.1.1100.zip",
-        "file": "OpenSSL/1.1.1100.zip"
-    },
-    {
-        "type": "git",
-        "name": "Protobuf",
-        "path": "e/c/d/Protobuf",
-        "filename": "Protobuf.podspec.json",
-        "git": "https://github.com/protocolbuffers/protobuf.git",
-        "folder": "@common/protobuf"
-    },
-    {
-        "type": "git",
-        "name": "GoogleUtilities",
-        "path": "0/8/4/GoogleUtilities",
-        "filename": "GoogleUtilities.podspec.json",
-        "git": "https://github.com/google/GoogleUtilities.git",
-        "folder": "@common/GoogleUtilities"
-    },
-    {
-        "type": "git",
-        "name": "Realm",
-        "path": "9/4/5/RealmSwift",
-        "filename": "RealmSwift.podspec.json",
-        "git": "https://github.com/realm/realm-cocoa.git",
-        "folder": "@common/realm-cocoa"
-    },
-    {
-        "type": "git",
-        "name": "FacebookCore",
-        "path": "e/9/6/FacebookCore",
-        "filename": "FacebookCore.podspec.json",
-        "git": "https://github.com/facebook/facebook-sdk-swift.git",
-        "folder": "@common/facebook-sdk-swift"
-    },
-    {
-        "type": "git",
-        "name": "FacebookLogin",
-        "path": "5/9/0/FacebookLogin",
-        "filename": "FacebookLogin.podspec.json",
-        "git": "https://github.com/facebook/facebook-sdk-swift.git",
-        "folder": "@common/facebook-sdk-swift"
-    },
-    {
-        "type": "git",
-        "name": "FacebookShare",
-        "path": "1/1/6/FacebookShare",
-        "filename": "FacebookShare.podspec.json",
-        "git": "https://github.com/facebook/facebook-sdk-swift.git",
-        "folder": "@common/facebook-sdk-swift"
-    },
-    {
-        "type": "git",
-        "name": "GoogleToolboxForMac",
-        "path": "7/4/b/GoogleToolboxForMac",
-        "filename": "GoogleToolboxForMac.podspec.json",
-        "git": "https://github.com/google/google-toolbox-for-mac.git",
-        "folder": "@common/google-toolbox-for-mac"
-    },
-    {
-        "type": "git",
-        "name": "GoogleDataTransport",
-        "path": "0/6/a/GoogleDataTransport",
-        "filename": "GoogleDataTransport.podspec.json",
-        "git": "https://github.com/google/GoogleDataTransport.git",
-        "folder": "@common/GoogleDataTransport"
-    },
-    {
-        "type": "git",
-        "name": "Bolts",
-        "path": "a/8/e/Bolts",
-        "filename": "Bolts.podspec.json",
-        "git": "https://github.com/BoltsFramework/Bolts-ObjC.git",
-        "folder": "@common/Bolts-ObjC"
-    },
-    {
-        "type": "git",
-        "name": "FBSDKCoreKit",
-        "path": "9/b/5/FBSDKCoreKit",
-        "filename": "FBSDKCoreKit.podspec.json",
-        "git": "https://github.com/facebook/facebook-objc-sdk.git",
-        "folder": "@common/facebook-objc-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FBSDKLoginKit",
-        "path": "b/3/c/FBSDKLoginKit",
-        "filename": "FBSDKLoginKit.podspec.json",
-        "git": "https://github.com/facebook/facebook-objc-sdk.git",
-        "folder": "@common/facebook-objc-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FBSDKCoreKit",
-        "path": "f/4/e/FMDB",
-        "filename": "FMDB.podspec.json",
-        "git": "https://github.com/ccgus/fmdb.git",
-        "folder": "@common/fmdb"
-    },
-    {
-        "type": "git",
-        "name": "Firebase",
-        "path": "0/3/5/Firebase",
-        "filename": "Firebase.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseAppCheckInterop",
-        "path": "e/9/8/FirebaseAppCheckInterop",
-        "filename": "FirebaseAppCheckInterop.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseInstallations",
-        "path": "2/f/7/FirebaseInstallations",
-        "filename": "FirebaseInstallations.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseCoreInternal",
-        "path": "7/9/1/FirebaseCoreInternal",
-        "filename": "FirebaseCoreInternal.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseCoreDiagnostics",
-        "path": "8/3/c/FirebaseCoreDiagnostics",
-        "filename": "FirebaseCoreDiagnostics.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebasePerformance",
-        "path": "e/5/6/FirebasePerformance",
-        "filename": "FirebasePerformance.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseCoreDiagnosticsInterop",
-        "path": "8/9/c/FirebaseCoreDiagnosticsInterop",
-        "filename": "FirebaseCoreDiagnosticsInterop.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseInstallations",
-        "path": "2/f/7/FirebaseInstallations",
-        "filename": "FirebaseInstallations.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "GoogleDataTransport",
-        "path": "0/6/a/GoogleDataTransport",
-        "filename": "GoogleDataTransport.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "GoogleDataTransportCCTSupport",
-        "path": "b/c/f/GoogleDataTransportCCTSupport",
-        "filename": "GoogleDataTransportCCTSupport.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseABTesting",
-        "path": "d/c/1/FirebaseABTesting",
-        "filename": "FirebaseABTesting.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseAnalyticsInterop",
-        "path": "6/f/9/FirebaseAnalyticsInterop",
-        "filename": "FirebaseAnalyticsInterop.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseRemoteConfig",
-        "path": "f/2/a/FirebaseRemoteConfig",
-        "filename": "FirebaseRemoteConfig.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseMessaging",
-        "path": "2/d/6/FirebaseMessaging",
-        "filename": "FirebaseMessaging.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseStorage",
-        "path": "3/c/c/FirebaseStorage",
-        "filename": "FirebaseStorage.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseDatabase",
-        "path": "d/8/2/FirebaseDatabase",
-        "filename": "FirebaseDatabase.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseAuth",
-        "path": "6/3/6/FirebaseAuth",
-        "filename": "FirebaseAuth.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseAuthInterop",
-        "path": "4/2/7/FirebaseAuthInterop",
-        "filename": "FirebaseAuthInterop.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseCore",
-        "path": "8/b/d/FirebaseCore",
-        "filename": "FirebaseCore.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseFirestore",
-        "path": "0/9/f/FirebaseFirestore",
-        "filename": "FirebaseFirestore.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseInstanceID",
-        "path": "3/6/0/FirebaseInstanceID",
-        "filename": "FirebaseInstanceID.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "FirebaseCrashlytics",
-        "path": "e/7/d/FirebaseCrashlytics",
-        "filename": "FirebaseCrashlytics.podspec.json",
-        "git": "https://github.com/firebase/firebase-ios-sdk.git",
-        "folder": "@common/firebase-ios-sdk"
-    },
-    {
-        "type": "git",
-        "name": "AppAuth",
-        "path": "b/b/9/AppAuth",
-        "filename": "AppAuth.podspec.json",
-        "git": "https://github.com/openid/AppAuth-iOS.git",
-        "folder": "@common/AppAuth-iOS"
-    },
-    {
-        "type": "git",
-        "name": "GTMSessionFetcher",
-        "path": "c/e/3/GTMSessionFetcher",
-        "filename": "GTMSessionFetcher.podspec.json",
-        "git": "https://github.com/google/gtm-session-fetcher.git",
-        "folder": "@common/gtm-session-fetcher"
-    },
-    {
-        "type": "git",
-        "name": "PromisesObjC",
-        "path": "0/b/5/PromisesObjC",
-        "filename": "PromisesObjC.podspec.json",
-        "git": "https://github.com/google/promises.git",
-        "folder": "@common/promises"
-    },
-    {
-        "type": "git",
-        "name": "leveldb-library",
-        "path": "a/d/a/leveldb-library",
-        "filename": "leveldb-library.podspec.json",
-        "git": "https://github.com/google/leveldb.git",
-        "folder": "@common/leveldb"
-    },
-    {
-        "type": "git",
-        "name": "Reachability",
-        "path": "c/7/9/Reachability",
-        "filename": "Reachability.podspec.json",
-        "git": "https://github.com/tonymillion/Reachability.git",
-        "folder": "@common/Reachability"
-    },
-    {
-        "type": "git",
-        "name": "abseil",
-        "path": "3/8/6/abseil",
-        "filename": "abseil.podspec.json",
-        "git": "https://github.com/abseil/abseil-cpp.git",
-        "folder": "@common/abseil-cpp"
-    },
-    {
-        "type": "git",
-        "name": "nanopb",
-        "path": "6/1/e/nanopb",
-        "filename": "nanopb.podspec.json",
-        "git": "https://github.com/nanopb/nanopb.git",
-        "folder": "@common/nanopb"
-    },
-    {
-        "type": "git",
-        "name": "GTMAppAuth",
-        "path": "2/c/c/GTMAppAuth",
-        "filename": "GTMAppAuth.podspec.json",
-        "git": "https://github.com/google/GTMAppAuth.git",
-        "folder": "@common/GTMAppAuth"
-    },
-    {
-        "type": "git",
-        "name": "Sentry",
-        "path": "a/b/d/Sentry",
-        "filename": "Sentry.podspec.json",
-        "git": "https://github.com/getsentry/sentry-cocoa.git",
-        "folder": "@common/sentry-cocoa"
-    },
-    {
-        "type": "git",
-        "name": "DoubleConversion",
-        "path": "1/5/8/DoubleConversion",
-        "filename": "DoubleConversion.podspec.json",
-        "git": "https://github.com/google/double-conversion.git",
-        "folder": "@common/double-conversion"
-    },
-    {
-        "type": "git",
-        "name": "CocoaAsyncSocket",
-        "path": "1/d/4/CocoaAsyncSocket",
-        "filename": "CocoaAsyncSocket.podspec.json",
-        "git": "https://github.com/robbiehanson/CocoaAsyncSocket.git",
-        "folder": "@common/CocoaAsyncSocket"
-    },
-    {
-        "type": "git",
-        "name": "Flipper",
-        "path": "a/e/a/Flipper",
-        "filename": "Flipper.podspec.json",
-        "git": "https://github.com/facebook/flipper.git",
-        "folder": "@common/flipper"
-    },
-    {
-        "type": "git",
-        "name": "Flipper-Boost-iOSX",
-        "path": "5/6/4/Flipper-Boost-iOSX",
-        "filename": "Flipper-Boost-iOSX.podspec.json",
-        "git": "https://github.com/priteshrnandgaonkar/Flipper-Boost-iOSX.git",
-        "folder": "@common/Flipper-Boost-iOSX"
-    },
-    {
-        "type": "git",
-        "name": "Flipper-DoubleConversion",
-        "path": "3/3/c/Flipper-DoubleConversion",
-        "filename": "Flipper-DoubleConversion.podspec.json",
-        "git": "https://github.com/lblasa/double-conversion.git",
-        "folder": "@common/double-conversion"
-    },
-    {
-        "type": "git",
-        "name": "Flipper-RSocket",
-        "path": "d/1/3/Flipper-RSocket",
-        "filename": "Flipper-RSocket.podspec.json",
-        "git": "https://github.com/rsocket/rsocket-cpp.git",
-        "folder": "@common/rsocket-cpp"
-    },
-    {
-        "type": "git",
-        "name": "Flipper-Folly",
-        "path": "5/7/2/Flipper-Folly",
-        "filename": "Flipper-Folly.podspec.json",
-        "git": "https://github.com/facebook/folly.git",
-        "folder": "@common/folly"
-    },
-    {
-        "type": "git",
-        "name": "Flipper-Glog",
-        "path": "2/7/2/Flipper-Glog",
-        "filename": "Flipper-Glog.podspec.json",
-        "git": "https://github.com/lblasa/glog.git",
-        "folder": "@common/glog-lblasa"
-    },
-    {
-        "type": "git",
-        "name": "glog",
-        "path": "4/7/2/glog",
-        "filename": "glog.podspec.json",
-        "git": "https://github.com/google/glog.git",
-        "folder": "@common/glog-google"
-    },
-    {
-        "type": "git",
-        "name": "FlipperKit",
-        "path": "3/2/5/FlipperKit",
-        "filename": "FlipperKit.podspec.json",
-        "git": "https://github.com/facebook/flipper.git",
-        "folder": "@common/flipper"
-    },
-    {
-        "type": "git",
-        "name": "YogaKit",
-        "path": "9/4/7/YogaKit",
-        "filename": "YogaKit.podspec.json",
-        "git": "https://github.com/facebook/yoga.git",
-        "folder": "@common/yoga"
-    },
-    {
-        "type": "git",
-        "name": "fmt",
-        "path": "7/6/3/fmt",
-        "filename": "fmt.podspec.json",
-        "git": "https://github.com/fmtlib/fmt.git",
-        "folder": "@common/fmt"
-    },
-    {
-        "type": "git",
-        "name": "libevent",
-        "path": "0/9/9/libevent",
-        "filename": "libevent.podspec.json",
-        "git": "https://github.com/libevent/libevent.git",
-        "folder": "@common/libevent"
-    },
-    {
-        "type": "git",
-        "name": "Libuv-gRPC",
-        "path": "c/8/0/Libuv-gRPC",
-        "filename": "Libuv-gRPC.podspec.json",
-        "git": "https://github.com/libuv/libuv.git",
-        "folder": "@common/libuv"
-    },
-    {
-        "type": "git",
-        "name": "SDWebImage",
-        "path": "1/1/7/SDWebImage",
-        "filename": "SDWebImage.podspec.json",
-        "git": "https://github.com/SDWebImage/SDWebImage.git",
-        "folder": "@common/SDWebImage"
-    },
-    {
-        "type": "git",
-        "name": "SDWebImageWebPCoder",
-        "path": "e/9/d/SDWebImageWebPCoder",
-        "filename": "SDWebImageWebPCoder.podspec.json",
-        "git": "https://github.com/SDWebImage/SDWebImageWebPCoder.git",
-        "folder": "@common/SDWebImageWebPCoder"
-    }
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "BoringSSL-GRPC",
+    "path": "f/8/8/BoringSSL-GRPC",
+    "filename": "BoringSSL-GRPC.podspec.json",
+    "git": "https://github.com/google/boringssl.git",
+    "folder": "@spec/boringssl"
+  },
+  {
+    "enable": "false",
+    "type": "git",
+    "name": "gRPC-Core",
+    "path": "9/1/0/gRPC-Core",
+    "filename": "gRPC-Core.podspec.json",
+    "git": "https://github.com/grpc/grpc.git",
+    "folder": "@spec/grpc-branch"
+  },
+  {
+    "enable": "false",
+    "type": "git",
+    "name": "gRPC-C++",
+    "path": "c/8/7/gRPC-C++",
+    "filename": "gRPC-C++.podspec.json",
+    "git": "https://github.com/grpc/grpc.git",
+    "folder": "@spec/grpc-branch"
+  },
+  {
+    "type": "http",
+    "name": "OpenSSL-Universal",
+    "path": "e/d/6/OpenSSL-Universal",
+    "filename": "OpenSSL-Universal.podspec.json",
+    "http": "https://github.com/krzyzanowskim/OpenSSL/archive/1.1.1100.zip",
+    "file": "OpenSSL/1.1.1100.zip"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Protobuf",
+    "path": "e/c/d/Protobuf",
+    "filename": "Protobuf.podspec.json",
+    "git": "https://github.com/protocolbuffers/protobuf.git",
+    "folder": "@common/protobuf"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "GoogleUtilities",
+    "path": "0/8/4/GoogleUtilities",
+    "filename": "GoogleUtilities.podspec.json",
+    "git": "https://github.com/google/GoogleUtilities.git",
+    "folder": "@common/GoogleUtilities"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Realm",
+    "path": "9/4/5/RealmSwift",
+    "filename": "RealmSwift.podspec.json",
+    "git": "https://github.com/realm/realm-cocoa.git",
+    "folder": "@common/realm-cocoa"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FacebookCore",
+    "path": "e/9/6/FacebookCore",
+    "filename": "FacebookCore.podspec.json",
+    "git": "https://github.com/facebook/facebook-sdk-swift.git",
+    "folder": "@common/facebook-sdk-swift"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FacebookLogin",
+    "path": "5/9/0/FacebookLogin",
+    "filename": "FacebookLogin.podspec.json",
+    "git": "https://github.com/facebook/facebook-sdk-swift.git",
+    "folder": "@common/facebook-sdk-swift"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FacebookShare",
+    "path": "1/1/6/FacebookShare",
+    "filename": "FacebookShare.podspec.json",
+    "git": "https://github.com/facebook/facebook-sdk-swift.git",
+    "folder": "@common/facebook-sdk-swift"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "GoogleToolboxForMac",
+    "path": "7/4/b/GoogleToolboxForMac",
+    "filename": "GoogleToolboxForMac.podspec.json",
+    "git": "https://github.com/google/google-toolbox-for-mac.git",
+    "folder": "@common/google-toolbox-for-mac"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "GoogleDataTransport",
+    "path": "0/6/a/GoogleDataTransport",
+    "filename": "GoogleDataTransport.podspec.json",
+    "git": "https://github.com/google/GoogleDataTransport.git",
+    "folder": "@common/GoogleDataTransport"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Bolts",
+    "path": "a/8/e/Bolts",
+    "filename": "Bolts.podspec.json",
+    "git": "https://github.com/BoltsFramework/Bolts-ObjC.git",
+    "folder": "@common/Bolts-ObjC"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FBSDKCoreKit",
+    "path": "9/b/5/FBSDKCoreKit",
+    "filename": "FBSDKCoreKit.podspec.json",
+    "git": "https://github.com/facebook/facebook-objc-sdk.git",
+    "folder": "@common/facebook-objc-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FBSDKLoginKit",
+    "path": "b/3/c/FBSDKLoginKit",
+    "filename": "FBSDKLoginKit.podspec.json",
+    "git": "https://github.com/facebook/facebook-objc-sdk.git",
+    "folder": "@common/facebook-objc-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FBSDKCoreKit",
+    "path": "f/4/e/FMDB",
+    "filename": "FMDB.podspec.json",
+    "git": "https://github.com/ccgus/fmdb.git",
+    "folder": "@common/fmdb"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Firebase",
+    "path": "0/3/5/Firebase",
+    "filename": "Firebase.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseAppCheckInterop",
+    "path": "e/9/8/FirebaseAppCheckInterop",
+    "filename": "FirebaseAppCheckInterop.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseInstallations",
+    "path": "2/f/7/FirebaseInstallations",
+    "filename": "FirebaseInstallations.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseCoreInternal",
+    "path": "7/9/1/FirebaseCoreInternal",
+    "filename": "FirebaseCoreInternal.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseCoreDiagnostics",
+    "path": "8/3/c/FirebaseCoreDiagnostics",
+    "filename": "FirebaseCoreDiagnostics.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebasePerformance",
+    "path": "e/5/6/FirebasePerformance",
+    "filename": "FirebasePerformance.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseCoreDiagnosticsInterop",
+    "path": "8/9/c/FirebaseCoreDiagnosticsInterop",
+    "filename": "FirebaseCoreDiagnosticsInterop.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseInstallations",
+    "path": "2/f/7/FirebaseInstallations",
+    "filename": "FirebaseInstallations.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "GoogleDataTransport",
+    "path": "0/6/a/GoogleDataTransport",
+    "filename": "GoogleDataTransport.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "GoogleDataTransportCCTSupport",
+    "path": "b/c/f/GoogleDataTransportCCTSupport",
+    "filename": "GoogleDataTransportCCTSupport.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseABTesting",
+    "path": "d/c/1/FirebaseABTesting",
+    "filename": "FirebaseABTesting.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseAnalyticsInterop",
+    "path": "6/f/9/FirebaseAnalyticsInterop",
+    "filename": "FirebaseAnalyticsInterop.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseRemoteConfig",
+    "path": "f/2/a/FirebaseRemoteConfig",
+    "filename": "FirebaseRemoteConfig.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseMessaging",
+    "path": "2/d/6/FirebaseMessaging",
+    "filename": "FirebaseMessaging.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseStorage",
+    "path": "3/c/c/FirebaseStorage",
+    "filename": "FirebaseStorage.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseDatabase",
+    "path": "d/8/2/FirebaseDatabase",
+    "filename": "FirebaseDatabase.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseAuth",
+    "path": "6/3/6/FirebaseAuth",
+    "filename": "FirebaseAuth.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseAuthInterop",
+    "path": "4/2/7/FirebaseAuthInterop",
+    "filename": "FirebaseAuthInterop.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseCore",
+    "path": "8/b/d/FirebaseCore",
+    "filename": "FirebaseCore.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseFirestore",
+    "path": "0/9/f/FirebaseFirestore",
+    "filename": "FirebaseFirestore.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseInstanceID",
+    "path": "3/6/0/FirebaseInstanceID",
+    "filename": "FirebaseInstanceID.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseCrashlytics",
+    "path": "e/7/d/FirebaseCrashlytics",
+    "filename": "FirebaseCrashlytics.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "AppAuth",
+    "path": "b/b/9/AppAuth",
+    "filename": "AppAuth.podspec.json",
+    "git": "https://github.com/openid/AppAuth-iOS.git",
+    "folder": "@common/AppAuth-iOS"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "GTMSessionFetcher",
+    "path": "c/e/3/GTMSessionFetcher",
+    "filename": "GTMSessionFetcher.podspec.json",
+    "git": "https://github.com/google/gtm-session-fetcher.git",
+    "folder": "@common/gtm-session-fetcher"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "PromisesObjC",
+    "path": "0/b/5/PromisesObjC",
+    "filename": "PromisesObjC.podspec.json",
+    "git": "https://github.com/google/promises.git",
+    "folder": "@common/promises"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "leveldb-library",
+    "path": "a/d/a/leveldb-library",
+    "filename": "leveldb-library.podspec.json",
+    "git": "https://github.com/google/leveldb.git",
+    "folder": "@common/leveldb"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Reachability",
+    "path": "c/7/9/Reachability",
+    "filename": "Reachability.podspec.json",
+    "git": "https://github.com/tonymillion/Reachability.git",
+    "folder": "@common/Reachability"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "abseil",
+    "path": "3/8/6/abseil",
+    "filename": "abseil.podspec.json",
+    "git": "https://github.com/abseil/abseil-cpp.git",
+    "folder": "@common/abseil-cpp"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "nanopb",
+    "path": "6/1/e/nanopb",
+    "filename": "nanopb.podspec.json",
+    "git": "https://github.com/nanopb/nanopb.git",
+    "folder": "@common/nanopb"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "GTMAppAuth",
+    "path": "2/c/c/GTMAppAuth",
+    "filename": "GTMAppAuth.podspec.json",
+    "git": "https://github.com/google/GTMAppAuth.git",
+    "folder": "@common/GTMAppAuth"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Sentry",
+    "path": "a/b/d/Sentry",
+    "filename": "Sentry.podspec.json",
+    "git": "https://github.com/getsentry/sentry-cocoa.git",
+    "folder": "@common/sentry-cocoa"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "DoubleConversion",
+    "path": "1/5/8/DoubleConversion",
+    "filename": "DoubleConversion.podspec.json",
+    "git": "https://github.com/google/double-conversion.git",
+    "folder": "@common/double-conversion"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "CocoaAsyncSocket",
+    "path": "1/d/4/CocoaAsyncSocket",
+    "filename": "CocoaAsyncSocket.podspec.json",
+    "git": "https://github.com/robbiehanson/CocoaAsyncSocket.git",
+    "folder": "@common/CocoaAsyncSocket"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Flipper",
+    "path": "a/e/a/Flipper",
+    "filename": "Flipper.podspec.json",
+    "git": "https://github.com/facebook/flipper.git",
+    "folder": "@common/flipper"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Flipper-Boost-iOSX",
+    "path": "5/6/4/Flipper-Boost-iOSX",
+    "filename": "Flipper-Boost-iOSX.podspec.json",
+    "git": "https://github.com/priteshrnandgaonkar/Flipper-Boost-iOSX.git",
+    "folder": "@common/Flipper-Boost-iOSX"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Flipper-DoubleConversion",
+    "path": "3/3/c/Flipper-DoubleConversion",
+    "filename": "Flipper-DoubleConversion.podspec.json",
+    "git": "https://github.com/lblasa/double-conversion.git",
+    "folder": "@common/double-conversion"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Flipper-RSocket",
+    "path": "d/1/3/Flipper-RSocket",
+    "filename": "Flipper-RSocket.podspec.json",
+    "git": "https://github.com/rsocket/rsocket-cpp.git",
+    "folder": "@common/rsocket-cpp"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Flipper-Folly",
+    "path": "5/7/2/Flipper-Folly",
+    "filename": "Flipper-Folly.podspec.json",
+    "git": "https://github.com/facebook/folly.git",
+    "folder": "@common/folly"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Flipper-Glog",
+    "path": "2/7/2/Flipper-Glog",
+    "filename": "Flipper-Glog.podspec.json",
+    "git": "https://github.com/lblasa/glog.git",
+    "folder": "@common/glog-lblasa"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "glog",
+    "path": "4/7/2/glog",
+    "filename": "glog.podspec.json",
+    "git": "https://github.com/google/glog.git",
+    "folder": "@common/glog-google"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FlipperKit",
+    "path": "3/2/5/FlipperKit",
+    "filename": "FlipperKit.podspec.json",
+    "git": "https://github.com/facebook/flipper.git",
+    "folder": "@common/flipper"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "YogaKit",
+    "path": "9/4/7/YogaKit",
+    "filename": "YogaKit.podspec.json",
+    "git": "https://github.com/facebook/yoga.git",
+    "folder": "@common/yoga"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "fmt",
+    "path": "7/6/3/fmt",
+    "filename": "fmt.podspec.json",
+    "git": "https://github.com/fmtlib/fmt.git",
+    "folder": "@common/fmt"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "libevent",
+    "path": "0/9/9/libevent",
+    "filename": "libevent.podspec.json",
+    "git": "https://github.com/libevent/libevent.git",
+    "folder": "@common/libevent"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "Libuv-gRPC",
+    "path": "c/8/0/Libuv-gRPC",
+    "filename": "Libuv-gRPC.podspec.json",
+    "git": "https://github.com/libuv/libuv.git",
+    "folder": "@common/libuv"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "SDWebImage",
+    "path": "1/1/7/SDWebImage",
+    "filename": "SDWebImage.podspec.json",
+    "git": "https://github.com/SDWebImage/SDWebImage.git",
+    "folder": "@common/SDWebImage"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "SDWebImageWebPCoder",
+    "path": "e/9/d/SDWebImageWebPCoder",
+    "filename": "SDWebImageWebPCoder.podspec.json",
+    "git": "https://github.com/SDWebImage/SDWebImageWebPCoder.git",
+    "folder": "@common/SDWebImageWebPCoder"
+  }
 ]
+

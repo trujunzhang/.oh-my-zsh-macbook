@@ -1,82 +1,101 @@
 [
-    {
-        "type": "git",
-        "name": "DoubleConversion",
-        "path": "node_modules/react-native/third-party-podspecs",
-        "filename": "DoubleConversion.podspec",
-        "git": "https://github.com/google/double-conversion.git",
-        "folder": "@common/double-conversion"
-    },
-    {
-        "type": "git",
-        "name": "RCT-Folly",
-        "path": "node_modules/react-native/third-party-podspecs",
-        "filename": "RCT-Folly.podspec",
-        "git": "https://github.com/facebook/folly.git",
-        "folder": "@common/folly"
-    },
-    {
-        "type": "git",
-        "name": "glog",
-        "path": "node_modules/react-native/third-party-podspecs",
-        "filename": "glog.podspec",
-        "git": "https://github.com/google/glog.git",
-        "folder": "@common/glog-google"
-    },
-    {
-        "type": "http",
-        "name": "boost",
-        "path": "node_modules/react-native/third-party-podspecs",
-        "filename": "boost.podspec",
-        "http": "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2",
-        "file": "boost/boost_1_76_0.tar.bz2"
-    },
-    {
-        "type": "http",
-        "name": "boost",
-        "path": "node_modules/expo-modules-core/android",
-        "filename": "build.gradle",
-        "http": "https://boostorg.jfrog.io/artifactory/main",
-        "file": "main"
-    },
-    {
-        "type": "http",
-        "name": "facebook-folly",
-        "path": "node_modules/expo-modules-core/android",
-        "filename": "build.gradlexxx",
-        "http": "https://github.com/facebook",
-        "file": "facebook"
-    },
-    {
-        "type": "http",
-        "name": "google/double-conversion",
-        "path": "node_modules/expo-modules-core/android",
-        "filename": "build.gradle",
-        "http": "https://github.com/google",
-        "file": "google"
-    },
-    {
-        "type": "http",
-        "name": "hermes-engine(v0.70.5)",
-        "path": "node_modules/react-native/sdks/hermes-engine",
-        "filename": "hermes-engine.podspecxxx",
-        "http": "https://github.com/facebook",
-        "file": "facebook"
-    },
-    {
-        "type": "http",
-        "name": "hermes-engine(v0.71.3)",
-        "path": "node_modules/react-native/sdks/hermes-engine",
-        "filename": "hermes-engine.podspecxxx",
-        "http": "https://repo1.maven.org/maven2/com/facebook",
-        "file": "facebook"
-    },
-    {
-        "type": "http",
-        "name": "hermes-engine(v0.72)",
-        "path": "node_modules/react-native/sdks/hermes-engine",
-        "filename": "hermes-utils.rb",
-        "http": "https://repo1.maven.org/maven2/com/facebook",
-        "file": "facebook"
-    }    
+  {
+    "enable": "false",
+    "type": "git",
+    "name": "DoubleConversion",
+    "path": "node_modules/react-native/third-party-podspecs",
+    "filename": "DoubleConversion.podspec",
+    "git": "https://github.com/google/double-conversion.git",
+    "folder": "@common/double-conversion"
+  },
+  {
+    "enable": "false",
+    "type": "git",
+    "name": "RCT-Folly",
+    "path": "node_modules/react-native/third-party-podspecs",
+    "filename": "RCT-Folly.podspec",
+    "git": "https://github.com/facebook/folly.git",
+    "folder": "@common/folly"
+  },
+  {
+    "enable": "false",
+    "type": "git",
+    "name": "glog",
+    "path": "node_modules/react-native/third-party-podspecs",
+    "filename": "glog.podspec",
+    "git": "https://github.com/google/glog.git",
+    "folder": "@common/glog-google"
+  },
+  {
+    "enable": "false",
+    "type": "http",
+    "name": "boost",
+    "path": "node_modules/react-native/third-party-podspecs",
+    "filename": "boost.podspec",
+    "http": "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2",
+    "file": "boost/boost_1_76_0.tar.bz2"
+  },
+  {
+    "enable": "false",
+    "type": "http",
+    "name": "boost",
+    "path": "node_modules/expo-modules-core/android",
+    "filename": "build.gradle",
+    "http": "https://boostorg.jfrog.io/artifactory/main",
+    "file": "main"
+  },
+  {
+    "enable": "false",
+    "type": "http",
+    "name": "facebook-folly",
+    "path": "node_modules/expo-modules-core/android",
+    "filename": "build.gradlexxx",
+    "http": "https://github.com/facebook",
+    "file": "facebook"
+  },
+  {
+    "enable": "false",
+    "type": "http",
+    "name": "google/double-conversion",
+    "path": "node_modules/expo-modules-core/android",
+    "filename": "build.gradle",
+    "http": "https://github.com/google",
+    "file": "google"
+  },
+  {
+    "enable": "false",
+    "type": "http",
+    "name": "hermes-engine(v0.70.5)",
+    "path": "node_modules/react-native/sdks/hermes-engine",
+    "filename": "hermes-engine.podspecxxx",
+    "http": "https://github.com/facebook",
+    "file": "facebook"
+  },
+  {
+    "enable": "false",
+    "type": "http",
+    "name": "hermes-engine(v0.71.3)",
+    "path": "node_modules/react-native/sdks/hermes-engine",
+    "filename": "hermes-engine.podspecxxx",
+    "http": "https://repo1.maven.org/maven2/com/facebook",
+    "file": "facebook"
+  },
+  {
+    "enable": "true",
+    "type": "http",
+    "name": "hermes-engine(v0.73)",
+    "path": "node_modules/react-native/sdks/hermes-engine",
+    "filename": "hermes-utils.rb",
+    "http": "https://repo1.maven.org/maven2/com/facebook",
+    "file": "facebook"
+  },
+  {
+    "enable": "true",
+    "type": "http",
+    "name": "boost",
+    "path": "node_modules/react-native/third-party-podspecs",
+    "filename": "boost.podspec",
+    "http": "https://archives.boost.io/release/1.83.0/source/boost_1_83_0.tar.bz2",
+    "file": "boost/boost_1_83_0.tar.bz2"
+  }
 ]

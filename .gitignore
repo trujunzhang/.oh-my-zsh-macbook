@@ -52,3 +52,6 @@ package-lock.json
 
 # v2ray
 config/v2ray-core*
+
+# warp
+bash/result.csv

@@ -80,6 +80,10 @@ try {
   for (i; i < length; i++) {
     // var line = obj[1]
     var line = obj[i]
+    var enable = line['enable']
+    if (enable !== 'true') {
+      continue
+    }
     // console.log('djzhang, ' + line['filename'] )
     replaceEachFiles(line, cocoapodsResposity)
     replaceEachFiles(line, trunkResposity)

@@ -6,7 +6,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
     <localRepository>
-        /Users/dengchao/.m2/repository
+        /Volumes/MacUser/djzhang/.m2/repository
     </localRepository>
 
     <pluginGroups></pluginGroups>
@@ -16,12 +16,12 @@ xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.o
     <servers></servers>
 
     <mirrors>
-        <mirror> 
+        <mirror>
             <id>alimaven</id>
-            <name>aliyun maven</name> 
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url> 
-            <mirrorOf>central</mirrorOf> 
-            </mirror> 
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <mirrorOf>central</mirrorOf>
+            </mirror>
     </mirrors>
 
     <profiles></profiles>
