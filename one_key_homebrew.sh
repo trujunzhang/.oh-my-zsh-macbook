@@ -100,6 +100,8 @@ brew_apps=(
 
     ## React-native & Expo
     "opt/watchman"           "bundletool watchman"
+    # https://nektosact.com/installation/homebrew.html
+    # "opt/act"                "act"
     # brew tap facebook/fb
     # "opt/idb-companion"      "idb-companion"
 

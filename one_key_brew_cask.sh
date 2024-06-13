@@ -14,12 +14,12 @@ brew_apps=(
     # "MacVim.app"              "macvim"
     "Visual Studio Code.app"  "visual-studio-code"
     # "Emacs.app"               "emacs"
-    "Sourcetree.app"          "sourcetree"
-    "Insomnia.app"            "insomnia"
+    # "Sourcetree.app"          "sourcetree"
+    # "Insomnia.app"            "insomnia"
     # https://fbflipper.com/
-    "Flipper.app"             "flipper"
+    # "Flipper.app"             "flipper"
     # "Realm Studio.app"        "mongodb-realm-studio"
-    "Zed.app"                 "zed"
+    # "Zed.app"                 "zed"
     "Obsidian.app"            "obsidian"
     "Alacritty.app"           "alacritty"
 
@@ -29,9 +29,9 @@ brew_apps=(
     "SpaceLauncher.app"       "spacelauncher"
     "Notion.app"              "notion"
     "OneDrive.app"            "onedrive"
-    "Hammerspoon.app"         "hammerspoon"
-    "Authy Desktop.app"       "authy"
-    "BaiduNetdisk_mac.app"    "baidunetdisk"
+    # "Hammerspoon.app"         "hammerspoon"
+    # "Authy Desktop.app"       "authy"
+    # "BaiduNetdisk_mac.app"    "baidunetdisk"
     "Grammarly Editor.app"    "grammarly"
 
     # Web browser
@@ -42,7 +42,7 @@ brew_apps=(
     "Brave Browser.app"       "brave-browser"
     # "qutebrowser.app"         "qutebrowser"
     "Arc.app"                 "arc"
-    "ResponsivelyApp.app"     "responsively"
+    # "ResponsivelyApp.app"     "responsively"
 
     # =========================================
     # required password
@@ -84,7 +84,7 @@ function install_brew_app {
         fi
     elif [ "$Params" = "$DEFAULTVALUE" ]; then
         if [ ! -d  "/Applications/${name}" ]; then
-            brew install --cask "${app}"
+            brew reinstall --cask "${app}"
         fi
     elif [ "$Params" = "fix" ]; then
         if [ ! -d  "/Applications/${name}" ]; then
@@ -113,7 +113,8 @@ fi
 # apps
 # =========================================
 if [[ $(uname -m) == 'arm64' ]]; then
-    install_brew_app "Docker.app" docker
+    echo "install apps for arm64"
+    # install_brew_app "Docker.app" docker
 
     # install_brew_app "pgAdmin 4.app" pgadmin4
     # install_brew_app "iTerm.app" iterm2
