@@ -125,7 +125,7 @@ alias ystartclient='yarn start:client'
 alias ystart='yarn start'
 alias yrandroid='yarn android'
 alias yrios='yarn ios'
-alias yallrios='bundle install && npm install && npm run pod-install && yarn ios'
+alias yallrios='bundle install && ninstall && npm run pod-install && yarn ios'
 alias yallrandroid='bundle install && npm install && yarn android'
 alias yripad='yarn ipad'
 alias yrweb='yarn web'
@@ -647,6 +647,14 @@ function dgitreset
     else
         git init && git add . && git commit -m 'first commit' && git checkout -b tmp
     end
+end
+
+function link_Ccache
+    sudo ln -s $(which ccache) /usr/local/bin/gcc
+    sudo ln -s $(which ccache) /usr/local/bin/g++
+    sudo ln -s $(which ccache) /usr/local/bin/cc
+    sudo ln -s $(which ccache) /usr/local/bin/c++
+    sudo ln -s $(which ccache) /usr/local/bin/clang
 end
 
 # neovim

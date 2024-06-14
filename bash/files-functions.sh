@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./shellUtils.sh
+source ./bash/shellUtils.sh
 
 DEFAULTACTION="ignore"
 

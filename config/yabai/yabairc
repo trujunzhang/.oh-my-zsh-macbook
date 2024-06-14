@@ -41,6 +41,7 @@ yabai -m rule --add app="^Simulator$" space=terminal
 # yabai -m rule --add app="^Android Emulator - genymotion: 5554$"     space=terminal manage=off
 # yabai -m rule --add app="^qemu-system-aarch64$"     space=terminal manage=off
 yabai -m rule --add app="^Android Emulator - genymotion:5554$"    manage=off
+yabai -m rule --add app="^qemu-system-aarch64$"    manage=off
 
 # Jetbrains apps
 apps="^(IntelliJ IDEA|WebStorm|RubyMine|PyCharm|DataGrip)$"

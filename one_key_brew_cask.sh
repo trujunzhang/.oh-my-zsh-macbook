@@ -67,14 +67,43 @@ brew_apps=(
 
 DEFAULTVALUE="install"
 Params="${1:-$DEFAULTVALUE}"
-
 echo "params = ${Params}"
+
+app_backup_path_index() {
+    case $1 in
+        'ssd') return 0;;
+        'hard') return 1;;
+        'local') return 2;;
+    esac
+}
+
+
+hash_vals=("/Volumes/MacGame/APPS_BACKUP"
+           "/Volumes/MacGame/"
+           "/Volumes/MacUser/djzhang/Desktop/APPS_BACKUP");
+
+app_backup_path_index "ssd"
+CURRENT_APP_BACKUP_PATH=${hash_vals[$?]}
+echo "current app backup path: ${CURRENT_APP_BACKUP_PATH}"
+
+function backupApps {
+    name=$1
+    app=$2
+}
 
 function install_brew_app {
     name=$1
     app=$2
 
-    if [ "$Params" = "delete" ]; then
+    if [ "$Params" = "backup" ]; then
+        if [ -d  "/Applications/${name}" ]; then
+            sudo rm -rf "/Applications/${name}"
+        fi
+    elif [ "$Params" = "restore" ]; then
+        if [ -d  "/Applications/${name}" ]; then
+            sudo rm -rf "/Applications/${name}"
+        fi
+    elif [ "$Params" = "delete" ]; then
         if [ -d  "/Applications/${name}" ]; then
             sudo rm -rf "/Applications/${name}"
         fi

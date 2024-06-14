@@ -9,6 +9,14 @@ set -g -x ANDROID_HOME "$HOME/Library/Android/sdk"
 set -g -x ANDROID_SDK_ROOT "$HOME/Library/Android/sdk"
 set -g -x ANDROID_USER_HOME "$HOME/Library/Android/sdk"
 set -g -x REACT_NATIVE_DOWNLOADS_DIR "$HOME/.local/RN_DOWNLOADS"
+set -g -x ACT_BINARY "$HOME/.local/bin/act"
+
+# set -g -x SCCACHE_CXX=sccache
+# set -g -x SCCACHE_CC=sccache
+
+set -g -x NDK_CCACHE ccache
+# set -g -x NDK_CCACHE sccache
+set -g -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/25.1.8937393
 
 # set -g -x http_proxy "http://127.0.0.1:1087"
 # set -g -x https_proxy "http://127.0.0.1:1087"
