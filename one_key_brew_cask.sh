@@ -19,7 +19,7 @@ brew_apps=(
     # https://fbflipper.com/
     # "Flipper.app"             "flipper"
     # "Realm Studio.app"        "mongodb-realm-studio"
-    # "Zed.app"                 "zed"
+    "Zed.app"                 "zed"
     "Obsidian.app"            "obsidian"
     "Alacritty.app"           "alacritty"
 
@@ -32,7 +32,7 @@ brew_apps=(
     # "Hammerspoon.app"         "hammerspoon"
     # "Authy Desktop.app"       "authy"
     # "BaiduNetdisk_mac.app"    "baidunetdisk"
-    "Grammarly Editor.app"    "grammarly"
+    # "Grammarly Editor.app"    "grammarly"
 
     # Web browser
     "Google Chrome.app"       "google-chrome"

@@ -657,6 +657,11 @@ function link_Ccache
     sudo ln -s $(which ccache) /usr/local/bin/clang
 end
 
+function open_ieatta_xcode_document
+    set result $(xcrun simctl get_app_container booted com.ieatta.track.dev data)
+    open "$result"
+end
+
 # neovim
 alias l="lvim"
 # alias n="nvim"
