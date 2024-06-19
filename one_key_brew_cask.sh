@@ -80,7 +80,7 @@ app_backup_path_index() {
 }
 
 
-hash_vals=("/Volumes/MacGame/APPS_BACKUP"
+hash_vals=("/Volumes/MacGame/MacCache"
            "/Volumes/MacGame/"
            "/Volumes/MacUser/djzhang/Desktop/APPS_BACKUP");
 
@@ -128,17 +128,35 @@ function restore_apps {
     fi
 }
 
+function link_apps {
+    name=$1
+    
+    app_path_in_backup_folder="${PATH_BACKUP}/${name}"
+    info "Link app: ${name}"
+    info "Backup app path: ${app_path_in_backup_folder}"
+    
+    directoryLink  "app(${name})"   "${app_path_in_backup_folder}"      "/Applications/${name}"  "delete"
+}
+
 function install_brew_app {
     name=$1
     app=$2
 
-    if [ "$Params" = "backup" ]; then
-        if [ -d  "/Applications/${name}" ]; then
-            backup_apps "${name}"
+    if [ "$Params" = "link" ]; then
+        if [ ! -d  "/Applications/${name}" ]; then
+            link_apps "${name}"
+        fi
+    elif [ "$Params" = "backup" ]; then
+        if [ ! -L  "/Applications/${name}" ]; then
+            if [ -d  "/Applications/${name}" ]; then
+                backup_apps "${name}"
+            fi
         fi
     elif [ "$Params" = "restore" ]; then
-        if [ ! -d  "/Applications/${name}" ]; then
-            restore_apps "${name}"
+        if [ ! -L  "/Applications/${name}" ]; then
+            if [ ! -d  "/Applications/${name}" ]; then
+                restore_apps "${name}"
+            fi
         fi
     elif [ "$Params" = "delete" ]; then
         if [ -d  "/Applications/${name}" ]; then

@@ -405,6 +405,9 @@ function link_mac_user {
   directoryLink "android(gradle)"      "$HOME_MAC_CACHE_PATH/.gradle"                               "$HOME/.gradle"
 
   directoryLink "android(sdk)"         "$HOME_MAC_CACHE_PATH/Android"                               "$HOME/Library/Android"
+  
+  # pyenv
+  directoryLink "python(env)"         "$HOME_MAC_CACHE_PATH/.pyenv"                               "$HOME/.pyenv"
 
   # ios
   # directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME/.cocoapods"
