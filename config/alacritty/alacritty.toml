@@ -5,8 +5,25 @@ import = [
     "~/.config/alacritty/themes/themes/rose-pine-dawn.toml"
 ]
 
+[colors]
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors = true
+
+# [colors.cursor]
+# cursor = "#FFFFFF"
+# text = "#000000"
+
 [ env ]
 TERM = "xterm-256color"
+
+[shell]
+program = "/opt/homebrew/bin/fish"
+
+# I don't need to enable this, as I normally select in visual mode and yank
+# But apparently it allows you to copy to clipboard by just selecting the text
+# When set to `true`, selected text will be copied to the primary clipboard.
+[selection]
+save_to_clipboard = true
 
 [window]
 padding.x = 10

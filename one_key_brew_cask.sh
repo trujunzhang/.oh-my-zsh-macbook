@@ -31,7 +31,7 @@ brew_apps=(
     "OneDrive.app"            "onedrive"
     # "Hammerspoon.app"         "hammerspoon"
     # "Authy Desktop.app"       "authy"
-    # "BaiduNetdisk_mac.app"    "baidunetdisk"
+    "BaiduNetdisk_mac.app"    "baidunetdisk"
     # "Grammarly Editor.app"    "grammarly"
 
     # Web browser

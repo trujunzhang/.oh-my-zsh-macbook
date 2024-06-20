@@ -1,6 +1,6 @@
 [
   {
-    "enable": "true",
+    "enable": "false",
     "type": "git",
     "name": "BoringSSL-GRPC",
     "path": "f/8/8/BoringSSL-GRPC",
@@ -27,6 +27,7 @@
     "folder": "@spec/grpc-branch"
   },
   {
+    "enable": "false",
     "type": "http",
     "name": "OpenSSL-Universal",
     "path": "e/d/6/OpenSSL-Universal",
@@ -566,4 +567,3 @@
     "folder": "@common/SDWebImageWebPCoder"
   }
 ]
-
