@@ -5,22 +5,19 @@
 
 [core]
 	excludesfile = ~/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[commit]
-	template = /Users/djzhang/.stCommitMsg
-[protocol "file"]
-	allow = always
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+	compression = 0
+    packedGitLimit = 512m
+    packedGitWindowSize = 512m
+ [pack]
+    deltaCacheSize = 2047m
+    packSizeLimit = 2047m
+    windowMemory = 2047m
 [http]
-	version = HTTP/2
-	postBuffer = 157286400
+    version = HTTP/1.1
+    sslVerify = false
 	proxy = http://127.0.0.1:7890
+	postBuffer = 524288000
+[https]
+    sslVerify = false
+	proxy = http://127.0.0.1:7890
+	postBuffer = 524288000
