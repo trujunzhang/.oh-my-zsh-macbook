@@ -16,8 +16,8 @@ draw_bold_text_with_bright_colors = true
 [ env ]
 TERM = "xterm-256color"
 
-[shell]
-program = "/opt/homebrew/bin/fish"
+#[shell]
+#program = "/opt/homebrew/bin/fish"
 
 # I don't need to enable this, as I normally select in visual mode and yank
 # But apparently it allows you to copy to clipboard by just selecting the text

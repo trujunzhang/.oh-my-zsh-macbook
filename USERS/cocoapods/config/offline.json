@@ -155,6 +155,69 @@
   {
     "enable": "true",
     "type": "git",
+    "name": "FirebaseABTesting",
+    "path": "d/c/1/FirebaseABTesting",
+    "filename": "FirebaseABTesting.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseAppCheckInterop",
+    "path": "e/9/8/FirebaseAppCheckInterop",
+    "filename": "FirebaseAppCheckInterop.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseCoreExtension",
+    "path": "4/7/f/FirebaseCoreExtension",
+    "filename": "FirebaseCoreExtension.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseFirestoreInternal",
+    "path": "3/1/8/FirebaseFirestoreInternal",
+    "filename": "FirebaseFirestoreInternal.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseRemoteConfigInterop",
+    "path": "2/3/2/FirebaseRemoteConfigInterop",
+    "filename": "FirebaseRemoteConfigInterop.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseSessions",
+    "path": "8/e/2/FirebaseSessions",
+    "filename": "FirebaseSessions.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
+    "name": "FirebaseSharedSwift",
+    "path": "b/c/7/FirebaseSharedSwift",
+    "filename": "FirebaseSharedSwift.podspec.json",
+    "git": "https://github.com/firebase/firebase-ios-sdk.git",
+    "folder": "@common/firebase-ios-sdk"
+  },
+  {
+    "enable": "true",
+    "type": "git",
     "name": "FirebaseAppCheckInterop",
     "path": "e/9/8/FirebaseAppCheckInterop",
     "filename": "FirebaseAppCheckInterop.podspec.json",
