@@ -1,5 +1,14 @@
 [
   {
+    "enable": "true",
+    "type": "git",
+    "name": "libaom",
+    "path": "9/5/2/libaom",
+    "filename": "libaom.podspec.json",
+    "git": "https://github.com/SDWebImage/libaom-Xcode.git",
+    "folder": "@spec/libaom-Xcode"
+  },
+  {
     "enable": "false",
     "type": "git",
     "name": "BoringSSL-GRPC",

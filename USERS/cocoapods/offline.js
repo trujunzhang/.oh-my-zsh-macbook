@@ -22,18 +22,20 @@ function jsonToLowerString(str) {
 
 // ========================================================
 function replaceToOffline(obj, line) {
+  const lineGit = jsonToLowerString(line["git"]);
   const lastGit = jsonToLowerString(obj["source"]["git"]);
   const lastHttp = jsonToLowerString(obj["source"]["http"]);
+  console.log("replaceToOffline<lineGit>: " + line["git"]);
   console.log("replaceToOffline<lastGit>: " + lastGit);
-  // console.log('lastGit: ' + lastGit)
-  if (line["type"] == "git" && lastGit === line["git"]) {
+
+  if (line["type"] == "git" && lastGit === lineGit) {
     obj["source"]["git"] = offlineGitFolder + line["folder"];
     console.log("replace to: git=" + lastGit);
   } else if (line["type"] == "http" && lastHttp === line["http"]) {
     obj["source"]["http"] = offlineHttpFolder + line["file"];
     console.log("replace to: http=" + lastHttp);
   } else {
-    console.log("replaceToOffline: Error");
+    console.log("replaceToOffline: not match: " + line["type"]);
     //console.log('replace to: lastGit=' + lastGit)
   }
   return obj;

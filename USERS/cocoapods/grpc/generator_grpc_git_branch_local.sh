@@ -64,7 +64,7 @@ echo "==============================================================="
 echo "Bash version ${BASH_VERSION}..."
 echo "==============================================================="
 
-rm .gitmodules
+git rm .gitmodules
 touch .gitmodules
 
 echo "                         "

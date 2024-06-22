@@ -55,3 +55,8 @@ config/v2ray-core*
 
 # warp
 bash/result.csv
+
+# neovim's files
+*-E
+*.swp
+.nx/
