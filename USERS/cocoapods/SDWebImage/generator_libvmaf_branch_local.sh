@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-LIBAOM_FOLD="$HOME/Documents/Organizations/__CACHES/github/@spec/libaom-Xcode"
-LIBAOM_FOLD_ORIGINAL="$HOME/Documents/Organizations/__CACHES/github/@spec/libaom-Xcode-original"
-LIBAOM_THIRD_FOLD="$LIBAOM_FOLD"
-THIRD_PARTY_URL="file://$HOME/Documents/Organizations/__CACHES/github/@spec/libaom-Xcode_submodules"
+LIBVMAF_FOLD="$HOME/Documents/Organizations/__CACHES/github/@spec/libvmaf-Xcode"
+LIBVMAF_FOLD_ORIGINAL="$HOME/Documents/Organizations/__CACHES/github/@spec/libvmaf-Xcode-original"
+LIBVMAF_THIRD_FOLD="$LIBVMAF_FOLD"
+THIRD_PARTY_URL="file://$HOME/Documents/Organizations/__CACHES/github/@spec/libvmaf-Xcode_submodules"
 
-LIBAOM_GIT_BRANCH="3.0.0"
+LIBVMAF_GIT_BRANCH="2.3.1"
 
-function initial_libaom {
-       git checkout "${LIBAOM_GIT_BRANCH}"
+function initial_LIBVMAF {
+
+       git checkout "${LIBVMAF_GIT_BRANCH}"
 
        git reset --hard
 
@@ -29,7 +30,7 @@ function initial_libaom {
 # Delete all git modules folds
 # ========================================================= 
 function rm_sub_modules_folds {
-       rm -rf  "${LIBAOM_THIRD_FOLD}/aom"
+       rm -rf  "${LIBVMAF_THIRD_FOLD}/vmaf"
 }
 
 # echo "$THIRD_PARTY_URL/abseil-cpp" 
@@ -37,7 +38,7 @@ function rm_sub_modules_folds {
 # add third libraries as git modules
 # ========================================================= 
 function git_add_submodules {
-       git submodule add "${THIRD_PARTY_URL}/aom"   aom
+       git submodule add "${THIRD_PARTY_URL}/vmaf"  vmaf
 }
 
 function generator_local_branch_repository {
@@ -46,10 +47,10 @@ function generator_local_branch_repository {
        echo "Bash version ${BASH_VERSION}..."
        echo "==============================================================="
 
-       git clone "file://${LIBAOM_FOLD_ORIGINAL}" "${LIBAOM_FOLD}"
-       cd "${LIBAOM_FOLD}"
+       git clone "file://${LIBVMAF_FOLD_ORIGINAL}" "${LIBVMAF_FOLD}"
+       cd "${LIBVMAF_FOLD}"
        
-       initial_libaom
+       initial_LIBVMAF
 
        echo "                         "
        echo "rm sub modules folds"
@@ -68,12 +69,12 @@ function generator_local_branch_repository {
        git add .
        git commit -m 'add sub moduls'
 
-       git checkout -b "${LIBAOM_GIT_BRANCH}"
+       git checkout -b "${LIBVMAF_GIT_BRANCH}"
 }
 
 
-        if [ -d  "${LIBAOM_FOLD}" ]; then
-            echo "<*${LIBAOM_FOLD}*> already exist!"
+        if [ -d  "${LIBVMAF_FOLD}" ]; then
+            echo "<*${LIBVMAF_FOLD}*> already exist!"
         else
             generator_local_branch_repository
         fi

@@ -622,6 +622,10 @@ alias wcloudflareip="curl https://raw.githubusercontent.com/badafans/better-clou
 alias dclone_expensify="git clone https://github.com/expensify/App.git expensify && cd expensify"
 alias dclone_ieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
 alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-fixed.git usedExpApp && cd usedExpApp"
+alias dclone_cocoapods="git clone https://github.com/CocoaPods/Specs"
+
+alias git_set_clash_proxy="git config --global http.proxy http://127.0.0.1:7890"
+alias git_checkout_proxy="git config --global http.proxy"
 
 alias wclean_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
 alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"

@@ -37,9 +37,9 @@
   },
   {
     "type": "application",
-    "name": "atom",
-    "application": "Atom",
-    "enable": "0"
+    "name": "Vivaldi",
+    "application": "Vivaldi",
+    "enable": "1"
   },
   {
     "type": "application",

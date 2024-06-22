@@ -1,6 +1,15 @@
 [
   {
-    "enable": "true",
+    "enable": "false",
+    "type": "git",
+    "name": "libvmaf",
+    "path": "5/e/e/libvmaf",
+    "filename": "libvmaf.podspec.json",
+    "git": "https://github.com/SDWebImage/libvmaf-Xcode.git",
+    "folder": "@spec/libvmaf-Xcode"
+  },
+  {
+    "enable": "false",
     "type": "git",
     "name": "libaom",
     "path": "9/5/2/libaom",
