@@ -624,8 +624,11 @@ alias dclone_ieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.g
 alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-fixed.git usedExpApp && cd usedExpApp"
 alias dclone_cocoapods="git clone https://github.com/CocoaPods/Specs"
 
+alias git_set_v2ray_proxy="git config --global http.proxy http://127.0.0.1:443"
 alias git_set_clash_proxy="git config --global http.proxy http://127.0.0.1:7890"
 alias git_checkout_proxy="git config --global http.proxy"
+
+alias git_checkout_submodules="git submodule update --init --recursive --depth=1"
 
 alias wclean_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
 alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"
@@ -650,6 +653,17 @@ function dgitreset
         echo "already have git repository"
     else
         git init && git add . && git commit -m 'first commit' && git checkout -b tmp
+    end
+end
+
+function copy_new_ieatta_to_checkout
+    set check_ieatta /tmp/xxx/check-ieatta
+    if [ -d $check_ieatta ]
+        echo "already exist: $check_ieatta"
+    else
+        mkdir -p "$check_ieatta"
+        cp -Rvp "$ORGANIZATIONS_HOME/__CODING/WORKING/ieatta-three-apps/.git" "$check_ieatta/.git"
+        cd $check_ieatta
     end
 end
 

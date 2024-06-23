@@ -3,9 +3,12 @@
 LIBAOM_FOLD="$HOME/Documents/Organizations/__CACHES/github/@spec/libaom-Xcode"
 LIBAOM_FOLD_ORIGINAL="$HOME/Documents/Organizations/__CACHES/github/@spec/libaom-Xcode-original"
 LIBAOM_THIRD_FOLD="$LIBAOM_FOLD"
-THIRD_PARTY_URL="file://$HOME/Documents/Organizations/__CACHES/github/@spec/libaom-Xcode_submodules"
+THIRD_PARTY_FOLD="$HOME/Documents/Organizations/__CACHES/github/@spec/libaom-Xcode_submodules"
+THIRD_PARTY_URL="file://${THIRD_PARTY_FOLD}"
 
 LIBAOM_GIT_BRANCH="3.0.0"
+
+LIBAOM_SUBMODULE_REVISION="d853caa2ab62d161e5edf344ffee7b597449dc0d"
 
 function initial_libaom {
        git checkout "${LIBAOM_GIT_BRANCH}"
@@ -77,5 +80,8 @@ function generator_local_branch_repository {
         else
             generator_local_branch_repository
         fi
+
+
+        
 
         

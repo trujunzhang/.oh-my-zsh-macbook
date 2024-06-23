@@ -6,6 +6,7 @@ LIBVMAF_THIRD_FOLD="$LIBVMAF_FOLD"
 THIRD_PARTY_URL="file://$HOME/Documents/Organizations/__CACHES/github/@spec/libvmaf-Xcode_submodules"
 
 LIBVMAF_GIT_BRANCH="2.3.1"
+LIBAOM_SUBMODULE_REVISION="f2661673a078718ddfc1ddb6042048c1b1284946"
 
 function initial_LIBVMAF {
 

@@ -15,9 +15,9 @@
 [http]
     version = HTTP/1.1
     sslVerify = false
-	proxy = http://127.0.0.1:7890
 	postBuffer = 524288000
 [https]
     sslVerify = false
-	proxy = http://127.0.0.1:7890
 	postBuffer = 524288000
+[protocol "file"]
+	allow = always
