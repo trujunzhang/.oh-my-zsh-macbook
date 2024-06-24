@@ -18,6 +18,9 @@ set -g -x NDK_CCACHE ccache
 # set -g -x NDK_CCACHE sccache
 set -g -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/25.1.8937393
 
+set -g -x HOMEBREW_BOTTLE_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles"
+set -g -x HOMEBREW_API_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles/api"
+
 # set -g -x http_proxy "http://127.0.0.1:1087"
 # set -g -x https_proxy "http://127.0.0.1:1087"
 # set -g -x ALL_PROXY "socks5://127.0.0.1:1086"

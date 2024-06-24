@@ -319,7 +319,8 @@ function link_symlink {
   # directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
 
   # Node.js
-  fileLink "Yarn(config)"       "$TRUJUNZHANG_DOTFILES_HOME/yarnrc.symlink"          "$HOME/.yarnrc"     "delete"
+  fileLink "Yarn(config)"       "$TRUJUNZHANG_DOTFILES_HOME/config/yarn/.yarnrc"          "$HOME/.yarnrc"     "delete"
+  fileLink "npm(config)"        "$TRUJUNZHANG_DOTFILES_HOME/config/npm/.npmrc"            "$HOME/.npmrc"     "delete"
 }
 
 # function link_cocoapods {
@@ -408,6 +409,9 @@ function link_mac_user {
   
   # pyenv
   directoryLink "python(env)"         "$HOME_MAC_CACHE_PATH/.pyenv"                               "$HOME/.pyenv"
+  
+  # npm(cache)
+  directoryLink "npm(cache)"         "$HOME_MAC_CACHE_PATH/nvmCaches/.npm"                               "$HOME/.npm"
 
   # ios
   # directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME/.cocoapods"

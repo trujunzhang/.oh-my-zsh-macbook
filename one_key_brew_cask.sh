@@ -147,17 +147,13 @@ function install_brew_app {
             link_apps "${name}"
         fi
     elif [ "$Params" = "backup" ]; then
-        if [ ! -L  "/Applications/${name}" ]; then
-            if [ -d  "/Applications/${name}" ]; then
-                backup_apps "${name}"
-            fi
-        fi
+         if [ -d  "/Applications/${name}" ]; then
+            backup_apps "${name}"
+         fi
     elif [ "$Params" = "restore" ]; then
-        if [ ! -L  "/Applications/${name}" ]; then
-            if [ ! -d  "/Applications/${name}" ]; then
-                restore_apps "${name}"
-            fi
-        fi
+         if [ ! -d  "/Applications/${name}" ]; then
+            restore_apps "${name}"
+         fi
     elif [ "$Params" = "delete" ]; then
         if [ -d  "/Applications/${name}" ]; then
             sudo rm -rf "/Applications/${name}"
@@ -181,12 +177,16 @@ function install_brew_app {
 
 for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
 do
+    name="${brew_apps[$i+0]}"
+    app="${brew_apps[$i+1]}"
     info ""
-    info "element $i is ${brew_apps[$i+0]}"
-    info "element $i is ${brew_apps[$i+1]}"
+    info "element $i is ${name}"
+    info "element $i is ${app}"
 
     info ""
-    install_brew_app "${brew_apps[$i+0]}" "${brew_apps[$i+1]}"
+    if [ ! -L  "/Applications/${name}" ]; then
+        install_brew_app "${name}" "${app}"
+    fi
     info ""
 done
 
