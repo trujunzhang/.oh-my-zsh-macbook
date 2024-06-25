@@ -1,6 +1,6 @@
 [
   {
-    "enable": "false",
+    "enable": "true",
     "type": "git",
     "name": "libvmaf",
     "path": "5/e/e/libvmaf",

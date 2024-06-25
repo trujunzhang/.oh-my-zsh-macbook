@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-
 DEFAULTVALUE="vps"
 Params="${1:-$DEFAULTVALUE}"
 
-echo "params = ${Params}"
-
 WORK_DIR="/tmp"
-if [ "$Params" = "$DEFAULTVALUE" ]; then
+
+if [[ $(uname -m) == 'arm64' ]]; then
+    WORK_DIR="/tmp"
+elif [ "$Params" = "$DEFAULTVALUE" ]; then
     WORK_DIR="/home/deploy/data"
 fi
 
-OUT_GIT_FOLD="${WORK_DIR}/youtube/common"
+OUT_GIT_FOLD="${WORK_DIR}/youtube/@common"
 GITHUB_ZIP_FILE="${WORK_DIR}/youtube/common.zip"
 END_TAG="${WORK_DIR}/youtube/end.txt"
 
@@ -25,54 +25,71 @@ echo "endtag = ${END_TAG}"
 # ========================================================= 
 # ready
 # ========================================================= 
-rm -rf $OUT_GIT_FOLD
-mkdir -rf $OUT_GIT_FOLD
-rm -f $GITHUB_ZIP_FILE
-rm -f $END_TAG
+function initialFold {
+    rm -rf $OUT_GIT_FOLD
+    mkdir -p $OUT_GIT_FOLD
+    rm -f $GITHUB_ZIP_FILE
+    rm -f $END_TAG
+}
 
 # ========================================================= 
 # clone
 # ========================================================= 
 
+git_libs=(
+    "https://github.com/BranchMetrics/iOS-Deferred-Deep-Linking-SDK.git"  "iOS-Deferred-Deep-Linking-SDK"
+    "https://github.com/google/leveldb.git"                               "leveldb"
+    "https://github.com/facebook/yoga.git"                                "yoga"
+    "https://github.com/google/google-toolbox-for-mac.git"                "google-toolbox-for-mac"
+    "https://github.com/google/GoogleDataTransport.git"                   "GoogleDataTransport"
+    "https://github.com/abseil/abseil-cpp.git"                            "abseil-cpp"
+    "https://github.com/fmtlib/fmt.git"                                   "fmt"
+    "https://github.com/facebook/facebook-objc-sdk.git"                   "facebook-objc-sdk"
+    "https://github.com/firebase/firebase-ios-sdk.git"                    "firebase-ios-sdk"
+    "https://github.com/facebook/flipper.git"                             "flipper"
+    "https://github.com/openid/AppAuth-iOS.git"                           "AppAuth-iOS"
+    "https://github.com/BoltsFramework/Bolts-ObjC.git"                    "Bolts-ObjC"
+    "https://github.com/google/promises.git"                              "promises"
+    "https://github.com/google/gtm-session-fetcher.git"                   "gtm-session-fetcher"
+    "https://github.com/getsentry/sentry-cocoa.git"                       "sentry-cocoa"
+    "https://github.com/rsocket/rsocket-cpp.git"                          "rsocket-cpp"
+    "https://github.com/lblasa/double-conversion.git"                     "double-conversion"
+    "https://github.com/tonymillion/Reachability.git"                     "Reachability"
+    "https://github.com/libevent/libevent.git"                            "libevent"
+    "https://github.com/ccgus/fmdb.git"                                   "fmdb"
+    # glog-lblasa
+    "https://github.com/lblasa/glog.git"                                  "glog-lblasa"
+    "https://github.com/facebook/facebook-sdk-swift.git"                  "facebook-sdk-swift"
+    "https://github.com/google/GoogleUtilities.git"                       "GoogleUtilities"
+    "https://github.com/realm/realm-cocoa.git"                            "realm-cocoa"
+    # glog-google
+    "https://github.com/google/glog.git"                                  "glog-google"
+    "https://github.com/robbiehanson/CocoaAsyncSocket.git"                "CocoaAsyncSocket"
+    "https://github.com/nanopb/nanopb.git"                                "nanopb"
+    "https://github.com/facebook/folly.git"                               "folly"
+    "https://github.com/protocolbuffers/protobuf.git"                     "protobuf"
+    "https://github.com/priteshrnandgaonkar/Flipper-Boost-iOSX.git"       "Flipper-Boost-iOSX"
+    "https://github.com/google/GTMAppAuth.git"                            "GTMAppAuth"
+
+    "https://github.com/libuv/libuv.git"                                  "libuv"
+    "https://github.com/SDWebImage/SDWebImage.git"                        "SDWebImage"
+    "https://github.com/SDWebImage/SDWebImageWebPCoder.git"               "SDWebImageWebPCoder"
+    )
+
 function clone_github {
 
-    git clone https://github.com/BranchMetrics/iOS-Deferred-Deep-Linking-SDK.git  $OUT_GIT_FOLD/iOS-Deferred-Deep-Linking-SDK
-    git clone https://github.com/google/leveldb.git                               $OUT_GIT_FOLD/leveldb
-    git clone https://github.com/facebook/yoga.git                                $OUT_GIT_FOLD/yoga                                      
-    git clone https://github.com/google/google-toolbox-for-mac.git                $OUT_GIT_FOLD/google-toolbox-for-mac
-    git clone https://github.com/google/GoogleDataTransport.git                   $OUT_GIT_FOLD/GoogleDataTransport
-    git clone https://github.com/abseil/abseil-cpp.git                            $OUT_GIT_FOLD/abseil-cpp
-    git clone https://github.com/fmtlib/fmt.git                                   $OUT_GIT_FOLD/fmt
-    git clone https://github.com/facebook/facebook-objc-sdk.git                   $OUT_GIT_FOLD/facebook-objc-sdk
-    git clone https://github.com/firebase/firebase-ios-sdk.git                    $OUT_GIT_FOLD/firebase-ios-sdk
-    git clone https://github.com/facebook/flipper.git                             $OUT_GIT_FOLD/flipper
-    git clone https://github.com/openid/AppAuth-iOS.git                           $OUT_GIT_FOLD/AppAuth-iOS
-    git clone https://github.com/BoltsFramework/Bolts-ObjC.git                    $OUT_GIT_FOLD/Bolts-ObjC
-    git clone https://github.com/google/promises.git                              $OUT_GIT_FOLD/promises
-    git clone https://github.com/google/gtm-session-fetcher.git                   $OUT_GIT_FOLD/gtm-session-fetcher
-    git clone https://github.com/getsentry/sentry-cocoa.git                       $OUT_GIT_FOLD/sentry-cocoa
-    git clone https://github.com/rsocket/rsocket-cpp.git                          $OUT_GIT_FOLD/rsocket-cpp
-    git clone https://github.com/lblasa/double-conversion.git                     $OUT_GIT_FOLD/double-conversion
-    git clone https://github.com/tonymillion/Reachability.git                     $OUT_GIT_FOLD/Reachability
-    git clone https://github.com/libevent/libevent.git                            $OUT_GIT_FOLD/libevent
-    git clone https://github.com/ccgus/fmdb.git                                   $OUT_GIT_FOLD/fmdb
-    # glog-lblasa
-    git clone https://github.com/lblasa/glog.git                                  $OUT_GIT_FOLD/glog-lblasa
-    git clone https://github.com/facebook/facebook-sdk-swift.git                  $OUT_GIT_FOLD/facebook-sdk-swift
-    git clone https://github.com/google/GoogleUtilities.git                       $OUT_GIT_FOLD/GoogleUtilities
-    git clone https://github.com/realm/realm-cocoa.git                            $OUT_GIT_FOLD/realm-cocoa
-    # glog-google
-    git clone https://github.com/google/glog.git                                  $OUT_GIT_FOLD/glog-google
-    git clone https://github.com/robbiehanson/CocoaAsyncSocket.git                $OUT_GIT_FOLD/CocoaAsyncSocket
-    git clone https://github.com/nanopb/nanopb.git                                $OUT_GIT_FOLD/nanopb
-    git clone https://github.com/facebook/folly.git                               $OUT_GIT_FOLD/folly
-    git clone https://github.com/protocolbuffers/protobuf.git                     $OUT_GIT_FOLD/protobuf
-    git clone https://github.com/priteshrnandgaonkar/Flipper-Boost-iOSX.git       $OUT_GIT_FOLD/Flipper-Boost-iOSX
-    git clone https://github.com/google/GTMAppAuth.git                            $OUT_GIT_FOLD/GTMAppAuth
+    for (( i=0; i<${#git_libs[@]}; i=i+2 ));
+    do
+        gitUrl="${git_libs[$i+0]}"
+        destFold="${git_libs[$i+1]}"
+        echo ""
+        echo "element $i is ${gitUrl}"
+        echo "element $i is ${destFold}"
 
-    git clone https://github.com/libuv/libuv.git                                  $OUT_GIT_FOLD/libuv
-    git clone https://github.com/SDWebImage/SDWebImage.git                        $OUT_GIT_FOLD/SDWebImage
-    git clone https://github.com/SDWebImage/SDWebImageWebPCoder.git               $OUT_GIT_FOLD/SDWebImageWebPCoder
+        echo ""
+        git clone ${gitUrl} ${OUT_GIT_FOLD}/${destFold} --depth=1
+        echo ""
+    done
 
 }
 
@@ -80,53 +97,75 @@ function clone_github {
 # zip
 # ========================================================= 
 function zip_github {
+    
+    for (( i=0; i<${#git_libs[@]}; i=i+2 ));
+    do
+        gitUrl="${git_libs[$i+0]}"
+        destFold="${git_libs[$i+1]}"
+        echo ""
+        echo "element $i is ${gitUrl}"
+        echo "element $i is ${destFold}"
 
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/iOS-Deferred-Deep-Linking-SDK/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/leveldb/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/yoga/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/google-toolbox-for-mac/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/GoogleDataTransport/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/abseil-cpp/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/fmt/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/facebook-objc-sdk/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/firebase-ios-sdk/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/flipper/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/AppAuth-iOS/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/Bolts-ObjC/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/promises/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/gtm-session-fetcher/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/sentry-cocoa/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/rsocket-cpp/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/double-conversion/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/Reachability/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/libevent/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/fmdb/.git
-    # glog-lblasa
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/glog-lblasa/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/facebook-sdk-swift/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/GoogleUtilities/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/realm-cocoa/.git
-    # glog-google
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/glog-google/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/CocoaAsyncSocket/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/nanopb/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/folly/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/protobuf/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/Flipper-Boost-iOSX/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/GTMAppAuth/.git
-
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/libuv/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/SDWebImage/.git
-    zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/SDWebImageWebPCoder/.git
+        echo ""
+        zip -r $GITHUB_ZIP_FILE $OUT_GIT_FOLD/${destFold}/.git
+        echo ""
+    done
 
 }
 
+function check_gits_length {
+       gits_total_length="${#git_libs[@]}"
+       gits_two_array=2
+       gits_length=$((gits_total_length/gits_two_array))
 
+      length=0
+      ARRAY=()
+      for i in $(ls -d ${OUT_GIT_FOLD}/*/);
+      do 
+          ((length=length+1))
+          filename=$(basename -- "$i")
+          # echo ${filename%%/};
+          ARRAY+=(${filename})
+      done
 
-clone_github
-zip_github
+      # echo ${ARRAY[@]}
 
-# ========================================================= 
-# end
-# ========================================================= 
-touch $END_TAG
+      for (( lib=0; lib<${#git_libs[@]}; lib=lib+2 ));
+      do
+            gitUrl="${git_libs[$lib+0]}"
+            destFold="${git_libs[$lib+1]}"
+            exist="false"
+            for i in "${ARRAY[@]}"
+            do
+                 if [ "$i" == "$destFold" ] ; then
+                   # echo "Found"
+                   # echo "${i} is exist"
+                   exist="true"
+                 fi
+            done
+            if [ "$exist" == "false" ] ; then
+                echo ""
+                echo "*${destFold}* not exist"
+                echo ""
+            fi
+      done
+
+      echo length of git urls: $gits_length
+      echo length folder of $OUT_GIT_FOLD: $length
+}
+
+         if [ -d  "${WORK_DIR}" ]; then
+            initialFold
+            clone_github
+            zip_github
+            check_gits_length
+            
+            # ========================================================= 
+            # end
+            # ========================================================= 
+            touch $END_TAG
+
+        else
+             echo "${WORK_DIR} not exist"
+         fi
+

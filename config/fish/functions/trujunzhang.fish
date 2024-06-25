@@ -680,6 +680,9 @@ function open_ieatta_xcode_document
     open "$result"
 end
 
+# python
+alias pip_clean_cache="pip cache purge"
+
 # neovim
 alias l="lvim"
 # alias n="nvim"
