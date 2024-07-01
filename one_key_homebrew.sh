@@ -34,6 +34,7 @@ brew_apps=(
     # "opt/v2ray-core"            "v2ray-core"
 
     ## neovim
+    "opt/luarocks"              "luarocks"
     "opt/tree-sitter"           "tree-sitter"
     "opt/prettierd"             "fsouza/prettierd/prettierd"
     ## neovim(telescope)

@@ -680,6 +680,8 @@ function open_ieatta_xcode_document
     open "$result"
 end
 
+alias open_ieatta_android_release_fold="open $ORGANIZATIONS_HOME/__CODING/WORKING/ieatta-three-apps/android/app/build/outputs/apk/production/release"
+
 # python
 alias pip_clean_cache="pip cache purge"
 
