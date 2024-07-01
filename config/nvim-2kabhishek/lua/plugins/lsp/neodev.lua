@@ -1,7 +1,8 @@
 return {
-  "folke/neodev.nvim",
-  ft = { "lua", "vim" },
-  config = function()
-    require("plugins.lsp.config.neodev-config")
-  end,
+    enabled = false,
+    "folke/neodev.nvim",
+    ft = { "lua", "vim" },
+    config = function()
+        require("plugins.lsp.config.neodev-config")
+    end,
 }

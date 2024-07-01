@@ -89,7 +89,10 @@ CURRENT_APP_BACKUP_PATH=${hash_vals[$?]}
 
 PATH_BACKUP="${CURRENT_APP_BACKUP_PATH}/$(uname -m)/Applications"
 
-mkdir -p "${PATH_BACKUP}"
+    if [ "$Params" = "backup" ]; then
+        mkdir -p "${PATH_BACKUP}"
+    fi
+            
 
 info "==========================================================="
 info "params<brew-type> = ${Params}"
