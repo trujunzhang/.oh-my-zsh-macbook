@@ -57,6 +57,8 @@ config/v2ray-core*
 bash/result.csv
 
 # neovim's files
+config/nvim-2kabhishek/lazy-lock.json
+config/nvim-wSedlacek/lazy-lock.json
 *-E
 *.swp
 .nx/
