@@ -24,8 +24,8 @@ dashboard.setup({
       append = { "", icons.ui.Circle .. " nvim2K: Learn, Make, Explore! " .. icons.ui.Circle },
     },
     packages = { enable = true },
-    project = { enable = true, limit = 8 },
-    mru = { limit = 8 },
+    project = { enable = true, limit = 4 },
+    mru = { limit = 12 },
     shortcut = {
       {
         desc = icons.ui.Package .. "Mason",
