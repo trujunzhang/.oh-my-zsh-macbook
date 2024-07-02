@@ -1,7 +1,7 @@
 return {
   "nvimdev/lspsaga.nvim",
   config = function()
-    require("plugins.lsp.config.lspsaga-config")
+    require("plugins.javascript.config.lspsaga-config")
   end,
   event = "LspAttach",
 }
