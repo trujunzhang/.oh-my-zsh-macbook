@@ -247,11 +247,10 @@ local mappings = {
     u = { "<cmd>Gitsigns undo_stage_hunk<cr>", "Undo Stage Hunk" },
     v = { "<cmd>Gitsigns select_hunk<cr>", "Select Hunk" },
   },
-  h = { name = icons.ui.Bookmark .. "Harpoon" },
+  -- h = { name = icons.ui.Bookmark .. "Harpoon" },
   l = {
     name = icons.ui.Gear .. "LSP",
     a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
-    -- d = { '<cmd>Lspsaga peek_definition<cr>', 'Peek Definition' },
     d = { "<cmd>Lspsaga goto_definition<cr>", "Goto Definition" },
     f = { "<cmd>Lspsaga finder<cr>", "Finder" },
     F = { "<cmd>Telescope lsp_references<cr>", "References" },
