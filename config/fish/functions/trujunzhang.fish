@@ -305,10 +305,6 @@ alias eas_Build_All='eas build --platform all'
 # Expo(eas)(Update)
 alias easUpdateConfigure='eas update:configure'
 
-# Emacs
-# alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
-# alias emacsd="emacs -debug-init"
-
 # geny motion
 alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'genymotion'"
 
@@ -701,3 +697,8 @@ alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
 alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
 alias v='NVIM_APPNAME=nvim-wSedlacek nvim' # NvChad
 alias n='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
+
+# Emacs
+# alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
+alias emacsd="emacs -debug-init"
+alias e="emacs"

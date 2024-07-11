@@ -60,22 +60,28 @@ This function should only modify configuration layer settings."
         dotspacemacs-configuration-layers
         '(
              lua
-             epub
-             pdf
-             neotree
-             fzf
+             ;; epub
+             ;; pdf
+             ;; neotree
+             (treemacs :variables
+                    treemacs-use-all-the-icons-theme t
+                    ;; treemacs-use-scope-type 'Frames
+                    treemacs-use-scope-type 'Perspectives
+                    treemacs-use-filewatch-mode t
+                    treemacs-use-follow-mode 'tag)
+             ;; fzf
              djzhang
 
              yaml
 
-             restclient
+             ;; restclient
 
              (ranger :variables
                  ranger-override-dired 'ranger)
 
-             (dart :variables
-                 dart-backend 'lsp
-                 lsp-dart-sdk-dir "~/Documents/flutter/bin/cache/dart-sdk")
+             ;; (dart :variables
+             ;;     dart-backend 'lsp
+             ;;     lsp-dart-sdk-dir "~/Documents/flutter/bin/cache/dart-sdk")
              tide
              react
              (javascript :variables
@@ -726,6 +732,13 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+     ;; always enable indent-guide
+     (spacemacs/toggle-indent-guide-globally-on)
+
+
+    (define-key evil-normal-state-map (kbd "gh") #'spacemacs/push-mark-and-goto-beginning-of-line)
+    (define-key evil-normal-state-map (kbd "gl") #'spacemacs/push-mark-and-goto-end-of-line)
 
     ;; On my Spacemacs, auto-save saves to 'original, not the default 'cache. And create-lockfiles is turned off.
     (setq create-lockfiles nil)
