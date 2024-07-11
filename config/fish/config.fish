@@ -96,6 +96,10 @@ if [ -d $HOME/.rvm ]
     rvm default
 end
 
+if type fzf &>/dev/null
+    fzf --fish | source
+end
+
 set -x THEFUCK_OVERRIDDEN_ALIASES 'gsed,git'
 
 if set -q ZELLIJ
