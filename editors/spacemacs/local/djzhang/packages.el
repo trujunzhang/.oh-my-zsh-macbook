@@ -49,7 +49,8 @@
     ;; https://github.com/emacs-php/jetbrains.el   
     jetbrains
     ;; https://github.com/bbatsov/super-save   
-    super-save))
+    ;; super-save
+    ))
 
 (defun djzhang/post-init-eww ()
   "docstring"
