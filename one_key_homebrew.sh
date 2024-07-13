@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CURRENT=`pwd`
+CURRENT=$(pwd)
 
 # Import function files.
 source ./bash/files-functions.sh
@@ -8,7 +8,7 @@ source ./bash/tools.sh
 
 # homebrew
 # if ! command_exists brew; then
-    # ( exec "./bash/homebrew_install.sh" )
+# ( exec "./bash/homebrew_install.sh" )
 # fi
 
 # HOMEBREW_HOME="/usr/local"
@@ -24,84 +24,84 @@ brew_apps=(
     ## cocoapods(xcode)
     # "opt/cocoapods"             "cocoapods"
     ## supabase
-    "opt/supabase"              "supabase/tap/supabase"
+    "opt/supabase" "supabase/tap/supabase"
 
     # brew services start sketchybar
-    "opt/sketchybar"            "sketchybar"
+    "opt/sketchybar" "sketchybar"
     # "opt/thefuck"               "thefuck"
 
     ## v2ray
     # "opt/v2ray-core"            "v2ray-core"
 
     ## neovim
-    "opt/luarocks"              "luarocks"
-    "opt/tree-sitter"           "tree-sitter"
-    "opt/prettierd"             "fsouza/prettierd/prettierd"
+    "opt/luarocks" "luarocks"
+    "opt/tree-sitter" "tree-sitter"
+    "opt/prettierd" "fsouza/prettierd/prettierd"
     ## neovim(telescope)
-    "opt/fd"                    "fd"
-    "opt/ripgrep"               "ripgrep"
+    "opt/fd" "fd"
+    "opt/ripgrep" "ripgrep"
     ## neovim(lazygit)
-    "opt/lazygit"               "jesseduffield/lazygit/lazygit"
+    "opt/lazygit" "jesseduffield/lazygit/lazygit"
     ## neovim(fzf)
-    "opt/fzf"                   "fzf"
+    "opt/fzf" "fzf"
     ## neovim(spectre)
-    "opt/gnu-sed"               "gnu-sed"
-    "opt//buf"                  "bufbuild/buf/buf"
-    "opt/marksman"              "marksman"
+    "opt/gnu-sed" "gnu-sed"
+    "opt//buf" "bufbuild/buf/buf"
+    "opt/marksman" "marksman"
 
     ## fish
-    "opt/fish"                  "fish"
+    "opt/fish" "fish"
 
     ## neovim
-    "opt/neovim"                "neovim"
+    "opt/neovim" "neovim"
 
     ## autoenv
     # "opt/autoenv"               "autoenv"
 
     ## nginx
-    "opt/nginx"                 "nginx"
+    "opt/nginx" "nginx"
 
     ## pyenv
-    "opt/pyenv"                 "pyenv"
+    "opt/pyenv" "pyenv"
 
     ## jenkins-lts
     # https://www.jenkins.io/download/lts/macos
-    "opt/jenkins-lts"           "jenkins-lts"
-    "opt/fastlane"               "fastlane"
+    "opt/jenkins-lts" "jenkins-lts"
+    "opt/fastlane" "fastlane"
 
     ## direnv
     # https://direnv.net/#getting-started
-    "opt/direnv"             "direnv"
+    "opt/direnv" "direnv"
 
     ## git
-    "opt/git"                "git"
+    "opt/git" "git"
 
     ## autoreconf
-    "opt/automake"           "pkg-config poppler automake"
+    "opt/automake" "pkg-config poppler automake"
 
     ## wget
-    "opt/wget"               "wget"
+    "opt/wget" "wget"
 
     ## tmux
     # "opt/tmux"               "tmux"
-    "opt/zellij"             "zellij"
+    "opt/zellij" "zellij"
 
     ## autojump
-    "opt/autojump"           "autojump"
+    "opt/autojump" "autojump"
 
     ## yabai
     # https://github.com/jqlang/jq
-    "opt/jq"                 "jq"
-    "opt/yabai"              "koekeishiya/formulae/yabai"
+    "opt/jq" "jq"
+    "opt/yabai" "koekeishiya/formulae/yabai"
     # yabai --start-service
 
     ## skhd
-    "opt/skhd"               "koekeishiya/formulae/skhd"
+    "opt/skhd" "koekeishiya/formulae/skhd"
     # skhd --start-service
 
     ## React-native & Expo
-    "opt/watchman"           "bundletool watchman"
-    "opt/ccache"             "ccache"
+    "opt/watchman" "bundletool watchman"
+    "opt/ccache" "ccache"
     # "opt/sccache"            "sccache"
     # https://nektosact.com/installation/homebrew.html
     # "opt/act"                "act"
@@ -110,29 +110,31 @@ brew_apps=(
 
     ## neovim
     # https://github.com/universal-ctags/ctags
-    "opt/universal-ctags"                    "universal-ctags"
-    "opt/lua"                                "lua"
-    "opt/lua-language-server"                "lua-language-server"
+    "opt/universal-ctags" "universal-ctags"
+    "opt/lua" "lua"
+    "opt/lua-language-server" "lua-language-server"
     # https://deno.land/
-    "opt/deno"               "deno"
-    "opt/rust"               "rust"
+    "opt/deno" "deno"
+    "opt/rust" "rust"
+    ## emacs
+    'opt/sbcl' 'sbcl'
+    'opt/ocicl' 'ocicl'
 
-    "opt/mkcert"             "mkcert"
+    "opt/mkcert" "mkcert"
 )
 
-for (( i=0; i<${#brew_apps[@]}; i=i+2 ));
-do
-    echo "element $i is ${brew_apps[$i+0]}"
-    echo "element $i is ${brew_apps[$i+1]}"
+for ((i = 0; i < ${#brew_apps[@]}; i = i + 2)); do
+    echo "element $i is ${brew_apps[$i + 0]}"
+    echo "element $i is ${brew_apps[$i + 1]}"
 
-    if [ ! -d  "$HOMEBREW_HOME/${brew_apps[$i+0]}" ]; then
-        brew install ${brew_apps[$i+1]}
+    if [ ! -d "$HOMEBREW_HOME/${brew_apps[$i + 0]}" ]; then
+        brew install ${brew_apps[$i + 1]}
     fi
 done
 
 ## list
 # if ! command_exists ssh-copy-id; then
-    # brew install gpg ssh-copy-id
+# brew install gpg ssh-copy-id
 # fi
 
 ## emacs

@@ -614,13 +614,16 @@ alias wrmvimsession="rm -rf $HOME/.local/share/nvim/sessions"
 # vpn
 alias wcloudflareip="curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o /tmp/cf.sh && chmod +x /tmp/cf.sh && cd /tmp && ./cf.sh"
 
+alias https_proxy_v2ray="export https_proxy=http://127.0.0.1:1087"
+alias http_proxy_v2ray="export http_proxy=http://127.0.0.1:1087"
+
 # git clone
 alias dclone_expensify="git clone https://github.com/expensify/App.git expensify && cd expensify"
 alias dclone_ieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
 alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-fixed.git usedExpApp && cd usedExpApp"
 alias dclone_cocoapods="git clone https://github.com/CocoaPods/Specs"
 
-alias git_set_v2ray_proxy="git config --global http.proxy http://127.0.0.1:443"
+alias git_set_v2ray_proxy="git config --global http.proxy http://127.0.0.1:1087"
 alias git_set_clash_proxy="git config --global http.proxy http://127.0.0.1:7890"
 alias git_checkout_proxy="git config --global http.proxy"
 
