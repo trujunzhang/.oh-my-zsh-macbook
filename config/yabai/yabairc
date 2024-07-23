@@ -27,6 +27,7 @@ yabai -m rule --add app="^Elmedia Player$" space=media
 yabai -m rule --add app="^vlc$" space=media manage=off
 yabai -m rule --add app="^Figma$" space=design
 yabai -m rule --add app="^Flipper$" space=debug
+yabai -m rule --add app="^WezTerm$" space=media
 
 # window rules
 # monitor #2

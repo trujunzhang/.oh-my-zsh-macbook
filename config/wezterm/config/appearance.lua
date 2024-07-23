@@ -1,6 +1,6 @@
 local wezterm = require('wezterm')
 local gpu_adapters = require('utils.gpu_adapter')
-local colors = require('colors.custom')
+-- local colors = require('colors.custom')
 
 return {
    animation_fps = 60,
@@ -10,7 +10,8 @@ return {
    webgpu_preferred_adapter = gpu_adapters:pick_best(),
 
    -- color scheme
-   colors = colors,
+   -- colors = colors,
+   color_scheme = 'rose-pine-dawn',
 
    -- background
    -- background = {
@@ -26,12 +27,16 @@ return {
    --    },
    -- },
 
+   -- window_decorations = "NONE",
+
+   window_decorations = "RESIZE",
+
    -- scrollbar
    enable_scroll_bar = true,
 
    -- tab bar
    enable_tab_bar = true,
-   hide_tab_bar_if_only_one_tab = false,
+   hide_tab_bar_if_only_one_tab = true,
    use_fancy_tab_bar = false,
    tab_max_width = 25,
    show_tab_index_in_tab_bar = false,

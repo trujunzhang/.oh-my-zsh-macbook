@@ -14,6 +14,7 @@ end
 
 -- stylua: ignore
 local keys = {
+   { key = 'q', mods = 'CMD', action = wezterm.action.QuitApplication },
    -- misc/useful --
    { key = 'F1', mods = 'NONE', action = 'ActivateCopyMode' },
    { key = 'F2', mods = 'NONE', action = act.ActivateCommandPalette },
@@ -53,8 +54,8 @@ local keys = {
    { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\x15' },
 
    -- copy/paste --
-   { key = 'c',          mods = 'CTRL|SHIFT',  action = act.CopyTo('Clipboard') },
-   { key = 'v',          mods = 'CTRL|SHIFT',  action = act.PasteFrom('Clipboard') },
+   { key = 'c',          mods = 'CMD',  action = act.CopyTo('Clipboard') },
+   { key = 'v',          mods = 'CMD',  action = act.PasteFrom('Clipboard') },
 
    -- tabs --
    -- tabs: spawn+close
