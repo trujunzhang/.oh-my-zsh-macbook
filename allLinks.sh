@@ -124,6 +124,9 @@ function link_config_fold {
     # sketchybar
     directoryLink "config(sketchybar)" "$TRUJUNZHANG_DOTFILES_HOME/config/sketchybar" "$HOME/.config/sketchybar"
 
+    # wezterm
+    directoryLink "config(sketchybar)" "$TRUJUNZHANG_DOTFILES_HOME/config/wezterm" "$HOME/.config/wezterm"
+
     # quicklisp
     fileLink "quicklisp(rc)" "$TRUJUNZHANG_DOTFILES_HOME/config/quicklisp/sbclrc.symlink" "$HOME/.sbclrc"
 
