@@ -43,12 +43,12 @@ return {
    switch_to_last_active_tab_when_closing_tab = true,
 
    -- window
-   window_padding = {
-      left = 5,
-      right = 10,
-      top = 12,
-      bottom = 7,
-   },
+   -- window_padding = {
+   --    left = 5,
+   --    right = 10,
+   --    top = 12,
+   --    bottom = 7,
+   -- },
    window_close_confirmation = 'NeverPrompt',
    window_frame = {
       active_titlebar_bg = '#090909',

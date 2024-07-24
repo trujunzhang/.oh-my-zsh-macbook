@@ -13,7 +13,8 @@ local function platform()
       os = os,
       is_win = is_win,
       is_linux = is_linux,
-      is_mac = is_mac,
+      is_mac_arm = wezterm.target_triple == 'aarch64-apple-darwin',
+      is_mac_x86 = wezterm.target_triple == 'x86_64-apple-darwin',
    }
 end
 
