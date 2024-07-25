@@ -27,7 +27,7 @@ local keys = {
    },
    { key = 'F11', mods = 'NONE',    action = act.ToggleFullScreen },
    { key = 'F12', mods = 'NONE',    action = act.ShowDebugOverlay },
-   { key = 'f',   mods = mod.SUPER, action = act.Search({ CaseInSensitiveString = '' }) },
+   -- { key = 'f',   mods = mod.SUPER, action = act.Search({ CaseInSensitiveString = '' }) },
    {
       key = 'u',
       mods = mod.SUPER,
@@ -71,20 +71,20 @@ local keys = {
 
    -- window --
    -- spawn windows
-   { key = 'n',          mods = mod.SUPER,     action = act.SpawnWindow },
+   -- { key = 'n',          mods = mod.SUPER,     action = act.SpawnWindow },
 
    -- panes --
    -- panes: split panes
-   {
-      key = [[\]],
-      mods = mod.SUPER,
-      action = act.SplitVertical({ domain = 'CurrentPaneDomain' }),
-   },
-   {
-      key = [[\]],
-      mods = mod.SUPER_REV,
-      action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
-   },
+   -- {
+   --    key = [[\]],
+   --    mods = mod.SUPER,
+   --    action = act.SplitVertical({ domain = 'CurrentPaneDomain' }),
+   -- },
+   -- {
+   --    key = [[\]],
+   --    mods = mod.SUPER_REV,
+   --    action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
+   -- },
 
    -- panes: zoom+close pane
    -- { key = 'Enter', mods = mod.SUPER,     action = act.TogglePaneZoomState },
@@ -103,47 +103,56 @@ local keys = {
 
    -- key-tables --
    -- resizes fonts
-   {
-      key = 'f',
-      mods = 'LEADER',
-      action = act.ActivateKeyTable({
-         name = 'resize_font',
-         one_shot = false,
-         timemout_miliseconds = 1000,
-      }),
-   },
+   -- {
+   --    key = 'f',
+   --    mods = 'LEADER',
+   --    action = act.ActivateKeyTable({
+   --       name = 'resize_font',
+   --       one_shot = false,
+   --       timemout_miliseconds = 1000,
+   --    }),
+   -- },
    -- resize panes
-   {
-      key = 'p',
-      mods = 'LEADER',
-      action = act.ActivateKeyTable({
-         name = 'resize_pane',
-         one_shot = false,
-         timemout_miliseconds = 1000,
-      }),
-   },
+   -- {
+   --    key = 'p',
+   --    mods = 'LEADER',
+   --    action = act.ActivateKeyTable({
+   --       name = 'resize_pane',
+   --       one_shot = false,
+   --       timemout_miliseconds = 1000,
+   --    }),
+   -- },
 }
 
 -- stylua: ignore
 local key_tables = {
-   resize_font = {
-      { key = 'k',      action = act.IncreaseFontSize },
-      { key = 'j',      action = act.DecreaseFontSize },
-      { key = 'r',      action = act.ResetFontSize },
-      { key = 'Escape', action = 'PopKeyTable' },
-      { key = 'q',      action = 'PopKeyTable' },
-   },
-   resize_pane = {
-      { key = 'k',      action = act.AdjustPaneSize({ 'Up', 1 }) },
-      { key = 'j',      action = act.AdjustPaneSize({ 'Down', 1 }) },
-      { key = 'h',      action = act.AdjustPaneSize({ 'Left', 1 }) },
-      { key = 'l',      action = act.AdjustPaneSize({ 'Right', 1 }) },
-      { key = 'Escape', action = 'PopKeyTable' },
-      { key = 'q',      action = 'PopKeyTable' },
-   },
+   -- resize_font = {
+   --    { key = 'k',      action = act.IncreaseFontSize },
+   --    { key = 'j',      action = act.DecreaseFontSize },
+   --    { key = 'r',      action = act.ResetFontSize },
+   --    { key = 'Escape', action = 'PopKeyTable' },
+   --    { key = 'q',      action = 'PopKeyTable' },
+   -- },
+   -- resize_pane = {
+   --    { key = 'k',      action = act.AdjustPaneSize({ 'Up', 1 }) },
+   --    { key = 'j',      action = act.AdjustPaneSize({ 'Down', 1 }) },
+   --    { key = 'h',      action = act.AdjustPaneSize({ 'Left', 1 }) },
+   --    { key = 'l',      action = act.AdjustPaneSize({ 'Right', 1 }) },
+   --    { key = 'Escape', action = 'PopKeyTable' },
+   --    { key = 'q',      action = 'PopKeyTable' },
+   -- },
 }
 
 local mouse_bindings = {
+   -- Change the default click behavior so that it only selects
+   -- text and doesn't open hyperlinks, and that it populates
+   -- the Clipboard rather the PrimarySelection which is part
+   -- of the default assignment for a left mouse click.
+   {
+      event = { Up = { streak = 1, button = 'Left' } },
+      mods = 'NONE',
+      action = wezterm.action.CompleteSelection('Clipboard'),
+   },
    -- Ctrl-click will open the link under the mouse cursor
    {
       event = { Up = { streak = 1, button = 'Left' } },
