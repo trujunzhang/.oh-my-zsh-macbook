@@ -701,6 +701,8 @@ alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
 alias v='NVIM_APPNAME=nvim-wSedlacek nvim' # NvChad
 alias n='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
 
+alias un='neovide -- -u "$HOME/.config/nvim-2kabhishek/init.lua"'
+
 # Emacs
 # alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
 alias emacsd="emacs -debug-init"

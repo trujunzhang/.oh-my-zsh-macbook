@@ -145,38 +145,6 @@ local mappings = {
     r = { "<cmd>Telescope reloader<cr>", "Reload Module" },
     R = { "<cmd>ReloadConfig<cr>", "Reload Configs" },
   },
-  -- b = {
-  --   name = icons.ui.Database .. "buffer",
-  --   ["1"] = { "<Cmd>BufferLineGoToBuffer 1<CR>", "goto 1" },
-  --   ["2"] = { "<Cmd>BufferLineGoToBuffer 2<CR>", "goto 2" },
-  --   ["3"] = { "<Cmd>BufferLineGoToBuffer 3<CR>", "goto 3" },
-  --   ["4"] = { "<Cmd>BufferLineGoToBuffer 4<CR>", "goto 4" },
-  --   ["5"] = { "<Cmd>BufferLineGoToBuffer 5<CR>", "goto 5" },
-  --   ["6"] = { "<Cmd>BufferLineGoToBuffer 6<CR>", "goto 6" },
-  --   ["7"] = { "<Cmd>BufferLineGoToBuffer 7<CR>", "goto 7" },
-  --   ["8"] = { "<Cmd>BufferLineGoToBuffer 8<CR>", "goto 8" },
-  --   ["9"] = { "<Cmd>BufferLineGoToBuffer 9<CR>", "goto 9" },
-  --   c = { "<Cmd>BufferLinePickClose<CR>", "delete buffer" },
-  --   p = { "<Cmd>BufferLineTogglePin<CR>", "toggle pin" },
-  --   s = { "<Cmd>BufferLinePick<CR>", "pick buffer" },
-  --   t = { "<Cmd>BufferLineGroupToggle docs<CR>", "toggle groups" },
-  --   f = { "<cmd>Telescope buffers<cr>", "Find" },
-  --   b = { "<cmd>b#<cr>", "Previous" },
-  --   o = { "<cmd>BufferLineCloseOthers<cr>", "Close other buffers" },
-  --   h = { "<cmd>BufferLineCloseLeft<cr>", "Close all to the left" },
-  --   l = {
-  --     "<cmd>BufferLineCloseRight<cr>",
-  --     "Close all to the right",
-  --   },
-  --   D = {
-  --     "<cmd>BufferLineSortByDirectory<cr>",
-  --     "Sort by directory",
-  --   },
-  --   L = {
-  --     "<cmd>BufferLineSortByExtension<cr>",
-  --     "Sort by language",
-  --   },
-  -- },
   d = {
     name = icons.ui.Bug .. "Debug",
     b = { "<cmd>DapToggleBreakpoint<cr>", "Breakpoint" },
@@ -191,63 +159,6 @@ local mappings = {
     t = { '<cmd>lua require"jester".debug()<cr>', "Debug cursor jtest" },
     x = { "<cmd>DapTerminate<cr>", "Exit" },
   },
-  -- f = {
-  --   name = icons.ui.Telescope .. "Find",
-  --   b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-  --   B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-  --   a = { '<cmd>lua require("telescope").extensions.menufacture.find_files()<cr>', "All Files" },
-  --   c = { "<cmd>Telescope git_bcommits<cr>", "File Commits" },
-  --   C = { "<cmd>Telescope git_commits<cr>", "Git Commits" },
-  --   f = { '<cmd>lua require("telescope").extensions.menufacture.git_files()<cr>', "Find files" },
-  --   g = { '<cmd>lua require("telescope").extensions.menufacture.live_grep()<cr>', "Find Text" },
-  --   G = { '<cmd>lua require("telescope").extensions.menufacture.grep_string()<cr>', "Find Word" },
-  --   h = { "<cmd>Telescope help_tags<cr>", "Help" },
-  --   H = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-  --   k = { "<cmd>Telescope commands<cr>", "Commands" },
-  --   K = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-  --   l = { "<cmd>Telescope resume<cr>", "Last Search" },
-  --   L = { "<cmd>Telescope loclist<cr>", "Location List" },
-  --   n = { "<cmd>enew<cr>", "New File" },
-  --   r = { "<cmd>Telescope oldfiles<cr>", "Recent Files" },
-  --   p = { "<cmd>Telescope<cr>", "Panel" },
-  --   q = { "<cmd>Telescope quickfix<cr>", "Quickfix" },
-  --   s = { "<cmd>Telescope live_grep grep_open_files=true<cr>", "Find in Open Files" },
-  --   u = { "<cmd>Telescope undo<cr>", "Undo History" },
-  --   ['"'] = { "<cmd>Telescope registers<cr>", "Registers" },
-  --   ["."] = { "<cmd>Telescope symbols<cr>", "Emojis" },
-  --   [","] = { "<cmd>Nerdy<cr>", "Nerd Glyphs" },
-  -- },
-  g = {
-    name = icons.git.Octoface .. "Git",
-    a = { "<cmd>Gitsigns stage_hunk<cr>", "Stage Hunk" },
-    h = { '<cmd>lua require("telescope").extensions.git_file_history.git_file_history()<cr>', "Git History" },
-    l = { "<cmd>Telescope git_file_history<cr>", "Git file history" },
-    A = { "<cmd>Gitsigns stage_buffer<cr>", "Stage Buffer" },
-    b = { "<cmd>Gitsigns blame_line<cr>", "Blame" },
-    c = { "<cmd>Git<cr>", "Commit" },
-    C = { "<cmd>CoAuthor<cr>", "Add Co Author" },
-    d = { "<cmd>Gitsigns preview_hunk<cr>", "Preview Hunk" },
-    D = { "<cmd>Gitsigns diffthis HEAD<cr>", "Diff" },
-    g = { "<cmd>Fterm lazygit<cr>", "Lazygit" },
-    j = { "<cmd>Gitsigns next_hunk<cr>", "Next Hunk" },
-    k = { "<cmd>Gitsigns prev_hunk<cr>", "Prev Hunk" },
-    r = { "<cmd>Gitsigns reset_hunk<cr>", "Reset Hunk" },
-    R = { "<cmd>Gitsigns reset_buffer<cr>", "Reset Buffer" },
-    s = { "<cmd>Telescope git_status<cr>", "Changed files" },
-    S = { "<cmd>Telescope git_stash<cr>", "Stashed Changes" },
-    t = {
-      name = "Git Toggle",
-      b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Blame" },
-      d = { "<cmd>Gitsigns toggle_deleted<cr>", "Deleted" },
-      l = { "<cmd>Gitsigns toggle_linehl<cr>", "Line HL" },
-      n = { "<cmd>Gitsigns toggle_numhl<cr>", "Number HL" },
-      s = { "<cmd>Gitsigns toggle_signs<cr>", "Signs" },
-      w = { "<cmd>Gitsigns toggle_word_diff<cr>", "Word Diff" },
-    },
-    u = { "<cmd>Gitsigns undo_stage_hunk<cr>", "Undo Stage Hunk" },
-    v = { "<cmd>Gitsigns select_hunk<cr>", "Select Hunk" },
-  },
-  -- h = { name = icons.ui.Bookmark .. "Harpoon" },
   l = {
     name = icons.ui.Gear .. "LSP",
     a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
@@ -334,19 +245,6 @@ local mappings = {
     x = { "<cmd>Lazy clean<cr>", "Clean" },
   },
 
-  -- spectre
-  -- vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {
-  --     desc = "Toggle Spectre"
-  -- })
-  -- vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {
-  --     desc = "Search current word"
-  -- })
-  -- vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {
-  --     desc = "Search current word"
-  -- })
-  -- vim.keymap.set('n', '<leader>sf', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {
-  --     desc = "Search on current file"
-  -- })
   r = {
     name = icons.diagnostics.Hint .. "Refactor",
     b = { "<cmd>lua require('spectre').open_file_search({select_word=true})<cr>", "Spectre Replace Buffer" },
