@@ -23,6 +23,7 @@ brew_apps=(
     "Obsidian.app" "obsidian"
     "Alacritty.app" "alacritty"
     "Wezterm.app" "wezterm"
+    "Neovide.app" "Neovide"
 
     # System tools
     # "V2rayU.app"              "v2rayu"

@@ -21,6 +21,19 @@ set -g -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/25.1.8937393
 set -g -x HOMEBREW_BOTTLE_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles"
 set -g -x HOMEBREW_API_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles/api"
 
+
+if test -d /opt/homebrew # MacOS arm64
+    set -gx HOMEBREW_PREFIX /opt/homebrew
+    set -gx HOMEBREW_CELLAR "$HOMEBREW_PREFIX/Cellar"
+    set -gx HOMEBREW_REPOSITORY "$HOMEBREW_PREFIX/homebrew"
+end
+
+fish_add_path -gP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin"
+set -q MANPATH; and set MANPATH ''
+set -gx MANPATH "$HOMEBREW_PREFIX/share/man" $MANPATH
+set -q INFOPATH; and set INFOPATH ''
+set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH
+
 # set -g -x http_proxy "http://127.0.0.1:1087"
 # set -g -x https_proxy "http://127.0.0.1:1087"
 # set -g -x ALL_PROXY "socks5://127.0.0.1:1086"

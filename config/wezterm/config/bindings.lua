@@ -49,9 +49,9 @@ local keys = {
    -- },
 
    -- cursor movement --
-   { key = 'LeftArrow',  mods = mod.SUPER,     action = act.SendString '\x1bOH' },
-   { key = 'RightArrow', mods = mod.SUPER,     action = act.SendString '\x1bOF' },
-   { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\x15' },
+   -- { key = 'LeftArrow',  mods = mod.SUPER,     action = act.SendString '\x1bOH' },
+   -- { key = 'RightArrow', mods = mod.SUPER,     action = act.SendString '\x1bOF' },
+   -- { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\x15' },
 
    -- copy/paste --
    { key = 'c',          mods = 'CMD',  action = act.CopyTo('Clipboard') },
