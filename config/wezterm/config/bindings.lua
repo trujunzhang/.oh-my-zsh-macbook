@@ -64,10 +64,10 @@ local keys = {
    -- { key = 'w',          mods = mod.SUPER_REV, action = act.CloseCurrentTab({ confirm = false }) },
 
    -- tabs: navigation
-   { key = '[',          mods = mod.SUPER,     action = act.ActivateTabRelative(-1) },
-   { key = ']',          mods = mod.SUPER,     action = act.ActivateTabRelative(1) },
-   { key = '[',          mods = mod.SUPER_REV, action = act.MoveTabRelative(-1) },
-   { key = ']',          mods = mod.SUPER_REV, action = act.MoveTabRelative(1) },
+   -- { key = '[',          mods = mod.SUPER,     action = act.ActivateTabRelative(-1) },
+   -- { key = ']',          mods = mod.SUPER,     action = act.ActivateTabRelative(1) },
+   -- { key = '[',          mods = mod.SUPER_REV, action = act.MoveTabRelative(-1) },
+   -- { key = ']',          mods = mod.SUPER_REV, action = act.MoveTabRelative(1) },
 
    -- window --
    -- spawn windows
