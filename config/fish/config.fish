@@ -38,6 +38,8 @@ set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH
 # set -g -x https_proxy "http://127.0.0.1:1087"
 # set -g -x ALL_PROXY "socks5://127.0.0.1:1086"
 
+set -g -x NVM_NODEJS_ORG_MIRROR "http://nodejs.org/dist"
+
 set -g -x ZELLIJ_AUTO_ATTACH true
 
 fish_add_path "$ANDROID_SDK_ROOT"

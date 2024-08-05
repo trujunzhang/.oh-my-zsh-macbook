@@ -636,6 +636,8 @@ alias wclean_nvim-wSedlacekCache="rm -rf $HOME/.cache/nvim-wSedlacek && rm -rf $
 alias wclean_nvim-2kabhishekCache="rm -rf $HOME/.cache/nvim-2kabhishek && rm -rf $HOME/.local/state/nvim-2kabhishek && rm -rf $HOME/.local/share/nvim-2kabhishek"
 alias wclean_all_nvim_cache="wclean_nvimCache && wclean_nvim-wSedlacekCache && wclean_nvim-2kabhishekCache"
 
+alias set_rvm_source='echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db'
+
 # crossover
 function linkCrossOverBottle
     set bottle $argv[1]

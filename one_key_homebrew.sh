@@ -61,6 +61,8 @@ brew_apps=(
     ## nginx
     "opt/nginx" "nginx"
 
+    # rbenv
+    "opt/rbenv" "rbenv"
     ## pyenv
     "opt/pyenv" "pyenv"
 
