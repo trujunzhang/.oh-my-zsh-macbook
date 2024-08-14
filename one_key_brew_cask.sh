@@ -11,60 +11,50 @@ source ./bash/tools.sh
 
 brew_apps=(
     # Editor
-    # "MacVim.app"              "macvim"
-    "Visual Studio Code.app" "visual-studio-code"
-    # "Emacs.app"               "emacs"
-    # "Sourcetree.app"          "sourcetree"
-    # "Insomnia.app"            "insomnia"
+    "Visual Studio Code.app" "visual-studio-code" "copy"
+    # "Emacs.app"               "emacs" "copy"
+    # "Sourcetree.app"          "sourcetree" 'ssd'
+    # "Insomnia.app"            "insomnia" 'ssd'
     # https://fbflipper.com/
-    # "Flipper.app"             "flipper"
-    # "Realm Studio.app"        "mongodb-realm-studio"
-    "Zed.app" "zed"
-    "Obsidian.app" "obsidian"
-    "Alacritty.app" "alacritty"
-    "Wezterm.app" "wezterm"
-    "Neovide.app" "Neovide"
+    # "Flipper.app"             "flipper" 'copy'
+    # "Realm Studio.app"        "mongodb-realm-studio" 'copy'
+    "Obsidian.app" "obsidian" 'copy'
+    "Alacritty.app" "alacritty" 'copy'
+    "Wezterm.app" "wezterm" 'copy'
+    "Neovide.app" "Neovide" 'copy'
 
     # System tools
-    # "V2rayU.app"              "v2rayu"
-    "Raycast.app" "raycast"
-    "SpaceLauncher.app" "spacelauncher"
-    "Notion.app" "notion"
-    "OneDrive.app" "onedrive"
-    # "Hammerspoon.app"         "hammerspoon"
-    # "Authy Desktop.app"       "authy"
-    "BaiduNetdisk_mac.app" "baidunetdisk"
-    # "Grammarly Editor.app"    "grammarly"
+    "Raycast.app" "raycast" 'copy'
+    "SpaceLauncher.app" "spacelauncher" 'copy'
+    "Notion.app" "notion" 'ssd'
+    "OneDrive.app" "onedrive" 'copy'
+    # "Hammerspoon.app"         "hammerspoon" 'copy'
+    # "Authy Desktop.app"       "authy" 'copy'
+    "BaiduNetdisk_mac.app" "baidunetdisk" 'ssd'
+    # "Grammarly Editor.app"    "grammarly" 'copy'
 
     # Web browser
-    "Google Chrome.app" "google-chrome"
-    "Vivaldi.app" "vivaldi"
-    "Opera.app" "opera"
-    "Firefox.app" "firefox"
-    "Brave Browser.app" "brave-browser"
-    # "qutebrowser.app"         "qutebrowser"
-    "Arc.app" "arc"
-    # "ResponsivelyApp.app"     "responsively"
+    "Google Chrome.app" "google-chrome" 'ssd'
+    "Vivaldi.app" "vivaldi" 'ssd'
+    "Opera.app" "opera" 'ssd'
+    "Firefox.app" "firefox" 'ssd'
+    "Brave Browser.app" "brave-browser" 'ssd'
+    "Arc.app" "arc" 'ssd'
+    # "ResponsivelyApp.app"     "responsively" 'copy'
 
     # =========================================
     # required password
     # =========================================
-    "Microsoft Edge.app" "microsoft-edge"
-
-    # Video player
-    # "Kodi.app"                "kodi"
-    # "VLC.app"                 "vlc"
-    # "mpv.app"                 "mpv"
+    "Microsoft Edge.app" "microsoft-edge" 'ssd'
 
     # Design apps
-    "Figma.app" "figma"
-    "Zeplin.app" "zeplin"
-    # "Adobe Creative Cloud"    "adobe-creative-cloud"
+    "Figma.app" "figma" 'copy'
+    "Zeplin.app" "zeplin" 'copy'
 
     # chat apps
-    "Skype.app" "skype"
-    # "WeChat.app"              "wechat"
-    # "QQ.app"                  "qq"
+    "Skype.app" "skype" 'ssd'
+    # "WeChat.app"              "wechat" "ssd"
+    # "QQ.app"                  "qq" 'ssd'
 )
 
 DEFAULTVALUE="install"
@@ -114,7 +104,6 @@ function backup_apps {
         rm -rf "${app_path_in_backup_folder}"
     fi
 
-    setopt -s dotglob
     cp -Rvp "/Applications/${name}" "${app_path_in_backup_folder}"
 }
 
@@ -126,7 +115,6 @@ function restore_apps {
     info "Backup app path: ${app_path_in_backup_folder}"
 
     if [ -d "${app_path_in_backup_folder}" ]; then
-        setopt -s dotglob
         cp -Rvp "${app_path_in_backup_folder}" "/Applications/${name}"
     fi
 }
@@ -144,6 +132,7 @@ function link_apps {
 function install_brew_app {
     name=$1
     app=$2
+    shouldCopyInApplications=$3
 
     if [ "$Params" = "link" ]; then
         if [ ! -d "/Applications/${name}" ]; then
@@ -155,7 +144,9 @@ function install_brew_app {
         fi
     elif [ "$Params" = "restore" ]; then
         if [ ! -d "/Applications/${name}" ]; then
-            restore_apps "${name}"
+            if [ "$shouldCopyInApplications" = "copy" ]; then
+                restore_apps "${name}"
+            fi
         fi
     elif [ "$Params" = "delete" ]; then
         if [ -d "/Applications/${name}" ]; then
@@ -178,16 +169,19 @@ function install_brew_app {
     fi
 }
 
-for ((i = 0; i < ${#brew_apps[@]}; i = i + 2)); do
+for ((i = 0; i < ${#brew_apps[@]}; i = i + 3)); do
     name="${brew_apps[$i + 0]}"
     app="${brew_apps[$i + 1]}"
+    shouldCopyInApplications="${brew_apps[$i + 2]}"
+
     info ""
     info "element $i is ${name}"
     info "element $i is ${app}"
+    info "element $i is ${shouldCopyInApplications}"
 
     info ""
     if [ ! -L "/Applications/${name}" ]; then
-        install_brew_app "${name}" "${app}"
+        install_brew_app "${name}" "${app}" "${shouldCopyInApplications}"
     fi
     info ""
 done
@@ -195,7 +189,7 @@ done
 if [[ $(uname -m) == 'x86_64' ]]; then
     # macOS tool to limit maximum charging percentage
     # https://github.com/davidwernhart/AlDente-Charge-Limiter
-    install_brew_app "AlDente.app" aldente
+    install_brew_app "AlDente.app" aldente 'copy'
 fi
 
 # =========================================
@@ -203,10 +197,8 @@ fi
 # =========================================
 if [[ $(uname -m) == 'arm64' ]]; then
     info "install apps for arm64"
-    # install_brew_app "Docker.app" docker
-
-    # install_brew_app "pgAdmin 4.app" pgadmin4
-    # install_brew_app "iTerm.app" iterm2
+    # install_brew_app "Docker.app" docker 'copy'
+    # install_brew_app "pgAdmin 4.app" pgadmin4 'copy'
 fi
 
 ## font-fira

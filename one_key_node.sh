@@ -57,7 +57,7 @@ node_apps=(
 
     # neovim
     "neovim"
-    "pyright",
+    "pyright"
     "typescript-language-server"
     "vscode-langservers-extracted" # Ready:"vscode-eslint-language-server"
     "emmet-ls"

@@ -64,3 +64,5 @@ config/nvim-lazy/lazy-lock.json
 *-E
 *.swp
 .nx/
+
+wget-log

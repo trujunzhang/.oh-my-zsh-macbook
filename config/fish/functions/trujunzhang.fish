@@ -629,6 +629,7 @@ alias git_checkout_proxy="git config --global http.proxy"
 
 alias git_checkout_submodules="git submodule update --init --recursive --depth=1"
 
+alias wclean_homebrew="rm -rf $HOME/Library/Caches/Homebrew"
 alias wclean_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
 alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"
 alias wclean_nvimCache="rm -rf $HOME/.cache/nvim && rm -rf $HOME/.local/state/nvim && rm -rf $HOME/.local/share/nvim"
