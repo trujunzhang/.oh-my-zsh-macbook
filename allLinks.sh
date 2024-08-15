@@ -121,6 +121,9 @@ function link_config_fold {
     # alacritty
     directoryLink "config(alacritty)" "$TRUJUNZHANG_DOTFILES_HOME/config/alacritty" "$HOME/.config/alacritty"
 
+    # aerospace
+    directoryLink "config(alacritty)" "$TRUJUNZHANG_DOTFILES_HOME/config/aerospace" "$HOME/.config/aerospace"
+
     # sketchybar
     directoryLink "config(sketchybar)" "$TRUJUNZHANG_DOTFILES_HOME/config/sketchybar" "$HOME/.config/sketchybar"
 
