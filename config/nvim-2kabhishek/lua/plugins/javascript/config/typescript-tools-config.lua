@@ -45,7 +45,15 @@ local handlers = {
 }
 
 require("typescript-tools").setup({
-  on_attach = on_attach,
+  -- on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    -- client.server_capabilities.documentFormattingProvider = false
+    -- client.server_capabilities.documentRangeFormattingProvider = false
+
+    if vim.lsp.inlay_hint then
+      vim.lsp.inlay_hint(bufnr, true)
+    end
+  end,
   handlers = handlers,
 
   settings = {

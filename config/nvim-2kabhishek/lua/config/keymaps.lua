@@ -71,3 +71,7 @@ map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 map("n", "gm", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
 map("n", "gt", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", opts)
+
+vim.keymap.set("n", "<leader>i", function()
+  require("lib.util").toggleInlayHints()
+end)

@@ -2,6 +2,8 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+set -gx TERM xterm-256color
+
 # Android SDK
 # ======================================================================
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
@@ -98,6 +100,11 @@ if [ -d $HOME/.pyenv ]
     pyenv init - | source
 end
 
+if type -q eza
+    alias ll "eza -l -g --icons"
+    alias lla "ll -a"
+end
+
 # ======================================================================
 # finally
 # ======================================================================
@@ -113,6 +120,10 @@ end
 
 if type fzf &>/dev/null
     fzf --fish | source
+
+    # Fzf
+    set -g FZF_PREVIEW_FILE_CMD "bat --style=numbers --color=always --line-range :500"
+    set -g FZF_LEGACY_KEYBINDINGS 0
 end
 
 set -x THEFUCK_OVERRIDDEN_ALIASES 'gsed,git'
