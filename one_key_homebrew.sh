@@ -91,16 +91,6 @@ brew_apps=(
     ## autojump
     "opt/autojump" "autojump"
 
-    ## yabai
-    # https://github.com/jqlang/jq
-    "opt/jq" "jq"
-    "opt/yabai" "koekeishiya/formulae/yabai"
-    # yabai --start-service
-
-    ## skhd
-    "opt/skhd" "koekeishiya/formulae/skhd"
-    # skhd --start-service
-
     ## React-native & Expo
     "opt/watchman" "bundletool watchman"
     "opt/ccache" "ccache"
@@ -124,44 +114,59 @@ brew_apps=(
 
     "opt/mkcert" "mkcert"
 )
+brew_apps_arm=(
 
-for ((i = 0; i < ${#brew_apps[@]}; i = i + 2)); do
-    echo "element $i is ${brew_apps[$i + 0]}"
-    echo "element $i is ${brew_apps[$i + 1]}"
+)
+brew_apps_x86=(
+    ## yabai
+    # https://github.com/jqlang/jq
+    "opt/jq" "jq"
+    "opt/yabai" "koekeishiya/formulae/yabai"
+    # yabai --start-service
 
-    if [ ! -d "$HOMEBREW_HOME/${brew_apps[$i + 0]}" ]; then
-        brew install ${brew_apps[$i + 1]}
+    ## skhd
+    "opt/skhd" "koekeishiya/formulae/skhd"
+    # skhd --start-service
+
+)
+
+function install_apps {
+    apps=("$@")
+    for ((i = 0; i < ${#apps[@]}; i = i + 2)); do
+        echo "element $i is ${apps[$i + 0]}"
+        echo "element $i is ${apps[$i + 1]}"
+
+        if [ ! -d "$HOMEBREW_HOME/${apps[$i + 0]}" ]; then
+            brew install ${apps[$i + 1]}
+        fi
+    done
+}
+
+function install_apps_on_current_os {
+    if [[ $(uname -m) == 'arm64' ]]; then
+        # info M2
+        install_apps "${brew_apps_arm[@]}"
     fi
-done
+
+    if [[ $(uname -m) == 'x86_64' ]]; then
+        # info Mackook
+        install_apps "${brew_apps_x86[@]}"
+    fi
+}
 
 ## list
 # if ! command_exists ssh-copy-id; then
 # brew install gpg ssh-copy-id
 # fi
 
-## emacs
-# if [ ! -d  "$HOMEBREW_HOME/opt/emacs-plus@29" ]; then
-#     ## https://github.com/d12frosted/homebrew-emacs-plus
-#     ## url = https://github.com/emacs-mirror/emacs.git
-#     brew tap d12frosted/emacs-plus
-#     brew install emacs-plus@29 --with-spacemacs-icon
-#     brew link emacs-plus@29
-#     # open /usr/local/opt/emacs-plus@29
-# fi
-
-function install_emacs {
-    brew tap d12frosted/emacs-plus
-
-    # install latest stable release, with Spacemacs icon and native compilation
-    brew install emacs-plus --with-spacemacs-icon --with-native-comp
-
-    osascript -e 'tell application "Finder" to make alias file to posix file "/opt/homebrew/opt/emacs-plus@29/Emacs.app" at POSIX file "/Applications"'
-}
-
 ## fzf
 if [ ! -d "$HOMEBREW_HOME/opt/fzf" ]; then
     $(brew --prefix)/opt/fzf/install
 fi
+
+## install common apps
+install_apps "${brew_apps[@]}"
+install_apps_on_current_os
 
 ## Finally, restart the nginx.
 brew services restart nginx

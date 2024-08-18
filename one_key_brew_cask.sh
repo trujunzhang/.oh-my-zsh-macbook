@@ -29,8 +29,6 @@ brew_apps=(
     "Notion.app" "notion" 'ssd'
     "OneDrive.app" "onedrive" 'copy'
     # "Hammerspoon.app"         "hammerspoon" 'copy'
-    # "Authy Desktop.app"       "authy" 'copy'
-    "BaiduNetdisk_mac.app" "baidunetdisk" 'ssd'
     # "Grammarly Editor.app"    "grammarly" 'copy'
 
     # Web browser
@@ -39,8 +37,6 @@ brew_apps=(
     "Opera.app" "opera" 'ssd'
     "Firefox.app" "firefox" 'ssd'
     "Brave Browser.app" "brave-browser" 'ssd'
-    "Arc.app" "arc" 'ssd'
-    # "ResponsivelyApp.app"     "responsively" 'copy'
 
     # =========================================
     # required password
@@ -55,6 +51,22 @@ brew_apps=(
     "Skype.app" "skype" 'ssd'
     # "WeChat.app"              "wechat" "ssd"
     # "QQ.app"                  "qq" 'ssd'
+)
+brew_apps_arm=(
+    "AeroSpace.app" "nikitabobko/tap/aerospace" "copy"
+    # "Authy Desktop.app"       "authy" 'copy'
+    "BaiduNetdisk_mac.app" "baidunetdisk" 'ssd'
+
+    "Arc.app" "arc" 'ssd'
+    # "ResponsivelyApp.app"     "responsively" 'copy'
+
+    # "Docker.app" "docker" 'copy'
+    # "pgAdmin 4.app" "pgadmin4" 'copy'
+)
+brew_apps_x86=(
+    # macOS tool to limit maximum charging percentage
+    # https://github.com/davidwernhart/AlDente-Charge-Limiter
+    "AlDente.app" "aldente" 'copy'
 )
 
 DEFAULTVALUE="install"
@@ -169,37 +181,37 @@ function install_brew_app {
     fi
 }
 
-for ((i = 0; i < ${#brew_apps[@]}; i = i + 3)); do
-    name="${brew_apps[$i + 0]}"
-    app="${brew_apps[$i + 1]}"
-    shouldCopyInApplications="${brew_apps[$i + 2]}"
+function install_apps {
+    apps=("$@")
+    for ((i = 0; i < ${#apps[@]}; i = i + 3)); do
+        name="${apps[$i + 0]}"
+        app="${apps[$i + 1]}"
+        shouldCopyInApplications="${apps[$i + 2]}"
 
-    info ""
-    info "element $i is ${name}"
-    info "element $i is ${app}"
-    info "element $i is ${shouldCopyInApplications}"
+        info ""
+        info "element $i is ${name}"
+        info "element $i is ${app}"
+        info "element $i is ${shouldCopyInApplications}"
 
-    info ""
-    if [ ! -L "/Applications/${name}" ]; then
-        install_brew_app "${name}" "${app}" "${shouldCopyInApplications}"
+        info ""
+        if [ ! -L "/Applications/${name}" ]; then
+            install_brew_app "${name}" "${app}" "${shouldCopyInApplications}"
+        fi
+        info ""
+    done
+}
+
+function install_apps_on_current_os {
+    if [[ $(uname -m) == 'arm64' ]]; then
+        # info M2
+        install_apps "${brew_apps_arm[@]}"
     fi
-    info ""
-done
 
-if [[ $(uname -m) == 'x86_64' ]]; then
-    # macOS tool to limit maximum charging percentage
-    # https://github.com/davidwernhart/AlDente-Charge-Limiter
-    install_brew_app "AlDente.app" aldente 'copy'
-fi
-
-# =========================================
-# apps
-# =========================================
-if [[ $(uname -m) == 'arm64' ]]; then
-    info "install apps for arm64"
-    # install_brew_app "Docker.app" docker 'copy'
-    # install_brew_app "pgAdmin 4.app" pgadmin4 'copy'
-fi
+    if [[ $(uname -m) == 'x86_64' ]]; then
+        # info Mackook
+        install_apps "${brew_apps_x86[@]}"
+    fi
+}
 
 ## font-fira
 if [ ! -f ~/Library/Fonts/FiraCode-Retina.ttf ]; then
@@ -207,6 +219,6 @@ if [ ! -f ~/Library/Fonts/FiraCode-Retina.ttf ]; then
     brew install --cask font-fira-code
 fi
 
-# if [ ! -d  "/Applications/kitty.app" ]; then
-# curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
-# fi
+## install common apps
+install_apps "${brew_apps[@]}"
+install_apps_on_current_os
