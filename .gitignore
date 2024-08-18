@@ -58,6 +58,7 @@ bash/result.csv
 
 # neovim's files
 lazy-lock.json
+config/nvim-craftzdog/lazyvim.json
 config/nvim-2kabhishek/lazy-lock.json
 config/nvim-wSedlacek/lazy-lock.json
 config/nvim-lazy/lazy-lock.json
