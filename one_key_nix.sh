@@ -1,7 +1,5 @@
-
 # https://nixos.org/manual/nix/stable/installation/installation.html
- bash <(curl -L https://nixos.org/nix/install) --daemon
-
+bash <(curl -L https://nixos.org/nix/install) --daemon
 
 # I will:
 
@@ -30,7 +28,6 @@
 
 # and that is it.
 
-
 # Try it! Open a new terminal, and type:
 
 #   $ nix-shell -p nix-info --run "nix-info -m"
@@ -42,8 +39,6 @@
 # https://github.com/NixOS/nix/issues/new?labels=installer&template=installer.md
 
 # Or get in touch with the community: https://nixos.org/community
-
-
 
 # Here's how to clean up the old backup file:
 
@@ -58,7 +53,6 @@
 #    /etc/bashrc.backup-before-nix doesn't mention Nix, run:
 #    mv /etc/bashrc.backup-before-nix /etc/bashrc
 
-
 # error: file 'nixpkgs' was not found in the nix search path (add it using $nix_path or -i)
 nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 nix-channel --update --verbose
@@ -66,5 +60,6 @@ nix-channel --update --verbose
 echo $NIX_PATH
 nix --version
 
+curl -L https://nixos.org/nix/install | sh
 
-
+curl -L https://mirrors.tuna.tsinghua.edu.cn/nix/latest/install | sh
