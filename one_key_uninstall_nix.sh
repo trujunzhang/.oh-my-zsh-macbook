@@ -30,7 +30,7 @@ sudo dscl . -delete /Groups/nixbld
 for u in $(sudo dscl . -list /Users | grep _nixbld); do sudo dscl . -delete /Users/$u; done
 
 # 4. Edit fstab using sudo vifs to remove the line mounting the Nix Store volume on /nix, which looks like UUID=<uuid> /nix apfs rw,noauto,nobrowse,suid,owners or LABEL=Nix\040Store /nix apfs rw,nobrowse. This will prevent automatic mounting of the Nix Store volume.
-sudo vifs
+# sudo vifs
 
 # 5. Edit /etc/synthetic.conf to remove the nix line. If this is the only line in the file you can remove it entirely, sudo rm /etc/synthetic.conf. This will prevent the creation of the empty /nix directory to provide a mountpoint for the Nix Store volume.
 if [ -f "/etc/synthetic.conf" ]; then
@@ -46,5 +46,3 @@ sudo diskutil apfs deleteVolume /nix
 # 8. Uninstall Nix:
 # If you have a single-user installation of Nix, uninstall it by running:
 sudo rm -rf /nix
-
-

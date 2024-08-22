@@ -420,7 +420,7 @@ alias wsshlocal='ssh ubuntu@'
 alias wsshcopylocal='ssh-copy-id ubuntu@'
 # alias wsshtmp='ssh root@'
 # alias wsshcopytmp='ssh-copy-id root@'
-alias wsshtmp='ssh root@38.54.6.82'
+alias wsshtmp='ssh root@'
 alias wsshcopytmp='ssh-copy-id root@'
 alias wsshdns='ssh root@ok.myv2ray.xyz'
 
@@ -639,6 +639,12 @@ alias wclean_all_nvim_cache="wclean_nvimCache && wclean_nvim-wSedlacekCache && w
 
 alias set_rvm_source='echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db'
 
+#nix
+alias dnix_install_third="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf 'trusted-users = $(whoami)'"
+alias dnix_uninstall_third="/nix/nix-installer uninstall"
+alias dnix_install="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl -L https://nixos.org/nix/install | sh"
+alias dnix_run_garbage="nix-collect-garbage --delete-old"
+
 # crossover
 function linkCrossOverBottle
     set bottle $argv[1]
@@ -650,7 +656,7 @@ end
 # djzhang's git
 function dgitreset
     set currentGitPath "$PWD/.git"
-    echo "<.git> Path: $currentGitPath"
+    echo " <.git >Path: $currentGitPath"
     if [ -d $currentGitPath ]
         echo "already have git repository"
     else
