@@ -113,6 +113,9 @@ function link_config_fold {
     # nix
     directoryLink "config(nix)" "$TRUJUNZHANG_DOTFILES_HOME/config/nix" "$HOME/.config/nix"
 
+    # nix-darwin
+    directoryLink "config(nix-darwin)" "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)" "$HOME/.config/nix-darwin"
+
     # v2ray-core
     directoryLink "source(v2ray-core)" "$TRUJUNZHANG_DOTFILES_HOME/config/v2ray-core-4.31.0" "$HOME/.config/v2ray-core"
 

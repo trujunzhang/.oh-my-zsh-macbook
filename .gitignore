@@ -67,3 +67,5 @@ config/nvim-lazy/lazy-lock.json
 .nx/
 
 wget-log
+
+flake.lock
