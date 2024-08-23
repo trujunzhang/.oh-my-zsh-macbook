@@ -644,6 +644,8 @@ alias dnix_install_third="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto 
 alias dnix_uninstall_third="/nix/nix-installer uninstall"
 alias dnix_install="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl -L https://nixos.org/nix/install | sh"
 alias dnix_run_garbage="nix-collect-garbage --delete-old"
+alias dnix_config="nix config show"
+alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
 
 function dnix_uninstall_darwin
     nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller

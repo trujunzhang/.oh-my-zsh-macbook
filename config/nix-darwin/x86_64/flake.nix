@@ -1,5 +1,5 @@
 {
-  description = "djzhangs-MacBook-Pro";
+  description ="djzhang's mac book pro darwin system";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -13,7 +13,12 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [ pkgs.vim
+        [
+          pkgs.vim
+          pkgs.zellij
+          pkgs.rbenv
+          pkgs.direnv
+          pkgs.fzf
         ];
 
       # Auto upgrade nix package and the daemon service.
