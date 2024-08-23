@@ -18,6 +18,11 @@ if [ ! -f "/etc/nix/nix.conf" ]; then
      fi
 fi
 
+if type nix &>/dev/null; then
+    nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixpkgs-unstable nixpkgs
+    nix-channel --update
+fi
+
 # SSL cert problem for user
 if type nix &>/dev/null; then
     sudo launchctl setenv NIX_SSL_CERT_FILE $NIX_SSL_CERT_FILE

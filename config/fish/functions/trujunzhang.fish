@@ -624,7 +624,9 @@ alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-f
 alias dclone_cocoapods="git clone https://github.com/CocoaPods/Specs"
 
 alias git_set_v2ray_proxy="git config --global http.proxy http://127.0.0.1:1087"
-alias git_set_clash_proxy="git config --global http.proxy http://127.0.0.1:7890"
+alias git_set_clash_proxy_http="git config --global http.proxy http://127.0.0.1:7890"
+alias git_set_clash_proxy_https="git config --global https.proxy https://127.0.0.1:7890"
+alias git_set_clash_proxy="git_set_clash_proxy_http && git_set_clash_proxy_https"
 alias git_checkout_proxy="git config --global http.proxy"
 
 alias git_checkout_submodules="git submodule update --init --recursive --depth=1"
