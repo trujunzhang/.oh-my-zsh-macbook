@@ -645,6 +645,11 @@ alias dnix_uninstall_third="/nix/nix-installer uninstall"
 alias dnix_install="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl -L https://nixos.org/nix/install | sh"
 alias dnix_run_garbage="nix-collect-garbage --delete-old"
 
+function dnix_uninstall_darwin
+    nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller
+    ./result/bin/darwin-uninstaller
+end
+
 alias dcd_home="cd $TRUJUNZHANG_DOTFILES_HOME"
 alias dnix_build="darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"
 
