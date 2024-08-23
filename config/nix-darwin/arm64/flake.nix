@@ -14,8 +14,10 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
+          pkgs.fish
           pkgs.vim
           pkgs.direnv
+          pkgs.fzf
         ];
 
       # Auto upgrade nix package and the daemon service.

@@ -4,6 +4,8 @@ end
 
 set -gx TERM xterm-256color
 
+set -g -x  TRUJUNZHANG_DOTFILES_HOME "$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
+
 # Android SDK
 # ======================================================================
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
@@ -97,7 +99,9 @@ if type conda &>/dev/null
 end
 
 if [ -d $HOME/.pyenv ]
-    pyenv init - | source
+    if type pyenv &>/dev/null
+        pyenv init - | source
+    end
 end
 
 if type -q eza
@@ -128,9 +132,11 @@ end
 
 set -x THEFUCK_OVERRIDDEN_ALIASES 'gsed,git'
 
-if set -q ZELLIJ
-else
-    zellij attach -c djzhang-mac
+if type zellij &>/dev/null
+    if set -q ZELLIJ
+    else
+      zellij attach -c djzhang-mac
+    end
 end
 
 # if status is-interactive
