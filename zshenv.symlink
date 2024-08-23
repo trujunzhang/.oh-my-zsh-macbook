@@ -1,10 +1,4 @@
 
-if [[ $(uname -m) == 'arm64' ]]; then
-  # echo M2
-  # Adding this to my .zshrc solved the problem on a machine with Apple M2 CPU:
-  eval $(/opt/homebrew/bin/brew shellenv)
-fi
-
 export DOTFILES=$HOME/.dotfiles
 export CONFIGDIR="$HOME/.config"
 export LOCALDIR="$HOME/.local"
@@ -123,17 +117,6 @@ export NVM_DIR="$HOME/.nvm"
 # ************************************
 # source activate 2.7.11
 
-# autojump
-
-if [[ $(uname -m) == 'arm64' ]]; then
-    # echo M2
-    [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
-fi
-
-if [[ $(uname -m) == 'x86_64' ]]; then
-    # echo Mackook
-    [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-fi
 
 # djzhang's bin
 # ======================================================================
@@ -226,9 +209,38 @@ if [[ $(uname -m) == 'x86_64' ]]; then
     # export HOMEBREW_HOME="/usr/local"
 fi
 
-export HOMEBREW_HOME="$(brew --prefix)"
+export HOMEBREW_HOME="not found"
 
 export TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
+
+alias dcd_home="cd ${TRUJUNZHANG_DOTFILES_HOME}"
+alias dnix_build="darwin-rebuild switch --flake ${TRUJUNZHANG_DOTFILES_HOME}/config/nix-darwin/$(uname -m)"
+
+if [[ $(command -v brew) == "" ]]; then
+    echo "Homebrew is not installed"
+else
+
+     export HOMEBREW_HOME="$(brew --prefix)"
+
+    if [[ $(uname -m) == 'arm64' ]]; then
+      # echo M2
+      # Adding this to my .zshrc solved the problem on a machine with Apple M2 CPU:
+      eval $(/opt/homebrew/bin/brew shellenv)
+    fi
+
+    # autojump
+    if [[ $(uname -m) == 'arm64' ]]; then
+        # echo M2
+        [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+    fi
+
+    if [[ $(uname -m) == 'x86_64' ]]; then
+        # echo Mackook
+        [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+    fi
+fi
+
+
 
 # macvim
 # alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
