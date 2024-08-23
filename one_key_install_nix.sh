@@ -19,7 +19,7 @@ if [ ! -f "/etc/nix/nix.conf" ]; then
 fi
 
 # SSL cert problem for user
-if type nix &>/dev/null
+if type nix &>/dev/null; then
     sudo launchctl setenv NIX_SSL_CERT_FILE $NIX_SSL_CERT_FILE
     sudo launchctl kickstart -k system/org.nixos.nix-daemon
 fi
