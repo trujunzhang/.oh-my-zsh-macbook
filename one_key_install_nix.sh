@@ -13,7 +13,8 @@ if type nix &>/dev/null; then
     info "nix already installed"
 else
     info "starting to install nix"
-    sudo NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl -L https://nixos.org/nix/install | sh
+    export NIX_FIRST_BUILD_UID=30001
+    sudo curl -L https://nixos.org/nix/install | sh
 fi
 
 # if type nix &>/dev/null; then
@@ -25,8 +26,8 @@ fi
 # SSL cert problem for user
 if type nix &>/dev/null; then
     info "starting to setup ssl cert"
-    sudo launchctl setenv NIX_SSL_CERT_FILE $NIX_SSL_CERT_FILE
-    sudo launchctl kickstart -k system/org.nixos.nix-daemon
+#     sudo launchctl setenv NIX_SSL_CERT_FILE $NIX_SSL_CERT_FILE
+#     sudo launchctl kickstart -k system/org.nixos.nix-daemon
 fi
 
 if type nix &>/dev/null; then
