@@ -649,7 +649,11 @@ alias dnix_run_garbage="nix-collect-garbage --delete-old"
 alias dnix_config="nix config show"
 alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
 
-function dnix_uninstall_darwin
+function dnix_install_nix_darwin
+    nix run nix-darwin -- switch --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"
+end
+
+function dnix_uninstall_nix_darwin
     nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller
     ./result/bin/darwin-uninstaller
 end
