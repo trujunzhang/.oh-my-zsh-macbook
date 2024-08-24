@@ -563,4 +563,3 @@ function binstall-emacs {
     fi
     ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications
 }
-

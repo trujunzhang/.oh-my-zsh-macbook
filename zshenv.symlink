@@ -214,7 +214,19 @@ export HOMEBREW_HOME="not found"
 export TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 
 alias dcd_home="cd ${TRUJUNZHANG_DOTFILES_HOME}"
-alias dnix_build="darwin-rebuild switch --flake ${TRUJUNZHANG_DOTFILES_HOME}/config/nix-darwin/$(uname -m)"
+
+#nix
+alias dnix_build="darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"
+alias dnix_install_third="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf 'trusted-users = $(whoami)'"
+alias dnix_uninstall_third="/nix/nix-installer uninstall"
+alias dnix_install_nix_official="sudo NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl -L https://nixos.org/nix/install | sh"
+alias dnix_run_garbage="nix-collect-garbage --delete-old"
+alias dnix_config="nix config show"
+alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
+
+alias dnix_install_nix_darwin='sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.bak && nix run nix-darwin -- switch --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"'
+alias dnix_uninstall_nix_darwin="nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller && ./result/bin/darwin-uninstaller"
+
 
 if [[ $(command -v brew) == "" ]]; then
     echo "Homebrew is not installed"

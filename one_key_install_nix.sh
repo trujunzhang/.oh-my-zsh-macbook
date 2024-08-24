@@ -13,20 +13,14 @@ if type nix &>/dev/null; then
     info "nix already installed"
 else
     info "starting to install nix"
-    NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
-    if [  -f "/etc/nix/nix.conf" ]; then
-        if [ ! -L "/etc/nix/nix.conf" ]; then
-           info "starting to setup nix-daemon"
-            . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
-        fi
-    fi
+    sudo NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl -L https://nixos.org/nix/install | sh
 fi
 
-if type nix &>/dev/null; then
-    info "starting to update nix-channel"
-    nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixpkgs-unstable nixpkgs
-    nix-channel --update
-fi
+# if type nix &>/dev/null; then
+#     info "starting to update nix-channel"
+#     nix-channel --add https://mirrors.ustc.edu.cn/nix-channels/nixpkgs-unstable nixpkgs
+#     nix-channel --update
+# fi
 
 # SSL cert problem for user
 if type nix &>/dev/null; then
@@ -41,11 +35,11 @@ if type nix &>/dev/null; then
             info "starting to move nix.conf"
             sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.bak
        fi
-       sudo mv /etc/bashrc /etc/bashrc.bak
-       sudo mv /etc/zshrc /etc/zshrc.bak
+#        sudo mv /etc/bashrc /etc/bashrc.bak
+#        sudo mv /etc/zshrc /etc/zshrc.bak
        if [ ! -f "/etc/nix/nix.conf" ]; then
             info "starting to install nix-darwin"
-            nix run nix-darwin -- switch --flake "${TRUJUNZHANG_DOTFILES_HOME}/config/nix-darwin/$(uname -m)"
+            nix run nix-darwin -- switch --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"
        fi
     fi
 fi
@@ -53,7 +47,7 @@ fi
 if [ -f "/etc/nix/nix.conf.bak" ]; then
     if [ ! -L "/etc/nix/nix.conf" ]; then
         if [ ! -f "/etc/nix/nix.conf" ]; then
-            info "failed to install, restore nix.conf"
+           info "failed to install, restore nix.conf"
            sudo mv /etc/nix/nix.conf.bak /etc/nix/nix.conf
        fi
     fi
