@@ -9,12 +9,32 @@ source ./bash/tools.sh
 NIX_CONF="/etc/nix/nix.conf"
 NIX_CONF_BAK="/etc/nix/nix.conf.bak"
 
+function nix_install_official {
+    export NIX_FIRST_BUILD_UID=30001
+    sudo curl -L https://nixos.org/nix/install | sh
+}
+
+function nix_install_proxy {
+    export NIX_FIRST_BUILD_UID=30001
+    sudo curl -L https://mirrors.tuna.tsinghua.edu.cn/nix/latest/install | sh
+}
+
+function nix_install_third {
+     NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf 'trusted-users = $(whoami)'
+     if [  -f "/etc/nix/nix.conf" ]; then
+       if [ ! -L "/etc/nix/nix.conf" ]; then
+         . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+       fi
+     fi
+}
+
 if type nix &>/dev/null; then
     info "nix already installed"
 else
     info "starting to install nix"
-    export NIX_FIRST_BUILD_UID=30001
-    sudo curl -L https://nixos.org/nix/install | sh
+    # nix_install_official
+    nix_install_proxy
+    # nix_install_third
 fi
 
 # if type nix &>/dev/null; then

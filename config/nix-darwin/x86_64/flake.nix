@@ -10,10 +10,10 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
   let
 
-     hostname = "djzhangs-Mac-mini";
+     hostname = "djzhangs-MacBook-Pro";
      username = "djzhang";
-     home = "/Volumes/MacUser/djzhang";
-     flakePath = "${home}/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/nix-darwin/arm64";
+     home = "/Users/djzhang";
+     flakePath = "${home}/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/nix-darwin/x86_64";
 
     configuration = { pkgs, lib, ... }: {
       # List packages installed in system profile. To search by name, run:
