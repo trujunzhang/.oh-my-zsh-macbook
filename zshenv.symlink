@@ -219,7 +219,7 @@ alias dcd_home="cd ${TRUJUNZHANG_DOTFILES_HOME}"
 alias dnix_build="darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"
 alias dnix_install_third="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf 'trusted-users = $(whoami)'"
 alias dnix_uninstall_third="/nix/nix-installer uninstall"
-alias dnix_install_nix_official="sudo NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl -L https://nixos.org/nix/install | sh"
+alias dnix_install_nix_official="export NIX_FIRST_BUILD_UID=30001 && sudo curl -L https://nixos.org/nix/install | sh"
 alias dnix_run_garbage="nix-collect-garbage --delete-old"
 alias dnix_config="nix config show"
 alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'

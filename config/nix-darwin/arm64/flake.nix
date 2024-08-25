@@ -9,31 +9,73 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
   let
-    configuration = { pkgs, ... }: {
+
+     hostname = "djzhangs-Mac-mini";
+     username = "djzhang";
+     home = "/Volumes/MacUser/djzhang";
+     flakePath = "${home}/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/nix-darwin/arm64";
+
+    configuration = { pkgs, lib, ... }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs;
         [
-          fish
+          # /run/current-system/sw/bin/fish
+          # fish
           vim
           zellij
           rbenv
           direnv
           fzf
+          watchman
+          sketchybar
+          fastlane
+          mkcert
 
           vscode
+          google-chrome
         ];
 
       # Auto upgrade nix package and the daemon service.
       services.nix-daemon.enable = true;
       # nix.package = pkgs.nix;
 
+            nixpkgs = {
+              config = {
+                allowUnfree = true;
+              };
+            };
+
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
       # Create /etc/zshrc that loads the nix-darwin environment.
-      programs.zsh.enable = true;  # default shell on catalina
-      programs.fish.enable = true;
+       programs.zsh.enable = true;  # default shell on catalina
+
+           # Set fish as default shell
+           programs.fish = {
+             enable = true;
+             shellAliases = {
+               nce = "nvim ${flakePath}/flake.nix";
+               ncu = "nix flake update ${flakePath}; darwin-rebuild switch --flake ${flakePath}";
+             };
+
+             loginShellInit = ''
+               pfetch
+             '';
+           };
+           users.users."${username}" = {
+             shell = pkgs.fish;
+             inherit home;
+           };
+
+      system.activationScripts.postActivation.text = ''
+        # Set the default shell as fish for the user
+        sudo chsh -s ${lib.getBin pkgs.fish}/bin/fish ${username}
+
+      '';
+
+
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
