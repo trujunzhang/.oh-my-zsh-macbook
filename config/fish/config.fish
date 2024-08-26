@@ -4,6 +4,8 @@ end
 
 set -gx TERM xterm-256color
 
+# environment variable
+set -g -x ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
 set -g -x  TRUJUNZHANG_DOTFILES_HOME "$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 
 # Android SDK
@@ -55,8 +57,6 @@ fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps"
 
-# environment variable
-set -g -x ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
 
 # if "$(uname -m)" == 'arm64'
 # end

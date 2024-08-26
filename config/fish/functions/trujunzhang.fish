@@ -642,7 +642,8 @@ alias wclean_all_nvim_cache="wclean_nvimCache && wclean_nvim-wSedlacekCache && w
 alias set_rvm_source='echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db'
 
 #nix
-alias dnix_build="darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"
+alias dnix_build_default="darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal"
+alias dnix_build_local="darwin-rebuild switch --flake ."
 alias dnix_install_third="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf 'trusted-users = $(whoami)'"
 alias dnix_uninstall_third="/nix/nix-installer uninstall"
 alias dnix_install_nix_official="export NIX_FIRST_BUILD_UID=30001 && sudo curl -L https://nixos.org/nix/install | sh"
