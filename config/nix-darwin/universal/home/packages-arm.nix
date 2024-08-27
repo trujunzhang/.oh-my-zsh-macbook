@@ -65,6 +65,10 @@ let inherit (lib) mkIf elem; in
       wget
       zellij
       xz # extract XZ archives
+      vscode
+      neovim
+      alacritty
+      wezterm
       ;
 
     # Dev stuff

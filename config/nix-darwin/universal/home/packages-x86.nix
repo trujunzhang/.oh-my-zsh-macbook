@@ -67,6 +67,10 @@ let inherit (lib) mkIf elem; in
       yabai
       skhd
       xz # extract XZ archives
+      vscode
+      neovim
+      alacritty
+      wezterm
       ;
 
     # Dev stuff
@@ -104,7 +108,6 @@ let inherit (lib) mkIf elem; in
 
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     inherit (pkgs)
-      # cocoapods
       m-cli # useful macOS CLI commands
       prefmanager # tool for working with macOS defaults
       ;

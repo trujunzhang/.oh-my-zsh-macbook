@@ -30,25 +30,31 @@ function install_java {
     asdf plugin add java "https://github.com/halcyon/asdf-java.git"
     # asdf install java "openjdk-17"
     asdf install java "zulu-17.52.19"
+    asdf install global "zulu-17.52.19"
 }
 function install_python {
     info "starting to install asdf(python)"
     asdf plugin add python "https://github.com/danhper/asdf-python.git"
     asdf install python "3.12.0"
+    asdf install global "3.12.0"
 }
 function install_ruby {
     info "starting to install asdf(ruby)"
     asdf plugin add ruby "https://github.com/asdf-vm/asdf-ruby.git"
     asdf install ruby "3.3.3"
+    asdf global ruby "3.3.3"
 }
-function install_others {
+function install_lazygit {
     info "starting to install asdf(lazygit)"
     asdf plugin add lazygit "https://github.com/nklmilojevic/asdf-lazygit.git"
     asdf install lazygit latest
-
+    asdf global lazygit latest
+}
+function install_cocoapods {
     info "starting to install asdf(cocoapods)"
     asdf plugin add cocoapods "https://github.com/ronnnnn/asdf-cocoapods.git"
     asdf install cocoapods latest
+    asdf global cocoapods latest
 
     # asdf plugin add ruby ""
     # asdf install ruby latest
@@ -71,6 +77,8 @@ if type asdf &>/dev/null; then
     # fi
     # python
     install_python
-    # others
-    install_others
+    # lazygit
+    install_lazygit
+    # cocoapods
+    install_cocoapods
 fi
