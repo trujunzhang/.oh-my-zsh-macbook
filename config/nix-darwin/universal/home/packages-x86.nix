@@ -3,20 +3,6 @@
 let inherit (lib) mkIf elem; in
 
 {
-  # 1Password CLI plugin integration
-  # https://developer.1password.com/docs/cli/shell-plugins/nix
-  programs._1password-shell-plugins.enable = true;
-  programs._1password-shell-plugins.plugins = lib.attrValues ({
-    inherit (pkgs)
-      gh
-      cachix
-      ;
-  });
-  home.shellAliases = {
-    # Run `nixpkgs-review` in 1Password env to get `GITHUB_TOKEN` envvar.
-    nixpkgs-review = mkIf
-      (elem pkgs.nixpkgs-review config.home.packages) "op run -- nixpkgs-review";
-  };
   home.sessionVariables = {
     GITHUB_TOKEN = "op://Personal/GitHub Personal Access Token/credential";
   };
@@ -78,8 +64,8 @@ let inherit (lib) mkIf elem; in
       upterm # secure terminal sharing
       wget
       zellij
-      lazygit
-      rbenv
+      yabai
+      skhd
       xz # extract XZ archives
       ;
 
@@ -118,7 +104,7 @@ let inherit (lib) mkIf elem; in
 
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     inherit (pkgs)
-      cocoapods
+      # cocoapods
       m-cli # useful macOS CLI commands
       prefmanager # tool for working with macOS defaults
       ;

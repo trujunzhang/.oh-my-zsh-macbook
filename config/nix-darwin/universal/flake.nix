@@ -12,9 +12,6 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    _1password-shell-plugins.url = "github:1Password/shell-plugins";
-    _1password-shell-plugins.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    _1password-shell-plugins.inputs.flake-utils.follows = "flake-utils";
 
     # Flake utilities
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
@@ -142,7 +139,7 @@
         users-primaryUser = import ./modules/darwin/users.nix;
       };
 
-      homeManagerModules = {
+      homeManagerModules_arm = {
         # My configurations
         malo-colors = import ./home/colors.nix;
         malo-config-files = import ./home/config-files.nix;
@@ -152,7 +149,7 @@
         malo-gh-aliases = import ./home/gh-aliases.nix;
         malo-kitty = import ./home/kitty.nix;
         # malo-neovim = import ./home/neovim.nix;
-        malo-packages = import ./home/packages.nix;
+        malo-packages = import ./home/packages-arm.nix;
         malo-starship = import ./home/starship.nix;
         malo-starship-symbols = import ./home/starship-symbols.nix;
 
@@ -164,10 +161,33 @@
           options.home.user-info =
             (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
         };
-
-        # Other
-        _1password-shell-plugins = inputs._1password-shell-plugins.hmModules.default;
       };
+
+      homeManagerModules_x86 = {
+        # My configurations
+        malo-colors = import ./home/colors.nix;
+        malo-config-files = import ./home/config-files.nix;
+        malo-fish = import ./home/fish.nix;
+        malo-git = import ./home/git.nix;
+        malo-git-aliases = import ./home/git-aliases.nix;
+        malo-gh-aliases = import ./home/gh-aliases.nix;
+        malo-kitty = import ./home/kitty.nix;
+        # malo-neovim = import ./home/neovim.nix;
+        malo-packages = import ./home/packages-x86.nix;
+        malo-starship = import ./home/starship.nix;
+        malo-starship-symbols = import ./home/starship-symbols.nix;
+
+        # Modules I've created
+        colors = import ./modules/home/colors;
+        programs-neovim-extras = import ./modules/home/programs/neovim/extras.nix;
+        programs-kitty-extras = import ./modules/home/programs/kitty/extras.nix;
+        home-user-info = { lib, ... }: {
+          options.home.user-info =
+            (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
+        };
+      };
+
+
       # }}}
 
       # System configurations ------------------------------------------------------------------ {{{
@@ -184,6 +204,8 @@
 
         # My Apple Silicon macOS laptop config
         "djzhangs-Mac-mini" = makeOverridable self.lib.mkDarwinSystem (primaryUserDefaults // {
+          system = "aarch64-darwin";
+          userHome = "/Volumes/MacUser/djzhang";
           modules = attrValues self.darwinModules ++ singleton {
             nixpkgs = nixpkgsDefaults;
             networking.computerName = "djzhang";
@@ -203,7 +225,32 @@
             };
           };
           inherit homeStateVersion;
-          homeModules = attrValues self.homeManagerModules;
+          homeModules = attrValues self.homeManagerModules_arm;
+        });
+
+        "djzhangs-MacBook-Pro" = makeOverridable self.lib.mkDarwinSystem (primaryUserDefaults // {
+          system = "x86_64-darwin";
+          userHome = "/Users/djzhang";
+          modules = attrValues self.darwinModules ++ singleton {
+            nixpkgs = nixpkgsDefaults;
+            networking.computerName = "djzhang";
+            networking.hostName = "djzhangs-MacBook-Pro";
+            networking.knownNetworkServices = [
+              "Wi-Fi"
+              "USB 10/100/1000 LAN"
+            ];
+            nix.registry.my.flake = inputs.self;
+          };
+          extraModules = singleton {
+            nix.linux-builder.enable = false;
+            nix.linux-builder.maxJobs = 8;
+            nix.linux-builder.config = {
+              virtualisation.darwin-builder.memorySize = 16 * 1024;
+              virtualisation.cores = 8;
+            };
+          };
+          inherit homeStateVersion;
+          homeModules = attrValues self.homeManagerModules_x86;
         });
 
         # Config with small modifications needed/desired for CI with GitHub workflow

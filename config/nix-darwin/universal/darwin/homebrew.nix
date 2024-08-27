@@ -38,7 +38,6 @@ in
 
   # Prefer installing application from the Mac App Store
   homebrew.masApps = {
-    "1Password for Safari" = 1569813296;
     Cardhop = 1290358394;
     DaisyDisk = 411643860;
     Deliveries = 290986013;
@@ -66,7 +65,6 @@ in
   # If an app isn't available in the Mac App Store, or the version in the App Store has
   # limitiations, e.g., Transmit, install the Homebrew Cask.
   homebrew.casks = [
-    "1password"
     "anki"
     "arq"
     "balenaetcher"

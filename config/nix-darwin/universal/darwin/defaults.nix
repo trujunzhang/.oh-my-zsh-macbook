@@ -1,6 +1,7 @@
 {
   system.defaults.NSGlobalDomain = {
-    "com.apple.trackpad.scaling" = 3.0;
+    # "com.apple.trackpad.scaling" = 3.0;
+    "com.apple.trackpad.scaling" = 7.0;
     AppleInterfaceStyleSwitchesAutomatically = true;
     AppleMeasurementUnits = "Centimeters";
     AppleMetricUnits = 1;
@@ -11,7 +12,7 @@
     NSAutomaticCapitalizationEnabled = false;
     NSAutomaticDashSubstitutionEnabled = false;
     NSAutomaticPeriodSubstitutionEnabled = false;
-    _HIHideMenuBar = false;
+    _HIHideMenuBar = true;
   };
 
   # Firewall

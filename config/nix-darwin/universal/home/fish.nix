@@ -38,6 +38,10 @@ if type zellij &>/dev/null
     end
 end
 
+if [ -d $HOME/.asdf ]
+    source ~/.asdf/asdf.fish
+end
+
     '';
 
     # Sets Fish Shell to light or dark colorscheme based on `$term_background`.

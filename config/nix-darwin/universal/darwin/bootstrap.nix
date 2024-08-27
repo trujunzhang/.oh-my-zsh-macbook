@@ -44,15 +44,16 @@
 
   # Add shells installed by nix to /etc/shells file
   environment.shells = with pkgs; [
-    bashInteractive
+    # bashInteractive
     fish
     zsh
   ];
 
   # Make Fish the default shell
   programs.fish.enable = true;
-  programs.fish.useBabelfish = true;
-  programs.fish.babelfishPackage = pkgs.babelfish;
+  # programs.fish.oh-my-fish.enable = true;
+  # programs.fish.useBabelfish = true;
+  # programs.fish.babelfishPackage = pkgs.babelfish;
   # Needed to address bug where $PATH is not properly set for fish:
   # https://github.com/LnL7/nix-darwin/issues/122
   programs.fish.shellInit = ''

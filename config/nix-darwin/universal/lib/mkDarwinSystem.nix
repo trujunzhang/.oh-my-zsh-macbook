@@ -4,6 +4,7 @@ inputs:
 , fullName
 , email
 , nixConfigDirectory # directory on the system where this flake is located
+, userHome
 , system ? "aarch64-darwin"
 
 # `nix-darwin` modules to include
@@ -32,7 +33,7 @@ inputs.darwin.lib.darwinSystem {
       nix.nixPath.nixpkgs = "${inputs.nixpkgs-unstable}";
 
       # `home-manager` config
-      users.users.${username}.home = "/Volumes/MacUser/${username}";
+      users.users.${username}.home = userHome;
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.${username} = {
