@@ -39,17 +39,16 @@ function install_python {
 function install_ruby {
     info "starting to install asdf(ruby)"
     asdf plugin add ruby "https://github.com/asdf-vm/asdf-ruby.git"
-    asdf install ruby "3.0.6"
+    asdf install ruby "3.3.3"
 }
 function install_others {
-    info "starting to install asdf(cocoapods)"
-    asdf plugin add cocoapods "https://github.com/ronnnnn/asdf-cocoapods.git"
-    asdf install cocoapods latest
-
     info "starting to install asdf(lazygit)"
     asdf plugin add lazygit "https://github.com/nklmilojevic/asdf-lazygit.git"
     asdf install lazygit latest
 
+    info "starting to install asdf(cocoapods)"
+    asdf plugin add cocoapods "https://github.com/ronnnnn/asdf-cocoapods.git"
+    asdf install cocoapods latest
 
     # asdf plugin add ruby ""
     # asdf install ruby latest
@@ -57,13 +56,21 @@ function install_others {
 
 if type asdf &>/dev/null; then
     # node
-    # install_nodes
-    # java
-    install_java
+    install_nodes
+
+    if [[ $(uname -m) == 'arm64' ]]; then
+        # info M2
+        # java
+        install_java
+        # ruby
+        install_ruby
+    fi
+
+    # if [[ $(uname -m) == 'x86_64' ]]; then
+    # info Mackook
+    # fi
     # python
     install_python
-    # ruby
-    install_ruby
     # others
     install_others
 fi

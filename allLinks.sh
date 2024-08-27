@@ -110,6 +110,9 @@ function link_config_fold {
     # zellij
     directoryLink "config(zellij)" "$TRUJUNZHANG_DOTFILES_HOME/config/zellij" "$HOME/.config/zellij"
 
+    # asdf-vm
+    fileLink "config(asdf)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.asdfrc" "$HOME/.asdfrc"
+
     # nix
     directoryLink "config(nix)" "$TRUJUNZHANG_DOTFILES_HOME/config/nix" "$HOME/.config/nix"
 

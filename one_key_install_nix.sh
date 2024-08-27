@@ -10,19 +10,19 @@ NIX_CONF="/etc/nix/nix.conf"
 NIX_CONF_BAK="/etc/nix/nix.conf.bak"
 
 function nix_install_official {
-    info "starting to install nix(official)"
+    info "Starting to install nix(official)"
     export NIX_FIRST_BUILD_UID=30001
     sudo curl -L https://nixos.org/nix/install | sh
 }
 
 function nix_install_proxy {
-    info "starting to install nix(proxy)"
+    info "Starting to install nix(proxy)"
     export NIX_FIRST_BUILD_UID=30001
     sudo curl -L https://mirrors.tuna.tsinghua.edu.cn/nix/latest/install | sh
 }
 
 function nix_install_third {
-    info "starting to install nix(third)"
+    info "Starting to install nix(third)"
      NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf 'trusted-users = $(whoami)'
      if [  -f "/etc/nix/nix.conf" ]; then
        if [ ! -L "/etc/nix/nix.conf" ]; then
@@ -47,7 +47,7 @@ fi
 
 # SSL cert problem for user
 if type nix &>/dev/null; then
-    info "starting to setup ssl cert"
+    info "Starting to setup ssl cert"
 #     sudo launchctl setenv NIX_SSL_CERT_FILE $NIX_SSL_CERT_FILE
 #     sudo launchctl kickstart -k system/org.nixos.nix-daemon
 fi
@@ -55,13 +55,13 @@ fi
 if type nix &>/dev/null; then
     if [ ! -L "/etc/nix/nix.conf" ]; then
         if [  -f "/etc/nix/nix.conf" ]; then
-            info "starting to move nix.conf"
+            info "Starting to move nix.conf"
             sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.bak
        fi
 #        sudo mv /etc/bashrc /etc/bashrc.bak
 #        sudo mv /etc/zshrc /etc/zshrc.bak
        if [ ! -f "/etc/nix/nix.conf" ]; then
-            info "starting to install nix-darwin"
+            info "Starting to install nix-darwin"
             nix run nix-darwin -- switch --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal"
        fi
     fi
@@ -70,7 +70,7 @@ fi
 if [ -f "/etc/nix/nix.conf.bak" ]; then
     if [ ! -L "/etc/nix/nix.conf" ]; then
         if [ ! -f "/etc/nix/nix.conf" ]; then
-           info "failed to install, restore nix.conf"
+           info "Failed to install, restore nix.conf"
            sudo mv /etc/nix/nix.conf.bak /etc/nix/nix.conf
        fi
     fi

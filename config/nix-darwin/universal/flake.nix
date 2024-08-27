@@ -131,7 +131,7 @@
       darwinModules = {
         # My configurations
         malo-bootstrap = import ./darwin/bootstrap.nix;
-        malo-defaults = import ./darwin/defaults.nix;
+#        malo-defaults = import ./darwin/defaults.nix;
         malo-general = import ./darwin/general.nix;
 #        malo-homebrew = import ./darwin/homebrew.nix;
 
