@@ -28,6 +28,11 @@
     prefmanager.inputs.nixpkgs.follows = "nixpkgs-unstable";
     prefmanager.inputs.flake-compat.follows = "flake-compat";
     prefmanager.inputs.flake-utils.follows = "flake-utils";
+
+    neovim-flake = {
+      url = github:trujunzhang/neovim-flake;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, darwin, home-manager, flake-utils, ... }@inputs:
@@ -139,7 +144,7 @@
         users-primaryUser = import ./modules/darwin/users.nix;
       };
 
-      homeManagerModules_arm = {
+      homeManagerModules= {
         # My configurations
         malo-colors = import ./home/colors.nix;
         malo-config-files = import ./home/config-files.nix;
@@ -149,44 +154,30 @@
         malo-gh-aliases = import ./home/gh-aliases.nix;
         # malo-kitty = import ./home/kitty.nix;
         # malo-neovim = import ./home/neovim.nix;
+        malo-starship = import ./home/starship.nix;
+        malo-starship-symbols = import ./home/starship-symbols.nix;
+
+        # neovim-flake
+        malo-neovim-flake-default = neovim-flake.homeManagerModules.default;
+        malo-neovim-flake = import ./home/neovim-flake.nix;
+
+        # Modules I've created
+        colors = import ./modules/home/colors;
+        programs-neovim-extras = import ./modules/home/programs/neovim/extras.nix;
+        programs-kitty-extras = import ./modules/home/programs/kitty/extras.nix;
+        home-user-info = { lib, ... }: {
+          options.home.user-info =
+            (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
+        };
+      };
+
+      homePlatformModules_arm = {
         malo-packages = import ./home/packages-arm.nix;
-        malo-starship = import ./home/starship.nix;
-        malo-starship-symbols = import ./home/starship-symbols.nix;
-
-        # Modules I've created
-        colors = import ./modules/home/colors;
-        programs-neovim-extras = import ./modules/home/programs/neovim/extras.nix;
-        programs-kitty-extras = import ./modules/home/programs/kitty/extras.nix;
-        home-user-info = { lib, ... }: {
-          options.home.user-info =
-            (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
-        };
       };
 
-      homeManagerModules_x86 = {
-        # My configurations
-        malo-colors = import ./home/colors.nix;
-        malo-config-files = import ./home/config-files.nix;
-        malo-fish = import ./home/fish.nix;
-        malo-git = import ./home/git.nix;
-        malo-git-aliases = import ./home/git-aliases.nix;
-        malo-gh-aliases = import ./home/gh-aliases.nix;
-        # malo-kitty = import ./home/kitty.nix;
-        # malo-neovim = import ./home/neovim.nix;
+      homePlatformModules_x86 = {
         malo-packages = import ./home/packages-x86.nix;
-        malo-starship = import ./home/starship.nix;
-        malo-starship-symbols = import ./home/starship-symbols.nix;
-
-        # Modules I've created
-        colors = import ./modules/home/colors;
-        programs-neovim-extras = import ./modules/home/programs/neovim/extras.nix;
-        programs-kitty-extras = import ./modules/home/programs/kitty/extras.nix;
-        home-user-info = { lib, ... }: {
-          options.home.user-info =
-            (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
-        };
       };
-
 
       # }}}
 
@@ -225,7 +216,8 @@
             };
           };
           inherit homeStateVersion;
-          homeModules = attrValues self.homeManagerModules_arm;
+          homeModules = attrValues self.homeManagerModules;
+          extraPlatformModules = attrValues self.homePlatformModules_arm;
         });
 
         "djzhangs-MacBook-Pro" = makeOverridable self.lib.mkDarwinSystem (primaryUserDefaults // {
@@ -250,7 +242,8 @@
             };
           };
           inherit homeStateVersion;
-          homeModules = attrValues self.homeManagerModules_x86;
+          homeModules = attrValues self.homeManagerModules;
+          extraPlatformModules = attrValues self.homePlatformModules_x86;
         });
 
         # Config with small modifications needed/desired for CI with GitHub workflow

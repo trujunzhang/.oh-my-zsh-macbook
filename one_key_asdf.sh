@@ -19,10 +19,10 @@ fi
 
 function install_nodes {
     info "starting to install asdf(nodes)"
-    asdf plugin add node "https://github.com/asdf-vm/asdf-nodejs.git"
-    asdf install node "$node_global"
-    asdf install node "$node_for_nvim"
-    asdf global node "$node_global"
+    asdf plugin add nodejs "https://github.com/asdf-vm/asdf-nodejs.git"
+    asdf install nodejs "$node_global"
+    asdf install nodejs "$node_for_nvim"
+    asdf global nodejs "$node_global"
 }
 function install_java {
     # /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home

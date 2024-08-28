@@ -19,7 +19,7 @@ inputs:
 , homeModules ? [ ]
 # Additional `home-manager` modules to include, useful when reusing a configuration with
 # `lib.makeOverridable`.
-, extraHomeModules ? [ ]
+, extraPlatformModules ? [ ]
 }:
 
 inputs.darwin.lib.darwinSystem {
@@ -37,7 +37,7 @@ inputs.darwin.lib.darwinSystem {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.${username} = {
-        imports = homeModules ++ extraHomeModules;
+        imports = homeModules ++ extraPlatformModules;
         home.stateVersion = homeStateVersion;
         home.user-info = config.users.primaryUser;
       };

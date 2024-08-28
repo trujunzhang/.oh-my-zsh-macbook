@@ -622,6 +622,9 @@ alias dclone_expensify="git clone https://github.com/expensify/App.git expensify
 alias dclone_ieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git check-ieatta && cd check-ieatta"
 alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-fixed.git usedExpApp && cd usedExpApp"
 alias dclone_cocoapods="git clone https://github.com/CocoaPods/Specs"
+alias dclone_asdf_plugins="git clone https://github.com/asdf-vm/asdf-plugins"
+alias dclone_transforms="git clone https://github.com/huggingface/transformers"
+alias dclone_tensor="git clone https://github.com/tensorflow/tensorflow"
 
 alias git_set_v2ray_proxy="git config --global http.proxy http://127.0.0.1:1087"
 alias git_set_clash_proxy_http="git config --global http.proxy http://127.0.0.1:7890"
@@ -652,12 +655,12 @@ alias dnix_config="nix config show"
 alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
 
 function dmac_install_common_apps
-     mkdir -p /tmp/Applications/unzip
-     cp /Volumes/MacGame/MacCache/apps/Applications/*.zip /tmp/Applications
-     unzip "/tmp/Applications/*.zip" -d "/tmp/Applications/unzip"
-     # cp -Rvp "/tmp/Applications/unzip/*.app" "/Applications"
+    mkdir -p /tmp/Applications/unzip
+    cp /Volumes/MacGame/MacCache/apps/Applications/*.zip /tmp/Applications
+    unzip "/tmp/Applications/*.zip" -d /tmp/Applications/unzip
+    # cp -Rvp "/tmp/Applications/unzip/*.app" "/Applications"
 
-     open "/tmp/Applications/unzip"
+    open /tmp/Applications/unzip
 end
 
 function dnix_install_nix_darwin
