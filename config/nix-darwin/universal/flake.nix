@@ -2,6 +2,20 @@
   description = "djzhang’s Nix system configs, and some other useful stuff.";
 
   inputs = {
+    nixpkgs.url = "nixpkgs/nixos-unstable";
+    flake-schemas.url = github:DeterminateSystems/flake-schemas;
+
+    # https://github.com/NixOS/nixpkgs/commit/c3160517fc6381f86776795e95c97b8ef7b5d2e4
+    nixpkgs-mega.url = "nixpkgs/c3160517fc6381f86776795e95c97b8ef7b5d2e4";
+    # https://github.com/NixOS/nixpkgs/issues/322970
+    nixpkgs-zoom.url = "nixpkgs/24.05";
+
+    ## nix client with schema support: see https://github.com/NixOS/nix/pull/8892
+    nix-schema = {
+      url = github:DeterminateSystems/nix-src/flake-schemas;
+      inputs.flake-schemas.follows = "flake-schemas";
+    };
+
     # Package sets
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
@@ -30,12 +44,14 @@
     prefmanager.inputs.flake-utils.follows = "flake-utils";
 
     neovim-flake = {
-      url = github:trujunzhang/neovim-flake;
+      url = github:gvolpe/neovim-flake;
+      # url = github:trujunzhang/neovim-flake;
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-schemas.follows = "flake-schemas";
     };
   };
 
-  outputs = { self, darwin, home-manager, flake-utils, ... }@inputs:
+  outputs = { self, darwin, home-manager, flake-utils, neovim-flake, ... }@inputs:
     let
       inherit (self.lib) attrValues makeOverridable mkForce optionalAttrs singleton;
 
@@ -158,7 +174,9 @@
         malo-starship-symbols = import ./home/starship-symbols.nix;
 
         # neovim-flake
-        malo-neovim-flake-default = neovim-flake.homeManagerModules.default;
+        # malo-neovim-flake-default = neovim-flake.homeManagerModules.default;
+        # malo-neovim-flake-default = neovim-flake.homeManagerModules.${system}.default;
+        malo-neovim-flake-default = neovim-flake.homeManagerModules.aarch64-darwin.default;
         malo-neovim-flake = import ./home/neovim-flake.nix;
 
         # Modules I've created

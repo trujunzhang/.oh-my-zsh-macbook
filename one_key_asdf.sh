@@ -30,19 +30,19 @@ function install_java {
     asdf plugin add java "https://github.com/halcyon/asdf-java.git"
     # asdf install java "openjdk-17"
     asdf install java "zulu-17.52.19"
-    asdf install global "zulu-17.52.19"
+    asdf global java "zulu-17.52.19"
 }
 function install_python {
     info "starting to install asdf(python)"
     asdf plugin add python "https://github.com/danhper/asdf-python.git"
     asdf install python "3.12.0"
-    asdf install global "3.12.0"
+    asdf global python "3.12.0"
 }
 function install_ruby {
     info "starting to install asdf(ruby)"
     asdf plugin add ruby "https://github.com/asdf-vm/asdf-ruby.git"
-    asdf install ruby "3.3.3"
-    asdf global ruby "3.3.3"
+    asdf install ruby "3.0.3"
+    asdf global ruby "3.0.3"
 }
 function install_lazygit {
     info "starting to install asdf(lazygit)"
