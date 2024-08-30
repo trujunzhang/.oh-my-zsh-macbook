@@ -52,11 +52,27 @@ if type nix &>/dev/null; then
 #     sudo launchctl kickstart -k system/org.nixos.nix-daemon
 fi
 
+function link_nvim_flake {
+    if [ -L "/Users/djzhang/neovim-flake-jordanisaacs" ]; then
+        info "Already link nvim flake(neovim-flake-jordanisaacs)"
+    else
+        info "Starting to link nvim flake(neovim-flake-jordanisaacs)"
+        ln -s "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/Users/djzhang/neovim-flake-jordanisaacs"
+    fi
+}
+
 if type nix &>/dev/null; then
+    link_nvim_flake
     if [ ! -L "/etc/nix/nix.conf" ]; then
-        if [  -f "/etc/nix/nix.conf" ]; then
-            info "Starting to move nix.conf"
+       if [  -f "/etc/nix/nix.conf" ]; then
+            info "Starting to move nix.conf to nix.conf.bak"
             sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.bak
+       fi
+       if [  -L "$HOME/.zshrc" ]; then
+           rm "$HOME/.zshrc"  
+       fi
+       if [  -L "$HOME/.zshenv" ]; then
+           rm "$HOME/.zshenv"  
        fi
 #        sudo mv /etc/bashrc /etc/bashrc.bak
 #        sudo mv /etc/zshrc /etc/zshrc.bak

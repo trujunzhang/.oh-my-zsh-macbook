@@ -6,7 +6,6 @@ inputs:
 , nixConfigDirectory # directory on the system where this flake is located
 , userHome
 , system ? "aarch64-darwin"
-, neovim-flake
 
 # `nix-darwin` modules to include
 , modules ? [ ]
@@ -38,12 +37,7 @@ inputs.darwin.lib.darwinSystem {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.${username} = {
-        imports = 
-        [
-            # neovim-flake.homeManagerModules.default
-            neovim-flake.homeManagerModules.${system}.default
-            # ({ home.packages = []; })
-        ] ++ homeModules ++ extraPlatformModules;
+        imports = homeModules ++ extraPlatformModules;
         home.stateVersion = homeStateVersion;
         home.user-info = config.users.primaryUser;
       };

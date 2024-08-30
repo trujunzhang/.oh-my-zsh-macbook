@@ -106,10 +106,9 @@ let inherit (lib) mkIf elem; in
 
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     inherit (pkgs)
-      # cocoapods
       notion
       m-cli # useful macOS CLI commands
-      prefmanager # tool for working with macOS defaults
+      # prefmanager # tool for working with macOS defaults
       ;
   });
 }

@@ -2,23 +2,9 @@
   description = "djzhang’s Nix system configs, and some other useful stuff.";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-    flake-schemas.url = github:DeterminateSystems/flake-schemas;
-
-    # https://github.com/NixOS/nixpkgs/commit/c3160517fc6381f86776795e95c97b8ef7b5d2e4
-    nixpkgs-mega.url = "nixpkgs/c3160517fc6381f86776795e95c97b8ef7b5d2e4";
-    # https://github.com/NixOS/nixpkgs/issues/322970
-    nixpkgs-zoom.url = "nixpkgs/24.05";
-
-    ## nix client with schema support: see https://github.com/NixOS/nix/pull/8892
-    nix-schema = {
-      url = github:DeterminateSystems/nix-src/flake-schemas;
-      inputs.flake-schemas.follows = "flake-schemas";
-    };
-
     # Package sets
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-24.05-darwin";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     # Environment/system management
@@ -32,47 +18,70 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     # Agda mode for Neovim
-    cornelis.url = "github:isovector/cornelis";
-    cornelis.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    cornelis.inputs.flake-compat.follows = "flake-compat";
-    cornelis.inputs.flake-utils.follows = "flake-utils";
+    # cornelis.url = "github:isovector/cornelis";
+    # cornelis.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # cornelis.inputs.flake-compat.follows = "flake-compat";
+    # cornelis.inputs.flake-utils.follows = "flake-utils";
 
     # Utility for watching macOS `defaults`.
-    prefmanager.url = "github:malob/prefmanager";
-    prefmanager.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    prefmanager.inputs.flake-compat.follows = "flake-compat";
-    prefmanager.inputs.flake-utils.follows = "flake-utils";
+    # prefmanager.url = "github:malob/prefmanager";
+    # prefmanager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # prefmanager.inputs.flake-compat.follows = "flake-compat";
+    # prefmanager.inputs.flake-utils.follows = "flake-utils";
 
     neovim-flake = {
+      # url = "github:jordanisaacs/neovim-flake";
       # url = github:gvolpe/neovim-flake;
       # url = github:trujunzhang/neovim-flake;
-      #url = git+file:///home/gvolpe/workspace/neovim-flake;
-      url = git+file:///Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/@SharedPackage/@github/neovim-flake;
+      # url = git+file:///home/gvolpe/workspace/neovim-flake;
+      # url = "../neovim-flake-jordanisaacs?shallow=1";
+      # url = file://$home/Documents/Organizations/__CODING/WORKING/@SharedPackage/@github/neovim-flake;
+      # url = git+file:///Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/@SharedPackage/@github/neovim-flake;
+      # url = git+file:///Users/djzhang/Documents/Organizations/__CODING/WORKING/@SharedPackage/@github/neovim-flake;
+      # url = path:/Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/neovim-flake-jordanisaacs;
+      url = "/Users/djzhang/neovim-flake-jordanisaacs";
+      # url = "~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/neovim-flake-jordanisaacs";
+      # url = "../neovim-flake-jordanisaacs";
       # inputs.nixpkgs.follows = "nixpkgs";
       # inputs.nixpkgs.follows = "nixpkgs-unstable";
       # inputs.flake-schemas.follows = "flake-schemas";
     };
   };
 
-  outputs = { self, darwin, home-manager, flake-utils, neovim-flake, ... }@inputs:
+  # outputs = { self, darwin, home-manager, nixpkgs, flake-utils, neovim-flake, ... }@inputs:
+  outputs = { self, darwin, home-manager, nixpkgs, flake-utils, ... }@inputs:
     let
       inherit (self.lib) attrValues makeOverridable mkForce optionalAttrs singleton;
 
       homeStateVersion = "24.05";
+
+    #   pkgs = nixpkgs.legacyPackages."x86_64-darwin";
+
+    #   configModule = {
+    #   # Add any custom options (and feel free to upstream them!)
+    #   # options = ...
+
+    #   config.vim.theme.enable = true;
+    # };
+
+    # customNeovim = neovim-flake.lib.neovimConfiguration {
+    #   modules = [configModule];
+    #   inherit pkgs;
+    # };
 
       nixpkgsDefaults = {
         config = {
           allowUnfree = true;
         };
         overlays = attrValues self.overlays ++ [
-          inputs.cornelis.overlays.cornelis
-          inputs.prefmanager.overlays.prefmanager
+          # inputs.cornelis.overlays.cornelis
+          # inputs.prefmanager.overlays.prefmanager
         ] ++ singleton (
           final: prev: (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
             # Sub in x86 version of packages that don't build on Apple Silicon.
             inherit (final.pkgs-x86)
-              agda
-              idris2
+              # agda
+              # idris2
               ;
           }) // {
             # Add other overlays here if needed.
@@ -133,15 +142,15 @@
             inherit (self.overlays.vimUtils final prev) vimUtils;
           in
           {
-            vimPlugins = prev.vimPlugins.extend (_: _:
-              # Useful for testing/using Vim plugins that aren't in `nixpkgs`.
-              vimUtils.buildVimPluginsFromFlakeInputs inputs [
-                # Add flake input names here for a Vim plugin repos
-              ] // {
-                # Other Vim plugins
-                inherit (inputs.cornelis.packages.${prev.stdenv.system}) cornelis-vim;
-              }
-            );
+            # vimPlugins = prev.vimPlugins.extend (_: _:
+            #   # Useful for testing/using Vim plugins that aren't in `nixpkgs`.
+            #   vimUtils.buildVimPluginsFromFlakeInputs inputs [
+            #     # Add flake input names here for a Vim plugin repos
+            #   ] // {
+            #     # Other Vim plugins
+            #     inherit (inputs.cornelis.packages.${prev.stdenv.system}) cornelis-vim;
+            #   }
+            # );
           };
 
         tweaks = _: _: {
@@ -180,7 +189,7 @@
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.${system}.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.aarch64-darwin.default;
-        malo-neovim-flake = import ./home/neovim-flake.nix;
+        # malo-neovim-flake = import ./home/neovim-flake.nix;
 
         # Modules I've created
         colors = import ./modules/home/colors;
@@ -216,7 +225,6 @@
 
         # My Apple Silicon macOS laptop config
         "djzhangs-Mac-mini" = makeOverridable self.lib.mkDarwinSystem (primaryUserDefaults // {
-          neovim-flake = neovim-flake;
           system = "aarch64-darwin";
           userHome = "/Volumes/MacUser/djzhang";
           modules = attrValues self.darwinModules ++ singleton {
@@ -243,7 +251,6 @@
         });
 
         "djzhangs-MacBook-Pro" = makeOverridable self.lib.mkDarwinSystem (primaryUserDefaults // {
-          neovim-flake = neovim-flake;
           system = "x86_64-darwin";
           userHome = "/Users/djzhang";
           modules = attrValues self.darwinModules ++ singleton {
@@ -307,25 +314,27 @@
       # }}}
 
     } // flake-utils.lib.eachDefaultSystem (system: {
+      # packages.${system}.neovim = customNeovim;
+
       # Re-export `nixpkgs-unstable` with overlays.
       # This is handy in combination with setting `nix.registry.my.flake = inputs.self`.
       # Allows doing things like `nix run my#prefmanager -- watch --all`
-      legacyPackages = import inputs.nixpkgs-unstable (nixpkgsDefaults // { inherit system; });
+      # legacyPackages = import inputs.nixpkgs-unstable (nixpkgsDefaults // { inherit system; });
 
       # Development shells ----------------------------------------------------------------------{{{
       # Shell environments for development
       # With `nix.registry.my.flake = inputs.self`, development shells can be created by running,
       # e.g., `nix develop my#python`.
-      devShells = let pkgs = self.legacyPackages.${system}; in
-        {
-          python = pkgs.mkShell {
-            name = "python310";
-            inputsFrom = attrValues {
-              inherit (pkgs.pkgs-master.python310Packages) black isort;
-              inherit (pkgs) poetry python310 pyright;
-            };
-          };
-        };
+      # devShells = let pkgs = self.legacyPackages.${system}; in
+      #   {
+      #     python = pkgs.mkShell {
+      #       name = "python310";
+      #       inputsFrom = attrValues {
+      #         inherit (pkgs.pkgs-master.python310Packages) black isort;
+      #         inherit (pkgs) poetry python310 pyright;
+      #       };
+      #     };
+      #   };
       # }}}
     });
 }
