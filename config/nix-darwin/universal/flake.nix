@@ -18,7 +18,7 @@
 
     # Package sets
     nixpkgs-master.url = "github:NixOS/nixpkgs/master";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-24.05-darwin";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     # Environment/system management
@@ -44,10 +44,13 @@
     prefmanager.inputs.flake-utils.follows = "flake-utils";
 
     neovim-flake = {
-      url = github:gvolpe/neovim-flake;
+      # url = github:gvolpe/neovim-flake;
       # url = github:trujunzhang/neovim-flake;
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-schemas.follows = "flake-schemas";
+      #url = git+file:///home/gvolpe/workspace/neovim-flake;
+      url = git+file:///Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/@SharedPackage/@github/neovim-flake;
+      # inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs-unstable";
+      # inputs.flake-schemas.follows = "flake-schemas";
     };
   };
 
@@ -176,13 +179,13 @@
         # neovim-flake
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.${system}.default;
-        malo-neovim-flake-default = neovim-flake.homeManagerModules.aarch64-darwin.default;
+        # malo-neovim-flake-default = neovim-flake.homeManagerModules.aarch64-darwin.default;
         malo-neovim-flake = import ./home/neovim-flake.nix;
 
         # Modules I've created
         colors = import ./modules/home/colors;
-        programs-neovim-extras = import ./modules/home/programs/neovim/extras.nix;
-        programs-kitty-extras = import ./modules/home/programs/kitty/extras.nix;
+        # programs-neovim-extras = import ./modules/home/programs/neovim/extras.nix;
+        # programs-kitty-extras = import ./modules/home/programs/kitty/extras.nix;
         home-user-info = { lib, ... }: {
           options.home.user-info =
             (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
@@ -213,6 +216,7 @@
 
         # My Apple Silicon macOS laptop config
         "djzhangs-Mac-mini" = makeOverridable self.lib.mkDarwinSystem (primaryUserDefaults // {
+          neovim-flake = neovim-flake;
           system = "aarch64-darwin";
           userHome = "/Volumes/MacUser/djzhang";
           modules = attrValues self.darwinModules ++ singleton {
@@ -239,6 +243,7 @@
         });
 
         "djzhangs-MacBook-Pro" = makeOverridable self.lib.mkDarwinSystem (primaryUserDefaults // {
+          neovim-flake = neovim-flake;
           system = "x86_64-darwin";
           userHome = "/Users/djzhang";
           modules = attrValues self.darwinModules ++ singleton {
