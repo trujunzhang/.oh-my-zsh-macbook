@@ -52,17 +52,17 @@ if type nix &>/dev/null; then
 #     sudo launchctl kickstart -k system/org.nixos.nix-daemon
 fi
 
-function link_nvim_flake {
-    if [ -L "/Users/djzhang/neovim-flake-jordanisaacs" ]; then
-        info "Already link nvim flake(neovim-flake-jordanisaacs)"
-    else
-        info "Starting to link nvim flake(neovim-flake-jordanisaacs)"
-        ln -s "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/Users/djzhang/neovim-flake-jordanisaacs"
+function copy_nvim_flake {
+    if [ -d "/tmp/neovim-flake-jordanisaacs" ]; then
+        info "Already exist nvim flake(neovim-flake-jordanisaacs)"
+        rm -rf "/tmp/neovim-flake-jordanisaacs"
     fi
+    info "Starting to copy nvim flake(neovim-flake-jordanisaacs) to '/tmp/neovim-flake-jordanisaacs'"
+    cp -Rvp  "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/tmp/neovim-flake-jordanisaacs"
 }
 
 if type nix &>/dev/null; then
-    link_nvim_flake
+    copy_nvim_flake
     if [ ! -L "/etc/nix/nix.conf" ]; then
        if [  -f "/etc/nix/nix.conf" ]; then
             info "Starting to move nix.conf to nix.conf.bak"

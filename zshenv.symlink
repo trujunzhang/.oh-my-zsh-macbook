@@ -190,7 +190,7 @@ export TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-mac
 alias dcd_home="cd ${TRUJUNZHANG_DOTFILES_HOME}"
 
 #nix
-alias dnix_build_default="darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal"
+alias dnix_build_default='[[ -d /tmp/neovim-flake-jordanisaacs ]] && rm -r /tmp/neovim-flake-jordanisaacs && cp -Rvp  "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/tmp/neovim-flake-jordanisaacs" && darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal'
 alias dnix_build_local="darwin-rebuild switch --flake ."
 alias dnix_install_third="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf 'trusted-users = $(whoami)'"
 alias dnix_uninstall_third="/nix/nix-installer uninstall"

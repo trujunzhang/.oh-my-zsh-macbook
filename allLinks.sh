@@ -123,7 +123,6 @@ function link_config_fold {
 
     # nixpkgs
     directoryLink "config(nixpkgs)" "$TRUJUNZHANG_DOTFILES_HOME/config/nixpkgs" "$HOME/.nixpkgs"
-    directoryLink "config(neovim-flake-jordanisaacs)" "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/Users/djzhang/neovim-flake-jordanisaacs"
 
     # v2ray-core
     directoryLink "source(v2ray-core)" "$TRUJUNZHANG_DOTFILES_HOME/config/v2ray-core-4.31.0" "$HOME/.config/v2ray-core"
