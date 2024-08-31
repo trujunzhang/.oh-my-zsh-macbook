@@ -199,18 +199,14 @@
         "tidalcycles": "tidalcycles"
       },
       "locked": {
-        "dir": "config/neovim-flake-jordanisaacs",
-        "dirtyRev": "05377eede58980ef369f0ed49465576fa150d7d3-dirty",
-        "dirtyShortRev": "05377ee-dirty",
-        "lastModified": 1725012161,
-        "narHash": "sha256-cEMFUOmmLx2XyzLRdfx7rraibt/uUuPMpXJhHyF4Sr8=",
-        "type": "git",
-        "url": "file:///Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook?dir=config/neovim-flake-jordanisaacs"
+        "lastModified": 1725022963,
+        "narHash": "sha256-b7zp7GxpXnCqnKkVv0cY16BETjhnCPA/uVvpLUsz7X8=",
+        "path": "/tmp/neovim-flake-jordanisaacs",
+        "type": "path"
       },
       "original": {
-        "dir": "config/neovim-flake-jordanisaacs",
-        "type": "git",
-        "url": "file:///Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook?dir=config/neovim-flake-jordanisaacs"
+        "path": "/tmp/neovim-flake-jordanisaacs",
+        "type": "path"
       }
     },
     "nil": {

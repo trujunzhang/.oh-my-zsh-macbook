@@ -34,6 +34,7 @@
       # url = github:gvolpe/neovim-flake;
       # url = github:trujunzhang/neovim-flake;
       # url = git+file:///home/gvolpe/workspace/neovim-flake;
+      # url = git+file:///home/gvolpe/workspace/neovim-flake;
       # url = "../neovim-flake-jordanisaacs?shallow=1";
       # url = file://$home/Documents/Organizations/__CODING/WORKING/@SharedPackage/@github/neovim-flake;
       # url = git+file:///Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/@SharedPackage/@github/neovim-flake;
@@ -48,26 +49,30 @@
     };
   };
 
-  # outputs = { self, darwin, home-manager, nixpkgs, flake-utils, neovim-flake, ... }@inputs:
-  outputs = { self, darwin, home-manager, nixpkgs, flake-utils, ... }@inputs:
+  outputs = { self, darwin, home-manager, nixpkgs, flake-utils, neovim-flake, ... }@inputs:
+  # outputs = { self, darwin, home-manager, nixpkgs, flake-utils, ... }@inputs:
     let
       inherit (self.lib) attrValues makeOverridable mkForce optionalAttrs singleton;
 
       homeStateVersion = "24.05";
 
-    #   pkgs = nixpkgs.legacyPackages."x86_64-darwin";
+      # pkgs = nixpkgs.legacyPackages."x86_64-darwin";
+      pkgs = nixpkgs.legacyPackages."aarch64-darwin";
 
-    #   configModule = {
-    #   # Add any custom options (and feel free to upstream them!)
-    #   # options = ...
+      configModule = {
+      # Add any custom options (and feel free to upstream them!)
+      # options = ...
 
-    #   config.vim.theme.enable = true;
-    # };
+      config.vim.theme.enable = true;
+      config.vim.languages.nix.enable = true;
+    };
 
-    # customNeovim = neovim-flake.lib.neovimConfiguration {
-    #   modules = [configModule];
-    #   inherit pkgs;
-    # };
+    customNeovim = neovim-flake.lib.neovimConfiguration {
+      modules = [configModule];
+      inherit pkgs;
+    };
+
+    baseNeovim = neovim-flake.packages."aarch64-darwin".maximal;
 
       nixpkgsDefaults = {
         config = {
@@ -304,17 +309,18 @@
 #      };
 
       # Config with small modifications needed/desired for CI with GitHub workflow
-      homeConfigurations.runner = self.homeConfigurations.malo.override (old: {
-        modules = old.modules ++ singleton {
-          home.username = mkForce "runner";
-          home.homeDirectory = mkForce "/home/runner";
-          home.user-info.nixConfigDirectory = mkForce "/home/runner/work/nixpkgs/nixpkgs";
-        };
-      });
+      # homeConfigurations.runner = self.homeConfigurations.malo.override (old: {
+      #   modules = old.modules ++ singleton {
+      #     home.username = mkForce "runner";
+      #     home.homeDirectory = mkForce "/home/runner";
+      #     home.user-info.nixConfigDirectory = mkForce "/home/runner/work/nixpkgs/nixpkgs";
+      #   };
+      # });
       # }}}
 
     } // flake-utils.lib.eachDefaultSystem (system: {
       # packages.${system}.neovim = customNeovim;
+      packages.${system}.neovim = baseNeovim;
 
       # Re-export `nixpkgs-unstable` with overlays.
       # This is handy in combination with setting `nix.registry.my.flake = inputs.self`.
