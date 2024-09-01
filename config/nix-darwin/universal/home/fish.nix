@@ -42,6 +42,10 @@ if [ -d $HOME/.asdf ]
     source ~/.asdf/asdf.fish
 end
 
+if [ -d $HOME/.asdf/plugins/java ]
+    source ~/.asdf/plugins/java/set-java-home.zsh
+end
+
     '';
 
     # Sets Fish Shell to light or dark colorscheme based on `$term_background`.

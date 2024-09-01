@@ -88,6 +88,10 @@ if [ -f "/etc/nix/nix.conf.bak" ]; then
         if [ ! -f "/etc/nix/nix.conf" ]; then
            info "Failed to install, restore nix.conf"
            sudo mv /etc/nix/nix.conf.bak /etc/nix/nix.conf
-       fi
+        fi
+        # zshrc(rc)
+        info "Failed to install, restore zshrc to (users.HOME)"
+        fileLink ".zsh(env)" "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
+        fileLink ".zsh(rc)" "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink" "$HOME/.zshrc"
     fi
 fi

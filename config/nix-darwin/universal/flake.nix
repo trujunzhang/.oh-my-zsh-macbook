@@ -49,30 +49,12 @@
     };
   };
 
-  outputs = { self, darwin, home-manager, nixpkgs, flake-utils, neovim-flake, ... }@inputs:
+  outputs = { self, darwin, home-manager, nixpkgs, flake-utils, ... }@inputs:
   # outputs = { self, darwin, home-manager, nixpkgs, flake-utils, ... }@inputs:
     let
       inherit (self.lib) attrValues makeOverridable mkForce optionalAttrs singleton;
 
       homeStateVersion = "24.05";
-
-      # pkgs = nixpkgs.legacyPackages."x86_64-darwin";
-      pkgs = nixpkgs.legacyPackages."aarch64-darwin";
-
-      configModule = {
-      # Add any custom options (and feel free to upstream them!)
-      # options = ...
-
-      config.vim.theme.enable = true;
-      config.vim.languages.nix.enable = true;
-    };
-
-    customNeovim = neovim-flake.lib.neovimConfiguration {
-      modules = [configModule];
-      inherit pkgs;
-    };
-
-    baseNeovim = neovim-flake.packages."aarch64-darwin".maximal;
 
       nixpkgsDefaults = {
         config = {
@@ -194,7 +176,7 @@
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.${system}.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.aarch64-darwin.default;
-        # malo-neovim-flake = import ./home/neovim-flake.nix;
+        malo-neovim-flake = import ./home/neovim-flake.nix;
 
         # Modules I've created
         colors = import ./modules/home/colors;
@@ -280,48 +262,9 @@
           homeModules = attrValues self.homeManagerModules;
           extraPlatformModules = attrValues self.homePlatformModules_x86;
         });
-
-        # Config with small modifications needed/desired for CI with GitHub workflow
-#        githubCI = self.darwinConfigurations."djzhangs-Mac-mini".override {
-#          username = "runner";
-#          nixConfigDirectory = "/Users/runner/work/nixpkgs/nixpkgs";
-#          extraModules = singleton {
-#            environment.etc.shells.enable = mkForce false;
-#            environment.etc."nix/nix.conf".enable = mkForce false;
-#            homebrew.enable = mkForce false;
-#          };
-#        };
       };
 
-      # Config I use with non-NixOS Linux systems (e.g., cloud VMs etc.)
-      # Build and activate on new system with:
-      # `nix build .#homeConfigurations.malo.activationPackage && ./result/activate`
-#      homeConfigurations.malo = makeOverridable home-manager.lib.homeManagerConfiguration {
-#        pkgs = import inputs.nixpkgs-unstable (nixpkgsDefaults // { system = "x86_64-linux"; });
-#        modules = attrValues self.homeManagerModules ++ singleton ({ config, ... }: {
-#          home.username = config.home.user-info.username;
-#          home.homeDirectory = "/home/${config.home.username}";
-#          home.stateVersion = homeStateVersion;
-#          home.user-info = primaryUserDefaults // {
-#            nixConfigDirectory = "${config.home.homeDirectory}/.config/nixpkgs";
-#          };
-#        });
-#      };
-
-      # Config with small modifications needed/desired for CI with GitHub workflow
-      # homeConfigurations.runner = self.homeConfigurations.malo.override (old: {
-      #   modules = old.modules ++ singleton {
-      #     home.username = mkForce "runner";
-      #     home.homeDirectory = mkForce "/home/runner";
-      #     home.user-info.nixConfigDirectory = mkForce "/home/runner/work/nixpkgs/nixpkgs";
-      #   };
-      # });
-      # }}}
-
     } // flake-utils.lib.eachDefaultSystem (system: {
-      # packages.${system}.neovim = customNeovim;
-      packages.${system}.neovim = baseNeovim;
-
       # Re-export `nixpkgs-unstable` with overlays.
       # This is handy in combination with setting `nix.registry.my.flake = inputs.self`.
       # Allows doing things like `nix run my#prefmanager -- watch --all`
