@@ -1,4 +1,4 @@
-{ inputs, outputs, config, pkgs, lib, ... }:
+flakes: { inputs, outputs, config, pkgs, lib, ... }:
 with lib;
 # Let-In ----------------------------------------------------------------------------------------{{{
 let
@@ -12,12 +12,12 @@ let
       config.vim.languages.nix.enable = lib.mkForce true;
     };
 
-    baseNeovim = inputs.neovim-flake.packages.${system}.maximal;
+    baseNeovim = flakes.neovim-flake.packages.${pkgs.system}.maximal;
     neovimExtended = baseNeovim.extendConfiguration {modules = [configModule];};
     finalNeovim = neovimExtended.extendConfiguration {
       modules = [configModule2];
       inherit pkgs;
     };
   in {
-    packages.${system}.neovim = finalNeovim;
-  };
+    packages.${pkgs.system}.neovim = finalNeovim;
+  }

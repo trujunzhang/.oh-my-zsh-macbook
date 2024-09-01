@@ -49,8 +49,7 @@
     };
   };
 
-  outputs = { self, darwin, home-manager, nixpkgs, flake-utils, ... }@inputs:
-  # outputs = { self, darwin, home-manager, nixpkgs, flake-utils, ... }@inputs:
+  outputs = { self, darwin, home-manager, flake-utils, neovim-flake, ... }@inputs:
     let
       inherit (self.lib) attrValues makeOverridable mkForce optionalAttrs singleton;
 
@@ -176,7 +175,7 @@
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.${system}.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.aarch64-darwin.default;
-        malo-neovim-flake = import ./home/neovim-flake.nix;
+        malo-neovim-flake = import ./home/neovim-flake.nix { neovim-flake = neovim-flake; };
 
         # Modules I've created
         colors = import ./modules/home/colors;
@@ -268,7 +267,7 @@
       # Re-export `nixpkgs-unstable` with overlays.
       # This is handy in combination with setting `nix.registry.my.flake = inputs.self`.
       # Allows doing things like `nix run my#prefmanager -- watch --all`
-      # legacyPackages = import inputs.nixpkgs-unstable (nixpkgsDefaults // { inherit system; });
+      legacyPackages = import inputs.nixpkgs-unstable (nixpkgsDefaults // { inherit system; });
 
       # Development shells ----------------------------------------------------------------------{{{
       # Shell environments for development

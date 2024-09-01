@@ -43,7 +43,7 @@ if [ -d $HOME/.asdf ]
 end
 
 if [ -d $HOME/.asdf/plugins/java ]
-    source ~/.asdf/plugins/java/set-java-home.zsh
+    source ~/.asdf/plugins/java/set-java-home.fish
 end
 
     '';
