@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  imports = [
+    ./nvim-bufferline.nix
+  ];
+}

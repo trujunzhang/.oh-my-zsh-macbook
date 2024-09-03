@@ -70,7 +70,7 @@ let inherit (lib) mkIf elem; in
       vscode
       neovim
       alacritty
-      wezterm
+      # wezterm
       ;
 
     # Dev stuff

@@ -19,5 +19,5 @@ let
       inherit pkgs;
     };
   in {
-    packages.${pkgs.system}.neovim = finalNeovim;
+    # packages.${pkgs.system}.neovim = finalNeovim;
   }

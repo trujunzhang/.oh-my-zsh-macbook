@@ -176,6 +176,7 @@
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.${system}.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.aarch64-darwin.default;
         malo-neovim-flake = import ./home/neovim-flake.nix { neovim-flake = neovim-flake; };
+        # malo-neovim-flake = import ./home/neovim-flake.nix { neovim-flake = neovim-flake; packages = packages; };
 
         # Modules I've created
         colors = import ./modules/home/colors;
