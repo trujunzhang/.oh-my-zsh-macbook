@@ -656,10 +656,10 @@ alias dnix_config="nix config show"
 alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
 
 function dnix_build_default
-    if [ -d "/tmp/neovim-flake-jordanisaacs" ]
-        rm -rf "/tmp/neovim-flake-jordanisaacs"
+    if [ -d /tmp/neovim-flake-jordanisaacs ]
+        rm -rf /tmp/neovim-flake-jordanisaacs
     end
-    cp -Rvp  "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/tmp/neovim-flake-jordanisaacs"
+    cp -Rvp "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" /tmp/neovim-flake-jordanisaacs
     darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
 end
 
@@ -737,8 +737,12 @@ alias l="lvim"
 # alias n="nvim"
 alias vsc="code ."
 
+alias h="nix run ~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/neovim-flake-gvolpe --"
+alias d="nix run ~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/neovim-flake-gvolpe --"
+
 # Switching Configs in Neovim
 # see: https://michaeluloth.com/neovim-switch-configs/
+# UpdateRemotePlugins
 
 alias NVIM_APPNAME='nvim-lazyvim nvim'
 alias vd='nvim' # default Neovim config

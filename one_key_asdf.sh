@@ -42,8 +42,8 @@ function install_ruby {
     info "starting to install asdf(ruby)"
     asdf plugin add ruby "https://github.com/asdf-vm/asdf-ruby.git"
     export ASDF_RUBY_BUILD_VERSION=master 
-    asdf install ruby "3.2.2"
-    asdf global ruby "3.2.2"
+    asdf install ruby "3.3.3"
+    asdf global ruby "3.3.3"
 }
 function install_lazygit {
     info "starting to install asdf(lazygit)"

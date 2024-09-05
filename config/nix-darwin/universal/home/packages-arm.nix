@@ -83,6 +83,7 @@ let inherit (lib) mkIf elem; in
       s3cmd
       stack
       typescript
+      libyaml
       ;
     inherit (pkgs.haskellPackages)
       cabal-install
