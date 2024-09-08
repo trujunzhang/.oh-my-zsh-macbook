@@ -113,6 +113,7 @@ function link_config_fold {
     # asdf-vm
     fileLink "config(asdfrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.asdfrc" "$HOME/.asdfrc"
     fileLink "config(asdf-node)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-npm-packages" "$HOME/.default-npm-packages"
+    fileLink "config(asdf-ruby)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-gems" "$HOME/.default-gems"
 
     # nix
     directoryLink "config(nix)" "$TRUJUNZHANG_DOTFILES_HOME/config/nix" "$HOME/.config/nix"
@@ -167,7 +168,7 @@ function link_config_fold {
     directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-craftzdog" "$HOME/.config/nvim-craftzdog" "delete"
 
     # fish
-#     directoryLink "config(vlc)" "$TRUJUNZHANG_DOTFILES_HOME/config/fish" "$HOME/.config/fish"
+    #     directoryLink "config(vlc)" "$TRUJUNZHANG_DOTFILES_HOME/config/fish" "$HOME/.config/fish"
 
     # apps
     directoryLink "config(vlc)" "$TRUJUNZHANG_DOTFILES_HOME/config/vlc" "$HOME/.config/vlc"

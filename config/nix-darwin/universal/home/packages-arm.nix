@@ -83,7 +83,6 @@ let inherit (lib) mkIf elem; in
       s3cmd
       stack
       typescript
-      libyaml
       ;
     inherit (pkgs.haskellPackages)
       cabal-install
@@ -108,6 +107,7 @@ let inherit (lib) mkIf elem; in
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     inherit (pkgs)
       # notion
+      emacs
       m-cli # useful macOS CLI commands
       # prefmanager # tool for working with macOS defaults
       ;
