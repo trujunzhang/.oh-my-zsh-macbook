@@ -67,8 +67,9 @@ let inherit (lib) mkIf elem; in
       yabai
       skhd
       xz # extract XZ archives
+      ruby_3_2
       vscode
-      neovim
+#      neovim
       alacritty
       # wezterm
       ;

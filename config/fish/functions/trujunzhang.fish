@@ -656,10 +656,10 @@ alias dnix_config="nix config show"
 alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
 
 function dnix_build_default
-    if [ -d /tmp/neovim-flake-jordanisaacs ]
-        rm -rf /tmp/neovim-flake-jordanisaacs
-    end
-    cp -Rvp "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" /tmp/neovim-flake-jordanisaacs
+    #if [ -d /tmp/neovim-flake-jordanisaacs ]
+    #    rm -rf /tmp/neovim-flake-jordanisaacs
+    #end
+    #cp -Rvp "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" /tmp/neovim-flake-jordanisaacs
     darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
 end
 
@@ -761,4 +761,4 @@ alias uc='NVIM_APPNAME=nvim-craftzdog neovide' # Standard neovim
 # Emacs
 # alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
 alias emacsd="emacs -debug-init"
-alias e="emacs"
+alias e="emacs -nw"

@@ -41,7 +41,7 @@ function install_python {
 function install_ruby {
     info "starting to install asdf(ruby)"
     asdf plugin add ruby "https://github.com/asdf-vm/asdf-ruby.git"
-    export ASDF_RUBY_BUILD_VERSION=master 
+    # export ASDF_RUBY_BUILD_VERSION=master
     asdf install ruby "3.3.3"
     asdf global ruby "3.3.3"
 }
@@ -70,7 +70,7 @@ if type asdf &>/dev/null; then
         # java
         install_java
         # ruby
-        install_ruby
+        # install_ruby
     fi
 
     # if [[ $(uname -m) == 'x86_64' ]]; then

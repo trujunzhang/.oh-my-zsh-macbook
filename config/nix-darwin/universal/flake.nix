@@ -29,7 +29,7 @@
     # prefmanager.inputs.flake-compat.follows = "flake-compat";
     # prefmanager.inputs.flake-utils.follows = "flake-utils";
 
-    neovim-flake = {
+#    neovim-flake = {
       # url = "github:jordanisaacs/neovim-flake";
       # url = github:gvolpe/neovim-flake;
       # url = github:trujunzhang/neovim-flake;
@@ -40,16 +40,17 @@
       # url = git+file:///Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/@SharedPackage/@github/neovim-flake;
       # url = git+file:///Users/djzhang/Documents/Organizations/__CODING/WORKING/@SharedPackage/@github/neovim-flake;
       # url = path:/Users/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/neovim-flake-jordanisaacs;
-      url = "/tmp/neovim-flake-jordanisaacs";
+#      url = "/tmp/neovim-flake-jordanisaacs";
       # url = "~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/neovim-flake-jordanisaacs";
       # url = "../neovim-flake-jordanisaacs";
       # inputs.nixpkgs.follows = "nixpkgs";
       # inputs.nixpkgs.follows = "nixpkgs-unstable";
       # inputs.flake-schemas.follows = "flake-schemas";
-    };
+#    };
   };
 
-  outputs = { self, darwin, home-manager, flake-utils, neovim-flake, ... }@inputs:
+#  outputs = { self, darwin, home-manager, flake-utils, neovim-flake, ... }@inputs:
+  outputs = { self, darwin, home-manager, flake-utils, ... }@inputs:
     let
       inherit (self.lib) attrValues makeOverridable mkForce optionalAttrs singleton;
 
@@ -167,7 +168,8 @@
         malo-git-aliases = import ./home/git-aliases.nix;
         malo-gh-aliases = import ./home/gh-aliases.nix;
         # malo-kitty = import ./home/kitty.nix;
-        # malo-neovim = import ./home/neovim.nix;
+        malo-neovim = import ./home/neovim.nix;
+        malo-emacs= import ./home/emacs.nix;
         malo-starship = import ./home/starship.nix;
         malo-starship-symbols = import ./home/starship-symbols.nix;
 
@@ -175,7 +177,7 @@
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.${system}.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.aarch64-darwin.default;
-        malo-neovim-flake = import ./home/neovim-flake.nix { neovim-flake = neovim-flake; };
+#        malo-neovim-flake = import ./home/neovim-flake.nix { neovim-flake = neovim-flake; };
         # malo-neovim-flake = import ./home/neovim-flake.nix { neovim-flake = neovim-flake; packages = packages; };
 
         # Modules I've created

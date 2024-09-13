@@ -169,7 +169,9 @@ export PATH="$HOME/.roswell/bin:$PATH"
 export PKG_CONFIG_PATH=/usr/local/Cellar/zlib/1.2.8/lib/pkgconfig:/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
 
 # asdf-vm tools
-. "$HOME/.asdf/asdf.sh"
+if [[ -d '$HOME/.asdf' ]]; then
+    . "$HOME/.asdf/asdf.sh"
+fi
 
 if [[ $(uname -m) == 'arm64' ]]; then
   # echo M2

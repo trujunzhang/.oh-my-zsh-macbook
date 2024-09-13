@@ -31,6 +31,7 @@ in
     # have the same value for the variable.
     set-dev-env-macOS.body = ''
 
+
 if type zellij &>/dev/null
     if set -q ZELLIJ
     else
@@ -41,7 +42,6 @@ end
 if [ -d $HOME/.asdf ]
     source ~/.asdf/asdf.fish
 end
-
 if [ -d $HOME/.asdf/plugins/java ]
     source ~/.asdf/plugins/java/set-java-home.fish
 end
@@ -92,6 +92,8 @@ end
 
   # Aliases
   programs.fish.shellAliases = with pkgs; {
+    emacs = "${pkgs.emacs}/Applications/Emacs.app/Contents/MacOS/Emacs";
+
     # Nix related
     drb = "darwin-rebuild build --flake ${nixConfigDirectory}";
     drs = "darwin-rebuild switch --flake ${nixConfigDirectory}";

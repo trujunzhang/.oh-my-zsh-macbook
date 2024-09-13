@@ -62,11 +62,14 @@ let inherit (lib) mkIf elem; in
       thefuck
       unrar # extract RAR archives
       upterm # secure terminal sharing
+      cmake
+      protobuf
       wget
       zellij
       xz # extract XZ archives
-      # vscode
-      neovim
+      ruby_3_2
+      vscode
+#      neovim
       # alacritty
       # wezterm
       ;
@@ -107,7 +110,7 @@ let inherit (lib) mkIf elem; in
   } // lib.optionalAttrs pkgs.stdenv.isDarwin {
     inherit (pkgs)
       # notion
-      emacs
+      # emacs
       m-cli # useful macOS CLI commands
       # prefmanager # tool for working with macOS defaults
       ;
