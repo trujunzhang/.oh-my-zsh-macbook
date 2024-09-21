@@ -49,7 +49,7 @@ let inherit (lib) mkIf elem; in
       bandwhich # display current network utilization by process
       bottom # fancy version of `top` with ASCII graphs
       browsh # in terminal browser
-      coreutils
+#      coreutils
       curl
       du-dust # fancy version of `du`
       eza # fancy version of `ls`
@@ -66,6 +66,9 @@ let inherit (lib) mkIf elem; in
       zellij
       yabai
       skhd
+      mkcert
+      sbcl
+      # ocicl
       xz # extract XZ archives
       ruby_3_2
       vscode
