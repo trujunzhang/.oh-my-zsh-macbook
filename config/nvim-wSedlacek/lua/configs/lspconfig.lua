@@ -17,7 +17,7 @@ local servers = {
   "ocamllsp",
   "sqlls",
   "sourcekit",
-  "bufls",
+  -- "bufls",
   "dockerls",
   -- "biome",
   "bashls",

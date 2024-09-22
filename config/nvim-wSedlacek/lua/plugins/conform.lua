@@ -39,7 +39,7 @@ return {
       ocaml = { "ocamlformat" },
       sql = { "pg_format" },
       swift = { "swift_format" },
-      proto = { "buf" },
+      -- proto = { "buf" },
       yaml = { { "prettierd", "prettier" } },
     },
 

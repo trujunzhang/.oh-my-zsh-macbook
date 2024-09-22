@@ -125,8 +125,8 @@ alias ystartclient='yarn start:client'
 alias ystart='yarn start'
 alias yrandroid='yarn android'
 alias yrios='yarn ios'
-alias yallrios='bundle install && ninstall && npm run pod-install && yarn ios'
-alias yallrandroid='bundle install && npm install && yarn android'
+alias yallrios='bundle install && yinstall && npm run pod-install && yarn ios'
+alias yallrandroid='bundle install && yinstall && yarn android'
 alias yripad='yarn ipad'
 alias yrweb='yarn web'
 alias yrstorybook='yarn storybook'
@@ -763,3 +763,6 @@ alias uc='NVIM_APPNAME=nvim-craftzdog neovide' # Standard neovim
 # alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
 alias emacsd="emacs -debug-init"
 alias e="emacs -nw"
+
+
+alias fish_reload="source ~/.config/fish/config.fish"
