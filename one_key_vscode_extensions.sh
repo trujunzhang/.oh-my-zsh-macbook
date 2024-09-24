@@ -58,14 +58,20 @@ vsExtensionsArray=(
     "amazonwebservices.aws-toolkit-vscode"
     # "github.copilot"
     "codeium.codeium"
-    "Codium.codium"   # https://www.codium.ai
+    # https://www.codium.ai
+    "Codium.codium"   
+
+    # =================================
+    # Nix
+    # =================================
+    "jnoortheen.nix-ide"
 
     # =================================
     # Node
     # =================================
     # Jest
     # https://itnext.io/debug-your-tests-in-typescript-with-visual-studio-code-911a4cada9cd
-    "kavod-io.vscode-jest-test-adapter"
+    # "kavod-io.vscode-jest-test-adapter"
     "izdt.javascript-unit-test-snippet"
     "orta.vscode-jest"
 

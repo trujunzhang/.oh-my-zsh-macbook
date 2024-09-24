@@ -173,6 +173,8 @@
         malo-starship = import ./home/starship.nix;
         malo-starship-symbols = import ./home/starship-symbols.nix;
 
+        malo-packages-common = import ./home/packages-common.nix;
+
         # neovim-flake
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.default;
         # malo-neovim-flake-default = neovim-flake.homeManagerModules.${system}.default;

@@ -125,8 +125,8 @@ alias ystartclient='yarn start:client'
 alias ystart='yarn start'
 alias yrandroid='yarn android'
 alias yrios='yarn ios'
-alias yallrios='bundle install && yinstall && npm run pod-install && yarn ios'
-alias yallrandroid='bundle install && yinstall && yarn android'
+alias yallrios='bundle install && ninstall && npm run pod-install && yarn ios'
+alias yallrandroid='bundle install && ninstall && yarn android'
 alias yripad='yarn ipad'
 alias yrweb='yarn web'
 alias yrstorybook='yarn storybook'
@@ -284,9 +284,9 @@ alias expios="exp ios"
 alias expand="exp android"
 alias expdoctor='expo doctor --fix-dependencies'
 alias expfix="npx expo install --fix"
-alias expprebuild='expo prebuild --clean'
-alias expdevclient='expo start --dev-client'
-alias expandroidkeystore='expo fetch:android:keystore'
+alias expprebuild='npx expo prebuild --clean'
+alias expdevclient='npx expo start --dev-client'
+alias expandroidkeystore='npx expo fetch:android:keystore'
 
 # Expo generator
 alias expoProjectUpdate="yinstall && yupdate && yinstall && expUpdate && yinstall && expdoctor && yinstall"

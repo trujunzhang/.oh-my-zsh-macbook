@@ -42,20 +42,20 @@ function install_ruby {
     info "starting to install asdf(ruby)"
     asdf plugin add ruby "https://github.com/asdf-vm/asdf-ruby.git"
     # export ASDF_RUBY_BUILD_VERSION=master
-    asdf install ruby "3.3.3"
-    asdf global ruby "3.3.3"
+    asdf install ruby "3.3.5"
+    asdf global ruby "3.3.5"
 }
 function install_lazygit {
     info "starting to install asdf(lazygit)"
     asdf plugin add lazygit "https://github.com/nklmilojevic/asdf-lazygit.git"
-    asdf install lazygit latest
-    asdf global lazygit latest
+    asdf install lazygit '0.44.1'
+    asdf global lazygit '0.44.1'
 }
 function install_cocoapods {
     info "starting to install asdf(cocoapods)"
     asdf plugin add cocoapods "https://github.com/ronnnnn/asdf-cocoapods.git"
-    asdf install cocoapods latest
-    asdf global cocoapods latest
+    asdf install cocoapods '1.14.3'
+    asdf global cocoapods '1.14.3'
 
     # asdf plugin add ruby ""
     # asdf install ruby latest
