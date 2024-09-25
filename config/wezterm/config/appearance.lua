@@ -27,9 +27,9 @@ return {
    --    },
    -- },
 
-   -- window_decorations = "NONE",
+   -- window_decorations = 'NONE',
 
-   window_decorations = "RESIZE",
+   window_decorations = 'RESIZE',
 
    -- scrollbar
    enable_scroll_bar = true,
