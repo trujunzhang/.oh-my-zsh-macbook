@@ -215,7 +215,7 @@ if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace V'
 
 [[on-window-detected]]
-if.app-id = 'com.jetbrains.Pycharm'
+if.app-id = 'com.jetbrains.pycharm'
 run = 'move-node-to-workspace P'
 
 [[on-window-detected]]
@@ -232,11 +232,12 @@ if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
-if.window-title-regex-substring = 'iPhone 16'
-check-further-callbacks = true
+if.app-id = 'com.apple.iphonesimulator'
+# if.window-title-regex-substring = 'iPhone 16'
+# check-further-callbacks = true
 run = 'move-node-to-workspace M'
 
 [[on-window-detected]]
 if.window-title-regex-substring='Android Emulator'
-if.during-aerospace-startup = false 
+if.during-aerospace-startup = false
 run = ['move-node-to-workspace M']

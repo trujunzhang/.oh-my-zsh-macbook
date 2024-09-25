@@ -26,7 +26,7 @@ brew_apps=(
     # System tools
     "Raycast.app" "raycast" 'copy'
     "SpaceLauncher.app" "spacelauncher" 'copy'
-    "Notion.app" "notion" 'ssd'
+    "Notion.app" "notion" 'copy'
     "OneDrive.app" "onedrive" 'copy'
     # "Hammerspoon.app"         "hammerspoon" 'copy'
     # "Grammarly Editor.app"    "grammarly" 'copy'

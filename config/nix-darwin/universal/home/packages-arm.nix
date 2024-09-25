@@ -9,8 +9,8 @@ let inherit (lib) mkIf elem; in
       ninja
       fastlane
       ruby_3_3
-      vscode
-#      neovim
+      # vscode
+      # neovim
       # alacritty
       # wezterm
       ;
