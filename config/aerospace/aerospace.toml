@@ -241,9 +241,8 @@ run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.iphonesimulator'
-# if.window-title-regex-substring = 'iPhone 16'
-# check-further-callbacks = true
-run = 'move-node-to-workspace M'
+check-further-callbacks = true
+run = ['layout floating', 'move-node-to-workspace M']
 
 [[on-window-detected]]
 if.window-title-regex-substring='Android Emulator'
