@@ -635,14 +635,19 @@ alias git_checkout_proxy="git config --global http.proxy"
 
 alias git_checkout_submodules="git submodule update --init --recursive --depth=1"
 
-alias wclean_homebrew="rm -rf $HOME/Library/Caches/Homebrew"
-alias wclean_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
+#nvim
+alias wclean_cache_homebrew="rm -rf $HOME/Library/Caches/Homebrew"
+alias wclean_cache_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
 alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"
 alias wclean_nvimCache="rm -rf $HOME/.cache/nvim && rm -rf $HOME/.local/state/nvim && rm -rf $HOME/.local/share/nvim"
-alias wclean_nvim-wSedlacekCache="rm -rf $HOME/.cache/nvim-wSedlacek && rm -rf $HOME/.local/state/nvim-wSedlacek && rm -rf $HOME/.local/share/nvim-wSedlacek"
-alias wclean_nvim-2kabhishekCache="rm -rf $HOME/.cache/nvim-2kabhishek && rm -rf $HOME/.local/state/nvim-2kabhishek && rm -rf $HOME/.local/share/nvim-2kabhishek"
-alias wclean_all_nvim_cache="wclean_nvimCache && wclean_nvim-wSedlacekCache && wclean_nvim-2kabhishekCache"
+alias wclean_nvchad-cache_wSedlacek="rm -rf $HOME/.cache/nvchad-wSedlacek && rm -rf $HOME/.local/state/nvchad-wSedlacek && rm -rf $HOME/.local/share/nvchad-wSedlacek"
+alias wclean_nvchad-cache_mgastonportillo="rm -rf $HOME/.cache/nvchad-mgastonportillo && rm -rf $HOME/.local/state/nvchad-mgastonportillo && rm -rf $HOME/.local/share/nvchad-mgastonportillo"
+alias wclean_nvchad-cache_Alexis12119="rm -rf $HOME/.cache/nvchad-Alexis12119 && rm -rf $HOME/.local/state/nvchad-Alexis12119 && rm -rf $HOME/.local/share/nvchad-Alexis12119"
+alias wclean_nvim-cache_2kabhishek="rm -rf $HOME/.cache/nvim-2kabhishek && rm -rf $HOME/.local/state/nvim-2kabhishek && rm -rf $HOME/.local/share/nvim-2kabhishek"
+alias wclean_nvim-cache_craftzdog="rm -rf $HOME/.cache/nvim-craftzdog && rm -rf $HOME/.local/state/nvim-craftzdog && rm -rf $HOME/.local/share/nvim-craftzdog"
+alias wclean_all_nvim_cache="wclean_nvimCache && wclean_nvim-cache_2kabhishek && wclean_nvim-cache_craftzdog && wclean_nvchad-cache_wSedlacek && wclean_nvchad-cache_mgastonportillo && wclean_nvchad-cache_Alexis12119"
 
+#rvm
 alias set_rvm_source='echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db'
 
 #nix
@@ -751,11 +756,13 @@ alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
 alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
 alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
 alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
-alias v='NVIM_APPNAME=nvim-wSedlacek nvim' # NvChad
+alias v='NVIM_APPNAME=nvchad-wSedlacek nvim' # NvChad
+alias m='NVIM_APPNAME=nvchad-mgastonportillo nvim' # NvChad
+alias a='NVIM_APPNAME=nvchad-Alexis12119 nvim' # NvChad
 alias n='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
 alias c='NVIM_APPNAME=nvim-craftzdog nvim' # Standard neovim
 
-alias uv='NVIM_APPNAME=nvim-wSedlacek neovide' # NvChad
+alias uv='NVIM_APPNAME=nvchad-wSedlacek neovide' # NvChad
 alias un='NVIM_APPNAME=nvim-2kabhishek neovide' # Standard neovim
 alias uc='NVIM_APPNAME=nvim-craftzdog neovide' # Standard neovim
 

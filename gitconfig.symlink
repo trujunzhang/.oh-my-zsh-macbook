@@ -8,6 +8,7 @@
 	compression = 0
     packedGitLimit = 512m
     packedGitWindowSize = 512m
+	autocrlf = input
  [pack]
     deltaCacheSize = 2047m
     packSizeLimit = 2047m

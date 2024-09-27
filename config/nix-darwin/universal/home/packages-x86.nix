@@ -7,7 +7,8 @@ let inherit (lib) mkIf elem; in
   home.packages = lib.attrValues ({
     # Some basics
     inherit (pkgs)
-      ruby_3_2
+      ruby_3_3
+      yabai
       vscode
       alacritty
       # wezterm
