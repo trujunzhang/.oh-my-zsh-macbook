@@ -17,7 +17,7 @@ M.ui = {
   },
 
   nvdash = {
-    load_on_startup = true,
+    load_on_startup = false,
     header = fortune.get_fortune(48),
     buttons = {
       { "  Find File", "Spc f f", "Telescope find_files" },

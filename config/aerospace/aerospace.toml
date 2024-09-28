@@ -240,6 +240,10 @@ if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
+if.app-id = 'com.vivaldi.vivaldi'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
 if.app-id = 'com.apple.iphonesimulator'
 check-further-callbacks = true
 run = ['layout floating', 'move-node-to-workspace M']

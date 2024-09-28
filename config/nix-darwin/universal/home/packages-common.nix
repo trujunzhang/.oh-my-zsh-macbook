@@ -74,6 +74,7 @@ let inherit (lib) mkIf elem; in
       tree-sitter
       yq
       autoconf
+      lua-language-server
       # devenv
       ;
 
