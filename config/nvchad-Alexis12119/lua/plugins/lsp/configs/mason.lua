@@ -39,10 +39,34 @@ return {
         -- install_root_dir = path.concat { vim.fn.stdpath "config", "/lua/custom/mason" },
       }
 
+      mason_lspconfig.setup {
+        ensure_installed = {
+          "lua_ls",
+          -- "angularls",
+          "cssls",
+          "emmet_ls",
+          -- "awk_ls",
+          "bashls",
+          "cssmodules_ls",
+          -- "dockerls",
+          "eslint", -- instead of `tsserver` or `eslint_d` in `null_ls` for better linting and react-specific linting rules
+          "html",
+          -- "lemminx",
+          "pyright",
+          "pylsp",
+          -- "sqlls",
+          "jsonls",
+          "yamlls",
+          "ts_ls",
+          -- "terraformls",
+        },
+        automatic_installation = true,
+      }
+
       local disabled_servers = {
         "jdtls",
         "rust_analyzer",
-        "ts_ls",
+        -- "ts_ls",
       }
 
       mason_lspconfig.setup_handlers {

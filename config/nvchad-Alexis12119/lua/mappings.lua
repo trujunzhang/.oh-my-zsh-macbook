@@ -165,16 +165,16 @@ vim.keymap.set("n", "L", function()
 end, { desc = "General | Go to next buffer", silent = true })
 
 -- Go to previous tab
-vim.keymap.set("n", "<Left>", "<cmd>tabprevious<CR>", { desc = "General | Go to previous tab", silent = true })
+-- vim.keymap.set("n", "<Left>", "<cmd>tabprevious<CR>", { desc = "General | Go to previous tab", silent = true })
 
 -- Go to next tab
-vim.keymap.set("n", "<Right>", "<cmd>tabnext<CR>", { desc = "General | Go to next tab", silent = true })
+-- vim.keymap.set("n", "<Right>", "<cmd>tabnext<CR>", { desc = "General | Go to next tab", silent = true })
 
 -- New tab
-vim.keymap.set("n", "<Up>", "<cmd>tabnew<CR>", { desc = "General | New tab", silent = true })
+-- vim.keymap.set("n", "<Up>", "<cmd>tabnew<CR>", { desc = "General | New tab", silent = true })
 
 -- Close tab
-vim.keymap.set("n", "<Down>", "<cmd>tabclose<CR>", { desc = "General | Close tab", silent = true })
+-- vim.keymap.set("n", "<Down>", "<cmd>tabclose<CR>", { desc = "General | Close tab", silent = true })
 
 -- Indent backward
 vim.keymap.set("n", "<", "<<", { desc = "General | Indent backward", silent = true })
@@ -225,7 +225,7 @@ vim.keymap.set("t", "<C-j>", "<C-\\><C-N><C-j>", { desc = "General | Go to upper
 vim.keymap.set("t", "<C-k>", "<C-\\><C-N><C-k>", { desc = "General | Go to lower window(Terminal)", silent = true })
 
 -- Go to left window (Terminal)
-vim.keymap.set("t", "<C-h>", "<C-\\<C-N><C-h>", {  desc = "General | Go to left window(Terminal)", silent = true })
+vim.keymap.set("t", "<C-h>", "<C-\\<C-N><C-h>", { desc = "General | Go to left window(Terminal)", silent = true })
 
 -- Go to right window (Terminal)
 vim.keymap.set("t", "<C-l>", "<C-\\><C-N><C-l>", { desc = "General | Go to right window(Terminal)", silent = true })

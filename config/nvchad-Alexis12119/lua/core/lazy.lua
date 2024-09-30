@@ -3,10 +3,10 @@ return {
   defaults = { lazy = true },
   install = { colorscheme = { "nvchad" } },
   -- automatically check for plugin updates
-  checker = { enabled = true },
+  checker = { enabled = false },
   change_detection = {
     -- automatically check for config file changes and reload the ui
-    enabled = true,
+    enabled = false,
     notify = false, -- get a notification when changes are found
   },
   lockfile = vim.fn.stdpath "data" .. "/lazy-lock.json",
