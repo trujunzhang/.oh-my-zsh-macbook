@@ -75,6 +75,7 @@ let inherit (lib) mkIf elem; in
       yq
       autoconf
       lua-language-server
+      pkg-config
       # devenv
       ;
 
