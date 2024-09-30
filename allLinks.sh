@@ -148,6 +148,9 @@ function link_config_fold {
     # quicklisp
     fileLink "quicklisp(rc)" "$TRUJUNZHANG_DOTFILES_HOME/config/quicklisp/sbclrc.symlink" "$HOME/.sbclrc"
 
+    # pip
+    fileLink "pip(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/pip/pip.conf" "$HOME/pip.conf"
+
     # nvim-snippet
     directoryLink "nvim(snippets)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets" "$HOME/.config/nvim-snippets"
 

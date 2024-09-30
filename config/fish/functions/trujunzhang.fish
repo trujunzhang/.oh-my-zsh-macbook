@@ -778,3 +778,4 @@ alias fish_reload="source ~/.config/fish/config.fish"
 # see: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments
 alias pvenv_new="python -m venv .venv"
 alias pvenv_envrc='echo -e "export VIRTUAL_ENV=.venv\nlayout python" > .envrc'
+alias pip_install="pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
