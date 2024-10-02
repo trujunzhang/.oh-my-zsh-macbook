@@ -151,7 +151,7 @@ alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 alt-shift-a = 'move-node-to-workspace A'
 alt-shift-b = 'move-node-to-workspace B'
 alt-shift-c = 'move-node-to-workspace C'
@@ -205,6 +205,10 @@ G = 'secondary'
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = 'move-node-to-workspace F'
+
+[[on-window-detected]]
+if.app-id = 'com.Eltima.ElmediaPlayer.MAS'
+run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'com.figma.Desktop'
