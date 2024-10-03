@@ -46,6 +46,7 @@ brew_apps=(
     # Design apps
     "Figma.app" "figma" 'copy'
     "Zeplin.app" "zeplin" 'copy'
+    "VLC.app" "VLC" 'copy'
 
     # chat apps
     "Skype.app" "skype" 'ssd'

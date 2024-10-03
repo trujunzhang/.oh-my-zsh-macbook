@@ -533,7 +533,6 @@ proxy-groups:
       - BR
       - 🇺🇸 US
       - ZA
-      - 🇨🇳 CN
       - 🇺🇸 US 2
       - 🇺🇸 US 3
       - 🇺🇸 US 4
@@ -837,6 +836,7 @@ rules:
   - IP-CIDR6,fc00::/7,🎯 全球直连,no-resolve
   - IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
   - IP-CIDR6,fd00::/8,🎯 全球直连,no-resolve
+  - DOMAIN,localhost:8081,🎯 全球直连
   - DOMAIN,instant.arubanetworks.com,🎯 全球直连
   - DOMAIN,setmeup.arubanetworks.com,🎯 全球直连
   - DOMAIN,router.asus.com,🎯 全球直连
@@ -4087,6 +4087,7 @@ rules:
   - DOMAIN-SUFFIX,llnwd.net,🚀 节点选择
   - DOMAIN-SUFFIX,macrumors.com,🚀 节点选择
   - DOMAIN-SUFFIX,medium.com,🚀 节点选择
+  - DOMAIN-SUFFIX,notion.so,🚀 节点选择
   - DOMAIN-SUFFIX,mega.nz,🚀 节点选择
   - DOMAIN-SUFFIX,megaupload.com,🚀 节点选择
   - DOMAIN-SUFFIX,messenger.com,🚀 节点选择
