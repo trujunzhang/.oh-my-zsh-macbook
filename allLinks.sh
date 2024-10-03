@@ -151,6 +151,10 @@ function link_config_fold {
     # pip
     fileLink "pip(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/pip/pip.conf" "$HOME/pip.conf"
 
+    # clash
+    mkdir -rf '$HOME/.config/clash'
+    fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/djzhang.trujunzhang.workers.dev.yaml"
+
     # nvim-snippet
     directoryLink "nvim(snippets)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets" "$HOME/.config/nvim-snippets"
 
