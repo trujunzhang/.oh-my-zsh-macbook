@@ -3366,6 +3366,7 @@ rules:
   - DOMAIN,alt7-mtalk.google.com,📢 谷歌FCM
   - DOMAIN,alt8-mtalk.google.com,📢 谷歌FCM
   - DOMAIN,mtalk.google.com,📢 谷歌FCM
+  - DOMAIN,firestore.googleapis.com,📢 谷歌FCM
   - IP-CIDR,64.233.177.188/32,📢 谷歌FCM,no-resolve
   - IP-CIDR,64.233.186.188/32,📢 谷歌FCM,no-resolve
   - IP-CIDR,64.233.187.188/32,📢 谷歌FCM,no-resolve
