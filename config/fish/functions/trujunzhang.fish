@@ -626,6 +626,9 @@ alias dclone_cocoapods="git clone https://github.com/CocoaPods/Specs"
 alias dclone_asdf_plugins="git clone https://github.com/asdf-vm/asdf-plugins"
 alias dclone_transforms="git clone https://github.com/huggingface/transformers"
 alias dclone_tensor="git clone https://github.com/tensorflow/tensorflow"
+alias dclone_superbase="git clone https://github.com/supabase/supabase"
+#see: https://github.com/CodyReichert/awesome-cl
+alias dclone_lisp_matrix="git clone https://github.com/blindglobe/lisp-matrix"
 
 alias git_set_v2ray_proxy="git config --global http.proxy http://127.0.0.1:1087"
 alias git_set_clash_proxy_http="git config --global http.proxy http://127.0.0.1:7890"
@@ -779,3 +782,6 @@ alias fish_reload="source ~/.config/fish/config.fish"
 alias pvenv_new="python -m venv .venv"
 alias pvenv_envrc='echo -e "export VIRTUAL_ENV=.venv\nlayout python" > .envrc'
 alias pip_install="pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+# Verify the installation:
+alias pverify_tensorflow='python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"'
+alias pverify_transforms="python -c \"from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))\""

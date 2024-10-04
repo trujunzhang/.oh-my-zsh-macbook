@@ -216,7 +216,7 @@ run = 'move-node-to-workspace 8'
 
 [[on-window-detected]]
 if.app-id = 'com.figma.Desktop'
-run = 'move-node-to-workspace A'
+run = 'move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.skype.skype'
@@ -240,17 +240,38 @@ run = 'move-node-to-workspace N'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-# run = ['layout floating', 'move-node-to-workspace T']
 run = ['move-node-to-workspace W']
+
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = 'move-node-to-workspace T'
+
+# 5 web browser
+[[on-window-detected]]
+if.app-id = 'com.vivaldi.Vivaldi'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.operasoftware.Opera'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.edgemac'
+run = 'move-node-to-workspace 5'
 
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace G'
 
-[[on-window-detected]]
-if.app-id = 'com.vivaldi.vivaldi'
-run = 'move-node-to-workspace 1'
-
+# simulators on the mobile development
 [[on-window-detected]]
 if.app-id = 'com.apple.iphonesimulator'
 check-further-callbacks = true

@@ -76,7 +76,8 @@ let inherit (lib) mkIf elem; in
       autoconf
       lua-language-server
       pkg-config
-      # devenv
+      docker
+      docker-compose
       ;
 
     # Dev stuff
