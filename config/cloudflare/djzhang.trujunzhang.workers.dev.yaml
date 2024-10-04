@@ -2440,6 +2440,12 @@ rules:
   - DOMAIN-SUFFIX,click.tianyaui.cn,🍃 应用净化
   - DOMAIN-SUFFIX,client-api.ele.me,🍃 应用净化
   - DOMAIN-SUFFIX,collector.githubapp.com,🍃 应用净化
+  - DOMAIN-KEYWORD,github,🚀 节点选择
+  - DOMAIN-SUFFIX,github.com,📢 谷歌FCM
+  - DOMAIN-SUFFIX,github.io,📢 谷歌FCM
+  - DOMAIN-SUFFIX,githubapp.com,🚀 节点选择
+  - DOMAIN-SUFFIX,githubassets.com,🚀 节点选择
+  - DOMAIN-SUFFIX,githubusercontent.com,🚀 节点选择
   - DOMAIN-SUFFIX,counter.csdn.net,🍃 应用净化
   - DOMAIN-SUFFIX,d0.xcar.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,de.soquair.com,🍃 应用净化
@@ -3986,7 +3992,7 @@ rules:
   - DOMAIN-SUFFIX,ip138.com,🚀 节点选择
   - DOMAIN-SUFFIX,linkedin.com,🚀 节点选择
   - DOMAIN-SUFFIX,myteamspeak.com,🚀 节点选择
-  - DOMAIN-SUFFIX,notion.so,🚀 节点选择
+  - DOMAIN-KEYWORD,notion,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,ping.pe,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
   - DOMAIN-SUFFIX,teddysun.com,🚀 节点选择
@@ -4010,7 +4016,6 @@ rules:
   - DOMAIN-KEYWORD,dropbox,🚀 节点选择
   - DOMAIN-KEYWORD,facebook,🚀 节点选择
   - DOMAIN-KEYWORD,fbcdn,🚀 节点选择
-  - DOMAIN-KEYWORD,github,🚀 节点选择
   - DOMAIN-KEYWORD,gmail,🚀 节点选择
   - DOMAIN-KEYWORD,google,🚀 节点选择
   - DOMAIN-KEYWORD,instagram,🚀 节点选择
@@ -4088,7 +4093,6 @@ rules:
   - DOMAIN-SUFFIX,llnwd.net,🚀 节点选择
   - DOMAIN-SUFFIX,macrumors.com,🚀 节点选择
   - DOMAIN-SUFFIX,medium.com,🚀 节点选择
-  - DOMAIN-SUFFIX,notion.so,🚀 节点选择
   - DOMAIN-SUFFIX,mega.nz,🚀 节点选择
   - DOMAIN-SUFFIX,megaupload.com,🚀 节点选择
   - DOMAIN-SUFFIX,messenger.com,🚀 节点选择
@@ -4206,11 +4210,6 @@ rules:
   - IP-CIDR,179.60.192.0/22,🚀 节点选择,no-resolve
   - IP-CIDR,185.60.216.0/22,🚀 节点选择,no-resolve
   - IP-CIDR,204.15.20.0/22,🚀 节点选择,no-resolve
-  - DOMAIN-SUFFIX,github.com,🚀 节点选择
-  - DOMAIN-SUFFIX,github.io,🚀 节点选择
-  - DOMAIN-SUFFIX,githubapp.com,🚀 节点选择
-  - DOMAIN-SUFFIX,githubassets.com,🚀 节点选择
-  - DOMAIN-SUFFIX,githubusercontent.com,🚀 节点选择
   - DOMAIN-SUFFIX,1e100.net,🚀 节点选择
   - DOMAIN-SUFFIX,2mdn.net,🚀 节点选择
   - DOMAIN-SUFFIX,app-measurement.net,🚀 节点选择
