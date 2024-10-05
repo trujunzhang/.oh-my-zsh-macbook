@@ -818,7 +818,8 @@ rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,myavlive.com,🎯 全球直连
   - DOMAIN-SUFFIX,missav.com,🎯 全球直连
-  - DOMAIN,dev.new.ieatta.com,🎯 全球直连,no-resolve
+  # - DOMAIN,dev.new.ieatta.com,🎯 全球直连
+  - SRC-PORT,8082,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
   - DOMAIN-SUFFIX,lan,🎯 全球直连
