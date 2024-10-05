@@ -153,7 +153,7 @@ function link_config_fold {
 
     # clash
     mkdir -p '$HOME/.config/clash'
-    fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/djzhang.trujunzhang.workers.dev.yaml"
+    fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml"
 
     # nvim-snippet
     directoryLink "nvim(snippets)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets" "$HOME/.config/nvim-snippets"
