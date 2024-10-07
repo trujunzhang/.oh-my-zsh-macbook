@@ -129,7 +129,7 @@ function link_config_fold {
     directoryLink "source(v2ray-core)" "$TRUJUNZHANG_DOTFILES_HOME/config/v2ray-core-4.31.0" "$HOME/.config/v2ray-core"
 
     # zed IDE
-    mkdir -p '$HOME/.config/zed'
+    mkdir -p "$HOME/.config/zed"
     fileLink "config(zed-ide)" "$TRUJUNZHANG_DOTFILES_HOME/config/zed/settings.json" "$HOME/.config/zed/settings.json"
     fileLink "config(zed-ide)" "$TRUJUNZHANG_DOTFILES_HOME/config/zed/keymap.json" "$HOME/.config/zed/keymap.json"
 
@@ -152,7 +152,7 @@ function link_config_fold {
     fileLink "pip(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/pip/pip.conf" "$HOME/pip.conf"
 
     # clash
-    mkdir -p '$HOME/.config/clash'
+    mkdir -p "$HOME/.config/clash"
     fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml"
 
     # nvim-snippet
@@ -453,7 +453,7 @@ function link_mac_user {
     directoryLink "jenkins(profile)" "$HOME_MACGAME_PATH/.jenkins" "$HOME/.jenkins"
 }
 
-# mkdir -p '/usr/local/bin'
+# mkdir -p "/usr/local/bin"
 
 # ====================================================================
 # ====================================================================

@@ -1,14 +1,32 @@
 [
   {
     "type": "application",
+    "name": "AeroSpace",
+    "application": "AeroSpace",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "Alacritty",
     "application": "Alacritty",
+    "enable": "0"
+  },
+  {
+    "type": "application",
+    "name": "clash",
+    "application": "ClashX Pro",
     "enable": "1"
   },
   {
     "type": "application",
     "name": "google chrome",
     "application": "google chrome",
+    "enable": "1"
+  },
+  {
+    "type": "application",
+    "name": "WezTerm",
+    "application": "WezTerm",
     "enable": "1"
   },
   {
@@ -33,18 +51,24 @@
     "type": "application",
     "name": "Raycast",
     "path": "Raycast",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
     "name": "Vivaldi",
     "application": "Vivaldi",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
     "name": "BetterTouchTool",
     "application": "BetterTouchTool",
-    "enable": "0"
+    "enable": "1"
+  },
+  {
+    "type": "application",
+    "name": "TextSniper",
+    "application": "TextSniper",
+    "enable": "1"
   }
 ]
