@@ -48,6 +48,15 @@ alias mpps='meteor debug --production --settings settings.json' # Run meteor for
 alias npmt='npm test' # Run the test script from package.json.
 alias npmtp="npm run test:puppeteer"
 
+#npm config
+alias nconfig_set_registry="npm config set registry https://registry.npm.taobao.org"
+alias nconfig_get_registry="npm config get registry"
+alias nconfig_list="npm config list"
+alias nconfig_ssl_false="npm config set strict-ssl false"
+alias nconfig_ssl_true="npm config set strict-ssl true"
+alias nconfig_set_cache_local="npm config set cache /tmp/npm_cache"
+alias nconfig_verify_cache="npm --global cache verify"
+
 alias psrun='php bin/console server:run' # Run the test script from package.json.
 
 alias pslrun='php -S localhost:8080 -t web web/index.php'
@@ -172,15 +181,15 @@ alias npmrr="npm run sketch:render"
 
 # npm.plugin
 alias ninstallxxx='npm install --verbose && offline_local_ios_pods'
-alias ninstall='npm install --verbose'
-alias npmi='npm install --verbose'
+alias ninstall='npm install --verbose --no-cache'
+alias npmi='npm install --verbose --no-cache'
 
 alias nvscode_langservers='npm i -g vscode-langservers-extracted'
 
-alias npmsvi='npm install --verbose --save-dev '
-alias npmsi='npm install --verbose --save '
+alias ninstall_dev='npm install --verbose --save-dev --no-cache'
+alias ninstall_save='npm install --verbose --save --no-cache'
 
-alias npodi='npm run pod-install'
+alias nrpodi='npm run pod-install'
 alias nrprettier='npm run prettier'
 alias nrstart='npm run start'
 alias nrweb='npm run web'
@@ -321,10 +330,9 @@ alias iosopen='open -a Simulator'
 
 alias ioskill='killall "Simulator"'
 alias ioslist='xcrun simctl list devices available'
-alias iosiphone8='open -a Simulator --args -CurrentDeviceUDID 4011447B-DF37-47A7-8C7D-C4E578B5B976 iPhone8'
-alias iosiphone15pro='open -a Simulator --args -CurrentDeviceUDID 72CFAFB2-E1BA-4C0D-B865-2369CCA1444E iPhone14pro'
-alias iosiphone15promaxabc='ioskill && sleep 3 && open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone14promax'
-alias iosiphone15promax='open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone14promax'
+alias iosiphone15pro='open -a Simulator --args -CurrentDeviceUDID 72CFAFB2-E1BA-4C0D-B865-2369CCA1444E iPhone16promax'
+alias iosiphone15promaxabc='ioskill && sleep 3 && open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone16promax'
+alias iosiphone15promax='open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone16promax'
 alias iosiphone3se='open -a Simulator --args -CurrentDeviceUDID 9AF53831-AF2E-4F84-AC62-91D4FB2A0E76 iPhone3se'
 alias androidopen='$ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion'
 
@@ -454,6 +462,7 @@ alias drungrpc_branch="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USE
 alias drunlocalgitpull="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash && ./local_git_update.sh"
 alias drunoffline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
 alias drunhttp='cd $ORGANIZATIONS_HOME/__CACHES/github && python3 -m http.server --cgi 8080'
+alias dkill_paralles_desktop="sh $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/umac/kill_macos_apps.sh 'prl_client_app'"
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 

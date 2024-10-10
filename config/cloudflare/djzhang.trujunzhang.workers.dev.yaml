@@ -4222,7 +4222,7 @@ rules:
   - DOMAIN-SUFFIX,sourcegraph.com,🚀 节点选择
   - DOMAIN-SUFFIX,spring.io,🚀 节点选择
   - DOMAIN-SUFFIX,spring.net,🚀 节点选择
-  - DOMAIN-SUFFIX,stackoverflow.com,🚀 节点选择
+  - DOMAIN-SUFFIX,stackoverflow.com,Ⓜ️ 微软服务
   - DOMAIN,d1q6f0aelx0por.cloudfront.net,🚀 节点选择
   - DOMAIN,d2wy8f7a9ursnm.cloudfront.net,🚀 节点选择
   - DOMAIN,d36jcksde1wxzq.cloudfront.net,🚀 节点选择

@@ -7,14 +7,38 @@
   },
   {
     "type": "application",
+    "name": "BetterTouchTool",
+    "application": "BetterTouchTool",
+    "enable": "1"
+  },
+  {
+    "type": "application",
+    "name": "SpaceLauncher",
+    "application": "SpaceLauncher",
+    "enable": "1"
+  },
+  {
+    "type": "application",
+    "name": "clash",
+    "application": "ClashX Pro",
+    "enable": "1"
+  },
+  {
+    "type": "application",
+    "name": "TextSniper",
+    "application": "TextSniper",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "Alacritty",
     "application": "Alacritty",
     "enable": "0"
   },
   {
     "type": "application",
-    "name": "clash",
-    "application": "ClashX Pro",
+    "name": "WezTerm",
+    "application": "WezTerm",
     "enable": "1"
   },
   {
@@ -25,21 +49,9 @@
   },
   {
     "type": "application",
-    "name": "WezTerm",
-    "application": "WezTerm",
-    "enable": "1"
-  },
-  {
-    "type": "application",
-    "name": "webstorm",
-    "application": "webstorm",
+    "name": "Raycast",
+    "path": "Raycast",
     "enable": "0"
-  },
-  {
-    "type": "application",
-    "name": "SpaceLauncher",
-    "application": "SpaceLauncher",
-    "enable": "1"
   },
   {
     "type": "application",
@@ -49,8 +61,8 @@
   },
   {
     "type": "application",
-    "name": "Raycast",
-    "path": "Raycast",
+    "name": "webstorm",
+    "application": "webstorm",
     "enable": "0"
   },
   {
@@ -58,17 +70,5 @@
     "name": "Vivaldi",
     "application": "Vivaldi",
     "enable": "0"
-  },
-  {
-    "type": "application",
-    "name": "BetterTouchTool",
-    "application": "BetterTouchTool",
-    "enable": "1"
-  },
-  {
-    "type": "application",
-    "name": "TextSniper",
-    "application": "TextSniper",
-    "enable": "1"
   }
 ]

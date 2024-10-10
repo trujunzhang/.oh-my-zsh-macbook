@@ -345,7 +345,7 @@ function link_symlink {
 
     # Node.js
     # fileLink "Yarn(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/yarn/.yarnrc" "$HOME/.yarnrc" "delete"
-    fileLink "npm(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm/.npmrc" "$HOME/.npmrc" "delete"
+    directoryLink "npm(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm" "$HOME/.config/npm" "delete"
 }
 
 # function link_cocoapods {
