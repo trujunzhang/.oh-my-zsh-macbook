@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-source ./src/opts/apps.sh
+# cur_dir=$(pwd)
+
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+
+source "${SCRIPT_DIR}/src/opts/apps.sh"
 
 app=$1
 
