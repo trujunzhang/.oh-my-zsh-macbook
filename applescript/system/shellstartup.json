@@ -19,14 +19,14 @@
   },
   {
     "type": "application",
-    "name": "clash",
-    "application": "ClashX Pro",
+    "name": "TextSniper",
+    "application": "TextSniper",
     "enable": "1"
   },
   {
     "type": "application",
-    "name": "TextSniper",
-    "application": "TextSniper",
+    "name": "clash",
+    "application": "ClashX Pro",
     "enable": "1"
   },
   {

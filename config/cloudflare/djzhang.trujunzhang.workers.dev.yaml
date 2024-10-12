@@ -3533,6 +3533,7 @@ rules:
   - DOMAIN-SUFFIX,oaspapps.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,office.net,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,yts.mx,📢 谷歌FCM
   - DOMAIN-SUFFIX,office365.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,officeppe.net,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,omniroot.com,Ⓜ️ 微软服务
@@ -4326,12 +4327,12 @@ rules:
   - DOMAIN-SUFFIX,openai.com,🚀 节点选择
   - DOMAIN-SUFFIX,challenges.cloudflare.com,🚀 节点选择
   - DOMAIN-KEYWORD,1drv,🚀 节点选择
-  - DOMAIN-KEYWORD,onedrive,🚀 节点选择
+  - DOMAIN-KEYWORD,onedrive,🎯 全球直连
   - DOMAIN-KEYWORD,skydrive,🚀 节点选择
   - DOMAIN-SUFFIX,livefilestore.com,🚀 节点选择
   - DOMAIN-SUFFIX,oneclient.sfx.ms,🚀 节点选择
-  - DOMAIN-SUFFIX,onedrive.com,🚀 节点选择
-  - DOMAIN-SUFFIX,onedrive.live.com,🚀 节点选择
+  - DOMAIN-SUFFIX,onedrive.com,🎯 全球直连
+  - DOMAIN-SUFFIX,onedrive.live.com,🎯 全球直连
   - DOMAIN-SUFFIX,photos.live.com,🚀 节点选择
   - DOMAIN-SUFFIX,skydrive.wns.windows.com,🚀 节点选择
   - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,🚀 节点选择
