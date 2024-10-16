@@ -27,6 +27,7 @@ brew_apps=(
     "Raycast.app" "raycast" 'copy'
     "SpaceLauncher.app" "spacelauncher" 'copy'
     "Notion.app" "notion" 'copy'
+    "ClickUp.app" "clickup" 'ssd'
     "OneDrive.app" "onedrive" 'copy'
     # "Hammerspoon.app"         "hammerspoon" 'copy'
     # "Grammarly Editor.app"    "grammarly" 'copy'
@@ -44,9 +45,9 @@ brew_apps=(
     "Microsoft Edge.app" "microsoft-edge" 'ssd'
 
     # Design apps
-    "Figma.app" "figma" 'copy'
-    "Zeplin.app" "zeplin" 'copy'
-    "VLC.app" "VLC" 'copy'
+    "Figma.app" "figma" 'ssd'
+    "Zeplin.app" "zeplin" 'ssd'
+    "VLC.app" "VLC" 'ssd'
 
     # chat apps
     "Skype.app" "skype" 'ssd'
@@ -149,7 +150,9 @@ function install_brew_app {
 
     if [ "$Params" = "link" ]; then
         if [ ! -d "/Applications/${name}" ]; then
-            link_apps "${name}"
+            if [ "$shouldCopyInApplications" = "ssd" ]; then
+                link_apps "${name}"
+            fi
         fi
     elif [ "$Params" = "backup" ]; then
         if [ -d "/Applications/${name}" ]; then

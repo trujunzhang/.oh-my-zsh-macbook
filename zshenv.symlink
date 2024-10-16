@@ -192,14 +192,15 @@ export TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-mac
 alias dcd_home="cd ${TRUJUNZHANG_DOTFILES_HOME}"
 
 #nix
-alias dnix_build_default='[[ -d /tmp/neovim-flake-jordanisaacs ]] && rm -r /tmp/neovim-flake-jordanisaacs && cp -Rvp  "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/tmp/neovim-flake-jordanisaacs" && darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal'
-alias dnix_build_local="darwin-rebuild switch --flake ."
+alias dnix_build_default='darwin-rebuild switch --option http2 false --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal'
+alias dnix_build_local="darwin-rebuild switch --option http2 false  --flake ."
 alias dnix_install_third="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf 'trusted-users = $(whoami)'"
 alias dnix_uninstall_third="/nix/nix-installer uninstall"
 alias dnix_install_nix_official="export NIX_FIRST_BUILD_UID=30001 && sudo curl -L https://nixos.org/nix/install | sh"
 alias dnix_run_garbage="nix-collect-garbage --delete-old"
 alias dnix_config="nix config show"
 alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
+alias dnix_bin="ls -la /etc/profiles/per-user/djzhang/bin"
 
 alias dnix_install_nix_darwin='sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.bak && nix run nix-darwin -- switch --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"'
 alias dnix_uninstall_nix_darwin="nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller && ./result/bin/darwin-uninstaller"

@@ -9,6 +9,9 @@ source ./bash/tools.sh
 NIX_CONF="/etc/nix/nix.conf"
 NIX_CONF_BAK="/etc/nix/nix.conf.bak"
 
+ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
+TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
+
 function nix_install_official {
     info "Starting to install nix(official)"
     export NIX_FIRST_BUILD_UID=30001
@@ -57,7 +60,7 @@ function copy_nvim_flake {
         info "Already exist nvim flake(neovim-flake-jordanisaacs)"
         rm -rf "/tmp/neovim-flake-jordanisaacs"
     fi
-    info "Starting to copy nvim flake(neovim-flake-jordanisaacs) to '/tmp/neovim-flake-jordanisaacs'"
+    # info "Starting to copy nvim flake(neovim-flake-jordanisaacs) to '/tmp/neovim-flake-jordanisaacs'"
     # cp -Rvp  "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/tmp/neovim-flake-jordanisaacs"
 }
 
@@ -78,7 +81,7 @@ if type nix &>/dev/null; then
 #        sudo mv /etc/zshrc /etc/zshrc.bak
        if [ ! -f "/etc/nix/nix.conf" ]; then
             info "Starting to install nix-darwin"
-            nix run nix-darwin -- switch --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal"
+            nix run nix-darwin -- switch --option http2 false --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal"
        fi
     fi
 fi

@@ -663,22 +663,23 @@ alias wclean_all_nvim_cache="wclean_nvimCache && wclean_nvim-cache_2kabhishek &&
 alias set_rvm_source='echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db'
 
 #nix
-alias dnix_build_default_debug="darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal --show-trace --print-build-logs --verbose"
+alias dnix_build_default_debug="darwin-rebuild switch --option http2 false  --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal --show-trace --print-build-logs --verbose"
 # alias dnix_build_default="darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal"
-alias dnix_build_local="darwin-rebuild switch --flake ."
+alias dnix_build_local="darwin-rebuild switch --option http2 false  --flake ."
 alias dnix_install_third="NIX_INSTALLER_NIX_BUILD_USER_ID_BASE=400 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --extra-conf 'trusted-users = $(whoami)'"
 alias dnix_uninstall_third="/nix/nix-installer uninstall"
 alias dnix_install_nix_official="export NIX_FIRST_BUILD_UID=30001 && sudo curl -L https://nixos.org/nix/install | sh"
 alias dnix_run_garbage="nix-collect-garbage --delete-old"
 alias dnix_config="nix config show"
 alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
+alias dnix_bin="ls -la /etc/profiles/per-user/djzhang/bin"
 
 function dnix_build_default
     #if [ -d /tmp/neovim-flake-jordanisaacs ]
     #    rm -rf /tmp/neovim-flake-jordanisaacs
     #end
     #cp -Rvp "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" /tmp/neovim-flake-jordanisaacs
-    darwin-rebuild switch --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
+    darwin-rebuild switch --option http2 false --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
 end
 
 function dmac_install_common_apps
