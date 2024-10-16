@@ -227,6 +227,10 @@ if.app-id = 'com.figma.Desktop'
 run = 'move-node-to-workspace D'
 
 [[on-window-detected]]
+if.app-id = 'com.clickup.desktop-app'
+run = 'move-node-to-workspace C'
+
+[[on-window-detected]]
 if.app-id = 'com.skype.skype'
 run = 'move-node-to-workspace k'
 
@@ -248,6 +252,10 @@ run = 'move-node-to-workspace N'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
+run = ['move-node-to-workspace W']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Terminal'
 run = ['move-node-to-workspace W']
 
 [[on-window-detected]]

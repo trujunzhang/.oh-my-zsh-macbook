@@ -28,8 +28,8 @@ in
 
   # NPM
   # https://docs.npmjs.com/cli/v6/configuring-npm/npmrc
-  home.sessionVariables.NPM_CONFIG_USERCONFIG = "${configHome}/npm/npmrc";
-  xdg.configFile."npm/npmrc".text = "cache = ${cacheHome}/npm";
+  # home.sessionVariables.NPM_CONFIG_USERCONFIG = "${configHome}/npm/npmrc";
+  # xdg.configFile."npm/npmrc".text = "cache = ${cacheHome}/npm";
 
   # Parallel: Stop displaying citation warning
   # https://www.gnu.org/software/parallel/parallel.html#environment-variables

@@ -58,7 +58,7 @@ function copy_nvim_flake {
         rm -rf "/tmp/neovim-flake-jordanisaacs"
     fi
     info "Starting to copy nvim flake(neovim-flake-jordanisaacs) to '/tmp/neovim-flake-jordanisaacs'"
-    cp -Rvp  "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/tmp/neovim-flake-jordanisaacs"
+    # cp -Rvp  "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-flake-jordanisaacs" "/tmp/neovim-flake-jordanisaacs"
 }
 
 if type nix &>/dev/null; then

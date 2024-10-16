@@ -84,7 +84,7 @@ let inherit (lib) mkIf elem; in
     inherit (pkgs)
       cloc # source code line counter
       deno
-      github-copilot-cli
+      # github-copilot-cli
       google-cloud-sdk
       # idris2
       jq

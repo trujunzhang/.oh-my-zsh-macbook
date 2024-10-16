@@ -71,3 +71,4 @@ wget-log
 #config/nix-darwin/arm64/flake.lock
 #flake.lock
 config/nix-darwin/universal/.nvimlog
+result

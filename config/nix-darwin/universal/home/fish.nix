@@ -77,6 +77,7 @@ fish_add_path "/Applications/Neovide.app/Contents/MacOS"
 # ======================================================================
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps"
+fish_add_path "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Aliases
 if [ -f $TRUJUNZHANG_DOTFILES_HOME/config/fish/functions/trujunzhang.fish ]

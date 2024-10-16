@@ -4038,6 +4038,7 @@ rules:
   - DOMAIN-SUFFIX,ip138.com,🚀 节点选择
   - DOMAIN-SUFFIX,linkedin.com,🚀 节点选择
   - DOMAIN-SUFFIX,myteamspeak.com,🚀 节点选择
+  - DOMAIN-KEYWORD,clickup,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,notion,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,ping.pe,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
@@ -4223,6 +4224,7 @@ rules:
   - DOMAIN-SUFFIX,sourcegraph.com,🚀 节点选择
   - DOMAIN-SUFFIX,spring.io,🚀 节点选择
   - DOMAIN-SUFFIX,spring.net,🚀 节点选择
+  - DOMAIN-SUFFIX,nixos.org,📢 谷歌FCM
   - DOMAIN-SUFFIX,stackoverflow.com,Ⓜ️ 微软服务
   - DOMAIN,d1q6f0aelx0por.cloudfront.net,🚀 节点选择
   - DOMAIN,d2wy8f7a9ursnm.cloudfront.net,🚀 节点选择
