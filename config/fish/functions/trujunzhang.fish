@@ -672,7 +672,7 @@ alias dnix_install_nix_official="export NIX_FIRST_BUILD_UID=30001 && sudo curl -
 alias dnix_run_garbage="nix-collect-garbage --delete-old"
 alias dnix_config="nix config show"
 alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
-alias dnix_bin="ls -la /etc/profiles/per-user/djzhang/bin"
+alias dnix_bin="ls /etc/profiles/per-user/djzhang/bin"
 
 function dnix_build_default
     #if [ -d /tmp/neovim-flake-jordanisaacs ]

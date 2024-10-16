@@ -38,6 +38,8 @@ brew_apps=(
     "Opera.app" "opera" 'ssd'
     "Firefox.app" "firefox" 'ssd'
     "Brave Browser.app" "brave-browser" 'ssd'
+    "Brave Browser Beta.app" "brave-browser-bata" 'ssd'
+    "Brave Browser Nightly.app" "brave-browser-nightly" 'ssd'
 
     # =========================================
     # required password
