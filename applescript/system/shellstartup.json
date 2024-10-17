@@ -43,9 +43,15 @@
   },
   {
     "type": "application",
+    "name": "Brave Browser Nightly",
+    "application": "Brave Browser Nightly",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "google chrome",
     "application": "google chrome",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",

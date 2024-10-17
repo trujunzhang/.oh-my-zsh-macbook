@@ -4039,7 +4039,8 @@ rules:
   - DOMAIN-SUFFIX,linkedin.com,🚀 节点选择
   - DOMAIN-SUFFIX,myteamspeak.com,🚀 节点选择
   - DOMAIN-KEYWORD,clickup,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,torrentmac.net,🌍 国外媒体
+  - DOMAIN-SUFFIX,upwork.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,torrentmac.net,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,notion,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,ping.pe,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
@@ -4216,7 +4217,6 @@ rules:
   - DOMAIN-SUFFIX,gitlab.io,🚀 节点选择
   - DOMAIN-SUFFIX,jitpack.io,🚀 节点选择
   - DOMAIN-SUFFIX,maven.org,🚀 节点选择
-  - DOMAIN-SUFFIX,medium.com,🚀 节点选择
   - DOMAIN-SUFFIX,mvnrepository.com,🚀 节点选择
   - DOMAIN-SUFFIX,quay.io,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
@@ -4226,7 +4226,8 @@ rules:
   - DOMAIN-SUFFIX,spring.io,🚀 节点选择
   - DOMAIN-SUFFIX,spring.net,🚀 节点选择
   - DOMAIN-SUFFIX,nixos.org,📢 谷歌FCM
-  - DOMAIN-SUFFIX,stackoverflow.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,stackoverflow.com,🎯 全球直连
+  - DOMAIN-SUFFIX,medium.com,🎯 全球直连
   - DOMAIN,d1q6f0aelx0por.cloudfront.net,🚀 节点选择
   - DOMAIN,d2wy8f7a9ursnm.cloudfront.net,🚀 节点选择
   - DOMAIN,d36jcksde1wxzq.cloudfront.net,🚀 节点选择
