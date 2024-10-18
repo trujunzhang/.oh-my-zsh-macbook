@@ -231,7 +231,7 @@ run = 'move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.clickup.desktop-app'
-run = 'move-node-to-workspace C'
+run = 'move-node-to-workspace U'
 
 [[on-window-detected]]
 if.app-id = 'com.skype.skype'
@@ -264,6 +264,10 @@ run = ['move-node-to-workspace W']
 [[on-window-detected]]
 if.app-id = 'notion.id'
 run = 'move-node-to-workspace T'
+
+[[on-window-detected]]
+if.app-id = 'com.wails.GUI.for.SingBox'
+run = 'move-node-to-workspace B'
 
 # 5 web browser
 [[on-window-detected]]

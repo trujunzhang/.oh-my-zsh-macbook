@@ -27,6 +27,12 @@
     "type": "application",
     "name": "clash",
     "application": "ClashX Pro",
+    "enable": "0"
+  },
+  {
+    "type": "application",
+    "name": "gui for singbox",
+    "application": "GUI.for.SingBox.app",
     "enable": "1"
   },
   {
