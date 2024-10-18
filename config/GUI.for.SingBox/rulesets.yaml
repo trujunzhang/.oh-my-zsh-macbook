@@ -1,0 +1,9 @@
+- id: geosite_notion.source
+  tag: notion
+  updateTime: 0
+  disabled: false
+  type: Http
+  format: source
+  path: data/rulesets/geosite_notion.json
+  url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/notion.json
+  count: 6

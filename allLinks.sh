@@ -346,6 +346,9 @@ function link_symlink {
     # Node.js
     # fileLink "Yarn(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/yarn/.yarnrc" "$HOME/.yarnrc" "delete"
     directoryLink "npm(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm" "$HOME/.config/npm" "delete"
+
+    # GUI.for.SingBox
+    directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
 }
 
 # function link_cocoapods {

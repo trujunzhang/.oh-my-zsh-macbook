@@ -1,0 +1,764 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:20123",
+      "external_ui": "",
+      "secret": "ID_nmuvma3v",
+      "external_ui_download_url": "",
+      "default_mode": "rule"
+    },
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true,
+      "store_rdrc": false
+    }
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 20122,
+      "sniff": true,
+      "sniff_override_destination": false,
+      "domain_strategy": "ipv4_only",
+      "tcp_fast_open": false,
+      "tcp_multi_path": false,
+      "udp_fragment": false
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "🚀 节点选择",
+      "type": "selector",
+      "outbounds": [
+        "🎈 自动选择",
+        "加入我的频道t.me/CMLiussss解锁更多优选节点",
+        "反代优选域名-天城大佬提供维护",
+        "反代优选域名-Mingyu大佬提供维护",
+        "反代优选域名-OTC大佬提供维护",
+        "反代优选域名-KJKKK大佬提供维护",
+        "cdn-b100.↗↘↗.eu.org反代优选域名",
+        "🇨🇳 visa.cn",
+        "www.wto.org",
+        "🇸🇬 www.visa.com.sg",
+        "🇨🇳 icook.tw",
+        "🇭🇰 HK",
+        "🇭🇰 HK 2",
+        "🇭🇰 HK 3",
+        "🇭🇰 HK 4",
+        "🇰🇷 KR",
+        "🇺🇸 US",
+        "🇸🇬 SG",
+        "🇰🇷 KR 2",
+        "🇸🇬 SG 2",
+        "🇺🇸 US 2",
+        "🇷🇺 RU",
+        "🇺🇸 US 3",
+        "🇺🇸 US 4",
+        "🇺🇸 US 5",
+        "🇬🇧 GB",
+        "ZA",
+        "🇺🇸 US 6",
+        "🇺🇸 US 7",
+        "🇸🇬 SG 3",
+        "🇺🇸 US 8",
+        "🇺🇸 US 9"
+      ]
+    },
+    {
+      "tag": "🎈 自动选择",
+      "type": "urltest",
+      "outbounds": [
+        "加入我的频道t.me/CMLiussss解锁更多优选节点",
+        "反代优选域名-天城大佬提供维护",
+        "反代优选域名-Mingyu大佬提供维护",
+        "反代优选域名-OTC大佬提供维护",
+        "反代优选域名-KJKKK大佬提供维护",
+        "cdn-b100.↗↘↗.eu.org反代优选域名",
+        "🇨🇳 visa.cn",
+        "www.wto.org",
+        "🇸🇬 www.visa.com.sg",
+        "🇨🇳 icook.tw",
+        "🇭🇰 HK",
+        "🇭🇰 HK 2",
+        "🇭🇰 HK 3",
+        "🇭🇰 HK 4",
+        "🇰🇷 KR",
+        "🇺🇸 US",
+        "🇸🇬 SG",
+        "🇰🇷 KR 2",
+        "🇸🇬 SG 2",
+        "🇺🇸 US 2",
+        "🇷🇺 RU",
+        "🇺🇸 US 3",
+        "🇺🇸 US 4",
+        "🇺🇸 US 5",
+        "🇬🇧 GB",
+        "ZA",
+        "🇺🇸 US 6",
+        "🇺🇸 US 7",
+        "🇸🇬 SG 3",
+        "🇺🇸 US 8",
+        "🇺🇸 US 9"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "300s",
+      "tolerance": 150
+    },
+    {
+      "tag": "🎯 全球直连",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "block"
+      ]
+    },
+    {
+      "tag": "🛑 全球拦截",
+      "type": "selector",
+      "outbounds": [
+        "block",
+        "direct"
+      ]
+    },
+    {
+      "tag": "🐟 漏网之鱼",
+      "type": "selector",
+      "outbounds": [
+        "🚀 节点选择",
+        "🎯 全球直连"
+      ]
+    },
+    {
+      "tag": "GLOBAL",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "block",
+        "🚀 节点选择",
+        "🎈 自动选择",
+        "🎯 全球直连",
+        "🛑 全球拦截",
+        "🐟 漏网之鱼"
+      ]
+    },
+    {
+      "type": "vless",
+      "tag": "加入我的频道t.me/CMLiussss解锁更多优选节点",
+      "server": "Join.my.Telegram.channel.CMLiussss.to.unlock.more.premium.nodes.cf.090227.xyz",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "反代优选域名-天城大佬提供维护",
+      "server": "aliyu.gitgoogle.com",
+      "server_port": 2095,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "反代优选域名-Mingyu大佬提供维护",
+      "server": "bestproxy.onecf.eu.org",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "反代优选域名-OTC大佬提供维护",
+      "server": "proxy.xxxxxxxx.tk",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "反代优选域名-KJKKK大佬提供维护",
+      "server": "acjp.cloudflarest.link",
+      "server_port": 2052,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "cdn-b100.↗↘↗.eu.org反代优选域名",
+      "server": "cdn-b100.xn--b6gac.eu.org",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇳 visa.cn",
+      "server": "visa.cn",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "www.wto.org",
+      "server": "www.wto.org",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 www.visa.com.sg",
+      "server": "www.visa.com.sg",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇳 icook.tw",
+      "server": "icook.tw",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.tw.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 HK",
+      "server": "8.212.41.98",
+      "server_port": 8080,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.aliyun.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 HK 2",
+      "server": "47.243.48.169",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.aliyun.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 HK 3",
+      "server": "8.212.12.98",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.aliyun.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 HK 4",
+      "server": "8.218.148.106",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.aliyun.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 KR",
+      "server": "64.110.83.80",
+      "server_port": 80,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.kr.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US",
+      "server": "192.200.160.237",
+      "server_port": 2082,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 SG",
+      "server": "206.238.236.89",
+      "server_port": 2052,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 KR 2",
+      "server": "64.110.83.80",
+      "server_port": 2052,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.kr.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 SG 2",
+      "server": "206.238.236.32",
+      "server_port": 2082,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US 2",
+      "server": "192.200.160.147",
+      "server_port": 2082,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇷🇺 RU",
+      "server": "45.67.215.239",
+      "server_port": 2082,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US 3",
+      "server": "192.200.160.231",
+      "server_port": 2052,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US 4",
+      "server": "63.141.128.194",
+      "server_port": 2052,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US 5",
+      "server": "160.79.105.33",
+      "server_port": 2082,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇬🇧 GB",
+      "server": "217.163.76.245",
+      "server_port": 2082,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "ZA",
+      "server": "160.123.255.93",
+      "server_port": 2082,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US 6",
+      "server": "160.79.105.223",
+      "server_port": 2082,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US 7",
+      "server": "135.84.76.112",
+      "server_port": 2052,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 SG 3",
+      "server": "206.238.236.239",
+      "server_port": 2052,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US 8",
+      "server": "63.141.128.79",
+      "server_port": 2082,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 US 9",
+      "server": "160.79.104.144",
+      "server_port": 2052,
+      "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+      "transport": {
+        "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+        "type": "ws",
+        "headers": {
+          "Host": "djzhang.trujunzhang.workers.dev"
+        }
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rule_set": [
+      {
+        "tag": "CATEGORY-ADS",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs",
+        "download_detour": "🎯 全球直连"
+      },
+      {
+        "tag": "GEOIP-CN",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs",
+        "download_detour": "🎯 全球直连"
+      },
+      {
+        "tag": "GEOSITE-CN",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs",
+        "download_detour": "🎯 全球直连"
+      },
+      {
+        "tag": "GEOLOCATION-!CN",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs",
+        "download_detour": "🎯 全球直连"
+      }
+    ],
+    "rules": [
+      {
+        "protocol": "dns",
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "🛑 全球拦截"
+      },
+      {
+        "rule_set": "CATEGORY-ADS",
+        "outbound": "🛑 全球拦截"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "rule_set": "GEOIP-CN",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "rule_set": "GEOSITE-CN",
+        "outbound": "🎯 全球直连"
+      },
+      {
+        "rule_set": "GEOLOCATION-!CN",
+        "outbound": "🚀 节点选择"
+      }
+    ],
+    "final": "🐟 漏网之鱼",
+    "auto_detect_interface": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "remote-dns",
+        "address": "tls://8.8.8.8",
+        "address_resolver": "remote-resolver-dns",
+        "detour": "🚀 节点选择"
+      },
+      {
+        "tag": "local-dns",
+        "address": "https://223.5.5.5/dns-query",
+        "address_resolver": "resolver-dns",
+        "detour": "🎯 全球直连"
+      },
+      {
+        "tag": "resolver-dns",
+        "address": "223.5.5.5",
+        "detour": "🎯 全球直连"
+      },
+      {
+        "tag": "remote-resolver-dns",
+        "address": "8.8.8.8",
+        "detour": "🚀 节点选择"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "disable_cache": false,
+    "disable_expire": false,
+    "independent_cache": false,
+    "rules": [
+      {
+        "outbound": "any",
+        "disable_cache": true,
+        "server": "local-dns"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "local-dns"
+      },
+      {
+        "clash_mode": "global",
+        "server": "remote-dns"
+      },
+      {
+        "rule_set": "GEOSITE-CN",
+        "server": "local-dns"
+      },
+      {
+        "rule_set": "GEOLOCATION-!CN",
+        "server": "remote-dns"
+      }
+    ],
+    "fakeip": {
+      "enabled": false,
+      "inet4_range": "198.18.0.1/16",
+      "inet6_range": "fc00::/18"
+    },
+    "final": "remote-dns",
+    "strategy": "ipv4_only"
+  }
+}
