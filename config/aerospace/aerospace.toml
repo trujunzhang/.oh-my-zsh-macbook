@@ -269,6 +269,10 @@ run = 'move-node-to-workspace T'
 if.app-id = 'com.wails.GUI.for.SingBox'
 run = 'move-node-to-workspace B'
 
+[[on-window-detected]]
+if.app-id = 'com.wails.GUI.for.Clash'
+run = 'move-node-to-workspace B'
+
 # 5 web browser
 [[on-window-detected]]
 if.app-id = 'com.vivaldi.Vivaldi'
