@@ -33,7 +33,7 @@
     "type": "application",
     "name": "gui for singbox",
     "application": "GUI.for.SingBox.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",

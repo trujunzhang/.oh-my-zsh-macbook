@@ -638,6 +638,7 @@ alias dclone_tensor="git clone https://github.com/tensorflow/tensorflow --depth 
 alias dclone_superbase="git clone https://github.com/supabase/supabase --depth 1"
 #see: https://github.com/CodyReichert/awesome-cl
 alias dclone_lisp_matrix="git clone https://github.com/blindglobe/lisp-matrix --depth 1"
+alias dclone_singbox_rules="git clone https://github.com/MetaCubeX/meta-rules-dat && cd meta-rules-dat && git checkout sing"
 
 alias git_set_v2ray_proxy="git config --global http.proxy http://127.0.0.1:1087"
 alias git_set_clash_proxy_http="git config --global http.proxy http://127.0.0.1:7890"

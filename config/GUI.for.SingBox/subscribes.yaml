@@ -1,12 +1,11 @@
 - id: ID_hpaobjj7
   name: djzhang-subs
-  url: https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?sb
-  upload: 1066155346478
-  download: 1066155346478
-  total: 26388279066624
-  expire: 4102329600000
-  updateTime: 1729216582311
-  type: Http
+  upload: 0
+  download: 0
+  total: 0
+  expire: 0
+  updateTime: 1729262956550
+  type: Manual
   website: ""
   path: data/subscribes/ID_hpaobjj7.json
   include: ""
