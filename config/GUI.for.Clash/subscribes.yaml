@@ -1,13 +1,13 @@
 - id: ID_lo8t72vx
   name: djzhang-subs
   useInternal: false
-  url: https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?clash
+  url: ""
   upload: 1295370993650
   download: 1295370993650
   total: 26388279066624
   expire: 4102329600000
   updateTime: 1729304482889
-  type: Http
+  type: Manual
   website: ""
   path: data/subscribes/ID_lo8t72vx.yaml
   include: ""

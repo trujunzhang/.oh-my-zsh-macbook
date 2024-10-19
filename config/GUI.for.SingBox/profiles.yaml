@@ -1,5 +1,5 @@
-- id: ID_wcqcg31b
-  name: djzhang.trujunzhang.workers.dev
+- id: ID_i34nlyk9
+  name: DJZHANG_Profile
   generalConfig:
     mode: rule
     mixed-port: 20122
@@ -9,7 +9,7 @@
   advancedConfig:
     port: 0
     socks-port: 0
-    secret: ID_nmuvma3v
+    secret: ID_gji8aqyt
     external-controller: 127.0.0.1:20123
     external-ui: ""
     external-ui-url: ""
@@ -42,8 +42,8 @@
     resolver-dns: 223.5.5.5
     remote-resolver-dns: 8.8.8.8
     final-dns: remote-dns
-    local-dns-detour: 🎯 全球直连
-    remote-dns-detour: 🚀 节点选择
+    local-dns-detour: 🎯 Direct
+    remote-dns-detour: 🚀 Select
     fake-ip-range-v4: 198.18.0.1/16
     fake-ip-range-v6: fc00::/18
     fake-ip-filter:
@@ -62,31 +62,31 @@
     independent-cache: false
     client-subnet: ""
   proxyGroupsConfig:
-    - id: ID_9yq5mngp
-      tag: 🚀 节点选择
+    - id: ID_v02ympgs
+      tag: 🚀 Select
       type: selector
       proxies:
-        - id: ID_4040henl
+        - id: ID_dw6m6m87
           type: built-in
-          tag: 🎈 自动选择
+          tag: 🎈 Auto
       use:
-        - ID_hpaobjj7
+        - ID_7slmx42f
       url: ""
       interval: 300
       tolerance: 150
       filter: ""
-    - id: ID_4040henl
-      tag: 🎈 自动选择
+    - id: ID_dw6m6m87
+      tag: 🎈 Auto
       type: urltest
       proxies: []
       use:
-        - ID_hpaobjj7
+        - ID_7slmx42f
       url: https://www.gstatic.com/generate_204
       interval: 300
       tolerance: 150
       filter: ""
-    - id: ID_6h9wrp96
-      tag: 🎯 全球直连
+    - id: ID_f5ckyhbd
+      tag: 🎯 Direct
       type: selector
       proxies:
         - id: direct
@@ -100,8 +100,8 @@
       interval: 300
       tolerance: 150
       filter: ""
-    - id: ID_h7n1vemm
-      tag: 🛑 全球拦截
+    - id: ID_6czzb8yz
+      tag: 🛑 Block
       type: selector
       proxies:
         - id: block
@@ -115,22 +115,22 @@
       interval: 300
       tolerance: 150
       filter: ""
-    - id: ID_dkt8kecw
-      tag: 🐟 漏网之鱼
+    - id: ID_p1ei0ifn
+      tag: 🐟 Fallback
       type: selector
       proxies:
-        - id: ID_9yq5mngp
+        - id: ID_v02ympgs
           type: built-in
-          tag: 🚀 节点选择
-        - id: ID_6h9wrp96
+          tag: 🚀 Select
+        - id: ID_f5ckyhbd
           type: built-in
-          tag: 🎯 全球直连
+          tag: 🎯 Direct
       use: []
       url: ""
       interval: 300
       tolerance: 150
       filter: ""
-    - id: ID_a81o1dbf
+    - id: ID_clx6fwzh
       tag: GLOBAL
       type: selector
       proxies:
@@ -140,28 +140,28 @@
         - id: block
           type: built-in
           tag: block
-        - id: ID_9yq5mngp
+        - id: ID_v02ympgs
           type: built-in
-          tag: 🚀 节点选择
-        - id: ID_4040henl
+          tag: 🚀 Select
+        - id: ID_dw6m6m87
           type: built-in
-          tag: 🎈 自动选择
-        - id: ID_6h9wrp96
+          tag: 🎈 Auto
+        - id: ID_f5ckyhbd
           type: built-in
-          tag: 🎯 全球直连
-        - id: ID_h7n1vemm
+          tag: 🎯 Direct
+        - id: ID_6czzb8yz
           type: built-in
-          tag: 🛑 全球拦截
-        - id: ID_dkt8kecw
+          tag: 🛑 Block
+        - id: ID_p1ei0ifn
           type: built-in
-          tag: 🐟 漏网之鱼
+          tag: 🐟 Fallback
       use: []
       url: ""
       interval: 300
       tolerance: 150
       filter: ""
   rulesConfig:
-    - id: ID_5zo1inmg
+    - id: ID_0qb5a7en
       type: inline
       payload: |-
         {
@@ -173,7 +173,7 @@
       ruleset-format: ""
       download-detour: ""
       invert: false
-    - id: ID_eofxh5y3
+    - id: ID_y6zjvynx
       type: clash_mode
       payload: direct
       proxy: direct
@@ -181,7 +181,7 @@
       ruleset-format: ""
       download-detour: ""
       invert: false
-    - id: ID_g33ril2d
+    - id: ID_r3p11lt1
       type: clash_mode
       payload: global
       proxy: GLOBAL
@@ -189,68 +189,68 @@
       ruleset-format: ""
       download-detour: ""
       invert: false
-    - id: ID_3t1bt6tp
+    - id: ID_eg241qcz
       type: inline
       payload: |-
         {
           "network": "udp",
           "port": 443
         }
-      proxy: 🛑 全球拦截
+      proxy: 🛑 Block
       ruleset-name: ""
       ruleset-format: ""
       download-detour: ""
       invert: false
-    - id: ID_jgags31r
+    - id: ID_jrtvw3po
       type: rule_set_url
       payload: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs
-      proxy: 🛑 全球拦截
+      proxy: 🛑 Block
       ruleset-name: CATEGORY-ADS
       ruleset-format: binary
-      download-detour: 🎯 全球直连
+      download-detour: 🎯 Direct
       invert: false
-    - id: ID_jve3hi1x
+    - id: ID_evrz33hz
       type: ip_is_private
       payload: ""
-      proxy: 🎯 全球直连
+      proxy: 🎯 Direct
       ruleset-name: ""
       ruleset-format: ""
       download-detour: ""
       invert: false
-    - id: ID_90kiyqvv
+    - id: ID_rmfd2p3b
       type: rule_set_url
       payload: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs
-      proxy: 🎯 全球直连
+      proxy: 🎯 Direct
       ruleset-name: GEOIP-CN
       ruleset-format: binary
-      download-detour: 🎯 全球直连
+      download-detour: 🎯 Direct
       invert: false
-    - id: ID_sqg3dipr
+    - id: ID_r1rpw1ew
       type: rule_set_url
       payload: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs
-      proxy: 🎯 全球直连
+      proxy: 🎯 Direct
       ruleset-name: GEOSITE-CN
       ruleset-format: binary
-      download-detour: 🎯 全球直连
+      download-detour: 🎯 Direct
       invert: false
-    - id: ID_g32uq2zn
+    - id: ID_17dfmbcy
       type: rule_set_url
       payload: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs
-      proxy: 🚀 节点选择
+      proxy: 🚀 Select
       ruleset-name: GEOLOCATION-!CN
       ruleset-format: binary
-      download-detour: 🎯 全球直连
+      download-detour: 🎯 Direct
       invert: false
-    - id: ID_43hca392
+    - id: ID_qok2nxns
       type: final
       payload: ""
-      proxy: 🐟 漏网之鱼
+      proxy: 🐟 Fallback
       ruleset-name: ""
       ruleset-format: ""
       download-detour: ""
       invert: false
   dnsRulesConfig:
-    - id: ID_pvms39ky
+    - id: ID_m5ocyin5
       type: outbound
       payload: any
       server: local-dns
@@ -260,7 +260,7 @@
       ruleset-format: ""
       download-detour: ""
       client-subnet: ""
-    - id: ID_datp79uk
+    - id: ID_ml9witsj
       type: fakeip
       payload: ""
       server: fakeip-dns
@@ -270,7 +270,7 @@
       ruleset-format: ""
       download-detour: ""
       client-subnet: ""
-    - id: ID_5xqfhxvt
+    - id: ID_va9tga1g
       type: clash_mode
       payload: direct
       server: local-dns
@@ -280,7 +280,7 @@
       ruleset-format: ""
       download-detour: ""
       client-subnet: ""
-    - id: ID_fyl72tlu
+    - id: ID_to65i9vk
       type: clash_mode
       payload: global
       server: remote-dns
@@ -290,7 +290,7 @@
       ruleset-format: ""
       download-detour: ""
       client-subnet: ""
-    - id: ID_xfyw8kl4
+    - id: ID_7jerss5o
       type: rule_set_url
       payload: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs
       server: local-dns
@@ -298,9 +298,9 @@
       invert: false
       ruleset-name: GEOSITE-CN
       ruleset-format: binary
-      download-detour: 🎯 全球直连
+      download-detour: 🎯 Direct
       client-subnet: ""
-    - id: ID_emzcd3a9
+    - id: ID_x6mvuowf
       type: rule_set_url
       payload: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs
       server: remote-dns
@@ -308,7 +308,7 @@
       invert: false
       ruleset-name: GEOLOCATION-!CN
       ruleset-format: binary
-      download-detour: 🎯 全球直连
+      download-detour: 🎯 Direct
       client-subnet: ""
   mixinConfig:
     priority: mixin

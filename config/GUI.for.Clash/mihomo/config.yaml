@@ -179,8 +179,10 @@ proxy-groups:
     proxies:
       - 🚀 Select
       - 🎯 Direct
+      - 🎈 Auto
     disable-udp: false
 rules:
+  - DOMAIN-SUFFIX,dev.new.ieatta.com,DIRECT
   - AND,((DST-PORT,443),(NETWORK,udp)),🛑 Reject
   - RULE-SET,category-ads-all,🛑 Reject
   - RULE-SET,GEOIP-Private,🎯 Direct,no-resolve

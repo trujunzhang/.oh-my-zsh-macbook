@@ -189,6 +189,9 @@
         - id: ID_7m8yofbc
           type: Built-In
           name: 🎯 Direct
+        - id: ID_xiq1spd8
+          type: Built-In
+          name: 🎈 Auto
       url: https://www.gstatic.com/generate_204
       interval: 300
       strategy: consistent-hashing
@@ -201,6 +204,16 @@
       hidden: false
       icon: ""
   rulesConfig:
+    - id: ID_8gppggmr
+      type: DOMAIN-SUFFIX
+      payload: dev.new.ieatta.com
+      proxy: DIRECT
+      no-resolve: false
+      ruleset-type: file
+      ruleset-name: ""
+      ruleset-behavior: domain
+      ruleset-format: mrs
+      ruleset-proxy: ""
     - id: ID_irdfblwh
       type: LOGIC
       payload: AND,((DST-PORT,443),(NETWORK,udp))

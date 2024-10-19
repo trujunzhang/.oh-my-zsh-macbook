@@ -1,13 +1,14 @@
-- id: ID_hpaobjj7
-  name: djzhang-subs
+- id: ID_7slmx42f
+  name: DJZHANG_Subs
+  url: ""
   upload: 0
   download: 0
   total: 0
   expire: 0
-  updateTime: 1729262956550
+  updateTime: 1729334891683
   type: Manual
   website: ""
-  path: data/subscribes/ID_hpaobjj7.json
+  path: data/subscribes/ID_7slmx42f.json
   include: ""
   exclude: ""
   includeProtocol: ""
@@ -17,96 +18,96 @@
   inSecure: false
   userAgent: ""
   proxies:
-    - id: ID_fh1a8n1r
+    - id: ID_hvdjoco6
       tag: 加入我的频道t.me/CMLiussss解锁更多优选节点
       type: vless
-    - id: ID_e3qzcyl1
+    - id: ID_6hby9zkh
       tag: 反代优选域名-天城大佬提供维护
       type: vless
-    - id: ID_z2agyhvi
+    - id: ID_ib128pn5
       tag: 反代优选域名-Mingyu大佬提供维护
       type: vless
-    - id: ID_cwi95zrv
+    - id: ID_diqvmzxk
       tag: 反代优选域名-OTC大佬提供维护
       type: vless
-    - id: ID_tq4r3u7r
+    - id: ID_6y4lpl8e
       tag: 反代优选域名-KJKKK大佬提供维护
       type: vless
-    - id: ID_a8n70hku
+    - id: ID_1qsnsoel
       tag: cdn-b100.↗↘↗.eu.org反代优选域名
       type: vless
-    - id: ID_9grifwb5
+    - id: ID_iyoi9k0n
       tag: 🇨🇳 visa.cn
       type: vless
-    - id: ID_o4hinbql
+    - id: ID_ik5tfmpf
       tag: www.wto.org
       type: vless
-    - id: ID_l9yw7isu
+    - id: ID_09zki160
       tag: 🇸🇬 www.visa.com.sg
       type: vless
-    - id: ID_dx6rmj9i
+    - id: ID_k09q84ex
       tag: 🇨🇳 icook.tw
       type: vless
-    - id: ID_oeo5mes0
+    - id: ID_wf63t2nw
       tag: 🇭🇰 HK
       type: vless
-    - id: ID_xy5etjve
+    - id: ID_ejozkzlu
       tag: 🇭🇰 HK 2
       type: vless
-    - id: ID_lzey90ok
+    - id: ID_i47xhnf7
       tag: 🇭🇰 HK 3
       type: vless
-    - id: ID_xaaa78yd
+    - id: ID_a0ecdhpp
       tag: 🇭🇰 HK 4
       type: vless
-    - id: ID_vf3c8ktm
-      tag: 🇰🇷 KR
+    - id: ID_eo1r2gtu
+      tag: AE
       type: vless
-    - id: ID_t7lv7hjo
+    - id: ID_9rxzd5u1
+      tag: BR
+      type: vless
+    - id: ID_o7bvaj3u
       tag: 🇺🇸 US
       type: vless
-    - id: ID_ia00ntv0
-      tag: 🇸🇬 SG
-      type: vless
-    - id: ID_wvdvdai1
-      tag: 🇰🇷 KR 2
-      type: vless
-    - id: ID_21uhaatd
-      tag: 🇸🇬 SG 2
-      type: vless
-    - id: ID_yorahqk0
-      tag: 🇺🇸 US 2
-      type: vless
-    - id: ID_9b5uwm7t
+    - id: ID_6d9stlv6
       tag: 🇷🇺 RU
       type: vless
-    - id: ID_tsbeq1eq
+    - id: ID_ckzndlin
+      tag: 🇺🇸 US 2
+      type: vless
+    - id: ID_lttg153x
       tag: 🇺🇸 US 3
       type: vless
-    - id: ID_m9c9b9g1
-      tag: 🇺🇸 US 4
+    - id: ID_eb34rtpz
+      tag: AT
       type: vless
-    - id: ID_zg5ppuif
-      tag: 🇺🇸 US 5
-      type: vless
-    - id: ID_inm4xrp1
-      tag: 🇬🇧 GB
-      type: vless
-    - id: ID_dwukgj7r
+    - id: ID_wlujvqdi
       tag: ZA
       type: vless
-    - id: ID_s3jbx8e4
+    - id: ID_zigh61a7
+      tag: ZA 2
+      type: vless
+    - id: ID_obxy7qfp
+      tag: 🇺🇸 US 4
+      type: vless
+    - id: ID_8m4mf2k7
+      tag: 🇸🇬 SG
+      type: vless
+    - id: ID_wys3bsh9
+      tag: 🇷🇺 RU 2
+      type: vless
+    - id: ID_bxzfp5mj
+      tag: 🇺🇸 US 5
+      type: vless
+    - id: ID_mzkwscsd
+      tag: ZA 3
+      type: vless
+    - id: ID_yaim2hhv
+      tag: ZA 4
+      type: vless
+    - id: ID_zrcuh0ln
+      tag: ZA 5
+      type: vless
+    - id: ID_c235qykq
       tag: 🇺🇸 US 6
-      type: vless
-    - id: ID_p35ocew0
-      tag: 🇺🇸 US 7
-      type: vless
-    - id: ID_ch8r0fjm
-      tag: 🇸🇬 SG 3
-      type: vless
-    - id: ID_s6f5tw5f
-      tag: 🇺🇸 US 8
-      type: vless
-    - id: ID_8lqdmc8h
-      tag: 🇺🇸 US 9
       type: vless

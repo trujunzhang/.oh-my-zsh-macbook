@@ -1,0 +1,10 @@
+- id: geosite_stackexchange.yaml
+  name: stackexchange
+  updateTime: 1729336527680
+  disabled: false
+  type: Http
+  behavior: domain
+  format: yaml
+  path: data/rulesets/geosite_stackexchange.yaml
+  url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/stackexchange.yaml
+  count: 20

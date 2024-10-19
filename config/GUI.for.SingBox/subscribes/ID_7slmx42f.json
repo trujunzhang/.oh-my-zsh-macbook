@@ -182,7 +182,7 @@
   {
     "type": "vless",
     "tag": "🇭🇰 HK 3",
-    "server": "8.212.12.98",
+    "server": "8.210.173.151",
     "server_port": 80,
     "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
     "transport": {
@@ -197,7 +197,7 @@
   {
     "type": "vless",
     "tag": "🇭🇰 HK 4",
-    "server": "8.218.148.106",
+    "server": "8.212.12.98",
     "server_port": 80,
     "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
     "transport": {
@@ -211,12 +211,27 @@
   },
   {
     "type": "vless",
-    "tag": "🇰🇷 KR",
-    "server": "64.110.83.80",
+    "tag": "AE",
+    "server": "193.123.93.103",
     "server_port": 80,
     "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
     "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.kr.fxxk.dedyn.io",
+      "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "BR",
+    "server": "185.133.35.83",
+    "server_port": 2082,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
       "type": "ws",
       "headers": {
         "Host": "djzhang.trujunzhang.workers.dev"
@@ -227,67 +242,7 @@
   {
     "type": "vless",
     "tag": "🇺🇸 US",
-    "server": "192.200.160.237",
-    "server_port": 2082,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇸🇬 SG",
-    "server": "206.238.236.89",
-    "server_port": 2052,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇰🇷 KR 2",
-    "server": "64.110.83.80",
-    "server_port": 2052,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.kr.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇸🇬 SG 2",
-    "server": "206.238.236.32",
-    "server_port": 2082,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇺🇸 US 2",
-    "server": "192.200.160.147",
+    "server": "160.79.104.149",
     "server_port": 2082,
     "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
     "transport": {
@@ -302,8 +257,8 @@
   {
     "type": "vless",
     "tag": "🇷🇺 RU",
-    "server": "45.67.215.239",
-    "server_port": 2082,
+    "server": "45.67.215.63",
+    "server_port": 2052,
     "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
     "transport": {
       "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
@@ -316,38 +271,8 @@
   },
   {
     "type": "vless",
-    "tag": "🇺🇸 US 3",
-    "server": "192.200.160.231",
-    "server_port": 2052,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇺🇸 US 4",
-    "server": "63.141.128.194",
-    "server_port": 2052,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇺🇸 US 5",
-    "server": "160.79.105.33",
+    "tag": "🇺🇸 US 2",
+    "server": "160.79.104.50",
     "server_port": 2082,
     "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
     "transport": {
@@ -361,8 +286,23 @@
   },
   {
     "type": "vless",
-    "tag": "🇬🇧 GB",
-    "server": "217.163.76.245",
+    "tag": "🇺🇸 US 3",
+    "server": "130.250.137.219",
+    "server_port": 2082,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "AT",
+    "server": "212.183.88.53",
     "server_port": 2082,
     "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
     "transport": {
@@ -377,7 +317,127 @@
   {
     "type": "vless",
     "tag": "ZA",
-    "server": "160.123.255.93",
+    "server": "160.123.255.129",
+    "server_port": 2052,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "ZA 2",
+    "server": "160.123.255.27",
+    "server_port": 2052,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "🇺🇸 US 4",
+    "server": "192.200.160.227",
+    "server_port": 2082,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "🇸🇬 SG",
+    "server": "206.238.237.248",
+    "server_port": 2052,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "🇷🇺 RU 2",
+    "server": "45.67.215.83",
+    "server_port": 2052,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "🇺🇸 US 5",
+    "server": "63.141.128.89",
+    "server_port": 2082,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "ZA 3",
+    "server": "160.123.255.150",
+    "server_port": 2082,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "ZA 4",
+    "server": "160.123.255.107",
+    "server_port": 2052,
+    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
+    "transport": {
+      "path": "/?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io",
+      "type": "ws",
+      "headers": {
+        "Host": "djzhang.trujunzhang.workers.dev"
+      }
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "ZA 5",
+    "server": "160.123.255.59",
     "server_port": 2082,
     "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
     "transport": {
@@ -392,67 +452,7 @@
   {
     "type": "vless",
     "tag": "🇺🇸 US 6",
-    "server": "160.79.105.223",
-    "server_port": 2082,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇺🇸 US 7",
-    "server": "135.84.76.112",
-    "server_port": 2052,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇸🇬 SG 3",
-    "server": "206.238.236.239",
-    "server_port": 2052,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇺🇸 US 8",
-    "server": "63.141.128.79",
-    "server_port": 2082,
-    "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
-    "transport": {
-      "path": "/?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io",
-      "type": "ws",
-      "headers": {
-        "Host": "djzhang.trujunzhang.workers.dev"
-      }
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇺🇸 US 9",
-    "server": "160.79.104.144",
+    "server": "130.250.137.125",
     "server_port": 2052,
     "uuid": "4440a1c3-06dc-493b-a630-c6cc9a1dfb43",
     "transport": {
