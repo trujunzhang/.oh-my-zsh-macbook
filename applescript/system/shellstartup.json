@@ -37,6 +37,12 @@
   },
   {
     "type": "application",
+    "name": "gui for Clash",
+    "application": "GUI.for.Clash.app",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "Alacritty",
     "application": "Alacritty",
     "enable": "0"
