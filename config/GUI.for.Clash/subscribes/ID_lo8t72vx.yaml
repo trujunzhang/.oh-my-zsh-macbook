@@ -1,0 +1,391 @@
+proxies:
+  - name: 加入我的频道t.me/CMLiussss解锁更多优选节点
+    server: Join.my.Telegram.channel.CMLiussss.to.unlock.more.premium.nodes.cf.090227.xyz
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 反代优选域名-天城大佬提供维护
+    server: aliyu.gitgoogle.com
+    port: 2095
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 反代优选域名-Mingyu大佬提供维护
+    server: bestproxy.onecf.eu.org
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 反代优选域名-OTC大佬提供维护
+    server: proxy.xxxxxxxx.tk
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 反代优选域名-KJKKK大佬提供维护
+    server: acjp.cloudflarest.link
+    port: 2052
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: cdn-b100.↗↘↗.eu.org反代优选域名
+    server: cdn-b100.xn--b6gac.eu.org
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇨🇳 visa.cn
+    server: visa.cn
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: www.wto.org
+    server: www.wto.org
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇸🇬 www.visa.com.sg
+    server: www.visa.com.sg
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇨🇳 icook.tw
+    server: icook.tw
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.tw.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇭🇰 HK
+    server: 47.243.48.169
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.aliyun.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇭🇰 HK 2
+    server: 8.210.173.151
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.aliyun.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇭🇰 HK 3
+    server: 8.212.12.98
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.aliyun.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇰🇷 KR
+    server: 64.110.83.80
+    port: 80
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.kr.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇫🇷 FR
+    server: 185.16.110.143
+    port: 2052
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: AT
+    server: 212.183.88.35
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: BR
+    server: 185.133.35.40
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇷🇺 RU
+    server: 45.67.215.117
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇺🇸 US
+    server: 192.0.54.251
+    port: 2052
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇺🇸 US 2
+    server: 192.0.54.68
+    port: 2052
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇨🇳 CN
+    server: 120.220.19.109
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇺🇸 US 3
+    server: 63.141.128.67
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇸🇬 SG
+    server: 206.238.236.118
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇨🇳 CN 2
+    server: 39.91.137.50
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇸🇬 SG 2
+    server: 206.238.237.250
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇷🇺 RU 2
+    server: 45.67.215.121
+    port: 2052
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇷🇺 RU 3
+    server: 45.67.215.23
+    port: 2052
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇬🇧 GB
+    server: 217.163.76.123
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇺🇸 US 4
+    server: 158.224.83.140
+    port: 2082
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev
+  - name: 🇺🇸 US 5
+    server: 130.250.137.190
+    port: 2052
+    type: vless
+    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+    tls: false
+    tfo: false
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io
+      headers:
+        Host: djzhang.trujunzhang.workers.dev

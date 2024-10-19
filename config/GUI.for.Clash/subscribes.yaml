@@ -1,0 +1,115 @@
+- id: ID_lo8t72vx
+  name: djzhang-subs
+  useInternal: false
+  url: https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?clash
+  upload: 1295370993650
+  download: 1295370993650
+  total: 26388279066624
+  expire: 4102329600000
+  updateTime: 1729304482889
+  type: Http
+  website: ""
+  path: data/subscribes/ID_lo8t72vx.yaml
+  include: ""
+  exclude: ""
+  includeProtocol: ""
+  excludeProtocol: ""
+  proxyPrefix: ""
+  disabled: false
+  inSecure: false
+  userAgent: ""
+  healthCheck:
+    enable: false
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+  proxies:
+    - id: ID_hweh781i
+      name: 加入我的频道t.me/CMLiussss解锁更多优选节点
+      type: vless
+    - id: ID_6gh2e57l
+      name: 反代优选域名-天城大佬提供维护
+      type: vless
+    - id: ID_0cyyva5w
+      name: 反代优选域名-Mingyu大佬提供维护
+      type: vless
+    - id: ID_wj64f5fs
+      name: 反代优选域名-OTC大佬提供维护
+      type: vless
+    - id: ID_3ir8yx95
+      name: 反代优选域名-KJKKK大佬提供维护
+      type: vless
+    - id: ID_orgp7ur3
+      name: cdn-b100.↗↘↗.eu.org反代优选域名
+      type: vless
+    - id: ID_5al9du79
+      name: 🇨🇳 visa.cn
+      type: vless
+    - id: ID_4cbzxssw
+      name: www.wto.org
+      type: vless
+    - id: ID_y7gyvn4i
+      name: 🇸🇬 www.visa.com.sg
+      type: vless
+    - id: ID_yyjlyzcw
+      name: 🇨🇳 icook.tw
+      type: vless
+    - id: ID_0koqi258
+      name: 🇭🇰 HK
+      type: vless
+    - id: ID_j0acrnrt
+      name: 🇭🇰 HK 2
+      type: vless
+    - id: ID_2mqxjltl
+      name: 🇭🇰 HK 3
+      type: vless
+    - id: ID_od64me1m
+      name: 🇰🇷 KR
+      type: vless
+    - id: ID_uxzqhscf
+      name: 🇫🇷 FR
+      type: vless
+    - id: ID_vc3l11e4
+      name: AT
+      type: vless
+    - id: ID_wychgt60
+      name: BR
+      type: vless
+    - id: ID_bbayq03l
+      name: 🇷🇺 RU
+      type: vless
+    - id: ID_ndklfjgm
+      name: 🇺🇸 US
+      type: vless
+    - id: ID_29zvxzym
+      name: 🇺🇸 US 2
+      type: vless
+    - id: ID_sfqys9l8
+      name: 🇨🇳 CN
+      type: vless
+    - id: ID_af56bn72
+      name: 🇺🇸 US 3
+      type: vless
+    - id: ID_dkvkwfmn
+      name: 🇸🇬 SG
+      type: vless
+    - id: ID_uf0vuyoc
+      name: 🇨🇳 CN 2
+      type: vless
+    - id: ID_oss4iqa0
+      name: 🇸🇬 SG 2
+      type: vless
+    - id: ID_miqbdddj
+      name: 🇷🇺 RU 2
+      type: vless
+    - id: ID_icptajrg
+      name: 🇷🇺 RU 3
+      type: vless
+    - id: ID_d4yhk3sm
+      name: 🇬🇧 GB
+      type: vless
+    - id: ID_ddjmyodv
+      name: 🇺🇸 US 4
+      type: vless
+    - id: ID_df93cnti
+      name: 🇺🇸 US 5
+      type: vless

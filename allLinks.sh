@@ -349,6 +349,9 @@ function link_symlink {
 
     # GUI.for.SingBox
     directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
+
+    # GUI.for.clash
+    directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
 }
 
 # function link_cocoapods {
