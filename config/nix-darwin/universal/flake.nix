@@ -194,6 +194,7 @@
 
       homePlatformModules_arm = {
         malo-packages = import ./home/packages-arm.nix;
+        malo-nginx= import ./home/nginx.nix;
       };
 
       homePlatformModules_x86 = {

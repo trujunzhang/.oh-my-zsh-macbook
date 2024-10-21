@@ -51,7 +51,8 @@ alias npmtp="npm run test:puppeteer"
 #npm config
 alias nconfig_set_registry="npm config set registry https://registry.npm.taobao.org"
 alias nconfig_get_registry="npm config get registry"
-alias nconfig_list="npm config list"
+alias nconfig_list_local="npm config list"
+alias nconfig_list_system="npm config list -l"
 alias nconfig_ssl_false="npm config set strict-ssl false"
 alias nconfig_ssl_true="npm config set strict-ssl true"
 alias nconfig_set_cache_local="npm config set cache /tmp/npm_cache"
@@ -455,13 +456,13 @@ alias neovimplugininstall="nvim +PlugInstall"
 alias dfpython="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python"
 alias drunvpn="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
 alias drv="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
-alias drunonekeymac="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./one_key_macbook.sh"
-alias drunonekeyenv="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./envLinks.sh"
-alias drungitoffline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && ./generator_git_offline.sh"
-alias drungrpc_branch="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
-alias drunlocalgitpull="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash && ./local_git_update.sh"
-alias drunoffline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
-alias drunhttp='cd $ORGANIZATIONS_HOME/__CACHES/github && python3 -m http.server --cgi 8080'
+alias drun_onekeymac="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./one_key_macbook.sh"
+alias drun_onekeyenv="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./envLinks.sh"
+alias drun_git_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && ./generator_git_offline.sh"
+alias drun_grpc__branch="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
+alias drun_local_gitpull="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash && ./local_git_update.sh"
+alias drun_pods_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
+alias drun_http='cd $ORGANIZATIONS_HOME/__CACHES/github && python -m http.server --cgi 8080'
 alias dkill_paralles_desktop="sh $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/umac/kill_macos_apps.sh 'prl_client_app'"
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
@@ -674,6 +675,7 @@ alias dnix_run_garbage="nix-collect-garbage --delete-old"
 alias dnix_config="nix config show"
 alias dnix_info='nix-shell -p nix-info --run "nix-info -m"'
 alias dnix_bin="ls /etc/profiles/per-user/djzhang/bin"
+alias dnix_install_act="nix-shell -p act"
 
 function dnix_build_default
     #if [ -d /tmp/neovim-flake-jordanisaacs ]
@@ -784,7 +786,6 @@ alias uc='NVIM_APPNAME=nvim-craftzdog neovide' # Standard neovim
 # alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
 alias emacsd="emacs -debug-init"
 alias e="emacs -nw"
-
 
 alias fish_reload="source ~/.config/fish/config.fish"
 
