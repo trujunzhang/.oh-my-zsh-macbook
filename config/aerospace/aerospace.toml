@@ -223,7 +223,7 @@ run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'org.videolan.vlc'
-run = 'move-node-to-workspace 9'
+run = 'move-node-to-workspace L'
 
 [[on-window-detected]]
 if.app-id = 'com.figma.Desktop'
@@ -236,6 +236,10 @@ run = 'move-node-to-workspace U'
 [[on-window-detected]]
 if.app-id = 'com.skype.skype'
 run = 'move-node-to-workspace k'
+
+[[on-window-detected]]
+if.app-id = 'org.qbittorrent.qBittorren'
+run = 'move-node-to-workspace Q'
 
 [[on-window-detected]]
 if.app-id = 'com.sublimemerge'

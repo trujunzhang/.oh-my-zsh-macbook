@@ -259,19 +259,6 @@ proxies:
       path: /?ed=2560&proxyip=proxyip.us.fxxk.dedyn.io
       headers:
         Host: djzhang.trujunzhang.workers.dev
-  - name: 🇨🇳 CN
-    server: 120.220.19.109
-    port: 2082
-    type: vless
-    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
-    tls: false
-    tfo: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
-      headers:
-        Host: djzhang.trujunzhang.workers.dev
   - name: 🇺🇸 US 3
     server: 63.141.128.67
     port: 2082
@@ -296,19 +283,6 @@ proxies:
     network: ws
     ws-opts:
       path: /?ed=2560&proxyip=proxyip.sg.fxxk.dedyn.io
-      headers:
-        Host: djzhang.trujunzhang.workers.dev
-  - name: 🇨🇳 CN 2
-    server: 39.91.137.50
-    port: 2082
-    type: vless
-    uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
-    tls: false
-    tfo: false
-    skip-cert-verify: true
-    network: ws
-    ws-opts:
-      path: /?ed=2560&proxyip=proxyip.digitalocean.fxxk.dedyn.io
       headers:
         Host: djzhang.trujunzhang.workers.dev
   - name: 🇸🇬 SG 2

@@ -10,7 +10,7 @@ source ./bash/tools.sh
 node_global="21.7.2"
 node_old="16.16.0"
 node_for_nvim="18.0.0"
-node_for_old_expensify="20.14.0"
+node_for_old_expensify="20.18.0"
 
 if [ ! -d ~/.asdf ]; then
     # https://github.com/asdf-vm/asdf-plugins/blob/master/plugins/java
@@ -22,6 +22,7 @@ function install_nodes {
     asdf plugin add nodejs "https://github.com/asdf-vm/asdf-nodejs.git"
     asdf install nodejs "$node_global"
     asdf install nodejs "$node_for_nvim"
+    asdf install nodejs "$node_for_old_expensify"
     asdf global nodejs "$node_global"
 }
 function install_java {

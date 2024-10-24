@@ -1,23 +1,24 @@
+    yarn
+    npm-check-updates
+
     eslint_d
     prettier
 
-    netlify-cli   
-    vercel        
-    sanity@latest 
-
-    yarn
-    npm-check-updates
-    monia-cli
-    firebase-tools
-
-    typescript 
-    tern 
-    js-beautify 
+    typescript
+    tern
+    js-beautify
     eslint
 
     eas-cli
 
     neovim
 
-    tslint 
+    tslint
     typescript-formatter
+
+    monia-cli
+    firebase-tools
+
+    netlify-cli
+    vercel
+    sanity@latest
