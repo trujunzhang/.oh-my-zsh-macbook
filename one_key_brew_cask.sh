@@ -39,7 +39,7 @@ brew_apps=(
     "Firefox.app" "firefox" 'ssd'
     "Brave Browser.app" "brave-browser" 'ssd'
     "Brave Browser Beta.app" "brave-browser-bata" 'ssd'
-    "Brave Browser Nightly.app" "brave-browser-nightly" 'ssd'
+    "Brave Browser Nightly.app" "brave-browser-nightly" 'copy'
 
     # =========================================
     # required password

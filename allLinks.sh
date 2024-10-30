@@ -443,7 +443,7 @@ function link_mac_user {
     directoryLink "python(env)" "$HOME_MAC_CACHE_PATH/.pyenv" "$HOME/.pyenv"
 
     # npm(cache)
-    # directoryLink "npm(cache)" "$HOME_MAC_CACHE_PATH/nvmCaches/.npm" "$HOME/.npm"
+    directoryLink "npm(cache)" "$HOME_MAC_CACHE_PATH/nvmCaches/.npm" "$HOME/.npm"
 
     # ios
     # directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME/.cocoapods"

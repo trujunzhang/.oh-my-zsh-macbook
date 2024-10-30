@@ -4226,6 +4226,7 @@ rules:
   - DOMAIN-SUFFIX,spring.io,🚀 节点选择
   - DOMAIN-SUFFIX,spring.net,🚀 节点选择
   - DOMAIN-SUFFIX,nixos.org,📢 谷歌FCM
+  - DOMAIN-SUFFIX,gradle.org,📢 谷歌FCM
   - DOMAIN-SUFFIX,stackoverflow.com,🎯 全球直连
   - DOMAIN-SUFFIX,medium.com,🎯 全球直连
   - DOMAIN,d1q6f0aelx0por.cloudfront.net,🚀 节点选择

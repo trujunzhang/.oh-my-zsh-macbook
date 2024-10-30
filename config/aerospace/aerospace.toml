@@ -205,29 +205,50 @@ G = 'secondary'
 N = 'secondary'                 
 #I = 'main'  
 
+
+[[on-window-detected]]
+if.app-id = 'com.mymixapps.pulltube'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.charliemonroe.Downie-4'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.wails.GUI.for.SingBox'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'com.wails.GUI.for.Clash'
+run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace C'
+
+[[on-window-detected]]
+if.app-id = 'com.figma.Desktop'
+run = 'move-node-to-workspace D'
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.WebStorm'
+run = 'move-node-to-workspace E'
+
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = 'move-node-to-workspace F'
+
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = 'move-node-to-workspace I'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.dt.Xcode'
 run = 'move-node-to-workspace X'
 
 [[on-window-detected]]
-if.app-id = 'Windows 11'
-run = 'move-node-to-workspace 0'
-
-[[on-window-detected]]
-if.app-id = 'com.Eltima.ElmediaPlayer.MAS'
-run = 'move-node-to-workspace 7'
-
-[[on-window-detected]]
 if.app-id = 'org.videolan.vlc'
 run = 'move-node-to-workspace L'
-
-[[on-window-detected]]
-if.app-id = 'com.figma.Desktop'
-run = 'move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.clickup.desktop-app'
@@ -266,16 +287,16 @@ if.app-id = 'com.apple.Terminal'
 run = ['move-node-to-workspace W']
 
 [[on-window-detected]]
-if.app-id = 'notion.id'
-run = 'move-node-to-workspace G'
+if.app-id = 'zlibrary'
+run = ['move-node-to-workspace Z']
 
 [[on-window-detected]]
-if.app-id = 'com.wails.GUI.for.SingBox'
-run = 'move-node-to-workspace B'
+if.app-id = 'Windows 11'
+run = 'move-node-to-workspace 0'
 
 [[on-window-detected]]
-if.app-id = 'com.wails.GUI.for.Clash'
-run = 'move-node-to-workspace B'
+if.app-id = 'com.Eltima.ElmediaPlayer.MAS'
+run = 'move-node-to-workspace 7'
 
 # 5 web browser
 [[on-window-detected]]
@@ -306,9 +327,6 @@ run = 'move-node-to-workspace 6'
 if.app-id = 'com.brave.Browser.nightly'
 run = 'move-node-to-workspace N'
 
-[[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = 'move-node-to-workspace C'
 
 # simulators on the mobile development
 [[on-window-detected]]

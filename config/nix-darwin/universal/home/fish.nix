@@ -54,8 +54,9 @@ end
 
 
 # environment variable
-set -g -x ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
+set -g -x  ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
 set -g -x  TRUJUNZHANG_DOTFILES_HOME "$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
+set -g -x  ACT_BINARY "/etc/profiles/per-user/djzhang/bin/act"
 
 # Android SDK
 # ======================================================================
