@@ -68,6 +68,7 @@ config/nvim-lazy/lazy-lock.json
 
 wget-log
 
+config/nvim-lazy/lazyvim.json
 #config/nix-darwin/arm64/flake.lock
 #flake.lock
 config/nix-darwin/universal/.nvimlog

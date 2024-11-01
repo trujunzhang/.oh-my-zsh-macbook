@@ -259,10 +259,6 @@ if.app-id = 'com.skype.skype'
 run = 'move-node-to-workspace k'
 
 [[on-window-detected]]
-if.app-id = 'org.qbittorrent.qBittorren'
-run = 'move-node-to-workspace Q'
-
-[[on-window-detected]]
 if.app-id = 'com.sublimemerge'
 run = 'move-node-to-workspace S'
 
@@ -288,6 +284,10 @@ run = ['move-node-to-workspace W']
 
 [[on-window-detected]]
 if.app-id = 'zlibrary'
+run = ['move-node-to-workspace Z']
+
+[[on-window-detecte
+if.app-id = 'org.qbittorrent.qBittorrent'
 run = ['move-node-to-workspace Z']
 
 [[on-window-detected]]
