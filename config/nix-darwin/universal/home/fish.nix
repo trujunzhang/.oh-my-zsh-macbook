@@ -65,7 +65,7 @@ set -g -x ANDROID_HOME "$HOME/Library/Android/sdk"
 set -g -x ANDROID_SDK_ROOT "$HOME/Library/Android/sdk"
 set -g -x ANDROID_USER_HOME "$HOME/Library/Android/sdk"
 set -g -x REACT_NATIVE_DOWNLOADS_DIR "$HOME/.local/RN_DOWNLOADS"
-set -g -x ACT_BINARY "$HOME/.local/bin/act"
+set -g -x ACT_BINARY "/etc/profiles/per-user/djzhang/bin/act"
 
 
 fish_add_path "$ANDROID_SDK_ROOT"

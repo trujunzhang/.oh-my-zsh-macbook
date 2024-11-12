@@ -750,6 +750,7 @@ function open_ieatta_xcode_document
 end
 
 alias open_ieatta_android_release_fold="open $ORGANIZATIONS_HOME/__CODING/WORKING/ieatta-three-apps/android/app/build/outputs/apk/production/release"
+alias dinstall_ieatta_android_release="adb install $ORGANIZATIONS_HOME/__CODING/WORKING/ieatta-three-apps/android/app/build/outputs/apk/production/release/app-production-release.apk"
 
 # python
 alias pip_clean_cache="pip cache purge"
@@ -797,3 +798,5 @@ alias pip_install="pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/
 # Verify the installation:
 alias pverify_tensorflow='python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"'
 alias pverify_transforms="python -c \"from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))\""
+
+alias dmac_install_rosetta="softwareupdate --install-rosetta"

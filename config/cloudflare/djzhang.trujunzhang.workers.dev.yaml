@@ -4041,6 +4041,7 @@ rules:
   - DOMAIN-KEYWORD,clickup,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,upwork.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,torrentmac.net,Ⓜ️ 微软服务
+  - DOMAIN-KEYWORD,tracker,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,notion,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,ping.pe,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择

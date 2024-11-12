@@ -8,3 +8,13 @@
   path: data/rulesets/geosite_stackexchange.yaml
   url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/stackexchange.yaml
   count: 20
+- id: geoip_bt.yaml
+  name: bt
+  updateTime: 1731063967836
+  disabled: false
+  type: Http
+  behavior: ipcidr
+  format: yaml
+  path: data/rulesets/geoip_bt.yaml
+  url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/bt.yaml
+  count: 210
