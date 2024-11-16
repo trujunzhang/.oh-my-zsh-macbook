@@ -267,6 +267,10 @@ if.app-id = 'com.sublimemerge'
 run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
+if.app-id = 'org.qbittorrent.qBittorrent'
+run = ['move-node-to-workspace T']
+
+[[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace V'
 
@@ -287,12 +291,12 @@ if.app-id = 'com.apple.Terminal'
 run = ['move-node-to-workspace W']
 
 [[on-window-detected]]
-if.app-id = 'zlibrary'
-run = ['move-node-to-workspace Z']
+if.app-id = 'com.xunlei.Thunder'
+run = 'move-node-to-workspace X'
 
 [[on-window-detected]]
-if.app-id = 'org.qbittorrent.qBittorrent'
-run = ['move-node-to-workspace T']
+if.app-id = 'zlibrary'
+run = ['move-node-to-workspace Z']
 
 [[on-window-detected]]
 if.app-id = 'Windows 11'

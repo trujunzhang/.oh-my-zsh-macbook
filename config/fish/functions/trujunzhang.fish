@@ -685,6 +685,8 @@ function dnix_build_default
     darwin-rebuild switch --option http2 false --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
 end
 
+alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
+
 function dmac_install_common_apps
     mkdir -p /tmp/Applications/unzip
     cp /Volumes/MacGame/MacCache/apps/Applications/*.zip /tmp/Applications
@@ -796,7 +798,9 @@ alias pvenv_new="python -m venv .venv"
 alias pvenv_envrc='echo -e "export VIRTUAL_ENV=.venv\nlayout python" > .envrc'
 alias pip_install="pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 # Verify the installation:
-alias pverify_tensorflow='python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"'
-alias pverify_transforms="python -c \"from transformers import pipeline; print(pipeline('sentiment-analysis')('we love you'))\""
+alias pverify_tensorflow='python -c "import tensorflow as tf
+print(tf.reduce_sum(tf.random.normal([1000, 1000])))"'
+alias pverify_transforms="python -c \"from transformers import pipeline
+print(pipeline('sentiment-analysis')('we love you'))\""
 
 alias dmac_install_rosetta="softwareupdate --install-rosetta"

@@ -1,0 +1,10 @@
+{
+  "data-root": "/Volumes/MacGame/MacCache/docker-containers",
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false
+}

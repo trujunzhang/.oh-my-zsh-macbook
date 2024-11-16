@@ -195,11 +195,13 @@
       homePlatformModules_arm = {
         malo-packages = import ./home/packages-arm.nix;
         malo-nginx= import ./home/nginx.nix;
+        # malo-jenkins= import ./home/jenkins.nix;
       };
 
       homePlatformModules_x86 = {
         malo-packages = import ./home/packages-x86.nix;
       };
+
 
       # }}}
 

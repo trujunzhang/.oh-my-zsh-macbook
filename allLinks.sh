@@ -301,6 +301,10 @@ function link_symlink {
     # editor(config)
     fileLink ".editor(config)" "$TRUJUNZHANG_DOTFILES_HOME/editorconfig.symlink" "$HOME/.editorconfig"
 
+    # docker(daemon.json)
+    mkdir -p "$Home/.docker"
+    fileLink "docker(daemon.json)" "$TRUJUNZHANG_DOTFILES_HOME/config/docker/daemon.json" "$HOME/.docker/daemon.json"
+
     # git(config)
     fileLink ".git(config)" "$TRUJUNZHANG_DOTFILES_HOME/gitconfig.symlink" "$HOME/.gitconfig"
     fileLink ".git(global)" "$TRUJUNZHANG_DOTFILES_HOME/gitignore_global.symlink" "$HOME/.gitignore_global"
@@ -458,7 +462,10 @@ function link_mac_user {
     directoryLink "win11(Parallels Desktop)" "$HOME_MACGAME_PATH/VMDesktop/Windows 11.pvm" "$HOME/Parallels/Windows 11.pvm"
 
     # jenkins
-    directoryLink "jenkins(profile)" "$HOME_MACGAME_PATH/.jenkins" "$HOME/.jenkins"
+    directoryLink "jenkins(profile)" "$HOME_MAC_CACHE_PATH/jenkins" "$HOME/jenkins"
+
+    # docker
+    # directoryLink "docker(containers)" "$HOME_MAC_CACHE_PATH/docker-containers" "$HOME/Library/Containers/Docker"
 }
 
 # mkdir -p "/usr/local/bin"

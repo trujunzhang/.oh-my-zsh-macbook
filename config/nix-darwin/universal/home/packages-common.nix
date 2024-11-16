@@ -78,7 +78,7 @@ let inherit (lib) mkIf elem; in
       pkg-config
       act
       docker
-      docker-compose
+      # docker-compose
       ;
 
     # Dev stuff
