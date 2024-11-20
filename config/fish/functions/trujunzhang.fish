@@ -686,6 +686,7 @@ function dnix_build_default
 end
 
 alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
+alias dmac_unzip_vpn_apps='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'
 
 function dmac_install_common_apps
     mkdir -p /tmp/Applications/unzip

@@ -29,6 +29,7 @@ brew_apps=(
     "Notion.app" "notion" 'copy'
     "ClickUp.app" "clickup" 'ssd'
     "OneDrive.app" "onedrive" 'copy'
+    "Docker.app" "docker" "copy"
     # "Hammerspoon.app"         "hammerspoon" 'copy'
     # "Grammarly Editor.app"    "grammarly" 'copy'
 
@@ -120,7 +121,9 @@ function backup_apps {
         rm -rf "${app_path_in_backup_folder}"
     fi
 
-    cp -Rvp "/Applications/${name}" "${app_path_in_backup_folder}"
+    # cp -Rvp "/Applications/${name}" "${app_path_in_backup_folder}"
+    cd "/Applications"
+    zip -r "${app_path_in_backup_folder}.zip" "${name}"
 }
 
 function restore_apps {
@@ -130,8 +133,12 @@ function restore_apps {
     info "Restore app: ${name}"
     info "Backup app path: ${app_path_in_backup_folder}"
 
-    if [ -d "${app_path_in_backup_folder}" ]; then
-        cp -Rvp "${app_path_in_backup_folder}" "/Applications/${name}"
+    # if [ -d "${app_path_in_backup_folder}" ]; then
+    #     cp -Rvp "${app_path_in_backup_folder}" "/Applications/${name}"
+    # fi
+
+    if [ -f "${app_path_in_backup_folder}.zip" ]; then
+        unzip "${app_path_in_backup_folder}" -d "/Applications"
     fi
 }
 

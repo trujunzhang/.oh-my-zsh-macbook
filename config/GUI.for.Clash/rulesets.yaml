@@ -18,3 +18,13 @@
   path: data/rulesets/geoip_bt.yaml
   url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/bt.yaml
   count: 210
+- id: geosite_java.yaml
+  name: java
+  updateTime: 1731755749314
+  disabled: false
+  type: Http
+  behavior: domain
+  format: yaml
+  path: data/rulesets/geosite_java.yaml
+  url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/java.yaml
+  count: 3
