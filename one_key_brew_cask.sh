@@ -30,6 +30,7 @@ brew_apps=(
     "ClickUp.app" "clickup" 'ssd'
     "OneDrive.app" "onedrive" 'copy'
     "Docker.app" "docker" "copy"
+    "FileZilla.app" "filezilla" 'ssd'
     # "Hammerspoon.app"         "hammerspoon" 'copy'
     # "Grammarly Editor.app"    "grammarly" 'copy'
 
