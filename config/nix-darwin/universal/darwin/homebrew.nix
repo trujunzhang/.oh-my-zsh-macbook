@@ -3,7 +3,8 @@
 let
   inherit (lib) mkIf;
   caskPresent = cask: lib.any (x: x.name == cask) config.homebrew.casks;
-  brewEnabled = config.homebrew.enable;
+  # brewEnabled = config.homebrew.enable;
+  brewEnabled = true;
 in
 
 {
@@ -24,8 +25,8 @@ in
     end
   '';
 
-  homebrew.enable = false;
-  homebrew.onActivation.autoUpdate = true;
+  homebrew.enable = true;
+  homebrew.onActivation.autoUpdate = false;
   homebrew.onActivation.cleanup = "zap";
   homebrew.global.brewfile = true;
 
@@ -65,48 +66,47 @@ in
   # If an app isn't available in the Mac App Store, or the version in the App Store has
   # limitiations, e.g., Transmit, install the Homebrew Cask.
   homebrew.casks = [
-    "anki"
-    "arq"
-    "balenaetcher"
+    # "anki"
+    # "arq"
+    # "balenaetcher"
     "chatgpt"
-    "clay"
-    "cleanmymac"
-    "cursor"
-    "element"
-    "etrecheckpro"
-    "discord"
-    "firefox"
-    "google-chrome"
-    "google-drive"
+    # "clay"
+    # "cleanmymac"
+    # "cursor"
+    # "element"
+    # "etrecheckpro"
+    # "discord"
+    # "firefox"
+    # "google-chrome"
+    # "google-drive"
     "gpg-suite"
-    "hammerspoon"
-    # "keybase"
-    "ledger-live"
-    "loopback"
-    "mimestream"
-    "multiviewer-for-f1"
-    "notion"
-    "nvidia-geforce-now"
-    "obsbot-center"
-    "parallels"
-    "pdf-expert"
-    "postman"
-    "protonvpn"
-    "raycast"
-    "signal"
-    "skype"
-    "sloth"
-    "steam"
-    "superhuman"
-    "superlist"
-    "tor-browser"
-    "transmission"
-    "transmit"
-    "visual-studio-code"
-    "vlc"
-    "whisky"
-    "yubico-yubikey-manager"
-    "zed"
+    # "hammerspoon"
+    # "ledger-live"
+    # "loopback"
+    # "mimestream"
+    # "multiviewer-for-f1"
+    # "notion"
+    # "nvidia-geforce-now"
+    # "obsbot-center"
+    # "parallels"
+    # "pdf-expert"
+    # "postman"
+    # "protonvpn"
+    # "raycast"
+    # "signal"
+    # "skype"
+    # "sloth"
+    # "steam"
+    # "superhuman"
+    # "superlist"
+    # "tor-browser"
+    # "transmission"
+    # "transmit"
+    # "visual-studio-code"
+    # "vlc"
+    # "whisky"
+    # "yubico-yubikey-manager"
+    # "zed"
   ];
 
   # Configuration related to casks

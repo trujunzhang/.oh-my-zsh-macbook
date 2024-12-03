@@ -688,6 +688,7 @@ end
 alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
 alias dmac_unzip_vpn_apps='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'
 alias dmac_switch_off_spotlight="sudo mdutil -a -i off"
+alias dmac_link_homebrew="sudo ln -s /Volumes/MacGame/MacCache/homebrew /opt/homebrew"
 
 function dmac_install_common_apps
     mkdir -p /tmp/Applications/unzip

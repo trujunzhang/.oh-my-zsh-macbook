@@ -145,19 +145,31 @@
         };
       };
       # }}}
-
+      
       # Modules -------------------------------------------------------------------------------- {{{
 
-      darwinModules = {
+      darwinModules_arm = {
         # My configurations
         malo-bootstrap = import ./darwin/bootstrap.nix;
 #        malo-defaults = import ./darwin/defaults.nix;
         malo-general = import ./darwin/general.nix;
-#        malo-homebrew = import ./darwin/homebrew.nix;
+        # malo-homebrew = import ./darwin/homebrew.nix;
 
         # Modules I've created
         users-primaryUser = import ./modules/darwin/users.nix;
       };
+
+      darwinModules_x86 = {
+        # My configurations
+        malo-bootstrap = import ./darwin/bootstrap.nix;
+#        malo-defaults = import ./darwin/defaults.nix;
+        malo-general = import ./darwin/general.nix;
+        # malo-homebrew = import ./darwin/homebrew.nix;
+
+        # Modules I've created
+        users-primaryUser = import ./modules/darwin/users.nix;
+      };
+
 
       homeManagerModules= {
         # My configurations
@@ -189,7 +201,7 @@
         # programs-kitty-extras = import ./modules/home/programs/kitty/extras.nix;
         home-user-info = { lib, ... }: {
           options.home.user-info =
-            (self.darwinModules.users-primaryUser { inherit lib; }).options.users.primaryUser;
+            (self.darwinModules_x86.users-primaryUser { inherit lib; }).options.users.primaryUser;
         };
       };
 
@@ -222,7 +234,7 @@
         "djzhangs-Mac-mini" = makeOverridable self.lib.mkDarwinSystem (primaryUserDefaults // {
           system = "aarch64-darwin";
           userHome = "/Volumes/MacUser/djzhang";
-          modules = attrValues self.darwinModules ++ singleton {
+          modules = attrValues self.darwinModules_arm ++ singleton {
             nixpkgs = nixpkgsDefaults;
             networking.computerName = "djzhang";
             networking.hostName = "djzhangs-Mac-mini";
@@ -248,7 +260,7 @@
         "djzhangs-MacBook-Pro" = makeOverridable self.lib.mkDarwinSystem (primaryUserDefaults // {
           system = "x86_64-darwin";
           userHome = "/Users/djzhang";
-          modules = attrValues self.darwinModules ++ singleton {
+          modules = attrValues self.darwinModules_x86 ++ singleton {
             nixpkgs = nixpkgsDefaults;
             networking.computerName = "djzhang";
             networking.hostName = "djzhangs-MacBook-Pro";

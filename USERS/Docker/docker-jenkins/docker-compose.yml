@@ -1,4 +1,14 @@
 services:
+  ruby:
+    image: ruby:3.3.4
+    restart: always
+    container_name: ruby
+    ports:
+      - 4567:4567
+    volumes:
+      - ~/jenkins:/var/jenkins_home
+      # - .:/app
+
   jenkins:
     image: jenkins/jenkins:lts
     restart: always
@@ -6,9 +16,12 @@ services:
     user: root
     ports:
       - 8060:8080
-      - 50000:50000
+      # - 50000:50000
     container_name: jenkins
+    depends_on:
+      - ruby
     volumes:
+      - ~/Documents/Organizations/__CODING/WORKING:/var/WORKING
       - ~/jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/local/bin/docker:/usr/local/bin/docker

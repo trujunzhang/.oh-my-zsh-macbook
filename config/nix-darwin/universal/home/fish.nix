@@ -74,6 +74,8 @@ fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 
 fish_add_path "/Applications/Neovide.app/Contents/MacOS"
 
+fish_add_path "/opt/homebrew/bin/"
+
 # djzhang's bin
 # ======================================================================
 fish_add_path "$HOME/.local/bin"

@@ -463,6 +463,10 @@ function link_mac_user {
 
     # jenkins
     directoryLink "jenkins(profile)" "$HOME_MAC_CACHE_PATH/jenkins" "$HOME/jenkins"
+    directoryLink "jenkins(profile)" "$HOME_MAC_CACHE_PATH/jenkins" "$HOME/.jenkins"
+
+    # homebrew
+    # directoryLink "homebrew(home)" "$HOME_MAC_CACHE_PATH/homebrew" "/opt/homebrew"
 
     # docker
     # directoryLink "docker(containers)" "$HOME_MAC_CACHE_PATH/docker-containers" "$HOME/Library/Containers/Docker"
