@@ -689,6 +689,9 @@ alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applicati
 alias dmac_unzip_vpn_apps='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'
 alias dmac_switch_off_spotlight="sudo mdutil -a -i off"
 alias dmac_link_homebrew="sudo ln -s /Volumes/MacGame/MacCache/homebrew /opt/homebrew"
+alias dmac_vim_jenkins_plist="sudo vim /opt/homebrew/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist"
+
+alias dmac_jenkins_services_restart="brew services restart jenkins-lts"
 
 function dmac_install_common_apps
     mkdir -p /tmp/Applications/unzip

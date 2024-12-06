@@ -74,7 +74,17 @@ fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 
 fish_add_path "/Applications/Neovide.app/Contents/MacOS"
 
-fish_add_path "/opt/homebrew/bin/"
+# homebrew
+if [ -d "/opt/homebrew" ]
+    fish_add_path "/opt/homebrew/bin/"
+    # eval "$(/opt/homebrew/bin/brew shellenv)"
+end
+
+# rbenv
+set -x PATH $PATH "$HOME/.rbenv/bin"
+if [ -d "$HOME/.rbenv" ]
+    rbenv init - | source
+end
 
 # djzhang's bin
 # ======================================================================

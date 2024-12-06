@@ -201,7 +201,7 @@ backspace = ['close-all-windows-but-current', 'mode main']
 
 [workspace-to-monitor-force-assignment]
 M = 'secondary'                 
-G = 'secondary'                 
+# G = 'secondary'                 
 N = 'secondary'                 
 #I = 'main'  
 
@@ -241,6 +241,35 @@ run = 'move-node-to-workspace E'
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = 'move-node-to-workspace F'
+
+# ===================================
+# Games apps
+# ===================================
+[[on-window-detected]]
+# assissan creed- Black Flag
+if.window-title-regex-substring='AC4BFSP'
+# if.window-title-regex-substring='com.codeweavers.CrossOverHelper'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
+# assissan creed-  3
+if.window-title-regex-substring='ACIII'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
+# Titanfall2
+if.window-title-regex-substring='Titanfall2'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
+if.window-title-regex-substring='NeedForSpeedPayback'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
+if.app-id = 'com.codeweavers.CrossOverHelper.BF2AA1BDA8E49838D05D6CD5BD318B91.36F4F7F0ED57062CC3C12EA46C7285C7'
+run = 'move-node-to-workspace H'
+
+# com.codeweavers.CrossOverHelper.BF2AA1BDA8E49838D05D6CD5BD318B91.36F4F7F0ED57062CC3C12EA46C7285C7 | NeedForSpeedPayback
 
 [[on-window-detected]]
 if.app-id = 'notion.id'

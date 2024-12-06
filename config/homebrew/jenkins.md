@@ -1,7 +1,7 @@
 1. You can allow local checkouts anyway by setting the system property 'hudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT' to true
    fixed: https://stackoverflow.com/questions/72341686/jenkins-allow-local-checkout
 
-If you're using macOS and installed Jenkins-LTS using Homebrew, you only need to edit the /usr/local/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist file and add <string>-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true</string> before <string>-jar</string>. Save the file and run brew services restart jenkins-lts. The complete contents of this file after the edits:
+If you're using macOS and installed Jenkins-LTS using Homebrew, you only need to edit the '/usr/local/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist' file and add <string>-Dhudson.plugins.git.GitSCM.ALLOW_LOCAL_CHECKOUT=true</string> before <string>-jar</string>. Save the file and run brew services restart jenkins-lts. The complete contents of this file after the edits:
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
