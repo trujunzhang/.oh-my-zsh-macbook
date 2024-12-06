@@ -11,68 +11,68 @@ source ./bash/tools.sh
 
 brew_apps=(
     # Editor
-    "Visual Studio Code.app" "visual-studio-code" "copy"
-    # "Emacs.app"               "emacs" "copy"
-    # "Sourcetree.app"          "sourcetree" 'ssd'
-    # "Insomnia.app"            "insomnia" 'ssd'
+    "Visual Studio Code" "visual-studio-code" "copy"
+    # "Emacs"               "emacs" "copy"
+    # "Sourcetree"          "sourcetree" 'ssd'
+    # "Insomnia"            "insomnia" 'ssd'
     # https://fbflipper.com/
-    # "Flipper.app"             "flipper" 'copy'
-    # "Realm Studio.app"        "mongodb-realm-studio" 'copy'
-    "Obsidian.app" "obsidian" 'copy'
-    "Alacritty.app" "alacritty" 'copy'
-    "Wezterm.app" "wezterm" 'copy'
-    "Neovide.app" "Neovide" 'copy'
+    # "Flipper"             "flipper" 'copy'
+    # "Realm Studio"        "mongodb-realm-studio" 'copy'
+    "Obsidian" "obsidian" 'copy'
+    "Alacritty" "alacritty" 'copy'
+    "Wezterm" "wezterm" 'copy'
+    "Neovide" "Neovide" 'copy'
 
     # System tools
-    "Raycast.app" "raycast" 'copy'
-    "SpaceLauncher.app" "spacelauncher" 'copy'
-    "Notion.app" "notion" 'copy'
-    "ClickUp.app" "clickup" 'ssd'
-    "OneDrive.app" "onedrive" 'copy'
-    "Docker.app" "docker" "copy"
-    "FileZilla.app" "filezilla" 'ssd'
-    # "Hammerspoon.app"         "hammerspoon" 'copy'
-    # "Grammarly Editor.app"    "grammarly" 'copy'
+    "Raycast" "raycast" 'copy'
+    "SpaceLauncher" "spacelauncher" 'copy'
+    "Notion" "notion" 'copy'
+    "ClickUp" "clickup" 'ssd'
+    "OneDrive" "onedrive" 'copy'
+    "Docker" "docker" "copy"
+    "FileZilla" "filezilla" 'ssd'
+    # "Hammerspoon"         "hammerspoon" 'copy'
+    # "Grammarly Editor"    "grammarly" 'copy'
 
     # Web browser
-    "Google Chrome.app" "google-chrome" 'ssd'
-    "Vivaldi.app" "vivaldi" 'ssd'
-    "Opera.app" "opera" 'ssd'
-    "Firefox.app" "firefox" 'ssd'
-    "Brave Browser.app" "brave-browser" 'ssd'
-    "Brave Browser Beta.app" "brave-browser-bata" 'ssd'
-    "Brave Browser Nightly.app" "brave-browser-nightly" 'copy'
+    "Google Chrome" "google-chrome" 'ssd'
+    "Vivaldi" "vivaldi" 'ssd'
+    "Opera" "opera" 'ssd'
+    "Firefox" "firefox" 'ssd'
+    "Brave Browser" "brave-browser" 'ssd'
+    "Brave Browser Beta" "brave-browser-bata" 'ssd'
+    "Brave Browser Nightly" "brave-browser-nightly" 'copy'
 
     # =========================================
     # required password
     # =========================================
-    "Microsoft Edge.app" "microsoft-edge" 'ssd'
+    "Microsoft Edge" "microsoft-edge" 'ssd'
 
     # Design apps
-    "Figma.app" "figma" 'ssd'
-    "Zeplin.app" "zeplin" 'ssd'
-    "VLC.app" "VLC" 'ssd'
+    "Figma" "figma" 'ssd'
+    "Zeplin" "zeplin" 'ssd'
+    "VLC" "VLC" 'ssd'
 
     # chat apps
-    "Skype.app" "skype" 'ssd'
-    # "WeChat.app"              "wechat" "ssd"
-    # "QQ.app"                  "qq" 'ssd'
+    "Skype" "skype" 'ssd'
+    # "WeChat"              "wechat" "ssd"
+    # "QQ"                  "qq" 'ssd'
 )
 brew_apps_arm=(
-    "AeroSpace.app" "nikitabobko/tap/aerospace" "copy"
-    # "Authy Desktop.app"       "authy" 'copy'
-    "BaiduNetdisk_mac.app" "baidunetdisk" 'ssd'
+    "AeroSpace" "nikitabobko/tap/aerospace" "copy"
+    # "Authy Desktop"       "authy" 'copy'
+    "BaiduNetdisk_mac" "baidunetdisk" 'ssd'
 
-    "Arc.app" "arc" 'ssd'
-    # "ResponsivelyApp.app"     "responsively" 'copy'
+    "Arc" "arc" 'ssd'
+    # "ResponsivelyApp"     "responsively" 'copy'
 
-    # "Docker.app" "docker" 'copy'
-    # "pgAdmin 4.app" "pgadmin4" 'copy'
+    # "Docker" "docker" 'copy'
+    # "pgAdmin 4" "pgadmin4" 'copy'
 )
 brew_apps_x86=(
     # macOS tool to limit maximum charging percentage
     # https://github.com/davidwernhart/AlDente-Charge-Limiter
-    "AlDente.app" "aldente" 'copy'
+    "AlDente" "aldente" 'copy'
 )
 
 DEFAULTVALUE="install"
@@ -109,85 +109,114 @@ info "current app backup fold: ${CURRENT_APP_BACKUP_PATH}"
 info "current app backup path: ${PATH_BACKUP}"
 info "==========================================================="
 
-function backup_apps {
+function backup_apps_from_Applications {
     name=$1
+    appName="${name}.app"
 
-    app_path_in_backup_folder="${PATH_BACKUP}/${name}"
-    info "Backup app: ${name}"
+    app_path_in_backup_folder="${PATH_BACKUP}/${name}.zip"
+    info "Backup app in Applications: ${appName}"
     info "Backup app path: ${app_path_in_backup_folder}"
 
     # if the app is already in backup folder, delete it first
-    if [ -d "${app_path_in_backup_folder}" ]; then
-        info "** remove the old app: ${app_path_in_backup_folder}"
-        rm -rf "${app_path_in_backup_folder}"
+    if [ -f "${app_path_in_backup_folder}" ]; then
+        info "** remove the old app zip: ${app_path_in_backup_folder}"
+        rm "${app_path_in_backup_folder}"
     fi
 
     # cp -Rvp "/Applications/${name}" "${app_path_in_backup_folder}"
     cd "/Applications"
-    zip -r "${app_path_in_backup_folder}.zip" "${name}"
+    zip -r "${app_path_in_backup_folder}" "${appName}"
+}
+
+function backup_apps_in_backup_folder {
+    name=$1
+    appName="${name}.app"
+
+    app_path_in_backup_folder="${PATH_BACKUP}/${name}.zip"
+    info "Backup app in backup folder: ${appName}"
+    info "Backup app path: ${app_path_in_backup_folder}"
+
+    # if the app is already in backup folder, delete it first
+    if [ -f "${app_path_in_backup_folder}" ]; then
+        info "** remove the old app zip: ${app_path_in_backup_folder}"
+        rm "${app_path_in_backup_folder}"
+    fi
+
+    # cp -Rvp "/Applications/${name}" "${app_path_in_backup_folder}"
+    cd "${PATH_BACKUP}"
+    zip -r "${app_path_in_backup_folder}" "${appName}"
 }
 
 function restore_apps {
     name=$1
+    appName="${name}.app"
 
-    app_path_in_backup_folder="${PATH_BACKUP}/${name}"
-    info "Restore app: ${name}"
+    app_path_in_backup_folder="${PATH_BACKUP}/${name}.zip"
+    info "Restore app: ${appName}"
     info "Backup app path: ${app_path_in_backup_folder}"
 
     # if [ -d "${app_path_in_backup_folder}" ]; then
     #     cp -Rvp "${app_path_in_backup_folder}" "/Applications/${name}"
     # fi
 
-    if [ -f "${app_path_in_backup_folder}.zip" ]; then
+    if [ -f "${app_path_in_backup_folder}" ]; then
         unzip "${app_path_in_backup_folder}" -d "/Applications"
     fi
 }
 
 function link_apps {
     name=$1
+    appName="${name}.app"
 
-    app_path_in_backup_folder="${PATH_BACKUP}/${name}"
-    info "Link app: ${name}"
+    app_path_in_backup_folder="${PATH_BACKUP}/${appName}"
+    info "Link app: ${appName}"
     info "Backup app path: ${app_path_in_backup_folder}"
 
-    directoryLink "app(${name})" "${app_path_in_backup_folder}" "/Applications/${name}" "delete"
+    directoryLink "app(${name})" "${app_path_in_backup_folder}" "/Applications/${appName}" "delete"
 }
 
 function install_brew_app {
     name=$1
+    appName="${name}.app"
     app=$2
     shouldCopyInApplications=$3
 
     if [ "$Params" = "link" ]; then
-        if [ ! -d "/Applications/${name}" ]; then
+        if [ ! -d "/Applications/${appName}" ]; then
             if [ "$shouldCopyInApplications" = "ssd" ]; then
                 link_apps "${name}"
             fi
         fi
     elif [ "$Params" = "backup" ]; then
-        if [ -d "/Applications/${name}" ]; then
-            backup_apps "${name}"
+        if [ -d "/Applications/${appName}" ]; then
+            if [ "$shouldCopyInApplications" = "copy" ]; then
+                backup_apps_from_Applications "${name}"
+            fi
+
+            if [ "$shouldCopyInApplications" = "ssd" ]; then
+                backup_apps_in_backup_folder "${name}"
+            fi
         fi
     elif [ "$Params" = "restore" ]; then
-        if [ ! -d "/Applications/${name}" ]; then
+        if [ ! -d "/Applications/${appName}" ]; then
             if [ "$shouldCopyInApplications" = "copy" ]; then
                 restore_apps "${name}"
             fi
         fi
     elif [ "$Params" = "delete" ]; then
-        if [ -d "/Applications/${name}" ]; then
-            sudo rm -rf "/Applications/${name}"
+        if [ -d "/Applications/${appName}" ]; then
+            sudo rm -rf "/Applications/${appName}"
         fi
     elif [ "$Params" = "open" ]; then
-        if [ -d "/Applications/${name}" ]; then
-            open "/Applications/${name}"
+        if [ -d "/Applications/${appName}" ]; then
+            open "/Applications/${appName}"
         fi
     elif [ "$Params" = "$DEFAULTVALUE" ]; then
-        if [ ! -d "/Applications/${name}" ]; then
+        if [ ! -d "/Applications/${appName}" ]; then
             brew reinstall --cask "${app}"
         fi
     elif [ "$Params" = "fix" ]; then
-        if [ ! -d "/Applications/${name}" ]; then
+        if [ ! -d "/Applications/${appName}" ]; then
             brew reinstall --cask "${app}"
         fi
     else
