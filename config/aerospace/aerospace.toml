@@ -269,15 +269,28 @@ run = 'move-node-to-workspace H'
 if.app-id = 'com.codeweavers.CrossOverHelper.BF2AA1BDA8E49838D05D6CD5BD318B91.36F4F7F0ED57062CC3C12EA46C7285C7'
 run = 'move-node-to-workspace H'
 
+[[on-window-detected]]
+# assissan creed- three
+if.app-id = 'com.codeweavers.CrossOverHelper.D6B6179F78AE8157EC442CB0374C62FB.BB8F6C891346910EBD7C0E27ACC7E34A'
+run = 'move-node-to-workspace H'
+
 # com.codeweavers.CrossOverHelper.BF2AA1BDA8E49838D05D6CD5BD318B91.36F4F7F0ED57062CC3C12EA46C7285C7 | NeedForSpeedPayback
 
 [[on-window-detected]]
-if.app-id = 'notion.id'
+if.app-id = 'com.codeweavers.CrossOver'
 run = 'move-node-to-workspace I'
 
 [[on-window-detected]]
-if.app-id = 'com.apple.dt.Xcode'
-run = 'move-node-to-workspace X'
+if.app-id = 'com.isaacmarovitz.Whisky'
+run = 'move-node-to-workspace Y'
+
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = 'move-node-to-workspace K'
+
+[[on-window-detected]]
+if.app-id = 'com.skype.skype'
+run = 'move-node-to-workspace k'
 
 [[on-window-detected]]
 if.app-id = 'org.videolan.vlc'
@@ -286,10 +299,6 @@ run = 'move-node-to-workspace L'
 [[on-window-detected]]
 if.app-id = 'com.clickup.desktop-app'
 run = 'move-node-to-workspace U'
-
-[[on-window-detected]]
-if.app-id = 'com.skype.skype'
-run = 'move-node-to-workspace k'
 
 [[on-window-detected]]
 if.app-id = 'com.sublimemerge'
@@ -321,6 +330,10 @@ run = ['move-node-to-workspace W']
 
 [[on-window-detected]]
 if.app-id = 'com.xunlei.Thunder'
+run = 'move-node-to-workspace X'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.dt.Xcode'
 run = 'move-node-to-workspace X'
 
 [[on-window-detected]]

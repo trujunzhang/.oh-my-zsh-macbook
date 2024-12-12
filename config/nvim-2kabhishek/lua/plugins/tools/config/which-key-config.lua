@@ -245,7 +245,7 @@ local mappings = {
   { "<leader>md", "<cmd>Dashboard<cr>", desc = "Dashboard", nowait = true, remap = false },
   { "<leader>mh", "<cmd>Hardtime toggle<cr>", desc = "Hardtime", nowait = true, remap = false },
   { "<leader>mm", "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview", nowait = true, remap = false },
-  { "<leader>mn", "<cmd>Telescope notify<cr>", desc = "Notifications", nowait = true, remap = false },
+  -- { "<leader>mn", "<cmd>Telescope notify<cr>", desc = "Notifications", nowait = true, remap = false },
   { "<leader>mr", "<cmd>%SnipRun<cr>", desc = "Run File", nowait = true, remap = false },
   { "<leader>ms", "<cmd>set spell!<cr>", desc = "Spellcheck", nowait = true, remap = false },
   { "<leader>mz", "<cmd>ZenMode<cr>", desc = "ZenMode", nowait = true, remap = false },
