@@ -76,6 +76,7 @@ let inherit (lib) mkIf elem; in
       autoconf
       lua-language-server
       pkg-config
+      fzf
       act
       docker
       # docker-compose
