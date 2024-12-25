@@ -1,3 +1,4 @@
+
 { config, lib, pkgs, ... }:
 
 let
@@ -6,13 +7,29 @@ let
 in
 
 {
-  # zsh Shell
-  programs.zsh.enable = true;
+  # bash Shell
+  programs.bash = {
+      enable = true;
+      historyControl = [ "ignoredups" ];
+      historySize = 1000000;
+      historyFileSize = 1000000;
+
+      # TODO source from file (e.g., .bashrc)
+      initExtra = ''
+# Android SDK
+# ======================================================================
+# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_USER_HOME=$HOME/Library/Android/sdk
+export PATH=$ANDROID_SDK_ROOT:$PATH
+export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+        '';
+  };
 
   # zsh configuration ------------------------------------------------------------------------- {{{
 
   # Aliases
-  programs.zsh.shellAliases = with pkgs; {
+  programs.bash.shellAliases = with pkgs; {
     nd = "nix develop";
     dcd_home = "cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook";
     dmac_unzip_common_apps = "unzip -o '/Volumes/MacGame/MacCache/apps/Applications/*.zip' -d /Applications";

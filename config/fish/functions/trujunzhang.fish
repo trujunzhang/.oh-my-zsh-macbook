@@ -692,6 +692,7 @@ alias dmac_link_homebrew="sudo ln -s /Volumes/MacGame/MacCache/homebrew /opt/hom
 alias dmac_vim_jenkins_plist="sudo vim /opt/homebrew/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist"
 
 alias dmac_jenkins_services_restart="brew services restart jenkins-lts"
+alias dmac_aerospace_enable_toggle="aerospace enable toggle"
 
 function dmac_install_common_apps
     mkdir -p /tmp/Applications/unzip
