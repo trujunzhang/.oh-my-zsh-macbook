@@ -90,6 +90,9 @@ function link_config_fold {
     directoryLink "config(mpv)" "$TRUJUNZHANG_DOTFILES_HOME/config/mpv" "$HOME/.config/mpv"
     directoryLink "config(qutebrowser)" "$TRUJUNZHANG_DOTFILES_HOME/config/qutebrowser" "$HOME/.config/qutebrowser"
 
+    directoryLink "config(bat)" "$TRUJUNZHANG_DOTFILES_HOME/config/bat" "$HOME/.config/bat"
+    directoryLink "config(helix)" "$TRUJUNZHANG_DOTFILES_HOME/config/helix" "$HOME/.config/helix"
+
     # SpaceLauncher
     mkdir -p "$PATH_USERPROFILE_APPLICATION_SUPPORT/name.guoc.SpaceLauncher"
     fileLink "config(SpaceLauncher)" "$TRUJUNZHANG_DOTFILES_HOME/config/SpaceLauncher/configuration.json" "$PATH_USERPROFILE_APPLICATION_SUPPORT/name.guoc.SpaceLauncher/configuration.json"
@@ -288,9 +291,13 @@ function link_symlink {
     directoryLink "oh-my-zsh(plugin:trujunzhang)" "$TRUJUNZHANG_DOTFILES_HOME/oh-my-zsh/custom/plugins/trujunzhang" "$HOME/.oh-my-zsh/custom/plugins/trujunzhang" "delete"
     # directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"                                             "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
 
+    # bash
+    # fileLink ".bash(profile)" "$TRUJUNZHANG_DOTFILES_HOME/bash_profile.symlink" "$HOME/.bash_profile"
+    # fileLink ".bash(rc)" "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink" "$HOME/.bashrc"
+
     # zshrc(rc)
-    fileLink ".zsh(env)" "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
-    fileLink ".zsh(rc)" "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink" "$HOME/.zshrc"
+    # fileLink ".zsh(env)" "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
+    # fileLink ".zsh(rc)" "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink" "$HOME/.zshrc"
 
     # zshrc(theme)
     fileLink ".zsh(powerlevel10k)" "$TRUJUNZHANG_DOTFILES_HOME/p10k.zsh.symlink" "$HOME/.p10k.zsh"
@@ -308,10 +315,6 @@ function link_symlink {
     # git(config)
     fileLink ".git(config)" "$TRUJUNZHANG_DOTFILES_HOME/gitconfig.symlink" "$HOME/.gitconfig"
     fileLink ".git(global)" "$TRUJUNZHANG_DOTFILES_HOME/gitignore_global.symlink" "$HOME/.gitignore_global"
-
-    # bash
-    fileLink ".bash(profile)" "$TRUJUNZHANG_DOTFILES_HOME/bash_profile.symlink" "$HOME/.bash_profile"
-    fileLink ".bash(rc)" "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink" "$HOME/.bashrc"
 
     directoryLink "dotenv(Express.js environment variables)" "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
 

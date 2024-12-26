@@ -11,9 +11,9 @@ let inherit (lib) mkIf elem; in
   # https://github.com/sharkdp/bat
   # https://nix-community.github.io/home-manager/options.html#opt-programs.bat.enable
   programs.bat.enable = true;
-  programs.bat.config = {
-    style = "plain";
-  };
+  # programs.bat.config = {
+  #   style = "plain";
+  # };
 
   # Btop, a fancy version of `top`.
   # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.btop.enable
