@@ -38,9 +38,9 @@ let inherit (lib) mkIf elem; in
 
   # Zsh
   # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.zsh.enable
-  programs.zsh.enable = true;
-  programs.zsh.dotDir = ".config/zsh";
-  programs.zsh.history.path = "${config.xdg.stateHome}/zsh_history";
+  # programs.zsh.enable = true;
+  # programs.zsh.dotDir = ".config/zsh";
+  # programs.zsh.history.path = "${config.xdg.stateHome}/zsh_history";
 
   home.packages = lib.attrValues ({
     # Some basics

@@ -7,7 +7,25 @@ in
 
 {
   # zsh Shell
-  programs.zsh.enable = true;
+  programs.zsh = {
+      enable = true;
+
+      # TODO source from file (e.g., .zshrc)
+      initExtra = ''
+
+if [ -d $HOME/.asdf ]; then
+    . "$HOME/.asdf/asdf.sh"
+fi
+
+# Android SDK
+# ======================================================================
+# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_USER_HOME=$HOME/Library/Android/sdk
+export PATH=$ANDROID_SDK_ROOT:$PATH
+export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+        '';
+  };
 
   # zsh configuration ------------------------------------------------------------------------- {{{
 

@@ -67,6 +67,13 @@ set -g -x ANDROID_USER_HOME "$HOME/Library/Android/sdk"
 set -g -x REACT_NATIVE_DOWNLOADS_DIR "$HOME/.local/RN_DOWNLOADS"
 set -g -x ACT_BINARY "/etc/profiles/per-user/djzhang/bin/act"
 
+if test "$(uname -m)" = 'arm64'
+    fish_add_path "$HOME/.local/bin/helix-aarch64-macos"
+end
+
+if test "$(uname -m)" = 'x86_64'
+    fish_add_path "$HOME/.local/bin/helix-x86_64-macos"
+end
 
 fish_add_path "$ANDROID_SDK_ROOT"
 fish_add_path "$ANDROID_SDK_ROOT/tools"
