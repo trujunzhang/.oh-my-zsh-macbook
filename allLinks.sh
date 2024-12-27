@@ -159,7 +159,8 @@ function link_config_fold {
     fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml"
 
     # nvim-snippet
-    directoryLink "nvim(snippets)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets" "$HOME/.config/nvim-snippets"
+    # directoryLink "nvim(snippets)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets" "$HOME/.config/nvim-snippets"
+    directoryLink "nvim(snippets)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets/debug-snippets" "$HOME/.config/snippets"
 
     # lvim
     # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-abzcoding"       "$HOME/.config/lvim"             "delete"

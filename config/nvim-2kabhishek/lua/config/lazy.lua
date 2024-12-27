@@ -13,7 +13,10 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import any extras modules here
-    { import = "lazyvim.plugins.extras.ai.codeium" },
+    { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
+    -- { import = "lazyvim.plugins.extras.coding.blink" },
+    -- { import = "lazyvim.plugins.extras.coding.luasnip" },
+    -- { import = "lazyvim.plugins.extras.ai.codeium" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     -- { import = "lazyvim.plugins.extras.lang.typescript" },
@@ -36,6 +39,16 @@ require("lazy").setup({
     --  some LazyVim's disabled_plugins
     -- { "folke/tokyonight.nvim", enabled = false },
     -- { "stevearc/conform.nvim'",                              enabled = false },
+    {
+      "saghen/blink.cmp",
+      enabled = false,
+      optional = true,
+    },
+    {
+      "hrsh7th/nvim-cmp",
+      optional = true,
+      enabled = true,
+    },
     { "folke/persistence.nvim", enabled = false },
     -- { "nvim-neo-tree/neo-tree.nvim", enabled = false },
     -- import/override with your plugins
