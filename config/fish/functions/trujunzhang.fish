@@ -630,6 +630,7 @@ alias http_proxy_v2ray="export http_proxy=http://127.0.0.1:1087"
 
 # git clone
 alias dclone_expensify="git clone https://github.com/expensify/App.git --depth 1 expensify && cd expensify"
+alias dclone_bitnet="git clone https://github.com/microsoft/BitNet --depth 1"
 alias dclone_ieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git --depth 1 check-ieatta && cd check-ieatta"
 alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-fixed.git --depth 1 usedExpApp && cd usedExpApp"
 alias dclone_cocoapods="git clone https://github.com/CocoaPods/Specs --depth 1"

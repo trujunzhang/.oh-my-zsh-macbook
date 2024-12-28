@@ -4,6 +4,51 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
+
+# 用于DNS服务器和连接建立的静态主机 (如/etc/hosts) .
+#
+# 支持通配符主机名 (例如 *.clash.dev, *.foo.*.example.com)
+# 非通配符域名优先级高于通配符域名
+# 例如 foo.example.com > *.example.com > .example.com
+# P.S. +.foo.com 等于 .foo.com 和 foo.com
+hosts:
+  "dev.new.ieatta.com": 127.0.0.1
+
+# DNS 服务设置
+# 此部分是可选的. 当不存在时, DNS 服务将被禁用.
+dns:
+  enable: false
+  listen: 0.0.0.0:53
+  # ipv6: false # 当为 false 时, AAAA 查询的响应将为空
+
+  # 这些 名称服务器(nameservers) 用于解析下列 DNS 名称服务器主机名.
+  # 仅指定 IP 地址
+  default-nameserver:
+    - 114.114.114.114
+    - 8.8.8.8
+  # enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16 # Fake IP 地址池 CIDR
+  use-hosts: true # 查找 hosts 并返回 IP 记录
+
+  # search-domains: [local] # A/AAAA 记录的搜索域
+
+  # 此列表中的主机名将不会使用 Fake IP 解析
+  # 即, 对这些域名的请求将始终使用其真实 IP 地址进行响应
+  # fake-ip-filter:
+  #   - '*.lan'
+  #   - localhost.ptlogin2.qq.com
+
+  # 支持 UDP、TCP、DoT、DoH. 您可以指定要连接的端口.
+  # 所有 DNS 查询都直接发送到名称服务器, 无需代理
+  # Clash 使用第一个收到的响应作为 DNS 查询的结果.
+  nameserver:
+    - 114.114.114.114 # 默认值
+    - 8.8.8.8 # 默认值
+    - tls://dns.rubyfish.cn:853 # DNS over TLS
+    - https://1.1.1.1/dns-query # DNS over HTTPS
+    - dhcp://en0 # 来自 dhcp 的 dns
+    # - '8.8.8.8#en0'
+
 proxies:
   - {
       name: 加入我的频道t.me/CMLiussss解锁更多优选节点,
@@ -818,8 +863,7 @@ rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,myavlive.com,🎯 全球直连
   - DOMAIN-SUFFIX,missav.com,🎯 全球直连
-  # - DOMAIN,dev.new.ieatta.com,🎯 全球直连
-  - SRC-PORT,8082,🎯 全球直连
+  # - DOMAIN-SUFFIX,ieatta.com,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
   - DOMAIN-SUFFIX,lan,🎯 全球直连
@@ -3489,6 +3533,7 @@ rules:
   - DOMAIN-SUFFIX,oaspapps.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,office.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,office.net,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,yts.mx,📢 谷歌FCM
   - DOMAIN-SUFFIX,office365.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,officeppe.net,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,omniroot.com,Ⓜ️ 微软服务
@@ -3993,6 +4038,10 @@ rules:
   - DOMAIN-SUFFIX,ip138.com,🚀 节点选择
   - DOMAIN-SUFFIX,linkedin.com,🚀 节点选择
   - DOMAIN-SUFFIX,myteamspeak.com,🚀 节点选择
+  - DOMAIN-KEYWORD,clickup,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,upwork.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,torrentmac.net,Ⓜ️ 微软服务
+  - DOMAIN-KEYWORD,tracker,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,notion,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,ping.pe,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
@@ -4160,8 +4209,6 @@ rules:
   - DOMAIN-SUFFIX,claude.ai,🚀 节点选择
   - DOMAIN-SUFFIX,anthropic.com,🚀 节点选择
   - DOMAIN-SUFFIX,apache.org,🚀 节点选择
-  - DOMAIN-SUFFIX,docker.com,🚀 节点选择
-  - DOMAIN-SUFFIX,docker.io,🚀 节点选择
   - DOMAIN-SUFFIX,elastic.co,🚀 节点选择
   - DOMAIN-SUFFIX,elastic.com,🚀 节点选择
   - DOMAIN-SUFFIX,gcr.io,🚀 节点选择
@@ -4169,7 +4216,6 @@ rules:
   - DOMAIN-SUFFIX,gitlab.io,🚀 节点选择
   - DOMAIN-SUFFIX,jitpack.io,🚀 节点选择
   - DOMAIN-SUFFIX,maven.org,🚀 节点选择
-  - DOMAIN-SUFFIX,medium.com,🚀 节点选择
   - DOMAIN-SUFFIX,mvnrepository.com,🚀 节点选择
   - DOMAIN-SUFFIX,quay.io,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
@@ -4178,7 +4224,10 @@ rules:
   - DOMAIN-SUFFIX,sourcegraph.com,🚀 节点选择
   - DOMAIN-SUFFIX,spring.io,🚀 节点选择
   - DOMAIN-SUFFIX,spring.net,🚀 节点选择
-  - DOMAIN-SUFFIX,stackoverflow.com,🚀 节点选择
+  - DOMAIN-SUFFIX,nixos.org,📢 谷歌FCM
+  - DOMAIN-SUFFIX,gradle.org,📢 谷歌FCM
+  - DOMAIN-SUFFIX,stackoverflow.com,🎯 全球直连
+  - DOMAIN-SUFFIX,medium.com,🎯 全球直连
   - DOMAIN,d1q6f0aelx0por.cloudfront.net,🚀 节点选择
   - DOMAIN,d2wy8f7a9ursnm.cloudfront.net,🚀 节点选择
   - DOMAIN,d36jcksde1wxzq.cloudfront.net,🚀 节点选择
@@ -4282,12 +4331,12 @@ rules:
   - DOMAIN-SUFFIX,openai.com,🚀 节点选择
   - DOMAIN-SUFFIX,challenges.cloudflare.com,🚀 节点选择
   - DOMAIN-KEYWORD,1drv,🚀 节点选择
-  - DOMAIN-KEYWORD,onedrive,🚀 节点选择
+  - DOMAIN-KEYWORD,onedrive,🎯 全球直连
   - DOMAIN-KEYWORD,skydrive,🚀 节点选择
   - DOMAIN-SUFFIX,livefilestore.com,🚀 节点选择
   - DOMAIN-SUFFIX,oneclient.sfx.ms,🚀 节点选择
-  - DOMAIN-SUFFIX,onedrive.com,🚀 节点选择
-  - DOMAIN-SUFFIX,onedrive.live.com,🚀 节点选择
+  - DOMAIN-SUFFIX,onedrive.com,🎯 全球直连
+  - DOMAIN-SUFFIX,onedrive.live.com,🎯 全球直连
   - DOMAIN-SUFFIX,photos.live.com,🚀 节点选择
   - DOMAIN-SUFFIX,skydrive.wns.windows.com,🚀 节点选择
   - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,🚀 节点选择

@@ -1,44 +1,54 @@
-
 ################################################################
-Subscribe / sub 订阅地址, 支持 Base64、clash-meta、sing-box 订阅格式, 您的订阅内容由 noTLS.fxxk.dedyn.io 提供维护支持, 自动获取ProxyIP: true
+Subscribe / sub 订阅地址, 点击链接自动 复制订阅链接 并 生成订阅二维码
 ---------------------------------------------------------------
-快速自适应订阅地址:
-https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43
-https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?sub
-
+自适应订阅地址:
+https://djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43
 Base64订阅地址:
-https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?b64
-https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?base64
-
+https://djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?b64
 clash订阅地址:
-https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?clash
-
+https://djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?clash
 singbox订阅地址:
-https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?sb
-https://e8b99cbe-9ebd-4a20-a497-38f4b29f2c98.83b11782-ecae-411f-90c3-2a01bb33260a.gleeze.com/djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?singbox
+https://djzhang.trujunzhang.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?sb
+实用订阅技巧∨
+---------------------------------------------------------------
+################################################################
+edgetunnel 配置信息
+---------------------------------------------------------------
+HOST: djzhang.trujunzhang.workers.dev
+UUID: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
+FKID: e7516f9c-66bf-9512-4ec0-d56f3077e794
+UA: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+
+CFCDN（访问方式）: 无法访问, 需要您设置 proxyIP/PROXYIP ！！！
+
+您的订阅内容由 内置 addresses/ADD* 参数变量提供
+ADD（TLS优选域名&IP）:
+  127.0.0.1:1234#CFnat
+ADDNOTLS（noTLS优选域名&IP）:
+  103.21.244.71#CF随机节点
+  104.16.191.79#CF随机节点
+  104.24.155.74#CF随机节点
+  172.64.188.70#CF随机节点
+  103.21.245.242#CF随机节点
+  104.16.119.45#CF随机节点
+  104.24.187.129#CF随机节点
+  141.101.70.72#CF随机节点
+  172.64.177.179#CF随机节点
+  188.114.97.221#CF随机节点
+  190.93.247.234#CF随机节点
+
+SUBAPI（订阅转换后端）: https://SUBAPI.fxxk.dedyn.io
+SUBCONFIG（订阅转换配置文件）: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini
 ---------------------------------------------------------------
 ################################################################
 v2ray
 ---------------------------------------------------------------
-vless://4440a1c3-06dc-493b-a630-c6cc9a1dfb43@www.wto.org:80?encryption=none&security=&sni=djzhang.trujunzhang.workers.dev&fp=randomized&type=ws&host=djzhang.trujunzhang.workers.dev&path=%2F%3Fed%3D2560#djzhang.trujunzhang.workers.dev
+vless://4440a1c3-06dc-493b-a630-c6cc9a1dfb43@visa.cn:80?encryption=none&security=&sni=djzhang.trujunzhang.workers.dev&fp=randomized&type=ws&host=djzhang.trujunzhang.workers.dev&path=%2F%3Fed%3D2560#edgetunnel
 ---------------------------------------------------------------
 ################################################################
 clash-meta
 ---------------------------------------------------------------
-- type: vless
-  name: djzhang.trujunzhang.workers.dev
-  server: www.wto.org
-  port: 80
-  uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43
-  network: ws
-  tls: false
-  udp: false
-  sni: djzhang.trujunzhang.workers.dev
-  client-fingerprint: randomized
-  ws-opts:
-    path: "/?ed=2560"
-    headers:
-      host: djzhang.trujunzhang.workers.dev
+- {name: edgetunnel, server: visa.cn, port: 80, type: vless, uuid: 4440a1c3-06dc-493b-a630-c6cc9a1dfb43, tls: false, alpn: [h3], udp: false, sni: djzhang.trujunzhang.workers.dev, tfo: false, skip-cert-verify: true, servername: djzhang.trujunzhang.workers.dev, client-fingerprint: randomized, network: ws, ws-opts: {path: "/?ed=2560", headers: {djzhang.trujunzhang.workers.dev}}}
 ---------------------------------------------------------------
 ################################################################
 telegram 交流群 技术大佬~在线发牌!
