@@ -25,9 +25,15 @@
   },
   {
     "type": "application",
-    "name": "clash",
+    "name": "clash for arm",
     "application": "ClashX Pro",
-    "enable": "0"
+    "enable": "1"
+  },
+  {
+    "type": "application",
+    "name": "clash for x86",
+    "application": "ClashX",
+    "enable": "1"
   },
   {
     "type": "application",
@@ -39,7 +45,7 @@
     "type": "application",
     "name": "gui for Clash",
     "application": "GUI.for.Clash.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
