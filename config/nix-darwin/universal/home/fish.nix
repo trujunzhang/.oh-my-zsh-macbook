@@ -75,6 +75,7 @@ if test "$(uname -m)" = 'x86_64'
     fish_add_path "$HOME/.local/bin/helix-x86_64-macos"
 end
 
+fish_add_path "$HOME/.orbstack/bin"
 fish_add_path "$ANDROID_SDK_ROOT"
 fish_add_path "$ANDROID_SDK_ROOT/tools"
 fish_add_path "$ANDROID_SDK_ROOT/platform-tools"

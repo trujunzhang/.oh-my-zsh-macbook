@@ -78,7 +78,7 @@ let inherit (lib) mkIf elem; in
       pkg-config
       fzf
       act
-      docker
+      # docker
       # docker-compose
       ;
 
