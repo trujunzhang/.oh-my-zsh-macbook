@@ -861,8 +861,8 @@ proxy-groups:
       - 🇺🇸 US 10
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
-  - DOMAIN-SUFFIX,myavlive.com,🎯 全球直连
-  - DOMAIN-SUFFIX,missav.com,🎯 全球直连
+  - DOMAIN-SUFFIX,myavlive,🎯 全球直连
+  - DOMAIN-SUFFIX,missav,🎯 全球直连
   # - DOMAIN-SUFFIX,ieatta.com,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连

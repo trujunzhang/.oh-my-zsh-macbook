@@ -4,7 +4,6 @@ source ./bash/shellUtils.sh
 
 vsExtensionsArray=(
 
-
     # =================================
     # Themes
     # =================================
@@ -38,7 +37,6 @@ vsExtensionsArray=(
     "donjayamanne.githistory"
     "johnguo.columnpaste"
 
-
     # =================================
     # Dev
     # =================================
@@ -59,7 +57,7 @@ vsExtensionsArray=(
     # "github.copilot"
     "codeium.codeium"
     # https://www.codium.ai
-    # "Codium.codium"   
+    # "Codium.codium"
 
     # =================================
     # Nix
@@ -152,18 +150,16 @@ info "${Params}"
 len=${#vsExtensionsArray[@]}
 
 function install_vs_extensions {
-    for (( i=0; i<${#vsExtensionsArray[@]}; i++ ));
-    do
+    for ((i = 0; i < ${#vsExtensionsArray[@]}; i++)); do
         info "                         "
         info "==============================================================="
-        info "element $((i+1)) of ${len} is ${vsExtensionsArray[$i]}"
+        info "element $((i + 1)) of ${len} is ${vsExtensionsArray[$i]}"
         info "==============================================================="
         info "                         "
 
         code --install-extension ${vsExtensionsArray[$i]} "${Params}"
     done
 }
-
 
 # rm -rf "$HOME/.vscode"
 install_vs_extensions
