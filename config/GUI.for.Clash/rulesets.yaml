@@ -28,3 +28,23 @@
   path: data/rulesets/geosite_java.yaml
   url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/java.yaml
   count: 3
+- id: geosite_youtube.yaml
+  name: youtube
+  updateTime: 1735641600517
+  disabled: false
+  type: Http
+  behavior: domain
+  format: yaml
+  path: data/rulesets/geosite_youtube.yaml
+  url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geosite/youtube.yaml
+  count: 179
+- id: geosite_github.yaml
+  name: github
+  updateTime: 1735641611519
+  disabled: false
+  type: Http
+  behavior: domain
+  format: yaml
+  path: data/rulesets/geosite_github.yaml
+  url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geosite/github.yaml
+  count: 29

@@ -88,6 +88,16 @@ proxy-providers:
     type: file
     path: ../subscribes/ID_lo8t72vx.yaml
 rule-providers:
+  github:
+    type: file
+    behavior: domain
+    path: ../rulesets/geosite_github.yaml
+    format: yaml
+  youtube:
+    type: file
+    behavior: domain
+    path: ../rulesets/geosite_youtube.yaml
+    format: yaml
   category-ads-all:
     type: http
     url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ads-all.mrs
@@ -126,6 +136,24 @@ rule-providers:
     proxy: 🎯 Direct
 proxies: []
 proxy-groups:
+  - name: GitHub-Working
+    type: select
+    filter: ""
+    exclude-filter: ""
+    hidden: false
+    icon: ""
+    use:
+      - ID_lo8t72vx
+    disable-udp: false
+  - name: Youtube-Videos
+    type: select
+    filter: ""
+    exclude-filter: ""
+    hidden: false
+    icon: ""
+    use:
+      - ID_lo8t72vx
+    disable-udp: false
   - name: 🚀 Select
     type: select
     filter: ""
@@ -182,6 +210,8 @@ proxy-groups:
       - 🎈 Auto
     disable-udp: false
 rules:
+  - RULE-SET,github,GitHub-Working
+  - RULE-SET,youtube,Youtube-Videos
   - DOMAIN-SUFFIX,dev.new.ieatta.com,DIRECT
   - AND,((DST-PORT,443),(NETWORK,udp)),🛑 Reject
   - RULE-SET,category-ads-all,🛑 Reject

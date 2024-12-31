@@ -22,6 +22,7 @@ brew_apps=(
     "Alacritty" "alacritty" 'copy'
     "Wezterm" "wezterm" 'copy'
     "Neovide" "Neovide" 'copy'
+    "Sublime Text" "SublimeText" "ssd"
 
     # System tools
     "Raycast" "raycast" 'copy'
