@@ -156,7 +156,7 @@ function link_config_fold {
 
     # clash
     mkdir -p "$HOME/.config/clash"
-    fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml"
+    fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/djzhang/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml" "delete"
 
     # nvim-snippet
     # directoryLink "nvim(snippets)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets" "$HOME/.config/nvim-snippets"
@@ -358,10 +358,12 @@ function link_symlink {
     fileLink "npm(netrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm/netrc" "$HOME/.netrc" "delete"
 
     # GUI.for.SingBox
-    directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
+    # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
+    directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-wanghao" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
 
     # GUI.for.clash
-    directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
+    # directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
+    directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-wanghao" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
 }
 
 # function link_cocoapods {

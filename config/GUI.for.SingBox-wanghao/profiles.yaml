@@ -1,0 +1,368 @@
+- id: ID_f8382kwx
+  name: ID_zby1t04x
+  log:
+    disabled: false
+    level: info
+    output: ""
+    timestamp: false
+  experimental:
+    clash_api:
+      external_controller: 127.0.0.1:20123
+      external_ui: ""
+      external_ui_download_url: ""
+      external_ui_download_detour: outbound-direct
+      secret: ID_z4phj5c5
+      default_mode: rule
+      access_control_allow_origin:
+        - "*"
+      access_control_allow_private_network: false
+    cache_file:
+      enabled: true
+      path: cache.db
+      cache_id: ""
+      store_fakeip: true
+      store_rdrc: true
+      rdrc_timeout: 7d
+  inbounds:
+    - id: mixed-in
+      type: mixed
+      tag: mixed-in
+      enable: true
+      mixed:
+        listen:
+          listen: 127.0.0.1
+          listen_port: 20122
+          tcp_fast_open: false
+          tcp_multi_path: false
+          udp_fragment: false
+        users: []
+    - id: tun-in
+      type: tun
+      tag: tun-in
+      enable: false
+      tun:
+        interface_name: ""
+        address:
+          - 172.18.0.1/30
+          - fdfe:dcba:9876::1/126
+        mtu: 9000
+        auto_route: true
+        strict_route: true
+        route_address:
+          - 0.0.0.0/1
+          - 128.0.0.0/1
+          - ::/1
+          - 8000::/1
+        endpoint_independent_nat: false
+        stack: mixed
+  outbounds:
+    - id: outbound-select
+      tag: 🚀 Select
+      type: selector
+      outbounds:
+        - id: outbound-urlte
+          type: Built-in
+          tag: 🎈 Auto
+        - id: ID_zeiplvdp
+          tag: ID_zeiplvdp
+          type: Subscription
+      interrupt_exist_connections: true
+      url: ""
+      interval: 3m
+      tolerance: 150
+      include: ""
+      exclude: ""
+    - id: outbound-urlte
+      tag: 🎈 Auto
+      type: urltest
+      outbounds:
+        - id: ID_zeiplvdp
+          tag: ID_zeiplvdp
+          type: Subscription
+      interrupt_exist_connections: true
+      url: https://www.gstatic.com/generate_204
+      interval: 3m
+      tolerance: 150
+      include: ""
+      exclude: ""
+    - id: outbound-direct
+      tag: 🎯 Direct
+      type: direct
+      outbounds: []
+      interrupt_exist_connections: true
+      url: ""
+      interval: 3m
+      tolerance: 150
+      include: ""
+      exclude: ""
+    - id: outbound-fallback
+      tag: 🐟 Fallback
+      type: selector
+      outbounds:
+        - id: outbound-select
+          type: Built-in
+          tag: 🚀 Select
+        - id: outbound-direct
+          type: Built-in
+          tag: 🎯 Direct
+      interrupt_exist_connections: true
+      url: ""
+      interval: 3m
+      tolerance: 150
+      include: ""
+      exclude: ""
+    - id: outbound-global
+      tag: GLOBAL
+      type: selector
+      outbounds:
+        - id: outbound-select
+          type: Built-in
+          tag: 🚀 Select
+        - id: outbound-urlte
+          type: Built-in
+          tag: 🎈 Auto
+        - id: outbound-direct
+          type: Built-in
+          tag: 🎯 Direct
+        - id: outbound-fallback
+          type: Built-in
+          tag: 🐟 Fallback
+      interrupt_exist_connections: true
+      url: ""
+      interval: 3m
+      tolerance: 150
+      include: ""
+      exclude: ""
+  route:
+    rules:
+      - id: ID_sic0agat
+        type: inbound
+        payload: tun-in
+        invert: false
+        action: sniff
+        outbound: ""
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_hpmfqba5
+        type: protocol
+        payload: dns
+        invert: false
+        action: hijack-dns
+        outbound: ""
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_c4ryoyn8
+        type: clash_mode
+        payload: direct
+        invert: false
+        action: route
+        outbound: outbound-direct
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_1nxwic49
+        type: clash_mode
+        payload: global
+        invert: false
+        action: route
+        outbound: outbound-global
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_xbxriwg1
+        type: protocol
+        payload: quic
+        invert: false
+        action: reject
+        outbound: ""
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_f8p0dpfa
+        type: rule_set
+        payload: Category-Ads
+        invert: false
+        action: reject
+        outbound: ""
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_clcte14y
+        type: rule_set
+        payload: GeoSite-Private
+        invert: false
+        action: route
+        outbound: outbound-direct
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_sw0apmmk
+        type: rule_set
+        payload: GeoSite-CN
+        invert: false
+        action: route
+        outbound: outbound-direct
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_zcwjhnbn
+        type: rule_set
+        payload: GeoIP-Private
+        invert: false
+        action: route
+        outbound: outbound-direct
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_nwfv0ztv
+        type: rule_set
+        payload: GeoIP-CN
+        invert: false
+        action: route
+        outbound: outbound-direct
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_176bi7qt
+        type: rule_set
+        payload: GeoLocation-!CN
+        invert: false
+        action: route
+        outbound: outbound-select
+        sniffer: []
+        strategy: default
+        server: ""
+    rule_set:
+      - id: Category-Ads
+        type: remote
+        tag: Category-Ads
+        format: binary
+        url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-ads-all.srs
+        download_detour: outbound-direct
+        update_interval: ""
+        rules: ""
+        path: ""
+      - id: GeoIP-Private
+        type: remote
+        tag: GeoIP-Private
+        format: binary
+        url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/private.srs
+        download_detour: outbound-direct
+        update_interval: ""
+        rules: ""
+        path: ""
+      - id: GeoSite-Private
+        type: remote
+        tag: GeoSite-Private
+        format: binary
+        url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/private.srs
+        download_detour: outbound-direct
+        update_interval: ""
+        rules: ""
+        path: ""
+      - id: GeoIP-CN
+        type: remote
+        tag: GeoIP-CN
+        format: binary
+        url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs
+        download_detour: outbound-direct
+        update_interval: ""
+        rules: ""
+        path: ""
+      - id: GeoSite-CN
+        type: remote
+        tag: GeoSite-CN
+        format: binary
+        url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs
+        download_detour: outbound-direct
+        update_interval: ""
+        rules: ""
+        path: ""
+      - id: GeoLocation-!CN
+        type: remote
+        tag: GeoLocation-!CN
+        format: binary
+        url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-!cn.srs
+        download_detour: outbound-direct
+        update_interval: ""
+        rules: ""
+        path: ""
+    auto_detect_interface: true
+    default_interface: ""
+    final: outbound-fallback
+  dns:
+    servers:
+      - id: Local-DNS
+        tag: Local-DNS
+        address: https://223.5.5.5/dns-query
+        address_resolver: Local-DNS-Resolver
+        detour: outbound-direct
+        strategy: default
+        client_subnet: ""
+      - id: Local-DNS-Resolver
+        tag: Local-DNS-Resolver
+        address: 223.5.5.5
+        address_resolver: ""
+        detour: outbound-direct
+        strategy: default
+        client_subnet: ""
+      - id: Remote-DNS
+        tag: Remote-DNS
+        address: tls://8.8.8.8
+        address_resolver: Remote-DNS-Resolver
+        detour: outbound-select
+        strategy: default
+        client_subnet: ""
+      - id: Remote-DNS-Resolver
+        tag: Remote-DNS-Resolver
+        address: 8.8.8.8
+        address_resolver: ""
+        detour: outbound-select
+        strategy: default
+        client_subnet: ""
+    rules:
+      - id: ID_z7hh37ah
+        type: outbound
+        payload: any
+        action: route
+        server: Local-DNS
+      - id: ID_5h9hz5in
+        type: clash_mode
+        payload: direct
+        action: route
+        server: Local-DNS
+      - id: ID_dse7eny4
+        type: clash_mode
+        payload: global
+        action: route
+        server: Remote-DNS
+      - id: ID_dxpdtabd
+        type: rule_set
+        payload: GeoSite-CN
+        action: route
+        server: Local-DNS
+      - id: ID_8z4p9k7l
+        type: rule_set
+        payload: GeoLocation-!CN
+        action: route
+        server: Remote-DNS
+    fakeip:
+      enabled: false
+      inet4_range: 198.18.0.0/15
+      inet6_range: fc00::/18
+    disable_cache: false
+    disable_expire: false
+    independent_cache: false
+    client_subnet: ""
+    final: Remote-DNS
+    strategy: default
+  mixin:
+    priority: mixin
+    config: "{}"
+  script:
+    code: |-
+      const onGenerate = async (config) => {
+        return config
+      }

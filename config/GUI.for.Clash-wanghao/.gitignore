@@ -1,0 +1,7 @@
+.cache
+user.yaml
+mihomo/cache.db
+mihomo/rules
+mihomo/mihomo-darwin-amd64-compatible
+mihomo/mihomo-darwin-amd64*
+

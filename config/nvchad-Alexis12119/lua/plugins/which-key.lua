@@ -33,6 +33,7 @@ return {
         { "<leader>p", group = "Plugins", icon = "" },
         { "<leader>r", group = "Runner", icon = "" },
         { "<leader>t", group = "Terminal", icon = "" },
+        { "<leader>v", group = "Venv", icon = "" },
       },
     }
   end,

@@ -1,0 +1,98 @@
+- id: ID_zeiplvdp
+  name: ID_zeiplvdp
+  url: https://wanghao.trujunzhang.workers.dev/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?sb
+  upload: 7831082972048
+  download: 7831082972048
+  total: 26388279066624
+  expire: 4102329600000
+  updateTime: 1736172887033
+  type: Http
+  website: ""
+  path: data/subscribes/ID_zeiplvdp.json
+  include: ""
+  exclude: ""
+  includeProtocol: ""
+  excludeProtocol: direct|reject|selector|urltest|block|dns|shadowsocksr
+  proxyPrefix: ""
+  disabled: false
+  inSecure: false
+  userAgent: ""
+  proxies:
+    - id: ID_k8ahh51e
+      tag: 官方优选IP/1
+      type: vless
+    - id: ID_m181mb0b
+      tag: 官方优选IP/2
+      type: vless
+    - id: ID_z7tv7ryd
+      tag: 官方优选IP/3
+      type: vless
+    - id: ID_sdewqz49
+      tag: CF优选
+      type: vless
+    - id: ID_d9ipke9y
+      tag: CF优选 2
+      type: vless
+    - id: ID_ad81p6rr
+      tag: CF优选 3
+      type: vless
+    - id: ID_g0wkp0lw
+      tag: CF优选 4
+      type: vless
+    - id: ID_azy7made
+      tag: CF优选 5
+      type: vless
+    - id: ID_txsezfat
+      tag: CF优选 6
+      type: vless
+    - id: ID_lgd65koq
+      tag: CF优选 7
+      type: vless
+    - id: ID_botdon0b
+      tag: CF优选 8
+      type: vless
+    - id: ID_g6dd962v
+      tag: CF优选 9
+      type: vless
+    - id: ID_cieg3ga2
+      tag: CF优选 10
+      type: vless
+    - id: ID_vf2396ik
+      tag: CF优选 11
+      type: vless
+    - id: ID_6bnydr0n
+      tag: CF优选 12
+      type: vless
+    - id: ID_7vf3p9ly
+      tag: CF优选 13
+      type: vless
+    - id: ID_343r5161
+      tag: CF优选 14
+      type: vless
+    - id: ID_jggxe533
+      tag: CF优选 15
+      type: vless
+    - id: ID_31cri9c3
+      tag: CF优选 16
+      type: vless
+    - id: ID_jma3yi27
+      tag: CF优选 17
+      type: vless
+    - id: ID_859uixel
+      tag: CF优选 18
+      type: vless
+    - id: ID_gmx1ecx7
+      tag: CF优选 19
+      type: vless
+    - id: ID_ke6q7fp0
+      tag: CF优选 20
+      type: vless
+    - id: ID_77nrrurr
+      tag: CF优选 21
+      type: vless
+    - id: ID_04oo6rh2
+      tag: CF优选 22
+      type: vless
+    - id: ID_ckl7yfb3
+      tag: CF优选 23
+      type: vless

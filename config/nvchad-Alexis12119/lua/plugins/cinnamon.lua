@@ -2,7 +2,7 @@
 -- NOTE: Smooth scrolling with Cinnamon
 return {
   "declancm/cinnamon.nvim",
-  event = "BufReadPost",
+  event = "VeryLazy",
   opts = {
     keymaps = {
       basic = true, -- Enable the basic keymaps

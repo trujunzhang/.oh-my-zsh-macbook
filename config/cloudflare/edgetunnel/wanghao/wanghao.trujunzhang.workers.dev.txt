@@ -1,0 +1,53 @@
+################################################################
+Subscribe / sub 订阅地址, 点击链接自动 复制订阅链接 并 生成订阅二维码
+---------------------------------------------------------------
+自适应订阅地址:
+https://wanghao.trujunzhang.workers.dev/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+Base64订阅地址:
+https://wanghao.trujunzhang.workers.dev/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?b64
+clash订阅地址:
+https://wanghao.trujunzhang.workers.dev/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?clash
+singbox订阅地址:
+https://wanghao.trujunzhang.workers.dev/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?sb
+Scan me!
+实用订阅技巧∨
+---------------------------------------------------------------
+################################################################
+edgetunnel 配置信息
+---------------------------------------------------------------
+HOST: wanghao.trujunzhang.workers.dev
+UUID: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+FKID: 520f8466-17f8-238e-215e-b1fb4df14365
+UA: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+
+CFCDN（访问方式）: 无法访问, 需要您设置 proxyIP/PROXYIP ！！！
+
+您的订阅内容由 内置 addresses/ADD* 参数变量提供 编辑优选列表
+ADD（TLS优选域名&IP）:
+  162.159.152.104#官方优选IP/1
+  162.159.152.154#官方优选IP/2
+  162.159.153.169#官方优选IP/3
+ADDAPI（TLS优选域名&IP 的 API）:
+  https://raw.sithubusercontent.com/cmliu/WorkerVless2sub/refs/heads/main/CloudflareSpeedTest.csv?id=CF优选
+
+SUBAPI（订阅转换后端）: https://SUBAPI.fxxk.dedyn.io
+SUBCONFIG（订阅转换配置文件）: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini
+---------------------------------------------------------------
+################################################################
+v2ray
+---------------------------------------------------------------
+vless://b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d@visa.cn:80?encryption=none&security=&sni=wanghao.trujunzhang.workers.dev&fp=randomized&type=ws&host=wanghao.trujunzhang.workers.dev&path=%2F%3Fed%3D2560#edgetunnel
+---------------------------------------------------------------
+################################################################
+clash-meta
+---------------------------------------------------------------
+- {name: edgetunnel, server: visa.cn, port: 80, type: vless, uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d, tls: false, alpn: [h3], udp: false, sni: wanghao.trujunzhang.workers.dev, tfo: false, skip-cert-verify: true, servername: wanghao.trujunzhang.workers.dev, client-fingerprint: randomized, network: ws, ws-opts: {path: "/?ed=2560", headers: {wanghao.trujunzhang.workers.dev}}}
+---------------------------------------------------------------
+################################################################
+telegram 交流群 技术大佬~在线发牌!
+https://t.me/CMLiussss
+---------------------------------------------------------------
+github 项目地址 Star!Star!Star!!!
+https://github.com/cmliu/edgetunnel
+---------------------------------------------------------------
+################################################################

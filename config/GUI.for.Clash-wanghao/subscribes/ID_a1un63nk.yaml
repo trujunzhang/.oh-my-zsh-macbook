@@ -1,0 +1,391 @@
+proxies:
+  - name: 官方优选IP/1
+    server: 162.159.152.104
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: 官方优选IP/2
+    server: 162.159.152.154
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: 官方优选IP/3
+    server: 162.159.153.169
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选
+    server: 172.67.171.1
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 2
+    server: 104.16.12.247
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 3
+    server: 172.66.45.55
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 4
+    server: 172.67.165.216
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 5
+    server: 104.21.18.93
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 6
+    server: 172.67.195.73
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 7
+    server: 104.18.1.9
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 8
+    server: 172.67.194.48
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 9
+    server: 104.21.17.120
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 10
+    server: 104.18.12.110
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 11
+    server: 172.67.193.74
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 12
+    server: 104.17.236.50
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 13
+    server: 104.17.233.65
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 14
+    server: 104.17.25.48
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 15
+    server: 104.18.11.39
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 16
+    server: 104.18.8.223
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 17
+    server: 104.16.41.74
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 18
+    server: 104.17.31.225
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 19
+    server: 104.16.9.245
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 20
+    server: 104.18.186.238
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 21
+    server: 172.67.79.244
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 22
+    server: 172.67.162.242
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev
+  - name: CF优选 23
+    server: 172.67.199.26
+    port: 443
+    type: vless
+    uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+    tls: true
+    tfo: false
+    skip-cert-verify: true
+    servername: wanghao.trujunzhang.workers.dev
+    client-fingerprint: random
+    network: ws
+    ws-opts:
+      path: /?ed=2560
+      headers:
+        Host: wanghao.trujunzhang.workers.dev

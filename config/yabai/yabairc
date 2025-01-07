@@ -22,6 +22,7 @@ yabai -m space 10 --label macos
 # window rules
 # monitor #1
 yabai -m rule --add app="^Finder$" space=common
+yabai -m rule --add app="^Clash$" space=common
 yabai -m rule --add app="^Emaca$" space=media
 yabai -m rule --add app="^Elmedia Player$" space=media
 yabai -m rule --add app="^vlc$" space=media manage=off
@@ -36,17 +37,19 @@ yabai -m rule --add app="^kitty$" space=debug
 yabai -m rule --add app="^Terminal$" space=terminal manage=off
 
 #yabai -m rule --add app="^Simulator$" space=mobile
-yabai -m rule --add app="^Xcode$"     space=xcode
+yabai -m rule --add app="^Xcode$" space=xcode
 yabai -m rule --add app="^Simulator$" space=terminal
-yabai -m rule --add title="^Android Emulator - genymotion:5554$"    space=terminal
-yabai -m rule --add title="^qemu-system-aarch64$"    space=terminal
+yabai -m rule --add title="^Android Emulator - genymotion:5554$" space=terminal
+yabai -m rule --add title="^qemu-system-aarch64$" space=terminal
 
 # Jetbrains apps
 apps="^(IntelliJ IDEA|WebStorm|RubyMine|PyCharm|DataGrip)$"
-yabai -m rule --add app="${apps}" space=jetbrains  manage=off
+yabai -m rule --add app="${apps}" space=jetbrains manage=off
 yabai -m rule --add app="^Code$" space=jetbrains
 
 yabai -m rule --add app="^Google Chrome$" space=web
+
+yabai -m rule --add app="^Brave Nightly$" space=macos
 
 yabai -m rule --add app="^Mail$" space=mail
 yabai -m rule --add app="^Safari$" space=web
@@ -64,42 +67,42 @@ yabai -m signal --add event=window_destroyed active=yes action="yabai -m query -
 yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
 
 # specific space settings
-yabai -m config --space mail  layout stack
+yabai -m config --space mail layout stack
 yabai -m config --space games layout float
 
 # global settings
-yabai -m config                              \
-    external_bar                off:41:0     \
-    mouse_follows_focus         on           \
-    focus_follows_mouse         autoraise    \
-    window_placement            second_child \
-    window_topmost              off          \
-    window_shadow               off          \
-    window_animation_duration   0.25         \
-    window_opacity_duration     0.25         \
-    active_window_opacity       0.90         \
-    normal_window_opacity       0.50         \
-    window_opacity              on           \
-    insert_feedback_color       0xaad75f5f   \
-    active_window_border_color  0xBF775759   \
-    normal_window_border_color  0x7f353535   \
-    window_border_width         4            \
-    window_border_radius        12           \
-    window_border_blur          on           \
-    window_border_hidpi         on           \
-    window_border               on           \
-    split_ratio                 0.50         \
-    split_type                  auto         \
-    auto_balance                off          \
-    top_padding                 10           \
-    left_padding                10           \
-    right_padding               10           \
-    bottom_padding              10           \
-    window_gap                  10           \
-    layout                      bsp          \
-    mouse_modifier              fn           \
-    mouse_action1               move         \
-    mouse_action2               resize       \
-    mouse_drop_action           swap
+yabai -m config \
+    external_bar off:41:0 \
+    mouse_follows_focus on \
+    focus_follows_mouse autoraise \
+    window_placement second_child \
+    window_topmost off \
+    window_shadow off \
+    window_animation_duration 0.25 \
+    window_opacity_duration 0.25 \
+    active_window_opacity 0.90 \
+    normal_window_opacity 0.50 \
+    window_opacity on \
+    insert_feedback_color 0xaad75f5f \
+    active_window_border_color 0xBF775759 \
+    normal_window_border_color 0x7f353535 \
+    window_border_width 4 \
+    window_border_radius 12 \
+    window_border_blur on \
+    window_border_hidpi on \
+    window_border on \
+    split_ratio 0.50 \
+    split_type auto \
+    auto_balance off \
+    top_padding 10 \
+    left_padding 10 \
+    right_padding 10 \
+    bottom_padding 10 \
+    window_gap 10 \
+    layout bsp \
+    mouse_modifier fn \
+    mouse_action1 move \
+    mouse_action2 resize \
+    mouse_drop_action swap
 
 echo "yabai configuration loaded.."

@@ -82,7 +82,11 @@ autocmd("BufReadPost", {
 
 autocmd("TextYankPost", {
   callback = function()
-    require("vim.highlight").on_yank { higroup = "Visual", timeout = 200 }
+    if vim.version().minor >= 11 then
+      require("vim.hl").on_yank { higroup = "Visual", timeout = 200 }
+    else
+      require("vim.highlight").on_yank { higroup = "Visual", timeout = 200 }
+    end
   end,
   group = general,
   desc = "Highlight when yanking",
@@ -96,8 +100,10 @@ autocmd({ "BufEnter", "BufNewFile" }, {
   desc = "Disable Tabline",
 })
 
-autocmd("BufEnter", {
+autocmd("FileType", {
+  pattern = "*",
   callback = function()
+    -- Disable comment on new line
     vim.opt.formatoptions:remove { "c", "r", "o" }
   end,
   group = general,
@@ -105,7 +111,7 @@ autocmd("BufEnter", {
 })
 
 autocmd("FileType", {
-  pattern = { "c", "cpp", "py", "cs" },
+  pattern = { "c", "cpp", "py", "java", "cs" },
   callback = function()
     vim.bo.shiftwidth = 4
   end,

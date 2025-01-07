@@ -30,8 +30,10 @@ brew_apps=(
     "Notion" "notion" 'copy'
     "ClickUp" "clickup" 'ssd'
     "OneDrive" "onedrive" 'copy'
-    "Docker" "docker" "copy"
+    # "Docker" "docker" "copy"
+    "OrbStack" "orbstack" "copy"
     "FileZilla" "filezilla" 'ssd'
+    "Dash" "dash" 'copy'
     # "Hammerspoon"         "hammerspoon" 'copy'
     # "Grammarly Editor"    "grammarly" 'copy'
 
@@ -52,7 +54,9 @@ brew_apps=(
     # Design apps
     "Figma" "figma" 'ssd'
     "Zeplin" "zeplin" 'ssd'
-    "VLC" "VLC" 'ssd'
+    "VLC" "vlc" 'ssd'
+    "Elmedia Player" "ElmediaPlayer" "ssd"
+    "Kodi" "kodi" 'ssd'
 
     # chat apps
     "Skype" "skype" 'ssd'

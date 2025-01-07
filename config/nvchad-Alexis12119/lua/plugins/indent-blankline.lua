@@ -2,8 +2,8 @@
 -- NOTE: Show Indentlines
 return {
   "lukas-reineke/indent-blankline.nvim",
-  enabled = false,
-  event = "BufReadPost",
+  -- enabled = false,
+  event = "VeryLazy",
   opts = {
     scope = {
       show_start = false,
