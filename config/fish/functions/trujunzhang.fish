@@ -655,6 +655,7 @@ alias wclean_cache_homebrew="rm -rf $HOME/Library/Caches/Homebrew"
 alias wclean_cache_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
 alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"
 alias wclean_nvimCache="rm -rf $HOME/.cache/nvim && rm -rf $HOME/.local/state/nvim && rm -rf $HOME/.local/share/nvim"
+alias wclean_nvchad-cache_Starter="rm -rf $HOME/.cache/nvchad-Starter && rm -rf $HOME/.local/state/nvchad-Starter && rm -rf $HOME/.local/share/nvchad-Starter"
 alias wclean_nvchad-cache_wSedlacek="rm -rf $HOME/.cache/nvchad-wSedlacek && rm -rf $HOME/.local/state/nvchad-wSedlacek && rm -rf $HOME/.local/share/nvchad-wSedlacek"
 alias wclean_nvchad-cache_mgastonportillo="rm -rf $HOME/.cache/nvchad-mgastonportillo && rm -rf $HOME/.local/state/nvchad-mgastonportillo && rm -rf $HOME/.local/share/nvchad-mgastonportillo"
 alias wclean_nvchad-cache_Alexis12119="rm -rf $HOME/.cache/nvchad-Alexis12119 && rm -rf $HOME/.local/state/nvchad-Alexis12119 && rm -rf $HOME/.local/share/nvchad-Alexis12119"
@@ -788,6 +789,7 @@ alias m='NVIM_APPNAME=nvchad-mgastonportillo nvim' # NvChad
 alias a='NVIM_APPNAME=nvchad-Alexis12119 nvim' # NvChad
 alias n='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
 alias c='NVIM_APPNAME=nvim-craftzdog nvim' # Standard neovim
+alias s='NVIM_APPNAME=nvchad-Starter nvim' # Standard neovim
 
 alias uv='NVIM_APPNAME=nvchad-wSedlacek neovide' # NvChad
 alias un='NVIM_APPNAME=nvim-2kabhishek neovide' # Standard neovim

@@ -54,11 +54,11 @@ M.ui = {
     modules = require("core.statusline").modules,
   },
 
-  tabufline = {
-    enabled = true,
-    order = { "treeOffset", "buffers", "tabs", "btns" },
-    modules = require("core.tabufline").modules,
-  },
+  -- tabufline = {
+  -- enabled = true,
+  -- order = { "treeOffset", "buffers", "tabs", "btns" },
+  -- modules = require("core.tabufline").modules,
+  -- },
 }
 
 M.nvdash = {
@@ -137,9 +137,9 @@ M.mason = {
 M.lsp = { signature = false }
 
 M.base46 = {
-  theme = "mountain",
+  theme = "rosepine-dawn",
   transparency = false,
-  theme_toggle = { "mountain", "one_light" },
+  theme_toggle = { "rosepine-dawn", "one_light" },
   hl_override = highlights.override,
   hl_add = highlights.add,
   integrations = {
