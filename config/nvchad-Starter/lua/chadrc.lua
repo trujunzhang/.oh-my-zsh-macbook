@@ -14,4 +14,23 @@ M.base46 = {
   -- },
 }
 
+M.ui = {
+     -- lazyload it when there are 1+ buffers
+     tabufline = {
+       enabled = true,
+       lazyload = true,
+       order = { "treeOffset", "buffers", "tabs", "btns" },
+       modules = nil,
+       bufwidth = 21,
+     },
+
+    colorify = {
+      enabled = true,
+      mode = "virtual", -- fg, bg, virtual
+      virt_text = "󱓻 ",
+      highlight = { hex = true, lspvars = true },
+   },
+
+}
+
 return M

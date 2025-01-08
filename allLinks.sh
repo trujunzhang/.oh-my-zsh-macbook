@@ -359,12 +359,12 @@ function link_symlink {
     fileLink "npm(netrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm/netrc" "$HOME/.netrc" "delete"
 
     # GUI.for.SingBox
-    # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
-    directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-wanghao" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
+    directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
+    # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-wanghao" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
 
     # GUI.for.clash
-    # directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
-    directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-wanghao" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
+    directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
+    # directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-wanghao" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
 }
 
 # function link_cocoapods {
