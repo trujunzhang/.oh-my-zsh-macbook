@@ -10,6 +10,7 @@ local opts = { noremap = true, silent = true }
 map("n", "<leader>b", "<nop>", { desc = "buffer new" })
 map("n", "<leader>n", "<nop>", { desc = "toggle line number" })
 map("n", "<leader>x", "<nop>", { desc = "buffer close" })
+map("n", "q", "<nop>", { desc = "start recording" })
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jj", "<ESC>")
@@ -39,6 +40,11 @@ map("n", "<leader>bx", function()  require("nvchad.tabufline").close_buffer() en
 map("n", "<leader>bo", function() require("nvchad.tabufline").closeAllBufs(false) end, { desc = "buffer close others" })
 map("n", "<leader>bl", function() require("nvchad.tabufline").closeBufs_at_direction("left") end, { desc = "buffer close left" })
 map("n", "<leader>br", function() require("nvchad.tabufline").closeBufs_at_direction("right") end, { desc = "buffer close right" })
+for i = 1, 9, 1 do
+   vim.keymap.set("n", string.format("<leader>b%s", i), function()
+     vim.api.nvim_set_current_buf(vim.t.bufs[i])
+   end,{ desc = string.format(" switch buffer %s",i), silent = true })
+end
 
 -- Move to line beginning and end
 map({ "n", "v", "x" }, "gl", "$", { desc = "End of line" })

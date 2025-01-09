@@ -291,6 +291,13 @@ local mappings = {
     nowait = true,
     remap = false,
   },
+  {
+    "<leader>rw",
+    "<cmd>lua require('spectre').open_visual({select_word=true})<cr>",
+    desc = "Replace Word",
+    nowait = true,
+    remap = false,
+  },
   { "<leader>rS", "<cmd>lua require('spectre').open()<cr>", desc = "Replace", nowait = true, remap = false },
   {
     "<leader>rb",
@@ -346,13 +353,6 @@ local mappings = {
     "<leader>rv",
     "<cmd>lua require('refactoring').refactor('Extract Variable')<CR>",
     desc = "Extract Variable",
-    nowait = true,
-    remap = false,
-  },
-  {
-    "<leader>rw",
-    "<cmd>lua require('spectre').open_visual({select_word=true})<cr>",
-    desc = "Replace Word",
     nowait = true,
     remap = false,
   },
