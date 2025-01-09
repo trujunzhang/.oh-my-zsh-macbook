@@ -787,7 +787,7 @@ alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
 alias v='NVIM_APPNAME=nvchad-wSedlacek nvim' # NvChad
 alias m='NVIM_APPNAME=nvchad-mgastonportillo nvim' # NvChad
 alias a='NVIM_APPNAME=nvchad-Alexis12119 nvim' # NvChad
-alias n='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
+alias nv='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
 alias c='NVIM_APPNAME=nvim-craftzdog nvim' # Standard neovim
 alias s='NVIM_APPNAME=nvchad-Starter nvim' # Standard neovim
 
