@@ -7,10 +7,9 @@ local utils = require "lib.utils"
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
--- disabled nvchad default keymaps
--- vim.keymap.set("n", key, "<nop>")
-map("n", "<leader>b", "<nop>", { desc = "buffer new" })
-map("n", "<leader>n", "<nop>", { desc = "toggle line number" })
+-- disable nvchad default keymaps
+-- map("n", "<leader>b", "<nop>", { desc = "buffer new" })
+-- map("n", "<leader>n", "<nop>", { desc = "toggle line number" })
 map("n", "<leader>x", "<nop>", { desc = "buffer close" })
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
