@@ -4038,11 +4038,8 @@ rules:
   - DOMAIN-SUFFIX,ip138.com,🚀 节点选择
   - DOMAIN-SUFFIX,linkedin.com,🚀 节点选择
   - DOMAIN-SUFFIX,myteamspeak.com,🚀 节点选择
-  - DOMAIN-KEYWORD,clickup,Ⓜ️ 微软服务
-  - DOMAIN-SUFFIX,upwork.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,torrentmac.net,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,tracker,Ⓜ️ 微软服务
-  - DOMAIN-KEYWORD,notion,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,ping.pe,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
   - DOMAIN-SUFFIX,teddysun.com,🚀 节点选择
@@ -5284,5 +5281,9 @@ rules:
   - IP-CIDR,101.198.128.0/18,🎯 全球直连,no-resolve
   - IP-CIDR,101.198.192.0/19,🎯 全球直连,no-resolve
   - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
+  - DOMAIN-KEYWORD,clickup,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,upwork.com,Ⓜ️ 微软服务
+  - DOMAIN-KEYWORD,notion,Ⓜ️ 微软服务
+  - DOMAIN-KEYWORD,codeium,Ⓜ️ 微软服务
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
