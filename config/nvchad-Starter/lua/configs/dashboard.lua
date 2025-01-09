@@ -21,7 +21,7 @@ dashboard.setup({
   config = {
     week_header = {
       enable = true,
-      append = { "", icons.ui.Circle .. " nvim2K: Learn, Make, Explore! " .. icons.ui.Circle },
+      append = { "", icons.ui.Circle .. " nvchad <Starter>: Learn, Make, Explore! " .. icons.ui.Circle },
     },
     packages = { enable = true },
     project = { enable = true, limit = 4 },
