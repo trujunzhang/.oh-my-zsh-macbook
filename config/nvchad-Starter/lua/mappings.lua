@@ -63,8 +63,6 @@ map("n", "gm", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
 map("n", "gt", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", opts)
 
-map('n', "<leader>yf", "<cmd>%y+<cr>", { desc = "Copy Whole File", silent = true })
-
 -- Close window
 vim.keymap.set("n", "<leader>x", function()
     if vim.bo.buftype == "terminal" then
