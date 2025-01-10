@@ -1,5 +1,7 @@
 require "nvchad.mappings"
 
+local cwd = vim.fn.stdpath "config" .. "/"
+local config_dir = { cwd }
 local utils = require "lib.utils"
 
 -- add yours here
@@ -8,8 +10,8 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- disable nvchad default keymaps
--- map("n", "<leader>b", "<nop>", { desc = "buffer new" })
--- map("n", "<leader>n", "<nop>", { desc = "toggle line number" })
+map("n", "<leader>b", "<nop>", { desc = "buffer new" })
+map("n", "<leader>n", "<nop>", { desc = "toggle line number" })
 map("n", "<leader>x", "<nop>", { desc = "buffer close" })
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
