@@ -160,6 +160,9 @@ map(
   { desc = "_ Mum and dad were having fun" }
 )
 
+-- Quit
+map("n", "<leader>q", "<cmd>qa!<cr>", { desc = "General | Quit", silent = true })
+
 map("n", "<leader>rf", function()
   vim.cmd [[%s/[a-zA-Z]/\=nr2char((char2nr(submatch(0)) - (char2nr(submatch(0)) >= 97 ? 97 : 65) + 13) % 26 + (char2nr(submatch(0)) >= 97 ? 97 : 65))/g]]
 end, { desc = "_ Mum and dad were having fun" })

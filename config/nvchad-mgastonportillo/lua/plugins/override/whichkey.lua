@@ -9,6 +9,10 @@ return {
     end, { desc = "WhichKey query lookup" })
   end,
   opts = {
+    delay = function()
+      return 0
+    end,
+    preset = "modern",
     icons = {
       rules = false,
     },
