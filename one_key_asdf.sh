@@ -24,7 +24,8 @@ java_global="zulu-17.52.19"
 
 if [ ! -d ~/.asdf ]; then
     # https://github.com/asdf-vm/asdf-plugins/blob/master/plugins/java
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
+    # git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.15.0
 fi
 
 

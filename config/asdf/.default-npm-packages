@@ -18,6 +18,5 @@
     monia-cli
     firebase-tools
 
-    netlify-cli
     vercel
     sanity@latest
