@@ -15,6 +15,9 @@
 
     neovim
 
+    tslint
+    typescript-formatter
+
     monia-cli
     firebase-tools
 

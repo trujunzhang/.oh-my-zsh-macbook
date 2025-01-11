@@ -77,6 +77,7 @@ let inherit (lib) mkIf elem; in
       lua-language-server
       pkg-config
       fzf
+      cocoapods
       act
       # docker
       # docker-compose

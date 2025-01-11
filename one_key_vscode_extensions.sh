@@ -52,10 +52,10 @@ vsExtensionsArray=(
     # =================================
     # AI (Chatgpt,CodeWhisperer)
     # =================================
-    "easycodeai.chatgpt-gpt4-gpt3-vscode"
-    "amazonwebservices.aws-toolkit-vscode"
+    # "easycodeai.chatgpt-gpt4-gpt3-vscode"
+    # "amazonwebservices.aws-toolkit-vscode"
     # "github.copilot"
-    "codeium.codeium"
+    # "codeium.codeium"
     # https://www.codium.ai
     # "Codium.codium"
 
@@ -76,7 +76,7 @@ vsExtensionsArray=(
     # https://itnext.io/debug-your-tests-in-typescript-with-visual-studio-code-911a4cada9cd
     # "kavod-io.vscode-jest-test-adapter"
     "izdt.javascript-unit-test-snippet"
-    "orta.vscode-jest"
+    # "orta.vscode-jest"
 
     # mocha(test)
     # "hbenl.vscode-mocha-test-adapter"
@@ -90,7 +90,7 @@ vsExtensionsArray=(
     # =================================
     # Design
     # =================================
-    "figma.figma-vscode-extension"
+    # "figma.figma-vscode-extension"
 
     # =================================
     # Javascript
