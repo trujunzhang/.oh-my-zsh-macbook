@@ -21,6 +21,7 @@ brew_apps=(
     "Obsidian" "obsidian" 'copy'
     "Alacritty" "alacritty" 'copy'
     "Wezterm" "wezterm" 'copy'
+    "Ghostty" "ghostty" 'copy'
     "Neovide" "Neovide" 'copy'
     "Sublime Text" "SublimeText" "ssd"
 
