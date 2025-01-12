@@ -14,6 +14,7 @@ M.base46 = {
     theme = "bearded-arc", ---@diagnostic disable-line
 
     integrations = {
+        "lspsaga",
         "blankline",
         "cmp",
         "codeactionmenu",

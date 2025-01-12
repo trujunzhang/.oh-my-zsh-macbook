@@ -310,6 +310,10 @@ run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
 if.app-id = 'org.qbittorrent.qBittorrent'
+run = ['move-node-to-workspace r']
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
 run = ['move-node-to-workspace T']
 
 [[on-window-detected]]

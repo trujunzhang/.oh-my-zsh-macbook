@@ -44,11 +44,13 @@ return {
                     "bashls",
                     "yamlls",
                     "jsonls",
+                    "eslint",
                     "lua_ls",
                     "rust_analyzer",
                     'pyright'
                 },
             }
+
 
             local disabled_servers = {
                 "jdtls",
@@ -76,6 +78,15 @@ return {
                     end
 
                     require("lspconfig")[server_name].setup(opts)
+                end,
+            }
+
+            require 'lspconfig'.eslint.setup {
+                on_attach = function(client, bufnr)
+                    vim.api.nvim_create_autocmd("BufWritePre", {
+                        buffer = bufnr,
+                        command = "EslintFixAll",
+                    })
                 end,
             }
         end,
