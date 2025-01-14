@@ -297,6 +297,10 @@ if.app-id = 'com.skype.skype'
 run = 'move-node-to-workspace k'
 
 [[on-window-detected]]
+if.app-id = 'org.xbmc.kodi'
+run = 'move-node-to-workspace L'
+
+[[on-window-detected]]
 if.app-id = 'org.videolan.vlc'
 run = 'move-node-to-workspace L'
 
