@@ -324,17 +324,18 @@ alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --a
 
 # xcode
 alias rosetta_install='softwareupdate --install-rosetta'
-alias xcodeselect='sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer'
+alias xcode_select='sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer'
 alias xcode_download_ios='xcodebuild -downloadPlatform iOS'
-alias iosdevices='xcrun simctl list devices --json'
-alias iosopen='open -a Simulator'
 
-alias ioskill='killall "Simulator"'
-alias ioslist='xcrun simctl list devices available'
-alias iosiphone15pro='open -a Simulator --args -CurrentDeviceUDID 72CFAFB2-E1BA-4C0D-B865-2369CCA1444E iPhone16promax'
-alias iosiphone15promaxabc='ioskill && sleep 3 && open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone16promax'
-alias iosiphone15promax='open -a Simulator --args -CurrentDeviceUDID D3571A3E-61B5-4190-A005-8C3F1F869D8B iPhone16promax'
-alias iosiphone3se='open -a Simulator --args -CurrentDeviceUDID 9AF53831-AF2E-4F84-AC62-91D4FB2A0E76 iPhone3se'
+alias ios_devices='xcrun simctl list devices --json'
+alias ios_open_simulator='open -a Simulator'
+
+alias ios_kill='killall "Simulator"'
+alias ios_list='xcrun simctl list devices available'
+alias ios_simctl='xcrun simctl list devices | grep "iPhone"'
+
+alias iosiphone16plus="open -a Simulator --args -CurrentDeviceUDID  $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')"
+
 alias androidopen='$ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion'
 
 # Flutter
