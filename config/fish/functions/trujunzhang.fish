@@ -330,11 +330,26 @@ alias xcode_download_ios='xcodebuild -downloadPlatform iOS'
 alias ios_devices='xcrun simctl list devices --json'
 alias ios_open_simulator='open -a Simulator'
 
+alias ios_shutdown_all="xcrun simctl shutdown all"
 alias ios_kill='killall "Simulator"'
 alias ios_list='xcrun simctl list devices available'
 alias ios_simctl='xcrun simctl list devices | grep "iPhone"'
 
-alias iosiphone16plus="open -a Simulator --args -CurrentDeviceUDID  $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')"
+alias iosiphone16plus="open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')"
+
+#alias ios_new_ieatta_iphone16plus="xcrun simctl launch $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})') 'New Ieatta Dev'"
+
+#open -a Simulator && xcrun simctl boot 'iPhone 16 Plus'
+function ios_new_ieatta_iphone16plus
+  set bundle 'com.ieatta.track.dev'
+  set UUID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})') 
+  echo "iphone 16 Plus<UUID>: $UUID"
+
+  xcrun simctl shutdown all
+  open -a Simulator --args -CurrentDeviceUDID $UUID
+  sleep 10
+  xcrun simctl launch $UUID $bundle
+end
 
 alias androidopen='$ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion'
 
