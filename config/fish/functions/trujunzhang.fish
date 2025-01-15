@@ -351,6 +351,16 @@ function ios_new_ieatta_iphone16plus
   xcrun simctl launch $UUID $bundle
 end
 
+#const mainActivity = "com.ieatta.track.MainActivity";
+#const packageName = "com.ieatta.track.dev";
+alias android_new_ieatta_genymotion="node $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/run_android_simulator.js --mainActivity 'com.ieatta.track.MainActivity' --packageName 'com.ieatta.track.dev'"
+
+function android_new_ieatta_genymotion_error
+    $ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion
+    sleep 20
+    adb shell am start -n com.ieatta.track.dev/com.ieatta.track.dev.MainActivity
+end
+
 alias androidopen='$ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion'
 
 # Flutter
