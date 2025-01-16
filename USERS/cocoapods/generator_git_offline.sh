@@ -25,10 +25,10 @@ echo "endtag = ${END_TAG}"
 # ready
 # =========================================================
 function initialFold {
-    rm -rf $OUT_GIT_FOLD
+    # rm -rf $OUT_GIT_FOLD
     mkdir -p $OUT_GIT_FOLD
-    rm -f $GITHUB_ZIP_FILE
-    rm -f $END_TAG
+    # rm -f $GITHUB_ZIP_FILE
+    # rm -f $END_TAG
 }
 
 # =========================================================
@@ -87,12 +87,16 @@ function clone_github {
 
         echo ""
 
-        # first of all, clone it to the dest fold
-        git clone ${gitUrl} ${destFold} --depth=1
+        if [ ! -d "${destFold}" ]; then
+            # first of all, clone it to the dest fold
+            git clone ${gitUrl} ${destFold} --depth=1
 
-        # then, fetch tags
-        cd ${destFold}
-        git fetch --tags
+            # then, fetch tags
+            if [  -d "${destFold}" ]; then
+                cd ${destFold}
+                git fetch --tags
+            fi
+        fi
 
         echo ""
     done
@@ -122,10 +126,10 @@ function check_gits_length {
     gits_two_array=2
     gits_length=$((gits_total_length / gits_two_array))
 
-    length=0
+    local_folder_length=0
     ARRAY=()
     for i in $(ls -d ${OUT_GIT_FOLD}/*/); do
-        ((length = length + 1))
+        ((local_folder_length= local_folder_length + 1))
         filename=$(basename -- "$i")
         # echo ${filename%%/};
         ARRAY+=(${filename})
@@ -152,14 +156,20 @@ function check_gits_length {
     done
 
     echo length of git urls: $gits_length
-    echo length folder of $OUT_GIT_FOLD: $length
+    echo length folder of $OUT_GIT_FOLD: $local_folder_length
 }
 
 if [ -d "${WORK_DIR}" ]; then
     initialFold
+    
     clone_github
-    zip_github
     check_gits_length
+
+    if [ "$gits_length" = "$local_folder_length" ]; then
+        if [ ! -f "${GITHUB_ZIP_FILE}" ]; then
+            zip_github
+        fi
+    fi
 
     # =========================================================
     # end

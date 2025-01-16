@@ -16,7 +16,8 @@ source ./bash/tools.sh
 node_global="21.7.2"
 node_old="16.16.0"
 node_for_nvim="18.0.0"
-node_for_old_expensify="20.15.1"
+# node_for_old_expensify="20.15.1"
+node_for_old_expensify="20.18.1"
 
 python_global="3.12.0"
 

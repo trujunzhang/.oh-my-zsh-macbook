@@ -2484,13 +2484,6 @@ rules:
   - DOMAIN-SUFFIX,click.tianya.cn,🍃 应用净化
   - DOMAIN-SUFFIX,click.tianyaui.cn,🍃 应用净化
   - DOMAIN-SUFFIX,client-api.ele.me,🍃 应用净化
-  - DOMAIN-SUFFIX,collector.githubapp.com,🍃 应用净化
-  - DOMAIN-KEYWORD,github,🚀 节点选择
-  - DOMAIN-SUFFIX,github.com,📢 谷歌FCM
-  - DOMAIN-SUFFIX,github.io,📢 谷歌FCM
-  - DOMAIN-SUFFIX,githubapp.com,🚀 节点选择
-  - DOMAIN-SUFFIX,githubassets.com,🚀 节点选择
-  - DOMAIN-SUFFIX,githubusercontent.com,🚀 节点选择
   - DOMAIN-SUFFIX,counter.csdn.net,🍃 应用净化
   - DOMAIN-SUFFIX,d0.xcar.com.cn,🍃 应用净化
   - DOMAIN-SUFFIX,de.soquair.com,🍃 应用净化
@@ -4212,7 +4205,6 @@ rules:
   - DOMAIN-SUFFIX,gitlab.com,🚀 节点选择
   - DOMAIN-SUFFIX,gitlab.io,🚀 节点选择
   - DOMAIN-SUFFIX,jitpack.io,🚀 节点选择
-  - DOMAIN-SUFFIX,maven.org,🚀 节点选择
   - DOMAIN-SUFFIX,mvnrepository.com,🚀 节点选择
   - DOMAIN-SUFFIX,quay.io,🚀 节点选择
   - DOMAIN-SUFFIX,reddit.com,🚀 节点选择
@@ -5285,5 +5277,17 @@ rules:
   - DOMAIN-SUFFIX,upwork.com,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,notion,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,codeium,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,jsdelivr.net,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,cocoapods.org,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,mapbox.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,maven.org,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,vercel.app,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,collector.githubapp.com,Ⓜ️ 微软服务
+  - DOMAIN-KEYWORD,github,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,github.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,github.io,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,githubapp.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,githubassets.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,githubusercontent.com,Ⓜ️ 微软服务
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼

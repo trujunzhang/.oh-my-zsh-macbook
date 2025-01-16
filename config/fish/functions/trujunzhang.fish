@@ -246,8 +246,9 @@ alias gitbs='gitbook serve'
 alias podi='pod install --verbose'
 
 # git.plugin
-alias gitsubupdate="git submodule update --remote"
-alias gitpullsubmodule="git pull --recurse-submodules"
+alias git_sub_update="git submodule update --remote"
+alias git_pull_submodule="git pull --recurse-submodules"
+alias git_pull_with_unstaged="git pull --rebase --autostash"
 
 # ios-sim.plugin
 # npm install ios-sim -g
