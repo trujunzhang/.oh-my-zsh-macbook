@@ -67,6 +67,12 @@ set -g -x ANDROID_USER_HOME "$HOME/Library/Android/sdk"
 set -g -x REACT_NATIVE_DOWNLOADS_DIR "$HOME/.local/RN_DOWNLOADS"
 set -g -x ACT_BINARY "/etc/profiles/per-user/djzhang/bin/act"
 
+# export MAVEN_OPTS="-Dmaven.repo.local=/path/to/repository"
+set -g -x MAVEN_OPTS "-Dmaven.repo.local=$HOME/.m2/repository"
+
+# Deepseek apikey
+set -g -x OPENAI_API_KEY "sk-52a473fee60f456c8952b11aa59cef81"
+
 if test "$(uname -m)" = 'arm64'
     fish_add_path "$HOME/.local/bin/helix-aarch64-macos"
 end

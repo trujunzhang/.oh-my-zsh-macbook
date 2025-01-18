@@ -4214,8 +4214,6 @@ rules:
   - DOMAIN-SUFFIX,spring.io,🚀 节点选择
   - DOMAIN-SUFFIX,spring.net,🚀 节点选择
   - DOMAIN-SUFFIX,nixos.org,📢 谷歌FCM
-  - DOMAIN-SUFFIX,gradle.org,📢 谷歌FCM
-  - DOMAIN-SUFFIX,stackoverflow.com,🎯 全球直连
   - DOMAIN-SUFFIX,medium.com,🎯 全球直连
   - DOMAIN,d1q6f0aelx0por.cloudfront.net,🚀 节点选择
   - DOMAIN,d2wy8f7a9ursnm.cloudfront.net,🚀 节点选择
@@ -5281,7 +5279,11 @@ rules:
   - DOMAIN-SUFFIX,cocoapods.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,mapbox.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,maven.org,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,gradle.org,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,jitpack.io,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,apache.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,vercel.app,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,stackoverflow.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,collector.githubapp.com,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,github,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.com,Ⓜ️ 微软服务
