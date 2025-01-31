@@ -821,6 +821,7 @@ alias s='NVIM_APPNAME=nvchad-Starter nvim' # Standard neovim
 alias uv='NVIM_APPNAME=nvchad-wSedlacek neovide' # NvChad
 alias un='NVIM_APPNAME=nvim-2kabhishek neovide' # Standard neovim
 alias uc='NVIM_APPNAME=nvim-craftzdog neovide' # Standard neovim
+alias us='NVIM_APPNAME=nvchad-Starter neovide' # Standard neovim
 
 # Emacs
 # alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'

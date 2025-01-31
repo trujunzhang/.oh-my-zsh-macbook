@@ -301,6 +301,10 @@ if.app-id = 'org.xbmc.kodi'
 run = 'move-node-to-workspace L'
 
 [[on-window-detected]]
+if.app-id = 'com.firecore.infuse'
+run = 'move-node-to-workspace L'
+
+[[on-window-detected]]
 if.app-id = 'org.videolan.vlc'
 run = 'move-node-to-workspace L'
 
@@ -330,7 +334,7 @@ run = 'move-node-to-workspace P'
 
 [[on-window-detected]]
 if.app-id = 'com.neovide.neovide'
-run = 'move-node-to-workspace N'
+run = 'move-node-to-workspace Z'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'

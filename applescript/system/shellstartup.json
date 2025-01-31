@@ -26,8 +26,8 @@
   {
     "type": "application",
     "name": "clash for arm",
-    "application": "ClashX Pro",
-    "enable": "0"
+    "application": "ClashX Pro.app",
+    "enable": "1"
   },
   {
     "type": "application",
@@ -39,7 +39,7 @@
     "type": "application",
     "name": "gui for singbox",
     "application": "GUI.for.SingBox.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
@@ -75,7 +75,7 @@
     "type": "application",
     "name": "WezTerm",
     "application": "WezTerm",
-    "enable": "0"
+    "enable": "1"
   },
   {
     "type": "application",

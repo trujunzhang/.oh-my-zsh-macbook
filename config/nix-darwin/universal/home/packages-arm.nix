@@ -9,6 +9,7 @@ let inherit (lib) mkIf elem; in
       ninja
       fastlane
       ruby_3_3
+      ccache
       # nginx
       # vscode
       # neovim

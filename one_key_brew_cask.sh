@@ -11,65 +11,68 @@ source ./bash/tools.sh
 
 brew_apps=(
     # Editor
-    "Visual Studio Code" "visual-studio-code" "copy"
-    # "Emacs"               "emacs" "copy"
-    # "Sourcetree"          "sourcetree" 'ssd'
-    # "Insomnia"            "insomnia" 'ssd'
+    "Visual Studio Code" "visual-studio-code" "copy" "backup"
+    # "Emacs"               "emacs" "copy"  "backup"
+    # "Sourcetree"          "sourcetree" 'ssd' "backup"
+    # "Insomnia"            "insomnia" 'ssd' "backup"
     # https://fbflipper.com/
-    # "Flipper"             "flipper" 'copy'
-    # "Realm Studio"        "mongodb-realm-studio" 'copy'
-    "Obsidian" "obsidian" 'copy'
-    "Alacritty" "alacritty" 'copy'
-    "Wezterm" "wezterm" 'copy'
-    "Ghostty" "ghostty" 'copy'
-    "Neovide" "Neovide" 'copy'
-    "Sublime Text" "SublimeText" "ssd"
+    # "Flipper"             "flipper" 'copy' 'backup'
+    # "Realm Studio"        "mongodb-realm-studio" 'copy' 'backup'
+    "Obsidian" "obsidian" 'copy' 'backup'
+    "Alacritty" "alacritty" 'copy' 'backup'
+    "Wezterm" "wezterm" 'copy'  'backup'
+    "Ghostty" "ghostty" 'copy' 'backup'
+    "Neovide" "Neovide" 'copy' 'backup'
+    "Sublime Text" "SublimeText" "ssd" 'no-bak'
 
     # System tools
-    "Raycast" "raycast" 'copy'
-    "SpaceLauncher" "spacelauncher" 'copy'
-    "Notion" "notion" 'copy'
-    "ClickUp" "clickup" 'ssd'
-    "OneDrive" "onedrive" 'copy'
-    # "Docker" "docker" "copy"
-    "OrbStack" "orbstack" "copy"
-    "FileZilla" "filezilla" 'ssd'
-    "Dash" "dash" 'copy'
-    # "Hammerspoon"         "hammerspoon" 'copy'
-    # "Grammarly Editor"    "grammarly" 'copy'
+    "Raycast" "raycast" 'copy' 'backup'
+    "SpaceLauncher" "spacelauncher" 'copy' 'backup'
+    "Notion" "notion" 'copy' 'backup'
+    "ClickUp" "clickup" 'ssd' 'backup'
+    # "OneDrive" "onedrive" 'copy' 'no-bak'
+    # "Docker" "docker" "copy" 'no-bak'
+    "OrbStack" "orbstack" "copy" 'no-bak'
+    "FileZilla" "filezilla" 'ssd' 'no-bak'
+    "Dash" "dash" 'copy' 'no-bak'
+    "WebStorm" 'webstorm' 'ssd' 'no-bak'
+    "PyCharm" "pycharm" 'ssd' 'no-bak'
+    # "Hammerspoon"         "hammerspoon" 'copy' 'no-bak'
+    # "Grammarly Editor"    "grammarly" 'copy' 'no-bak'
 
     # Web browser
-    "Google Chrome" "google-chrome" 'ssd'
-    "Vivaldi" "vivaldi" 'ssd'
-    "Opera" "opera" 'ssd'
-    "Firefox" "firefox" 'ssd'
-    "Brave Browser" "brave-browser" 'ssd'
-    "Brave Browser Beta" "brave-browser-bata" 'ssd'
-    "Brave Browser Nightly" "brave-browser-nightly" 'copy'
+    "Google Chrome" "google-chrome" 'ssd' 'backup'
+    "Vivaldi" "vivaldi" 'ssd' 'backup'
+    "Opera" "opera" 'ssd'    'backup'
+    "Firefox" "firefox" 'ssd' 'backup'
+    "Brave Browser" "brave-browser" 'ssd' 'backup'
+    "Brave Browser Beta" "brave-browser-bata" 'ssd' 'backup'
+    "Brave Browser Nightly" "brave-browser-nightly" 'copy' 'backup'
 
     # =========================================
     # required password
     # =========================================
-    "Microsoft Edge" "microsoft-edge" 'ssd'
+    "Microsoft Edge" "microsoft-edge" 'ssd' 'backup'
 
     # Design apps
-    "Figma" "figma" 'ssd'
-    "Zeplin" "zeplin" 'ssd'
-    "VLC" "vlc" 'ssd'
-    "Elmedia Player" "ElmediaPlayer" "ssd"
-    "Kodi" "kodi" 'ssd'
+    "Figma" "figma" 'ssd' 'backup'
+    "Zeplin" "zeplin" 'ssd' 'backup'
+    "VLC" "vlc" 'ssd' 'no-bak'
+    "Elmedia Player" "ElmediaPlayer" "ssd" 'no-bak'
+    "Kodi" "kodi" 'ssd' 'no-bak'
+    "Infuse" "infuse" 'ssd' 'no-bak'
 
     # chat apps
-    "Skype" "skype" 'ssd'
-    # "WeChat"              "wechat" "ssd"
-    # "QQ"                  "qq" 'ssd'
+    "Skype" "skype" 'ssd' 'backup'
+    # "WeChat"              "wechat" "ssd" 'backup'
+    # "QQ"                  "qq" 'ssd' 'backup'
 )
 brew_apps_arm=(
-    "AeroSpace" "nikitabobko/tap/aerospace" "copy"
+    "AeroSpace" "nikitabobko/tap/aerospace" "copy" 'no-bak'
     # "Authy Desktop"       "authy" 'copy'
-    "BaiduNetdisk_mac" "baidunetdisk" 'ssd'
+    "BaiduNetdisk_mac" "baidunetdisk" 'ssd' 'no-bak'
 
-    "Arc" "arc" 'ssd'
+    # "Arc" "arc" 'ssd'
     # "ResponsivelyApp"     "responsively" 'copy'
 
     # "Docker" "docker" 'copy'
@@ -78,7 +81,7 @@ brew_apps_arm=(
 brew_apps_x86=(
     # macOS tool to limit maximum charging percentage
     # https://github.com/davidwernhart/AlDente-Charge-Limiter
-    "AlDente" "aldente" 'copy'
+    "AlDente" "aldente" 'copy' 'backup'
 )
 
 DEFAULTVALUE="install"
@@ -186,6 +189,7 @@ function install_brew_app {
     appName="${name}.app"
     app=$2
     shouldCopyInApplications=$3
+    needBackup=$4
 
     if [ "$Params" = "link" ]; then
         if [ ! -d "/Applications/${appName}" ]; then
@@ -194,13 +198,15 @@ function install_brew_app {
             fi
         fi
     elif [ "$Params" = "backup" ]; then
-        if [ -d "/Applications/${appName}" ]; then
-            if [ "$shouldCopyInApplications" = "copy" ]; then
-                backup_apps_from_Applications "${name}"
-            fi
+        if [ "$needBackup" = "backup" ]; then
+            if [ -d "/Applications/${appName}" ]; then
+                if [ "$shouldCopyInApplications" = "copy" ]; then
+                    backup_apps_from_Applications "${name}"
+                fi
 
-            if [ "$shouldCopyInApplications" = "ssd" ]; then
-                backup_apps_in_backup_folder "${name}"
+                if [ "$shouldCopyInApplications" = "ssd" ]; then
+                    backup_apps_in_backup_folder "${name}"
+                fi
             fi
         fi
     elif [ "$Params" = "restore" ]; then
@@ -232,19 +238,21 @@ function install_brew_app {
 
 function install_apps {
     apps=("$@")
-    for ((i = 0; i < ${#apps[@]}; i = i + 3)); do
+    for ((i = 0; i < ${#apps[@]}; i = i + 4)); do
         name="${apps[$i + 0]}"
         app="${apps[$i + 1]}"
         shouldCopyInApplications="${apps[$i + 2]}"
+        needBackup="${apps[$i + 3]}"
 
         info ""
         info "element $i is ${name}"
         info "element $i is ${app}"
         info "element $i is ${shouldCopyInApplications}"
+        info "element $i is ${needBackup}"
 
         info ""
         if [ ! -L "/Applications/${name}" ]; then
-            install_brew_app "${name}" "${app}" "${shouldCopyInApplications}"
+            install_brew_app "${name}" "${app}" "${shouldCopyInApplications}" "${needBackup}"
         fi
         info ""
     done

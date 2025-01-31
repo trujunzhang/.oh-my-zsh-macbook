@@ -5283,8 +5283,10 @@ rules:
   - DOMAIN-SUFFIX,jitpack.io,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,apache.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,vercel.app,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,rubygems.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,stackoverflow.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,collector.githubapp.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,bitbucket.org,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,github,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.io,Ⓜ️ 微软服务
