@@ -17,7 +17,7 @@ brew_apps=(
     # "Insomnia"            "insomnia" 'ssd' "backup"
     # https://fbflipper.com/
     # "Flipper"             "flipper" 'copy' 'backup'
-    # "Realm Studio"        "mongodb-realm-studio" 'copy' 'backup'
+    "Realm Studio"        "mongodb-realm-studio" 'ssd' 'no-bak'
     "Obsidian" "obsidian" 'copy' 'backup'
     "Alacritty" "alacritty" 'copy' 'backup'
     "Wezterm" "wezterm" 'copy'  'backup'

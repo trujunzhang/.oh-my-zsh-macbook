@@ -137,5 +137,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "jest.runMode": "deferred",
-    "prisma.showPrismaDataPlatformNotification": false
+    "prisma.showPrismaDataPlatformNotification": false,
+    "editor.accessibilitySupport": "on"
 }
