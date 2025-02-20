@@ -32,5 +32,11 @@ function brew_install_rbenv {
     rbenv global 3.3.4
 }
 
+function brew_install_common {
+    # https://github.com/Bhupesh-V/ugit
+    brew install ugit
+}
+
 homebrew_install_third
 brew_install_jenkins
+brew_install_common 

@@ -787,6 +787,15 @@ function open_ieatta_xcode_document
     open "$result"
 end
 
+function brew_install_app
+    export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
+    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+
+    set app $argv[1]
+    brew install $app
+end
+
+
 alias open_ieatta_android_release_fold="open $ORGANIZATIONS_HOME/__CODING/WORKING/ieatta-three-apps/android/app/build/outputs/apk/production/release"
 alias dinstall_ieatta_android_release="adb install $ORGANIZATIONS_HOME/__CODING/WORKING/ieatta-three-apps/android/app/build/outputs/apk/production/release/app-production-release.apk"
 

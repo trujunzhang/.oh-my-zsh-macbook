@@ -22,11 +22,12 @@ brew_apps=(
     "Alacritty" "alacritty" 'copy' 'backup'
     "Wezterm" "wezterm" 'copy'  'backup'
     "Ghostty" "ghostty" 'copy' 'backup'
-    "Neovide" "Neovide" 'copy' 'backup'
+    "Neovide" "Neovide" 'copy' 'no-bak'
     "Sublime Text" "SublimeText" "ssd" 'no-bak'
+    "Kindle" "kindle" "copy" 'no-bak'
 
     # System tools
-    "Raycast" "raycast" 'copy' 'backup'
+    "Raycast" "raycast" 'copy' 'no-bak'
     "SpaceLauncher" "spacelauncher" 'copy' 'backup'
     "Notion" "notion" 'copy' 'backup'
     "ClickUp" "clickup" 'ssd' 'backup'

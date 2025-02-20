@@ -457,6 +457,14 @@ function link_mac_user {
     # npm(cache)
     directoryLink "npm(cache)" "$HOME_MAC_CACHE_PATH/nvmCaches/.npm" "$HOME/.npm"
 
+    # home(cache)
+    directoryLink "HomeCache(npm)" "$HOME_MAC_CACHE_PATH/HomeCache/npm" "$HOME/.cache/npm"
+    directoryLink "HomeCache(ccache)" "$HOME_MAC_CACHE_PATH/HomeCache/ccache" "$HOME/.cache/ccache"
+    directoryLink "HomeCache(typescript)" "$HOME_MAC_CACHE_PATH/HomeCache/typescript" "$HOME/.cache/typescript"
+
+    # home(ollama)
+    directoryLink "HomeCache(ollama)" "$HOME_MAC_CACHE_PATH/HomeOllama" "$HOME/.ollama"
+
     # ios
     # directoryLink "ios(.cocoapods)"          "$HOME_PROFILE_BACKUP_PATH/dev-ios/.cocoapods"           "$HOME/.cocoapods"
     directoryLink "ios(.offline-git)" "$HOME_MAC_CACHE_PATH/__CACHES" "$ORGANIZATIONS_HOME/__CACHES"

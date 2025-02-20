@@ -1,7 +1,11 @@
 [user]
 	name = djzhang
 	email = trujunzhang@gmail.com
-
+[gc]
+    # default 90 days
+    reflogExpire = 200
+    # default 30 days
+    reflogExpireUnreachable = 90
 
 [core]
 	excludesfile = ~/.gitignore_global
