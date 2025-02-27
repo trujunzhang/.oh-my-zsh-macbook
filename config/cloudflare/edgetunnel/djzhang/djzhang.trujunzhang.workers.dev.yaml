@@ -13,6 +13,7 @@ external-controller: :9090
 # P.S. +.foo.com 等于 .foo.com 和 foo.com
 hosts:
   "dev.new.ieatta.com": 127.0.0.1
+  "dev.new.expensify.com": 127.0.0.1
 
 # DNS 服务设置
 # 此部分是可选的. 当不存在时, DNS 服务将被禁用.
@@ -5283,6 +5284,7 @@ rules:
   - DOMAIN-SUFFIX,cloudinary.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,vercel.app,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,rubygems.org,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,vercel.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,stackoverflow.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,collector.githubapp.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,bitbucket.org,Ⓜ️ 微软服务

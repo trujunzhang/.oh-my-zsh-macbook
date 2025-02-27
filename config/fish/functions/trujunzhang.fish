@@ -140,6 +140,8 @@ alias yallrandroid='bundle install && ninstall && yarn android'
 alias yripad='yarn ipad'
 alias yrweb='yarn web'
 alias yrstorybook='yarn storybook'
+alias yrprettier='yarn prettier'
+alias yrtypecheck='yarn typecheck'
 alias yrmac='yarn desktop'
 alias ydebug='yarn debug'
 alias ybuild='yarn build'
@@ -190,8 +192,11 @@ alias nvscode_langservers='npm i -g vscode-langservers-extracted'
 alias ninstall_dev='npm install --verbose --save-dev --no-cache'
 alias ninstall_save='npm install --verbose --save --no-cache'
 
+alias npx_sentry_wizard="npx @sentry/wizard@latest -i reactNative"
+
 alias nrpodi='npm run pod-install'
 alias nrprettier='npm run prettier'
+alias nrtypecheck='npm run typecheck'
 alias nrstart='npm run start'
 alias nrweb='npm run web'
 alias nrios='npm run ios'
@@ -851,3 +856,6 @@ alias pverify_transforms="python -c \"from transformers import pipeline
 print(pipeline('sentiment-analysis')('we love you'))\""
 
 alias dmac_install_rosetta="softwareupdate --install-rosetta"
+
+alias ollama_install_deepseek="ollama run deepseek-r1:32b"
+

@@ -24,7 +24,9 @@ brew_apps=(
     "Ghostty" "ghostty" 'copy' 'backup'
     "Neovide" "Neovide" 'copy' 'no-bak'
     "Sublime Text" "SublimeText" "ssd" 'no-bak'
-    "Kindle" "kindle" "copy" 'no-bak'
+    "Kindle" "kindle" "ssd" 'no-bak'
+    "Android Studio" "AndroidStudio" "ssd" 'no-bak'
+    "ResponsivelyApp" "ResponsivelyApp" "ssd" "no-bak"
 
     # System tools
     "Raycast" "raycast" 'copy' 'no-bak'
@@ -135,7 +137,9 @@ function backup_apps_from_Applications {
 
     # cp -Rvp "/Applications/${name}" "${app_path_in_backup_folder}"
     cd "/Applications"
-    zip -r "${app_path_in_backup_folder}" "${appName}"
+    zip -y -r -q "${app_path_in_backup_folder}" "${appName}"
+
+    # ditto -c -k --sequesterRsrc --keepParent "$appName" "$app_path_in_backup_folder"
 }
 
 function backup_apps_in_backup_folder {
@@ -154,7 +158,9 @@ function backup_apps_in_backup_folder {
 
     # cp -Rvp "/Applications/${name}" "${app_path_in_backup_folder}"
     cd "${PATH_BACKUP}"
-    zip -r "${app_path_in_backup_folder}" "${appName}"
+    zip -y -r -q "${app_path_in_backup_folder}" "${appName}"
+
+    # ditto -c -k --sequesterRsrc --keepParent "$appName" "$app_path_in_backup_folder"
 }
 
 function restore_apps {
