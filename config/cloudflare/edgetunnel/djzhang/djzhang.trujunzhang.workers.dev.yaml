@@ -5290,6 +5290,7 @@ rules:
   - DOMAIN-SUFFIX,bitbucket.org,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,github,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,hammerspoon.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.io,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubapp.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubassets.com,Ⓜ️ 微软服务
