@@ -7,6 +7,7 @@ keybinds {
         unbind "Ctrl g"
         unbind "Ctrl n"
         unbind "Ctrl b"
+        unbind "Ctrl q"
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }

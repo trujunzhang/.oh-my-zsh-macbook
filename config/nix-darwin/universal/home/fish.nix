@@ -39,6 +39,9 @@ if type zellij &>/dev/null
     end
 end
 
+if [ -d $HOME/.luarocks ]
+   for i in (luarocks path | awk '{sub(/PATH=/, "PATH ", $2); print "set -gx "$2}'); eval $i; end
+end
 if [ -d $HOME/.asdf ]
     source ~/.asdf/asdf.fish
 end
