@@ -321,6 +321,8 @@ function link_symlink {
 
     directoryLink "dotenv(Express.js environment variables)" "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
 
+    directoryLink "hammerspoon(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/hammerspoon" "$HOME/.hammerspoon"
+
     # **IDES(purcell's emacs.d)
     # directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
 

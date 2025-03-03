@@ -85,6 +85,12 @@
   },
   {
     "type": "application",
+    "name": "hammerspoon",
+    "application": "Hammerspoon",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "google chrome",
     "application": "google chrome",
     "enable": "0"

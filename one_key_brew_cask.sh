@@ -18,7 +18,7 @@ brew_apps=(
     # https://fbflipper.com/
     # "Flipper"             "flipper" 'copy' 'backup'
     "Realm Studio"        "mongodb-realm-studio" 'ssd' 'no-bak'
-    "Obsidian" "obsidian" 'copy' 'backup'
+    "Obsidian" "obsidian" 'copy' 'no-bak'
     "Alacritty" "alacritty" 'copy' 'backup'
     "Wezterm" "wezterm" 'copy'  'backup'
     "Ghostty" "ghostty" 'copy' 'backup'
@@ -40,7 +40,7 @@ brew_apps=(
     "Dash" "dash" 'copy' 'no-bak'
     "WebStorm" 'webstorm' 'ssd' 'no-bak'
     "PyCharm" "pycharm" 'ssd' 'no-bak'
-    # "Hammerspoon"         "hammerspoon" 'copy' 'no-bak'
+    "Hammerspoon" "hammerspoon" 'copy' 'no-bak'
     # "Grammarly Editor"    "grammarly" 'copy' 'no-bak'
 
     # Web browser
