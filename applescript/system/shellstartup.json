@@ -118,5 +118,11 @@
     "name": "Vivaldi",
     "application": "Vivaldi",
     "enable": "0"
+  },
+  {
+    "type": "application",
+    "name": "ZellijTools-arm-v1",
+    "application": "ZellijTools-arm-v1",
+    "enable": "1"
   }
 ]
