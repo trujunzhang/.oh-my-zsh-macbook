@@ -1,4 +1,5 @@
 local appPath = "three-apps"
+local mobileTitle = "Android Emulator - genymotion:5554"
 
 hs.hotkey.bind(
 -- { 'Cmd', 'Shift' },
@@ -7,7 +8,7 @@ hs.hotkey.bind(
     function()
         -- local mobileApp = hs.application.applicationsForBundleID('NULL-APP-BUNDLE-ID')[1]
         -- local mobileApp = hs.application.find("Android Emulator")
-        local mobileApp = hs.appfinder.appFromWindowTitle("Android Emulator")
+        local mobileApp = hs.appfinder.appFromWindowTitle(mobileTitle)
         if mobileApp then
             mobileApp:kill()
         end
@@ -39,5 +40,19 @@ hs.hotkey.bind(
         end)
 
         hs.notify.new({ title = "run android", informativeText = "typing cmd on the WezTerm successfully" }):send()
+            :release()
+    end)
+
+hs.hotkey.bind(
+    { 'Cmd' },
+    "B",
+    function()
+        -- local mobileApp = hs.appfinder.appFromWindowTitle("Android Emulator - genymotion:5554")
+        local mobileApp = hs.appfinder.appFromWindowTitle(mobileTitle)
+        if mobileApp then
+            mobileApp:kill()
+        end
+
+        hs.notify.new({ title = "kill android", informativeText = "close it successfully" }):send()
             :release()
     end)
