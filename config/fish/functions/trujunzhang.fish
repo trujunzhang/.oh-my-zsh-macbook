@@ -361,7 +361,7 @@ end
 #const packageName = "com.ieatta.track.dev";
 alias android_new_ieatta_genymotion="node $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/run_android_simulator.js --mainActivity 'com.ieatta.track.MainActivity' --packageName 'com.ieatta.track.dev'"
 
-function android_new_ieatta_genymotion_error
+function android_new_ieatta_genymotion
     $ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion
     sleep 20
     adb shell am start -n com.ieatta.track.dev/com.ieatta.track.dev.MainActivity

@@ -45,7 +45,3 @@ end
 
 
 -- Minimize the active window when holding space and pressing 'm'
-
-hs.hotkey.bind({ "space", "m" }, function()
-    hs.window.focusedWindow():minimize()
-end)
