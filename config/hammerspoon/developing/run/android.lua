@@ -4,7 +4,7 @@ local mobileTitle = "Android Emulator - genymotion:5554"
 hs.hotkey.bind(
 -- { 'Cmd', 'Shift' },
     { 'Cmd' },
-    "A",
+    "Y",
     function()
         -- local mobileApp = hs.application.applicationsForBundleID('NULL-APP-BUNDLE-ID')[1]
         -- local mobileApp = hs.application.find("Android Emulator")
