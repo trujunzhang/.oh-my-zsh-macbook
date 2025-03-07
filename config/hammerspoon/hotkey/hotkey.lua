@@ -7,8 +7,16 @@ function fancyNotify(t, m)
     hs.notify.new({ title = t, informativeText = m }):send():release()
 end
 
--- show front activated app infos
--- hs.hotkey.bind({"space", "s"}, function()
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "S",
+    function()
+        local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
+        hs.execute(shell_command)
+        hs.notify.new({ title = "toggle Aerospace", informativeText = "toggle it sucessfully" }):send():release()
+    end)
+
+
 hs.hotkey.bind(
     { 'cmd' },
     "N",

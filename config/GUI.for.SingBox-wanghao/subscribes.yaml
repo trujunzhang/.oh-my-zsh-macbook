@@ -1,12 +1,12 @@
 - id: ID_zv5jlc1v
   name: myclash-subscribe
   url: https://www.myclash.top/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?sb
-  upload: 872062376575
-  download: 872062376575
+  upload: 5306808142455
+  download: 5306808142455
   total: 26388279066624
   expire: 4102329600000
-  updateTime: 1741311311065
-  type: Http
+  updateTime: 1741340350697
+  type: Manual
   website: ""
   path: data/subscribes/ID_zv5jlc1v.json
   include: ""
