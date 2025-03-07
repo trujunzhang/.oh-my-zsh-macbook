@@ -1,11 +1,11 @@
 - id: ID_2t1f7dsc
   name: hxyin-work-subscribes
   url: https://hxyin-work.yinhaixiadrop.workers.dev/4440a1c3-06dc-493b-a630-c6cc9a1dfb43?singbox
-  upload: 6912511253617
-  download: 6912511253617
-  total: 26388279066624
-  expire: 4102329600000
-  updateTime: 1741178065854
+  upload: 0
+  download: 0
+  total: 0
+  expire: 0
+  updateTime: 1741180136022
   type: Manual
   website: ""
   path: data/subscribes/ID_2t1f7dsc.json
@@ -17,4 +17,97 @@
   disabled: false
   inSecure: false
   userAgent: ""
-  proxies: []
+  proxies:
+    - id: ID_9xrxd9ke
+      tag: 加入我的频道t.me/CMLiussss解锁更多优选节点
+      type: vless
+    - id: ID_clqt22d1
+      tag: 反代优选域名-天城大佬提供维护
+      type: vless
+    - id: ID_qmg59kkn
+      tag: 反代优选域名-Mingyu大佬提供维护
+      type: vless
+    - id: ID_88jggejd
+      tag: 反代优选域名-OTC大佬提供维护
+      type: vless
+    - id: ID_p7qmsl2d
+      tag: 反代优选域名-KJKKK大佬提供维护
+      type: vless
+    - id: ID_5f8sjwvp
+      tag: cdn-b100.↗↘↗.eu.org反代优选域名
+      type: vless
+    - id: ID_2oouzej7
+      tag: 🇨🇳 visa.cn
+      type: vless
+    - id: ID_gnemq6gl
+      tag: www.wto.org
+      type: vless
+    - id: ID_4p9ei2sr
+      tag: 🇸🇬 www.visa.com.sg
+      type: vless
+    - id: ID_c95n4tha
+      tag: 🇨🇳 icook.tw
+      type: vless
+    - id: ID_4z1yagn9
+      tag: 🇭🇰 HK
+      type: vless
+    - id: ID_84u63auz
+      tag: 🇭🇰 HK 2
+      type: vless
+    - id: ID_jvwsyw36
+      tag: 🇭🇰 HK 3
+      type: vless
+    - id: ID_jjb8vh5m
+      tag: 🇭🇰 HK 4
+      type: vless
+    - id: ID_hpmwk82x
+      tag: AE
+      type: vless
+    - id: ID_3s544blf
+      tag: BR
+      type: vless
+    - id: ID_y8bn0cjb
+      tag: 🇺🇸 US
+      type: vless
+    - id: ID_gjzhii9x
+      tag: 🇷🇺 RU
+      type: vless
+    - id: ID_hg4bx273
+      tag: 🇺🇸 US 2
+      type: vless
+    - id: ID_dca1j02a
+      tag: 🇺🇸 US 3
+      type: vless
+    - id: ID_t7sc7jko
+      tag: AT
+      type: vless
+    - id: ID_iwpyeynr
+      tag: ZA
+      type: vless
+    - id: ID_wlouf1qo
+      tag: ZA 2
+      type: vless
+    - id: ID_48zg13f4
+      tag: 🇺🇸 US 4
+      type: vless
+    - id: ID_3i1b3xlz
+      tag: 🇸🇬 SG
+      type: vless
+    - id: ID_xkdmytl7
+      tag: 🇷🇺 RU 2
+      type: vless
+    - id: ID_5lb7qubf
+      tag: 🇺🇸 US 5
+      type: vless
+    - id: ID_r5nshzxp
+      tag: ZA 3
+      type: vless
+    - id: ID_o6tqb5i7
+      tag: ZA 4
+      type: vless
+    - id: ID_qzynzgec
+      tag: ZA 5
+      type: vless
+    - id: ID_vt9rlct3
+      tag: 🇺🇸 US 6
+      type: vless

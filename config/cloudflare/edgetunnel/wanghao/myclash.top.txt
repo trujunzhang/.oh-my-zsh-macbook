@@ -1,0 +1,57 @@
+################################################################
+Subscribe / sub 订阅地址, 点击链接自动 复制订阅链接 并 生成订阅二维码
+---------------------------------------------------------------
+自适应订阅地址:
+https://www.myclash.top/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+Base64订阅地址:
+https://www.myclash.top/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?b64
+clash订阅地址:
+https://www.myclash.top/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?clash
+singbox订阅地址:
+https://www.myclash.top/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?sb
+loon订阅地址:
+https://www.myclash.top/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?loon
+实用订阅技巧∨
+---------------------------------------------------------------
+################################################################
+edgetunnel 配置信息
+---------------------------------------------------------------
+HOST: www.myclash.top
+UUID: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d
+FKID: c2448b2c-78f6-c2aa-9cff-29b5208bf0c8
+UA: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36
+
+CFCDN（访问方式）: ProxyIP
+  PROXYIP.tp1.090227.xyz
+
+您的订阅内容由 内置 addresses/ADD* 参数变量提供 编辑优选列表
+ADD（TLS优选域名&IP）:
+  162.159.153.209#wh1
+  162.159.153.160#wh2
+  162.159.153.163#wh3
+  visa.cn
+ADDAPI（TLS优选域名&IP 的 API）:
+  https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt
+  https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/CloudflareSpeedTest.csv?id=CF优选
+
+SUBAPI（订阅转换后端）: https://SUBAPI.CMLiussss.net
+SUBCONFIG（订阅转换配置文件）: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini
+---------------------------------------------------------------
+################################################################
+v2ray
+---------------------------------------------------------------
+vless://b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d@www.myclash.top:443?encryption=none&security=tls&sni=www.myclash.top&fp=randomized&type=ws&host=www.myclash.top&path=%2F%3Fed%3D2560#edgetunnel
+---------------------------------------------------------------
+################################################################
+clash-meta
+---------------------------------------------------------------
+- {name: edgetunnel, server: www.myclash.top, port: 443, type: vless, uuid: b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d, tls: true, alpn: [h3], udp: false, sni: www.myclash.top, tfo: false, skip-cert-verify: true, servername: www.myclash.top, client-fingerprint: randomized, network: ws, ws-opts: {path: "/?ed=2560", headers: {www.myclash.top}}}
+---------------------------------------------------------------
+################################################################
+telegram 交流群 技术大佬~在线发牌!
+https://t.me/CMLiussss
+---------------------------------------------------------------
+github 项目地址 Star!Star!Star!!!
+https://github.com/cmliu/edgetunnel
+---------------------------------------------------------------
+################################################################

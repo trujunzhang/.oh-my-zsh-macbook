@@ -11,7 +11,7 @@
       "external_ui": "",
       "external_ui_download_url": "",
       "external_ui_download_detour": "🎯 Direct",
-      "secret": "ID_z4phj5c5",
+      "secret": "ID_64ho1vbc",
       "default_mode": "rule",
       "access_control_allow_origin": [
         "*"
@@ -35,8 +35,7 @@
       "listen_port": 20122,
       "tcp_fast_open": false,
       "tcp_multi_path": false,
-      "udp_fragment": false,
-      "users": []
+      "udp_fragment": false
     }
   ],
   "outbounds": [
@@ -46,9 +45,14 @@
       "interrupt_exist_connections": true,
       "outbounds": [
         "🎈 Auto",
-        "官方优选IP/1",
-        "官方优选IP/2",
-        "官方优选IP/3",
+        "wh1",
+        "wh2",
+        "wh3",
+        "🇨🇳 visa.cn",
+        "🇭🇰 HK",
+        "🇭🇰 HK 2",
+        "🇭🇰 HK 3",
+        "🇭🇰 HK 4",
         "CF优选",
         "CF优选 2",
         "CF优选 3",
@@ -82,9 +86,14 @@
       "tolerance": 150,
       "interrupt_exist_connections": true,
       "outbounds": [
-        "官方优选IP/1",
-        "官方优选IP/2",
-        "官方优选IP/3",
+        "wh1",
+        "wh2",
+        "wh3",
+        "🇨🇳 visa.cn",
+        "🇭🇰 HK",
+        "🇭🇰 HK 2",
+        "🇭🇰 HK 3",
+        "🇭🇰 HK 4",
         "CF优选",
         "CF优选 2",
         "CF优选 3",
@@ -136,60 +145,160 @@
     },
     {
       "type": "vless",
-      "tag": "官方优选IP/1",
-      "server": "162.159.152.104",
+      "tag": "wh1",
+      "server": "162.159.153.209",
       "server_port": 443,
       "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
       "transport": {
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
     },
     {
       "type": "vless",
-      "tag": "官方优选IP/2",
-      "server": "162.159.152.154",
+      "tag": "wh2",
+      "server": "162.159.153.160",
       "server_port": 443,
       "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
       "transport": {
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
     },
     {
       "type": "vless",
-      "tag": "官方优选IP/3",
-      "server": "162.159.153.169",
+      "tag": "wh3",
+      "server": "162.159.153.163",
       "server_port": 443,
       "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
       "transport": {
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇨🇳 visa.cn",
+      "server": "visa.cn",
+      "server_port": 443,
+      "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
+      "transport": {
+        "path": "/?ed=2560",
+        "type": "ws",
+        "headers": {
+          "Host": "www.myclash.top"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myclash.top",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 HK",
+      "server": "8.210.170.130",
+      "server_port": 8443,
+      "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
+      "transport": {
+        "path": "/?ed=2560",
+        "type": "ws",
+        "headers": {
+          "Host": "www.myclash.top"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myclash.top",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 HK 2",
+      "server": "156.230.12.71",
+      "server_port": 443,
+      "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
+      "transport": {
+        "path": "/?ed=2560",
+        "type": "ws",
+        "headers": {
+          "Host": "www.myclash.top"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myclash.top",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 HK 3",
+      "server": "47.57.13.107",
+      "server_port": 443,
+      "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
+      "transport": {
+        "path": "/?ed=2560",
+        "type": "ws",
+        "headers": {
+          "Host": "www.myclash.top"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myclash.top",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 HK 4",
+      "server": "47.57.245.232",
+      "server_port": 443,
+      "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
+      "transport": {
+        "path": "/?ed=2560",
+        "type": "ws",
+        "headers": {
+          "Host": "www.myclash.top"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -204,12 +313,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -224,12 +333,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -244,12 +353,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -264,12 +373,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -284,12 +393,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -304,12 +413,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -324,12 +433,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -344,12 +453,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -364,12 +473,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -384,12 +493,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -404,12 +513,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -424,12 +533,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -444,12 +553,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -464,12 +573,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -484,12 +593,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -504,12 +613,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -524,12 +633,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -544,12 +653,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -564,12 +673,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -584,12 +693,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -604,12 +713,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -624,12 +733,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -644,12 +753,12 @@
         "path": "/?ed=2560",
         "type": "ws",
         "headers": {
-          "Host": "wanghao.trujunzhang.workers.dev"
+          "Host": "www.myclash.top"
         }
       },
       "tls": {
         "enabled": true,
-        "server_name": "wanghao.trujunzhang.workers.dev",
+        "server_name": "www.myclash.top",
         "insecure": true
       },
       "tcp_fast_open": false
@@ -657,10 +766,6 @@
   ],
   "route": {
     "rules": [
-      {
-        "action": "sniff",
-        "inbound": "tun-in"
-      },
       {
         "action": "hijack-dns",
         "protocol": "dns"
@@ -681,31 +786,43 @@
       },
       {
         "action": "reject",
-        "rule_set": "Category-Ads"
+        "rule_set": [
+          "Category-Ads"
+        ]
       },
       {
         "action": "route",
-        "rule_set": "GeoSite-Private",
+        "rule_set": [
+          "GeoSite-Private"
+        ],
         "outbound": "🎯 Direct"
       },
       {
         "action": "route",
-        "rule_set": "GeoSite-CN",
+        "rule_set": [
+          "GeoSite-CN"
+        ],
         "outbound": "🎯 Direct"
       },
       {
         "action": "route",
-        "rule_set": "GeoIP-Private",
+        "rule_set": [
+          "GeoIP-Private"
+        ],
         "outbound": "🎯 Direct"
       },
       {
         "action": "route",
-        "rule_set": "GeoIP-CN",
+        "rule_set": [
+          "GeoIP-CN"
+        ],
         "outbound": "🎯 Direct"
       },
       {
         "action": "route",
-        "rule_set": "GeoLocation-!CN",
+        "rule_set": [
+          "GeoLocation-!CN"
+        ],
         "outbound": "🚀 Select"
       }
     ],
@@ -800,12 +917,16 @@
       {
         "action": "route",
         "server": "Local-DNS",
-        "rule_set": "GeoSite-CN"
+        "rule_set": [
+          "GeoSite-CN"
+        ]
       },
       {
         "action": "route",
         "server": "Remote-DNS",
-        "rule_set": "GeoLocation-!CN"
+        "rule_set": [
+          "GeoLocation-!CN"
+        ]
       }
     ],
     "fakeip": {

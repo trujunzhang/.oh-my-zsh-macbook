@@ -27,7 +27,7 @@
     "type": "application",
     "name": "clash for arm",
     "application": "ClashX Pro.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
@@ -38,8 +38,8 @@
   {
     "type": "application",
     "name": "gui for singbox",
-    "application": "GUI.for.SingBox-v1.8.8.app",
-    "enable": "0"
+    "application": "GUI.for.SingBox-v1.9.3.app",
+    "enable": "1"
   },
   {
     "type": "application",

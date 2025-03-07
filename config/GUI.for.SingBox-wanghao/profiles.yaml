@@ -1,5 +1,5 @@
-- id: ID_f8382kwx
-  name: ID_zby1t04x
+- id: ID_i6jvplki
+  name: www.myclash.top
   log:
     disabled: false
     level: info
@@ -11,7 +11,7 @@
       external_ui: ""
       external_ui_download_url: ""
       external_ui_download_detour: outbound-direct
-      secret: ID_z4phj5c5
+      secret: ID_64ho1vbc
       default_mode: rule
       access_control_allow_origin:
         - "*"
@@ -48,11 +48,7 @@
         mtu: 9000
         auto_route: true
         strict_route: true
-        route_address:
-          - 0.0.0.0/1
-          - 128.0.0.0/1
-          - ::/1
-          - 8000::/1
+        route_address: []
         endpoint_independent_nat: false
         stack: mixed
   outbounds:
@@ -63,8 +59,8 @@
         - id: outbound-urlte
           type: Built-in
           tag: 🎈 Auto
-        - id: ID_zeiplvdp
-          tag: ID_zeiplvdp
+        - id: ID_zv5jlc1v
+          tag: ID_zv5jlc1v
           type: Subscription
       interrupt_exist_connections: true
       url: ""
@@ -76,8 +72,8 @@
       tag: 🎈 Auto
       type: urltest
       outbounds:
-        - id: ID_zeiplvdp
-          tag: ID_zeiplvdp
+        - id: ID_zv5jlc1v
+          tag: ID_zv5jlc1v
           type: Subscription
       interrupt_exist_connections: true
       url: https://www.gstatic.com/generate_204
@@ -135,7 +131,7 @@
       exclude: ""
   route:
     rules:
-      - id: ID_sic0agat
+      - id: ID_hnyahzv9
         type: inbound
         payload: tun-in
         invert: false
@@ -144,7 +140,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_hpmfqba5
+      - id: ID_du5lsrm9
         type: protocol
         payload: dns
         invert: false
@@ -153,7 +149,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_c4ryoyn8
+      - id: ID_m29gq27p
         type: clash_mode
         payload: direct
         invert: false
@@ -162,7 +158,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_1nxwic49
+      - id: ID_2guw2ihs
         type: clash_mode
         payload: global
         invert: false
@@ -171,7 +167,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_xbxriwg1
+      - id: ID_xgn2bm9o
         type: protocol
         payload: quic
         invert: false
@@ -180,7 +176,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_f8p0dpfa
+      - id: ID_y1q0fbrj
         type: rule_set
         payload: Category-Ads
         invert: false
@@ -189,7 +185,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_clcte14y
+      - id: ID_axbbkoum
         type: rule_set
         payload: GeoSite-Private
         invert: false
@@ -198,7 +194,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_sw0apmmk
+      - id: ID_prhdn5cf
         type: rule_set
         payload: GeoSite-CN
         invert: false
@@ -207,7 +203,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_zcwjhnbn
+      - id: ID_4hzfvdqk
         type: rule_set
         payload: GeoIP-Private
         invert: false
@@ -216,7 +212,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_nwfv0ztv
+      - id: ID_qoh2wxyp
         type: rule_set
         payload: GeoIP-CN
         invert: false
@@ -225,7 +221,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_176bi7qt
+      - id: ID_pthbuxed
         type: rule_set
         payload: GeoLocation-!CN
         invert: false
@@ -292,6 +288,7 @@
     auto_detect_interface: true
     default_interface: ""
     final: outbound-fallback
+    find_process: false
   dns:
     servers:
       - id: Local-DNS
@@ -323,31 +320,36 @@
         strategy: default
         client_subnet: ""
     rules:
-      - id: ID_z7hh37ah
+      - id: ID_sdoinz41
         type: outbound
         payload: any
         action: route
         server: Local-DNS
-      - id: ID_5h9hz5in
+        invert: false
+      - id: ID_35oqgfro
         type: clash_mode
         payload: direct
         action: route
         server: Local-DNS
-      - id: ID_dse7eny4
+        invert: false
+      - id: ID_6clq2129
         type: clash_mode
         payload: global
         action: route
         server: Remote-DNS
-      - id: ID_dxpdtabd
+        invert: false
+      - id: ID_pjo3olnm
         type: rule_set
         payload: GeoSite-CN
         action: route
         server: Local-DNS
-      - id: ID_8z4p9k7l
+        invert: false
+      - id: ID_103kcadf
         type: rule_set
         payload: GeoLocation-!CN
         action: route
         server: Remote-DNS
+        invert: false
     fakeip:
       enabled: false
       inet4_range: 198.18.0.0/15
