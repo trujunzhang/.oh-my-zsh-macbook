@@ -9,7 +9,7 @@ end
 
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },
-    "S",
+    "A",
     function()
         local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
         hs.execute(shell_command)

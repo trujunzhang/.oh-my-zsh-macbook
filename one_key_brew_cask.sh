@@ -18,7 +18,7 @@ brew_apps=(
     # https://fbflipper.com/
     # "Flipper"             "flipper" 'copy' 'backup'
     "Realm Studio"        "mongodb-realm-studio" 'ssd' 'no-bak'
-    "Obsidian" "obsidian" 'copy' 'no-bak'
+    "Obsidian" "obsidian" 'ssd' 'no-bak'
     "Alacritty" "alacritty" 'copy' 'backup'
     "Wezterm" "wezterm" 'copy'  'backup'
     "Ghostty" "ghostty" 'copy' 'backup'
@@ -27,6 +27,9 @@ brew_apps=(
     "Kindle" "kindle" "ssd" 'no-bak'
     "Android Studio" "AndroidStudio" "ssd" 'no-bak'
     "ResponsivelyApp" "ResponsivelyApp" "ssd" "no-bak"
+    "Pixea" "pixea" "ssd" "no-bak"
+    "Wondershare PDFelement" "pdfelement" "ssd" "no-bak"
+    "DaisyDisk" "daisyDisk" "ssd" "no-bak"
 
     # System tools
     "Raycast" "raycast" 'copy' 'no-bak'

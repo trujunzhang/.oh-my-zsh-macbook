@@ -74,3 +74,5 @@ config/nvim-lazy/lazyvim.json
 #flake.lock
 config/nix-darwin/universal/.nvimlog
 result
+
+.obsidian/

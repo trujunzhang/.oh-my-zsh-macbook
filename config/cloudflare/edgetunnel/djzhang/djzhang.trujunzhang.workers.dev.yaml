@@ -5288,8 +5288,11 @@ rules:
   - DOMAIN-SUFFIX,stackoverflow.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,collector.githubapp.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,bitbucket.org,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,sentry.io,Ⓜ️ 微软服务
   - DOMAIN-KEYWORD,github,Ⓜ️ 微软服务
+  - DOMAIN-KEYWORD,fullstory,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,realm.io,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,hammerspoon.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.io,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubapp.com,Ⓜ️ 微软服务
