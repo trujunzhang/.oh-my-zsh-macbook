@@ -1,5 +1,6 @@
 local appPath = "three-apps"
 local mobileTitle = "Android Emulator - genymotion:5554"
+local appCMD = "android_new_ieatta_genymotion"
 
 hs.hotkey.bind(
 -- { 'Cmd', 'Shift' },
@@ -36,7 +37,7 @@ hs.hotkey.bind(
         hs.eventtap.keyStroke({ "Ctrl" }, "C", myApp)
         hs.eventtap.keyStrokes("z three-apps", myApp)
         hs.eventtap.keyStroke({ "" }, "return", myApp)
-        hs.eventtap.keyStrokes("android_new_ieatta_genymotion", myApp)
+        hs.eventtap.keyStrokes(appCMD, myApp)
         hs.eventtap.keyStroke({ "" }, "return", myApp)
         -- end)
 

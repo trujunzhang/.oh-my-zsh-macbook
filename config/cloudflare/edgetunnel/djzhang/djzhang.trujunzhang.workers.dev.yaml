@@ -5293,6 +5293,7 @@ rules:
   - DOMAIN-KEYWORD,fullstory,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,realm.io,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,boost.io,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,hammerspoon.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.io,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubapp.com,Ⓜ️ 微软服务

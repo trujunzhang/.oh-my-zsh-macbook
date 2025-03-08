@@ -40,7 +40,11 @@ if type zellij &>/dev/null
 end
 
 if [ -d $HOME/.luarocks ]
-   for i in (luarocks path | awk '{sub(/PATH=/, "PATH ", $2); print "set -gx "$2}'); eval $i; end
+   # for i in (luarocks path | awk '{sub(/PATH=/, "PATH ", $2); 
+   #     print "set -gx "$2}'); 
+   #     eval $i; 
+   # end
+   fish_add_path "$HOME/.luarocks/bin"
 end
 if [ -d $HOME/.asdf ]
     source ~/.asdf/asdf.fish

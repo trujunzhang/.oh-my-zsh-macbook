@@ -1,5 +1,6 @@
 local appPath = "three-apps"
 local mobileID = "com.apple.iphonesimulator"
+local appCMD = "ios_new_ieatta_iphone16plus"
 
 hs.hotkey.bind(
     { 'cmd' },
@@ -34,7 +35,7 @@ hs.hotkey.bind(
         hs.eventtap.keyStroke({ "Ctrl" }, "C", myApp)
         hs.eventtap.keyStrokes("z three-apps", myApp)
         hs.eventtap.keyStroke({ "" }, "return", myApp)
-        hs.eventtap.keyStrokes("ios_new_ieatta_iphone16plus", myApp)
+        hs.eventtap.keyStrokes(appCMD, myApp)
         hs.eventtap.keyStroke({ "" }, "return", myApp)
         -- end)
 
@@ -79,7 +80,7 @@ function EscapeTab(tab)
 end
 
 hs.hotkey.bind(
-    { 'Cmd' ,"shift", "Ctrl" },
+    { 'Cmd', "shift", "Ctrl" },
     "C",
     function()
         hs.application.launchOrFocus("WezTerm")

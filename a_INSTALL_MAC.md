@@ -23,3 +23,9 @@ cd "/Volumes/MacUser/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macb
 ```bash
 cd "/Volumes/MacUser/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/nix-darwin/universal" && darwin-rebuild switch --option http2 false  --flake .
 ```
+
+> [!Show hidden files]
+
+```bash
+defaults write com.apple.finder AppleShowAllFiles -boolean true
+```
