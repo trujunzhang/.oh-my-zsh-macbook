@@ -102,6 +102,24 @@
     prefer-h3: false
     hosts: {}
   proxyGroupsConfig:
+    - id: ID_x7h3e61b
+      name: developing-work
+      type: select
+      proxies:
+        - id: DIRECT
+          type: Built-In
+          name: DIRECT
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+      strategy: consistent-hashing
+      use: []
+      tolerance: 150
+      lazy: true
+      disable-udp: false
+      filter: ""
+      exclude-filter: ""
+      hidden: false
+      icon: ""
     - id: ID_v9pkbgcl
       name: djzhang-work
       type: select
@@ -252,6 +270,16 @@
       hidden: false
       icon: ""
   rulesConfig:
+    - id: ID_i1p95bsv
+      type: RULE-SET
+      payload: ID_lge93orw
+      proxy: ID_x7h3e61b
+      no-resolve: false
+      ruleset-type: file
+      ruleset-name: ""
+      ruleset-behavior: domain
+      ruleset-format: mrs
+      ruleset-proxy: ""
     - id: ID_n6twafm1
       type: RULE-SET
       payload: ID_m09x6hmc

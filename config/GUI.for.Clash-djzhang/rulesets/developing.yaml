@@ -1,0 +1,4 @@
+payload:
+  - +.localhost
+  - dev.new.expensify.com
+  - +.new.ieatta.com

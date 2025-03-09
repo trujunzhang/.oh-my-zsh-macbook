@@ -1,2 +1,3 @@
 payload:
   - +.nixos.org
+  - +.maven.org
