@@ -102,6 +102,22 @@
     prefer-h3: false
     hosts: {}
   proxyGroupsConfig:
+    - id: ID_v9pkbgcl
+      name: djzhang-work
+      type: select
+      proxies: []
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+      strategy: consistent-hashing
+      use:
+        - ID_lo8t72vx
+      tolerance: 150
+      lazy: true
+      disable-udp: false
+      filter: ""
+      exclude-filter: ""
+      hidden: false
+      icon: ""
     - id: ID_bspdaj1u
       name: GitHub-Working
       type: select
@@ -236,6 +252,16 @@
       hidden: false
       icon: ""
   rulesConfig:
+    - id: ID_n6twafm1
+      type: RULE-SET
+      payload: ID_m09x6hmc
+      proxy: ID_v9pkbgcl
+      no-resolve: false
+      ruleset-type: file
+      ruleset-name: ""
+      ruleset-behavior: domain
+      ruleset-format: mrs
+      ruleset-proxy: ""
     - id: ID_h4l5f5wk
       type: RULE-SET
       payload: geosite_github.yaml

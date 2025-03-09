@@ -4210,7 +4210,6 @@ rules:
   - DOMAIN-SUFFIX,sourcegraph.com,🚀 节点选择
   - DOMAIN-SUFFIX,spring.io,🚀 节点选择
   - DOMAIN-SUFFIX,spring.net,🚀 节点选择
-  - DOMAIN-SUFFIX,nixos.org,📢 谷歌FCM
   - DOMAIN-SUFFIX,medium.com,🎯 全球直连
   - DOMAIN,d1q6f0aelx0por.cloudfront.net,🚀 节点选择
   - DOMAIN,d2wy8f7a9ursnm.cloudfront.net,🚀 节点选择
@@ -5278,6 +5277,7 @@ rules:
   - DOMAIN-SUFFIX,maven.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,gradle.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,jitpack.io,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,nixos.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,codeium.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,apache.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,sonatype.org,Ⓜ️ 微软服务

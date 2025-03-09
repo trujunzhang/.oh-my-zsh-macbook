@@ -88,6 +88,11 @@ proxy-providers:
     type: file
     path: ../subscribes/ID_lo8t72vx.yaml
 rule-providers:
+  djzhang-sites:
+    type: file
+    behavior: domain
+    path: ../rulesets/djzhang-sites.yaml
+    format: yaml
   github:
     type: file
     behavior: domain
@@ -136,6 +141,15 @@ rule-providers:
     proxy: 🎯 Direct
 proxies: []
 proxy-groups:
+  - name: djzhang-work
+    type: select
+    filter: ""
+    exclude-filter: ""
+    hidden: false
+    icon: ""
+    use:
+      - ID_lo8t72vx
+    disable-udp: false
   - name: GitHub-Working
     type: select
     filter: ""
@@ -210,6 +224,7 @@ proxy-groups:
       - 🎈 Auto
     disable-udp: false
 rules:
+  - RULE-SET,djzhang-sites,djzhang-work
   - RULE-SET,github,GitHub-Working
   - RULE-SET,youtube,Youtube-Videos
   - DOMAIN-SUFFIX,dev.new.ieatta.com,DIRECT

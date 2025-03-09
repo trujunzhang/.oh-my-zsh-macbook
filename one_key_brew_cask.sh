@@ -30,6 +30,7 @@ brew_apps=(
     "Pixea" "pixea" "ssd" "no-bak"
     "Wondershare PDFelement" "pdfelement" "ssd" "no-bak"
     "DaisyDisk" "daisyDisk" "ssd" "no-bak"
+    "Mac FoneLab Screen Recorder" "Mac FoneLab Screen Recorder" "ssd" "no-bak"
 
     # System tools
     "Raycast" "raycast" 'copy' 'no-bak'

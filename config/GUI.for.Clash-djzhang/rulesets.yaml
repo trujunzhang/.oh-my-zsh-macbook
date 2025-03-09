@@ -1,13 +1,13 @@
 - id: geosite_stackexchange.yaml
   name: stackexchange
-  updateTime: 1729336527680
+  updateTime: 1741498949927
   disabled: false
   type: Http
   behavior: domain
   format: yaml
   path: data/rulesets/geosite_stackexchange.yaml
   url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/stackexchange.yaml
-  count: 20
+  count: 25
 - id: geoip_bt.yaml
   name: bt
   updateTime: 1731063967836
@@ -40,7 +40,7 @@
   count: 179
 - id: geosite_github.yaml
   name: github
-  updateTime: 1735641611519
+  updateTime: 1741504115837
   disabled: false
   type: Http
   behavior: domain
@@ -48,3 +48,13 @@
   path: data/rulesets/geosite_github.yaml
   url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geosite/github.yaml
   count: 29
+- id: ID_m09x6hmc
+  name: djzhang-sites
+  updateTime: 1741504108016
+  behavior: domain
+  type: Manual
+  format: yaml
+  url: ""
+  count: 1
+  path: data/rulesets/djzhang-sites.yaml
+  disabled: false
