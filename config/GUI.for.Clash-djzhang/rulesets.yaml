@@ -50,12 +50,12 @@
   count: 29
 - id: ID_m09x6hmc
   name: djzhang-sites
-  updateTime: 1741522375133
+  updateTime: 1741563651706
   behavior: domain
   type: Manual
   format: yaml
   url: ""
-  count: 2
+  count: 3
   path: data/rulesets/djzhang-sites.yaml
   disabled: false
 - id: ID_lge93orw

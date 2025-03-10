@@ -1,3 +1,4 @@
 payload:
   - +.nixos.org
   - +.maven.org
+  - +.rubygems.org
