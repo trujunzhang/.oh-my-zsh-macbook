@@ -2,7 +2,7 @@
 
 CURRENT=$(pwd)
 
-DEFAULTEVENTTYPE="install"
+DEFAULTEVENTTYPE="all"
 ASDF_EVENT_TYPE="${1:-$DEFAULTEVENTTYPE}"
 
 DEFAULPLUGINTYPE="node"
@@ -13,7 +13,8 @@ source ./bash/files-functions.sh
 source ./bash/tools.sh
 
 # node_global="20.14.0"
-node_global="21.7.2"
+# node_global="21.7.2"
+node_global="22.14.0"
 node_old="16.16.0"
 node_for_nvim="18.0.0"
 # node_for_old_expensify="20.15.1"
@@ -21,12 +22,13 @@ node_for_old_expensify="20.18.1"
 
 python_global="3.12.0"
 
+# java_global="zulu-17.52.19"
 java_global="zulu-17.52.19"
 
 if [ ! -d ~/.asdf ]; then
     # https://github.com/asdf-vm/asdf-plugins/blob/master/plugins/java
     # git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.15.0
+    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.16.0
 fi
 
 
@@ -63,23 +65,24 @@ function install_ruby {
     info "starting to install asdf(ruby)"
     asdf plugin add ruby "https://github.com/asdf-vm/asdf-ruby.git"
     # export ASDF_RUBY_BUILD_VERSION=master
-    asdf install ruby "3.3.5"
-    asdf global ruby "3.3.5"
+    asdf install ruby "3.4.0"
+    asdf global ruby "3.4.0"
 }
 function install_lazygit {
     info "starting to install asdf(lazygit)"
     asdf plugin add lazygit "https://github.com/nklmilojevic/asdf-lazygit.git"
-    asdf install lazygit '0.44.1'
-    asdf global lazygit '0.44.1'
+    # asdf install lazygit '0.44.1'
+    # asdf global lazygit '0.44.1'
+    asdf install lazygit 'latest'
+    asdf global lazygit 'latest'
 }
 function install_cocoapods {
     info "starting to install asdf(cocoapods)"
     asdf plugin add cocoapods "https://github.com/ronnnnn/asdf-cocoapods.git"
-    asdf install cocoapods '1.14.3'
-    asdf global cocoapods '1.14.3'
-
-    # asdf plugin add ruby ""
-    # asdf install ruby latest
+    # asdf install cocoapods '1.14.3'
+    # asdf global cocoapods '1.14.3'
+    asdf install cocoapods 'latest'
+    asdf global cocoapods 'latest'
 }
 
 function install_asdf_plugins {
@@ -88,9 +91,9 @@ function install_asdf_plugins {
         install_nodes
 
         if [[ $(uname -m) == 'arm64' ]]; then
-            # info M2
+            info "M2 arm"
             # java
-            install_java
+            # install_java
             # ruby
             # install_ruby
         fi
@@ -99,9 +102,9 @@ function install_asdf_plugins {
         # info Mackook
         # fi
         # python
-        install_python
+        # install_python
         # lazygit
-        install_lazygit
+        # install_lazygit
         # cocoapods
         # install_cocoapods
     fi
@@ -120,8 +123,26 @@ function update_asdf_plugins {
     fi
 }
 
-if [ "$ASDF_EVENT_TYPE" = "install" ]; then
+function install_asdf_one_plugin {
+    if [ "$ASDF_PLUGIN_TYPE" = "node" ]; then
+        install_nodes
+    elif [ "$ASDF_PLUGIN_TYPE" = "python" ]; then
+        install_python
+    elif [ "$ASDF_PLUGIN_TYPE" = "java" ]; then
+        install_java
+    elif [ "$ASDF_PLUGIN_TYPE" = "lazygit" ]; then
+        install_lazygit
+    elif [ "$ASDF_PLUGIN_TYPE" = "cocoapods" ]; then
+        install_cocoapods
+    elif [ "$ASDF_PLUGIN_TYPE" = "ruby" ]; then
+        install_ruby
+    fi
+}
+
+if [ "$ASDF_EVENT_TYPE" = "all" ]; then
     install_asdf_plugins
+elif [ "$ASDF_EVENT_TYPE" = "install" ]; then
+    install_asdf_one_plugin
 elif [ "$ASDF_EVENT_TYPE" = "update" ]; then
     update_asdf_plugins
 fi

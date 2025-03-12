@@ -5294,6 +5294,8 @@ rules:
   - DOMAIN-SUFFIX,github.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,realm.io,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,boost.io,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,openssl.org,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,nodejs.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,hammerspoon.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,github.io,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubapp.com,Ⓜ️ 微软服务

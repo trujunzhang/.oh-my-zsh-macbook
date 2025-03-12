@@ -123,7 +123,10 @@
     - id: ID_v9pkbgcl
       name: djzhang-work
       type: select
-      proxies: []
+      proxies:
+        - id: ID_ttgpbi7i
+          type: Built-In
+          name: 🚀 Select
       url: https://www.gstatic.com/generate_204
       interval: 300
       strategy: consistent-hashing
@@ -139,7 +142,10 @@
     - id: ID_bspdaj1u
       name: GitHub-Working
       type: select
-      proxies: []
+      proxies:
+        - id: ID_ttgpbi7i
+          type: Built-In
+          name: 🚀 Select
       url: https://www.gstatic.com/generate_204
       interval: 300
       strategy: consistent-hashing
@@ -155,7 +161,10 @@
     - id: ID_plmkpgsw
       name: Youtube-Videos
       type: select
-      proxies: []
+      proxies:
+        - id: ID_ttgpbi7i
+          type: Built-In
+          name: 🚀 Select
       url: https://www.gstatic.com/generate_204
       interval: 300
       strategy: consistent-hashing

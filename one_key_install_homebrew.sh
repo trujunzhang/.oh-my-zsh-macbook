@@ -37,6 +37,14 @@ function brew_install_common {
     brew install ugit
 }
 
+function brew_install_libs {
+    # asdf install ruby
+    # psych:
+    #         Could not be configured. It will not be installed.
+    brew install libyaml
+}
+
 homebrew_install_third
 brew_install_jenkins
 brew_install_common 
+brew_install_libs

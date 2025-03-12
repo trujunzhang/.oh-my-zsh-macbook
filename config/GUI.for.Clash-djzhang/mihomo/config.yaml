@@ -163,6 +163,8 @@ proxy-groups:
     icon: ""
     use:
       - ID_lo8t72vx
+    proxies:
+      - 🚀 Select
     disable-udp: false
   - name: GitHub-Working
     type: select
@@ -172,6 +174,8 @@ proxy-groups:
     icon: ""
     use:
       - ID_lo8t72vx
+    proxies:
+      - 🚀 Select
     disable-udp: false
   - name: Youtube-Videos
     type: select
@@ -181,6 +185,8 @@ proxy-groups:
     icon: ""
     use:
       - ID_lo8t72vx
+    proxies:
+      - 🚀 Select
     disable-udp: false
   - name: 🚀 Select
     type: select
