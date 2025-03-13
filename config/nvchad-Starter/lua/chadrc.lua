@@ -107,6 +107,37 @@ M.ui = {
         virt_text = "󱓻 ",
         highlight = { hex = true, lspvars = true },
     },
+
+    statusline = {
+        enabled = true,
+        theme = "minimal",
+        separator_style = "round",
+        order = {
+            "mode",
+            "git",
+            "%=",
+            "lsp_msg",
+            -- "codeium",
+            "%=",
+            "diagnostics",
+            "cwd",
+            -- "cursor",
+        },
+        modules = {
+            codeium = function()
+                local codeium_vtx = require('codeium.virtual_text')
+                if codeium_vt then
+                    -- local status = require('codeium.virtual_text').status()
+                    -- local status = require('codeium.virtual_text').status_string()
+                    -- if status then
+                    --     return "%#Codeium#" .. status
+                    -- end
+                end
+
+                return "%##"
+            end,
+        },
+    },
 }
 
 return M
