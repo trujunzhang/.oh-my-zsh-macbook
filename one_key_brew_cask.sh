@@ -24,13 +24,15 @@ brew_apps=(
     "Ghostty" "ghostty" 'copy' 'backup'
     "Neovide" "Neovide" 'copy' 'no-bak'
     "Sublime Text" "SublimeText" "ssd" 'no-bak'
-    "Kindle" "kindle" "ssd" 'no-bak'
     "Android Studio" "AndroidStudio" "ssd" 'no-bak'
     "ResponsivelyApp" "ResponsivelyApp" "ssd" "no-bak"
     "Pixea" "pixea" "ssd" "no-bak"
     "Wondershare PDFelement" "pdfelement" "ssd" "no-bak"
     "DaisyDisk" "daisyDisk" "ssd" "no-bak"
     "Mac FoneLab Screen Recorder" "Mac FoneLab Screen Recorder" "ssd" "no-bak"
+    "Kindle" "Kindle" "copy" "no-bak"
+    "Z-Library" "Z-Library" "ssd" "no-bak"
+    "calibre" "calibre" "ssd" "no-bak"
 
     # System tools
     "Raycast" "raycast" 'copy' 'no-bak'
@@ -173,7 +175,7 @@ function restore_apps {
 
     app_path_in_backup_folder="${PATH_BACKUP}/${name}.zip"
     info "Restore app: ${appName}"
-    info "Backup app path: ${app_path_in_backup_folder}"
+    info "Last backup app path: ${app_path_in_backup_folder}"
 
     # if [ -d "${app_path_in_backup_folder}" ]; then
     #     cp -Rvp "${app_path_in_backup_folder}" "/Applications/${name}"

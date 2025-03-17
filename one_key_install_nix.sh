@@ -81,7 +81,8 @@ if type nix &>/dev/null; then
 #        sudo mv /etc/zshrc /etc/zshrc.bak
        if [ ! -f "/etc/nix/nix.conf" ]; then
             info "Starting to install nix-darwin"
-            nix run nix-darwin -- switch --verbose --option http2 false --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal"
+            # nix run nix-darwin -- switch --verbose --option http2 false --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal"
+            nix run nix-darwin -- switch --verbose --option http2 false --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal"
        fi
     fi
 fi

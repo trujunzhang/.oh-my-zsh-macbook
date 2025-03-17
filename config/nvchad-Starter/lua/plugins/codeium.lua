@@ -2,7 +2,7 @@
 local spec = {
     {
         "hrsh7th/nvim-cmp",
-        lazy = false,
+        -- lazy = false,
         config = function(_, opts)
             table.insert(opts.sources, { name = "codeium" })
             require("cmp").setup(opts)

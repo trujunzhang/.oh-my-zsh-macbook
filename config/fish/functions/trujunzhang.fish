@@ -712,7 +712,8 @@ alias dnix_bin="ls /etc/profiles/per-user/djzhang/bin"
 alias dnix_install_act="nix-shell -p act"
 
 function dnix_build_default
-    darwin-rebuild switch -v --option http2 false --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
+    # darwin-rebuild switch -v --option http2 false --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
+    darwin-rebuild switch -v --option http2 false --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
 end
 
 alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
