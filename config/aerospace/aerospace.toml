@@ -313,12 +313,21 @@ if.app-id = 'com.clickup.desktop-app'
 run = 'move-node-to-workspace U'
 
 [[on-window-detected]]
-if.app-id = 'com.sublimemerge'
-run = 'move-node-to-workspace S'
+# orbstack
+if.app-id = 'dev.kdrag0n.MacVir'
+run = 'move-node-to-workspace O'
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.pycharm'
+run = 'move-node-to-workspace P'
 
 [[on-window-detected]]
 if.app-id = 'org.qbittorrent.qBittorrent'
 run = ['move-node-to-workspace r']
+
+[[on-window-detected]]
+if.app-id = 'com.sublimemerge'
+run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
@@ -327,10 +336,6 @@ run = ['move-node-to-workspace T']
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace V'
-
-[[on-window-detected]]
-if.app-id = 'com.jetbrains.pycharm'
-run = 'move-node-to-workspace P'
 
 [[on-window-detected]]
 if.app-id = 'com.neovide.neovide'
