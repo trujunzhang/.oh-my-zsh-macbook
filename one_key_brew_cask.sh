@@ -22,7 +22,7 @@ brew_apps=(
     "Alacritty" "alacritty" 'copy' 'backup'
     "Wezterm" "wezterm" 'copy'  'backup'
     "Ghostty" "ghostty" 'copy' 'backup'
-    "Neovide" "Neovide" 'copy' 'no-bak'
+    # "Neovide" "Neovide" 'copy' 'no-bak'
     "Sublime Text" "SublimeText" "ssd" 'no-bak'
     "Android Studio" "AndroidStudio" "ssd" 'no-bak'
     "ResponsivelyApp" "ResponsivelyApp" "ssd" "no-bak"

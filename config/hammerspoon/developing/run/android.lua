@@ -60,8 +60,8 @@ hs.hotkey.bind(
     end)
 
 hs.hotkey.bind(
-    { 'Cmd' },
-    "B",
+    { 'Cmd', 'Alt' },
+    "X",
     function()
         -- local mobileApp = hs.appfinder.appFromWindowTitle("Android Emulator - genymotion:5554")
         local mobileApp = hs.appfinder.appFromWindowTitle(mobileTitle)

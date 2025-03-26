@@ -279,10 +279,6 @@ alias crunand="cocos run -p android"
 
 alias crunand86="cocos run -p android --ap android-21 --app-aib x86"
 
-# Homebrew
-alias brewUpgrade='brew upgrade'
-alias brewOutDated='brew outdated'
-
 # bundletool
 alias bundleApks='chmod +x bundletool/build_apk.sh & sh bundletool/build_apk.sh'
 alias bundleInstall='bundletool install-apks --apks='
@@ -328,17 +324,17 @@ alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --a
 # alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
 
 # xcode
-alias rosetta_install='softwareupdate --install-rosetta'
-alias xcode_select='sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer'
-alias xcode_download_ios='xcodebuild -downloadPlatform iOS'
+alias rosetta_install="softwareupdate --install-rosetta"
+alias xcode_select="sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer"
+alias xcode_download_ios="xcodebuild -downloadPlatform iOS"
 
-alias ios_devices='xcrun simctl list devices --json'
-alias ios_open_simulator='open -a Simulator'
+alias ios_devices="xcrun simctl list devices --json"
+alias ios_open_simulator="open -a Simulator"
 
 alias ios_shutdown_all="xcrun simctl shutdown all"
-alias ios_kill='killall "Simulator"'
-alias ios_list='xcrun simctl list devices available'
-alias ios_simctl='xcrun simctl list devices | grep "iPhone"'
+alias ios_kill="killall 'Simulator'"
+alias ios_list="xcrun simctl list devices available"
+alias ios_simctl="xcrun simctl list devices | grep 'iPhone'"
 
 alias iosiphone16plus="open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')"
 
@@ -366,7 +362,9 @@ function android_new_ieatta_genymotion_stop
     adb shell am start -n com.ieatta.track.dev/com.ieatta.track.dev.MainActivity
 end
 
-alias androidopen='$ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion'
+alias androidopen="$ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion"
+alias adb_restart="adb kill-server && adb start-server"
+alias adb_devices="adb devices"
 
 # Flutter
 alias fclean="flutter clean"
@@ -788,6 +786,10 @@ function open_ieatta_xcode_document
     set result $(xcrun simctl get_app_container booted com.ieatta.track.dev data)
     open "$result"
 end
+
+# Homebrew
+alias brew_upgrade='brew upgrade'
+alias brew_outDated='brew outdated'
 
 function brew_install_app
     export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
