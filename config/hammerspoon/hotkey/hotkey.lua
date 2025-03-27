@@ -25,6 +25,7 @@ hs.hotkey.bind(
 
         hs.timer.doAfter(0.3, function()
             local myApp = hs.application.applicationsForBundleID('com.brave.Browser.nightly')[1]
+            hs.eventtap.leftClick(hs.mouse.getAbsolutePosition())
             hs.eventtap.keyStroke({ "" }, "space", myApp)
         end)
 

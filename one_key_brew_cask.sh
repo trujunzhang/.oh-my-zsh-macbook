@@ -38,7 +38,7 @@ brew_apps=(
     "Raycast" "raycast" 'copy' 'no-bak'
     "SpaceLauncher" "spacelauncher" 'copy' 'backup'
     "Notion" "notion" 'copy' 'backup'
-    "ClickUp" "clickup" 'ssd' 'backup'
+    "ClickUp" "clickup" 'ssd' 'no-bak'
     # "OneDrive" "onedrive" 'copy' 'no-bak'
     # "Docker" "docker" "copy" 'no-bak'
     "OrbStack" "orbstack" "copy" 'no-bak'
