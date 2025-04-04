@@ -38,13 +38,13 @@
   {
     "type": "application",
     "name": "gui for singbox",
-    "application": "GUI.for.SingBox-v1.9.3.app",
+    "application": "GUI.for.SingBox.app",
     "enable": "0"
   },
   {
     "type": "application",
     "name": "gui for Clash",
-    "application": "GUI.for.Clash-v1.9.3.app",
+    "application": "GUI.for.Clash.app",
     "enable": "0"
   },
   {

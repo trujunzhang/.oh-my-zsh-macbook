@@ -11,6 +11,8 @@ source ./bash/tools.sh
 
 brew_apps=(
     "Xcode" "xcode" "ssd" "no-bak"
+    "CrossOver" "crossover" "ssd" "no-bak"
+    "Whiskey" "whiskey" "ssd" "no-bak"
     # Editor
     "Visual Studio Code" "visual-studio-code" "copy" "backup"
     # "Emacs"               "emacs" "copy"  "backup"

@@ -289,71 +289,100 @@
     default_interface: ""
     final: outbound-fallback
     find_process: false
+    default_domain_resolver:
+      server: Local-DNS
+      client_subnet: ""
   dns:
     servers:
       - id: Local-DNS
         tag: Local-DNS
-        address: https://223.5.5.5/dns-query
-        address_resolver: Local-DNS-Resolver
+        type: https
         detour: outbound-direct
-        strategy: default
-        client_subnet: ""
+        domain_resolver: Local-DNS-Resolver
+        hosts_path: []
+        predefined: {}
+        server: 223.5.5.5
+        server_port: ""
+        path: /dns-query
+        interface: ""
+        inet4_range: ""
+        inet6_range: ""
       - id: Local-DNS-Resolver
         tag: Local-DNS-Resolver
-        address: 223.5.5.5
-        address_resolver: ""
+        type: udp
         detour: outbound-direct
-        strategy: default
-        client_subnet: ""
+        domain_resolver: ""
+        hosts_path: []
+        predefined: {}
+        server: 223.5.5.5
+        server_port: ""
+        path: ""
+        interface: ""
+        inet4_range: ""
+        inet6_range: ""
       - id: Remote-DNS
         tag: Remote-DNS
-        address: tls://8.8.8.8
-        address_resolver: Remote-DNS-Resolver
+        type: tls
         detour: outbound-select
-        strategy: default
-        client_subnet: ""
+        domain_resolver: Remote-DNS-Resolver
+        hosts_path: []
+        predefined: {}
+        server: 8.8.8.8
+        server_port: ""
+        path: ""
+        interface: ""
+        inet4_range: ""
+        inet6_range: ""
       - id: Remote-DNS-Resolver
         tag: Remote-DNS-Resolver
-        address: 8.8.8.8
-        address_resolver: ""
+        type: udp
         detour: outbound-select
-        strategy: default
-        client_subnet: ""
+        domain_resolver: ""
+        hosts_path: []
+        predefined: {}
+        server: 8.8.8.8
+        server_port: ""
+        path: ""
+        interface: ""
+        inet4_range: ""
+        inet6_range: ""
     rules:
-      - id: ID_sdoinz41
-        type: outbound
-        payload: any
-        action: route
-        server: Local-DNS
-        invert: false
       - id: ID_35oqgfro
         type: clash_mode
         payload: direct
         action: route
-        server: Local-DNS
         invert: false
+        server: Local-DNS
+        strategy: default
+        disable_cache: false
+        client_subnet: ""
       - id: ID_6clq2129
         type: clash_mode
         payload: global
         action: route
-        server: Remote-DNS
         invert: false
+        server: Remote-DNS
+        strategy: default
+        disable_cache: false
+        client_subnet: ""
       - id: ID_pjo3olnm
         type: rule_set
         payload: GeoSite-CN
         action: route
-        server: Local-DNS
         invert: false
+        server: Local-DNS
+        strategy: default
+        disable_cache: false
+        client_subnet: ""
       - id: ID_103kcadf
         type: rule_set
         payload: GeoLocation-!CN
         action: route
-        server: Remote-DNS
         invert: false
-    fakeip:
-      enabled: false
-      inet4_range: 198.18.0.0/15
-      inet6_range: fc00::/18
+        server: Remote-DNS
+        strategy: default
+        disable_cache: false
+        client_subnet: ""
     disable_cache: false
     disable_expire: false
     independent_cache: false
