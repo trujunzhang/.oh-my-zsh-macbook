@@ -10,7 +10,7 @@ let inherit (lib) mkIf elem; in
       fastlane
       ruby_3_3
       luarocks
-      ccache
+      # ccache
       # nginx
       # vscode
       # neovim

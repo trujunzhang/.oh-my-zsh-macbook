@@ -10,6 +10,7 @@ source ./bash/tools.sh
 # https://github.com/buo/homebrew-cask-upgrade
 
 brew_apps=(
+    "Xcode" "xcode" "ssd" "no-bak"
     # Editor
     "Visual Studio Code" "visual-studio-code" "copy" "backup"
     # "Emacs"               "emacs" "copy"  "backup"
@@ -64,7 +65,7 @@ brew_apps=(
     "Microsoft Edge" "microsoft-edge" 'ssd' 'backup'
 
     # Design apps
-    "Figma" "figma" 'ssd' 'backup'
+    "Figma" "figma" 'copy' 'backup'
     "Zeplin" "zeplin" 'ssd' 'backup'
     "VLC" "vlc" 'ssd' 'no-bak'
     "Elmedia Player" "ElmediaPlayer" "ssd" 'no-bak'
@@ -141,11 +142,8 @@ function backup_apps_from_Applications {
         rm "${app_path_in_backup_folder}"
     fi
 
-    # cp -Rvp "/Applications/${name}" "${app_path_in_backup_folder}"
     cd "/Applications"
     zip -y -r -q "${app_path_in_backup_folder}" "${appName}"
-
-    # ditto -c -k --sequesterRsrc --keepParent "$appName" "$app_path_in_backup_folder"
 }
 
 function backup_apps_in_backup_folder {
@@ -162,11 +160,8 @@ function backup_apps_in_backup_folder {
         rm "${app_path_in_backup_folder}"
     fi
 
-    # cp -Rvp "/Applications/${name}" "${app_path_in_backup_folder}"
     cd "${PATH_BACKUP}"
     zip -y -r -q "${app_path_in_backup_folder}" "${appName}"
-
-    # ditto -c -k --sequesterRsrc --keepParent "$appName" "$app_path_in_backup_folder"
 }
 
 function restore_apps {
@@ -176,10 +171,6 @@ function restore_apps {
     app_path_in_backup_folder="${PATH_BACKUP}/${name}.zip"
     info "Restore app: ${appName}"
     info "Last backup app path: ${app_path_in_backup_folder}"
-
-    # if [ -d "${app_path_in_backup_folder}" ]; then
-    #     cp -Rvp "${app_path_in_backup_folder}" "/Applications/${name}"
-    # fi
 
     if [ -f "${app_path_in_backup_folder}" ]; then
         unzip "${app_path_in_backup_folder}" -d "/Applications"

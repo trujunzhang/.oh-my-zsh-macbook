@@ -69,7 +69,7 @@
     "type": "application",
     "name": "Ghostty",
     "application": "Ghostty",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
