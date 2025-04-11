@@ -728,7 +728,7 @@
       },
       {
         "tag": "Local-DNS-Resolver",
-        "address": "223.5.5.5",
+        "address": "udp://223.5.5.5",
         "detour": "🎯 Direct"
       },
       {
@@ -739,7 +739,7 @@
       },
       {
         "tag": "Remote-DNS-Resolver",
-        "address": "8.8.8.8",
+        "address": "udp://8.8.8.8",
         "detour": "🚀 Select"
       }
     ],
@@ -751,34 +751,29 @@
       },
       {
         "action": "route",
-        "server": "Local-DNS",
-        "clash_mode": "direct"
+        "clash_mode": "direct",
+        "server": "Local-DNS"
       },
       {
         "action": "route",
-        "server": "Remote-DNS",
-        "clash_mode": "global"
+        "clash_mode": "global",
+        "server": "Remote-DNS"
       },
       {
         "action": "route",
-        "server": "Local-DNS",
         "rule_set": [
           "GeoSite-CN"
-        ]
+        ],
+        "server": "Local-DNS"
       },
       {
         "action": "route",
-        "server": "Remote-DNS",
         "rule_set": [
           "GeoLocation-!CN"
-        ]
+        ],
+        "server": "Remote-DNS"
       }
     ],
-    "fakeip": {
-      "enabled": false,
-      "inet4_range": "198.18.0.0/15",
-      "inet6_range": "fc00::/18"
-    },
     "disable_cache": false,
     "disable_expire": false,
     "independent_cache": false,

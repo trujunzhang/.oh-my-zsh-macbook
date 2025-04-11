@@ -35,6 +35,7 @@ function brew_install_rbenv {
 function brew_install_common {
     # https://github.com/Bhupesh-V/ugit
     brew install ugit
+    brew install neovide
 }
 
 function brew_install_libs {

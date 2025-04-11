@@ -323,10 +323,14 @@ run = 'move-node-to-workspace P'
 
 [[on-window-detected]]
 if.app-id = 'org.qbittorrent.qBittorrent'
-run = ['move-node-to-workspace r']
+run = ['move-node-to-workspace R']
 
 [[on-window-detected]]
 if.app-id = 'com.sublimemerge'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+if.app-id = 'org.filezilla-project.filezilla'
 run = 'move-node-to-workspace S'
 
 [[on-window-detected]]

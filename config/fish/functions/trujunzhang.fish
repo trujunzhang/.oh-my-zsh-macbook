@@ -135,6 +135,9 @@ alias ystartclient='yarn start:client'
 alias ystart='yarn start'
 alias yrandroid='yarn android'
 alias yrios='yarn ios'
+alias ysrios="yarn ios-standalone"
+alias ysrandroid="yarn android-standalone"
+alias yspodirios="yarn pod-install-standalone && ysrios"
 alias yallrios='bundle install && ninstall && npm run pod-install && yarn ios'
 alias yallrandroid='bundle install && ninstall && yarn android'
 alias yripad='yarn ipad'
@@ -182,9 +185,14 @@ alias nclear="npm cache clear --force"
 alias npmrr="npm run sketch:render"
 
 # npm.plugin
-alias ninstallxxx='npm install --verbose && offline_local_ios_pods'
-alias ninstall='npm install --verbose --no-cache'
-alias npmi='npm install --verbose --no-cache'
+alias ninstallxxx="npm install --verbose && offline_local_ios_pods"
+alias ninstall="npm install --verbose --no-cache"
+alias nsinstall="npm run install-standalone"
+alias npmi="npm install --verbose --no-cache"
+
+alias nspodirios="npm run pod-install-standalone && nsrios"
+alias nsrios="npm run ios-standalone"
+alias nsrandroid="npm run android-standalone"
 
 alias nvscode_langservers='npm i -g vscode-langservers-extracted'
 
@@ -670,6 +678,8 @@ alias dclone_superbase="git clone https://github.com/supabase/supabase --depth 1
 #see: https://github.com/CodyReichert/awesome-cl
 alias dclone_lisp_matrix="git clone https://github.com/blindglobe/lisp-matrix --depth 1"
 alias dclone_singbox_rules="git clone https://github.com/MetaCubeX/meta-rules-dat && cd meta-rules-dat && git checkout sing"
+# react projects
+alias dclone_cal="git clone https://github.com/calcom/cal.com --depth 1"
 
 alias git_set_v2ray_proxy="git config --global http.proxy http://127.0.0.1:1087"
 alias git_set_clash_proxy_http="git config --global http.proxy http://127.0.0.1:7890"
