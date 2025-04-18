@@ -366,8 +366,8 @@ function link_symlink {
     # v1.8.8
     # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
     # v1.9.3
-    # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-hxyin" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
-    directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-wanghao" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
+    directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-hxyin" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
+    # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-wanghao" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
 
     # GUI.for.clash
     directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
