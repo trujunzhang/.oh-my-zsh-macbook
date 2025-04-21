@@ -54,7 +54,7 @@ hs.hotkey.bind(
         -- hs.application.launchOrFocus("Neovide")
         -- end)
 
-        hs.notify.new({ title = "run ios", informativeText = "typing cmd on the WezTerm successfully" }):send():release()
+        hs.notify.new({ title = "run ios", informativeText = "typing cmd on the WezTerm successfully" }):send()
     end)
 
 hs.hotkey.bind(
@@ -99,5 +99,4 @@ hs.hotkey.bind(
         hs.eventtap.keyStroke({ "Ctrl" }, 'A', myApp)
 
         hs.notify.new({ title = "Escape all tabs", informativeText = "Run it successfully" }):send()
-            :release()
     end)

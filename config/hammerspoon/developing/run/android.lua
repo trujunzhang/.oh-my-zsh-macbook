@@ -56,7 +56,6 @@ hs.hotkey.bind(
         -- end)
 
         hs.notify.new({ title = "run android", informativeText = "typing cmd on the WezTerm successfully" }):send()
-            :release()
     end)
 
 hs.hotkey.bind(
@@ -70,5 +69,4 @@ hs.hotkey.bind(
         end
 
         hs.notify.new({ title = "kill android", informativeText = "close it successfully" }):send()
-            :release()
     end)

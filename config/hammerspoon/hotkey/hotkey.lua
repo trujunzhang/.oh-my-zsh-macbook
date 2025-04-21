@@ -13,7 +13,7 @@ hs.hotkey.bind(
     function()
         local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
         hs.execute(shell_command)
-        hs.notify.new({ title = "toggle Aerospace", informativeText = "toggle it sucessfully" }):send():release()
+        hs.notify.new({ title = "toggle Aerospace", informativeText = "toggle it sucessfully" }):send()
     end)
 
 

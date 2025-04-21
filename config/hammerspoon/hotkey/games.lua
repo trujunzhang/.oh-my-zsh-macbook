@@ -1,13 +1,26 @@
+-- local GamesFolder = "/Volumes/MacGame/AppGames/Kegworks"
+local GamesFolder = "/Volumes/MacGame/AppGames/"
+local KegworksGames = GamesFolder .. 'Kegworks/'
+
+-- Assassins-creed-three.app
+-- 'Assassins Creed IV Black Flag.app'
+-- Assassins-creed-rogue.app
+-- Assassins-creed-unity.app
+-- Cyberpunk.2077..app
+
+local function activeWindow()
+    hs.timer.doAfter(20, function()
+        hs.eventtap.leftClick(hs.mouse.getAbsolutePosition())
+        hs.notify.new({ title = "Active game window", informativeText = "click it sucessfully" }):send()
+    end)
+end
+
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },
     "R",
     function()
-        -- local appPath = "/Volumes/MacGame/AppGames/Resident Evil Village.app"
-        -- hs.application:open("/Volumes/MacGame/AppGames/Resident Evil Village.app")
-
-        hs.application.launchOrFocus("Resident Evil Village.app")
-
-        hs.notify.new({ title = "Resident Evil Village.app", informativeText = "run it sucessfully" }):send():release()
+        hs.application.launchOrFocus(GamesFolder .. "Resident Evil Village.app")
+        hs.notify.new({ title = "Resident Evil Village.app", informativeText = "run it sucessfully" }):send()
     end)
 
 
@@ -15,41 +28,65 @@ hs.hotkey.bind(
     { 'Cmd', 'Alt' },
     "M",
     function()
-        -- local appPath = "/Volumes/MacGame/AppGames/MetroExodus.app"
-        -- hs.application:open('/Volumes/MacGame/AppGames/MetroExodus.app')
-
-        hs.application.launchOrFocus("MetroExodus.app")
-
-        hs.notify.new({ title = "MetroExodus.app", informativeText = "run it sucessfully" }):send():release()
+        hs.application.launchOrFocus(GamesFolder .. "MetroExodus.app")
+        hs.notify.new({ title = "MetroExodus.app", informativeText = "run it sucessfully" }):send()
     end)
 
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },
     "1",
     function()
-        -- local appPath = "/Volumes/MacGame/AppGames/MetroExodus.app"
-        -- hs.application:open('/Volumes/MacGame/AppGames/MetroExodus.app')
-
         hs.application.launchOrFocus("Assassin's Creed Shadows.app")
-
-        hs.notify.new({ title = "Assassin's Creed Shadows.app", informativeText = "run it sucessfully" }):send():release()
+        hs.notify.new({ title = "Assassin's Creed Shadows.app", informativeText = "run it sucessfully" }):send()
     end)
 
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "3",
+    function()
+        hs.application.launchOrFocus(KegworksGames .. "Assassins-creed-three.app")
+        hs.notify.new({ title = "Assassins-creed-three.app", informativeText = "run it sucessfully" }):send()
+
+        activeWindow()
+    end)
 
 
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },
     "4",
     function()
-        -- hs.application:open("/Applications/CrossOver.app")
+        hs.application.launchOrFocus(KegworksGames .. "Assassins Creed IV Black Flag.app")
+        hs.notify.new({ title = "Assasins Creed - black flag", informativeText = "run it sucessfully" }):send()
 
-        hs.application.launchOrFocus("/Applications/CrossOver.app")
-        -- hs.notify.new({ title = "CrossOver", informativeText = "run it sucessfully" }):send():release()
+        activeWindow()
+    end)
 
-        hs.timer.doAfter(1.0, function()
-            hs.application.launchOrFocus("AC4BFSP")
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "5",
+    function()
+        hs.application.launchOrFocus(KegworksGames .. "Assassins-creed-rogue.app")
+        hs.notify.new({ title = "Assassins-creed-rogue.app", informativeText = "run it sucessfully" }):send()
 
-            hs.notify.new({ title = "Assasins Creed - black flag", informativeText = "run it sucessfully" }):send()
-                :release()
-        end)
+        activeWindow()
+    end)
+
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "6",
+    function()
+        hs.application.launchOrFocus(KegworksGames .. "Assassins-creed-unity.app")
+        hs.notify.new({ title = "Assassins-creed-unity.app", informativeText = "run it sucessfully" }):send()
+
+        activeWindow()
+    end)
+
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "C",
+    function()
+        hs.application.launchOrFocus(KegworksGames .. "Cyberpunk.2077..app")
+        hs.notify.new({ title = "Cyberpunk.2077..app", informativeText = "run it sucessfully" }):send()
+
+        activeWindow()
     end)
