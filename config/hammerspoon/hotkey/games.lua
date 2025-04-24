@@ -9,9 +9,13 @@ local KegworksGames = GamesFolder .. 'Kegworks/'
 -- Cyberpunk.2077..app
 
 local function activeWindow()
-    hs.timer.doAfter(20, function()
+    hs.timer.doAfter(30, function()
         hs.eventtap.leftClick(hs.mouse.getAbsolutePosition())
-        hs.notify.new({ title = "Active game window", informativeText = "click it sucessfully" }):send()
+        -- hs.notify.new({ title = "Active game window", informativeText = "click it sucessfully" }):send()
+        hs.alert.show(string.format("App path:        %s\nApp name:      %s\nIM source id:  %s",
+            hs.window.focusedWindow():application():path(),
+            hs.window.focusedWindow():application():name(),
+            hs.keycodes.currentSourceID()))
     end)
 end
 

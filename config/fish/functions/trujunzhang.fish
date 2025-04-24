@@ -210,6 +210,7 @@ alias nrios='npm run ios'
 alias nripad='npm run ipad'
 alias nrandroid='npm run android'
 alias nbuild-android='npm run android-build'
+alias nbuild-mac='npm run desktop-build'
 
 # run dev
 alias npmd='npm run dev'

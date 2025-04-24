@@ -36,6 +36,9 @@ function brew_install_common {
     # https://github.com/Bhupesh-V/ugit
     brew install ugit
     brew install neovide
+
+    # https://github.com/Muhammed770/hammerspoon-bluetooth-automation
+    brew install blueutil
 }
 
 function brew_install_libs {

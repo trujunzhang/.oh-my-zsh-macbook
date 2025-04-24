@@ -4,8 +4,23 @@ local hyper = { 'alt', 'cmd' }
 hs.hotkey.bind({ 'alt', "cmd" }, "G", hs.caffeinate.systemSleep)
 
 function fancyNotify(t, m)
-    hs.notify.new({ title = t, informativeText = m }):send():release()
+    hs.notify.new({ title = t, informativeText = m }):send()
 end
+
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "F",
+    function()
+        local bluetoothDevice = "DualSense Wireless Controller"
+
+        local deviceAddress = "90-b6-85-65-d4-5d"
+
+        -- blueutil connect <device_mac_address>
+        -- hs.execute("/opt/homebrew/bin/blueutil --pair \"" .. bluetoothDevice .. "\"", false)
+        hs.execute("/opt/homebrew/bin/blueutil --connect " .. deviceAddress)
+
+        hs.notify.new({ title = "connect PS5 bluetooth device", informativeText = "connect it sucessfully" }):send()
+    end)
 
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },
