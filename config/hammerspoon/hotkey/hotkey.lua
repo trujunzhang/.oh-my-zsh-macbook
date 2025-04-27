@@ -16,8 +16,8 @@ hs.hotkey.bind(
         local deviceAddress = "90-b6-85-65-d4-5d"
 
         -- blueutil connect <device_mac_address>
-        -- hs.execute("/opt/homebrew/bin/blueutil --pair \"" .. bluetoothDevice .. "\"", false)
-        hs.execute("/opt/homebrew/bin/blueutil --connect " .. deviceAddress)
+        local shell_command = "/opt/homebrew/bin/blueutil --connect 90-b6-85-65-d4-5d"
+        hs.execute(shell_command)
 
         hs.notify.new({ title = "connect PS5 bluetooth device", informativeText = "connect it sucessfully" }):send()
     end)

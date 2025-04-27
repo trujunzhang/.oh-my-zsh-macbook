@@ -13,7 +13,7 @@ local function activeWindow()
         hs.eventtap.leftClick(hs.mouse.getAbsolutePosition())
         -- hs.notify.new({ title = "Active game window", informativeText = "click it sucessfully" }):send()
         hs.alert.show(string.format("App path:        %s\nApp name:      %s\nIM source id:  %s",
-            hs.window.focusedWindow():application():path(),
+            hs.window.focusedWindow():application():name(),
             hs.window.focusedWindow():application():name(),
             hs.keycodes.currentSourceID()))
     end)
@@ -40,8 +40,9 @@ hs.hotkey.bind(
     { 'Cmd', 'Alt' },
     "1",
     function()
-        hs.application.launchOrFocus("Assassin's Creed Shadows.app")
-        hs.notify.new({ title = "Assassin's Creed Shadows.app", informativeText = "run it sucessfully" }):send()
+        -- hs.application.launchOrFocus("Assassin's Creed Shadows.app")
+        hs.application.launchOrFocus(GamesFolder .. "Shadow of the Tomb Raider.app")
+        hs.notify.new({ title = "Shadow of the Tomb Raider.app", informativeText = "run it sucessfully" }):send()
     end)
 
 hs.hotkey.bind(

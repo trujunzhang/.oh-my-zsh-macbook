@@ -810,6 +810,24 @@ function brew_install_app
     brew install $app
 end
 
+function dmac_games_sign
+    set gameName $argv[1]
+    set gameFolder "/Volumes/MacGame/AppGames"
+    set lower_gameName (string lower $gameName)
+
+    for file in "$gameFolder"/*.app
+
+       set lower_file (string lower $file)
+       echo "file path: $file"
+
+       if string match -q "*$lower_gameName*" $lower_file
+           echo " Processing file: $file"
+
+           xattr -cr "$file" && codesign --force --deep --sign - "$file"
+       end
+    end
+
+end
 
 alias open_ieatta_android_release_fold="open $ORGANIZATIONS_HOME/__CODING/WORKING/ieatta-three-apps/android/app/build/outputs/apk/production/release"
 alias dinstall_ieatta_android_release="adb install $ORGANIZATIONS_HOME/__CODING/WORKING/ieatta-three-apps/android/app/build/outputs/apk/production/release/app-production-release.apk"
