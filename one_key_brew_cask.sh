@@ -27,6 +27,7 @@ brew_apps=(
     "Ghostty" "ghostty" 'copy' 'backup'
     # "Neovide" "Neovide" 'copy' 'no-bak'
     "Sublime Text" "SublimeText" "ssd" 'no-bak'
+    "Sublime Merge" "Sublime Merge" "ssd" "no-bak"
     "Android Studio" "AndroidStudio" "ssd" 'no-bak'
     "ResponsivelyApp" "ResponsivelyApp" "ssd" "no-bak"
     "Pixea" "pixea" "ssd" "no-bak"

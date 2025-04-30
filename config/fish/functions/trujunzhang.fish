@@ -812,8 +812,13 @@ end
 
 function dmac_games_sign
     set gameName $argv[1]
+
+    set my_variable ( if set -q gameName; echo $gameName; else; echo "default_value"; end )
+       
+    echo "game name: $my_variable"
+
     set gameFolder "/Volumes/MacGame/AppGames"
-    set lower_gameName (string lower $gameName)
+    set lower_gameName (string lower $my_variable)
 
     for file in "$gameFolder"/*.app
 
