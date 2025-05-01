@@ -49,18 +49,6 @@
   },
   {
     "type": "application",
-    "name": "crossover",
-    "application": "Crossover.app",
-    "enable": "0"
-  },
-  {
-    "type": "application",
-    "name": "whisky",
-    "application": "Whisky.app",
-    "enable": "0"
-  },
-  {
-    "type": "application",
     "name": "Alacritty",
     "application": "Alacritty",
     "enable": "0"
@@ -99,12 +87,6 @@
     "type": "application",
     "name": "Raycast",
     "path": "Raycast",
-    "enable": "0"
-  },
-  {
-    "type": "application",
-    "name": "myCMDsAndroid",
-    "path": "myCMDsAndroid",
     "enable": "0"
   },
   {

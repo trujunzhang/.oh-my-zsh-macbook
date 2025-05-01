@@ -831,7 +831,7 @@ function dmac_games_sign
        if string match -q "*$lower_gameName*" $lower_file
            echo " Processing file: $file"
 
-           # xattr -cr "$file" && codesign --force --deep --sign - "$file"
+           xattr -cr "$file" && codesign --force --deep --sign - "$file"
        end
     end
 
