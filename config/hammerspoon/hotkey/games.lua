@@ -40,9 +40,16 @@ hs.hotkey.bind(
     { 'Cmd', 'Alt' },
     "1",
     function()
-        -- hs.application.launchOrFocus("Assassin's Creed Shadows.app")
         hs.application.launchOrFocus(GamesFolder .. "Shadow of the Tomb Raider.app")
         hs.notify.new({ title = "Shadow of the Tomb Raider.app", informativeText = "run it sucessfully" }):send()
+    end)
+
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "2",
+    function()
+        hs.application.launchOrFocus(GamesFolder .. "Rise of the Tomb Raide.app")
+        hs.notify.new({ title = "Rise of the Tomb Raide.app", informativeText = "run it sucessfully" }):send()
     end)
 
 hs.hotkey.bind(
@@ -85,6 +92,17 @@ hs.hotkey.bind(
 
         activeWindow()
     end)
+
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "7",
+    function()
+        hs.application.launchOrFocus(KegworksGames .. "Need-for-speed-payback.app")
+        hs.notify.new({ title = "Need-for-speed-payback.app", informativeText = "run it sucessfully" }):send()
+
+        activeWindow()
+    end)
+
 
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },

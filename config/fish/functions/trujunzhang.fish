@@ -813,12 +813,15 @@ end
 function dmac_games_sign
     set gameName $argv[1]
 
-    set my_variable ( if set -q gameName; echo $gameName; else; echo "default_value"; end )
+    if not set -q argv[1]
+        echo 'not defined gameName'
+        set gameName 'default_value'
+    end
        
-    echo "game name: $my_variable"
+    echo "game name: $gameName"
 
     set gameFolder "/Volumes/MacGame/AppGames"
-    set lower_gameName (string lower $my_variable)
+    set lower_gameName (string lower $gameName)
 
     for file in "$gameFolder"/*.app
 
@@ -828,7 +831,7 @@ function dmac_games_sign
        if string match -q "*$lower_gameName*" $lower_file
            echo " Processing file: $file"
 
-           xattr -cr "$file" && codesign --force --deep --sign - "$file"
+           # xattr -cr "$file" && codesign --force --deep --sign - "$file"
        end
     end
 
