@@ -49,14 +49,8 @@
   },
   {
     "type": "application",
-    "name": "Alacritty",
-    "application": "Alacritty",
-    "enable": "0"
-  },
-  {
-    "type": "application",
-    "name": "Ghostty",
-    "application": "Ghostty",
+    "name": "Homerow",
+    "application": "Homerow",
     "enable": "0"
   },
   {
@@ -79,26 +73,8 @@
   },
   {
     "type": "application",
-    "name": "google chrome",
-    "application": "google chrome",
-    "enable": "0"
-  },
-  {
-    "type": "application",
     "name": "Raycast",
     "path": "Raycast",
-    "enable": "0"
-  },
-  {
-    "type": "application",
-    "name": "webstorm",
-    "application": "webstorm",
-    "enable": "0"
-  },
-  {
-    "type": "application",
-    "name": "Vivaldi",
-    "application": "Vivaldi",
     "enable": "0"
   },
   {

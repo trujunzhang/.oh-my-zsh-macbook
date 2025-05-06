@@ -10,9 +10,11 @@ source ./bash/tools.sh
 # https://github.com/buo/homebrew-cask-upgrade
 
 brew_apps=(
+    "Keyboard Maestro" "Keyboard Maestro" "copy" "no-bak"
     "Xcode" "xcode" "ssd" "no-bak"
     "CrossOver" "crossover" "ssd" "no-bak"
     "Whiskey" "whiskey" "ssd" "no-bak"
+    "Homerow" "homerow" "copy" "no-bak"
     # Editor
     "Visual Studio Code" "visual-studio-code" "copy" "backup"
     # "Emacs"               "emacs" "copy"  "backup"
