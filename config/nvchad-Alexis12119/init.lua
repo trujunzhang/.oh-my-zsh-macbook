@@ -1,4 +1,6 @@
 require "core.globals"
+require "core.env"
+require "options"
 
 if vim.version().minor >= 11 then
   vim.tbl_add_reverse_lookup = function(tbl)
@@ -38,12 +40,9 @@ for _, v in ipairs(vim.fn.readdir(vim.g.base46_cache)) do
   dofile(vim.g.base46_cache .. v)
 end
 
-require "options"
 require "nvchad.autocmds"
 require "core.commands"
-
-vim.schedule(function()
-  require "mappings"
-end)
-
-require "myinit"
+require "core.autocommands"
+require "core.filetypes"
+require "core.utils"
+require "mappings"

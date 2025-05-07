@@ -1,6 +1,7 @@
 ---@type NvPluginSpec
+-- NOTE: Show Marks
 return {
-  "folke/ts-comments.nvim",
+  "chentoast/marks.nvim",
   event = {
     "BufReadPost",
     "BufNewFile",
