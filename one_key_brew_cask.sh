@@ -78,7 +78,6 @@ brew_apps=(
     "Infuse" "infuse" 'ssd' 'no-bak'
 
     # chat apps
-    "Skype" "skype" 'ssd' 'backup'
     # "WeChat"              "wechat" "ssd" 'backup'
     # "QQ"                  "qq" 'ssd' 'backup'
 )

@@ -9,7 +9,8 @@ keybinds {
         unbind "Ctrl b"
         unbind "Ctrl q"
         unbind "Alt h"
-        unbind "Alt n" 
+        unbind "Alt l"
+        // unbind "Alt n" 
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }
