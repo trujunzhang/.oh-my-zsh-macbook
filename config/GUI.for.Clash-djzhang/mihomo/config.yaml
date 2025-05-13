@@ -5,7 +5,7 @@ mixed-port: 20112
 allow-lan: false
 log-level: info
 interface-name: ""
-port: 0
+port: 1234
 socks-port: 0
 secret: ID_ssrvwiwo
 external-controller: 127.0.0.1:20113

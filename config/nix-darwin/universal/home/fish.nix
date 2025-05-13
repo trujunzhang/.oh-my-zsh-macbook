@@ -59,6 +59,9 @@ end
     set-fish-env-variables= {
       body = ''
 
+# export http_proxy=127.0.0.1:1088;export https_proxy=$http_proxy
+set -g -x  http_proxy 127.0.0.1:1234
+set -g -x  https_proxy 127.0.0.1:1234
 
 # environment variable
 set -g -x  ORGANIZATIONS_HOME "$HOME/Documents/Organizations"

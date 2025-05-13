@@ -1,5 +1,19 @@
 #!/usr/bin/env bash
 
+# Check if RED has already been defined
+if [ -z "${RED+x}" ]; then
+  declare -r RED=$'\e[1;31m'
+fi
+
+# Check if RESET has already been defined
+if [ -z "${RESET+x}" ]; then
+  declare -r RESET=$'\e[0m'
+fi
+
+function error {
+  echo "💥 $RED$1$RESET"
+}
+
 DEFAULTVALUE="vps"
 Params="${1:-$DEFAULTVALUE}"
 
@@ -90,12 +104,12 @@ function clone_github {
         if [ ! -d "${destFold}" ]; then
             # first of all, clone it to the dest fold
             git clone ${gitUrl} ${destFold} --depth=1
+        fi
 
-            # then, fetch tags
-            if [  -d "${destFold}" ]; then
-                cd ${destFold}
-                git fetch --tags
-            fi
+        # then, fetch tags
+        if [  -d "${destFold}" ]; then
+            cd ${destFold}
+            git fetch --tags
         fi
 
         echo ""
@@ -137,6 +151,7 @@ function check_gits_length {
 
     # echo ${ARRAY[@]}
 
+    echo ""
     for ((lib = 0; lib < ${#git_libs[@]}; lib = lib + 2)); do
         gitUrl="${git_libs[$lib + 0]}"
         destFold="${git_libs[$lib + 1]}"
@@ -149,11 +164,10 @@ function check_gits_length {
             fi
         done
         if [ "$exist" == "false" ]; then
-            echo ""
-            echo "*${destFold}* not exist"
-            echo ""
+            error "*${destFold}* not exist"
         fi
     done
+    echo ""
 
     echo length of git urls: $gits_length
     echo length folder of $OUT_GIT_FOLD: $local_folder_length

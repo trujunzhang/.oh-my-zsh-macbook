@@ -31,7 +31,7 @@
       mixed:
         listen:
           listen: 127.0.0.1
-          listen_port: 20122
+          listen_port: 1234
           tcp_fast_open: false
           tcp_multi_path: false
           udp_fragment: false

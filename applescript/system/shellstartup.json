@@ -31,12 +31,6 @@
   },
   {
     "type": "application",
-    "name": "clash for x86",
-    "application": "ClashX",
-    "enable": "0"
-  },
-  {
-    "type": "application",
     "name": "gui for singbox",
     "application": "GUI.for.SingBox.app",
     "enable": "0"
@@ -51,6 +45,12 @@
     "type": "application",
     "name": "Homerow",
     "application": "Homerow",
+    "enable": "0"
+  },
+  {
+    "type": "application",
+    "name": "Ghostty",
+    "application": "Ghostty",
     "enable": "0"
   },
   {

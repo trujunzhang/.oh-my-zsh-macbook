@@ -8,7 +8,7 @@
     log-level: silent
     interface-name: ""
   advancedConfig:
-    port: 0
+    port: 1234
     socks-port: 0
     secret: ID_ssrvwiwo
     external-controller: 127.0.0.1:20113

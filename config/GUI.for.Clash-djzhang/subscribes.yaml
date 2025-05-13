@@ -107,3 +107,7 @@
     - id: ID_df93cnti
       name: 🇺🇸 US 5
       type: vless
+  script: |-
+    const onSubscribe = async (proxies, subscription) => {
+      return { proxies, subscription }
+    }

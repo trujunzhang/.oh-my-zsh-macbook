@@ -5303,6 +5303,8 @@ rules:
   - DOMAIN-SUFFIX,githubapp.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,cloudflare.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubassets.com,Ⓜ️ 微软服务
+  # z-library
+  - DOMAIN-SUFFIX,ncdn.ec,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubusercontent.com,Ⓜ️ 微软服务
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼

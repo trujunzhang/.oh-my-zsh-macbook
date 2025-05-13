@@ -111,3 +111,7 @@
     - id: ID_7e4qqfa1
       tag: CF优选 23
       type: vless
+  script: |-
+    const onSubscribe = async (proxies, subscription) => {
+      return { proxies, subscription }
+    }

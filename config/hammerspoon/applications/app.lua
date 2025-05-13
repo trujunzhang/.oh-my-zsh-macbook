@@ -16,6 +16,7 @@ hs.hotkey.bind(
     "C",
     function()
         hs.application.launchOrFocus("WezTerm")
+        -- hs.application.launchOrFocus("Ghostty")
 
         EscapeTab("A")
         EscapeTab("W")
@@ -23,11 +24,12 @@ hs.hotkey.bind(
         EscapeTab("R")
 
         EscapeTab("F")
-        EscapeTab("J")
+        EscapeTab("U")
         EscapeTab("K")
         EscapeTab("L")
 
         local myApp = hs.application.applicationsForBundleID('com.github.wez.wezterm')[1]
+        -- local myApp = hs.application.applicationsForBundleID('com.mitchellh.ghostty')[1]
         hs.eventtap.keyStroke({ "Ctrl" }, 'A', myApp)
 
         hs.notify.new({ title = "Escape all tabs", informativeText = "Run it successfully" }):send()
