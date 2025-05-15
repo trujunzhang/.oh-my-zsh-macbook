@@ -43,9 +43,9 @@
   },
   {
     "type": "application",
-    "name": "Homerow",
-    "application": "Homerow",
-    "enable": "0"
+    "name": "Leader Key",
+    "application": "Leader Key.app",
+    "enable": "1"
   },
   {
     "type": "application",

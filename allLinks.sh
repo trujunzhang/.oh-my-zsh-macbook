@@ -324,6 +324,8 @@ function link_symlink {
 
     directoryLink "hammerspoon(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/hammerspoon" "$HOME/.hammerspoon"
 
+    directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner" "$HOME/.config/karabiner"
+
     # **IDES(purcell's emacs.d)
     # directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
 

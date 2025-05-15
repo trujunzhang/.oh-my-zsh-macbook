@@ -66,6 +66,10 @@ url = https://github.com/nikolovlazar/dotfiles
 
 url = https://github.com/kohane27/nvim-config
 
+# karabiner
+
+url = https://github.com/mxstbr/karabiner
+
 ## snippet
 
 git clone https://github.com/dsznajder/vscode-es7-javascript-react-snippets config/lvim/snippets
@@ -89,17 +93,17 @@ hosts:
 
 ## gui for clash
 
-  rulesConfig:
-    - id: ID_8gppggmr
-      type: DOMAIN-SUFFIX
-      payload: dev.new.ieatta.com
-      proxy: DIRECT
-      no-resolve: false
-      ruleset-type: file
-      ruleset-name: ""
-      ruleset-behavior: domain
-      ruleset-format: mrs
-      ruleset-proxy: ""
+rulesConfig: - id: ID_8gppggmr
+type: DOMAIN-SUFFIX
+payload: dev.new.ieatta.com
+proxy: DIRECT
+no-resolve: false
+ruleset-type: file
+ruleset-name: ""
+ruleset-behavior: domain
+ruleset-format: mrs
+ruleset-proxy: ""
 
 rules:
-  - DOMAIN-SUFFIX,dev.new.ieatta.com,DIRECT
+
+- DOMAIN-SUFFIX,dev.new.ieatta.com,DIRECT
