@@ -312,6 +312,9 @@ function link_symlink {
     # editor(config)
     fileLink ".editor(config)" "$TRUJUNZHANG_DOTFILES_HOME/editorconfig.symlink" "$HOME/.editorconfig"
 
+    # Leader Key(config)
+    fileLink "Leader-Key(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/leader-key/config.json" "$PATH_USERPROFILE_APPLICATION_SUPPORT/Leader Key/config.json"
+
     # docker(daemon.json)
     mkdir -p "$Home/.docker"
     fileLink "docker(daemon.json)" "$TRUJUNZHANG_DOTFILES_HOME/config/docker/daemon.json" "$HOME/.docker/daemon.json"

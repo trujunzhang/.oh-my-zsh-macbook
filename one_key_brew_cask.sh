@@ -39,6 +39,7 @@ brew_apps=(
     "Kindle" "Kindle" "copy" "no-bak"
     "Z-Library" "Z-Library" "ssd" "no-bak"
     "calibre" "calibre" "ssd" "no-bak"
+    "Leader Key" "Leader Key" "copy" "no-bak"
 
     # System tools
     "Raycast" "raycast" 'copy' 'no-bak'

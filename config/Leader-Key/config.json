@@ -1,0 +1,134 @@
+{
+  "actions" : [
+    {
+      "key" : "t",
+      "type" : "application",
+      "value" : "/Applications/Wezterm.app"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Applications/Safari.app"
+        },
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Applications/Mail.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/System/Applications/Music.app"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/Applications/Messages.app"
+        }
+      ],
+      "key" : "o",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "e",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+        },
+        {
+          "key" : "p",
+          "type" : "url",
+          "value" : "raycast://confetti"
+        },
+        {
+          "key" : "c",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/system/open-camera"
+        }
+      ],
+      "key" : "r",
+      "type" : "group"
+    },
+    {
+      "key" : "c",
+      "type" : "application",
+      "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Google Chrome.app"
+    },
+    {
+      "key" : "v",
+      "type" : "application",
+      "value" : "/Applications/Visual Studio Code.app"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "1",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Vivaldi.app"
+        },
+        {
+          "key" : "2",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Opera.app"
+        },
+        {
+          "key" : "3",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Firefox.app"
+        },
+        {
+          "key" : "4",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Brave Browser.app"
+        },
+        {
+          "key" : "5",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Microsoft Edge.app"
+        },
+        {
+          "key" : "6",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Brave Browser Beta.app"
+        },
+        {
+          "key" : "7",
+          "type" : "application",
+          "value" : "/Applications/Brave Browser Nightly.app"
+        }
+      ],
+      "key" : "b",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "d",
+          "type" : "folder",
+          "value" : "/Volumes/MacUser/djzhang/Downloads"
+        },
+        {
+          "key" : "z",
+          "type" : "folder",
+          "value" : "/Volumes/MacUser/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook"
+        },
+        {
+          "key" : "g",
+          "type" : "folder",
+          "value" : "/Volumes/MacGame/AppGames"
+        },
+        {
+          "key" : "a",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications"
+        }
+      ],
+      "key" : "f",
+      "type" : "group"
+    }
+  ],
+  "type" : "group"
+}
