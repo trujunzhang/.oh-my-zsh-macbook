@@ -128,6 +128,27 @@
       ],
       "key" : "f",
       "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "k",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Kodi.app"
+        },
+        {
+          "key" : "i",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Infuse.app"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/VLC.app"
+        }
+      ],
+      "key" : "m",
+      "type" : "group"
     }
   ],
   "type" : "group"

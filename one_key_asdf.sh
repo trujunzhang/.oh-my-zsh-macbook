@@ -76,6 +76,12 @@ function install_lazygit {
     asdf install lazygit 'latest'
     asdf global lazygit 'latest'
 }
+function install_uv {
+    info "starting to install asdf(uv)"
+    asdf plugin add uv https://github.com/asdf-community/asdf-uv.git
+    asdf install uv latest
+    asdf global uv 'latest'
+}
 function install_cocoapods {
     info "starting to install asdf(cocoapods)"
     asdf plugin add cocoapods "https://github.com/ronnnnn/asdf-cocoapods.git"
@@ -120,6 +126,9 @@ function update_asdf_plugins {
     elif [ "$ASDF_PLUGIN_TYPE" = "java" ]; then
         asdf uninstall java "$java_global"
         install_java
+    elif [ "$ASDF_PLUGIN_TYPE" = "uv" ]; then
+        asdf uninstall uv "latest"
+        install_uv
     fi
 }
 
@@ -136,6 +145,8 @@ function install_asdf_one_plugin {
         install_cocoapods
     elif [ "$ASDF_PLUGIN_TYPE" = "ruby" ]; then
         install_ruby
+    elif [ "$ASDF_PLUGIN_TYPE" = "uv" ]; then
+        install_uv
     fi
 }
 

@@ -109,13 +109,21 @@ alias rnnewapp='npx react-native init'
 alias pnote="jupyter notebook"
 alias pinstall="pip install -i https://pypi.tuna.tsinghua.edu.cn/simple"
 
+alias dpython_uv_list="uv python list --only-installed"
+alias dpython_uv_install="uv pip install -e ."
+alias dpython_uv_export_requirements="uv export -o requirements.txt"
+alias dpython_uv_venv="uv venv"
+alias puvNew="uv init "
+alias puvAdd="uv add "
+alias puvRun="uv run "
+
 # python env
-alias peinit="pipenv shell"
-alias peinstall="pipenv install --dev"
-alias pegraph="pipenv graph"
+alias dpython_env_init="pipenv shell"
+alias dpython_env_install="pipenv install --dev"
+alias dpython_env_graph="pipenv graph"
 # https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
 alias penv="python3 -m venv venv"
-alias peactive="source venv/bin/activate"
+alias dpython_env_active="source venv/bin/activate"
 
 # gatsby
 alias gatsbynewtsapp='npm init gatsby -ts'
@@ -671,7 +679,8 @@ alias http_proxy_v2ray="export http_proxy=http://127.0.0.1:1087"
 # git clone
 alias dclone_expensify="git clone https://github.com/expensify/App.git --depth 1 expensify && cd expensify"
 alias dclone_bitnet="git clone https://github.com/microsoft/BitNet --depth 1"
-alias dclone_ieatta="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git --depth 1 check-ieatta && cd check-ieatta"
+alias dclone_ieatta_bitbucket="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git --depth 1 check-ieatta && cd check-ieatta"
+alias dclone_new_ieatta_gitlab="git clone git@gitlab.com:TrujunZhang/new-ieatta-three-apps.git"
 alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-fixed.git --depth 1 usedExpApp && cd usedExpApp"
 alias dclone_cocoapods="git clone https://github.com/CocoaPods/Specs --depth 1"
 alias dclone_asdf_plugins="git clone https://github.com/asdf-vm/asdf-plugins --depth 1"
@@ -863,7 +872,7 @@ alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
 alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
 alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
 alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
-alias v='NVIM_APPNAME=nvchad-wSedlacek nvim' # NvChad
+alias w='NVIM_APPNAME=nvchad-wSedlacek nvim' # NvChad
 alias m='NVIM_APPNAME=nvchad-mgastonportillo nvim' # NvChad
 alias a='NVIM_APPNAME=nvchad-Alexis12119 nvim' # NvChad
 alias nv='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
@@ -871,7 +880,7 @@ alias c='NVIM_APPNAME=nvim-craftzdog nvim' # Standard neovim
 alias s='NVIM_APPNAME=nvchad-Starter nvim' # Standard neovim
 alias b='NVIM_APPNAME=nvchad-Backup nvim' # Standard neovim
 
-alias uv='NVIM_APPNAME=nvchad-wSedlacek neovide' # NvChad
+alias uw='NVIM_APPNAME=nvchad-wSedlacek neovide' # NvChad
 alias un='NVIM_APPNAME=nvim-2kabhishek neovide' # Standard neovim
 alias uc='NVIM_APPNAME=nvim-craftzdog neovide' # Standard neovim
 alias us='NVIM_APPNAME=nvchad-Starter neovide' # Standard neovim

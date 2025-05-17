@@ -10,9 +10,37 @@
                 "description": "Moonlander -> Hyper Key",
                 "from": {
                   "key_code": "left_control",
-                  "modifiers": {
-                    "mandatory": ["left_command", "left_shift", "left_option"]
+                  "modifiers": ["left_command", "left_shift", "left_option"]
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "hyper",
+                      "value": 1
+                    }
                   }
+                ],
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "hyper",
+                      "value": 0
+                    }
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "escape" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key (⌃⌥⇧⌘)",
+            "manipulators": [
+              {
+                "description": "Caps Lock -> Hyper Key",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": { "optional": ["any"] }
                 },
                 "to": [
                   {
