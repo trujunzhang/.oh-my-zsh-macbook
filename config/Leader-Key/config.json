@@ -122,8 +122,13 @@
         },
         {
           "key" : "a",
-          "type" : "application",
+          "type" : "folder",
           "value" : "/Volumes/MacGame/MacCache/arm64/Applications"
+        },
+        {
+          "key" : "x",
+          "type" : "folder",
+          "value" : "/Volumes/MacUser/djzhang/Library/Developer"
         }
       ],
       "key" : "f",

@@ -76,3 +76,5 @@ config/nix-darwin/universal/.nvimlog
 result
 
 .obsidian/
+
+builds/

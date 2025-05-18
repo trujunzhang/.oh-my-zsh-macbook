@@ -10,6 +10,7 @@ let inherit (lib) mkIf elem; in
       fastlane
       ruby_3_3
       luarocks
+      gitlab-runner
       # ccache
       # nginx
       # vscode
