@@ -129,6 +129,16 @@
           "key" : "x",
           "type" : "folder",
           "value" : "/Volumes/MacUser/djzhang/Library/Developer"
+        },
+        {
+          "key" : "s",
+          "type" : "folder",
+          "value" : "/Volumes/MacUser/djzhang/Library/Application Support"
+        },
+        {
+          "key" : "o",
+          "type" : "folder",
+          "value" : "/Volumes/MacGame/openProjects"
         }
       ],
       "key" : "f",

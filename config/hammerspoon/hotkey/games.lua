@@ -82,8 +82,8 @@ hs.hotkey.bind(
     "1",
     function()
         beforePlayGame(function()
-            hs.application.launchOrFocus(GamesFolder .. "Shadow of the Tomb Raider.app")
-            hs.notify.new({ title = "Shadow of the Tomb Raider.app", informativeText = "run it sucessfully" }):send()
+            hs.application.launchOrFocus(GamesFolder .. "tomb-raider-definitive-edition.app")
+            hs.notify.new({ title = "tomb-raider-definitive-edition.app", informativeText = "run it sucessfully" }):send()
         end)
     end)
 
