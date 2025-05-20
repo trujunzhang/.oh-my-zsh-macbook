@@ -56,26 +56,26 @@ local function activeWindow()
     end)
 end
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "R",
-    function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(GamesFolder .. "Resident Evil Village.app")
-            hs.notify.new({ title = "Resident Evil Village.app", informativeText = "run it sucessfully" }):send()
-        end)
-    end)
+-- hs.hotkey.bind(
+--     { 'Cmd', 'Alt' },
+--     "R",
+--     function()
+--         beforePlayGame(function()
+--             hs.application.launchOrFocus(GamesFolder .. "Resident Evil Village.app")
+--             hs.notify.new({ title = "Resident Evil Village.app", informativeText = "run it sucessfully" }):send()
+--         end)
+--     end)
 
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "M",
-    function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(GamesFolder .. "MetroExodus.app")
-            hs.notify.new({ title = "MetroExodus.app", informativeText = "run it sucessfully" }):send()
-        end)
-    end)
+-- hs.hotkey.bind(
+--     { 'Cmd', 'Alt' },
+--     "M",
+--     function()
+--         beforePlayGame(function()
+--             hs.application.launchOrFocus(GamesFolder .. "MetroExodus.app")
+--             hs.notify.new({ title = "MetroExodus.app", informativeText = "run it sucessfully" }):send()
+--         end)
+--     end)
 
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },
@@ -174,7 +174,6 @@ hs.hotkey.bind(
             hs.application.launchOrFocus(KegworksGames .. "Cyberpunk.2077..app")
             hs.notify.new({ title = "Cyberpunk.2077..app", informativeText = "run it sucessfully" }):send()
         end)
-
 
         activeWindow()
     end)

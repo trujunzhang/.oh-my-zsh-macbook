@@ -8,6 +8,9 @@ source ./bash/shellUtils.sh
 CURRENT=$(pwd)
 # Folders in Home.
 
+OS_NAME="_$(uname -m)"
+# echo "OS_NAME: ${OS_NAME}"
+
 if [[ $(uname -m) == 'arm64' ]]; then
     # info M2
     ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
@@ -327,7 +330,7 @@ function link_symlink {
 
     directoryLink "hammerspoon(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/hammerspoon" "$HOME/.hammerspoon"
 
-    directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner" "$HOME/.config/karabiner"
+    directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner${OS_NAME}" "$HOME/.config/karabiner" 
 
     # **IDES(purcell's emacs.d)
     # directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
@@ -526,3 +529,4 @@ if [[ $(uname -m) == 'arm64' ]]; then
     # info M2
     link_mac_user
 fi
+

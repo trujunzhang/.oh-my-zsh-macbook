@@ -164,6 +164,52 @@
       ],
       "key" : "m",
       "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/GRID-Legends.app"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/MetroExodus.app"
+        },
+        {
+          "key" : "r",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/Resident Evil Village.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/RoboCop.app"
+        },
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/Resident Evil Village.app"
+        },
+        {
+          "key" : "d",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/MetroExodus.app"
+        },
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/BioShock.Remastered/BioShock Remastered.app"
+        },
+        {
+          "key" : "2",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/BioShock 2 Remastered.app"
+        }
+      ],
+      "key" : "g",
+      "type" : "group"
     }
   ],
   "type" : "group"

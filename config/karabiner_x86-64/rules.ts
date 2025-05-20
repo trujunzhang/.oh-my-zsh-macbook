@@ -1217,11 +1217,11 @@ fs.writeFileSync(
             },
             {
               from: { key_code: "f11" },
-              to: [{ key_code: "f11" }],
+              to: [{ consumer_key_code: "volume_decrement" }],
             },
             {
               from: { key_code: "f12" },
-              to: [{ key_code: "f12" }],
+              to: [{ consumer_key_code: "volume_increment" }],
             },
           ],
           name: "Default",

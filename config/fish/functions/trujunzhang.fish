@@ -912,3 +912,12 @@ alias ollama_install_deepseek="ollama run deepseek-r1:32b"
 alias dproxy_ip="curl ipinfo.io"
 alias dproxy_git="git config --global http.proxy http://127.0.0.1:1234 && git config --global https.proxy https://127.0.0.1:1234"
 alias dproxy_npm="npm config set proxy http://127.0.0.1:1234 && npm config set https-proxy http://127.0.0.1:1234"
+
+function dgitlab_runner
+  set path "/Volumes/MacGame/MacCache/gitlab-runner"
+  echo $path
+
+  cd $path
+  gitlab-runner run
+end
+
