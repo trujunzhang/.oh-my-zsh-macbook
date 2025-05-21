@@ -299,8 +299,8 @@ function link_symlink {
     # directoryLink  "oh-my-zsh(theme:powerlevel9k)"  "$POWER_LEVEL_9K_HOME"                                             "$HOME/.oh-my-zsh/custom/themes/powerlevel9k"
 
     # bash
-    # fileLink ".bash(profile)" "$TRUJUNZHANG_DOTFILES_HOME/bash_profile.symlink" "$HOME/.bash_profile"
-    # fileLink ".bash(rc)" "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink" "$HOME/.bashrc"
+    fileLink ".bash(profile)" "$TRUJUNZHANG_DOTFILES_HOME/bash_profile.symlink" "$HOME/.bash_profile"
+    fileLink ".bash(rc)" "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink" "$HOME/.bashrc"
 
     # zshrc(rc)
     # fileLink ".zsh(env)" "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"

@@ -96,6 +96,8 @@ fish_add_path "$ANDROID_SDK_ROOT"
 fish_add_path "$ANDROID_SDK_ROOT/tools"
 fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 
+fish_add_path "/opt/homebrew/opt/ruby@3.3/bin"
+
 fish_add_path "/Applications/Neovide.app/Contents/MacOS"
 
 # homebrew
@@ -107,7 +109,9 @@ end
 # rbenv
 set -x PATH $PATH "$HOME/.rbenv/bin"
 if [ -d "$HOME/.rbenv" ]
-    rbenv init - | source
+    # $HOME/.rbenv/bin/rbenv init
+    # rbenv init - | source
+    rbenv init - fish | source
 end
 
 # djzhang's bin

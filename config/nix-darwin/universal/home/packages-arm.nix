@@ -8,7 +8,7 @@ let inherit (lib) mkIf elem; in
     inherit (pkgs)
       ninja
       fastlane
-      ruby_3_3
+      # ruby_3_3
       luarocks
       gitlab-runner
       # ccache

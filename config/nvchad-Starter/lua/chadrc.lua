@@ -10,7 +10,8 @@ local theme_customs = require("configs.chadrc_aux").theme_customs
 
 M.base46 = {
     -- transparency = true,
-    theme = "ayu_light",
+    -- theme = "ayu_light",
+    theme = "rose-pipe",
     -- theme = "ayu_light",
     -- theme = "bearded-arc", ---@diagnostic disable-line
 

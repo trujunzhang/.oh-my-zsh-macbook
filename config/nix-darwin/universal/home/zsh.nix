@@ -13,6 +13,15 @@ in
       # TODO source from file (e.g., .zshrc)
       initExtra = ''
 
+
+        # rbenv
+        export PATH=$HOME/.rbenv/bin:$PATH
+        if [ -d "$HOME/.rbenv" ]; then
+           $HOME/.rbenv/bin/rbenv init
+           # rbenv init - | source
+        fi
+
+
 if [ -d $HOME/.asdf ]; then
     . "$HOME/.asdf/asdf.sh"
 fi

@@ -48,7 +48,7 @@ hs.hotkey.bind(
     "C",
     function()
         hs.application.launchOrFocus("/Applications/Google Chrome.app")
-        hs.notify.new({ title = "Google Chrome", informativeText = "run it sucessfully" }):send()
+        -- hs.notify.new({ title = "Google Chrome", informativeText = "run it sucessfully" }):send()
     end)
 
 hs.hotkey.bind(
@@ -56,5 +56,22 @@ hs.hotkey.bind(
     "V",
     function()
         hs.application.launchOrFocus("/Applications/Visual Studio Code.app")
-        hs.notify.new({ title = "Visual Studio Code", informativeText = "run it sucessfully" }):send()
+        -- hs.notify.new({ title = "Visual Studio Code", informativeText = "run it sucessfully" }):send()
+    end)
+
+
+hs.hotkey.bind(
+    { 'Cmd', 'Alt', 'Ctrl' },
+    "W",
+    function()
+        hs.application.launchOrFocus("/Applications/Wezterm.app")
+        -- hs.notify.new({ title = "WezTerm", informativeText = "run it sucessfully" }):send()
+    end)
+
+hs.hotkey.bind(
+    { 'Cmd', 'Alt', 'Ctrl' },
+    "G",
+    function()
+        hs.application.launchOrFocus("/Applications/Ghostty.app")
+        -- hs.notify.new({ title = "Ghostty", informativeText = "run it sucessfully" }):send()
     end)

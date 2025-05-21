@@ -195,7 +195,7 @@ alias npmrr="npm run sketch:render"
 # npm.plugin
 alias ninstallxxx="npm install --verbose && offline_local_ios_pods"
 alias ninstall="npm install --verbose --no-cache"
-alias nsinstall="npm run install-standalone"
+alias nsinstall="npm run install-standalone --verbose"
 alias npmi="npm install --verbose --no-cache"
 
 alias nspodirios="npm run pod-install-standalone && nsrios"
@@ -915,7 +915,7 @@ alias dproxy_npm="npm config set proxy http://127.0.0.1:1234 && npm config set h
 
 function dgitlab_runner
   set path "/Volumes/MacGame/MacCache/gitlab-runner"
-  echo $path
+  echo "local: $path"
 
   cd $path
   gitlab-runner run

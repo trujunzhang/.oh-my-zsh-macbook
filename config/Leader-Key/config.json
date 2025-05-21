@@ -168,11 +168,6 @@
     {
       "actions" : [
         {
-          "key" : "g",
-          "type" : "application",
-          "value" : "/Volumes/MacGame/AppGames/GRID-Legends.app"
-        },
-        {
           "key" : "m",
           "type" : "application",
           "value" : "/Volumes/MacGame/AppGames/MetroExodus.app"
@@ -203,9 +198,19 @@
           "value" : "/Volumes/MacGame/AppGames/BioShock.Remastered/BioShock Remastered.app"
         },
         {
-          "key" : "2",
+          "key" : "3",
           "type" : "application",
           "value" : "/Volumes/MacGame/AppGames/BioShock 2 Remastered.app"
+        },
+        {
+          "key" : "1",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/tomb-raider-definitive-edition.app"
+        },
+        {
+          "key" : "2",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/Rise of the Tomb Raide.app"
         }
       ],
       "key" : "g",

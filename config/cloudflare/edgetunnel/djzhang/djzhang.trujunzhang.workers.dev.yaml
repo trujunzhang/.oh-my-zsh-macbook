@@ -4199,8 +4199,6 @@ rules:
   - DOMAIN-SUFFIX,elastic.co,🚀 节点选择
   - DOMAIN-SUFFIX,elastic.com,🚀 节点选择
   - DOMAIN-SUFFIX,gcr.io,🚀 节点选择
-  - DOMAIN-SUFFIX,gitlab.com,🚀 节点选择
-  - DOMAIN-SUFFIX,gitlab.io,🚀 节点选择
   - DOMAIN-SUFFIX,jitpack.io,🚀 节点选择
   - DOMAIN-SUFFIX,mvnrepository.com,🚀 节点选择
   - DOMAIN-SUFFIX,quay.io,🚀 节点选择
@@ -5303,6 +5301,9 @@ rules:
   - DOMAIN-SUFFIX,githubapp.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,cloudflare.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubassets.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,gitlab.com,🎯 全球直连
+  - DOMAIN-SUFFIX,gitlab.io,🎯 全球直连
+  - DOMAIN-SUFFIX,gitlab.com,🎯 全球直连
   # z-library
   - DOMAIN-SUFFIX,ncdn.ec,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubusercontent.com,Ⓜ️ 微软服务

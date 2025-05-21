@@ -16,6 +16,12 @@ in
 
       # TODO source from file (e.g., .bashrc)
       initExtra = ''
+
+
+
+export PATH=/opt/homebrew/opt/ruby@3.3/bin:$PATH
+
+
 # Android SDK
 # ======================================================================
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
