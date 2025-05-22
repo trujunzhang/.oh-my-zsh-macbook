@@ -308,6 +308,27 @@ const rules: KarabinerRules[] = [
   // This is fucking genius, I'm always switching between the last 3 apps
   // I have a glove80 and I never use the left or right arrows
   {
+    description: "right_shift -> cmd+tab+tab",
+    manipulators: [
+      {
+        from: {
+          key_code: "right_shift",
+        },
+        to: [
+          {
+            key_code: "tab",
+            modifiers: ["command"],
+          },
+          {
+            key_code: "tab",
+            modifiers: ["command"],
+          },
+        ],
+        type: "basic",
+      },
+    ],
+  },
+  {
     description: "right_option -> cmd+tab+tab",
     manipulators: [
       {
