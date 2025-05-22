@@ -70,27 +70,27 @@ const rules: KarabinerRules[] = [
 
   // When I press caps_lock I want it to hit escape, but if I leave it
   // pressed, it will be used as shift
-  {
-    description: "caps_lock -> shift and escape",
-    manipulators: [
-      {
-        from: {
-          key_code: "caps_lock",
-        },
-        to: [
-          {
-            key_code: "left_shift",
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "escape",
-          },
-        ],
-        type: "basic",
-      },
-    ],
-  },
+  // {
+  //   description: "caps_lock -> shift and escape",
+  //   manipulators: [
+  //     {
+  //       from: {
+  //         key_code: "caps_lock",
+  //       },
+  //       to: [
+  //         {
+  //           key_code: "left_shift",
+  //         },
+  //       ],
+  //       to_if_alone: [
+  //         {
+  //           key_code: "escape",
+  //         },
+  //       ],
+  //       type: "basic",
+  //     },
+  //   ],
+  // },
 
   // sometimes I press right_command+caps_lock by mistake and caps lock turn on,
   // and I don't want that
@@ -214,28 +214,28 @@ const rules: KarabinerRules[] = [
     ],
   },
 
-  {
-    description: "left_shift -> prefix+space in tmux for alternate session",
-    manipulators: [
-      {
-        from: {
-          key_code: "left_shift",
-        },
-        to: [
-          {
-            key_code: "left_shift",
-          },
-        ],
-        to_if_alone: [
-          {
-            shell_command:
-              "open btt://execute_assigned_actions_for_trigger/?uuid=F35EF770-FAA5-448A-957D-70BB449DEB0F",
-          },
-        ],
-        type: "basic",
-      },
-    ],
-  },
+  // {
+  //   description: "left_shift -> prefix+space in tmux for alternate session",
+  //   manipulators: [
+  //     {
+  //       from: {
+  //         key_code: "left_shift",
+  //       },
+  //       to: [
+  //         {
+  //           key_code: "left_shift",
+  //         },
+  //       ],
+  //       to_if_alone: [
+  //         {
+  //           shell_command:
+  //             "open btt://execute_assigned_actions_for_trigger/?uuid=F35EF770-FAA5-448A-957D-70BB449DEB0F",
+  //         },
+  //       ],
+  //       type: "basic",
+  //     },
+  //   ],
+  // },
 
   // {
   //   description: "right_shift -> Mute microphone",
@@ -259,28 +259,28 @@ const rules: KarabinerRules[] = [
   //   ],
   // },
 
-  {
-    description: "left_option -> cmd+v if pressed alone",
-    manipulators: [
-      {
-        from: {
-          key_code: "left_option",
-        },
-        to: [
-          {
-            key_code: "left_option",
-          },
-        ],
-        to_if_alone: [
-          {
-            key_code: "v",
-            modifiers: ["command"],
-          },
-        ],
-        type: "basic",
-      },
-    ],
-  },
+  // {
+  //   description: "left_option -> cmd+v if pressed alone",
+  //   manipulators: [
+  //     {
+  //       from: {
+  //         key_code: "left_option",
+  //       },
+  //       to: [
+  //         {
+  //           key_code: "left_option",
+  //         },
+  //       ],
+  //       to_if_alone: [
+  //         {
+  //           key_code: "v",
+  //           modifiers: ["command"],
+  //         },
+  //       ],
+  //       type: "basic",
+  //     },
+  //   ],
+  // },
 
   {
     description: "left_ctrl -> cmd+tab if pressed alone",
@@ -308,11 +308,11 @@ const rules: KarabinerRules[] = [
   // This is fucking genius, I'm always switching between the last 3 apps
   // I have a glove80 and I never use the left or right arrows
   {
-    description: "left_arrow -> cmd+tab+tab",
+    description: "right_option -> cmd+tab+tab",
     manipulators: [
       {
         from: {
-          key_code: "left_arrow",
+          key_code: "right_option",
         },
         to: [
           {
@@ -401,25 +401,25 @@ const rules: KarabinerRules[] = [
   // },
 
   // this is useful to hit enter after pasting text using the left hand
-  {
-    description: "left_option + spacebar -> enter",
-    manipulators: [
-      {
-        from: {
-          key_code: "spacebar",
-          modifiers: {
-            mandatory: ["left_option"],
-          },
-        },
-        to: [
-          {
-            key_code: "return_or_enter",
-          },
-        ],
-        type: "basic",
-      },
-    ],
-  },
+  // {
+  //   description: "left_option + spacebar -> enter",
+  //   manipulators: [
+  //     {
+  //       from: {
+  //         key_code: "spacebar",
+  //         modifiers: {
+  //           mandatory: ["left_option"],
+  //         },
+  //       },
+  //       to: [
+  //         {
+  //           key_code: "return_or_enter",
+  //         },
+  //       ],
+  //       type: "basic",
+  //     },
+  //   ],
+  // },
 
   // // This is used as a homerow app shortcut
   // {

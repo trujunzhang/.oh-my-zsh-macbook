@@ -303,8 +303,8 @@ function link_symlink {
     fileLink ".bash(rc)" "$TRUJUNZHANG_DOTFILES_HOME/bashrc.symlink" "$HOME/.bashrc"
 
     # zshrc(rc)
-    # fileLink ".zsh(env)" "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
-    # fileLink ".zsh(rc)" "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink" "$HOME/.zshrc"
+    fileLink ".zsh(env)" "$TRUJUNZHANG_DOTFILES_HOME/zshenv.symlink" "$HOME/.zshenv"
+    fileLink ".zsh(rc)" "$TRUJUNZHANG_DOTFILES_HOME/zshrc.symlink" "$HOME/.zshrc"
 
     # zshrc(theme)
     fileLink ".zsh(powerlevel10k)" "$TRUJUNZHANG_DOTFILES_HOME/p10k.zsh.symlink" "$HOME/.p10k.zsh"

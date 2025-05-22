@@ -176,7 +176,7 @@
         malo-colors = import ./home/colors.nix;
         malo-config-files = import ./home/config-files.nix;
         malo-fish = import ./home/fish.nix;
-        malo-zsh= import ./home/zsh.nix;
+        # malo-zsh= import ./home/zsh.nix;
         # malo-bash= import ./home/bash.nix;
         malo-git = import ./home/git.nix;
         malo-git-aliases = import ./home/git-aliases.nix;

@@ -188,6 +188,15 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+if [ -d "/opt/homebrew" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
+   export PATH=/opt/homebrew/opt/ruby@3.3/bin:$PATH
+fi
+
+
+
 #if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 #    tmux attach -t default || tmux new -s default
 #fi

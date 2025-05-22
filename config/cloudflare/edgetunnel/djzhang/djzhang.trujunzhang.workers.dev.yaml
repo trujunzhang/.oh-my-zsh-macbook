@@ -5304,6 +5304,7 @@ rules:
   - DOMAIN-SUFFIX,gitlab.com,🎯 全球直连
   - DOMAIN-SUFFIX,gitlab.io,🎯 全球直连
   - DOMAIN-SUFFIX,gitlab.com,🎯 全球直连
+  - DOMAIN-SUFFIX,tencent.com,🎯 全球直连
   # z-library
   - DOMAIN-SUFFIX,ncdn.ec,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubusercontent.com,Ⓜ️ 微软服务

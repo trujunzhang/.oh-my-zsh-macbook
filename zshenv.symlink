@@ -207,7 +207,8 @@ alias dnix_uninstall_nix_darwin="nix-build https://github.com/LnL7/nix-darwin/ar
 
 
 if [[ $(command -v brew) == "" ]]; then
-    echo "Homebrew is not installed"
+    # echo "Homebrew is not installed"
+    export HOMEBREW_HOME="not found"
 else
 
      export HOMEBREW_HOME="$(brew --prefix)"
