@@ -43,6 +43,12 @@
   },
   {
     "type": "application",
+    "name": "Google Chrome",
+    "path": "Google Chrome",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "Leader Key",
     "application": "Leader Key.app",
     "enable": "1"

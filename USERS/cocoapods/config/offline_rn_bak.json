@@ -81,7 +81,7 @@
     "file": "facebook"
   },
   {
-    "enable": "false",
+    "enable": "true",
     "type": "http",
     "name": "hermes-engine(v0.73)",
     "path": "node_modules/react-native/sdks/hermes-engine",
@@ -90,30 +90,12 @@
     "file": "facebook"
   },
   {
-    "enable": "false",
+    "enable": "true",
     "type": "http",
     "name": "boost",
     "path": "node_modules/react-native/third-party-podspecs",
     "filename": "boost.podspec",
     "http": "https://archives.boost.io/release/1.83.0/source/boost_1_83_0.tar.bz2",
     "file": "boost/boost_1_83_0.tar.bz2"
-  },
-  {
-    "enable": "false",
-    "type": "http",
-    "name": "electron-utils",
-    "path": "node_modules/@electron/get/dist/esm",
-    "filename": "artifact-utils.js",
-    "http": "https://github.com/electron/electron/releases/download/",
-    "file": "electron/releases/download/"
-  },
-  {
-    "enable": "false",
-    "type": "http",
-    "name": "electron-utils",
-    "path": "node_modules/@electron/get/dist/cjs",
-    "filename": "artifact-utils.js",
-    "http": "https://github.com/electron/electron/releases/download/",
-    "file": "electron/releases/download/"
   }
 ]

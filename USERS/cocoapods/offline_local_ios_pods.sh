@@ -44,7 +44,8 @@ echo "                         "
 # ==========================================================================
 
 offlineGitFolder="file://$HOME/Documents/Organizations/__CACHES/github"
-offlineHttpFolder='http://localhost:8000/@http'
+# offlineHttpFolder='http://localhost:8000/@http'
+offlineHttpFolder='http://localhost:8080/@http'
 
 # seq FIRST INCREMENT LAST
 for i in $(seq 0 7 $((json_array_len-1)))

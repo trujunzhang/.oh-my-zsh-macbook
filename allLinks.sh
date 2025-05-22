@@ -365,7 +365,7 @@ function link_symlink {
     # directoryLink ".gradle(Android)"   "/Volumes/Data/ALLNew_Macbook/Users/djzhang/.gradle"           "$HOME/.gradle"
 
     # Node.js
-    # fileLink "Yarn(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/yarn/.yarnrc" "$HOME/.yarnrc" "delete"
+    fileLink "Yarn(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/yarn/.yarnrc" "$HOME/.yarnrc" "delete"
     directoryLink "npm(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm" "$HOME/.config/npm" "delete"
     fileLink "npm(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm/npmrc" "$HOME/.npmrc" "delete"
     fileLink "npm(netrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm/netrc" "$HOME/.netrc" "delete"
