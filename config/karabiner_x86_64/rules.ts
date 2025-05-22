@@ -8,40 +8,40 @@ const rules: KarabinerRules[] = [
   // hyper key from caps_lock to my thumb
   //
   // I tried using spacebar as the hyper key but cannot type well
-  {
-    description: "Hyper Key (⌃⌥⇧⌘)",
-    manipulators: [
-      {
-        description: "right_shift -> Hyper Key",
-        from: {
-          key_code: "right_shift",
-        },
-        to: [
-          {
-            key_code: "left_shift",
-            modifiers: ["left_command", "left_control", "left_option"],
-          },
-        ],
-        // If right_command is pressed by itself, homerow will show up
-        // Homerow configured under `Clicking - Shorctut`
-        to_if_alone: [
-          {
-            key_code: "6",
-            modifiers: [
-              "left_command",
-              "left_control",
-              "left_option",
-              "left_shift",
-            ],
-          },
-          // {
-          //   key_code: "escape",
-          // },
-        ],
-        type: "basic",
-      },
-    ],
-  },
+  // {
+  //   description: "Hyper Key (⌃⌥⇧⌘)",
+  //   manipulators: [
+  //     {
+  //       description: "right_command -> Hyper Key",
+  //       from: {
+  //         key_code: "right_command",
+  //       },
+  //       to: [
+  //         {
+  //           key_code: "left_shift",
+  //           modifiers: ["left_command", "left_control", "left_option"],
+  //         },
+  //       ],
+  //       // If right_command is pressed by itself, homerow will show up
+  //       // Homerow configured under `Clicking - Shorctut`
+  //       to_if_alone: [
+  //         {
+  //           key_code: "6",
+  //           modifiers: [
+  //             "left_command",
+  //             "left_control",
+  //             "left_option",
+  //             "left_shift",
+  //           ],
+  //         },
+  //         // {
+  //         //   key_code: "escape",
+  //         // },
+  //       ],
+  //       type: "basic",
+  //     },
+  //   ],
+  // },
 
   // // In case you want to use caps_lock as hyper
   // // This is the way I did it before
@@ -1199,7 +1199,7 @@ fs.writeFileSync(
   JSON.stringify(
     {
       global: {
-        show_in_menu_bar: false,
+        show_in_menu_bar: true,
       },
       profiles: [
         {
