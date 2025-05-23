@@ -101,6 +101,7 @@
         }
       ],
       "key" : "b",
+      "label" : "Browser",
       "type" : "group"
     },
     {
@@ -139,9 +140,20 @@
           "key" : "o",
           "type" : "folder",
           "value" : "/Volumes/MacGame/openProjects"
+        },
+        {
+          "key" : "j",
+          "type" : "folder",
+          "value" : "/Volumes/MacGame/MacCache/jenkins/workspace/new-ieatta-three-apps"
+        },
+        {
+          "key" : "i",
+          "type" : "folder",
+          "value" : "/Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/new-ieatta-three-apps"
         }
       ],
       "key" : "f",
+      "label" : "Folder",
       "type" : "group"
     },
     {
@@ -163,6 +175,7 @@
         }
       ],
       "key" : "m",
+      "label" : "Media",
       "type" : "group"
     },
     {
@@ -214,6 +227,7 @@
         }
       ],
       "key" : "g",
+      "label" : "Games",
       "type" : "group"
     }
   ],

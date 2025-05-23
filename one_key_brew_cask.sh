@@ -40,6 +40,7 @@ brew_apps=(
     "Z-Library" "Z-Library" "ssd" "no-bak"
     "calibre" "calibre" "ssd" "no-bak"
     "Leader Key" "Leader Key" "copy" "no-bak"
+    "qBittorrent" "qbittorrent" "copy" "no-bak"
 
     # System tools
     "Raycast" "raycast" 'copy' 'no-bak'
@@ -57,7 +58,7 @@ brew_apps=(
     # "Grammarly Editor"    "grammarly" 'copy' 'no-bak'
 
     # Web browser
-    "Google Chrome" "google-chrome" 'ssd' 'backup'
+    "Google Chrome" "google-chrome" 'copy' 'backup'
     "Vivaldi" "vivaldi" 'ssd' 'backup'
     "Opera" "opera" 'ssd'    'backup'
     "Firefox" "firefox" 'ssd' 'backup'

@@ -13,12 +13,6 @@
   },
   {
     "type": "application",
-    "name": "SpaceLauncher",
-    "application": "SpaceLauncher",
-    "enable": "1"
-  },
-  {
-    "type": "application",
     "name": "TextSniper",
     "application": "TextSniper",
     "enable": "1"
