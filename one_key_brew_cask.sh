@@ -44,7 +44,7 @@ brew_apps=(
 
     # System tools
     "Raycast" "raycast" 'copy' 'no-bak'
-    "SpaceLauncher" "spacelauncher" 'copy' 'backup'
+    # "SpaceLauncher" "spacelauncher" 'copy' 'backup'
     "Notion" "notion" 'copy' 'backup'
     "ClickUp" "clickup" 'ssd' 'no-bak'
     # "OneDrive" "onedrive" 'copy' 'no-bak'

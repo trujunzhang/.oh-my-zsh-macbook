@@ -24,7 +24,7 @@ hs.hotkey.bind(
         EscapeTab("R")
 
         EscapeTab("F")
-        EscapeTab("U")
+        EscapeTab("Y")
         EscapeTab("K")
         EscapeTab("L")
 

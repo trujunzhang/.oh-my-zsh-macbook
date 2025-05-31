@@ -160,7 +160,7 @@ keybinds {
         bind "Ctrl e" { GoToTab 3; }
         bind "Ctrl r" { GoToTab 4; }
         bind "Ctrl f" { GoToTab 5; }
-        bind "Ctrl u" { GoToTab 6; }
+        bind "Ctrl y" { GoToTab 6; }
         bind "Ctrl k" { GoToTab 7; }
         bind "Ctrl l" { GoToTab 8; }
         bind "Ctrl g" { SwitchToMode "Locked"; }

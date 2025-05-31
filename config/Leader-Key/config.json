@@ -26,9 +26,20 @@
           "key" : "m",
           "type" : "application",
           "value" : "/Applications/Messages.app"
+        },
+        {
+          "key" : "n",
+          "type" : "application",
+          "value" : "/Applications/Notion.app"
+        },
+        {
+          "key" : "x",
+          "type" : "application",
+          "value" : "/Applications/xunlei.app"
         }
       ],
-      "key" : "o",
+      "key" : "a",
+      "label" : "Applications",
       "type" : "group"
     },
     {
