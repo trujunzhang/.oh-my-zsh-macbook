@@ -41,6 +41,9 @@ function brew_install_common {
 
     # https://github.com/Muhammed770/hammerspoon-bluetooth-automation
     brew install blueutil
+
+    # https://github.com/Kegworks-App/Kegworks
+    # brew install --cask --no-quarantine Kegworks-App/kegworks/kegworks
 }
 
 function brew_install_libs {

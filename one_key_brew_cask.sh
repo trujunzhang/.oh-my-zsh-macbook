@@ -6,6 +6,8 @@ CURRENT=$(pwd)
 source ./bash/files-functions.sh
 source ./bash/tools.sh
 
+USER_APPLICATION="$HOME/Applications/"
+
 # https://formulae.brew.sh/cask/
 # https://github.com/buo/homebrew-cask-upgrade
 
@@ -49,7 +51,7 @@ brew_apps=(
     "ClickUp" "clickup" 'ssd' 'no-bak'
     # "OneDrive" "onedrive" 'copy' 'no-bak'
     # "Docker" "docker" "copy" 'no-bak'
-    "OrbStack" "orbstack" "copy" 'no-bak'
+    "OrbStack" "orbstack" "ssd" 'no-bak'
     "FileZilla" "filezilla" 'ssd' 'no-bak'
     "Dash" "dash" 'copy' 'no-bak'
     "WebStorm" 'webstorm' 'ssd' 'no-bak'
@@ -58,13 +60,13 @@ brew_apps=(
     # "Grammarly Editor"    "grammarly" 'copy' 'no-bak'
 
     # Web browser
-    "Google Chrome" "google-chrome" 'copy' 'backup'
+    # "Google Chrome" "google-chrome" 'copy' 'backup'
     "Vivaldi" "vivaldi" 'ssd' 'backup'
     "Opera" "opera" 'ssd'    'backup'
     "Firefox" "firefox" 'ssd' 'backup'
     "Brave Browser" "brave-browser" 'ssd' 'backup'
     "Brave Browser Beta" "brave-browser-bata" 'ssd' 'backup'
-    "Brave Browser Nightly" "brave-browser-nightly" 'copy' 'backup'
+    # "Brave Browser Nightly" "brave-browser-nightly" 'copy' 'backup'
 
     # =========================================
     # required password

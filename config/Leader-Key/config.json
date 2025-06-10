@@ -36,6 +36,11 @@
           "key" : "x",
           "type" : "application",
           "value" : "/Applications/xunlei.app"
+        },
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Applications/qbittorrent.app"
         }
       ],
       "key" : "a",

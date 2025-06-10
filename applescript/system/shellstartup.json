@@ -20,7 +20,7 @@
   {
     "type": "application",
     "name": "clash for arm",
-    "application": "ClashX Pro.app",
+    "application": "ClashX.app",
     "enable": "1"
   },
   {

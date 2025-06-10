@@ -297,7 +297,7 @@ if.app-id = 'notion.id'
 run = 'move-node-to-workspace K'
 
 [[on-window-detected]]
-if.app-id = 'com.skype.skype'
+if.app-id = 'com.microsoft.teams2'
 run = 'move-node-to-workspace k'
 
 [[on-window-detected]]
