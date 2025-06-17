@@ -12,6 +12,7 @@ USER_APPLICATION="$HOME/Applications/"
 # https://github.com/buo/homebrew-cask-upgrade
 
 brew_apps=(
+    "Folx" "Folx" "copy" "no-bak"
     "Keyboard Maestro" "Keyboard Maestro" "copy" "no-bak"
     "Xcode" "xcode" "ssd" "no-bak"
     "CrossOver" "crossover" "ssd" "no-bak"
@@ -43,6 +44,7 @@ brew_apps=(
     "calibre" "calibre" "ssd" "no-bak"
     "Leader Key" "Leader Key" "copy" "no-bak"
     "qBittorrent" "qbittorrent" "copy" "no-bak"
+    "Transmit" "Transmit" "ssd" "no-bak"
 
     # System tools
     "Raycast" "raycast" 'copy' 'no-bak'

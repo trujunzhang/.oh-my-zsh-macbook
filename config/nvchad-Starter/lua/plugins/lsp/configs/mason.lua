@@ -20,6 +20,17 @@ return {
     },
     dependencies = {
         "williamboman/mason-lspconfig.nvim",
+        opts = {
+            ensure_installed = { 
+                   "bashls",
+                    "yamlls",
+                    "jsonls",
+                    "eslint",
+                    "lua_ls",
+                    "rust_analyzer",
+                    'pyright'
+            },
+        },
         config = function()
             local mason = require "mason"
             -- local path = require "mason-core.path"
@@ -39,24 +50,36 @@ return {
                 -- install_root_dir = path.concat { vim.fn.stdpath "config", "/lua/custom/mason" },
             }
 
-            mason_lspconfig.setup {
-                ensure_installed = {
-                    "bashls",
-                    "yamlls",
-                    "jsonls",
-                    "eslint",
-                    "lua_ls",
-                    "rust_analyzer",
-                    'pyright'
-                },
-                automatic_enable = {
-                    exclude = {
-                        "jdtls",
-                        "rust_analyzer",
-                        "ts_ls",
-                    },
-                },
-            }
+           -- require("mason-lspconfig").setup {
+           --      automatic_enable = {
+           --         "bashls",
+           --          "yamlls",
+           --          "jsonls",
+           --          "eslint",
+           --          "lua_ls",
+           --          "rust_analyzer",
+           --          'pyright'
+           --      }
+           --  }           
+
+            -- mason_lspconfig.setup {
+            --     ensure_installed = {
+            --         "bashls",
+            --         "yamlls",
+            --         "jsonls",
+            --         "eslint",
+            --         "lua_ls",
+            --         "rust_analyzer",
+            --         'pyright'
+            --     },
+            --     automatic_enable = {
+            --         exclude = {
+            --             "jdtls",
+            --             "rust_analyzer",
+            --             "ts_ls",
+            --         },
+            --     },
+            -- }
         end,
     },
     opts = {
