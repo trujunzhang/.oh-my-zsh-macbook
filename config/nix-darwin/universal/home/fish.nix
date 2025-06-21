@@ -46,9 +46,24 @@ if [ -d $HOME/.luarocks ]
    # end
    fish_add_path "$HOME/.luarocks/bin"
 end
-if [ -d $HOME/.asdf ]
-    source ~/.asdf/asdf.fish
+
+# ASDF configuration code
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
 end
+
+# Do not use fish_add_path (added in Fish 3.2) because it
+# potentially changes the order of items in PATH
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+set --erase _asdf_shims
+
+# if [ -d $HOME/.asdf ]
+#     source ~/.asdf/asdf.fish
+# end
 if [ -d $HOME/.asdf/plugins/java ]
     source ~/.asdf/plugins/java/set-java-home.fish
 end
@@ -129,6 +144,7 @@ end
     };
   };
   # }}}
+
 
   # Fish configuration ------------------------------------------------------------------------- {{{
 

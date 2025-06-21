@@ -369,6 +369,8 @@ function link_symlink {
     fileLink "npm(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm/npmrc" "$HOME/.npmrc" "delete"
     fileLink "npm(netrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm/netrc" "$HOME/.netrc" "delete"
 
+    fileLink "curl(curlrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/curl/curlrc" "$HOME/.curlrc" 
+
     # GUI.for.SingBox
     # v1.8.8
     # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
@@ -453,6 +455,9 @@ function link_mac_user {
     HOME_PROFILE_BACKUP_PATH="/Volumes/MacWork/ProfileBackup"
     HOME_MACGAME_PATH="/Volumes/MacGame"
     HOME_MAC_CACHE_PATH="/Volumes/MacGame/MacCache"
+
+    # orbstack
+    directoryLink  "data(orbstack)" "$HOME_MAC_CACHE_PATH/orbstack/data" "$HOME/Library/Group Containers/HUAQ24HBR6.dev.orbstack/data"
 
     # android
     directoryLink "android(avd-fold)" "/Users/djzhang/.android" "$HOME/.android"

@@ -22,7 +22,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         opts = {
             ensure_installed = { 
-                   "bashls",
+                    "bashls",
                     "yamlls",
                     "jsonls",
                     "eslint",
@@ -50,36 +50,23 @@ return {
                 -- install_root_dir = path.concat { vim.fn.stdpath "config", "/lua/custom/mason" },
             }
 
-           -- require("mason-lspconfig").setup {
-           --      automatic_enable = {
-           --         "bashls",
-           --          "yamlls",
-           --          "jsonls",
-           --          "eslint",
-           --          "lua_ls",
-           --          "rust_analyzer",
-           --          'pyright'
-           --      }
-           --  }           
+          local servers = mason_lspconfig.get_installed_servers()
+          local excluded = { "ts_ls", "jdtls" }
 
-            -- mason_lspconfig.setup {
-            --     ensure_installed = {
-            --         "bashls",
-            --         "yamlls",
-            --         "jsonls",
-            --         "eslint",
-            --         "lua_ls",
-            --         "rust_analyzer",
-            --         'pyright'
-            --     },
-            --     automatic_enable = {
-            --         exclude = {
-            --             "jdtls",
-            --             "rust_analyzer",
-            --             "ts_ls",
-            --         },
-            --     },
-            -- }
+          for _, server in ipairs(servers) do
+            if not vim.tbl_contains(excluded, server) then
+              -- Load LSP Settings(If Exists)
+              local ok_settings, settings = pcall(require, "plugins.lsp.settings." .. server)
+              -- if ok_settings then
+              --   vim.lsp.config(string.lower(server), settings)
+              -- end
+
+              -- Enable LSP
+              -- vim.lsp.enable(server)
+            end
+          end
+
+
         end,
     },
     opts = {

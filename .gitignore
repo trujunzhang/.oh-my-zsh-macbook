@@ -78,3 +78,5 @@ result
 .obsidian/
 
 builds/
+
+*.tar.gz

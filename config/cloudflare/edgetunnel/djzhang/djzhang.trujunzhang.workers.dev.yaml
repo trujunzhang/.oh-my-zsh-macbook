@@ -5300,6 +5300,7 @@ rules:
   - DOMAIN-SUFFIX,github.io,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubapp.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,cloudflare.com,Ⓜ️ 微软服务
+  - DOMAIN-SUFFIX,python.org,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,githubassets.com,Ⓜ️ 微软服务
   - DOMAIN-SUFFIX,gitlab.com,🎯 全球直连
   - DOMAIN-SUFFIX,gitlab.io,🎯 全球直连
