@@ -102,8 +102,8 @@ hs.hotkey.bind(
     "3",
     function()
         beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Assassins-creed-three.app")
-            hs.notify.new({ title = "Assassins-creed-three.app", informativeText = "run it sucessfully" }):send()
+            hs.application.launchOrFocus(KegworksGames .. "Fallout4.app")
+            hs.notify.new({ title = "Fallout4.app", informativeText = "run it sucessfully" }):send()
         end)
 
         activeWindow()

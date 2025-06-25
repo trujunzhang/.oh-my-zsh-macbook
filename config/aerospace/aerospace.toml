@@ -330,6 +330,10 @@ if.app-id = 'org.qbittorrent.qBittorrent'
 run = ['move-node-to-workspace R']
 
 [[on-window-detected]]
+if.app-id = 'com.eltima.Folx3'
+run = ['move-node-to-workspace R']
+
+[[on-window-detected]]
 if.app-id = 'com.sublimemerge'
 run = 'move-node-to-workspace S'
 
