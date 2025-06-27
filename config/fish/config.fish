@@ -98,6 +98,10 @@ if type conda &>/dev/null
     conda activate tf_m1
 end
 
+if type starship &>/dev/null
+    starship init fish | source
+end
+
 if [ -d $HOME/.pyenv ]
     if type pyenv &>/dev/null
         pyenv init - | source

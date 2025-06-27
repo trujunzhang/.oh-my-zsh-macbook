@@ -357,9 +357,11 @@ alias ios_kill="killall 'Simulator'"
 alias ios_list="xcrun simctl list devices available"
 alias ios_simctl="xcrun simctl list devices | grep 'iPhone'"
 
-alias iosiphone16plus="open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')"
+# alias iosiphone16plus="open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')"
 
-#alias ios_new_ieatta_iphone16plus="xcrun simctl launch $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})') 'New Ieatta Dev'"
+function iosiphone16plus
+     open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')
+end
 
 #open -a Simulator && xcrun simctl boot 'iPhone 16 Plus'
 function ios_new_ieatta_iphone16plus

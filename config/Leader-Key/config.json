@@ -41,6 +41,21 @@
           "key" : "b",
           "type" : "application",
           "value" : "/Applications/qbittorrent.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacApps/current/CrossOver-v24.0.5.app"
+        },
+        {
+          "key" : "w",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacApps/current/Whisky-v2.3.5.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Applications/Folx.app"
         }
       ],
       "key" : "a",
