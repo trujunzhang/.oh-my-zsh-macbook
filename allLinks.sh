@@ -187,7 +187,7 @@ function link_config_fold {
     directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-craftzdog" "$HOME/.config/nvim-craftzdog" "delete"
 
     # fish
-    #     directoryLink "config(vlc)" "$TRUJUNZHANG_DOTFILES_HOME/config/fish" "$HOME/.config/fish"
+    directoryLink "config(fish)" "$TRUJUNZHANG_DOTFILES_HOME/config/fish" "$HOME/.config/fish"
 
     # apps
     directoryLink "config(vlc)" "$TRUJUNZHANG_DOTFILES_HOME/config/vlc" "$HOME/.config/vlc"

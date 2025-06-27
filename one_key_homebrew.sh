@@ -18,9 +18,19 @@ source ./bash/tools.sh
 # fi
 HOMEBREW_HOME="$(brew --prefix)"
 
-brew tap FelixKratz/formulae
+export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+
+# brew tap FelixKratz/formulae
 
 brew_apps=(
+    "starship" "starship"
+    "zellij" "zellij"
+    "fish" "fish"
+    "neovim" "neovim"
+)
+
+brew_appsxxx=(
     ## cocoapods(xcode)
     # "opt/cocoapods"             "cocoapods"
     ## supabase
@@ -160,13 +170,13 @@ function install_apps_on_current_os {
 # fi
 
 ## fzf
-if [ ! -d "$HOMEBREW_HOME/opt/fzf" ]; then
-    $(brew --prefix)/opt/fzf/install
-fi
+# if [ ! -d "$HOMEBREW_HOME/opt/fzf" ]; then
+#     $(brew --prefix)/opt/fzf/install
+# fi
 
 ## install common apps
 install_apps "${brew_apps[@]}"
-install_apps_on_current_os
+# install_apps_on_current_os
 
 ## Finally, restart the nginx.
-brew services restart nginx
+# brew services restart nginx

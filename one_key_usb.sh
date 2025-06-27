@@ -2,7 +2,7 @@
 
 source ./bash/shellUtils.sh
 
-ROOT_DIR="/Volumes/MacGame/"
+ROOT_DIR="/Volumes/MacGame"
 
 buildUSBDir () {
     foldName=$1
@@ -11,17 +11,14 @@ buildUSBDir () {
     
     # info "build usb dir, foldName: ${foldName}"
     # echo "build usb dir, foldName: ${foldName}"
-    # echo "build usb dir, fold path: ${path}"
+    echo "build usb dir, fold path: ${path}"
 
     if [ -d "${path}" ]
     then
         error "Directory already exist. ${msg}"
     else
-        if [ -d "${src}" ]
-        then
-            mkdir -p "$path"
-            success "Directory does not exist. ${msg}"
-        fi
+        mkdir -p "$path"
+        success "Directory does not exist. ${msg}"
     fi
 }
 
@@ -29,7 +26,8 @@ FOLD_ROOT=(
     "AppGames/Kegworks"
     "crossover"
     # "IPADShare"
-    "MacApps/current"
+    
+    "MacApps/current/Developer/DerivedData"
 
     "MacCache"
     "MacCache/.android"

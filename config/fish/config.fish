@@ -20,12 +20,12 @@ set -g -x ACT_BINARY "$HOME/.local/bin/act"
 # set -g -x SCCACHE_CXX=sccache
 # set -g -x SCCACHE_CC=sccache
 
-set -g -x NDK_CCACHE ccache
+# set -g -x NDK_CCACHE ccache
 # set -g -x NDK_CCACHE sccache
 set -g -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/25.1.8937393
 
-set -g -x HOMEBREW_BOTTLE_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles"
-set -g -x HOMEBREW_API_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles/api"
+# set -g -x HOMEBREW_BOTTLE_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles"
+# set -g -x HOMEBREW_API_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles/api"
 
 
 if test -d /opt/homebrew # MacOS arm64
@@ -154,3 +154,20 @@ end
 #         kill $fish_pid
 #     end
 # end
+
+fish_add_path "/opt/homebrew/opt/ruby@3.3/bin"
+
+
+# ASDF configuration code
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
+
+# Do not use fish_add_path (added in Fish 3.2) because it
+# potentially changes the order of items in PATH
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+set --erase _asdf_shims
