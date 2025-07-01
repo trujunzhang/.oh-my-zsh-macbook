@@ -66,14 +66,20 @@ return {
             end
           end
 
-
         end,
     },
     opts = {
-        registries = {
-            "github:nvim-java/mason-registry",
-            "github:mason-org/mason-registry",
-        },
+      ensure_installed = {
+        "lua-language-server",
+        "html-lsp",
+        "prettier",
+        "stylua",
+        "gopls"
+      }
+        -- registries = {
+        --     "github:nvim-java/mason-registry",
+        --     "github:mason-org/mason-registry",
+        -- },
     },
 }
 

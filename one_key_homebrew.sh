@@ -24,6 +24,7 @@ export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bot
 # brew tap FelixKratz/formulae
 
 brew_apps=(
+    "lua-language-server" "lua-language-server"
     "starship" "starship"
     "zellij" "zellij"
     "fish" "fish"

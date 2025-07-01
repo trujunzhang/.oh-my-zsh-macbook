@@ -1,6 +1,7 @@
     yarn
     npm-check-updates
 
+    bash-language-server
     typescript-language-server
     vscode-langservers-extracted
 

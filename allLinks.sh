@@ -447,8 +447,8 @@ function link_nginx_http {
 
 function link_mac_app_cloud {
     HOME_ONE_DRIVE_APP_CLOUD="$PATH_USERPROFILE_LIBRARY/CloudStorage/OneDrive-Personal/AppCloud"
-    directoryLink "cloud(Pieces.os)" "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.os" "$PATH_USERPROFILE_LIBRARY/com.pieces.os"
-    directoryLink "cloud(Pieces.app)" "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.pfd" "$PATH_USERPROFILE_LIBRARY/com.pieces.pfd"
+    # directoryLink "cloud(Pieces.os)" "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.os" "$PATH_USERPROFILE_LIBRARY/com.pieces.os"
+    # directoryLink "cloud(Pieces.app)" "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.pfd" "$PATH_USERPROFILE_LIBRARY/com.pieces.pfd"
 }
 
 function link_mac_user {

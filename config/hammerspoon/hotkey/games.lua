@@ -79,12 +79,27 @@ end
 
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },
-    "1",
+    "E",
     function()
         beforePlayGame(function()
-            hs.application.launchOrFocus(GamesFolder .. "tomb-raider-definitive-edition.app")
-            hs.notify.new({ title = "tomb-raider-definitive-edition.app", informativeText = "run it sucessfully" }):send()
+            hs.application.launchOrFocus(KegworksGames  .. "Mass-Effect-Andromeda.app")
+            hs.notify.new({ title = "Mass-Effect-Andromeda.app", informativeText = "run it sucessfully" }):send()
         end)
+
+        activeWindow()
+    end)
+
+
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "F",
+    function()
+        beforePlayGame(function()
+            hs.application.launchOrFocus(KegworksGames  .. "Titanfall2.app")
+            hs.notify.new({ title = "Titanfall2.app", informativeText = "run it sucessfully" }):send()
+        end)
+
+        activeWindow()
     end)
 
 hs.hotkey.bind(
@@ -115,7 +130,7 @@ hs.hotkey.bind(
     "4",
     function()
         beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Assassins Creed IV Black Flag.app")
+            hs.application.launchOrFocus(KegworksGames .. "Assassins-Creed-IV-Black Flag.app")
             hs.notify.new({ title = "Assasins Creed - black flag", informativeText = "run it sucessfully" }):send()
         end)
 

@@ -222,9 +222,9 @@
           "value" : "/Volumes/MacGame/AppGames/Resident Evil Village.app"
         },
         {
-          "key" : "s",
+          "key" : "t",
           "type" : "application",
-          "value" : "/Volumes/MacGame/AppGames/RoboCop.app"
+          "value" : "/Volumes/MacGame/AppGames/Thief/Thief.app"
         },
         {
           "key" : "e",
@@ -234,7 +234,7 @@
         {
           "key" : "d",
           "type" : "application",
-          "value" : "/Volumes/MacGame/AppGames/MetroExodus.app"
+          "value" : "/Volumes/MacGame/AppGames/Mass Effect Andromeda.app"
         },
         {
           "key" : "b",

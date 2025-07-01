@@ -14,7 +14,8 @@ source ./bash/tools.sh
 
 # node_global="20.14.0"
 # node_global="21.7.2"
-node_global="22.14.0"
+# node_global="22.14.0"
+node_global="24.3.0"
 # node_old="16.16.0"
 node_for_nvim="18.0.0"
 # node_for_old_expensify="20.15.1"

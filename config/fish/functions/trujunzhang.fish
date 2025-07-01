@@ -389,6 +389,8 @@ alias androidopen="$ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion"
 alias adb_restart="adb kill-server && adb start-server"
 alias adb_devices="adb devices"
 
+alias abd_push_clash_cfg="adb push '/Volumes/MacUser/djzhang/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/cloudflare/edgetunnel/djzhang/djzhang.trujunzhang.workers.dev.yaml' /sdcard"
+
 # Flutter
 alias fclean="flutter clean"
 alias fkill="killall -9 dart"
