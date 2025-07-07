@@ -82,7 +82,7 @@ hs.hotkey.bind(
     "E",
     function()
         beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames  .. "Mass-Effect-Andromeda.app")
+            hs.application.launchOrFocus(KegworksGames .. "Mass-Effect-Andromeda.app")
             hs.notify.new({ title = "Mass-Effect-Andromeda.app", informativeText = "run it sucessfully" }):send()
         end)
 
@@ -92,10 +92,10 @@ hs.hotkey.bind(
 
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },
-    "F",
+    "R",
     function()
         beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames  .. "Titanfall2.app")
+            hs.application.launchOrFocus(KegworksGames .. "Titanfall2.app")
             hs.notify.new({ title = "Titanfall2.app", informativeText = "run it sucessfully" }):send()
         end)
 

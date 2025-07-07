@@ -123,67 +123,70 @@ hash_vals=("/Volumes/MacGame/MacCache"
     "/Volumes/MacUser/djzhang/Desktop/APPS_BACKUP")
 
 app_backup_path_index ${ParamsBkKey}
-CURRENT_APP_BACKUP_PATH=${hash_vals[$?]}
+CURRENT_THIRD_APPS_PATH=${hash_vals[$?]}
 
-PATH_BACKUP="${CURRENT_APP_BACKUP_PATH}/$(uname -m)/Applications"
+PATH_THIRD_APPLICATIONS="${CURRENT_THIRD_APPS_PATH}/$(uname -m)/Applications"
+PATH_THIRD_APPS_BACKUP="${CURRENT_THIRD_APPS_PATH}/$(uname -m)/BACKUP"
 
 if [ "$Params" = "backup" ]; then
-    mkdir -p "${PATH_BACKUP}"
+    mkdir -p "${PATH_THIRD_APPLICATIONS}"
+    mkdir -p "${PATH_THIRD_APPS_BACKUP}"
 fi
 
 info "==========================================================="
 info "params<brew-type> = ${Params}"
 info "params<Backup key> = ${ParamsBkKey}"
-info "current app backup fold: ${CURRENT_APP_BACKUP_PATH}"
-info "current app backup path: ${PATH_BACKUP}"
+info "current app path fold: ${CURRENT_THIRD_APPS_PATH}"
+info "current app <APPLICATION> path: ${PATH_THIRD_APPLICATIONS}"
+info "current app <BACKUP> path: ${PATH_THIRD_APPS_BACKUP}"
 info "==========================================================="
 
 function backup_apps_from_Applications {
     name=$1
     appName="${name}.app"
 
-    app_path_in_backup_folder="${PATH_BACKUP}/${name}.zip"
+    app_path_in_backup_file="${PATH_THIRD_APPS_BACKUP}/${name}.zip"
     info "Backup app in Applications: ${appName}"
-    info "Backup app path: ${app_path_in_backup_folder}"
+    info "Backup app path: ${app_path_in_backup_file}"
 
     # if the app is already in backup folder, delete it first
-    if [ -f "${app_path_in_backup_folder}" ]; then
-        info "** remove the old app zip: ${app_path_in_backup_folder}"
-        rm "${app_path_in_backup_folder}"
+    if [ -f "${app_path_in_backup_file}" ]; then
+        info "** remove the old app zip: ${app_path_in_backup_file}"
+        rm "${app_path_in_backup_file}"
     fi
 
     cd "/Applications"
-    zip -y -r -q "${app_path_in_backup_folder}" "${appName}"
+    zip -y -r -q "${app_path_in_backup_file}" "${appName}"
 }
 
 function backup_apps_in_backup_folder {
     name=$1
     appName="${name}.app"
 
-    app_path_in_backup_folder="${PATH_BACKUP}/${name}.zip"
+    app_path_in_backup_file="${PATH_THIRD_APPS_BACKUP}/${name}.zip"
     info "Backup app in backup folder: ${appName}"
-    info "Backup app path: ${app_path_in_backup_folder}"
+    info "Backup app path: ${app_path_in_backup_file}"
 
     # if the app is already in backup folder, delete it first
-    if [ -f "${app_path_in_backup_folder}" ]; then
-        info "** remove the old app zip: ${app_path_in_backup_folder}"
-        rm "${app_path_in_backup_folder}"
+    if [ -f "${app_path_in_backup_file}" ]; then
+        info "** remove the old app zip: ${app_path_in_backup_file}"
+        rm "${app_path_in_backup_file}"
     fi
 
-    cd "${PATH_BACKUP}"
-    zip -y -r -q "${app_path_in_backup_folder}" "${appName}"
+    cd "${PATH_THIRD_APPLICATIONS}"
+    zip -y -r -q "${app_path_in_backup_file}" "${appName}"
 }
 
 function restore_apps {
     name=$1
     appName="${name}.app"
 
-    app_path_in_backup_folder="${PATH_BACKUP}/${name}.zip"
+    app_path_in_backup_file="${PATH_THIRD_APPS_BACKUP}/${name}.zip"
     info "Restore app: ${appName}"
-    info "Last backup app path: ${app_path_in_backup_folder}"
+    info "Last backup app path: ${app_path_in_backup_file}"
 
-    if [ -f "${app_path_in_backup_folder}" ]; then
-        unzip "${app_path_in_backup_folder}" -d "/Applications"
+    if [ -f "${app_path_in_backup_file}" ]; then
+        unzip "${app_path_in_backup_file}" -d "/Applications"
     fi
 }
 
@@ -191,11 +194,11 @@ function link_apps {
     name=$1
     appName="${name}.app"
 
-    app_path_in_backup_folder="${PATH_BACKUP}/${appName}"
+    app_path_in_backup_file="${PATH_THIRD_APPLICATIONS}/${appName}"
     info "Link app: ${appName}"
-    info "Backup app path: ${app_path_in_backup_folder}"
+    info "Backup app path: ${app_path_in_backup_file}"
 
-    directoryLink "app(${name})" "${app_path_in_backup_folder}" "/Applications/${appName}" "delete"
+    directoryLink "app(${name})" "${app_path_in_backup_file}" "/Applications/${appName}" "delete"
 }
 
 function install_brew_app {
