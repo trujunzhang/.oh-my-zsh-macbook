@@ -107,8 +107,8 @@ hs.hotkey.bind(
     "2",
     function()
         beforePlayGame(function()
-            hs.application.launchOrFocus(GamesFolder .. "Rise of the Tomb Raide.app")
-            hs.notify.new({ title = "Rise of the Tomb Raide.app", informativeText = "run it sucessfully" }):send()
+            hs.application.launchOrFocus(GamesFolder .. "Crysis_2_Remastered-FLT.app")
+            hs.notify.new({ title = "Crysis_2_Remastered-FLT.app", informativeText = "run it sucessfully" }):send()
         end)
     end)
 
@@ -117,8 +117,9 @@ hs.hotkey.bind(
     "3",
     function()
         beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Fallout4.app")
-            hs.notify.new({ title = "Fallout4.app", informativeText = "run it sucessfully" }):send()
+            hs.application.launchOrFocus(KegworksGames .. "Crysis 3 Remasted.app")
+            hs.notify.new({ title = "Crysis 3 Remasted.app", informativeText = "run it sucessfully" })
+                :send()
         end)
 
         activeWindow()
@@ -155,11 +156,13 @@ hs.hotkey.bind(
     { 'Cmd', 'Alt' },
     "6",
     function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Assassins-creed-unity.app")
-            hs.notify.new({ title = "Assassins-creed-unity.app", informativeText = "run it sucessfully" }):send()
-        end)
+        local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
+        hs.execute(shell_command)
 
+        beforePlayGame(function()
+            hs.application.launchOrFocus(KegworksGames .. "Assassins.Creed.Origins-CPY.app")
+            hs.notify.new({ title = "Assassins.Creed.Origins-CPY.app", informativeText = "run it sucessfully" }):send()
+        end)
 
         activeWindow()
     end)
