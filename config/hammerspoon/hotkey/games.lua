@@ -107,7 +107,7 @@ hs.hotkey.bind(
     "2",
     function()
         beforePlayGame(function()
-            hs.application.launchOrFocus(GamesFolder .. "Crysis_2_Remastered-FLT.app")
+            hs.application.launchOrFocus(KegworksGames .. "Crysis_2_Remastered-FLT.app")
             hs.notify.new({ title = "Crysis_2_Remastered-FLT.app", informativeText = "run it sucessfully" }):send()
         end)
     end)
