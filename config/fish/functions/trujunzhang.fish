@@ -819,6 +819,14 @@ end
 alias brew_upgrade='brew upgrade'
 alias brew_outDated='brew outdated'
 
+function brew_install_kegworks
+    export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
+    export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
+
+    # https://github.com/Kegworks-App/Kegworks
+    brew install --cask --no-quarantine Kegworks-App/kegworks/kegworks
+end
+
 function brew_install_app
     export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
     export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"

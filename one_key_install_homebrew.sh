@@ -26,12 +26,6 @@ function brew_install_jenkins {
     sudo cp -Rvp "$TRUJUNZHANG_DOTFILES_HOME/config/homebrew/homebrew.mxcl.jenkins-lts.plist" "/opt/homebrew/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist"
 }
 
-function brew_install_rbenv {
-    brew install rbenv
-    rbenv install 3.3.4
-    rbenv global 3.3.4
-}
-
 function brew_install_common {
     # https://github.com/Bhupesh-V/ugit
     brew install ugit
@@ -54,6 +48,6 @@ function brew_install_libs {
 }
 
 homebrew_install_third
-brew_install_jenkins
-brew_install_common 
-brew_install_libs
+# brew_install_jenkins
+# brew_install_common 
+# brew_install_libs

@@ -18,18 +18,20 @@ source ./bash/tools.sh
 # fi
 HOMEBREW_HOME="$(brew --prefix)"
 
+if [[ $(uname -m) == 'arm64' ]]; then
+    # info M2
+    HOMEBREW_HOME="/opt/homebrew/opt"
+fi
+
+# if [[ $(uname -m) == 'x86_64' ]]; then
+#     # info Mackook
+# fi
+
+
 export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
 # brew tap FelixKratz/formulae
-
-brew_apps=(
-    "lua-language-server" "lua-language-server"
-    "starship" "starship"
-    "zellij" "zellij"
-    "fish" "fish"
-    "neovim" "neovim"
-)
 
 brew_appsxxx=(
     ## cocoapods(xcode)
@@ -125,10 +127,7 @@ brew_appsxxx=(
 
     "opt/mkcert" "mkcert"
 )
-brew_apps_arm=(
-
-)
-brew_apps_x86=(
+brew_apps_x86xxx=(
     ## yabai
     # https://github.com/jqlang/jq
     "opt/jq" "jq"
@@ -138,11 +137,49 @@ brew_apps_x86=(
     ## skhd
     "opt/skhd" "koekeishiya/formulae/skhd"
     # skhd --start-service
+)
+brew_apps_arm=(
+    "lua-language-server"  "lua-language-server"
+    "starship"             "starship"
+    "zellij"               "zellij"
+    "fish"                 "fish"
+    "neovim"               "neovim"
 
+    "jenkins-lts"      "jenkins-lts"
+
+    # https://github.com/Bhupesh-V/ugit
+    "ugit"      "ugit"
+    "neovide"   "neovide"
+
+    "ruby@3.3" "ruby@3.3"
+
+    # https://github.com/Muhammed770/hammerspoon-bluetooth-automation
+    "blueutil" "blueutil"
+
+    # asdf install ruby
+    # psych:
+    #         Could not be configured. It will not be installed.
+    "libyaml" "libyaml"
+)
+brew_apps_x86=(
+    "starship"             "starship"
+    "zellij"               "zellij"
+    "fish"                 "fish"
+    "neovim"               "neovim"
 )
 
+brew_apps=()
+if [[ $(uname -m) == 'arm64' ]]; then
+    # info M2
+    brew_apps=("${brew_apps_arm[@]}")
+fi
+if [[ $(uname -m) == 'x86_64' ]]; then
+    # info Mackook
+    brew_apps=("${brew_apps_x86[@]}")
+fi
+
 function install_apps {
-    apps=("$@")
+    apps=("${brew_apps[@]}")
     for ((i = 0; i < ${#apps[@]}; i = i + 2)); do
         echo "element $i is ${apps[$i + 0]}"
         echo "element $i is ${apps[$i + 1]}"
@@ -151,18 +188,6 @@ function install_apps {
             brew install ${apps[$i + 1]}
         fi
     done
-}
-
-function install_apps_on_current_os {
-    if [[ $(uname -m) == 'arm64' ]]; then
-        # info M2
-        install_apps "${brew_apps_arm[@]}"
-    fi
-
-    if [[ $(uname -m) == 'x86_64' ]]; then
-        # info Mackook
-        install_apps "${brew_apps_x86[@]}"
-    fi
 }
 
 ## list
@@ -176,8 +201,13 @@ function install_apps_on_current_os {
 # fi
 
 ## install common apps
-install_apps "${brew_apps[@]}"
-# install_apps_on_current_os
+install_apps 
+
+# jenkins-lts
+if [ -d "$HOMEBREW_HOME/jenkins-lts" ]; then
+    info "copy jenkins-lts list file"
+    sudo cp -Rvp "$TRUJUNZHANG_DOTFILES_HOME/config/homebrew/homebrew.mxcl.jenkins-lts.plist" "/opt/homebrew/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist"
+fi
 
 ## Finally, restart the nginx.
 # brew services restart nginx
