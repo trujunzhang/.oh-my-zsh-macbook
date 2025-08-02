@@ -2,6 +2,17 @@
 local GamesFolder = "/Volumes/MacGame/AppGames/"
 local KegworksGames = GamesFolder .. 'Kegworks/'
 
+
+-- Function to toggle Dock visibility
+function toggleDockVisibility()
+    local currentDockState = hs.execute("defaults read com.apple.dock autohide")
+    if currentDockState == "1" then
+        hs.execute("defaults write com.apple.dock autohide -bool false && killall Dock")
+    else
+        hs.execute("defaults write com.apple.dock autohide -bool true && killall Dock")
+    end
+end
+
 -- Assassins-creed-three.app
 -- 'Assassins Creed IV Black Flag.app'
 -- Assassins-creed-rogue.app
@@ -45,8 +56,9 @@ local function beforePlayGame(runApp)
     end)
 end
 
-local function activeWindow()
-    hs.timer.doAfter(40, function()
+local function activeWindow(interval)
+    interval = interval or 40
+    hs.timer.doAfter(interval, function()
         hs.eventtap.leftClick(hs.mouse.getAbsolutePosition())
         -- hs.notify.new({ title = "Active game window", informativeText = "click it sucessfully" }):send()
         hs.alert.show(string.format("App path:        %s\nApp name:      %s\nIM source id:  %s",
@@ -101,6 +113,21 @@ hs.hotkey.bind(
 
         activeWindow()
     end)
+
+hs.hotkey.bind(
+    { 'Cmd', 'Alt' },
+    "W",
+    function()
+        hs.execute("defaults write com.apple.dock autohide -bool true && killall Dock")
+
+        beforePlayGame(function()
+            hs.application.launchOrFocus(KegworksGames .. "The Witcher 3 Wild Hunt GOTY.app")
+            hs.notify.new({ title = "The Witcher 3 Wild Hunt GOTY.app", informativeText = "run it sucessfully" }):send()
+        end)
+
+        activeWindow(80)
+    end)
+
 
 hs.hotkey.bind(
     { 'Cmd', 'Alt' },
