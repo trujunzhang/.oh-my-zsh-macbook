@@ -44,7 +44,8 @@ return {
         -- Merge custom sources with the existing ones from lazyvim
         -- NOTE: by default lazyvim already includes the lazydev source, so not adding it here again
         opts.sources = vim.tbl_deep_extend("force", opts.sources or {}, {
-            default = { "lsp", "path", "snippets", "buffer", "dadbod", "emoji", "dictionary" },
+            -- default = { "lsp", "path", "snippets", "buffer", "dadbod", "emoji", "dictionary" },
+            default = { "lsp", "path", "snippets", "buffer", "emoji", "dictionary" },
             providers = {
                 lsp = {
                     name = "lsp",
@@ -137,12 +138,12 @@ return {
                 },
                 -- Example on how to configure dadbod found in the main repo
                 -- https://github.com/kristijanhusak/vim-dadbod-completion
-                dadbod = {
-                    name = "Dadbod",
-                    module = "vim_dadbod_completion.blink",
-                    min_keyword_length = 2,
-                    score_offset = 85, -- the higher the number, the higher the priority
-                },
+                -- dadbod = {
+                --     name = "Dadbod",
+                --     module = "vim_dadbod_completion.blink",
+                --     min_keyword_length = 2,
+                --     score_offset = 85, -- the higher the number, the higher the priority
+                -- },
                 -- https://github.com/moyiz/blink-emoji.nvim
                 emoji = {
                     module = "blink-emoji",
