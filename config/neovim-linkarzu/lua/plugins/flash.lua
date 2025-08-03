@@ -33,7 +33,11 @@
 
 return {
     "folke/flash.nvim",
-    enabled = false,
+    enabled = true,
+    config = function(_, opts)
+        -- vim.api.nvim_command("hi FlashBackdrop guibg=#ff0000 guifg=#E0E0E0")
+        vim.api.nvim_command("hi FlashBackdrop guibg=#ff0000 guifg=#00ff00")
+    end,
     keys = {
         {
             "s",
@@ -88,6 +92,16 @@ return {
             -- Search for me adds a protection layer, so if you mistype a word, it
             -- doesn't exit
             mode = "search",
+        },
+        highlight = {
+            -- Set to true to show a backdrop with highlight group FlashBackdrop
+            backdrop = true,
+            -- ... other highlight options ...
+            groups = {
+                -- Defines the highlight group used for the backdrop
+                backdrop = "FlashBackdrop",
+                -- ... other highlight groups ...
+            },
         },
         -- jump = {
         --   pos = "end",

@@ -65,4 +65,5 @@ linkarzu_color16=#e9b3fd
 linkarzu_color24=#f94dff
 
 # Wallpaper for this colorscheme
-wallpaper="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Images/wallpapers/official/skyrim-dragon-4.webp"
+# wallpaper="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Images/wallpapers/official/skyrim-dragon-4.webp"
+wallpaper="$HOME/.config/neovim-linkarzu/wallpapers/neovim.webp"
