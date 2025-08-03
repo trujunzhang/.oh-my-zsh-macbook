@@ -51,13 +51,13 @@
     "type": "application",
     "name": "Ghostty",
     "application": "Ghostty",
-    "enable": "0"
+    "enable": "1"
   },
   {
     "type": "application",
     "name": "WezTerm",
     "application": "WezTerm",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",

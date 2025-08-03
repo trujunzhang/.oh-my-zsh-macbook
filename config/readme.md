@@ -66,6 +66,11 @@ url = https://github.com/nikolovlazar/dotfiles
 
 url = https://github.com/kohane27/nvim-config
 
+# neovim-linkarzu
+
+url = https://github.com/linkarzu/dotfiles-latest/neovim/neobean
+url = https://github.com/linkarzu/dotfiles-latest/tree/main/neovim/neobean
+
 # karabiner
 
 url = https://github.com/mxstbr/karabiner

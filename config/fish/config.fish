@@ -6,7 +6,7 @@ set -gx TERM xterm-256color
 
 # environment variable
 set -g -x ORGANIZATIONS_HOME "$HOME/Documents/Organizations"
-set -g -x  TRUJUNZHANG_DOTFILES_HOME "$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
+set -g -x TRUJUNZHANG_DOTFILES_HOME "$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 
 # Android SDK
 # ======================================================================
@@ -26,7 +26,6 @@ set -g -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/25.1.8937393
 
 # set -g -x HOMEBREW_BOTTLE_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles"
 # set -g -x HOMEBREW_API_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles/api"
-
 
 if test -d /opt/homebrew # MacOS arm64
     set -gx HOMEBREW_PREFIX /opt/homebrew
@@ -57,6 +56,14 @@ fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps"
 
+if test "$(uname -m)" = arm64
+    fish_add_path "$HOME/.local/bin/helix-aarch64-macos"
+end
+
+if test "$(uname -m)" = x86_64
+    fish_add_path "$HOME/.local/bin/helix-x86_64-macos"
+    fish_add_path "$HOME/.local/bin/nvim-macos-x86_64/bin"
+end
 
 # if "$(uname -m)" == 'arm64'
 # end
@@ -139,7 +146,7 @@ set -x THEFUCK_OVERRIDDEN_ALIASES 'gsed,git'
 if type zellij &>/dev/null
     if set -q ZELLIJ
     else
-      zellij attach -c djzhang-mac
+        zellij attach -c djzhang-mac
     end
 end
 
@@ -160,7 +167,6 @@ end
 # end
 
 fish_add_path "/opt/homebrew/opt/ruby@3.3/bin"
-
 
 # ASDF configuration code
 if test -z $ASDF_DATA_DIR

@@ -4,7 +4,7 @@ local appCMD = "android_new_ieatta_genymotion"
 
 hs.hotkey.bind(
 -- { 'Cmd', 'Shift' },
-    { 'Cmd' },
+    { "Cmd", "shift", "Ctrl" },
     "Y",
     function()
         -- local mobileApp = hs.application.applicationsForBundleID('NULL-APP-BUNDLE-ID')[1]
@@ -59,7 +59,8 @@ hs.hotkey.bind(
     end)
 
 hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
+    -- { 'Cmd', 'Alt' },
+    { "Cmd", "shift", "Ctrl" },
     "X",
     function()
         -- local mobileApp = hs.appfinder.appFromWindowTitle("Android Emulator - genymotion:5554")

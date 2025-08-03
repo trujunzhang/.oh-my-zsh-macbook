@@ -62,7 +62,6 @@ alias psrun='php bin/console server:run' # Run the test script from package.json
 
 alias pslrun='php -S localhost:8080 -t web web/index.php'
 
-
 # ssh-agent.plugin
 
 alias slssh="ssh djzhang@192.168.1.106"
@@ -360,19 +359,19 @@ alias ios_simctl="xcrun simctl list devices | grep 'iPhone'"
 # alias iosiphone16plus="open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')"
 
 function iosiphone16plus
-     open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')
+    open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')
 end
 
 #open -a Simulator && xcrun simctl boot 'iPhone 16 Plus'
 function ios_new_ieatta_iphone16plus
-  set bundle 'com.ieatta.track.dev'
-  set UUID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})') 
-  echo "iphone 16 Plus<UUID>: $UUID"
+    set bundle 'com.ieatta.track.dev'
+    set UUID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')
+    echo "iphone 16 Plus<UUID>: $UUID"
 
-  xcrun simctl shutdown all
-  open -a Simulator --args -CurrentDeviceUDID $UUID
-  sleep 10
-  xcrun simctl launch $UUID $bundle
+    xcrun simctl shutdown all
+    open -a Simulator --args -CurrentDeviceUDID $UUID
+    sleep 10
+    xcrun simctl launch $UUID $bundle
 end
 
 #const mainActivity = "com.ieatta.track.MainActivity";
@@ -380,7 +379,7 @@ end
 alias android_new_ieatta_genymotion="node $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/run_android_simulator.js --mainActivity 'com.ieatta.track.MainActivity' --packageName 'com.ieatta.track.dev'"
 
 function android_new_ieatta_genymotion_stop
-    $ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion
+    $ANDROID_SDK_ROOT/emulator/emulator -avd genymotion
     sleep 20
     adb shell am start -n com.ieatta.track.dev/com.ieatta.track.dev.MainActivity
 end
@@ -714,6 +713,7 @@ alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lv
 alias wclean_nvimCache="rm -rf $HOME/.cache/nvim && rm -rf $HOME/.local/state/nvim && rm -rf $HOME/.local/share/nvim"
 alias wclean_nvchad-cache_Starter="rm -rf $HOME/.cache/nvchad-Starter && rm -rf $HOME/.local/state/nvchad-Starter && rm -rf $HOME/.local/share/nvchad-Starter"
 alias wclean_nvchad-cache_Backup="rm -rf $HOME/.cache/nvchad-Backup && rm -rf $HOME/.local/state/nvchad-Backup && rm -rf $HOME/.local/share/nvchad-Backup"
+alias wclean_nvchad-cache_linkarzu="rm -rf $HOME/.cache/nvchad-linkarzu && rm -rf $HOME/.local/state/nvchad-linkarzu && rm -rf $HOME/.local/share/nvchad-linkarzu"
 alias wclean_nvchad-cache_wSedlacek="rm -rf $HOME/.cache/nvchad-wSedlacek && rm -rf $HOME/.local/state/nvchad-wSedlacek && rm -rf $HOME/.local/share/nvchad-wSedlacek"
 alias wclean_nvchad-cache_mgastonportillo="rm -rf $HOME/.cache/nvchad-mgastonportillo && rm -rf $HOME/.local/state/nvchad-mgastonportillo && rm -rf $HOME/.local/share/nvchad-mgastonportillo"
 alias wclean_nvchad-cache_Alexis12119="rm -rf $HOME/.cache/nvchad-Alexis12119 && rm -rf $HOME/.local/state/nvchad-Alexis12119 && rm -rf $HOME/.local/share/nvchad-Alexis12119"
@@ -840,24 +840,24 @@ function dmac_games_sign
 
     if not set -q argv[1]
         echo 'not defined gameName'
-        set gameName 'default_value'
+        set gameName default_value
     end
-       
+
     echo "game name: $gameName"
 
-    set gameFolder "/Volumes/MacGame/AppGames"
+    set gameFolder /Volumes/MacGame/AppGames
     set lower_gameName (string lower $gameName)
 
     for file in "$gameFolder"/*.app
 
-       set lower_file (string lower $file)
-       echo "file path: $file"
+        set lower_file (string lower $file)
+        echo "file path: $file"
 
-       if string match -q "*$lower_gameName*" $lower_file
-           echo " Processing file: $file"
+        if string match -q "*$lower_gameName*" $lower_file
+            echo " Processing file: $file"
 
-           xattr -cr "$file" && codesign --force --deep --sign - "$file"
-       end
+            xattr -cr "$file" && codesign --force --deep --sign - "$file"
+        end
     end
 
 end
@@ -891,14 +891,17 @@ alias m='NVIM_APPNAME=nvchad-mgastonportillo nvim' # NvChad
 alias a='NVIM_APPNAME=nvchad-Alexis12119 nvim' # NvChad
 alias nv='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
 alias c='NVIM_APPNAME=nvim-craftzdog nvim' # Standard neovim
-alias s='NVIM_APPNAME=nvchad-Starter nvim' # Standard neovim
-alias b='NVIM_APPNAME=nvchad-Backup nvim' # Standard neovim
+alias vs='NVIM_APPNAME=nvchad-Starter nvim' # Standard neovim
+alias vb='NVIM_APPNAME=nvchad-Backup nvim' # Standard neovim
+alias b='NVIM_APPNAME=neovim-linkarzu nvim' # Standard neovim
+alias s='NVIM_APPNAME=neovim-linkarzu nvim' # Standard neovim
 
 alias uw='NVIM_APPNAME=nvchad-wSedlacek neovide' # NvChad
 alias un='NVIM_APPNAME=nvim-2kabhishek neovide' # Standard neovim
 alias uc='NVIM_APPNAME=nvim-craftzdog neovide' # Standard neovim
 alias us='NVIM_APPNAME=nvchad-Starter neovide' # Standard neovim
-alias ub='NVIM_APPNAME=nvchad-Backup neovide' # Standard neovim
+alias ucb='NVIM_APPNAME=nvchad-Backup neovide' # Standard neovim
+alias ub='NVIM_APPNAME=nvchad-linkarzu neovide' # Standard neovim
 
 # Emacs
 # alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
@@ -928,10 +931,9 @@ alias dproxy_git="git config --global http.proxy http://127.0.0.1:1234 && git co
 alias dproxy_npm="npm config set proxy http://127.0.0.1:1234 && npm config set https-proxy http://127.0.0.1:1234"
 
 function dgitlab_runner
-  set path "/Volumes/MacGame/MacCache/gitlab-runner"
-  echo "local: $path"
+    set path /Volumes/MacGame/MacCache/gitlab-runner
+    echo "local: $path"
 
-  cd $path
-  gitlab-runner run
+    cd $path
+    gitlab-runner run
 end
-

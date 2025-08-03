@@ -1,5 +1,6 @@
 print("=================== load djzhang's config===============================")
 -- require "reload.reload"
+require "utils.tools"
 require "hotkey.hotkey"
 require "hotkey.games"
 require "hotkey.system"

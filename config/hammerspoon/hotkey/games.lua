@@ -1,10 +1,9 @@
 -- local GamesFolder = "/Volumes/MacGame/AppGames/Kegworks"
 local GamesFolder = "/Volumes/MacGame/AppGames/"
-local KegworksGames = GamesFolder .. 'Kegworks/'
-
+local KegworksGames = GamesFolder .. "Kegworks/"
 
 -- Function to toggle Dock visibility
-function toggleDockVisibility()
+local function toggleDockVisibility()
     local currentDockState = hs.execute("defaults read com.apple.dock autohide")
     if currentDockState == "1" then
         hs.execute("defaults write com.apple.dock autohide -bool false && killall Dock")
@@ -44,7 +43,7 @@ local function beforePlayGame(runApp)
     hs.timer.doAfter(2, function()
         -- local myApp = hs.application.applicationsForBundleID('com.github.wez.wezterm')[1]
         -- hs.eventtap.keyStroke({ "Alt" }, 'G', myApp)
-        hs.eventtap.keyStroke({ "Alt" }, 'G')
+        hs.eventtap.keyStroke({ "Alt" }, "G")
     end)
 
     hs.timer.doAfter(4, function()
@@ -61,10 +60,14 @@ local function activeWindow(interval)
     hs.timer.doAfter(interval, function()
         hs.eventtap.leftClick(hs.mouse.getAbsolutePosition())
         -- hs.notify.new({ title = "Active game window", informativeText = "click it sucessfully" }):send()
-        hs.alert.show(string.format("App path:        %s\nApp name:      %s\nIM source id:  %s",
-            hs.window.focusedWindow():application():name(),
-            hs.window.focusedWindow():application():name(),
-            hs.keycodes.currentSourceID()))
+        hs.alert.show(
+            string.format(
+                "App path:        %s\nApp name:      %s\nIM source id:  %s",
+                hs.window.focusedWindow():application():name(),
+                hs.window.focusedWindow():application():name(),
+                hs.keycodes.currentSourceID()
+            )
+        )
     end)
 end
 
@@ -78,7 +81,6 @@ end
 --         end)
 --     end)
 
-
 -- hs.hotkey.bind(
 --     { 'Cmd', 'Alt' },
 --     "M",
@@ -89,136 +91,99 @@ end
 --         end)
 --     end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "E",
-    function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Mass-Effect-Andromeda.app")
-            hs.notify.new({ title = "Mass-Effect-Andromeda.app", informativeText = "run it sucessfully" }):send()
-        end)
-
-        activeWindow()
+hs.hotkey.bind({ "Cmd", "Alt" }, "E", function()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Mass-Effect-Andromeda.app")
+        hs.notify.new({ title = "Mass-Effect-Andromeda.app", informativeText = "run it sucessfully" }):send()
     end)
 
+    activeWindow()
+end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "R",
-    function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Titanfall2.app")
-            hs.notify.new({ title = "Titanfall2.app", informativeText = "run it sucessfully" }):send()
-        end)
-
-        activeWindow()
+hs.hotkey.bind({ "Cmd", "Alt" }, "R", function()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Titanfall2.app")
+        hs.notify.new({ title = "Titanfall2.app", informativeText = "run it sucessfully" }):send()
     end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "W",
-    function()
-        hs.execute("defaults write com.apple.dock autohide -bool true && killall Dock")
+    activeWindow()
+end)
 
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "The Witcher 3 Wild Hunt GOTY.app")
-            hs.notify.new({ title = "The Witcher 3 Wild Hunt GOTY.app", informativeText = "run it sucessfully" }):send()
-        end)
+hs.hotkey.bind({ "Cmd", "Alt" }, "W", function()
+    hs.execute("defaults write com.apple.dock autohide -bool true && killall Dock")
 
-        activeWindow(80)
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "The Witcher 3 Wild Hunt GOTY.app")
+        hs.notify.new({ title = "The Witcher 3 Wild Hunt GOTY.app", informativeText = "run it sucessfully" }):send()
     end)
 
+    activeWindow(80)
+end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "2",
-    function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Crysis_2_Remastered-FLT.app")
-            hs.notify.new({ title = "Crysis_2_Remastered-FLT.app", informativeText = "run it sucessfully" }):send()
-        end)
+hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Crysis_2_Remastered-FLT.app")
+        hs.notify.new({ title = "Crysis_2_Remastered-FLT.app", informativeText = "run it sucessfully" }):send()
+    end)
+end)
+
+hs.hotkey.bind({ "Cmd", "Alt" }, "3", function()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Crysis 3 Remasted.app")
+        hs.notify.new({ title = "Crysis 3 Remasted.app", informativeText = "run it sucessfully" }):send()
     end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "3",
-    function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Crysis 3 Remasted.app")
-            hs.notify.new({ title = "Crysis 3 Remasted.app", informativeText = "run it sucessfully" })
-                :send()
-        end)
+    activeWindow()
+end)
 
-        activeWindow()
+hs.hotkey.bind({ "Cmd", "Alt" }, "4", function()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Assassins-Creed-IV-Black Flag.app")
+        hs.notify.new({ title = "Assasins Creed - black flag", informativeText = "run it sucessfully" }):send()
     end)
 
+    activeWindow()
+end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "4",
-    function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Assassins-Creed-IV-Black Flag.app")
-            hs.notify.new({ title = "Assasins Creed - black flag", informativeText = "run it sucessfully" }):send()
-        end)
-
-
-        activeWindow()
+hs.hotkey.bind({ "Cmd", "Alt" }, "5", function()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Assassins-creed-rogue.app")
+        hs.notify.new({ title = "Assassins-creed-rogue.app", informativeText = "run it sucessfully" }):send()
     end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "5",
-    function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Assassins-creed-rogue.app")
-            hs.notify.new({ title = "Assassins-creed-rogue.app", informativeText = "run it sucessfully" }):send()
-        end)
+    activeWindow()
+end)
 
+hs.hotkey.bind({ "Cmd", "Alt" }, "6", function()
+    local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
+    hs.execute(shell_command)
 
-        activeWindow()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Assassins.Creed.Origins-CPY.app")
+        hs.notify.new({ title = "Assassins.Creed.Origins-CPY.app", informativeText = "run it sucessfully" }):send()
     end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "6",
-    function()
-        local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
-        hs.execute(shell_command)
+    activeWindow()
+end)
 
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Assassins.Creed.Origins-CPY.app")
-            hs.notify.new({ title = "Assassins.Creed.Origins-CPY.app", informativeText = "run it sucessfully" }):send()
-        end)
+hs.hotkey.bind({ "Cmd", "Alt" }, "7", function()
+    -- turn off aerospace
+    local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable off"
+    hs.execute(shell_command)
 
-        activeWindow()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Need-for-speed-payback.app")
+        hs.notify.new({ title = "Need-for-speed-payback.app", informativeText = "run it sucessfully" }):send()
     end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "7",
-    function()
-        -- turn off aerospace
-        local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable off"
-        hs.execute(shell_command)
+    activeWindow()
+end)
 
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Need-for-speed-payback.app")
-            hs.notify.new({ title = "Need-for-speed-payback.app", informativeText = "run it sucessfully" }):send()
-        end)
-
-        activeWindow()
+hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Cyberpunk.2077..app")
+        hs.notify.new({ title = "Cyberpunk.2077..app", informativeText = "run it sucessfully" }):send()
     end)
 
-
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "C",
-    function()
-        beforePlayGame(function()
-            hs.application.launchOrFocus(KegworksGames .. "Cyberpunk.2077..app")
-            hs.notify.new({ title = "Cyberpunk.2077..app", informativeText = "run it sucessfully" }):send()
-        end)
-
-        activeWindow()
-    end)
+    activeWindow()
+end)

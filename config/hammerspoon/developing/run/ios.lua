@@ -3,7 +3,7 @@ local mobileID = "com.apple.iphonesimulator"
 local appCMD = "ios_new_ieatta_iphone16plus"
 
 hs.hotkey.bind(
-    { 'cmd' },
+    { "Cmd", "shift", "Ctrl" },
     "I",
     function()
         local mobileApp = hs.application.applicationsForBundleID(mobileID)[1]
@@ -58,7 +58,8 @@ hs.hotkey.bind(
     end)
 
 hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
+    -- { 'Cmd', 'Alt' },
+    { "Cmd", "shift", "Ctrl" },
     "P",
     function()
         -- local mobileApp = hs.appfinder.appFromWindowTitle("Android Emulator - genymotion:5554")
@@ -71,10 +72,3 @@ hs.hotkey.bind(
         hs.notify.new({ title = "kill ios", informativeText = "close it successfully" }):send()
             :release()
     end)
-
-function EscapeTab(tab)
-    local myApp = hs.application.applicationsForBundleID('com.github.wez.wezterm')[1]
-
-    hs.eventtap.keyStroke({ "Ctrl" }, tab, myApp)
-    hs.eventtap.keyStroke({}, "escape")
-end

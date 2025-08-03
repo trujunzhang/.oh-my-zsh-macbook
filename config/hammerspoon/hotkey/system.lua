@@ -1,4 +1,4 @@
-function muteOnWake(eventType)
+local function muteOnWake(eventType)
     if (eventType == hs.caffeinate.watcher.systemDidWake) then
         -- local output = hs.audiodevice.defaultOutputDevice()
         -- output:setMuted(true)

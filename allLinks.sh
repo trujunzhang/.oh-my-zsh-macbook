@@ -177,6 +177,7 @@ function link_config_fold {
     # directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim/lua/custom"         "delete"
     # directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-BrunoKrugel"       "$HOME/.config/nvim"          "delete"
     # nvim
+    directoryLink "config(neovim-linkarzu)" "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-linkarzu" "$HOME/.config/neovim-linkarzu" "delete"
     directoryLink "config(nvim_lazy)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-lazy" "$HOME/.config/nvim" "delete"
     directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-Starter" "$HOME/.config/nvchad-Starter" "delete"
     directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-Starter" "$HOME/.config/nvchad-Backup" "delete"
