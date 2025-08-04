@@ -45,8 +45,23 @@ return {
         -- NOTE: by default lazyvim already includes the lazydev source, so not adding it here again
         opts.sources = vim.tbl_deep_extend("force", opts.sources or {}, {
             -- default = { "lsp", "path", "snippets", "buffer", "dadbod", "emoji", "dictionary" },
-            default = { "lsp", "path", "snippets", "buffer", "emoji", "dictionary" },
+            -- default = { "lsp", "path", "snippets", "buffer", "emoji", "dictionary" },
+            default = { "lsp", "path", "snippets", "buffer", "emoji", "dictionary", "codeium" },
             providers = {
+                codeium = {
+                    name = "codeium", -- IMPORTANT: use the same name as you would for nvim-cmp
+                    module = "blink.compat.source",
+
+                    -- all blink.cmp source config options work as normal:
+                    --score_offset = -3,
+
+                    opts = {
+                        -- options passed to the completion source
+                        -- equivalent to `option` field of nvim-cmp source config
+
+                        cache_digraphs_on_start = true,
+                    },
+                },
                 lsp = {
                     name = "lsp",
                     enabled = true,

@@ -11,7 +11,7 @@ ports_apps_x86=(
 
     "zellij" "zellij"
     # "fish" "fish"
-    "neovim" "nvim"
+    "nvim" "neovim"
 
     # neovim
     "luarocks" "luarocks"

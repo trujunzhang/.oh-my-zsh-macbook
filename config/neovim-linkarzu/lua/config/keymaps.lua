@@ -32,6 +32,11 @@ if vim.fn.executable("lazygit") == 1 then
     end, { desc = "Lazygit (Root Dir)" })
 end
 
+-- codeium
+vim.keymap.set("i", "<Right>", function()
+    return vim.fn["codeium#Accept"]()
+end, { expr = true })
+
 -- This is using the kdheepak/lazygit.nvim file, the only reason I use it, is
 -- because the window looks bigger
 -- vim.keymap.set("n", "<M-g>", ":LazyGit<CR>", { desc = "Lazygit (Root Dir)" })
