@@ -27,10 +27,9 @@ python_global="3.12.0"
 java_global="zulu-17.52.19"
 
 # if [ ! -d ~/.asdf ]; then
-    # https://github.com/asdf-vm/asdf-plugins/blob/master/plugins/java
-    # git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.16.0
+# https://github.com/asdf-vm/asdf-plugins/blob/master/plugins/java
+# git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.16.0
 # fi
-
 
 # function uninstall_nodes {
 #     info "starting to uninstall asdf(nodes)"
@@ -58,9 +57,9 @@ function install_java {
 function install_python {
     info "starting to install asdf(python)"
 
-    brew_install_app openssl 
-    brew_install_app readline
-    brew_install_app xz
+    # brew_install_app openssl
+    # brew_install_app readline
+    # brew_install_app xz
 
     asdf plugin add python "https://github.com/danhper/asdf-python.git"
     asdf install python "$python_global"
@@ -162,5 +161,3 @@ elif [ "$ASDF_EVENT_TYPE" = "install" ]; then
 elif [ "$ASDF_EVENT_TYPE" = "update" ]; then
     update_asdf_plugins
 fi
-
-

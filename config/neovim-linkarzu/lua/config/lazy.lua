@@ -11,7 +11,8 @@ end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 -- Set the python3_host_prog variable
-vim.g.python3_host_prog = "~/.venvs/neovim/bin/python"
+-- vim.g.python3_host_prog = "~/.venvs/neovim/bin/python"
+vim.g.python3_host_prog = "~/.asdf/shims/python"
 
 require("lazy").setup({
     spec = {
@@ -21,6 +22,7 @@ require("lazy").setup({
         -- I do this to keep consistency and install the same plugins in all my
         -- machines, if you don't want that, comment them here and then manually
         -- enable them on each machine under :LazyExtras
+        -- { import = "lazyvim.plugins.extras.ai.codeium" },
         { import = "lazyvim.plugins.extras.lang.yaml" },
         { import = "lazyvim.plugins.extras.formatting.prettier" },
         -- { import = "lazyvim.plugins.extras.editor.harpoon2" },

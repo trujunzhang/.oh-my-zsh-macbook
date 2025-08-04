@@ -27,7 +27,6 @@ fi
 #     # info Mackook
 # fi
 
-
 export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
@@ -139,17 +138,28 @@ brew_apps_x86xxx=(
     # skhd --start-service
 )
 brew_apps_arm=(
-    "lua-language-server"  "lua-language-server"
-    "starship"             "starship"
-    "zellij"               "zellij"
-    "fish"                 "fish"
-    "neovim"               "neovim"
 
-    "jenkins-lts"      "jenkins-lts"
+    # python on the asdf-vim
+    # brew_install_app openssl
+    "readline" "readline"
+    "xz" "xz"
+    
+    # neovim
+    "luarocks" "luarocks"
+    "rg" "rg"
+    "fd" "fd"
+
+    "lua-language-server" "lua-language-server"
+    "starship" "starship"
+    "zellij" "zellij"
+    "fish" "fish"
+    "neovim" "neovim"
+
+    "jenkins-lts" "jenkins-lts"
 
     # https://github.com/Bhupesh-V/ugit
-    "ugit"      "ugit"
-    "neovide"   "neovide"
+    "ugit" "ugit"
+    "neovide" "neovide"
 
     "ruby@3.3" "ruby@3.3"
 
@@ -162,10 +172,10 @@ brew_apps_arm=(
     "libyaml" "libyaml"
 )
 brew_apps_x86=(
-    "starship"             "starship"
-    "zellij"               "zellij"
-    "fish"                 "fish"
-    "neovim"               "neovim"
+    "starship" "starship"
+    "zellij" "zellij"
+    "fish" "fish"
+    "neovim" "neovim"
 )
 
 brew_apps=()
@@ -201,7 +211,7 @@ function install_apps {
 # fi
 
 ## install common apps
-install_apps 
+install_apps
 
 # jenkins-lts
 if [ -d "$HOMEBREW_HOME/jenkins-lts" ]; then

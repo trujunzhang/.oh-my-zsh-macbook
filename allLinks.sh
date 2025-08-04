@@ -119,6 +119,7 @@ function link_config_fold {
 
     # asdf-vm
     fileLink "config(asdfrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.asdfrc" "$HOME/.asdfrc"
+    fileLink "config(asdf-python)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-python-packages" "$HOME/.default-python-packages"
     fileLink "config(asdf-node)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-npm-packages" "$HOME/.default-npm-packages"
     fileLink "config(asdf-ruby)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-gems" "$HOME/.default-gems"
 
@@ -329,8 +330,8 @@ function link_symlink {
 
     directoryLink "dotenv(Express.js environment variables)" "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
     directoryLink "hammerspoon(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/hammerspoon" "$HOME/.hammerspoon"
-    directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner${OS_NAME}" "$HOME/.config/karabiner" 
-    fileLink "ruby(gemrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/gem/gemrc" "$HOME/.config/gem/gemrc" 
+    directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner${OS_NAME}" "$HOME/.config/karabiner"
+    fileLink "ruby(gemrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/gem/gemrc" "$HOME/.config/gem/gemrc"
 
     # **IDES(purcell's emacs.d)
     # directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
@@ -370,7 +371,7 @@ function link_symlink {
     fileLink "npm(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm/npmrc" "$HOME/.npmrc" "delete"
     fileLink "npm(netrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/npm/netrc" "$HOME/.netrc" "delete"
 
-    fileLink "curl(curlrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/curl/curlrc" "$HOME/.curlrc" 
+    fileLink "curl(curlrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/curl/curlrc" "$HOME/.curlrc"
 
     # GUI.for.SingBox
     # v1.8.8
@@ -458,7 +459,7 @@ function link_mac_user {
     HOME_MAC_CACHE_PATH="/Volumes/MacGame/MacCache"
 
     # orbstack
-    directoryLink  "data(orbstack)" "$HOME_MAC_CACHE_PATH/orbstack/data" "$HOME/Library/Group Containers/HUAQ24HBR6.dev.orbstack/data"
+    directoryLink "data(orbstack)" "$HOME_MAC_CACHE_PATH/orbstack/data" "$HOME/Library/Group Containers/HUAQ24HBR6.dev.orbstack/data"
 
     # android
     directoryLink "android(avd-fold)" "/Users/djzhang/.android" "$HOME/.android"
@@ -534,4 +535,3 @@ if [[ $(uname -m) == 'arm64' ]]; then
     # info M2
     link_mac_user
 fi
-
