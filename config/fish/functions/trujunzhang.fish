@@ -937,3 +937,5 @@ function dgitlab_runner
     cd $path
     gitlab-runner run
 end
+
+alias ps_list_macports_install="ps aux | grep install"

@@ -117,6 +117,9 @@ function link_config_fold {
     # zellij
     directoryLink "config(zellij)" "$TRUJUNZHANG_DOTFILES_HOME/config/zellij" "$HOME/.config/zellij"
 
+    # lazygit
+    directoryLink "config(lazygit)" "$TRUJUNZHANG_DOTFILES_HOME/config/lazygit" "$PATH_USERPROFILE_APPLICATION_SUPPORT/lazygit"
+
     # asdf-vm
     fileLink "config(asdfrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.asdfrc" "$HOME/.asdfrc"
     fileLink "config(asdf-python)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-python-packages" "$HOME/.default-python-packages"

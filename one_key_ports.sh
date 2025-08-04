@@ -9,9 +9,15 @@ source ./bash/tools.sh
 ports_apps_x86=(
     "yabai" "yabai"
 
-    # "zellij" "zellij"
+    "zellij" "zellij"
     # "fish" "fish"
-    # "neovim" "neovim"
+    "neovim" "nvim"
+
+    # neovim
+    "luarocks" "luarocks"
+    "rg" "rg"
+    "fd" "fd"
+    "lua-language-server" "lua-language-server"
 )
 
 function install_apps {
@@ -20,8 +26,8 @@ function install_apps {
         echo "element $i is ${apps[$i + 0]}"
         echo "element $i is ${apps[$i + 1]}"
 
-        # if [ ! -d "$HOMEBREW_HOME/${apps[$i + 0]}" ]; then
-        sudo ports install ${apps[$i + 1]}
-        # fi
+        if [ ! -d "/opt/local/bin/${apps[$i + 0]}" ]; then
+            sudo port install ${apps[$i + 1]}
+        fi
     done
 }

@@ -148,8 +148,8 @@ brew_apps_arm=(
     "luarocks" "luarocks"
     "rg" "rg"
     "fd" "fd"
-
     "lua-language-server" "lua-language-server"
+
     "starship" "starship"
     "zellij" "zellij"
     "fish" "fish"
@@ -172,10 +172,10 @@ brew_apps_arm=(
     "libyaml" "libyaml"
 )
 brew_apps_x86=(
-    "starship" "starship"
-    "zellij" "zellij"
-    "fish" "fish"
-    "neovim" "neovim"
+    # "starship" "starship"
+    # "zellij" "zellij"
+    # "fish" "fish"
+    # "neovim" "neovim"
 )
 
 brew_apps=()
