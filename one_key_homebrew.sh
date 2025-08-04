@@ -143,7 +143,7 @@ brew_apps_arm=(
     # brew_install_app openssl
     "readline" "readline"
     "xz" "xz"
-    
+
     # neovim
     "luarocks" "luarocks"
     "rg" "rg"
@@ -216,7 +216,15 @@ install_apps
 # jenkins-lts
 if [ -d "$HOMEBREW_HOME/jenkins-lts" ]; then
     info "copy jenkins-lts list file"
-    sudo cp -Rvp "$TRUJUNZHANG_DOTFILES_HOME/config/homebrew/homebrew.mxcl.jenkins-lts.plist" "/opt/homebrew/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist"
+    PLIST_DEST_PATH="/opt/homebrew/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist"
+
+    if grep "ALLOW_LOCAL_CHECKOUT" $PLIST_DEST_PATH; then
+        error "  ALLOW_LOCAL_CHECKOUT already exists in $PLIST_DEST_PATH"
+    else
+        success "  ALLOW_LOCAL_CHECKOUT  not exists in $PLIST_DEST_PATH"
+        sudo cp -Rvp "$TRUJUNZHANG_DOTFILES_HOME/config/homebrew/homebrew.mxcl.jenkins-lts.plist" "$PLIST_DEST_PATH"
+    fi
+
 fi
 
 ## Finally, restart the nginx.

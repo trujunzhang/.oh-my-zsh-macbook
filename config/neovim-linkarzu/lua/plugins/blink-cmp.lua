@@ -264,7 +264,8 @@ return {
         -- https://cmp.saghen.dev/configuration/keymap.html#default
         opts.keymap = {
             preset = "default",
-            ["<CR>"] = { "select_and_accept" },
+            ["<Right>"] = { "select_and_accept" },
+            -- ["<CR>"] = { "select_and_accept" },
             ["<Tab>"] = { "snippet_forward", "fallback" },
             ["<S-Tab>"] = { "snippet_backward", "fallback" },
 
