@@ -115,3 +115,7 @@
     const onSubscribe = async (proxies, subscription) => {
       return { proxies, subscription }
     }
+  requestMethod: GET
+  header:
+    request: {}
+    response: {}

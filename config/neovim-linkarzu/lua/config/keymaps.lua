@@ -37,6 +37,14 @@ vim.keymap.set("i", "<Right>", function()
     return vim.fn["codeium#Accept"]()
 end, { expr = true })
 
+vim.keymap.set("n", "gm", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+
+-- Messages
+vim.keymap.set("n", "<leader>nm", "<cmd>messages<cr>", { desc = "Neovim | Messages", silent = true })
+
+-- Health
+vim.keymap.set("n", "<leader>nh", "<cmd>checkhealth<cr>", { desc = "Neovim | Health", silent = true })
+
 -- This is using the kdheepak/lazygit.nvim file, the only reason I use it, is
 -- because the window looks bigger
 -- vim.keymap.set("n", "<M-g>", ":LazyGit<CR>", { desc = "Lazygit (Root Dir)" })
@@ -3200,18 +3208,18 @@ end, { desc = "[P]Fold all headings level 4 or above" })
 --
 -- Use <CR> to fold when in normal mode
 -- To see help about folds use `:help fold`
-vim.keymap.set("n", "<CR>", function()
-    -- Get the current line number
-    local line = vim.fn.line(".")
-    -- Get the fold level of the current line
-    local foldlevel = vim.fn.foldlevel(line)
-    if foldlevel == 0 then
-        vim.notify("No fold found", vim.log.levels.INFO)
-    else
-        vim.cmd("normal! za")
-        vim.cmd("normal! zz") -- center the cursor line on screen
-    end
-end, { desc = "[P]Toggle fold" })
+-- vim.keymap.set("n", "<CR>", function()
+--     -- Get the current line number
+--     local line = vim.fn.line(".")
+--     -- Get the fold level of the current line
+--     local foldlevel = vim.fn.foldlevel(line)
+--     if foldlevel == 0 then
+--         vim.notify("No fold found", vim.log.levels.INFO)
+--     else
+--         vim.cmd("normal! za")
+--         vim.cmd("normal! zz") -- center the cursor line on screen
+--     end
+-- end, { desc = "[P]Toggle fold" })
 
 -- HACK: Fold markdown headings in Neovim with a keymap
 -- https://youtu.be/EYczZLNEnIY

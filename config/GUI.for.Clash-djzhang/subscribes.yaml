@@ -18,10 +18,6 @@
   disabled: false
   inSecure: false
   userAgent: ""
-  healthCheck:
-    enable: false
-    url: https://www.gstatic.com/generate_204
-    interval: 300
   proxies:
     - id: ID_hweh781i
       name: 加入我的频道t.me/CMLiussss解锁更多优选节点
@@ -111,3 +107,7 @@
     const onSubscribe = async (proxies, subscription) => {
       return { proxies, subscription }
     }
+  requestMethod: GET
+  header:
+    request: {}
+    response: {}
