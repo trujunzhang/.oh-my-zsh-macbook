@@ -53,6 +53,8 @@ function uninstall_apps {
 
 if [ "$Params" = "install" ]; then
     install_apps
+elif [ "$Params" = "asdf" ]; then
+    sudo port install "asdf"
 elif [ "$Params" = "uninstall" ]; then
     uninstall_apps
 else

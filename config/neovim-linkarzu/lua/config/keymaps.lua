@@ -40,10 +40,16 @@ end
 vim.keymap.set("n", "gm", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
 -- Messages
-vim.keymap.set("n", "<leader>nm", "<cmd>messages<cr>", { desc = "Neovim | Messages", silent = true })
+-- vim.keymap.set("n", "<leader>nm", "<cmd>messages<cr>", { desc = "Neovim | Messages", silent = true })
 
 -- Health
 vim.keymap.set("n", "<leader>nh", "<cmd>checkhealth<cr>", { desc = "Neovim | Health", silent = true })
+vim.keymap.set("n", "<leader>np", "<cmd>checkhealth lsp<cr>", { desc = "Neovim | Check lsp", silent = true })
+vim.keymap.set("n", "<leader>nl", "<cmd>Lazy<cr>", { desc = "Neovim | Lazy", silent = true })
+vim.keymap.set("n", "<leader>nm", "<cmd>Mason<cr>", { desc = "Neovim | Mason", silent = true })
+vim.keymap.set("n", "<leader>nd", "<cmd>checkhealth vim.provider<cr>", { desc = "Neovim | Check provider", silent = true })
+
+vim.keymap.set("n", "<leader>yf", "<cmd>%y+<cr>", { desc = "Copy Whole File", silent = true })
 
 -- This is using the kdheepak/lazygit.nvim file, the only reason I use it, is
 -- because the window looks bigger
@@ -326,7 +332,7 @@ vim.keymap.set("v", "gl", "$h", { desc = "[P]Go to the end of the line" })
 -- -- The system clipboard allows sharing data between Vim and other applications.
 -- -- Yanking with `"+y` copies text to both the unnamed register and system clipboard.
 -- -- The `"+` register represents the system clipboard.
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "[P]Yank to system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>yc", [["+y]], { desc = "[P]Yank to system clipboard" })
 
 -- Copy the current line and all diagnostics on that line to system clipboard
 vim.keymap.set("n", "yd", function()
