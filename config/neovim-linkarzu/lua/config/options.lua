@@ -40,172 +40,179 @@ vim.opt.timeout = true
 -- Default neovim is 1,000 but lazyvim sets it to 300
 vim.opt.timeoutlen = 1000
 
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
+
+-- LazyVim completion engine to use.
+-- Can be one of: nvim-cmp, blink.cmp
+-- Leave it to "auto" to automatically use the completion engine
+-- enabled with `:LazyExtras`
+-- vim.g.lazyvim_cmp = "auto"
+vim.g.lazyvim_cmp = "nvim-cmp"
 
 -- I find the animations a bit laggy
 vim.g.snacks_animate = false
 
 -- Conditional settings based on mode
 if vim.g.neovim_mode == "skitty" then
-  vim.opt.laststatus = 2
-  vim.opt.statusline = "%m"
+    vim.opt.laststatus = 2
+    vim.opt.statusline = "%m"
 
-  -- Line numbers
-  vim.opt.number = true
-  vim.opt.relativenumber = true
+    -- Line numbers
+    vim.opt.number = true
+    vim.opt.relativenumber = true
 
-  -- Disable the gutter
-  vim.opt.signcolumn = "no"
+    -- Disable the gutter
+    vim.opt.signcolumn = "no"
 
-  -- Text width and wrapping
-  vim.opt.textwidth = 25
+    -- Text width and wrapping
+    vim.opt.textwidth = 25
 
-  -- -- I tried these 2 with prettier prosewrap in "preserve" mode, and I'm not sure
-  -- -- what they do, I think lines are wrapped, but existing ones are not, so if I
-  -- -- have files with really long lines, they will remain the same, also LF
-  -- -- characters were introduced at the end of each line, not sure, didn't test
-  -- -- enough
-  -- --
-  -- -- Wrap lines at convenient points, this comes enabled by default in lazyvim
-  vim.opt.linebreak = false
+    -- -- I tried these 2 with prettier prosewrap in "preserve" mode, and I'm not sure
+    -- -- what they do, I think lines are wrapped, but existing ones are not, so if I
+    -- -- have files with really long lines, they will remain the same, also LF
+    -- -- characters were introduced at the end of each line, not sure, didn't test
+    -- -- enough
+    -- --
+    -- -- Wrap lines at convenient points, this comes enabled by default in lazyvim
+    vim.opt.linebreak = false
 
-  -- Set to false by default in lazyvim
-  -- If this is "false", when I'm typing around the 28/33 character, I see the screen
-  -- scrolling to the right, and I don't want that, setting it to true seems to
-  -- fix that
-  -- Problem if set to true is that markdown links don't wrap, so they span
-  -- across multiple lines
-  vim.opt.wrap = false
+    -- Set to false by default in lazyvim
+    -- If this is "false", when I'm typing around the 28/33 character, I see the screen
+    -- scrolling to the right, and I don't want that, setting it to true seems to
+    -- fix that
+    -- Problem if set to true is that markdown links don't wrap, so they span
+    -- across multiple lines
+    vim.opt.wrap = false
 
-  -- No colorcolumn in skitty
-  vim.opt.colorcolumn = ""
+    -- No colorcolumn in skitty
+    vim.opt.colorcolumn = ""
 
-  local colors = require("config.colors")
-  vim.cmd(string.format([[highlight WinBar1 guifg=%s]], colors["linkarzu_color03"]))
-  -- -- Set the winbar to display "skitty-notes" with the specified color
-  -- vim.opt.winbar = "%#WinBar1#   skitty-notes%*"
-  -- -- Set the winbar to display the current file name on the left and "linkarzu.com" aligned to the right
-  -- vim.opt.winbar = "%#WinBar1# %t%*%=%#WinBar1# linkarzu.com %*"
-  -- Set the winbar to display the current file name on the left (without the extension) and "linkarzu.com" aligned to the right
-  vim.opt.winbar =
-    '%#WinBar1# %{luaeval(\'vim.fn.fnamemodify(vim.fn.expand("%:t"), ":r")\')}%*%=%#WinBar1# linkarzu.com %*'
+    local colors = require("config.colors")
+    vim.cmd(string.format([[highlight WinBar1 guifg=%s]], colors["linkarzu_color03"]))
+    -- -- Set the winbar to display "skitty-notes" with the specified color
+    -- vim.opt.winbar = "%#WinBar1#   skitty-notes%*"
+    -- -- Set the winbar to display the current file name on the left and "linkarzu.com" aligned to the right
+    -- vim.opt.winbar = "%#WinBar1# %t%*%=%#WinBar1# linkarzu.com %*"
+    -- Set the winbar to display the current file name on the left (without the extension) and "linkarzu.com" aligned to the right
+    vim.opt.winbar =
+        '%#WinBar1# %{luaeval(\'vim.fn.fnamemodify(vim.fn.expand("%:t"), ":r")\')}%*%=%#WinBar1# linkarzu.com %*'
 else
-  -- I never used relative line numbers, so fuck that
-  -- Edit a few days after, I'll give them a try again, so re-enabled them
-  -- Fuck relative numbers, I'm done with them
-  vim.opt.relativenumber = true
+    -- I never used relative line numbers, so fuck that
+    -- Edit a few days after, I'll give them a try again, so re-enabled them
+    -- Fuck relative numbers, I'm done with them
+    vim.opt.relativenumber = true
 
-  -- When text reaches this limit, it automatically wraps to the next line.
-  -- This WILL NOT auto wrap existing lines, or if you paste a long line into a
-  -- file it will not wrap it as well
-  -- https://www.reddit.com/r/neovim/comments/1av26kw/i_tried_to_figure_it_out_but_i_give_up_how_do_i/
-  vim.opt.textwidth = 80
+    -- When text reaches this limit, it automatically wraps to the next line.
+    -- This WILL NOT auto wrap existing lines, or if you paste a long line into a
+    -- file it will not wrap it as well
+    -- https://www.reddit.com/r/neovim/comments/1av26kw/i_tried_to_figure_it_out_but_i_give_up_how_do_i/
+    vim.opt.textwidth = 80
 
-  -- Above option applies the setting to ALL file types, if you want to apply it
-  -- to specific files only
-  -- vim.api.nvim_create_autocmd("FileType", {
-  --   pattern = "markdown",
-  --   -- pattern = {"python", "javascript", "html"},
-  --   callback = function()
-  --     vim.opt_local.textwidth = 80
-  --   end,
-  -- })
+    -- Above option applies the setting to ALL file types, if you want to apply it
+    -- to specific files only
+    -- vim.api.nvim_create_autocmd("FileType", {
+    --   pattern = "markdown",
+    --   -- pattern = {"python", "javascript", "html"},
+    --   callback = function()
+    --     vim.opt_local.textwidth = 80
+    --   end,
+    -- })
 
-  -- -- Disable line wrap, set to false by default in lazyvim
-  vim.opt.wrap = true
+    -- -- Disable line wrap, set to false by default in lazyvim
+    vim.opt.wrap = true
 
-  -- Shows colorcolumn that helps me with markdown guidelines.
-  -- This is the vertical bar that shows the 80 character limit
-  -- This applies to ALL file types
-  vim.opt.colorcolumn = "80"
+    -- Shows colorcolumn that helps me with markdown guidelines.
+    -- This is the vertical bar that shows the 80 character limit
+    -- This applies to ALL file types
+    vim.opt.colorcolumn = "80"
 
-  -- -- To apply it to markdown files only
-  -- vim.api.nvim_create_autocmd("BufWinEnter", {
-  --   pattern = { "*.md" },
-  --   callback = function()
-  --     vim.opt.colorcolumn = "80"
-  --     vim.opt.textwidth = 80
-  --   end,
-  -- })
+    -- -- To apply it to markdown files only
+    -- vim.api.nvim_create_autocmd("BufWinEnter", {
+    --   pattern = { "*.md" },
+    --   callback = function()
+    --     vim.opt.colorcolumn = "80"
+    --     vim.opt.textwidth = 80
+    --   end,
+    -- })
 
-  -- Winbar
-  -- Function to shorten long paths (> shorten_if_more_than real dirs)
-  local function shorten_path(path)
-    local shorten_if_more_than = 6 -- change this to 5, 7, etc
-    -- Strip and remember the root ("/" or "~/")
-    local prefix = ""
-    if path:sub(1, 2) == "~/" then
-      prefix = "~/"
-      path = path:sub(3)
-    elseif path:sub(1, 1) == "/" then
-      prefix = "/"
-      path = path:sub(2)
-    end
-    -- Split the remaining path into its components
-    local parts = {}
-    for part in string.gmatch(path, "[^/]+") do
-      table.insert(parts, part)
-    end
-    -- Shorten only when there are more than shorten_if_more_than directories
-    if #parts > shorten_if_more_than then
-      local first = parts[1]
-      local last_four = table.concat({
-        parts[#parts - 3],
-        parts[#parts - 2],
-        parts[#parts - 1],
-        parts[#parts],
-      }, "/")
-      return prefix .. first .. "/../" .. last_four
-    end
-
-    -- Re-attach the prefix when no shortening is needed
-    return prefix .. table.concat(parts, "/")
-  end
-  -- Function to get the full path and replace the home directory with ~
-  local function get_winbar_path()
-    local full_path = vim.fn.expand("%:p:h")
-    return full_path:gsub(vim.fn.expand("$HOME"), "~")
-  end
-  -- Function to get the number of open buffers using the :ls command
-  local function get_buffer_count()
-    return vim.fn.len(vim.fn.getbufinfo({ buflisted = 1 }))
-  end
-  -- Function to update the winbar
-  local function update_winbar()
-    local home_replaced = get_winbar_path()
-    local buffer_count = get_buffer_count()
-    local display_path = shorten_path(home_replaced)
-    vim.opt.winbar = "%#WinBar1#%m "
-      .. "%#WinBar2#("
-      .. buffer_count
-      .. ") "
-      -- this shows the filename on the left
-      .. "%#WinBar3#"
-      .. vim.fn.expand("%:t")
-      -- This shows the file path on the right
-      .. "%*%=%#WinBar1#"
-      .. display_path
-    -- I don't need the hostname as I have it in lualine
-    -- .. vim.fn.systemlist("hostname")[1]
-  end
-  -- Winbar was not being updated after I left lazygit
-  vim.api.nvim_create_autocmd({ "BufEnter", "ModeChanged" }, {
-    callback = function(args)
-      local old_mode = args.event == "ModeChanged" and vim.v.event.old_mode or ""
-      local new_mode = args.event == "ModeChanged" and vim.v.event.new_mode or ""
-      -- Only update if ModeChanged is relevant (e.g., leaving LazyGit)
-      if args.event == "ModeChanged" then
-        -- Get buffer filetype
-        local buf_ft = vim.bo.filetype
-        -- Only update when leaving `snacks_terminal` (LazyGit)
-        if buf_ft == "snacks_terminal" or old_mode:match("^t") or new_mode:match("^n") then
-          update_winbar()
+    -- Winbar
+    -- Function to shorten long paths (> shorten_if_more_than real dirs)
+    local function shorten_path(path)
+        local shorten_if_more_than = 6 -- change this to 5, 7, etc
+        -- Strip and remember the root ("/" or "~/")
+        local prefix = ""
+        if path:sub(1, 2) == "~/" then
+            prefix = "~/"
+            path = path:sub(3)
+        elseif path:sub(1, 1) == "/" then
+            prefix = "/"
+            path = path:sub(2)
         end
-      else
-        update_winbar()
-      end
-    end,
-  })
+        -- Split the remaining path into its components
+        local parts = {}
+        for part in string.gmatch(path, "[^/]+") do
+            table.insert(parts, part)
+        end
+        -- Shorten only when there are more than shorten_if_more_than directories
+        if #parts > shorten_if_more_than then
+            local first = parts[1]
+            local last_four = table.concat({
+                parts[#parts - 3],
+                parts[#parts - 2],
+                parts[#parts - 1],
+                parts[#parts],
+            }, "/")
+            return prefix .. first .. "/../" .. last_four
+        end
+
+        -- Re-attach the prefix when no shortening is needed
+        return prefix .. table.concat(parts, "/")
+    end
+    -- Function to get the full path and replace the home directory with ~
+    local function get_winbar_path()
+        local full_path = vim.fn.expand("%:p:h")
+        return full_path:gsub(vim.fn.expand("$HOME"), "~")
+    end
+    -- Function to get the number of open buffers using the :ls command
+    local function get_buffer_count()
+        return vim.fn.len(vim.fn.getbufinfo({ buflisted = 1 }))
+    end
+    -- Function to update the winbar
+    local function update_winbar()
+        local home_replaced = get_winbar_path()
+        local buffer_count = get_buffer_count()
+        local display_path = shorten_path(home_replaced)
+        vim.opt.winbar = "%#WinBar1#%m "
+            .. "%#WinBar2#("
+            .. buffer_count
+            .. ") "
+            -- this shows the filename on the left
+            .. "%#WinBar3#"
+            .. vim.fn.expand("%:t")
+            -- This shows the file path on the right
+            .. "%*%=%#WinBar1#"
+            .. display_path
+        -- I don't need the hostname as I have it in lualine
+        -- .. vim.fn.systemlist("hostname")[1]
+    end
+    -- Winbar was not being updated after I left lazygit
+    vim.api.nvim_create_autocmd({ "BufEnter", "ModeChanged" }, {
+        callback = function(args)
+            local old_mode = args.event == "ModeChanged" and vim.v.event.old_mode or ""
+            local new_mode = args.event == "ModeChanged" and vim.v.event.new_mode or ""
+            -- Only update if ModeChanged is relevant (e.g., leaving LazyGit)
+            if args.event == "ModeChanged" then
+                -- Get buffer filetype
+                local buf_ft = vim.bo.filetype
+                -- Only update when leaving `snacks_terminal` (LazyGit)
+                if buf_ft == "snacks_terminal" or old_mode:match("^t") or new_mode:match("^n") then
+                    update_winbar()
+                end
+            else
+                update_winbar()
+            end
+        end,
+    })
 end
 
 -- -- I tried these 2 with prettier prosewrap in "preserve" mode, and I'm not sure
@@ -267,15 +274,15 @@ vim.opt.conceallevel = 0
 -- Only upate if there are updates
 -- https://github.com/folke/lazy.nvim/issues/702#issuecomment-1903484213
 local function augroup(name)
-  return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
+    return vim.api.nvim_create_augroup("lazyvim_" .. name, { clear = true })
 end
 vim.api.nvim_create_autocmd("VimEnter", {
-  group = augroup("autoupdate"),
-  callback = function()
-    if require("lazy.status").has_updates then
-      require("lazy").update({ show = false })
-    end
-  end,
+    group = augroup("autoupdate"),
+    callback = function()
+        if require("lazy.status").has_updates then
+            require("lazy").update({ show = false })
+        end
+    end,
 })
 
 -- I added `localoptions` to save the language spell settings, otherwise, the
@@ -292,15 +299,15 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- These sessionoptions come from the lazyvim distro, I just added localoptions
 -- https://www.lazyvim.org/configuration/general
 vim.opt.sessionoptions = {
-  "buffers",
-  "curdir",
-  "tabpages",
-  "winsize",
-  "help",
-  "globals",
-  "skiprtp",
-  "folds",
-  "localoptions",
+    "buffers",
+    "curdir",
+    "tabpages",
+    "winsize",
+    "help",
+    "globals",
+    "skiprtp",
+    "folds",
+    "localoptions",
 }
 
 -- Most of my files have 2 languages, spanish and english, so even if I set the
@@ -348,67 +355,67 @@ vim.o.updatetime = 200
 -- The copy and paste sections were found on:
 -- https://neovide.dev/faq.html#how-can-i-use-cmd-ccmd-v-to-copy-and-paste
 if vim.g.neovide then
-  vim.keymap.set("n", "<D-s>", ":w<CR>") -- Save
-  vim.keymap.set("v", "<D-c>", '"+y') -- Copy
-  vim.keymap.set("n", "<D-v>", '"+P') -- Paste normal mode
-  vim.keymap.set("v", "<D-v>", '"+P') -- Paste visual mode
-  vim.keymap.set("c", "<D-v>", "<C-R>+") -- Paste command mode
-  vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
+    vim.keymap.set("n", "<D-s>", ":w<CR>") -- Save
+    vim.keymap.set("v", "<D-c>", '"+y') -- Copy
+    vim.keymap.set("n", "<D-v>", '"+P') -- Paste normal mode
+    vim.keymap.set("v", "<D-v>", '"+P') -- Paste visual mode
+    vim.keymap.set("c", "<D-v>", "<C-R>+") -- Paste command mode
+    vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
 
-  -- This allows me to use cmd+v to paste stuff into neovide
-  vim.api.nvim_set_keymap("", "<D-v>", "+p<CR>", { noremap = true, silent = true })
-  vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })
-  vim.api.nvim_set_keymap("t", "<D-v>", "<C-R>+", { noremap = true, silent = true })
-  vim.api.nvim_set_keymap("v", "<D-v>", "<C-R>+", { noremap = true, silent = true })
+    -- This allows me to use cmd+v to paste stuff into neovide
+    vim.api.nvim_set_keymap("", "<D-v>", "+p<CR>", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("t", "<D-v>", "<C-R>+", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("v", "<D-v>", "<C-R>+", { noremap = true, silent = true })
 
-  -- Specify the font used by Neovide
-  -- vim.o.guifont = "MesloLGM_Nerd_Font:h14"
-  vim.o.guifont = "JetBrainsMono Nerd Font:h15"
-  -- This is limited by the refresh rate of your physical hardware, but can be
-  -- lowered to increase battery life
-  -- This setting is only effective when not using vsync,
-  -- for example by passing --no-vsync on the commandline.
-  --
-  -- NOTE: vsync is configured in the neovide/config.toml file, I disabled it and set
-  -- this to 120 even though my monitor is 75Hz, had a similar case in wezterm,
-  -- see: https://github.com/wez/wezterm/issues/6334
-  vim.g.neovide_refresh_rate = 120
-  -- This is how fast the cursor animation "moves", the higher the number, the
-  -- more you will see the trail when jumping to end of line
-  -- default 0.150
-  vim.g.neovide_cursor_animation_length = 0.18
-  -- Time it takes for the cursor to complete its animation in seconds for short
-  -- horizontal travels of one or two characters, like when typing.
-  -- Default 0.04
-  vim.g.neovide_cursor_short_animation_length = 0.15
-  -- Time it takes for a window to complete animation from one position to another
-  -- position in seconds, such as :split.
-  -- Default 0.15
-  vim.g.neovide_position_animation_length = 0.20
-  -- changes how much the back of the cursor trails the front. Set to 1.0 to
-  -- make the front jump to the destination immediately with a maximum trail size.
-  -- A lower value makes a smoother animation, with a shorter trail, but also adds lag
-  -- Default 0.7
-  vim.g.neovide_cursor_trail_size = 7
+    -- Specify the font used by Neovide
+    -- vim.o.guifont = "MesloLGM_Nerd_Font:h14"
+    vim.o.guifont = "JetBrainsMono Nerd Font:h15"
+    -- This is limited by the refresh rate of your physical hardware, but can be
+    -- lowered to increase battery life
+    -- This setting is only effective when not using vsync,
+    -- for example by passing --no-vsync on the commandline.
+    --
+    -- NOTE: vsync is configured in the neovide/config.toml file, I disabled it and set
+    -- this to 120 even though my monitor is 75Hz, had a similar case in wezterm,
+    -- see: https://github.com/wez/wezterm/issues/6334
+    vim.g.neovide_refresh_rate = 120
+    -- This is how fast the cursor animation "moves", the higher the number, the
+    -- more you will see the trail when jumping to end of line
+    -- default 0.150
+    vim.g.neovide_cursor_animation_length = 0.18
+    -- Time it takes for the cursor to complete its animation in seconds for short
+    -- horizontal travels of one or two characters, like when typing.
+    -- Default 0.04
+    vim.g.neovide_cursor_short_animation_length = 0.15
+    -- Time it takes for a window to complete animation from one position to another
+    -- position in seconds, such as :split.
+    -- Default 0.15
+    vim.g.neovide_position_animation_length = 0.20
+    -- changes how much the back of the cursor trails the front. Set to 1.0 to
+    -- make the front jump to the destination immediately with a maximum trail size.
+    -- A lower value makes a smoother animation, with a shorter trail, but also adds lag
+    -- Default 0.7
+    vim.g.neovide_cursor_trail_size = 7
 
-  -- Really weird issue in which my winbar would be drawn multiple times as I
-  -- scrolled down the file, this fixed it, found in:
-  -- https://github.com/neovide/neovide/issues/1550
-  -- Default 0.3
-  vim.g.neovide_scroll_animation_length = 0
+    -- Really weird issue in which my winbar would be drawn multiple times as I
+    -- scrolled down the file, this fixed it, found in:
+    -- https://github.com/neovide/neovide/issues/1550
+    -- Default 0.3
+    vim.g.neovide_scroll_animation_length = 0
 
-  -- produce particles behind the cursor, if want to disable them, set it to ""
-  -- vim.g.neovide_cursor_vfx_mode = "railgun"
-  -- vim.g.neovide_cursor_vfx_mode = "torpedo"
-  -- vim.g.neovide_cursor_vfx_mode = "pixiedust"
-  vim.g.neovide_cursor_vfx_mode = "sonicboom"
-  -- vim.g.neovide_cursor_vfx_mode = "ripple"
-  -- vim.g.neovide_cursor_vfx_mode = "wireframe"
+    -- produce particles behind the cursor, if want to disable them, set it to ""
+    -- vim.g.neovide_cursor_vfx_mode = "railgun"
+    -- vim.g.neovide_cursor_vfx_mode = "torpedo"
+    -- vim.g.neovide_cursor_vfx_mode = "pixiedust"
+    vim.g.neovide_cursor_vfx_mode = "sonicboom"
+    -- vim.g.neovide_cursor_vfx_mode = "ripple"
+    -- vim.g.neovide_cursor_vfx_mode = "wireframe"
 
-  -- This allows me to use the right "alt" key in macOS, because I have some
-  -- neovim keymaps that use alt, like alt+t for the terminal
-  -- https://youtu.be/33gQ9p-Zp0I
-  vim.g.neovide_input_macos_option_key_is_meta = "only_right"
+    -- This allows me to use the right "alt" key in macOS, because I have some
+    -- neovim keymaps that use alt, like alt+t for the terminal
+    -- https://youtu.be/33gQ9p-Zp0I
+    vim.g.neovide_input_macos_option_key_is_meta = "only_right"
 end
 
 -- I also want the vim.g.neovim_mode cursor color to be changed
@@ -416,9 +423,9 @@ end
 -- mine set in ~/github/dotfiles-latest/neovim/neobean/lua/plugins/colorschemes/eldritch.lua
 -- Otherwise, my cursor was white
 vim.opt.guicursor = {
-  "n-v-c-sm:block-Cursor", -- Use 'Cursor' highlight for normal, visual, and command modes
-  "i-ci-ve:ver25-lCursor", -- Use 'lCursor' highlight for insert and visual-exclusive modes
-  "r-cr:hor20-CursorIM", -- Use 'CursorIM' for replace mode
+    "n-v-c-sm:block-Cursor", -- Use 'Cursor' highlight for normal, visual, and command modes
+    "i-ci-ve:ver25-lCursor", -- Use 'lCursor' highlight for insert and visual-exclusive modes
+    "r-cr:hor20-CursorIM", -- Use 'CursorIM' for replace mode
 }
 
 -- ############################################################################

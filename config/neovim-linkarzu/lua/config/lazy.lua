@@ -22,7 +22,7 @@ require("lazy").setup({
         -- I do this to keep consistency and install the same plugins in all my
         -- machines, if you don't want that, comment them here and then manually
         -- enable them on each machine under :LazyExtras
-        { import = "lazyvim.plugins.extras.ai.codeium" },
+        -- { import = "lazyvim.plugins.extras.ai.codeium" },
         { import = "lazyvim.plugins.extras.lang.yaml" },
         { import = "lazyvim.plugins.extras.formatting.prettier" },
         -- { import = "lazyvim.plugins.extras.editor.harpoon2" },
@@ -34,12 +34,12 @@ require("lazy").setup({
         -- { import = "lazyvim.plugins.extras.lang.markdown" },
         { import = "lazyvim.plugins.extras.lang.python" },
         -- { import = "lazyvim.plugins.extras.lang.terraform" },
-        { import = "lazyvim.plugins.extras.lang.typescript" },
+        -- { import = "lazyvim.plugins.extras.lang.typescript" },
         -- { import = "lazyvim.plugins.extras.lang.helm" },
         -- { import = "lazyvim.plugins.extras.ai.copilot" },
         -- { import = "lazyvim.plugins.extras.ai.copilot-chat" },
         { import = "lazyvim.plugins.extras.coding.luasnip" },
-        { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
+        -- { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
         -- { import = "lazyvim.plugins.extras.lang.php" },
         -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
         -- import/override with your plugins

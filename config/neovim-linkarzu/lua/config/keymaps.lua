@@ -33,9 +33,9 @@ if vim.fn.executable("lazygit") == 1 then
 end
 
 -- codeium
-vim.keymap.set("i", "<Right>", function()
-    return vim.fn["codeium#Accept"]()
-end, { expr = true })
+-- vim.keymap.set("i", "<Right>", function()
+--     return vim.fn["codeium#Accept"]()
+-- end, { expr = true })
 
 vim.keymap.set("n", "gm", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
