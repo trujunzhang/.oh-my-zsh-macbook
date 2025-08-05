@@ -7,14 +7,14 @@ vsExtensionsArray=(
     # =================================
     # Themes
     # =================================
-    "github.github-vscode-theme"
-    "dracula-theme.theme-dracula"
+    # "github.github-vscode-theme"
+    # "dracula-theme.theme-dracula"
 
     # =================================
     # Projects and Files
     # =================================
-    "junv.recent-files"
-    "alefragnani.project-manager"
+    # "junv.recent-files"
+    # "alefragnani.project-manager"
 
     # =================================
     # Code Wrtite
@@ -34,7 +34,7 @@ vsExtensionsArray=(
     # =================================
     "dzhavat.bracket-pair-toggler"
     "naumovs.color-highlight"
-    "donjayamanne.githistory"
+    # "donjayamanne.githistory"
     "johnguo.columnpaste"
 
     # =================================
@@ -43,11 +43,10 @@ vsExtensionsArray=(
     "formulahendry.auto-rename-tag"
     "esbenp.prettier-vscode"
     "dbaeumer.vscode-eslint"
-    "aaron-bond.better-comments"
-    "mikestead.dotenv"
-    "ms-vscode.live-server"
+    # "mikestead.dotenv"
+    # "ms-vscode.live-server"
     "kisstkondoros.vscode-gutter-preview"
-    "pflannery.vscode-versionlens"
+    # "pflannery.vscode-versionlens"
 
     # =================================
     # AI (Chatgpt,CodeWhisperer)
@@ -57,12 +56,12 @@ vsExtensionsArray=(
     # "github.copilot"
     # "codeium.codeium"
     # https://www.codium.ai
-    # "Codium.codium"
+    "Codium.codium"
 
     # =================================
     # Nix
     # =================================
-    "jnoortheen.nix-ide"
+    # "jnoortheen.nix-ide"
 
     # =================================
     # Toml
@@ -133,13 +132,12 @@ vsExtensionsArray=(
     # =================================
     # Vue
     # =================================
-    "octref.vetur"
+    # "octref.vetur"
 
     # =================================
     # Tailwind
     # =================================
     "bradlc.vscode-tailwindcss"
-
 )
 
 Params=$1

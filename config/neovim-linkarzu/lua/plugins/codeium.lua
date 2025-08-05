@@ -1,4 +1,8 @@
 ---@type NvPluginSpec
+--- Windsurf: The server aborted pending request If issues persist after restarting your IDE, please contact vscode@windsurf.com.
+--- macos arm:
+--- Attempted download URL: https://releases.codeiumdata.com/language-server-v1.48.2/language_server_macos_arm.gz.
+--- Attempted download URL: https://releases.codeiumdata.com/language-server-v1.48.2/language_server_macos_arm.gz.
 local spec = {
     {
         "hrsh7th/nvim-cmp",
