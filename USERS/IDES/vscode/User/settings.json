@@ -138,5 +138,6 @@
     },
     "jest.runMode": "deferred",
     "prisma.showPrismaDataPlatformNotification": false,
-    "editor.accessibilitySupport": "on"
+    "editor.accessibilitySupport": "on",
+    "redhat.telemetry.enabled": false
 }
