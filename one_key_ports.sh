@@ -13,6 +13,9 @@ ports_apps_x86=(
     # "fish" "fish"
     "nvim" "neovim"
 
+    "starship" "starship"
+    "fzf" "fzf"
+
     # neovim
     "luarocks" "luarocks"
     "rg" "rg"
@@ -31,3 +34,5 @@ function install_apps {
         fi
     done
 }
+
+install_apps
