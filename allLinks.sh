@@ -122,6 +122,7 @@ function link_config_fold {
 
     # asdf-vm
     fileLink "config(asdfrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.asdfrc" "$HOME/.asdfrc"
+    fileLink "config(tool_versions)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.tool-versions${OS_NAME}" "$HOME/.tool-versions"
     fileLink "config(asdf-python)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-python-packages" "$HOME/.default-python-packages"
     fileLink "config(asdf-node)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-npm-packages" "$HOME/.default-npm-packages"
     fileLink "config(asdf-ruby)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-gems" "$HOME/.default-gems"
