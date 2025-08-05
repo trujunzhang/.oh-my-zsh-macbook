@@ -5,18 +5,6 @@
 
 return {
     "neovim/nvim-lspconfig",
-    config = function()
-        local lspconfig = require("lspconfig")
-
-        lspconfig.eslint.setup({
-            on_attach = function(client, bufnr)
-                vim.api.nvim_create_autocmd("BufWritePre", {
-                    buffer = bufnr,
-                    command = "EslintFixAll",
-                })
-            end,
-        })
-    end,
     opts = {
 
         -- This disables inlay hints
@@ -26,39 +14,44 @@ return {
         -- Folke has a keymap to toggle inaly hints with <leader>uh
         inlay_hints = { enabled = false },
 
+        setup = {
+            eslint = function()
+                LazyVim.lsp.on_attach(function(client, bufnr)
+                    vim.api.nvim_create_autocmd("BufWritePre", {
+                        buffer = bufnr,
+                        command = "EslintFixAll",
+                    })
+                end, "eslint")
+            end,
+        },
+
         servers = {
-            lua_ls = {
-                Lua = {
-                    workspace = { checkThirdParty = false },
-                    telemetry = { enable = false },
-                },
-            },
             bashls = {
                 filetypes = { "sh", "zsh" },
             },
             -- https://www.reddit.com/r/neovim/comments/1j7ookn/comment/mgysste/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button
             -- The hover window configuration for the diagnostics is done in lamw26wmal
             -- ~/github/dotfiles-latest/neovim/neobean/lua/config/autocmds.lua
-            harper_ls = {
-                enabled = true,
-                filetypes = { "markdown" },
-                settings = {
-                    ["harper-ls"] = {
-                        userDictPath = "~/github/dotfiles-latest/neovim/neobean/spell/en.utf-8.add",
-                        linters = {
-                            ToDoHyphen = false,
-                            -- SentenceCapitalization = true,
-                            -- SpellCheck = true,
-                        },
-                        isolateEnglish = true,
-                        markdown = {
-                            -- [ignores this part]()
-                            -- [[ also ignores my marksman links ]]
-                            IgnoreLinkTitle = true,
-                        },
-                    },
-                },
-            },
+            -- harper_ls = {
+            --     enabled = true,
+            --     filetypes = { "markdown" },
+            --     settings = {
+            --         ["harper-ls"] = {
+            --             userDictPath = "~/github/dotfiles-latest/neovim/neobean/spell/en.utf-8.add",
+            --             linters = {
+            --                 ToDoHyphen = false,
+            --                 -- SentenceCapitalization = true,
+            --                 -- SpellCheck = true,
+            --             },
+            --             isolateEnglish = true,
+            --             markdown = {
+            --                 -- [ignores this part]()
+            --                 -- [[ also ignores my marksman links ]]
+            --                 IgnoreLinkTitle = true,
+            --             },
+            --         },
+            --     },
+            -- },
         },
     },
 }

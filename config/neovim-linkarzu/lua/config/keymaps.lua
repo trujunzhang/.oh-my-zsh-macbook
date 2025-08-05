@@ -46,10 +46,24 @@ vim.keymap.set("n", "gm", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 vim.keymap.set("n", "<leader>nh", "<cmd>checkhealth<cr>", { desc = "Neovim | Health", silent = true })
 vim.keymap.set("n", "<leader>np", "<cmd>checkhealth lsp<cr>", { desc = "Neovim | Check lsp", silent = true })
 vim.keymap.set("n", "<leader>nl", "<cmd>Lazy<cr>", { desc = "Neovim | Lazy", silent = true })
+vim.keymap.set("n", "<leader>ne", "<cmd>LazyExtra<cr>", { desc = "Neovim | Lazy Extra", silent = true })
 vim.keymap.set("n", "<leader>nm", "<cmd>Mason<cr>", { desc = "Neovim | Mason", silent = true })
-vim.keymap.set("n", "<leader>nd", "<cmd>checkhealth vim.provider<cr>", { desc = "Neovim | Check provider", silent = true })
+vim.keymap.set(
+    "n",
+    "<leader>nd",
+    "<cmd>checkhealth vim.provider<cr>",
+    { desc = "Neovim | Check provider", silent = true }
+)
 
 vim.keymap.set("n", "<leader>yf", "<cmd>%y+<cr>", { desc = "Copy Whole File", silent = true })
+
+-- switch buffers with bufferline
+vim.keymap.set("n", "<leader>1", "<cmd>BufferLineGoToBuffer 1<cr>", { desc = "Switch to Buffer 1", silent = true })
+vim.keymap.set("n", "<leader>2", "<cmd>BufferLineGoToBuffer 2<cr>", { desc = "Switch to Buffer 2", silent = true })
+vim.keymap.set("n", "<leader>3", "<cmd>BufferLineGoToBuffer 3<cr>", { desc = "Switch to Buffer 3", silent = true })
+vim.keymap.set("n", "<leader>4", "<cmd>BufferLineGoToBuffer 4<cr>", { desc = "Switch to Buffer 4", silent = true })
+vim.keymap.set("n", "<leader>5", "<cmd>BufferLineGoToBuffer 5<cr>", { desc = "Switch to Buffer 5", silent = true })
+vim.keymap.set("n", "<leader>6", "<cmd>BufferLineGoToBuffer 6<cr>", { desc = "Switch to Buffer 6", silent = true })
 
 -- This is using the kdheepak/lazygit.nvim file, the only reason I use it, is
 -- because the window looks bigger
