@@ -254,4 +254,6 @@ if [[ -f '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]]; then
 fi
 
 
-
+if [[ -d '$HOME/.cargo' ]]; then
+. "$HOME/.cargo/env"
+fi

@@ -136,3 +136,6 @@ if [ -d "/opt/homebrew" ]; then
 fi
 
 
+if [[ -d '$HOME/.cargo' ]]; then
+. "$HOME/.cargo/env"
+fi

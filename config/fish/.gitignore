@@ -3,3 +3,5 @@ completions
 conf.d-bak
 # functions
 fish_variables
+
+conf.d/rustup.fish

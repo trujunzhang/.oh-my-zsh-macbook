@@ -1,2 +1,5 @@
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+if [[ -d '$HOME/.cargo' ]]; then
+. "$HOME/.cargo/env"
+fi
