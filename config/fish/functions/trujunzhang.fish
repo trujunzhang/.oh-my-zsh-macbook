@@ -104,26 +104,6 @@ alias rnnewapp='npx react-native init'
 #  $ yarn add react-native-eject
 #  $ npx react-native eject
 
-# python
-alias pnote="jupyter notebook"
-alias pinstall="pip install -i https://pypi.tuna.tsinghua.edu.cn/simple"
-
-alias dpython_uv_list="uv python list --only-installed"
-alias dpython_uv_install="uv pip install -e ."
-alias dpython_uv_export_requirements="uv export -o requirements.txt"
-alias dpython_uv_venv="uv venv"
-alias puvNew="uv init "
-alias puvAdd="uv add "
-alias puvRun="uv run "
-
-# python env
-alias dpython_env_init="pipenv shell"
-alias dpython_env_install="pipenv install --dev"
-alias dpython_env_graph="pipenv graph"
-# https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
-alias penv="python3 -m venv venv"
-alias dpython_env_active="source venv/bin/activate"
-
 # gatsby
 alias gatsbynewtsapp='npm init gatsby -ts'
 
@@ -910,17 +890,39 @@ alias e="emacs -nw"
 
 alias fish_reload="source ~/.config/fish/config.fish"
 
+# python
+alias dpython_note="jupyter notebook"
+alias dpython_install="pip install -i https://pypi.tuna.tsinghua.edu.cn/simple"
+
+alias puv_list="uv python list --only-installed"
+alias puv_install="uv pip install -e ."
+alias puv_export_requirements="uv export -o requirements.txt"
+alias puv_venv="uv venv"
+alias puv_New="uv init "
+alias puv_Add="uv add "
+alias puv_Run="uv run "
+
+# python env
+alias dpython_pipenv_init="pipenv shell"
+alias dpython_pipenv_install="pipenv install --dev"
+alias dpython_pipenv_graph="pipenv graph"
+# https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+# alias dpython_new_env="python3 -m venv venv"
+# alias dpython_env_active="source venv/bin/activate"
+
 #python
 # see: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments
 alias pvenv_new="python -m venv .venv"
+alias pvenv_active="source .venv/bin/activate.fish"
 alias pvenv_envrc='echo -e "export VIRTUAL_ENV=.venv\nlayout python" > .envrc'
 alias pip_install="pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 # Verify the installation:
-alias pverify_tensorflow='python -c "import tensorflow as tf
+alias dpython_verify_tensorflow='python -c "import tensorflow as tf
 print(tf.reduce_sum(tf.random.normal([1000, 1000])))"'
-alias pverify_transforms="python -c \"from transformers import pipeline
+alias dpython_verify_transforms="python -c \"from transformers import pipeline
 print(pipeline('sentiment-analysis')('we love you'))\""
 
+# macos
 alias dmac_install_rosetta="softwareupdate --install-rosetta"
 
 alias ollama_install_deepseek="ollama run deepseek-r1:32b"
@@ -930,6 +932,7 @@ alias dproxy_ip="curl ipinfo.io"
 alias dproxy_git="git config --global http.proxy http://127.0.0.1:1234 && git config --global https.proxy https://127.0.0.1:1234"
 alias dproxy_npm="npm config set proxy http://127.0.0.1:1234 && npm config set https-proxy http://127.0.0.1:1234"
 
+# gitlab
 function dgitlab_runner
     set path /Volumes/MacGame/MacCache/gitlab-runner
     echo "local: $path"
@@ -938,4 +941,5 @@ function dgitlab_runner
     gitlab-runner run
 end
 
+# macports
 alias ps_list_macports_install="ps aux | grep install"

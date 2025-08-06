@@ -126,7 +126,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "W", function()
         hs.notify.new({ title = "The Witcher 3 Wild Hunt GOTY.app", informativeText = "run it sucessfully" }):send()
     end)
 
-    activeWindow(80)
+    activeWindow(100)
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()

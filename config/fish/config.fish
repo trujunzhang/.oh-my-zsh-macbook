@@ -182,3 +182,14 @@ if not contains $_asdf_shims $PATH
     set -gx --prepend PATH $_asdf_shims
 end
 set --erase _asdf_shims
+
+# This prevents me from installing packages with pip without being
+# in a virtualenv first.
+#
+# This allows me to keep my system Python clean, and install all my
+# packages inside virtualenvs.
+#
+# See https://docs.python-guide.org/dev/pip-virtualenv/#requiring-an-active-virtual-environment-for-pip
+# See https://blog.glyph.im/2023/08/get-your-mac-python-from-python-dot-org.html#and-always-use-virtual-environments
+#
+set -g -x PIP_REQUIRE_VIRTUALENV true
