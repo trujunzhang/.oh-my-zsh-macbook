@@ -14,10 +14,12 @@
 return {
     {
         "folke/snacks.nvim",
+        optional = true,
         keys = {
             -- I use this keymap with mini.files, but snacks explorer was taking over
             -- https://github.com/folke/snacks.nvim/discussions/949
             { "<leader>e", false },
+            { "<leader><space>", false },
             {
                 "<leader>sg",
                 function()
@@ -104,15 +106,15 @@ return {
                 desc = "[P]Search for complete tasks",
             },
             -- -- List git branches with Snacks_picker to quickly switch to a new branch
-            {
-                "<M-b>",
-                function()
-                    Snacks.picker.git_branches({
-                        layout = "select",
-                    })
-                end,
-                desc = "Branches",
-            },
+            -- {
+            --     "<M-b>",
+            --     function()
+            --         Snacks.picker.git_branches({
+            --             layout = "select",
+            --         })
+            --     end,
+            --     desc = "Branches",
+            -- },
             -- Used in LazyVim to view the different keymaps, this by default is
             -- configured as <leader>sk but I run it too often
             -- Sometimes I need to see if a keymap is already taken or not
@@ -126,49 +128,49 @@ return {
                 desc = "Keymaps",
             },
             -- File picker
-            {
-                "<leader><space>",
-                function()
-                    Snacks.picker.files({
-                        finder = "files",
-                        format = "file",
-                        show_empty = true,
-                        supports_live = true,
-                        -- In case you want to override the layout for this keymap
-                        -- layout = "vscode",
-                    })
-                end,
-                desc = "Find Files",
-            },
+            -- {
+            --     "<leader><space>",
+            --     function()
+            --         Snacks.picker.files({
+            --             finder = "files",
+            --             format = "file",
+            --             show_empty = true,
+            --             supports_live = true,
+            --             -- In case you want to override the layout for this keymap
+            --             -- layout = "vscode",
+            --         })
+            --     end,
+            --     desc = "Find Files",
+            -- },
             -- Navigate my buffers
-            {
-                "<S-h>",
-                function()
-                    Snacks.picker.buffers({
-                        -- I always want my buffers picker to start in normal mode
-                        on_show = function()
-                            vim.cmd.stopinsert()
-                        end,
-                        finder = "buffers",
-                        format = "buffer",
-                        hidden = false,
-                        unloaded = true,
-                        current = true,
-                        sort_lastused = true,
-                        win = {
-                            input = {
-                                keys = {
-                                    ["d"] = "bufdelete",
-                                },
-                            },
-                            list = { keys = { ["d"] = "bufdelete" } },
-                        },
-                        -- In case you want to override the layout for this keymap
-                        -- layout = "ivy",
-                    })
-                end,
-                desc = "[P]Snacks picker buffers",
-            },
+            -- {
+            --     "<S-h>",
+            --     function()
+            --         Snacks.picker.buffers({
+            --             -- I always want my buffers picker to start in normal mode
+            --             on_show = function()
+            --                 vim.cmd.stopinsert()
+            --             end,
+            --             finder = "buffers",
+            --             format = "buffer",
+            --             hidden = false,
+            --             unloaded = true,
+            --             current = true,
+            --             sort_lastused = true,
+            --             win = {
+            --                 input = {
+            --                     keys = {
+            --                         ["d"] = "bufdelete",
+            --                     },
+            --                 },
+            --                 list = { keys = { ["d"] = "bufdelete" } },
+            --             },
+            --             -- In case you want to override the layout for this keymap
+            --             -- layout = "ivy",
+            --         })
+            --     end,
+            --     desc = "[P]Snacks picker buffers",
+            -- },
         },
         opts = {
             -- Documentation for the picker
