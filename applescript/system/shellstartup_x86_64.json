@@ -1,0 +1,98 @@
+[
+    {
+        "type": "application",
+        "name": "BetterTouchTool",
+        "application": "BetterTouchTool",
+        "enable": "1"
+    },
+    {
+        "type": "application",
+        "name": "SpaceLauncher",
+        "application": "SpaceLauncher",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "TextSniper",
+        "application": "TextSniper",
+        "enable": "1"
+    },
+    {
+        "type": "application",
+        "name": "clash for arm",
+        "application": "ClashX Pro",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "clash for x86",
+        "application": "ClashX",
+        "enable": "1"
+    },
+    {
+        "type": "application",
+        "name": "gui for singbox",
+        "application": "GUI.for.SingBox.app",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "gui for Clash",
+        "application": "GUI.for.Clash.app",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "Alacritty",
+        "application": "Alacritty",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "google chrome",
+        "application": "google chrome",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "WezTerm",
+        "application": "WezTerm",
+        "enable": "1"
+    },
+    {
+        "type": "application",
+        "name": "Brave Browser Nightly",
+        "application": "Brave Browser Nightly",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "Brave Browser",
+        "application": "Brave Browser",
+        "enable": "1"
+    },
+    {
+        "type": "application",
+        "name": "Brave Browser Beta",
+        "application": "Brave Browser Beta",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "Raycast",
+        "path": "Raycast",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "webstorm",
+        "application": "webstorm",
+        "enable": "0"
+    },
+    {
+        "type": "application",
+        "name": "Vivaldi",
+        "application": "Vivaldi",
+        "enable": "0"
+    }
+]
