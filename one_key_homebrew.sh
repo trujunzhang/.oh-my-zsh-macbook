@@ -138,6 +138,7 @@ brew_apps_x86xxx=(
     # skhd --start-service
 )
 brew_apps_arm=(
+    "micromamba" "micromamba"
 
     # python on the asdf-vim
     # brew_install_app openssl

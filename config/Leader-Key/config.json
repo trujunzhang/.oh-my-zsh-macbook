@@ -255,6 +255,11 @@
           "key" : "2",
           "type" : "application",
           "value" : "/Volumes/MacGame/AppGames/Kegworks/Metal Gear Solid V Ground Zeroes.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/Cyberpunk 2077 Ultimate.app"
         }
       ],
       "key" : "g",

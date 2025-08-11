@@ -910,6 +910,8 @@ alias dpython_pipenv_graph="pipenv graph"
 # alias dpython_new_env="python3 -m venv venv"
 # alias dpython_env_active="source venv/bin/activate"
 
+alias dpython_mamba_init="/opt/homebrew/opt/micromamba/bin/mamba shell init --shell fish --root-prefix ~/mamba"
+
 #python
 # see: https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments
 alias pvenv_new="python -m venv .venv"

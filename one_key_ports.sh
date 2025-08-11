@@ -10,6 +10,8 @@ DEFAULTVALUE="install"
 Params="${1:-$DEFAULTVALUE}"
 
 ports_apps_x86=(
+    "micromamba" "micromamba"
+
     # python on the asdf-vim
     "openssl" "openssl"
     "readline" "readline"

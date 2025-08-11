@@ -53,7 +53,7 @@ fish_add_path "$ANDROID_SDK_ROOT/platform-tools"
 
 # djzhang's bin
 # ======================================================================
-fish_add_path "/opt/local/bin"
+fish_add_path /opt/local/bin
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps"
 
@@ -193,3 +193,14 @@ set --erase _asdf_shims
 # See https://blog.glyph.im/2023/08/get-your-mac-python-from-python-dot-org.html#and-always-use-virtual-environments
 #
 set -g -x PIP_REQUIRE_VIRTUALENV true
+
+if test "$(uname -m)" = arm64
+    # >>> mamba initialize >>>
+    # !! Contents within this block are managed by 'mamba shell init' !!
+    set -gx MAMBA_EXE /opt/homebrew/opt/micromamba/bin/mamba
+    set -gx MAMBA_ROOT_PREFIX /Volumes/MacUser/djzhang/mamba
+    $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+    # <<< mamba initialize <<<
+end
+
+alias conda="micromamba"

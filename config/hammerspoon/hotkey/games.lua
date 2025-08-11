@@ -2,6 +2,10 @@
 local GamesFolder = "/Volumes/MacGame/AppGames/"
 local KegworksGames = GamesFolder .. "Kegworks/"
 
+-- "C:\toxicgames.in\Silent-Hill-2\SILENT HILL 2\SHProto.exe" -dx11
+-- "C:\toxicgames.in\Silent-Hill-2\SILENT HILL 2\SHProto.exe" -dx11
+-- "C:\toxicgames.in\Silent-Hill-2\SILENT HILL 2\SHProto.exe" -dx11
+
 -- Function to toggle Dock visibility
 local function toggleDockVisibility()
     local currentDockState = hs.execute("defaults read com.apple.dock autohide")
@@ -190,8 +194,8 @@ end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
     beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Cyberpunk.2077..app")
-        hs.notify.new({ title = "Cyberpunk.2077..app", informativeText = "run it sucessfully" }):send()
+        hs.application.launchOrFocus(KegworksGames .. "Mafia Definitive Edition.app")
+        hs.notify.new({ title = "Mafia Definitive Edition.app", informativeText = "run it sucessfully" }):send()
     end)
 
     activeWindow()
