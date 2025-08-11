@@ -203,4 +203,13 @@ if test "$(uname -m)" = arm64
     # <<< mamba initialize <<<
 end
 
+if test "$(uname -m)" = x86_64
+    # >>> mamba initialize >>>
+    # !! Contents within this block are managed by 'mamba init' !!
+    set -gx MAMBA_EXE /opt/local/bin/micromamba
+    set -gx MAMBA_ROOT_PREFIX /Users/djzhang/mamba
+    $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+    # <<< mamba initialize <<<
+end
+
 alias conda="micromamba"
