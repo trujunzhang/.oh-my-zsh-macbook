@@ -927,6 +927,8 @@ print(pipeline('sentiment-analysis')('we love you'))\""
 # macos
 alias dmac_install_rosetta="softwareupdate --install-rosetta"
 
+alias dmac_master_disable="sudo spctl --master-disable"
+
 alias ollama_install_deepseek="ollama run deepseek-r1:32b"
 
 # proxy on the terminal

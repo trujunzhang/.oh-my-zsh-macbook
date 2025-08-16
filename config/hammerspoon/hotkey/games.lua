@@ -60,7 +60,7 @@ local function beforePlayGame(runApp)
 end
 
 local function activeWindow(interval)
-    interval = interval or 40
+    interval = interval or 60
     hs.timer.doAfter(interval, function()
         hs.eventtap.leftClick(hs.mouse.getAbsolutePosition())
         -- hs.notify.new({ title = "Active game window", informativeText = "click it sucessfully" }):send()
@@ -198,5 +198,5 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
         hs.notify.new({ title = "Mafia Definitive Edition.app", informativeText = "run it sucessfully" }):send()
     end)
 
-    activeWindow()
+    activeWindow(100)
 end)
