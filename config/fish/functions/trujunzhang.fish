@@ -894,13 +894,17 @@ alias fish_reload="source ~/.config/fish/config.fish"
 alias dpython_note="jupyter notebook"
 alias dpython_install="pip install -i https://pypi.tuna.tsinghua.edu.cn/simple"
 
+# python uv
 alias puv_list="uv python list --only-installed"
 alias puv_install="uv pip install -e ."
+alias puv_pip_list="uv pip list"
 alias puv_export_requirements="uv export -o requirements.txt"
 alias puv_venv="uv venv"
-alias puv_New="uv init "
-alias puv_Add="uv add "
-alias puv_Run="uv run "
+alias puv_new="uv init "
+alias puv_add="uv add "
+alias puv_run_basic="uv run "
+alias puv_run_python_file="uv run --no-project"
+alias uv_pip_install="uv pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 
 # python env
 alias dpython_pipenv_init="pipenv shell"
