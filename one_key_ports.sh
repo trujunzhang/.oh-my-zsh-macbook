@@ -10,6 +10,7 @@ DEFAULTVALUE="install"
 Params="${1:-$DEFAULTVALUE}"
 
 ports_apps_x86=(
+    "uv" "uv"
     "micromamba" "micromamba"
 
     # python on the asdf-vim

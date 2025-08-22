@@ -675,6 +675,7 @@ alias dclone_superbase="git clone https://github.com/supabase/supabase --depth 1
 #see: https://github.com/CodyReichert/awesome-cl
 alias dclone_lisp_matrix="git clone https://github.com/blindglobe/lisp-matrix --depth 1"
 alias dclone_singbox_rules="git clone https://github.com/MetaCubeX/meta-rules-dat && cd meta-rules-dat && git checkout sing"
+alias dclone_gibMacOS="git clone https://github.com/corpnewt/gibMacOS"
 # react projects
 alias dclone_cal="git clone https://github.com/calcom/cal.com --depth 1"
 

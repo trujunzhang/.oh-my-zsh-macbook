@@ -168,12 +168,15 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "5", function()
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "6", function()
-    local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
-    hs.execute(shell_command)
+    -- local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
+    -- hs.execute(shell_command)
 
     beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Assassins.Creed.Origins-CPY.app")
-        hs.notify.new({ title = "Assassins.Creed.Origins-CPY.app", informativeText = "run it sucessfully" }):send()
+        -- hs.application.launchOrFocus(KegworksGames .. "Assassins.Creed.Origins-CPY.app")
+        -- hs.notify.new({ title = "Assassins.Creed.Origins-CPY.app", informativeText = "run it sucessfully" }):send()
+
+        hs.application.launchOrFocus(KegworksGames .. "Batman Arkham Knight.app")
+        hs.notify.new({ title = "Batman Arkham Knight.app", informativeText = "run it sucessfully" }):send()
     end)
 
     activeWindow()
@@ -185,7 +188,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "7", function()
     hs.execute(shell_command)
 
     beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Need-for-speed-payback.app")
+        hs.application.launchOrFocus(KegworksGames .. "Need_for_Speed_Payback.app")
         hs.notify.new({ title = "Need-for-speed-payback.app", informativeText = "run it sucessfully" }):send()
     end)
 
