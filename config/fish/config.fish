@@ -27,10 +27,14 @@ set -g -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/25.1.8937393
 # set -g -x HOMEBREW_BOTTLE_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles"
 # set -g -x HOMEBREW_API_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles/api"
 
-if test -d /opt/homebrew # MacOS arm64
-    set -gx HOMEBREW_PREFIX /opt/homebrew
+if test "$(uname -m)" = arm64
+    if test -d /opt/homebrew # MacOS arm64
+        set -gx HOMEBREW_PREFIX /opt/homebrew
+    end
+
     set -gx HOMEBREW_CELLAR "$HOMEBREW_PREFIX/Cellar"
     set -gx HOMEBREW_REPOSITORY "$HOMEBREW_PREFIX/homebrew"
+    fish_add_path "$HOMEBREW_PREFIX/opt/ruby@3.3/bin"
 end
 
 fish_add_path -gP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin"
@@ -167,8 +171,6 @@ end
 #     end
 # end
 
-fish_add_path "/opt/homebrew/opt/ruby@3.3/bin"
-
 # ASDF configuration code
 if test -z $ASDF_DATA_DIR
     set _asdf_shims "$HOME/.asdf/shims"
@@ -197,8 +199,8 @@ set -g -x PIP_REQUIRE_VIRTUALENV true
 if test "$(uname -m)" = arm64
     # >>> mamba initialize >>>
     # !! Contents within this block are managed by 'mamba shell init' !!
-    set -gx MAMBA_EXE /opt/homebrew/opt/micromamba/bin/mamba
-    set -gx MAMBA_ROOT_PREFIX /Volumes/MacUser/djzhang/mamba
+    set -gx MAMBA_EXE "$HOMEBREW_PREFIX/opt/micromamba/bin/mamba"
+    set -gx MAMBA_ROOT_PREFIX "$HOME/mamba"
     $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
     # <<< mamba initialize <<<
 end
@@ -207,7 +209,8 @@ if test "$(uname -m)" = x86_64
     # >>> mamba initialize >>>
     # !! Contents within this block are managed by 'mamba init' !!
     set -gx MAMBA_EXE /opt/local/bin/micromamba
-    set -gx MAMBA_ROOT_PREFIX /Users/djzhang/mamba
+    # set -gx MAMBA_ROOT_PREFIX /Users/djzhang/mamba
+    set -gx MAMBA_ROOT_PREFIX "$HOME/mamba"
     $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
     # <<< mamba initialize <<<
 end

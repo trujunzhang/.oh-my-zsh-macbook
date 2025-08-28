@@ -342,6 +342,10 @@ if.app-id = 'org.filezilla-project.filezilla'
 run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
+if.app-id = 'com.cocoatech.PathFinder'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = ['move-node-to-workspace T']
 

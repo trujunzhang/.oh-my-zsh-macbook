@@ -464,6 +464,12 @@ function link_mac_user {
     HOME_MACGAME_PATH="/Volumes/MacGame"
     HOME_MAC_CACHE_PATH="/Volumes/MacGame/MacCache"
 
+    directoryLink "app(google chrome)" "$HOME/Applications/Google Chrome.app" "/Applications/Google Chrome.app"
+    directoryLink "app(brave nightly)" "$HOME/Applications/Browser Nightly.app" "/Applications/Browser Nightly.app"
+
+    # infuse
+    directoryLink "fold(infuse)" "$HOME_MACGAME_PATH/movies/tmpFold" "$HOME/Movies/Infuse/tmpFold"
+
     # orbstack
     directoryLink "data(orbstack)" "$HOME_MAC_CACHE_PATH/orbstack/data" "$HOME/Library/Group Containers/HUAQ24HBR6.dev.orbstack/data"
 
@@ -536,7 +542,7 @@ link_getx_shell
 link_pods_shell
 link_run_apps_shell
 link_nginx_http
-link_mac_app_cloud
+# link_mac_app_cloud
 if [[ $(uname -m) == 'arm64' ]]; then
     # info M2
     link_mac_user

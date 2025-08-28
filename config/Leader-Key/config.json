@@ -181,6 +181,11 @@
           "key" : "i",
           "type" : "folder",
           "value" : "/Volumes/MacUser/djzhang/Documents/Organizations/__CODING/WORKING/new-ieatta-three-apps"
+        },
+        {
+          "key" : "r",
+          "type" : "application",
+          "value" : "/Applications/Path Finder.app"
         }
       ],
       "key" : "f",

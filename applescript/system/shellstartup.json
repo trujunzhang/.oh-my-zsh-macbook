@@ -2,14 +2,14 @@
   {
     "type": "application",
     "name": "AeroSpace",
-    "application": "AeroSpace",
+    "application": "AeroSpace.app",
     "enable": "1"
   },
   {
     "type": "application",
     "name": "BetterTouchTool",
-    "application": "BetterTouchTool",
-    "enable": "1"
+    "application": "BetterTouchTool.app",
+    "enable": "0"
   },
   {
     "type": "application",
@@ -38,7 +38,7 @@
   {
     "type": "application",
     "name": "Google Chrome",
-    "path": "Google Chrome",
+    "path": "Google Chrome.app",
     "enable": "1"
   },
   {
@@ -50,25 +50,25 @@
   {
     "type": "application",
     "name": "Ghostty",
-    "application": "Ghostty",
+    "application": "Ghostty.app",
     "enable": "1"
   },
   {
     "type": "application",
     "name": "WezTerm",
-    "application": "WezTerm",
+    "application": "WezTerm.app",
     "enable": "0"
   },
   {
     "type": "application",
     "name": "Brave Browser Nightly",
-    "application": "Brave Browser Nightly",
+    "application": "Brave Browser Nightly.app",
     "enable": "1"
   },
   {
     "type": "application",
     "name": "hammerspoon",
-    "application": "Hammerspoon",
+    "application": "Hammerspoon.app",
     "enable": "1"
   },
   {
@@ -80,7 +80,7 @@
   {
     "type": "application",
     "name": "ZellijTools-arm-v1",
-    "application": "ZellijTools-arm-v1",
+    "application": "ZellijTools-arm-v1.app",
     "enable": "1"
   }
 ]
