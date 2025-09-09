@@ -139,5 +139,6 @@
     "jest.runMode": "deferred",
     "prisma.showPrismaDataPlatformNotification": false,
     "editor.accessibilitySupport": "on",
-    "redhat.telemetry.enabled": false
+    "redhat.telemetry.enabled": false,
+    "mcpServers": {}
 }

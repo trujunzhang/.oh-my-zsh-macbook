@@ -256,6 +256,10 @@ if.app-id = 'com.kochmedia.MetroExodusNew'
 run = 'move-node-to-workspace H'
 
 [[on-window-detected]]
+if.app-id = 'jp.co.capcom.VillageUS'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
 # assissan creed-  3
 if.window-title-regex-substring='ACIII'
 run = 'move-node-to-workspace H'

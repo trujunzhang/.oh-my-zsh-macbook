@@ -145,8 +145,8 @@ function install_asdf_one_plugin {
         install_java
     elif [ "$ASDF_PLUGIN_TYPE" = "lazygit" ]; then
         install_lazygit
-    # elif [ "$ASDF_PLUGIN_TYPE" = "cocoapods" ]; then
-    #     install_cocoapods
+    elif [ "$ASDF_PLUGIN_TYPE" = "cocoapods" ]; then
+        install_cocoapods
     elif [ "$ASDF_PLUGIN_TYPE" = "ruby" ]; then
         install_ruby
     elif [ "$ASDF_PLUGIN_TYPE" = "uv" ]; then
