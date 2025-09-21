@@ -140,6 +140,10 @@ brew_apps_x86xxx=(
 brew_apps_arm=(
     "micromamba" "micromamba"
 
+    # for expensify app
+    "yq" "yq"
+    "mkcert" "mkcert"
+
     # python on the asdf-vim
     # brew_install_app openssl
     "readline" "readline"
@@ -150,6 +154,7 @@ brew_apps_arm=(
     "rg" "rg"
     "fd" "fd"
     "lua-language-server" "lua-language-server"
+    "tree-sitter" "tree-sitter"
 
     "starship" "starship"
     "zellij" "zellij"

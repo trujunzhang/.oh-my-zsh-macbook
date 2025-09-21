@@ -8,5 +8,5 @@
 	"vintage_start_in_command_mode": true,
 	"theme": "auto",
 	"color_scheme": "Packages/Github Color Theme/GitHub.tmTheme",
-	"index_files": true,
+	"index_files": false,
 }

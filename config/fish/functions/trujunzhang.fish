@@ -321,12 +321,11 @@ alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --a
 
 # xcode
 alias dmac_rosetta_install="softwareupdate --install-rosetta"
-alias xcode_info="xcode-select --print-path"
-# alias xcode_select="sudo xcode-select --switch /Volumes/MacXcode/Applications/Xcode.app/Contents/Developer"
-alias xcode_select_version="sudo xcode-select --switch /Volumes/MacGame/MacApps/current/Xcode-16.4.app/Contents/Developer"
-# alias xcode_select_version="sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer"
+alias xcode_path_info="xcode-select --print-path"
+alias xcode_select_current="sudo xcode-select --switch /Volumes/MacGame/MacApps/current/Current.app/Contents/Developer"
+alias xcode_select_default="sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer"
+alias xcode_select_reset="sudo xcode-select --reset"
 alias xcode_download_ios="xcodebuild -downloadPlatform iOS"
-alias xcode_reset="sudo xcode-select --reset"
 
 alias ios_devices="xcrun simctl list devices --json"
 alias ios_open_simulator="open -a Simulator"
@@ -338,8 +337,8 @@ alias ios_simctl="xcrun simctl list devices | grep 'iPhone'"
 
 # alias iosiphone16plus="open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')"
 
-function iosiphone16plus
-    open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')
+function iosiphone17pro
+    open -a Simulator --args -CurrentDeviceUDID $(xcrun simctl list devices | grep -m 1 'iPhone 17 pro' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')
 end
 
 #open -a Simulator && xcrun simctl boot 'iPhone 16 Plus'

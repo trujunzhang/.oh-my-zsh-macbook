@@ -104,14 +104,14 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "E", function()
     activeWindow()
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "I", function()
-    beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Bioshock Infinite.app")
-        hs.notify.new({ title = "Bioshock Infinite.app", informativeText = "run it sucessfully" }):send()
-    end)
-
-    activeWindow()
-end)
+-- hs.hotkey.bind({ "Cmd", "Alt" }, "I", function()
+--     beforePlayGame(function()
+--         hs.application.launchOrFocus(KegworksGames .. "Bioshock Infinite.app")
+--         hs.notify.new({ title = "Bioshock Infinite.app", informativeText = "run it sucessfully" }):send()
+--     end)
+--
+--     activeWindow()
+-- end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "R", function()
     beforePlayGame(function()
