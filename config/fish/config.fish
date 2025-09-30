@@ -216,3 +216,6 @@ if test "$(uname -m)" = x86_64
 end
 
 alias conda="micromamba"
+
+# Added by Windsurf
+fish_add_path /Volumes/MacUser/djzhang/.codeium/windsurf/bin

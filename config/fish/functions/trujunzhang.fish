@@ -188,7 +188,6 @@ alias ninstall_save='npm install --verbose --save --no-cache'
 
 alias npx_sentry_wizard="npx @sentry/wizard@latest -i reactNative"
 
-alias nrpodi='npm run pod-install'
 alias nrprettier='npm run prettier'
 alias nrtypecheck='npm run typecheck'
 alias nrstart='npm run start'
@@ -198,6 +197,18 @@ alias nripad='npm run ipad'
 alias nrandroid='npm run android'
 alias nbuild-android='npm run android-build'
 alias nbuild-mac='npm run desktop-build'
+
+alias nrxcode='iosiphone17pro && nrios'
+
+alias nrpod_default='npm run pod-install'
+function nrpod-local
+    # https://repo1.maven.org/maven2/com/facebook/react/react-native-artifacts/0.79.2/react-native-artifacts-0.79.2-hermes-ios-debug.tar.gz
+    set HERMES_VERSION "0.79.2"
+    set HERMES_PACKAGE_NAME "react-native-artifacts-$HERMES_VERSION-hermes-ios-debug"
+    # set HERMES_ENGINE_TARBALL_PATH "$HOME/.local/RN_DOWNLOADS/$HERMES_PACKAGE_NAME.tar.gz"
+    set -g -x HERMES_ENGINE_TARBALL_PATH "$HOME/.local/RN_DOWNLOADS/$HERMES_PACKAGE_NAME.tar.gz"
+    npm run pod-install
+end
 
 # run dev
 alias npmd='npm run dev'

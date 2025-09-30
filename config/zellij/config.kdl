@@ -298,11 +298,15 @@ scrollback_lines_to_serialize 0
 // Default: default
 //
 // theme "default"
+// theme "catppuccin-frappe"
+// theme "everforest-dark"
+theme "everforest-light"
 
 // The name of the default layout to load on startup
 // Default: "default"
 //
 // default_layout "compact"
+default_layout "main"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal

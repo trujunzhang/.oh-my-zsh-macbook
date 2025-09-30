@@ -23,6 +23,7 @@ ports_apps_x86=(
     "zellij" "zellij"
     # "fish" "fish"
     "nvim" "neovim"
+    "tree-sitter-cli" "tree-sitter-cli"
 
     "starship" "starship"
     "fzf" "fzf"

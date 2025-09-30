@@ -25,10 +25,10 @@ brew_apps=(
     # "Insomnia"            "insomnia" 'ssd' "backup"
     # https://fbflipper.com/
     # "Flipper"             "flipper" 'copy' 'backup'
-    "Realm Studio"        "mongodb-realm-studio" 'ssd' 'no-bak'
+    "Realm Studio" "mongodb-realm-studio" 'ssd' 'no-bak'
     "Obsidian" "obsidian" 'ssd' 'no-bak'
     "Alacritty" "alacritty" 'copy' 'backup'
-    "Wezterm" "wezterm" 'copy'  'backup'
+    "Wezterm" "wezterm" 'copy' 'backup'
     "Ghostty" "ghostty" 'copy' 'backup'
     # "Neovide" "Neovide" 'copy' 'no-bak'
     "Sublime Text" "SublimeText" "ssd" 'no-bak'
@@ -39,7 +39,7 @@ brew_apps=(
     "Wondershare PDFelement" "pdfelement" "ssd" "no-bak"
     "DaisyDisk" "daisyDisk" "ssd" "no-bak"
     "Mac FoneLab Screen Recorder" "Mac FoneLab Screen Recorder" "ssd" "no-bak"
-    "Kindle" "Kindle" "copy" "no-bak"
+    "Amazon Kindle" "Amazon Kindle" "copy" "no-bak"
     "Z-Library" "Z-Library" "ssd" "no-bak"
     "calibre" "calibre" "ssd" "no-bak"
     "Leader Key" "Leader Key" "copy" "no-bak"
@@ -64,7 +64,7 @@ brew_apps=(
     # Web browser
     # "Google Chrome" "google-chrome" 'copy' 'backup'
     "Vivaldi" "vivaldi" 'ssd' 'backup'
-    "Opera" "opera" 'ssd'    'backup'
+    "Opera" "opera" 'ssd' 'backup'
     "Firefox" "firefox" 'ssd' 'backup'
     "Brave Browser" "brave-browser" 'ssd' 'backup'
     "Brave Browser Beta" "brave-browser-bata" 'ssd' 'backup'

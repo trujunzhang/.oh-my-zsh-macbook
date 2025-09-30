@@ -154,7 +154,7 @@ brew_apps_arm=(
     "rg" "rg"
     "fd" "fd"
     "lua-language-server" "lua-language-server"
-    "tree-sitter" "tree-sitter"
+    "tree-sitter-cli" "tree-sitter-cli"
 
     "starship" "starship"
     "zellij" "zellij"
