@@ -81,28 +81,8 @@
   },
   {
     "type": "vless",
-    "tag": "🇭🇰 HK",
-    "server": "8.210.170.130",
-    "server_port": 8443,
-    "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
-    "transport": {
-      "path": "/?ed=2560",
-      "type": "ws",
-      "headers": {
-        "Host": "www.myclash.top"
-      }
-    },
-    "tls": {
-      "enabled": true,
-      "server_name": "www.myclash.top",
-      "insecure": true
-    },
-    "tcp_fast_open": false
-  },
-  {
-    "type": "vless",
-    "tag": "🇭🇰 HK 2",
-    "server": "156.230.12.71",
+    "tag": "🇺🇸 US",
+    "server": "52.10.78.7",
     "server_port": 443,
     "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
     "transport": {
@@ -121,8 +101,8 @@
   },
   {
     "type": "vless",
-    "tag": "🇭🇰 HK 3",
-    "server": "47.57.13.107",
+    "tag": "🇸🇬 SG",
+    "server": "38.244.147.68",
     "server_port": 443,
     "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
     "transport": {
@@ -141,9 +121,29 @@
   },
   {
     "type": "vless",
-    "tag": "🇭🇰 HK 4",
-    "server": "47.57.245.232",
+    "tag": "🇸🇬 SG 2",
+    "server": "43.134.174.114",
     "server_port": 443,
+    "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
+    "transport": {
+      "path": "/?ed=2560",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true
+    },
+    "tcp_fast_open": false
+  },
+  {
+    "type": "vless",
+    "tag": "🇸🇬 SG 3",
+    "server": "64.49.14.41",
+    "server_port": 2053,
     "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
     "transport": {
       "path": "/?ed=2560",

@@ -1,4 +1,7 @@
 sing-box/cache.db
-sing-box/sing-box
 .cache
 user.yaml
+pid.txt
+
+sing-box/sing-box
+sing-box/sing-box.bak

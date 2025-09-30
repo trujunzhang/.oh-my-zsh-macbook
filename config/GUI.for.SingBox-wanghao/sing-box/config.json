@@ -11,7 +11,7 @@
       "external_ui": "",
       "external_ui_download_url": "",
       "external_ui_download_detour": "🎯 Direct",
-      "secret": "ID_64ho1vbc",
+      "secret": "53f6fae179b937fda49a623e0ac5271976a9f60a25b1becef842940202a60da3",
       "default_mode": "rule",
       "access_control_allow_origin": [
         "*"
@@ -49,10 +49,10 @@
         "wh2",
         "wh3",
         "🇨🇳 visa.cn",
-        "🇭🇰 HK",
-        "🇭🇰 HK 2",
-        "🇭🇰 HK 3",
-        "🇭🇰 HK 4",
+        "🇺🇸 US",
+        "🇸🇬 SG",
+        "🇸🇬 SG 2",
+        "🇸🇬 SG 3",
         "CF优选",
         "CF优选 2",
         "CF优选 3",
@@ -90,10 +90,10 @@
         "wh2",
         "wh3",
         "🇨🇳 visa.cn",
-        "🇭🇰 HK",
-        "🇭🇰 HK 2",
-        "🇭🇰 HK 3",
-        "🇭🇰 HK 4",
+        "🇺🇸 US",
+        "🇸🇬 SG",
+        "🇸🇬 SG 2",
+        "🇸🇬 SG 3",
         "CF优选",
         "CF优选 2",
         "CF优选 3",
@@ -225,28 +225,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇭🇰 HK",
-      "server": "8.210.170.130",
-      "server_port": 8443,
-      "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
-      "transport": {
-        "path": "/?ed=2560",
-        "type": "ws",
-        "headers": {
-          "Host": "www.myclash.top"
-        }
-      },
-      "tls": {
-        "enabled": true,
-        "server_name": "www.myclash.top",
-        "insecure": true
-      },
-      "tcp_fast_open": false
-    },
-    {
-      "type": "vless",
-      "tag": "🇭🇰 HK 2",
-      "server": "156.230.12.71",
+      "tag": "🇺🇸 US",
+      "server": "52.10.78.7",
       "server_port": 443,
       "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
       "transport": {
@@ -265,8 +245,8 @@
     },
     {
       "type": "vless",
-      "tag": "🇭🇰 HK 3",
-      "server": "47.57.13.107",
+      "tag": "🇸🇬 SG",
+      "server": "38.244.147.68",
       "server_port": 443,
       "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
       "transport": {
@@ -285,9 +265,29 @@
     },
     {
       "type": "vless",
-      "tag": "🇭🇰 HK 4",
-      "server": "47.57.245.232",
+      "tag": "🇸🇬 SG 2",
+      "server": "43.134.174.114",
       "server_port": 443,
+      "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
+      "transport": {
+        "path": "/?ed=2560",
+        "type": "ws",
+        "headers": {
+          "Host": "www.myclash.top"
+        }
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "www.myclash.top",
+        "insecure": true
+      },
+      "tcp_fast_open": false
+    },
+    {
+      "type": "vless",
+      "tag": "🇸🇬 SG 3",
+      "server": "64.49.14.41",
+      "server_port": 2053,
       "uuid": "b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d",
       "transport": {
         "path": "/?ed=2560",
@@ -781,6 +781,11 @@
         "outbound": "GLOBAL"
       },
       {
+        "action": "route",
+        "network": "icmp",
+        "outbound": "🎯 Direct"
+      },
+      {
         "action": "reject",
         "protocol": "quic"
       },
@@ -871,39 +876,44 @@
       }
     ],
     "auto_detect_interface": true,
-    "final": "🐟 Fallback"
+    "final": "🐟 Fallback",
+    "default_domain_resolver": {
+      "server": "Local-DNS"
+    }
   },
   "dns": {
     "servers": [
       {
         "tag": "Local-DNS",
-        "address": "https://223.5.5.5/dns-query",
-        "address_resolver": "Local-DNS-Resolver",
-        "detour": "🎯 Direct"
+        "type": "https",
+        "domain_resolver": "Local-DNS-Resolver",
+        "server_port": 443,
+        "server": "223.5.5.5",
+        "path": "/dns-query"
       },
       {
         "tag": "Local-DNS-Resolver",
-        "address": "udp://223.5.5.5",
-        "detour": "🎯 Direct"
+        "type": "udp",
+        "server_port": 53,
+        "server": "223.5.5.5"
       },
       {
         "tag": "Remote-DNS",
-        "address": "tls://8.8.8.8",
-        "address_resolver": "Remote-DNS-Resolver",
-        "detour": "🚀 Select"
+        "type": "tls",
+        "detour": "🚀 Select",
+        "domain_resolver": "Remote-DNS-Resolver",
+        "server_port": 853,
+        "server": "8.8.8.8"
       },
       {
         "tag": "Remote-DNS-Resolver",
-        "address": "udp://8.8.8.8",
-        "detour": "🚀 Select"
+        "type": "udp",
+        "detour": "🚀 Select",
+        "server_port": 53,
+        "server": "8.8.8.8"
       }
     ],
     "rules": [
-      {
-        "action": "route",
-        "server": "Local-DNS",
-        "outbound": "any"
-      },
       {
         "action": "route",
         "clash_mode": "direct",

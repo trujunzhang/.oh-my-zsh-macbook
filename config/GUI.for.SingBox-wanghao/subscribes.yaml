@@ -1,14 +1,14 @@
-- id: ID_zv5jlc1v
-  name: myclash-subscribe
-  url: https://www.myclash.top/b9c3bcb9-446e-4f48-97a7-5b8a48efdd7d?sb
-  upload: 5306808142455
-  download: 5306808142455
+- id: ID_5bo80cd6
+  name: wanghao
+  url: ""
+  upload: 6543782699165
+  download: 6543782699165
   total: 26388279066624
   expire: 4102329600000
-  updateTime: 1741340350697
+  updateTime: 1759233251487
   type: Manual
   website: ""
-  path: data/subscribes/ID_zv5jlc1v.json
+  path: data/subscribes/ID_5bo80cd6.json
   include: ""
   exclude: ""
   includeProtocol: ""
@@ -16,106 +16,105 @@
   proxyPrefix: ""
   disabled: false
   inSecure: false
-  userAgent: ""
+  requestMethod: GET
+  header:
+    request: {}
+    response: {}
   proxies:
-    - id: ID_ter7m4le
+    - id: ID_hfh8efh6
       tag: wh1
       type: vless
-    - id: ID_bpsvjfea
+    - id: ID_6pcghs1n
       tag: wh2
       type: vless
-    - id: ID_lj3zlqqq
+    - id: ID_rdhmvwho
       tag: wh3
       type: vless
-    - id: ID_ltmfm8my
+    - id: ID_we28p3ha
       tag: 🇨🇳 visa.cn
       type: vless
-    - id: ID_qic0w9up
-      tag: 🇭🇰 HK
+    - id: ID_a0ig1i14
+      tag: 🇺🇸 US
       type: vless
-    - id: ID_sphtk2al
-      tag: 🇭🇰 HK 2
+    - id: ID_7s2livv5
+      tag: 🇸🇬 SG
       type: vless
-    - id: ID_zxirm11g
-      tag: 🇭🇰 HK 3
+    - id: ID_sia0c3l7
+      tag: 🇸🇬 SG 2
       type: vless
-    - id: ID_j6cuyjpf
-      tag: 🇭🇰 HK 4
+    - id: ID_52u0ykvt
+      tag: 🇸🇬 SG 3
       type: vless
-    - id: ID_mg505yck
+    - id: ID_zmqv46z9
       tag: CF优选
       type: vless
-    - id: ID_y22ubo0b
+    - id: ID_dnjbdkqk
       tag: CF优选 2
       type: vless
-    - id: ID_ztgiphh3
+    - id: ID_9ju9lwyh
       tag: CF优选 3
       type: vless
-    - id: ID_ytpfdilt
+    - id: ID_fg5nix39
       tag: CF优选 4
       type: vless
-    - id: ID_94tnni3v
+    - id: ID_9kjkb23v
       tag: CF优选 5
       type: vless
-    - id: ID_n5ttkom1
+    - id: ID_yqdjdk5g
       tag: CF优选 6
       type: vless
-    - id: ID_zmkbb1ws
+    - id: ID_hzljrqyo
       tag: CF优选 7
       type: vless
-    - id: ID_kj9mm7od
+    - id: ID_ac6aan8f
       tag: CF优选 8
       type: vless
-    - id: ID_6d8ymaj5
+    - id: ID_u79pp4hm
       tag: CF优选 9
       type: vless
-    - id: ID_kkl861qt
+    - id: ID_64y9cdda
       tag: CF优选 10
       type: vless
-    - id: ID_qf1khogo
+    - id: ID_hpkbub5q
       tag: CF优选 11
       type: vless
-    - id: ID_v6nvdr3z
+    - id: ID_6dipnsk3
       tag: CF优选 12
       type: vless
-    - id: ID_sl562j86
+    - id: ID_o4g0v4rk
       tag: CF优选 13
       type: vless
-    - id: ID_f2sci50e
+    - id: ID_shyd7g7o
       tag: CF优选 14
       type: vless
-    - id: ID_w8g36sf3
+    - id: ID_3u60h31y
       tag: CF优选 15
       type: vless
-    - id: ID_xu0crusq
+    - id: ID_re5l3r7h
       tag: CF优选 16
       type: vless
-    - id: ID_ndisw1il
+    - id: ID_6xyegtm6
       tag: CF优选 17
       type: vless
-    - id: ID_1scf17ij
+    - id: ID_dbi8o0bn
       tag: CF优选 18
       type: vless
-    - id: ID_gmnexguf
+    - id: ID_o50ft0p2
       tag: CF优选 19
       type: vless
-    - id: ID_eisbqp1a
+    - id: ID_p6pkq1to
       tag: CF优选 20
       type: vless
-    - id: ID_ifyhmh7b
+    - id: ID_aufoit53
       tag: CF优选 21
       type: vless
-    - id: ID_85j1qp8z
+    - id: ID_rikeoioi
       tag: CF优选 22
       type: vless
-    - id: ID_7e4qqfa1
+    - id: ID_t4tng0ew
       tag: CF优选 23
       type: vless
   script: |-
     const onSubscribe = async (proxies, subscription) => {
       return { proxies, subscription }
     }
-  requestMethod: GET
-  header:
-    request: {}
-    response: {}

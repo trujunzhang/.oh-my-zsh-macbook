@@ -5,3 +5,6 @@ mihomo/rules
 mihomo/mihomo-darwin-amd64-compatible
 mihomo/mihomo-darwin-amd64*
 
+mihomo/mihomo
+mihomo/mihomo.bak
+mihomo/pid.txt

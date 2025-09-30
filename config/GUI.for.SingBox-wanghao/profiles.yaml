@@ -1,5 +1,5 @@
-- id: ID_i6jvplki
-  name: www.myclash.top
+- id: ID_pdwy8g27
+  name: myclash.top
   log:
     disabled: false
     level: info
@@ -11,7 +11,7 @@
       external_ui: ""
       external_ui_download_url: ""
       external_ui_download_detour: outbound-direct
-      secret: ID_64ho1vbc
+      secret: 53f6fae179b937fda49a623e0ac5271976a9f60a25b1becef842940202a60da3
       default_mode: rule
       access_control_allow_origin:
         - "*"
@@ -49,6 +49,7 @@
         auto_route: true
         strict_route: true
         route_address: []
+        route_exclude_address: []
         endpoint_independent_nat: false
         stack: mixed
   outbounds:
@@ -59,8 +60,8 @@
         - id: outbound-urlte
           type: Built-in
           tag: 🎈 Auto
-        - id: ID_zv5jlc1v
-          tag: ID_zv5jlc1v
+        - id: ID_5bo80cd6
+          tag: ID_5bo80cd6
           type: Subscription
       interrupt_exist_connections: true
       url: ""
@@ -72,8 +73,8 @@
       tag: 🎈 Auto
       type: urltest
       outbounds:
-        - id: ID_zv5jlc1v
-          tag: ID_zv5jlc1v
+        - id: ID_5bo80cd6
+          tag: ID_5bo80cd6
           type: Subscription
       interrupt_exist_connections: true
       url: https://www.gstatic.com/generate_204
@@ -131,7 +132,7 @@
       exclude: ""
   route:
     rules:
-      - id: ID_hnyahzv9
+      - id: ID_i2jorf6k
         type: inbound
         payload: tun-in
         invert: false
@@ -140,7 +141,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_du5lsrm9
+      - id: ID_2cdr9qy9
         type: protocol
         payload: dns
         invert: false
@@ -149,7 +150,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_m29gq27p
+      - id: ID_mvgx1a64
         type: clash_mode
         payload: direct
         invert: false
@@ -158,7 +159,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_2guw2ihs
+      - id: ID_d7lpq78l
         type: clash_mode
         payload: global
         invert: false
@@ -167,7 +168,16 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_xgn2bm9o
+      - id: ID_gthkwao2
+        type: network
+        payload: icmp
+        invert: false
+        action: route
+        outbound: outbound-direct
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_3j4q5flu
         type: protocol
         payload: quic
         invert: false
@@ -176,7 +186,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_y1q0fbrj
+      - id: ID_kgucds5y
         type: rule_set
         payload: Category-Ads
         invert: false
@@ -185,7 +195,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_axbbkoum
+      - id: ID_vk8tvfqw
         type: rule_set
         payload: GeoSite-Private
         invert: false
@@ -194,7 +204,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_prhdn5cf
+      - id: ID_waw6t0if
         type: rule_set
         payload: GeoSite-CN
         invert: false
@@ -203,7 +213,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_4hzfvdqk
+      - id: ID_akdfmcgv
         type: rule_set
         payload: GeoIP-Private
         invert: false
@@ -212,7 +222,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_qoh2wxyp
+      - id: ID_iex3zcr1
         type: rule_set
         payload: GeoIP-CN
         invert: false
@@ -221,7 +231,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_pthbuxed
+      - id: ID_4i6q2tak
         type: rule_set
         payload: GeoLocation-!CN
         invert: false
@@ -296,90 +306,90 @@
     servers:
       - id: Local-DNS
         tag: Local-DNS
+        detour: ""
         type: https
-        detour: outbound-direct
         domain_resolver: Local-DNS-Resolver
-        hosts_path: []
-        predefined: {}
         server: 223.5.5.5
-        server_port: ""
+        server_port: "443"
         path: /dns-query
         interface: ""
         inet4_range: ""
         inet6_range: ""
+        hosts_path: []
+        predefined: {}
       - id: Local-DNS-Resolver
         tag: Local-DNS-Resolver
+        detour: ""
         type: udp
-        detour: outbound-direct
         domain_resolver: ""
-        hosts_path: []
-        predefined: {}
         server: 223.5.5.5
-        server_port: ""
+        server_port: "53"
         path: ""
         interface: ""
         inet4_range: ""
         inet6_range: ""
+        hosts_path: []
+        predefined: {}
       - id: Remote-DNS
         tag: Remote-DNS
-        type: tls
         detour: outbound-select
+        type: tls
         domain_resolver: Remote-DNS-Resolver
-        hosts_path: []
-        predefined: {}
         server: 8.8.8.8
-        server_port: ""
+        server_port: "853"
         path: ""
         interface: ""
         inet4_range: ""
         inet6_range: ""
+        hosts_path: []
+        predefined: {}
       - id: Remote-DNS-Resolver
         tag: Remote-DNS-Resolver
-        type: udp
         detour: outbound-select
+        type: udp
         domain_resolver: ""
-        hosts_path: []
-        predefined: {}
         server: 8.8.8.8
-        server_port: ""
+        server_port: "53"
         path: ""
         interface: ""
         inet4_range: ""
         inet6_range: ""
+        hosts_path: []
+        predefined: {}
     rules:
-      - id: ID_35oqgfro
+      - id: ID_hzfroe5n
         type: clash_mode
         payload: direct
         action: route
-        invert: false
         server: Local-DNS
+        invert: false
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_6clq2129
+      - id: ID_d29sqv9b
         type: clash_mode
         payload: global
         action: route
-        invert: false
         server: Remote-DNS
+        invert: false
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_pjo3olnm
+      - id: ID_pkbtrc0g
         type: rule_set
         payload: GeoSite-CN
         action: route
-        invert: false
         server: Local-DNS
+        invert: false
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_103kcadf
+      - id: ID_o2o7w25i
         type: rule_set
         payload: GeoLocation-!CN
         action: route
-        invert: false
         server: Remote-DNS
+        invert: false
         strategy: default
         disable_cache: false
         client_subnet: ""
@@ -391,7 +401,8 @@
     strategy: default
   mixin:
     priority: mixin
-    config: "{}"
+    format: json
+    config: ""
   script:
     code: |-
       const onGenerate = async (config) => {

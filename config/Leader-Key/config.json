@@ -208,6 +208,11 @@
           "key" : "v",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacCache/arm64/Applications/VLC.app"
+        },
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Elmedia Player.app"
         }
       ],
       "key" : "m",

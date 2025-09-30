@@ -93,6 +93,8 @@ function install_cocoapods {
     # asdf global cocoapods '1.14.3'
     asdf install cocoapods 'latest'
     asdf set -u cocoapods 'latest'
+    # asdf install cocoapods '1.16.0'
+    # asdf set -u cocoapods '1.16.0'
 }
 
 function install_asdf_plugins {
