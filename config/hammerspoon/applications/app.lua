@@ -15,9 +15,13 @@ end
 
 -- ApplicationLaunchKeyRemap("C", "Google Chrome")
 
+-- local terminalApp = "Wezterm.app"
+-- local terminalAppID = "com.github.wez.wezterm"
+local terminalApp = "Ghostty.app"
+local terminalAppID = "com.mitchellh.ghostty"
+
 hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", function()
-    hs.application.launchOrFocus("WezTerm")
-    -- hs.application.launchOrFocus("Ghostty")
+    hs.application.launchOrFocus(terminalApp)
 
     EscapeTab("A")
     EscapeTab("W")
@@ -29,8 +33,8 @@ hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", function()
     EscapeTab("K")
     EscapeTab("L")
 
-    local myApp = hs.application.applicationsForBundleID("com.github.wez.wezterm")[1]
-    -- local myApp = hs.application.applicationsForBundleID('com.mitchellh.ghostty')[1]
+    local myApp = hs.application.applicationsForBundleID(terminalAppID)[1]
+
     hs.eventtap.keyStroke({ "Ctrl" }, "A", myApp)
 
     hs.notify.new({ title = "Escape all tabs", informativeText = "Run it successfully" }):send()
@@ -53,13 +57,11 @@ hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "V", function()
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "W", function()
-    -- hs.application.launchOrFocus("Wezterm.app")
-    hs.application.launchOrFocus("Ghostty.app")
+    hs.application.launchOrFocus(terminalApp)
     -- hs.notify.new({ title = "WezTerm", informativeText = "run it sucessfully" }):send()
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "G", function()
-    -- hs.application.launchOrFocus("Ghostty.app")
-    hs.application.launchOrFocus("WezTerm.app")
+    hs.application.launchOrFocus(terminalApp)
     -- hs.notify.new({ title = "Ghostty", informativeText = "run it sucessfully" }):send()
 end)

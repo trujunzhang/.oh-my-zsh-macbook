@@ -75,15 +75,23 @@ local function activeWindow(interval)
     end)
 end
 
--- hs.hotkey.bind(
---     { 'Cmd', 'Alt' },
---     "R",
---     function()
---         beforePlayGame(function()
---             hs.application.launchOrFocus(GamesFolder .. "Resident Evil Village.app")
---             hs.notify.new({ title = "Resident Evil Village.app", informativeText = "run it sucessfully" }):send()
---         end)
+-- hs.hotkey.bind({ "Cmd", "Alt" }, "R", function()
+--     beforePlayGame(function()
+--         hs.application.launchOrFocus(KegworksGames .. "Titanfall2.app")
+--         hs.notify.new({ title = "Titanfall2.app", informativeText = "run it sucessfully" }):send()
 --     end)
+--
+--     activeWindow()
+-- end)
+
+hs.hotkey.bind({ "Cmd", "Alt" }, "R", function()
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. "Mafia II Definitive Edition.app")
+        hs.notify.new({ title = "Mafia II Definitive Edition.app", informativeText = "run it sucessfully" }):send()
+    end)
+
+    activeWindow()
+end)
 
 -- hs.hotkey.bind(
 --     { 'Cmd', 'Alt' },
@@ -112,15 +120,6 @@ end)
 --
 --     activeWindow()
 -- end)
-
-hs.hotkey.bind({ "Cmd", "Alt" }, "R", function()
-    beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Titanfall2.app")
-        hs.notify.new({ title = "Titanfall2.app", informativeText = "run it sucessfully" }):send()
-    end)
-
-    activeWindow()
-end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "W", function()
     hs.execute("defaults write com.apple.dock autohide -bool true && killall Dock")
