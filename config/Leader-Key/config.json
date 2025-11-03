@@ -242,16 +242,6 @@
           "value" : "/Volumes/MacGame/AppGames/Resident Evil Village.app"
         },
         {
-          "key" : "d",
-          "type" : "application",
-          "value" : "/Volumes/MacGame/AppGames/Mass Effect Andromeda.app"
-        },
-        {
-          "key" : "b",
-          "type" : "application",
-          "value" : "/Volumes/MacGame/AppGames/BioShock.Remastered/BioShock Remastered.app"
-        },
-        {
           "key" : "3",
           "type" : "application",
           "value" : "/Volumes/MacGame/AppGames/Kegworks/Assassins Creed Revelation Gold Edition repack Mr DJ.app"
@@ -270,6 +260,11 @@
           "key" : "c",
           "type" : "application",
           "value" : "/Volumes/MacGame/AppGames/Cyberpunk 2077 Ultimate.app"
+        },
+        {
+          "key" : "d",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/DeadIsland2.app"
         }
       ],
       "key" : "g",

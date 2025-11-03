@@ -85,9 +85,11 @@ end
 -- end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "R", function()
+    local app_name = "Mafia II Definitive Edition.app"
+
     beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Mafia II Definitive Edition.app")
-        hs.notify.new({ title = "Mafia II Definitive Edition.app", informativeText = "run it sucessfully" }):send()
+        hs.application.launchOrFocus(KegworksGames .. app_name)
+        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
     end)
 
     activeWindow()
@@ -104,9 +106,12 @@ end)
 --     end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "E", function()
+    -- local app_name = "Mass-Effect-Andromeda.app"
+    local app_name = "Red Dead Redemption 2.app"
+
     beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Mass-Effect-Andromeda.app")
-        hs.notify.new({ title = "Mass-Effect-Andromeda.app", informativeText = "run it sucessfully" }):send()
+        hs.application.launchOrFocus(KegworksGames .. app_name)
+        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
     end)
 
     activeWindow()
@@ -122,30 +127,52 @@ end)
 -- end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "W", function()
-    hs.execute("defaults write com.apple.dock autohide -bool true && killall Dock")
+    -- hs.execute("defaults write com.apple.dock autohide -bool true && killall Dock")
+
+    -- local app_name = "The Witcher 3 Wild Hunt GOTY.app"
+    local app_name = "Watch Dogs 2.app"
 
     beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "The Witcher 3 Wild Hunt GOTY.app")
-        hs.notify.new({ title = "The Witcher 3 Wild Hunt GOTY.app", informativeText = "run it sucessfully" }):send()
+        hs.application.launchOrFocus(KegworksGames .. app_name)
+        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
     end)
 
     activeWindow(100)
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
-    beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Crysis_2_Remastered-FLT.app")
-        hs.notify.new({ title = "Crysis_2_Remastered-FLT.app", informativeText = "run it sucessfully" }):send()
-    end)
-end)
+hs.hotkey.bind({ "Cmd", "Alt" }, "1", function()
+    local app_name = "Red Dead Redemption 2.app"
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "3", function()
     beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Crysis 3 Remasted.app")
-        hs.notify.new({ title = "Crysis 3 Remasted.app", informativeText = "run it sucessfully" }):send()
+        hs.application.launchOrFocus(KegworksGames .. app_name)
+        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
     end)
 
     activeWindow()
+end)
+
+hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
+    -- local app_name = "Crysis_2_Remastered-FLT.app"
+    local app_name = "Watch Dogs 2.app"
+
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. app_name)
+        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+    end)
+
+    activeWindow()
+end)
+
+hs.hotkey.bind({ "Cmd", "Alt" }, "3", function()
+    -- local app_name = "Crysis 3 Remasted.app"
+    local app_name = "UNCHARTED.LoT.Collection.app"
+
+    beforePlayGame(function()
+        hs.application.launchOrFocus(KegworksGames .. app_name)
+        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+    end)
+
+    activeWindow(120)
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "4", function()
@@ -195,9 +222,12 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "7", function()
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
+    -- local app_name = "Mafia Definitive Edition.app"
+    local app_name = "UNCHARTED.LoT.Collection.app"
+
     beforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. "Mafia Definitive Edition.app")
-        hs.notify.new({ title = "Mafia Definitive Edition.app", informativeText = "run it sucessfully" }):send()
+        hs.application.launchOrFocus(KegworksGames .. app_name)
+        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
     end)
 
     activeWindow(100)
