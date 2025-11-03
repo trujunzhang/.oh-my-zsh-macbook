@@ -140,5 +140,9 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
         hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
     end)
 
+    -- app: "UNCHARTED.LoT.Collection.app"
+    -- title: "GPU Change"
+    Close_Active_Window("GPU Change", 50)
+
     ActiveWindow(100)
 end)

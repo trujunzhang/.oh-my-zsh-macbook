@@ -61,7 +61,7 @@ function ListAllWindowTitles()
 end
 
 function Close_Active_Window(windowTitle, interval)
-    interval = interval or 60
+    interval = interval or 35
     hs.timer.doAfter(interval, function()
         clickOkButton(windowTitle)
     end)
