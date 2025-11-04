@@ -1,4 +1,20 @@
-function clickOkButton(windowTitle)
+local function clickActiveWindow(focusedWindow)
+    local windowFrame = focusedWindow:frame()
+
+    local x = windowFrame.x
+    local y = windowFrame.y
+    local width = windowFrame.w
+    local height = windowFrame.h
+
+    local centerX = x + width / 2
+    local centerY = y + height / 2
+
+    local position = { x = centerX, y = centerY }
+
+    hs.eventtap.leftClick(position)
+end
+
+function ClickOkButton(windowTitle, actionType)
     -- Find all windows that match the title
     -- local targetWindows = hs.window.filter
     --     .new(function(win)
@@ -20,12 +36,22 @@ function clickOkButton(windowTitle)
 
     if targetWindow then
         targetWindow:focus(true) -- 'true' brings all windows forward
+        clickActiveWindow(targetWindow)
 
         -- Wait a small moment for the focus to shift (optional, but can help with timing)
         hs.timer.doAfter(0.2, function()
-            -- Send the "return" key (Enter key)
-            hs.eventtap.keyStroke({}, "return")
-            hs.notify.new({ title = "Clicked OK button in: ", informativeText = "Start it" }):send()
+            if actionType == "ok" then
+                -- Send the "return" key (Enter key)
+                hs.eventtap.keyStroke({}, "return")
+                hs.notify.new({ title = "Clicked OK button in: " .. windowTitle, informativeText = "Start it" }):send()
+            end
+            if actionType == "cancel" then
+                -- Send the "escape" key (Escape key)
+                hs.eventtap.keyStroke({}, "escape")
+                hs.notify
+                    .new({ title = "Clicked Cancel button in: " .. windowTitle, informativeText = "Start it" })
+                    :send()
+            end
         end)
     else
         hs.alert.show("Could not find window with title: " .. windowTitle)
@@ -60,10 +86,11 @@ function ListAllWindowTitles()
     print("--- End of list ---")
 end
 
-function Close_Active_Window(windowTitle, interval)
+function Close_Active_Window(windowTitle, actionType, interval)
     interval = interval or 35
+    actionType = actionType or "ok"
     hs.timer.doAfter(interval, function()
-        clickOkButton(windowTitle)
+        ClickOkButton(windowTitle, actionType)
     end)
 end
 
@@ -71,7 +98,8 @@ end
 -- You can bind this function to a hotkey or call it when a specific event occurs
 -- For example, to bind it to `Cmd + Option + Ctrl + K`:
 -- hs.hotkey.bind({ "cmd", "alt" }, "8", function()
--- clickOkButton("Minimum Recommended Hardware Check Failure")
--- clickOkButton("Minimum Recommended")
+-- ClickOkButton("Minimum Recommended Hardware Check Failure", "ok")
+-- ClickOkButton("Minimum Recommended", "ok")
+-- ClickOkButton("Known issues with graphics driver", "cancel")
 -- ListAllWindowTitles()
 -- end)

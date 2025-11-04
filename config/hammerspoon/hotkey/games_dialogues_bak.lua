@@ -1,4 +1,4 @@
-function clickOkButton(windowTitle)
+function ClickxxxOkButton(windowTitle)
     -- Find all windows that match the title
     local targetWindows = hs.window.filter
         .new(function(win)

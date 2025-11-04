@@ -63,12 +63,17 @@ end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
     -- local app_name = "Crysis_2_Remastered-FLT.app"
-    local app_name = "Watch Dogs 2.app"
+    -- local app_name = "Watch Dogs 2.app"
+    local app_name = "METAL GEAR SOLID Δ.app"
 
     BeforePlayGame(function()
         hs.application.launchOrFocus(KegworksGames .. app_name)
         hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
     end)
+
+    -- app: "METAL GEAR SOLID Δ.app"
+    -- title: "Known issues with graphics driver"
+    Close_Active_Window("Known issues with graphics driver", "cancel", 40)
 
     ActiveWindow()
 end)
@@ -142,7 +147,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
 
     -- app: "UNCHARTED.LoT.Collection.app"
     -- title: "GPU Change"
-    Close_Active_Window("GPU Change", 50)
+    Close_Active_Window("GPU Change", "ok", 50)
 
     ActiveWindow(100)
 end)
