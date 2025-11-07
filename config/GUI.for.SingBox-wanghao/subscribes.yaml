@@ -118,3 +118,4 @@
     const onSubscribe = async (proxies, subscription) => {
       return { proxies, subscription }
     }
+  requestTimeout: 15

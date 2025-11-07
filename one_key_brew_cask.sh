@@ -76,8 +76,8 @@ brew_apps=(
     "Microsoft Edge" "microsoft-edge" 'ssd' 'backup'
 
     # Design apps
-    "Figma" "figma" 'copy' 'backup'
-    "Zeplin" "zeplin" 'ssd' 'backup'
+    "Figma" "figma" 'copy' 'no-bak'
+    "Zeplin" "zeplin" 'ssd' 'no-bak'
     "VLC" "vlc" 'ssd' 'no-bak'
     "Elmedia Player" "ElmediaPlayer" "ssd" 'no-bak'
     "Kodi" "kodi" 'ssd' 'no-bak'

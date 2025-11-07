@@ -15,14 +15,6 @@ local function clickActiveWindow(focusedWindow)
 end
 
 function ClickOkButton(windowTitle, actionType)
-    -- Find all windows that match the title
-    -- local targetWindows = hs.window.filter
-    --     .new(function(win)
-    --         print(win:title())
-    --         return win:title() == windowTitle
-    --     end)
-    --     :getWindows()
-
     local targetWindow = nil
 
     local windows = hs.window.allWindows()
@@ -36,7 +28,6 @@ function ClickOkButton(windowTitle, actionType)
 
     if targetWindow then
         targetWindow:focus(true) -- 'true' brings all windows forward
-        clickActiveWindow(targetWindow)
 
         -- Wait a small moment for the focus to shift (optional, but can help with timing)
         hs.timer.doAfter(0.2, function()
@@ -46,6 +37,8 @@ function ClickOkButton(windowTitle, actionType)
                 hs.notify.new({ title = "Clicked OK button in: " .. windowTitle, informativeText = "Start it" }):send()
             end
             if actionType == "cancel" then
+                clickActiveWindow(targetWindow)
+
                 -- Send the "escape" key (Escape key)
                 hs.eventtap.keyStroke({}, "escape")
                 hs.notify

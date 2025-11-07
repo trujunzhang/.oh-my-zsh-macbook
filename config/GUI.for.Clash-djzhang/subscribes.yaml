@@ -111,3 +111,4 @@
   header:
     request: {}
     response: {}
+  requestTimeout: 15

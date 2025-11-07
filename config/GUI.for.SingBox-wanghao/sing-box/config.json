@@ -787,13 +787,15 @@
       },
       {
         "action": "reject",
-        "protocol": "quic"
+        "protocol": "quic",
+        "method": ""
       },
       {
         "action": "reject",
         "rule_set": [
           "Category-Ads"
-        ]
+        ],
+        "method": ""
       },
       {
         "action": "route",

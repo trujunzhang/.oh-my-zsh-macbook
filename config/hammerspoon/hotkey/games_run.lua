@@ -147,7 +147,8 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
 
     -- app: "UNCHARTED.LoT.Collection.app"
     -- title: "GPU Change"
-    Close_Active_Window("GPU Change", "ok", 50)
+    -- Close_Active_Window("GPU Change", "ok", 70)
+    Close_Active_Window("GPU Change", "cancel", 90)
 
-    ActiveWindow(100)
+    ActiveWindow(120)
 end)
