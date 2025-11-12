@@ -1,19 +1,3 @@
-local function clickActiveWindow(focusedWindow)
-    local windowFrame = focusedWindow:frame()
-
-    local x = windowFrame.x
-    local y = windowFrame.y
-    local width = windowFrame.w
-    local height = windowFrame.h
-
-    local centerX = x + width / 2
-    local centerY = y + height / 2
-
-    local position = { x = centerX, y = centerY }
-
-    hs.eventtap.leftClick(position)
-end
-
 function ClickOkButton(windowTitle, actionType)
     local targetWindow = nil
 
@@ -37,7 +21,7 @@ function ClickOkButton(windowTitle, actionType)
                 hs.notify.new({ title = "Clicked OK button in: " .. windowTitle, informativeText = "Start it" }):send()
             end
             if actionType == "cancel" then
-                clickActiveWindow(targetWindow)
+                ClickActiveWindow(targetWindow)
 
                 -- Send the "escape" key (Escape key)
                 hs.eventtap.keyStroke({}, "escape")
@@ -90,9 +74,9 @@ end
 -- Example usage:
 -- You can bind this function to a hotkey or call it when a specific event occurs
 -- For example, to bind it to `Cmd + Option + Ctrl + K`:
--- hs.hotkey.bind({ "cmd", "alt" }, "8", function()
--- ClickOkButton("Minimum Recommended Hardware Check Failure", "ok")
--- ClickOkButton("Minimum Recommended", "ok")
--- ClickOkButton("Known issues with graphics driver", "cancel")
--- ListAllWindowTitles()
--- end)
+hs.hotkey.bind({ "cmd", "alt" }, "8", function()
+    -- ClickOkButton("Minimum Recommended Hardware Check Failure", "ok")
+    -- ClickOkButton("Minimum Recommended", "ok")
+    -- ClickOkButton("Known issues with graphics driver", "cancel")
+    ListAllWindowTitles()
+end)

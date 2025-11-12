@@ -3,7 +3,7 @@ local mobileTitle = "Android Emulator - genymotion:5554"
 local appCMD = "android_new_ieatta_genymotion"
 
 hs.hotkey.bind(
--- { 'Cmd', 'Shift' },
+    -- { 'Cmd', 'Shift' },
     { "Cmd", "shift", "Ctrl" },
     "Y",
     function()
@@ -14,14 +14,14 @@ hs.hotkey.bind(
             mobileApp:kill()
         end
 
-        local neovideApp = hs.application.applicationsForBundleID('com.neovide.neovide')[1]
+        local neovideApp = hs.application.applicationsForBundleID("com.neovide.neovide")[1]
         if neovideApp then
             neovideApp:kill()
         end
 
-        hs.application.launchOrFocus("WezTerm")
+        hs.application.launchOrFocus(TerminalApp)
 
-        local myApp = hs.application.applicationsForBundleID('com.github.wez.wezterm')[1]
+        local myApp = hs.application.applicationsForBundleID("com.github.wez.wezterm")[1]
 
         -- hs.timer.doAfter(0.3, function()
         hs.eventtap.keyStroke({ "Ctrl" }, "A", myApp)
@@ -56,7 +56,8 @@ hs.hotkey.bind(
         -- end)
 
         hs.notify.new({ title = "run android", informativeText = "typing cmd on the WezTerm successfully" }):send()
-    end)
+    end
+)
 
 hs.hotkey.bind(
     -- { 'Cmd', 'Alt' },
@@ -70,4 +71,5 @@ hs.hotkey.bind(
         end
 
         hs.notify.new({ title = "kill android", informativeText = "close it successfully" }):send()
-    end)
+    end
+)

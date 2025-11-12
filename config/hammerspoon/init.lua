@@ -1,4 +1,10 @@
 print("=================== load djzhang's config===============================")
+
+-- TerminalApp = "Wezterm.app"
+-- TerminalAppID = "com.github.wez.wezterm"
+TerminalApp = "Ghostty.app"
+TerminalAppID = "com.mitchellh.ghostty"
+
 -- require "reload.reload"
 require("utils.tools")
 require("hotkey.hotkey")

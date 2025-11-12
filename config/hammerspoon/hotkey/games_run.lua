@@ -30,9 +30,9 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "E", function()
 
     -- app: "Red Dead Redemption 2.app"
     -- title: "Minimum Recommended Hardware Check Failure"
-    Close_Active_Window("Minimum Recommended")
+    Close_Active_Window("Minimum Recommended", "ok", 60)
 
-    ActiveWindow()
+    ActiveWindow(80)
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "W", function()
@@ -64,7 +64,8 @@ end)
 hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
     -- local app_name = "Crysis_2_Remastered-FLT.app"
     -- local app_name = "Watch Dogs 2.app"
-    local app_name = "METAL GEAR SOLID Δ.app"
+    -- local app_name = "METAL GEAR SOLID Δ.app"
+    local app_name = "Ghost of Tsushima.app"
 
     BeforePlayGame(function()
         hs.application.launchOrFocus(KegworksGames .. app_name)
@@ -73,9 +74,19 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
 
     -- app: "METAL GEAR SOLID Δ.app"
     -- title: "Known issues with graphics driver"
-    Close_Active_Window("Known issues with graphics driver", "cancel", 40)
+    -- Close_Active_Window("Known issues with graphics driver", "cancel", 70)
 
-    ActiveWindow()
+    -- app: "Ghost of Tsushima.app"
+    -- title: "host of Tsushima DIRECTOR'S CUT"
+    Close_Active_Window("host of Tsushima", "ok", 25)
+
+    -- app: "Ghost of Tsushima.app"
+    hs.timer.doAfter(30, function()
+        hs.eventtap.keyStroke({}, "return")
+        hs.notify.new({ title = "launch " .. app_name, informativeText = "run it sucessfully" }):send()
+    end)
+
+    ActiveWindow(60)
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "3", function()
@@ -147,8 +158,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
 
     -- app: "UNCHARTED.LoT.Collection.app"
     -- title: "GPU Change"
-    -- Close_Active_Window("GPU Change", "ok", 70)
-    Close_Active_Window("GPU Change", "cancel", 90)
+    Close_Active_Window("GPU Change", "cancel", 60)
 
-    ActiveWindow(120)
+    ActiveWindow(80)
 end)

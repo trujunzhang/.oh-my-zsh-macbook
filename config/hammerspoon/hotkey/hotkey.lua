@@ -1,5 +1,5 @@
 -- local hyper = { 'ctrl', 'cmd' }
-local hyper = { 'alt', 'cmd' }
+local hyper = { "alt", "cmd" }
 
 -- hs.hotkey.bind({ 'alt', "cmd" }, "G", hs.caffeinate.systemSleep)
 
@@ -22,50 +22,33 @@ end
 --         hs.notify.new({ title = "connect PS5 bluetooth device", informativeText = "connect it sucessfully" }):send()
 --     end)
 
-hs.hotkey.bind(
-    { 'Cmd', 'Alt' },
-    "A",
-    function()
-        local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
-        hs.execute(shell_command)
-        hs.notify.new({ title = "toggle Aerospace", informativeText = "toggle it sucessfully" }):send()
+hs.hotkey.bind({ "Cmd", "Alt" }, "A", function()
+    local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable toggle"
+    hs.execute(shell_command)
+    hs.notify.new({ title = "toggle Aerospace", informativeText = "toggle it sucessfully" }):send()
+end)
+
+hs.hotkey.bind({ "cmd" }, "N", function()
+    hs.application.launchOrFocus("Brave Browser Nightly")
+
+    hs.timer.doAfter(0.3, function()
+        local myApp = hs.application.applicationsForBundleID("com.brave.Browser.nightly")[1]
+        local focusedAppWindow = myApp:focusedWindow()
+        ClickActiveWindow(focusedAppWindow, 0, 55)
+        hs.eventtap.keyStroke({ "" }, "space", myApp)
     end)
 
-
-hs.hotkey.bind(
-    { 'cmd' },
-    "N",
-    function()
-        hs.application.launchOrFocus("Brave Browser Nightly")
-
-        hs.timer.doAfter(0.3, function()
-            local myApp = hs.application.applicationsForBundleID('com.brave.Browser.nightly')[1]
-            hs.eventtap.leftClick(hs.mouse.getAbsolutePosition())
-            hs.eventtap.keyStroke({ "" }, "space", myApp)
-        end)
-
-        hs.alert.show(string.format("App path:        %s\nApp name:      %s\nIM source id:  %s",
+    hs.alert.show(
+        string.format(
+            "App path:        %s\nApp name:      %s\nIM source id:  %s",
             hs.window.focusedWindow():application():path(),
             hs.window.focusedWindow():application():name(),
-            hs.keycodes.currentSourceID()))
-    end)
-
-local function directoryLaunchKeyRemap(mods, key, dir)
-    local mods = mods or {}
-    hs.hotkey.bind({ "space" }, "f", function()
-        -- hs.hotkey.bind(mods, key, function()
-        local shell_command = "open " .. dir
-        hs.execute(shell_command)
-
-        hs.alert.show(string.format("App path:        %s\nApp name:      %s\nIM source id:  %s",
-            hs.window.focusedWindow():application():path(),
-            hs.window.focusedWindow():application():name(),
-            hs.keycodes.currentSourceID()))
-    end)
-end
+            hs.keycodes.currentSourceID()
+        )
+    )
+end)
 
 -- directoryLaunchKeyRemap({ "space" }, "F", os.getenv("HOME") .. "/Documents/Organizations")
 -- directoryLaunchKeyRemap({ "space" }, "F", os.getenv("HOME") .. "/Documents/Organizations")
-
 
 -- Minimize the active window when holding space and pressing 'm'
