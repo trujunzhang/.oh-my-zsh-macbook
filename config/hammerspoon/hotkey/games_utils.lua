@@ -66,3 +66,11 @@ function ActiveWindow(interval)
         )
     end)
 end
+
+function ClickPlayButton(app_name, interval)
+    interval = interval or 35
+    hs.timer.doAfter(interval, function()
+        hs.eventtap.keyStroke({}, "return")
+        hs.notify.new({ title = "launch " .. app_name, informativeText = "run it sucessfully" }):send()
+    end)
+end

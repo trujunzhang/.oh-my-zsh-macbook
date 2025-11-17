@@ -50,13 +50,20 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "W", function()
     ActiveWindow()
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "1", function()
-    local app_name = "Red Dead Redemption 2.app"
+hs.hotkey.bind({ "Cmd", "Alt" }, "3", function()
+    local app_name = "Horizon Zero Dawn Remastered.app"
 
     BeforePlayGame(function()
         hs.application.launchOrFocus(KegworksGames .. app_name)
         hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
     end)
+
+    -- app: "Horizon Zero Dawn Remastered.app"
+    -- title: "Horizon Zero Dawn™ Remastered"
+    Close_Active_Window("Horizon Zero Dawn", "ok", 20)
+
+    -- app: "Horizon Zero Dawn Remastered.app"
+    ClickPlayButton(app_name, 25)
 
     ActiveWindow()
 end)
@@ -78,20 +85,16 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
 
     -- app: "Ghost of Tsushima.app"
     -- title: "host of Tsushima DIRECTOR'S CUT"
-    Close_Active_Window("host of Tsushima", "ok", 25)
+    Close_Active_Window("host of Tsushima", "ok", 35)
 
     -- app: "Ghost of Tsushima.app"
-    hs.timer.doAfter(30, function()
-        hs.eventtap.keyStroke({}, "return")
-        hs.notify.new({ title = "launch " .. app_name, informativeText = "run it sucessfully" }):send()
-    end)
+    ClickPlayButton(app_name, 40)
 
     ActiveWindow(60)
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "3", function()
-    -- local app_name = "Crysis 3 Remasted.app"
-    local app_name = "UNCHARTED.LoT.Collection.app"
+hs.hotkey.bind({ "Cmd", "Alt" }, "1", function()
+    local app_name = "Crysis 3 Remasted.app"
 
     BeforePlayGame(function()
         hs.application.launchOrFocus(KegworksGames .. app_name)
@@ -158,7 +161,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
 
     -- app: "UNCHARTED.LoT.Collection.app"
     -- title: "GPU Change"
-    Close_Active_Window("GPU Change", "cancel", 60)
+    Close_Active_Window("GPU Change", "cancel", 75)
 
-    ActiveWindow(80)
+    ActiveWindow(90)
 end)
