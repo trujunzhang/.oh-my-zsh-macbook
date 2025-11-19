@@ -63,11 +63,18 @@ function ListAllWindowTitles()
     print("--- End of list ---")
 end
 
-function Close_Active_Window(windowTitle, actionType, interval)
+function Close_Active_Window(windowTitle, actionType, interval, needClickPlayButton)
     interval = interval or 35
     actionType = actionType or "ok"
+    needClickPlayButton = needClickPlayButton or "false"
     hs.timer.doAfter(interval, function()
         ClickOkButton(windowTitle, actionType)
+        if needClickPlayButton == "true" then
+            hs.timer.doAfter(5, function()
+                hs.eventtap.keyStroke({}, "return")
+                hs.notify.new({ title = "Click the 'play button'", informativeText = "run it sucessfully" }):send()
+            end)
+        end
     end)
 end
 

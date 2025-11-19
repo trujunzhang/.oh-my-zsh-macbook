@@ -5,12 +5,17 @@ print("=================== load djzhang's config==============================="
 TerminalApp = "Ghostty.app"
 TerminalAppID = "com.mitchellh.ghostty"
 
+-- GamesFolder = "/Volumes/MacGame/AppGames/Kegworks"
+GamesFolder = "/Volumes/MacGame/AppGames/"
+KegworksGames = GamesFolder .. "Kegworks/"
+
 -- require "reload.reload"
 require("utils.tools")
 require("hotkey.hotkey")
 require("hotkey.games_dialogues")
 require("hotkey.games_utils")
-require("hotkey.games_run")
+require("hotkey.games_run_alpha")
+require("hotkey.games_run_numbers")
 require("hotkey.games_kill")
 require("hotkey.system")
 require("applications.app")

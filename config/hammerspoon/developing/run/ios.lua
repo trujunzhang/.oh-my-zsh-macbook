@@ -14,7 +14,8 @@ hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "I", function()
     end
 
     hs.application.launchOrFocus(TerminalApp)
-    local myApp = hs.application.applicationsForBundleID("com.github.wez.wezterm")[1]
+
+    local myApp = hs.application.applicationsForBundleID(TerminalAppID)[1]
 
     -- Tab 1
     -- hs.timer.doAfter(0.3, function()
@@ -51,7 +52,7 @@ hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "I", function()
     -- hs.application.launchOrFocus("Neovide")
     -- end)
 
-    hs.notify.new({ title = "run ios", informativeText = "typing cmd on the WezTerm successfully" }):send()
+    hs.notify.new({ title = "run ios", informativeText = "typing cmd on the terminal successfully" }):send()
 end)
 
 hs.hotkey.bind(

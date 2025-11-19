@@ -47,8 +47,3 @@ hs.hotkey.bind({ "cmd" }, "N", function()
         )
     )
 end)
-
--- directoryLaunchKeyRemap({ "space" }, "F", os.getenv("HOME") .. "/Documents/Organizations")
--- directoryLaunchKeyRemap({ "space" }, "F", os.getenv("HOME") .. "/Documents/Organizations")
-
--- Minimize the active window when holding space and pressing 'm'

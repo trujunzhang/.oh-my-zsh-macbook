@@ -17,8 +17,11 @@ set -g -x ANDROID_USER_HOME "$HOME/Library/Android/sdk"
 set -g -x REACT_NATIVE_DOWNLOADS_DIR "$HOME/.local/RN_DOWNLOADS"
 set -g -x ACT_BINARY "$HOME/.local/bin/act"
 
-# set -g -x SCCACHE_CXX=sccache
-# set -g -x SCCACHE_CC=sccache
+# Playing games on the crossover platform
+set -g -x ROSETTA_ADVERTISE_AVX 1
+
+# set -g -x SCCACHE_CXX sccache
+# set -g -x SCCACHE_CC sccache
 
 # set -g -x NDK_CCACHE ccache
 # set -g -x NDK_CCACHE sccache

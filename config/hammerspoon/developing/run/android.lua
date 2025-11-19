@@ -21,7 +21,7 @@ hs.hotkey.bind(
 
         hs.application.launchOrFocus(TerminalApp)
 
-        local myApp = hs.application.applicationsForBundleID("com.github.wez.wezterm")[1]
+        local myApp = hs.application.applicationsForBundleID(TerminalAppID)[1]
 
         -- hs.timer.doAfter(0.3, function()
         hs.eventtap.keyStroke({ "Ctrl" }, "A", myApp)
@@ -55,7 +55,7 @@ hs.hotkey.bind(
         -- hs.application.launchOrFocus("Neovide")
         -- end)
 
-        hs.notify.new({ title = "run android", informativeText = "typing cmd on the WezTerm successfully" }):send()
+        hs.notify.new({ title = "run android", informativeText = "typing cmd on the terminal successfully" }):send()
     end
 )
 
