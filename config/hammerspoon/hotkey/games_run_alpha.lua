@@ -3,15 +3,18 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
     local app_name = "UNCHARTED.LoT.Collection.app"
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     -- app: "UNCHARTED.LoT.Collection.app"
     -- title: "GPU Change"
-    Close_Active_Window("GPU Change", "cancel", 75)
+    Close_Active_Window("GPU Change", "cancel", 65)
 
-    ActiveWindow(90)
+    -- app: "UNCHARTED.LoT.Collection.app(The lost legecy)"
+    -- title: "GPU Change"
+    Close_Active_Window("GPU Change", "cancel", 105)
+
+    ActiveWindow(115)
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "E", function()
@@ -20,8 +23,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "E", function()
     local app_name = "Red Dead Redemption 2.app"
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     -- app: "Red Dead Redemption 2.app"
@@ -36,8 +38,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "R", function()
     local app_name = "Mafia II Definitive Edition.app"
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     ActiveWindow()
@@ -50,8 +51,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "W", function()
     local app_name = "Watch Dogs 2.app"
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     -- ActiveWindow(100)

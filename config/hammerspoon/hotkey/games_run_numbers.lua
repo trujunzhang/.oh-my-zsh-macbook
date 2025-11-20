@@ -6,8 +6,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "1", function()
     local app_name = "Crysis 3 Remasted.app"
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     ActiveWindow(120)
@@ -20,8 +19,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
     local app_name = "Ghost of Tsushima.app"
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     -- app: "METAL GEAR SOLID Δ.app"
@@ -40,8 +38,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "3", function()
     local app_name = "Just Cause 4.app"
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     -- app: "Horizon Zero Dawn Remastered.app"
@@ -55,8 +52,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "4", function()
     local app_name = "Assassins-Creed-IV-Black Flag.app"
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     ActiveWindow()
@@ -66,8 +62,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "5", function()
     local app_name = "Assassins-creed-rogue.app"
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     ActiveWindow()
@@ -82,8 +77,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "6", function()
     -- TurnOffAerospace()
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     ActiveWindow()
@@ -97,8 +91,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "7", function()
     TurnOffAerospace()
 
     BeforePlayGame(function()
-        hs.application.launchOrFocus(KegworksGames .. app_name)
-        hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+        Check_And_Run_KegworksApp(app_name)
     end)
 
     ActiveWindow()

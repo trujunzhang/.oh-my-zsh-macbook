@@ -1,5 +1,7 @@
 hs.hotkey.bind({ "Cmd", "Alt" }, "x", function()
-    -- turn off aero
+    hs.execute("pkill -f wine")
+
+    -- close all games process
     hs.execute("killall u4.exe")
     hs.execute("killall wine64-preloader")
     hs.execute("killall h1_sp64_ship.exe")
@@ -7,7 +9,9 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "x", function()
     hs.execute("killall HorizonZeroDawnRemastered.exe")
     hs.execute("killall GhostOfTsushima.exe")
 
+    hs.execute("killall JustCause4.exe")
 
+    -- hs.execute("killall ")
     -- hs.execute("killall ")
     -- hs.execute("killall ")
     -- hs.execute("killall ")
