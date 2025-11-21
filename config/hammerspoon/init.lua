@@ -9,6 +9,8 @@ TerminalAppID = "com.mitchellh.ghostty"
 GamesFolder = "/Volumes/MacGame/AppGames/"
 KegworksGames = GamesFolder .. "Kegworks/"
 
+GameHotkeyMods = { "Cmd", "Alt", "shift", "ctrl" }
+
 -- require "reload.reload"
 require("utils.tools")
 require("utils.string_utils")

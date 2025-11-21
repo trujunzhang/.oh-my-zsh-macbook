@@ -1,5 +1,4 @@
-hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
-    -- local app_name = "Mafia Definitive Edition"
+hs.hotkey.bind(GameHotkeyMods, "U", function()
     local app_name = "UNCHARTED.LoT.Collection"
 
     BeforePlayGame(function()
@@ -17,7 +16,23 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "C", function()
     ActiveWindow(115)
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "E", function()
+hs.hotkey.bind(GameHotkeyMods, "R", function()
+    -- local app_name = "Bioshock Infinite"
+    -- local app_name = "Mass-Effect-Andromeda"
+    local app_name = "Red Dead Redemption 2"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    -- app: "Red Dead Redemption 2"
+    -- title: "Minimum Recommended Hardware Check Failure"
+    Close_Active_Window("Minimum Recommended", "ok", 60)
+
+    ActiveWindow(70)
+end)
+
+hs.hotkey.bind(GameHotkeyMods, "L", function()
     -- local app_name = "Bioshock Infinite"
     -- local app_name = "Mass-Effect-Andromeda"
     -- local app_name = "Red Dead Redemption 2"
@@ -27,10 +42,6 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "E", function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    -- app: "Red Dead Redemption 2"
-    -- title: "Minimum Recommended Hardware Check Failure"
-    -- Close_Active_Window("Minimum Recommended", "ok", 60)
-
     -- app: "The Last of Us Part II"
     -- title: "The Last of Us™ Part II"
     Close_Active_Window("The Last of Us", "ok", 20, "true")
@@ -38,7 +49,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "E", function()
     ActiveWindow(50)
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "R", function()
+hs.hotkey.bind(GameHotkeyMods, "M", function()
     -- local app_name = "Titanfall2"
     local app_name = "Mafia II Definitive Edition"
 
@@ -49,12 +60,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "R", function()
     ActiveWindow()
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "W", function()
-    -- app: "The Witcher 3 Wild Hunt GOTY"
-    HideLeftDock()
-
-    -- local app_name = "The Witcher 3 Wild Hunt GOTY"
-    -- local app_name = "Watch Dogs 2"
+hs.hotkey.bind(GameHotkeyMods, "S", function()
     local app_name = "Marvel Spider-Man Remastered"
 
     BeforePlayGame(function()
@@ -68,6 +74,19 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "W", function()
     -- app: "Marvel Spider-Man Remastered"
     -- title: "Marvel's Spider-Man Remastered"
     Close_Active_Window("Spider-Man", "ok", 35)
+
+    ActiveWindow(60)
+end)
+
+hs.hotkey.bind(GameHotkeyMods, "W", function()
+    -- app: "The Witcher 3 Wild Hunt GOTY"
+    HideLeftDock()
+
+    local app_name = "The Witcher 3 Wild Hunt GOTY"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
 
     ActiveWindow(60)
 end)

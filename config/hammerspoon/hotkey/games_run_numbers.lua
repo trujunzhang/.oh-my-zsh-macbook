@@ -2,7 +2,7 @@
 -- "C:\toxicgames.in\Silent-Hill-2\SILENT HILL 2\SHProto.exe" -dx11
 -- "C:\toxicgames.in\Silent-Hill-2\SILENT HILL 2\SHProto.exe" -dx11
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "1", function()
+hs.hotkey.bind(GameHotkeyMods, "1", function()
     local app_name = "Crysis 3 Remasted"
 
     BeforePlayGame(function()
@@ -12,7 +12,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "1", function()
     ActiveWindow(120)
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
+hs.hotkey.bind(GameHotkeyMods, "2", function()
     -- local app_name = "Crysis_2_Remastered-FLT"
     -- local app_name = "Watch Dogs 2"
     -- local app_name = "METAL GEAR SOLID Δ"
@@ -33,7 +33,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "2", function()
     ActiveWindow(60)
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "3", function()
+hs.hotkey.bind(GameHotkeyMods, "3", function()
     -- local app_name = "Horizon Zero Dawn Remastered"
     local app_name = "Just Cause 4"
 
@@ -48,7 +48,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "3", function()
     ActiveWindow()
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "4", function()
+hs.hotkey.bind(GameHotkeyMods, "4", function()
     local app_name = "Assassins-Creed-IV-Black Flag"
 
     BeforePlayGame(function()
@@ -58,7 +58,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "4", function()
     ActiveWindow()
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "5", function()
+hs.hotkey.bind(GameHotkeyMods, "5", function()
     local app_name = "Assassins-creed-rogue"
 
     BeforePlayGame(function()
@@ -68,7 +68,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "5", function()
     ActiveWindow()
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "6", function()
+hs.hotkey.bind(GameHotkeyMods, "6", function()
     -- local app_name = "Batman Arkham Knight"
     local app_name = "Assassins.Creed.Origins-CPY"
 
@@ -83,7 +83,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "6", function()
     ActiveWindow()
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt" }, "7", function()
+hs.hotkey.bind(GameHotkeyMods, "7", function()
     local app_name = "Need_for_Speed_Payback"
 
     -- turn off aerospace
