@@ -3,9 +3,14 @@ function ClickOkButton(windowTitle, actionType)
 
     local windows = hs.window.allWindows()
     for _, win in ipairs(windows) do
-        -- print(win:title())
-        if string.find(win:title(), windowTitle) then
-            print(win:title())
+        hs.printf("%s = %s", "list title:", win:title())
+        -- if string.find(win:title(), windowTitle) then
+        --     hs.printf("%s = %s", "find title:", win:title())
+        --     targetWindow = win
+        -- end
+
+        if CheckContainSubString(win:title(), windowTitle) then
+            hs.printf("%s = %s", "find title:", win:title())
             targetWindow = win
         end
     end

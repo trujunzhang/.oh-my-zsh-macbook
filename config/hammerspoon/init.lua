@@ -11,6 +11,7 @@ KegworksGames = GamesFolder .. "Kegworks/"
 
 -- require "reload.reload"
 require("utils.tools")
+require("utils.string_utils")
 require("hotkey.hotkey")
 require("hotkey.games_dialogues")
 require("hotkey.games_utils")
