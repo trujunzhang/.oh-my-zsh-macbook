@@ -1,11 +1,6 @@
 {
   "actions" : [
     {
-      "key" : "t",
-      "type" : "application",
-      "value" : "/Applications/Wezterm.app"
-    },
-    {
       "actions" : [
         {
           "key" : "s",
@@ -56,6 +51,11 @@
           "key" : "f",
           "type" : "application",
           "value" : "/Applications/Folx.app"
+        },
+        {
+          "key" : "a",
+          "type" : "application",
+          "value" : "/System/Applications/Utilities/Activity Monitor.app"
         }
       ],
       "key" : "a",
