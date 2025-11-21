@@ -90,3 +90,133 @@ function Play_The_Witcher_3_Wild_Hunt()
 
     ActiveWindow(60)
 end
+
+function Play_Crysis_3_Remasted()
+    local app_name = "Crysis 3 Remasted"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(120)
+end
+
+function Play_Crysis_2_Remastered()
+    local app_name = "Crysis_2_Remastered-FLT"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(60)
+end
+
+function Play_Metal_Gear_Solid()
+    local app_name = "METAL GEAR SOLID Δ"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    -- app: "METAL GEAR SOLID Δ"
+    -- title: "Known issues with graphics driver"
+    Close_Active_Window("Known issues with graphics driver", "cancel", 70)
+
+    ActiveWindow(60)
+end
+
+function Play_Ghost_of_Tsushima()
+    local app_name = "Ghost of Tsushima.app"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    -- app: "Ghost of Tsushima"
+    -- title: "host of Tsushima DIRECTOR'S CUT"
+    Close_Active_Window("host of Tsushima", "ok", 35, "true")
+
+    ActiveWindow(60)
+end
+
+function Play_Horizon_Zero_Dawn_Remastered()
+    local app_name = "Horizon Zero Dawn Remastered"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    -- app: "Horizon Zero Dawn Remastered"
+    -- title: "Horizon Zero Dawn™ Remastered",
+    Close_Active_Window("Horizon Zero Dawn", "ok", 35, "true")
+
+    ActiveWindow()
+end
+
+function Play_Just_Cause_4()
+    local app_name = "Just Cause 4"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end
+
+function Play_Assassins_Creed_4_Black_Flag()
+    local app_name = "Assassins-Creed-IV-Black Flag"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end
+
+function Play_Assassins_Creed_Rogue()
+    local app_name = "Assassins-creed-rogue"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end
+
+function Play_Batman_Arkham_Knight()
+    local app_name = "Batman Arkham Knight"
+
+    -- turn off aerospace
+    -- app: "Batman Arkham Knight"
+    TurnOffAerospace()
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end
+
+function Play_Assassins_Creed_Origins()
+    local app_name = "Assassins.Creed.Origins-CPY"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end
+
+function Play_Need_for_Speed_Payback()
+    local app_name = "Need_for_Speed_Payback"
+
+    -- turn off aerospace
+    -- app: "Need_for_Speed_Payback"
+    TurnOffAerospace()
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end

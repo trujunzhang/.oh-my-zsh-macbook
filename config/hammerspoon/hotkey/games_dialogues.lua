@@ -4,10 +4,6 @@ function ClickOkButton(windowTitle, actionType)
     local windows = hs.window.allWindows()
     for _, win in ipairs(windows) do
         hs.printf("%s = %s", "list title:", win:title())
-        -- if string.find(win:title(), windowTitle) then
-        --     hs.printf("%s = %s", "find title:", win:title())
-        --     targetWindow = win
-        -- end
 
         if CheckContainSubString(win:title(), windowTitle) then
             hs.printf("%s = %s", "find title:", win:title())
@@ -86,7 +82,7 @@ end
 -- Example usage:
 -- You can bind this function to a hotkey or call it when a specific event occurs
 -- For example, to bind it to `Cmd + Option + Ctrl + K`:
-hs.hotkey.bind({ "cmd", "alt" }, "8", function()
+hs.hotkey.bind(GameHotkeyMods, "8", function()
     -- ClickOkButton("Minimum Recommended Hardware Check Failure", "ok")
     -- ClickOkButton("Minimum Recommended", "ok")
     -- ClickOkButton("Known issues with graphics driver", "cancel")
