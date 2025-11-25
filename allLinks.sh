@@ -4,6 +4,7 @@
 source ./bash/files-functions.sh
 
 source ./bash/shellUtils.sh
+source ./bash/documents_fix.sh
 
 CURRENT=$(pwd)
 # Folders in Home.
@@ -547,3 +548,4 @@ if [[ $(uname -m) == 'arm64' ]]; then
     # info M2
     link_mac_user
 fi
+link_games_save_location_path

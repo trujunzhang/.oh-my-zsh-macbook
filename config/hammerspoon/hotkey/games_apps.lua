@@ -1,3 +1,22 @@
+-- export D3DM_ENABLE_METALFX=1
+-- export ROSETTA_ADVERTISE_AVX=1
+-- export D3DM_ENABLE_METALFX=1 ROSETTA_ADVERTISE_AVX=1
+-- export D3DM_ENABLE_METALFX=1 ROSETTA_ADVERTISE_AVX=1
+
+function Play_Call_of_Duty_Modern_Warfare_Remastered()
+    local app_name = "Call of Duty Modern Warfare Remastered"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    -- app: "Call of Duty Modern Warfare Remastered"
+    -- title: "Run In Safe Mode"
+    Close_Active_Window("Run In Safe Mode", "ok", 35)
+
+    ActiveWindow(45)
+end
+
 function Play_UNCHARTED_LoT_Collection()
     local app_name = "UNCHARTED.LoT.Collection"
 
@@ -44,7 +63,8 @@ function Play_The_Last_of_Us_Part_II()
 
     -- app: "The Last of Us Part II"
     -- title: "The Last of Us™ Part II"
-    Close_Active_Window("The Last of Us", "ok", 30, "true")
+    Close_Active_Window("The Last of Us", "ok", 35, "false")
+    Close_Active_Window("The Last of Us", "ok", 40, "true")
 
     ActiveWindow(50)
 end
@@ -134,7 +154,8 @@ function Play_Ghost_of_Tsushima()
 
     -- app: "Ghost of Tsushima"
     -- title: "host of Tsushima DIRECTOR'S CUT"
-    Close_Active_Window("host of Tsushima", "ok", 35, "true")
+    Close_Active_Window("host of Tsushima", "ok", 35, "false")
+    Close_Active_Window("host of Tsushima", "ok", 40, "true")
 
     ActiveWindow(60)
 end
@@ -198,7 +219,19 @@ function Play_Batman_Arkham_Knight()
 end
 
 function Play_Assassins_Creed_Origins()
-    local app_name = "Assassins.Creed.Origins-CPY"
+    local app_name = "Assassins Creed Origins"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end
+
+function Play_Assassins_Creed_Mirage()
+    -- export D3DM_ENABLE_METALFX=1
+    -- export D3DM_ENABLE_METALFX=1
+    local app_name = "Assassins Creed Mirage"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)

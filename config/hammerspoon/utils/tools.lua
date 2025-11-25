@@ -37,24 +37,37 @@ function DoesDirectoryExist(path)
     return attr and attr.mode == "directory"
 end
 
+local function check_app_existed(prefix, appName)
+    local app_name_prefix = prefix .. "_" .. appName
+    local dash_name_prefix = prefix .. "_" .. appName:gsub(" ", "_")
+
+    if DoesDirectoryExist(KegworksGames .. app_name_prefix) then
+        return app_name_prefix
+    elseif DoesDirectoryExist(KegworksGames .. dash_name_prefix) then
+        return dash_name_prefix
+    end
+
+    return appName
+end
+
 function Check_And_Run_KegworksApp(appName)
     appName = appName:gsub(".app", "")
     appName = appName .. ".app"
 
-    local app_name_prefix = "10_" .. appName
-    local new_name = appName:gsub(" ", "_")
-    local new_name_prefix = "10_" .. new_name
+    local currentName = appName
+    local tmp1 = check_app_existed("10", appName)
+    local tmp2 = check_app_existed("whiskey", appName)
 
-    hs.printf("%s = %s", "new_name_prefix:", new_name_prefix)
-
-    if DoesDirectoryExist(KegworksGames .. app_name_prefix) then
-        appName = app_name_prefix
-    elseif DoesDirectoryExist(KegworksGames .. new_name) then
-        appName = new_name
-    elseif DoesDirectoryExist(KegworksGames .. new_name_prefix) then
-        appName = new_name_prefix
+    if DoesDirectoryExist(KegworksGames .. appName) then
+        currentName = appName
+    elseif DoesDirectoryExist(KegworksGames .. tmp1) then
+        currentName = tmp1
+    elseif DoesDirectoryExist(KegworksGames .. tmp2) then
+        currentName = tmp2
     end
 
-    hs.application.launchOrFocus(KegworksGames .. appName)
-    hs.notify.new({ title = appName, informativeText = "run it sucessfully" }):send()
+    hs.printf("%s = %s", "new_name_prefix:", currentName)
+
+    hs.application.launchOrFocus(KegworksGames .. currentName)
+    hs.notify.new({ title = currentName, informativeText = "run it sucessfully" }):send()
 end

@@ -140,6 +140,11 @@ brew_apps_x86xxx=(
 brew_apps_arm=(
     "micromamba" "micromamba"
 
+    # https://github.com/emcrisostomo/fswatch
+    # "fswatch" "fswatch"
+
+    "watchman" "watchman"
+
     # for expensify app
     "yq" "yq"
     "mkcert" "mkcert"
