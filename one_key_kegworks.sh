@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-source ./bash/shellUtils.sh
-
 HOME_MACGAME_PATH="/Volumes/MacGame"
+APP_GAMES_PATH="$HOME_MACGAME_PATH/AppGames"
 Moving_Games_Folder="$HOME_MACGAME_PATH/crossover/kegworks_games"
-KegworksGames_Folder="$HOME_MACGAME_PATH/AppGames/Kegworks"
+KegworksGames_Folder="$APP_GAMES_PATH/Kegworks"
 APP_GAME_FOLDER_IN_DRIVER_C="Contents/drive_c/Games"
+
+source ./bash/shellUtils.sh
+source ./bash/games/native-games.sh
 
 info "                         "
 info "=================================================================================="
@@ -72,7 +74,7 @@ moving_game_folder_from_kegworks() {
         else
             mv "$game_path" "$tmp_path"
             if [ -d "$tmp_path" ]; then
-                success "     run app: <<${tmp_path}>>"
+                success "     run app: <<${app_path}>>"
                 open "$app_path"
             fi
         fi
@@ -166,9 +168,11 @@ EOF
 case "$1" in
 run)
     run_kegworks_games
+    run_native_games
     ;;
 restore)
     restore_kegworks_games
+    restore_native_games
     ;;
 h)
     _help

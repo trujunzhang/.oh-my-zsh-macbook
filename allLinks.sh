@@ -4,7 +4,7 @@
 source ./bash/files-functions.sh
 
 source ./bash/shellUtils.sh
-source ./bash/documents_fix.sh
+source ./bash/games/documents_fix.sh
 
 CURRENT=$(pwd)
 # Folders in Home.
