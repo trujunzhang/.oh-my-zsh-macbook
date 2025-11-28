@@ -1,5 +1,6 @@
 hs.hotkey.bind(GameHotkeyMods, "C", Play_Assassins_Creed_Mirage)
 hs.hotkey.bind(GameHotkeyMods, "O", Play_Assassins_Creed_Origins)
+hs.hotkey.bind(GameHotkeyMods, "H", Play_Silent_Hill_2)
 hs.hotkey.bind(GameHotkeyMods, "D", Play_Call_of_Duty_Modern_Warfare_Remastered)
 hs.hotkey.bind(GameHotkeyMods, "U", Play_UNCHARTED_LoT_Collection)
 hs.hotkey.bind(GameHotkeyMods, "R", Play_Red_Dead_Redemption)

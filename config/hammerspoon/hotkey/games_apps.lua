@@ -2,6 +2,7 @@
 -- export ROSETTA_ADVERTISE_AVX=1
 -- export D3DM_ENABLE_METALFX=1 ROSETTA_ADVERTISE_AVX=1
 -- export D3DM_ENABLE_METALFX=1 ROSETTA_ADVERTISE_AVX=1
+-- export D3DM_ENABLE_METALFX=1
 
 function Play_Call_of_Duty_Modern_Warfare_Remastered()
     local app_name = "Call of Duty Modern Warfare Remastered"
@@ -246,6 +247,36 @@ function Play_Need_for_Speed_Payback()
     -- turn off aerospace
     -- app: "Need_for_Speed_Payback"
     TurnOffAerospace()
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end
+
+-- export D3DM_ENABLE_METALFX=1
+-- export D3DM_ENABLE_METALFX=1
+function Play_SILENT_HILL_f()
+    local app_name = "SILENT HILL f"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    -- app: "SILENT HILL f"
+    -- title: "WARNING: Known issues with graphics driver"
+    Close_Active_Window("Known issues with graphics driver", "cancel", 35)
+
+    ActiveWindow(60)
+end
+
+function Play_Silent_Hill_2()
+    -- "C:\toxicgames.in\Silent-Hill-2\SILENT HILL 2\SHProto.exe" -dx11
+    -- "C:\toxicgames.in\Silent-Hill-2\SILENT HILL 2\SHProto.exe" -dx11
+    -- "C:\toxicgames.in\Silent-Hill-2\SILENT HILL 2\SHProto.exe" -dx11
+
+    local app_name = "Silent Hill 2"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
