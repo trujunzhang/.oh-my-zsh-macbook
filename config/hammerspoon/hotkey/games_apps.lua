@@ -27,18 +27,17 @@ function Play_UNCHARTED_LoT_Collection()
 
     -- app: "UNCHARTED.LoT.Collection.app"
     -- title: "GPU Change"
-    Close_Active_Window("GPU Change", "cancel", 65)
+    Close_Active_Window("GPU Change", "cancel", 55)
 
     -- app: "UNCHARTED.LoT.Collection.app(The lost legecy)"
     -- title: "GPU Change"
-    Close_Active_Window("GPU Change", "cancel", 105)
+    -- Close_Active_Window("GPU Change", "cancel", 105)
 
-    ActiveWindow(115)
+    -- ActiveWindow(115)
+    ActiveWindow(75)
 end
 
 function Play_Red_Dead_Redemption()
-    -- local app_name = "Bioshock Infinite"
-    -- local app_name = "Mass-Effect-Andromeda"
     local app_name = "Red Dead Redemption 2"
 
     BeforePlayGame(function()
@@ -52,10 +51,17 @@ function Play_Red_Dead_Redemption()
     ActiveWindow(70)
 end
 
+function Play_The_Last_of_Us_Part_I()
+    local app_name = "The Last of Us Part I"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(50)
+end
+
 function Play_The_Last_of_Us_Part_II()
-    -- local app_name = "Bioshock Infinite"
-    -- local app_name = "Mass-Effect-Andromeda"
-    -- local app_name = "Red Dead Redemption 2"
     local app_name = "The Last of Us Part II"
 
     BeforePlayGame(function()
@@ -162,7 +168,10 @@ function Play_Ghost_of_Tsushima()
 end
 
 function Play_Horizon_Zero_Dawn_Remastered()
-    local app_name = "Horizon Zero Dawn Remastered"
+    -- app: "Horizon Zero Dawn Remastered"
+    -- export D3DM_ENABLE_METALFX=1
+    -- local app_name = "Horizon Zero Dawn Remastered"
+    local app_name = "Horizon Zero Dawn"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
@@ -170,7 +179,7 @@ function Play_Horizon_Zero_Dawn_Remastered()
 
     -- app: "Horizon Zero Dawn Remastered"
     -- title: "Horizon Zero Dawn™ Remastered",
-    Close_Active_Window("Horizon Zero Dawn", "ok", 35, "true")
+    -- Close_Active_Window("Horizon Zero Dawn", "ok", 35, "true")
 
     ActiveWindow()
 end
@@ -220,6 +229,10 @@ function Play_Batman_Arkham_Knight()
 end
 
 function Play_Assassins_Creed_Origins()
+    -- turn off aerospace
+    -- app: "Assassins Creed Origins"
+    TurnOffAerospace()
+
     local app_name = "Assassins Creed Origins"
 
     BeforePlayGame(function()
@@ -277,6 +290,16 @@ function Play_Silent_Hill_2()
     -- "C:\toxicgames.in\Silent-Hill-2\SILENT HILL 2\SHProto.exe" -dx11
 
     local app_name = "Silent Hill 2"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end
+
+function Play_Expedition_33()
+    local app_name = "Expedition 33"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)

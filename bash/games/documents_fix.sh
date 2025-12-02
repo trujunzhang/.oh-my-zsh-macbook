@@ -19,6 +19,9 @@ function link_games_save_location_path() {
 
     # The Last of Us Part II
     directoryLink "game(The Last of Us Part II)" "$CURRENT_USER_DOCUMENTS_PATH/The Last of Us Part II" "$USER_DOCUMENTS_DEFAULT_PATH/The Last of Us Part II"
+
+    # Red Dead Redemption 2
+    directoryLink "game(Red Dead Redemption 2)" "$CURRENT_USER_DOCUMENTS_PATH/Rockstar Games" "$USER_DOCUMENTS_DEFAULT_PATH/Rockstar Games"
 }
 
 #
