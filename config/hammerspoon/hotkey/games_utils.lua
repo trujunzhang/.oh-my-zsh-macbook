@@ -37,8 +37,7 @@ function BeforePlayGame(runApp)
     hs.notify.new({ title = "Playing game", informativeText = "Start it" }):send()
 
     hs.timer.doAfter(2, function()
-        -- local myApp = hs.application.applicationsForBundleID('com.github.wez.wezterm')[1]
-        -- hs.eventtap.keyStroke({ "Alt" }, 'G', myApp)
+        hs.eventtap.keyStroke({ "Alt" }, "F")
         hs.eventtap.keyStroke({ "Alt" }, "G")
     end)
 

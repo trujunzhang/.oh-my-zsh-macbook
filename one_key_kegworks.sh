@@ -33,6 +33,7 @@ games_in_kegworks=(
     "SILENT HILL 2" "Silent-Hill-2"
     "Horizon Zero Dawn" "Horizon Zero Dawn"
     "Red Dead Redemption 2" "Red Dead Redemption 2 – BUILD 1491.50 + UE UNLOCKER - SteamGG.net"
+    "Grand Theft Auto V" "Grand Theft Auto V"
     # "" ""
     # "" ""
     # "" ""

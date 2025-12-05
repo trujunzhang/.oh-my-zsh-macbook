@@ -22,6 +22,13 @@ function link_games_save_location_path() {
 
     # Red Dead Redemption 2
     directoryLink "game(Red Dead Redemption 2)" "$CURRENT_USER_DOCUMENTS_PATH/Rockstar Games" "$USER_DOCUMENTS_DEFAULT_PATH/Rockstar Games"
+
+    # My Games
+    # Mafia II Definitive Edition
+    directoryLink "game(My Games)" "$CURRENT_USER_DOCUMENTS_PATH/My Games" "$USER_DOCUMENTS_DEFAULT_PATH/My Games"
+
+    # Need for Speed Heat
+    directoryLink "game(Need for Speed Heat)" "$CURRENT_USER_DOCUMENTS_PATH/Need for Speed Heat" "$USER_DOCUMENTS_DEFAULT_PATH/Need for Speed Heat"
 }
 
 #

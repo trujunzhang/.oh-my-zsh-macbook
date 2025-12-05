@@ -46,9 +46,9 @@ function Play_Red_Dead_Redemption()
 
     -- app: "Red Dead Redemption 2"
     -- title: "Minimum Recommended Hardware Check Failure"
-    Close_Active_Window("Minimum Recommended", "ok", 60)
+    -- Close_Active_Window("Minimum Recommended", "ok", 60)
 
-    ActiveWindow(70)
+    ActiveWindow(40)
 end
 
 function Play_The_Last_of_Us_Part_I()
@@ -254,6 +254,16 @@ function Play_Assassins_Creed_Mirage()
     ActiveWindow()
 end
 
+function Play_Need_for_Speed_Heat()
+    local app_name = "Need for Speed Heat"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(60)
+end
+
 function Play_Need_for_Speed_Payback()
     local app_name = "Need_for_Speed_Payback"
 
@@ -306,4 +316,14 @@ function Play_Expedition_33()
     end)
 
     ActiveWindow()
+end
+
+function Play_Grand_Theft_Auto_V()
+    local app_name = "Grand Theft Auto V"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(50)
 end

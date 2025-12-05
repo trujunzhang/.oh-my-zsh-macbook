@@ -143,7 +143,7 @@ brew_apps_arm=(
     # https://github.com/emcrisostomo/fswatch
     # "fswatch" "fswatch"
 
-    "watchman" "watchman"
+    # "watchman" "watchman"
 
     # for expensify app
     "yq" "yq"
@@ -166,7 +166,7 @@ brew_apps_arm=(
     "fish" "fish"
     "neovim" "neovim"
 
-    "jenkins-lts" "jenkins-lts"
+    # "jenkins-lts" "jenkins-lts"
 
     # https://github.com/Bhupesh-V/ugit
     "ugit" "ugit"
@@ -175,7 +175,7 @@ brew_apps_arm=(
     "ruby@3.3" "ruby@3.3"
 
     # https://github.com/Muhammed770/hammerspoon-bluetooth-automation
-    "blueutil" "blueutil"
+    # "blueutil" "blueutil"
 
     # asdf install ruby
     # psych:
