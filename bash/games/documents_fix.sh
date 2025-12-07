@@ -29,6 +29,9 @@ function link_games_save_location_path() {
 
     # Need for Speed Heat
     directoryLink "game(Need for Speed Heat)" "$CURRENT_USER_DOCUMENTS_PATH/Need for Speed Heat" "$USER_DOCUMENTS_DEFAULT_PATH/Need for Speed Heat"
+
+    # Square Enix(Just Cause 4)
+    directoryLink "game(Square Enix)" "$CURRENT_USER_DOCUMENTS_PATH/Square Enix" "$USER_DOCUMENTS_DEFAULT_PATH/Square Enix"
 }
 
 #

@@ -36,12 +36,15 @@ function BeforePlayGame(runApp)
 
     hs.notify.new({ title = "Playing game", informativeText = "Start it" }):send()
 
-    hs.timer.doAfter(2, function()
-        hs.eventtap.keyStroke({ "Alt" }, "F")
+    hs.timer.doAfter(1, function()
+        hs.eventtap.keyStroke({ "Alt" }, "B")
+    end)
+
+    hs.timer.doAfter(3, function()
         hs.eventtap.keyStroke({ "Alt" }, "G")
     end)
 
-    hs.timer.doAfter(4, function()
+    hs.timer.doAfter(5, function()
         hs.eventtap.leftClick(hs.mouse.absolutePosition())
     end)
 

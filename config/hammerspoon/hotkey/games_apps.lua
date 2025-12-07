@@ -15,7 +15,7 @@ function Play_Call_of_Duty_Modern_Warfare_Remastered()
     -- title: "Run In Safe Mode"
     Close_Active_Window("Run In Safe Mode", "ok", 35)
 
-    ActiveWindow(45)
+    ActiveWindow(60)
 end
 
 function Play_UNCHARTED_LoT_Collection()
@@ -48,7 +48,7 @@ function Play_Red_Dead_Redemption()
     -- title: "Minimum Recommended Hardware Check Failure"
     -- Close_Active_Window("Minimum Recommended", "ok", 60)
 
-    ActiveWindow(40)
+    ActiveWindow(60)
 end
 
 function Play_The_Last_of_Us_Part_I()
@@ -319,6 +319,8 @@ function Play_Expedition_33()
 end
 
 function Play_Grand_Theft_Auto_V()
+    -- SetMacosVolume(5)
+
     local app_name = "Grand Theft Auto V"
 
     BeforePlayGame(function()

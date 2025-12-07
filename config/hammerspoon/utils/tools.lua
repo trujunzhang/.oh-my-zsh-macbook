@@ -23,6 +23,16 @@ function ClickActiveWindow(focusedWindow, offsetX, offsetY)
     hs.eventtap.leftClick(position)
 end
 
+function SetMacosVolume(value)
+    value = value or 13
+    hs.execute("osascript -e 'set volume output volume " .. value .. "'")
+    hs.notify.new({ title = "Setup MacOS Volume", informativeText = "to " .. value .. "%" }):send()
+end
+
+function SetMacosDefaultVolume()
+    SetMacosVolume()
+end
+
 function TurnOffAerospace()
     local shell_command = os.getenv("HOME") .. "/.local/bin/aerospace enable off"
     hs.execute(shell_command)
