@@ -14,6 +14,8 @@ GameHotkeyMods = { "Cmd", "Alt", "shift", "ctrl" }
 -- require "reload.reload"
 require("utils.tools")
 require("utils.string_utils")
+require("applications.app")
+require("applications.app_windows")
 require("hotkey.hotkey")
 require("hotkey.games_apps")
 require("hotkey.games_dialogues")
@@ -22,11 +24,9 @@ require("hotkey.games_run_alpha")
 require("hotkey.games_run_numbers")
 require("hotkey.games_kill")
 require("hotkey.system")
-require("applications.app")
 require("developing.run.ios")
 require("developing.run.android")
 
--- Private use
-if hs.host.localizedName() == "kaboom的MacBook Pro" then
-    -- require("autoscript.autoscript")
-end
+-- Create and start the watcher
+local appMusicWatcher = hs.application.watcher.new(Mac_Apps_Watcher)
+appMusicWatcher:start()

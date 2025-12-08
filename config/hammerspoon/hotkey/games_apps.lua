@@ -231,7 +231,7 @@ end
 function Play_Assassins_Creed_Origins()
     -- turn off aerospace
     -- app: "Assassins Creed Origins"
-    TurnOffAerospace()
+    -- TurnOffAerospace()
 
     local app_name = "Assassins Creed Origins"
 

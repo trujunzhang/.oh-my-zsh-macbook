@@ -45,7 +45,8 @@ function BeforePlayGame(runApp)
     end)
 
     hs.timer.doAfter(5, function()
-        hs.eventtap.leftClick(hs.mouse.absolutePosition())
+        -- hs.eventtap.leftClick(hs.mouse.absolutePosition())
+        ClickPrimaryScreenCenter()
     end)
 
     hs.timer.doAfter(6, function()
@@ -56,7 +57,8 @@ end
 function ActiveWindow(interval)
     interval = interval or 60
     hs.timer.doAfter(interval, function()
-        hs.eventtap.leftClick(hs.mouse.absolutePosition())
+        -- hs.eventtap.leftClick(hs.mouse.absolutePosition())
+        ClickPrimaryScreenCenter()
         -- hs.notify.new({ title = "Active game window", informativeText = "click it sucessfully" }):send()
         hs.alert.show(
             string.format(

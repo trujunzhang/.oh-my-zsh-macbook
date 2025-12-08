@@ -23,6 +23,29 @@ function ClickActiveWindow(focusedWindow, offsetX, offsetY)
     hs.eventtap.leftClick(position)
 end
 
+function ClickPrimaryScreenCenter(offsetX, offsetY)
+    offsetX = offsetX or 0
+    offsetY = offsetY or 0
+
+    local primaryScreen = hs.screen.primaryScreen()
+    local fullFrame = primaryScreen:fullFrame()
+    -- print("Primary screen full frame: " .. hs.inspect(fullFrame))
+
+    local windowFrame = fullFrame
+
+    local x = windowFrame.x
+    local y = windowFrame.y
+    local width = windowFrame.w
+    local height = windowFrame.h
+
+    local centerX = x + width / 2
+    local centerY = y + height / 2
+
+    local position = { x = centerX - offsetX, y = centerY - offsetY }
+
+    hs.eventtap.leftClick(position)
+end
+
 function SetMacosVolume(value)
     value = value or 13
     hs.execute("osascript -e 'set volume output volume " .. value .. "'")
