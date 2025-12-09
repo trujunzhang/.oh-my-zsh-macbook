@@ -1,50 +1,113 @@
 #!/usr/bin/env bash
 
-app_resident_evil_village_name="Resident Evil Village"
-app_resident_evil_village_path="$APP_GAMES_PATH/${app_resident_evil_village_name}.app"
-app_resident_evil_village_resource_path="$app_resident_evil_village_path/Contents/Resources"
-app_resident_evil_village_tmp_path="$Moving_Games_Folder/$app_resident_evil_village_name"
+# test_mode="test"
+test_mode="prod"
 
-function run_Resident_Evil_Village() {
-    info "moving game: $app_resident_evil_village_name"
-    if [ -d "$app_resident_evil_village_path" ]; then
-        success "  game folder: <<${app_resident_evil_village_resource_path}>>"
-        mkdir -p "$app_resident_evil_village_tmp_path"
+native_games_apps=(
+    # Resident Evil Village
+    "Resident Evil Village"
+    "*.pak"
+    "Contents/Resources"
+    "open"
 
-        for pathname in "${app_resident_evil_village_resource_path}"/*.pak; do
+    # MetroExodus
+    "MetroExodus"
+    "content*"
+    "Contents/Resources"
+    "ignore"
+
+    # MetroExodus
+    "MetroExodus"
+    "patch*"
+    "Contents/Resources"
+    "open"
+)
+
+test_native_games_apps=(
+
+)
+
+function moving_game_from_source_to_dest() {
+    app_name=$1
+    pattern=$2
+    source_path=$3
+    dest_path=$4
+
+    info "Moving game: $app_name"
+    info "  pattern: <<${pattern}>>"
+    info "  from source: <<${source_path}>>"
+    info "  to dest: <<${dest_path}>>"
+
+    if [ -d "$source_path" ]; then
+        mkdir -p "$dest_path"
+
+        success " Start to scan folder: <<${source_path}>>"
+
+        for pathname in "${source_path}"/$pattern; do
             if [ -f "$pathname" ]; then
-                info "   moving to: <<${pathname}>>"
-                mv "$pathname" "$app_resident_evil_village_tmp_path"
+                info "   Start moving to: <<${pathname}>>"
+                mv "$pathname" "$dest_path"
             fi
         done
-
-        open "$app_resident_evil_village_path"
-
     else
-        error "  not found: <<$app_resident_evil_village_path>>"
+        error "  not found folder: <<$source_path>>"
     fi
 }
 
-function restore_Resident_Evil_Village() {
-    info "restoring game: $app_resident_evil_village_name"
-    if [ -d "$app_resident_evil_village_tmp_path" ]; then
-        success "  game folder: <<${app_resident_evil_village_tmp_path}>>"
+start_moving_native_games() {
+    moving_type=$1
+    array=("$@")
 
-        for pathname in "${app_resident_evil_village_tmp_path}"/*.pak; do
-            if [ -f "$pathname" ]; then
-                info "   restoring to: <<${pathname}>>"
-                mv "$pathname" "$app_resident_evil_village_resource_path"
+    # Get the length of the array
+    array_length=${#array[@]}
+
+    # Print the length
+    echo "  The array has $array_length elements."
+    echo ""
+
+    for ((i = 1; i < ${#array[@]}; i = i + 4)); do
+        app_name="${array[$i + 0]}"
+        pattern="${array[$i + 1]}"
+        sub_folder="${array[$i + 2]}"
+        need_run_app="${array[$i + 3]}"
+
+        success "step $i"
+        info "  app_name: $app_name"
+        info "  pattern: $pattern"
+        info "  sub_folder: $sub_folder"
+        info "  need_run_app: $need_run_app"
+        info ""
+
+        if [ "$moving_type" == "run" ]; then
+            source_path="$APP_GAMES_PATH/${app_name}.app/$sub_folder"
+            dest_path="$Moving_Games_Folder/$app_name"
+        elif [ "$moving_type" == "restore" ]; then
+            source_path="$Moving_Games_Folder/$app_name"
+            dest_path="$APP_GAMES_PATH/${app_name}.app/$sub_folder"
+        fi
+
+        moving_game_from_source_to_dest "$app_name" "$pattern" "$source_path" "$dest_path"
+
+        if [ "$moving_type" == "run" ]; then
+            if [ "$need_run_app" == "open" ]; then
+                open "$APP_GAMES_PATH/${app_name}.app"
             fi
-        done
-    else
-        error "  not found: <<$app_resident_evil_village_tmp_path>>"
-    fi
+        fi
+    done
 }
 
 run_native_games() {
-    run_Resident_Evil_Village
+    start_moving_native_games "run" "${native_games_apps[@]}"
 }
 
 restore_native_games() {
-    restore_Resident_Evil_Village
+    start_moving_native_games "restore" "${native_games_apps[@]}"
+}
+
+test_run_native_games() {
+    start_moving_native_games "run" "${test_native_games_apps[@]}"
+}
+
+test_restore_native_games() {
+    start_moving_native_games "restore" "${test_native_games_apps[@]}"
 }

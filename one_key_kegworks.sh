@@ -174,12 +174,20 @@ EOF
 
 case "$1" in
 run)
-    run_kegworks_games
-    run_native_games
+    if test_mode="test"; then
+        test_run_native_games
+    else
+        run_kegworks_games
+        run_native_games
+    fi
     ;;
 restore)
-    restore_kegworks_games
-    restore_native_games
+    if test_mode="test"; then
+        test_restore_native_games
+    else
+        restore_kegworks_games
+        restore_native_games
+    fi
     ;;
 h)
     _help
