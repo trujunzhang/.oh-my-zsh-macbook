@@ -214,12 +214,13 @@ function Play_Assassins_Creed_Rogue()
     ActiveWindow()
 end
 
-function Play_Batman_Arkham_Knight()
-    local app_name = "Batman Arkham Knight"
+function Play_Assassins_Creed_Syndicate()
+    -- Fix Graphical Flashing Issue
+    -- Open AC.ini using a text editor.
+    -- Change the value to:
+    -- UserDriverWorkAround = 1
 
-    -- turn off aerospace
-    -- app: "Batman Arkham Knight"
-    TurnOffAerospace()
+    local app_name = "Assassins Creed Syndicate"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
@@ -246,6 +247,20 @@ function Play_Assassins_Creed_Mirage()
     -- export D3DM_ENABLE_METALFX=1
     -- export D3DM_ENABLE_METALFX=1
     local app_name = "Assassins Creed Mirage"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow()
+end
+
+function Play_Batman_Arkham_Knight()
+    local app_name = "Batman Arkham Knight"
+
+    -- turn off aerospace
+    -- app: "Batman Arkham Knight"
+    TurnOffAerospace()
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)

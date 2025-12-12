@@ -23,6 +23,7 @@ info "                                          "
 mkdir -p "$Moving_Games_Folder"
 
 games_in_kegworks=(
+    "Assassins Creed Syndicate" "Assassins Creed Syndicate"
     "Assassins Creed Mirage" "Assassins Creed Mirage"
     "Assassins Creed Origins" "Assassin's Creed Origins"
     "Ghost of Tsushima" "Ghost of Tsushima DIRECTOR'S CUT"
@@ -174,7 +175,7 @@ EOF
 
 case "$1" in
 run)
-    if test_mode="test"; then
+    if [ "$test_mode" == "test" ]; then
         test_run_native_games
     else
         run_kegworks_games
@@ -182,7 +183,7 @@ run)
     fi
     ;;
 restore)
-    if test_mode="test"; then
+    if [ "$test_mode" == "test" ]; then
         test_restore_native_games
     else
         restore_kegworks_games

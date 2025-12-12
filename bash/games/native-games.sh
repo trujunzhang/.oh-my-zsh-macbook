@@ -39,8 +39,6 @@ function moving_game_from_source_to_dest() {
     info "  to dest: <<${dest_path}>>"
 
     if [ -d "$source_path" ]; then
-        mkdir -p "$dest_path"
-
         success " Start to scan folder: <<${source_path}>>"
 
         for pathname in "${source_path}"/$pattern; do
@@ -81,6 +79,8 @@ start_moving_native_games() {
         if [ "$moving_type" == "run" ]; then
             source_path="$APP_GAMES_PATH/${app_name}.app/$sub_folder"
             dest_path="$Moving_Games_Folder/$app_name"
+
+            mkdir -p "$dest_path"
         elif [ "$moving_type" == "restore" ]; then
             source_path="$Moving_Games_Folder/$app_name"
             dest_path="$APP_GAMES_PATH/${app_name}.app/$sub_folder"
