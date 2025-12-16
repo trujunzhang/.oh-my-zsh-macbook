@@ -1,22 +1,8 @@
-hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", function()
-    hs.application.launchOrFocus(TerminalApp)
+hs.hotkey.bind(GameHotkeyMods, "N", OpenAndActiveBraveBrowser)
 
-    EscapeTab("A")
-    EscapeTab("W")
-    EscapeTab("E")
-    EscapeTab("R")
+hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", RunTerminalEscape)
 
-    EscapeTab("F")
-    EscapeTab("Y")
-    EscapeTab("K")
-    EscapeTab("L")
-
-    local myApp = hs.application.applicationsForBundleID(TerminalAppID)[1]
-
-    hs.eventtap.keyStroke({ "Ctrl" }, "A", myApp)
-
-    hs.notify.new({ title = "Escape all tabs", informativeText = "Run it successfully" }):send()
-end)
+hs.hotkey.bind({ "Cmd", "Alt" }, "A", RunToggleAerospace)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "H", function()
     hs.eventtap.keyStroke({ "Cmd", "Alt" }, "F")

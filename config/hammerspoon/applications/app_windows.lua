@@ -8,7 +8,7 @@ function Mac_Apps_Watcher(appName, eventType, appObject)
                 .new({ title = "Hammerspoon", informativeText = "Apple Music launched, launching helper app..." })
                 :send()
 
-            hs.timer.doAfter(5, function()
+            hs.timer.doAfter(3, function()
                 hs.execute("killall Music")
                 hs.notify.new({ title = "killing Music app", informativeText = "run it sucessfully" }):send()
             end)

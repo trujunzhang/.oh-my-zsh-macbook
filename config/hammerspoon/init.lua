@@ -14,13 +14,15 @@ GameHotkeyMods = { "Cmd", "Alt", "shift", "ctrl" }
 -- require "reload.reload"
 require("utils.tools")
 require("utils.string_utils")
+require("applications.app_utils")
 require("applications.app")
+require("applications.app_titles")
 require("applications.app_windows")
 require("applications.bluetooth_info")
-require("hotkey.hotkey")
+-- require("hotkey.hotkey")
+require("hotkey.games_utils")
 require("hotkey.games_apps")
 require("hotkey.games_dialogues")
-require("hotkey.games_utils")
 require("hotkey.games_run_alpha")
 require("hotkey.games_run_numbers")
 require("hotkey.games_kill")
@@ -31,3 +33,5 @@ require("developing.run.android")
 -- Create and start the watcher
 local appMusicWatcher = hs.application.watcher.new(Mac_Apps_Watcher)
 appMusicWatcher:start()
+
+ConsoleFilter:subscribe({ "windowFocused" }, ConsoleWindowFocusHandler)

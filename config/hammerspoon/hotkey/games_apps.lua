@@ -46,7 +46,7 @@ function Play_Red_Dead_Redemption()
 
     -- app: "Red Dead Redemption 2"
     -- title: "Minimum Recommended Hardware Check Failure"
-    -- Close_Active_Window("Minimum Recommended", "ok", 60)
+    Close_Active_Window("Minimum Recommended", "ok", 35)
 
     ActiveWindow(60)
 end
