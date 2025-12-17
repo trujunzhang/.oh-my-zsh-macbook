@@ -16,6 +16,12 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "x", function()
     -- hs.execute("killall ")
     -- hs.execute("killall ")
 
+    -- ls -l /proc/*/exe 2>/dev/null | grep -E 'wine(64)?-preloader|wineserver' | perl -pe 's;^.*/proc/(\d+)/exe.*$;$1;g;' | xargs -n 1 kill
+
+    -- hs.execute("kill -9 $(ps aux | grep 'Music' | awk '{print $2}')")
+
+    -- kill -9 $(ps aux | grep -E 'wine(64)?-preloader|wineserver' | awk '{print $2}')
+
     local app_name = "UNCHARTED.LoT.Collection.app"
     hs.notify.new({ title = "kill the app: " .. app_name, informativeText = "run it sucessfully" }):send()
 end)

@@ -138,7 +138,11 @@ brew_apps_x86xxx=(
     # skhd --start-service
 )
 brew_apps_arm=(
-    "micromamba" "micromamba"
+    # "micromamba" "micromamba"
+
+    # "--cask wine-stable" "wine-stable"
+
+    # "--cask --no-quarantine wine-stable" "wine-stable"
 
     # https://github.com/emcrisostomo/fswatch
     # "fswatch" "fswatch"
@@ -206,7 +210,7 @@ function install_apps {
         echo "element $i is ${apps[$i + 1]}"
 
         if [ ! -d "$HOMEBREW_HOME/${apps[$i + 0]}" ]; then
-            brew install ${apps[$i + 1]}
+            brew install "${apps[$i + 1]}"
         fi
     done
 }

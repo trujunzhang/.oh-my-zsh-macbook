@@ -1,4 +1,5 @@
 hs.hotkey.bind(GameHotkeyMods, "N", OpenAndActiveBraveBrowser)
+hs.hotkey.bind(GameHotkeyMods, "B", OpenAndActiveBraveBrowser)
 
 hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", RunTerminalEscape)
 

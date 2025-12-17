@@ -72,7 +72,7 @@ end
 -- menuBarBattery()
 
 -- Trigger the notification on a hotkey (e.g., Ctrl+Alt+B)
-hs.hotkey.bind(GameHotkeyMods, "b", ShowBatteryNotification)
+-- hs.hotkey.bind(GameHotkeyMods, "b", ShowBatteryNotification)
 
 -- Or just log it to the Console for testing
 -- hs.alert.show(getBluetoothBattery())

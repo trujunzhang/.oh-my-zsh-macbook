@@ -1,5 +1,5 @@
 function Mac_Apps_Watcher(appName, eventType, appObject)
-    -- hs.printf("%s = %s", "app watcher:", appName)
+    hs.printf("%s = %s", "app watcher:", appName)
 
     if appName == "Music" then
         if eventType == hs.application.watcher.launched then
@@ -9,7 +9,8 @@ function Mac_Apps_Watcher(appName, eventType, appObject)
                 :send()
 
             hs.timer.doAfter(3, function()
-                hs.execute("killall Music")
+                hs.execute("kill -9 $(ps aux | grep 'Music' | awk '{print $2}')")
+                -- hs.execute("killall Music")
                 hs.notify.new({ title = "killing Music app", informativeText = "run it sucessfully" }):send()
             end)
             -- elseif eventType == hs.application.watcher.terminated then
