@@ -1,5 +1,7 @@
 function Mac_Apps_Watcher(appName, eventType, appObject)
     hs.printf("%s = %s", "app watcher:", appName)
+    hs.printf("%s = %s", "app watcher<eventType>:", eventType)
+    hs.printf("%s = %s", "app watcher<eventType>:", hs.application.watcher.launched)
 
     if appName == "Music" then
         if eventType == hs.application.watcher.launched then

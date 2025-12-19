@@ -13,6 +13,16 @@ function ConsoleWindowFocusHandler(window)
             end)
         end
 
+        if winTitle == "Music" then
+            hs.timer.doAfter(2, function()
+                hs.execute("kill -9 $(ps aux | grep 'Music' | awk '{print $2}')")
+                -- hs.execute("killall Music")
+                hs.notify
+                    .new({ title = "Watching window title: " .. winTitle, informativeText = "kill it sucessfully" })
+                    :send()
+            end)
+        end
+
         -- You can add more actions here, e.g., move the window to a specific screen
         -- window:moveToUnit(hs.geometry.rect(0, 0, 0.5, 1))
     else

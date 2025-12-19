@@ -31,7 +31,7 @@ require("developing.run.ios")
 require("developing.run.android")
 
 -- Create and start the watcher
-local appMusicWatcher = hs.application.watcher.new(Mac_Apps_Watcher)
-appMusicWatcher:start()
+-- local appMusicWatcher = hs.application.watcher.new(Mac_Apps_Watcher)
+-- appMusicWatcher:start()
 
 ConsoleFilter:subscribe({ "windowFocused" }, ConsoleWindowFocusHandler)
