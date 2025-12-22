@@ -153,7 +153,7 @@ function Play_Metal_Gear_Solid()
 end
 
 function Play_Ghost_of_Tsushima()
-    local app_name = "Ghost of Tsushima.app"
+    local app_name = "Ghost of Tsushima"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
