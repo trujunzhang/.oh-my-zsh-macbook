@@ -2,6 +2,8 @@ function OpenAndActiveBraveBrowser()
     hs.application.launchOrFocus("Brave Browser Nightly")
 
     hs.timer.doAfter(0.3, function()
+        hs.eventtap.keyStroke({ "Alt" }, "N")
+
         local myApp = hs.application.applicationsForBundleID("com.brave.Browser.nightly")[1]
         local focusedAppWindow = myApp:focusedWindow()
         ClickActiveWindow(focusedAppWindow, 0, 55)
