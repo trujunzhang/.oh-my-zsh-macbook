@@ -67,67 +67,67 @@ end)
 
 local menus = {
     {
-        ["text"] = "Horizon Zero Dawn",
+        ["text"] = "Horizon Zero Dawn(-D)",
         ["tag"] = "Horizon-Zero-Dawn",
     },
     {
-        ["text"] = "Red Dead Redemption 2",
+        ["text"] = "Red Dead Redemption 2(-R)",
         ["tag"] = "Red-Dead-Redemption-2",
     },
     -- {
-    --     ["text"] = "The Last of Us Part I",
+    --     ["text"] = "The Last of Us Part I(-)",
     --     ["tag"] = "The-Last-of-Us-Part-I",
     -- },
     -- {
-    --     ["text"] = "The Last of Us Part II",
+    --     ["text"] = "The Last of Us Part II(-)",
     --     ["tag"] = "The-Last-of-Us-Part-II",
     -- },
     {
-        ["text"] = "Marvel Spider-Man Remastered",
+        ["text"] = "Marvel Spider-Man Remastered(-S)",
         ["tag"] = "Marvel-Spider-Man-Remastered",
     },
     {
-        ["text"] = "Ghost of Tsushima",
+        ["text"] = "Ghost of Tsushima(-T)",
         ["tag"] = "Ghost-of-Tsushima",
     },
     {
-        ["text"] = "Just Cause 4",
+        ["text"] = "Just Cause 4(-J)",
         ["tag"] = "Just-Cause-4",
     },
     {
-        ["text"] = "Assassins-Creed-IV-Black Flag",
+        ["text"] = "Assassins-Creed-IV-Black Flag(-4)",
         ["tag"] = "Assassins-Creed-IV-Black-Flag",
     },
     {
-        ["text"] = "Assassins-creed-rogue",
+        ["text"] = "Assassins-creed-rogue(-5)",
         ["tag"] = "Assassins-creed-rogue",
     },
     {
-        ["text"] = "Assassins Creed Syndicate",
+        ["text"] = "Assassins Creed Syndicate(-A)",
         ["tag"] = "Assassins-Creed-Syndicate",
     },
     -- {
-    --     ["text"] = "Assassins Creed Origins",
+    --     ["text"] = "Assassins Creed Origins(-)",
     --     ["tag"] = "Assassins-Creed-Origins",
     -- },
     {
-        ["text"] = "Assassins Creed Mirage",
+        ["text"] = "Assassins Creed Mirage(-C)",
         ["tag"] = "Assassins-Creed-Mirage",
     },
     {
-        ["text"] = "Need for Speed Heat",
+        ["text"] = "Need for Speed Heat(-3)",
         ["tag"] = "Need-for-Speed-Heat",
     },
     -- {
-    --     ["text"] = "Need_for_Speed_Payback",
+    --     ["text"] = "Need_for_Speed_Payback(-)",
     --     ["tag"] = "Need-for-Speed-Payback",
     -- },
     {
-        ["text"] = "Silent Hill 2",
+        ["text"] = "Silent Hill 2(-S)",
         ["tag"] = "Silent-Hill-2",
     },
     {
-        ["text"] = "Grand Theft Auto V",
+        ["text"] = "Grand Theft Auto V(-G)",
         ["tag"] = "Grand-Theft-Auto-V",
     },
     -- {
@@ -145,6 +145,13 @@ local menus = {
 }
 
 chooser:choices(menus)
-hs.hotkey.bind(GameHotkeyMods, "9", function()
+
+-- Set the height of the chooser to display 10 rows
+chooser:rows(20)
+
+chooser:placeholderText("Select a game")
+
+hs.hotkey.bind(GameHotkeyMods, "-", function()
+    chooser:query("")
     chooser:show()
 end)

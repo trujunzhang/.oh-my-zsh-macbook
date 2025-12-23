@@ -1,6 +1,7 @@
 function YesNoDialogBox(ActionFunc)
     test = hs.chooser.new(ActionFunc)
     test:rows(2)
+    test:placeholderText("Are you sure? Want to reboot?")
     test:choices({
         { ["text"] = "Yes", ["subText"] = "", ["id"] = "yes" },
         { ["text"] = "No", ["subText"] = "", ["id"] = "no" },
