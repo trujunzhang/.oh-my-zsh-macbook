@@ -151,7 +151,10 @@ chooser:rows(20)
 
 chooser:placeholderText("Select a game")
 
-hs.hotkey.bind(GameHotkeyMods, "-", function()
+local function Show_Games_list_Chooser()
     chooser:query("")
     chooser:show()
-end)
+end
+
+hs.hotkey.bind(GameHotkeyMods, "-", Show_Games_list_Chooser)
+hs.hotkey.bind(GameHotkeyMods, "=", Show_Games_list_Chooser)
