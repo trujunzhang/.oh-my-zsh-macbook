@@ -54,8 +54,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_Silent_Hill_2()
     elseif tag == "Grand-Theft-Auto-V" then
         Play_Grand_Theft_Auto_V()
-    -- elseif tag == "" then
-    --     Play_Horizon_Zero_Dawn_Remastered()
+    elseif tag == "Star-Wars-Jedi-Fallen-Order" then
+        Play_Star_Wars_Jedi_Fallen_Order()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -66,6 +66,10 @@ local chooser = hs.chooser.new(function(choice)
 end)
 
 local menus = {
+    {
+        ["text"] = "Star Wars Jedi Fallen Order(-F)",
+        ["tag"] = "Star-Wars-Jedi-Fallen-Order",
+    },
     {
         ["text"] = "Horizon Zero Dawn(-D)",
         ["tag"] = "Horizon-Zero-Dawn",
@@ -102,10 +106,10 @@ local menus = {
         ["text"] = "Assassins-creed-rogue(-5)",
         ["tag"] = "Assassins-creed-rogue",
     },
-    {
-        ["text"] = "Assassins Creed Syndicate(-A)",
-        ["tag"] = "Assassins-Creed-Syndicate",
-    },
+    -- {
+    --     ["text"] = "Assassins Creed Syndicate(-A)",
+    --     ["tag"] = "Assassins-Creed-Syndicate",
+    -- },
     -- {
     --     ["text"] = "Assassins Creed Origins(-)",
     --     ["tag"] = "Assassins-Creed-Origins",

@@ -344,3 +344,13 @@ function Play_Grand_Theft_Auto_V()
 
     ActiveWindow(50)
 end
+
+function Play_Star_Wars_Jedi_Fallen_Order()
+    local app_name = "Star Wars Jedi Fallen Order"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end

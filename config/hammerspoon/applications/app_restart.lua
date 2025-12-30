@@ -5,15 +5,28 @@ function YesNoDialogBox(ActionFunc)
     test:choices({
         { ["text"] = "Yes", ["subText"] = "", ["id"] = "yes" },
         { ["text"] = "No", ["subText"] = "", ["id"] = "no" },
+        { ["text"] = "ShutDown", ["subText"] = "", ["id"] = "shutdown" },
     })
     test:show()
 end
 function RebootIfChoice(input)
     if input.id == "yes" then
         hs.alert("Your choice was: yes")
-        hs.application.launchOrFocus("MacOS_Restart.app")
-    else
+        ok, result = hs.osascript.applescript([[
+            tell application "System Events" 
+                 restart with state saving preference 
+            end tell
+            ]])
+        hs.alert.show(result)
+    elseif input.id == "no" then
         hs.alert("Your choice was: no")
+    elseif input.id == "shutdown" then
+        ok, result = hs.osascript.applescript([[
+            tell application "System Events" 
+                 shut down with state saving preference 
+            end tell
+            ]])
+        hs.alert.show(result)
     end
 end
 
