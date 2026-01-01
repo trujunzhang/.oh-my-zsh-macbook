@@ -5,7 +5,7 @@ function ConsoleWindowFocusHandler(window)
         print("Hammerspoon Console window focused! Title: " .. winTitle)
 
         if winTitle == "Open" then
-            hs.timer.doAfter(3, function()
+            hs.timer.doAfter(13, function()
                 hs.eventtap.keyStroke({}, "return")
                 hs.notify
                     .new({ title = "Watching window title: " .. winTitle, informativeText = "run it sucessfully" })

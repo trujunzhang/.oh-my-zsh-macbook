@@ -15,7 +15,7 @@
     "type": "application",
     "name": "TextSniper",
     "application": "TextSniper",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",

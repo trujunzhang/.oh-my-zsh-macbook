@@ -352,5 +352,25 @@ function Play_Star_Wars_Jedi_Fallen_Order()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(30)
+    ActiveWindow(50)
+end
+
+function Play_Warcraft_3_The_Frozen_Throne()
+    local app_name = "Warcraft 3 The Frozen Throne"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(50)
+end
+
+function Play_Battlefield_V()
+    local app_name = "Battlefield V"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(50)
 end

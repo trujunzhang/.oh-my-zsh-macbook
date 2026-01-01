@@ -56,6 +56,18 @@ local chooser = hs.chooser.new(function(choice)
         Play_Grand_Theft_Auto_V()
     elseif tag == "Star-Wars-Jedi-Fallen-Order" then
         Play_Star_Wars_Jedi_Fallen_Order()
+    elseif tag == "Warcraft-3-The-Frozen-Throne" then
+        Play_Warcraft_3_The_Frozen_Throne()
+    elseif tag == "Battlefield_V" then
+        Play_Battlefield_V()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -134,6 +146,34 @@ local menus = {
         ["text"] = "Grand Theft Auto V(-G)",
         ["tag"] = "Grand-Theft-Auto-V",
     },
+    {
+        ["text"] = "Warcraft 3 The Frozen Throne(-W)",
+        ["tag"] = "Warcraft-3-The-Frozen-Throne",
+    },
+    {
+        ["text"] = "Battlefield V(-V)",
+        ["tag"] = "Battlefield_V",
+    },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",
