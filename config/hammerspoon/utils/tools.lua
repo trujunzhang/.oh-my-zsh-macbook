@@ -104,3 +104,12 @@ function Check_And_Run_KegworksApp(appName)
     hs.application.launchOrFocus(KegworksGames .. currentName)
     hs.notify.new({ title = currentName, informativeText = "run it sucessfully" }):send()
 end
+
+function Is_WindowActive(windowTitle)
+    local focused = hs.window.focusedWindow()
+    if focused and CheckContainSubString(focused:title(), windowTitle) then
+        return true
+    else
+        return false
+    end
+end

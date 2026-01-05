@@ -106,10 +106,10 @@ local menus = {
         ["text"] = "Ghost of Tsushima(-T)",
         ["tag"] = "Ghost-of-Tsushima",
     },
-    {
-        ["text"] = "Just Cause 4(-J)",
-        ["tag"] = "Just-Cause-4",
-    },
+    -- {
+    --     ["text"] = "Just Cause 4(-J)",
+    --     ["tag"] = "Just-Cause-4",
+    -- },
     {
         ["text"] = "Assassins-Creed-IV-Black Flag(-4)",
         ["tag"] = "Assassins-Creed-IV-Black-Flag",

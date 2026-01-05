@@ -514,6 +514,9 @@ function link_mac_user {
     directoryLink "jenkins(profile)" "$HOME_MAC_CACHE_PATH/jenkins" "$HOME/jenkins"
     directoryLink "jenkins(profile)" "$HOME_MAC_CACHE_PATH/jenkins" "$HOME/.jenkins"
 
+    # crossover
+    directoryLink "crossover(app)" "$HOME_MACGAME_PATH/MacApps/current/CrossOver-25.1.1.app" "/Applications/CrossOver.app"
+
     # homebrew
     # directoryLink "homebrew(home)" "$HOME_MAC_CACHE_PATH/homebrew" "/opt/homebrew"
 

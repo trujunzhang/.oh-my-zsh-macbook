@@ -21,10 +21,15 @@ native_games_apps=(
     "patch*"
     "Contents/Resources"
     "open"
+
+    # RESIDENT EVIL 7 biohazard
+    "RESIDENT EVIL 7 biohazard"
+    "re_chunk_*"
+    "Contents/Resources"
+    "open"
 )
 
 test_native_games_apps=(
-
 )
 
 function moving_game_from_source_to_dest() {

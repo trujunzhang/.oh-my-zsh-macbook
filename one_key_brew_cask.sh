@@ -27,7 +27,7 @@ brew_apps=(
     # "Flipper"             "flipper" 'copy' 'backup'
     "Realm Studio" "mongodb-realm-studio" 'ssd' 'no-bak'
     "Obsidian" "obsidian" 'ssd' 'no-bak'
-    "Alacritty" "alacritty" 'copy' 'backup'
+    # "Alacritty" "alacritty" 'copy' 'backup'
     "Wezterm" "wezterm" 'copy' 'backup'
     "Ghostty" "ghostty" 'copy' 'backup'
     # "Neovide" "Neovide" 'copy' 'no-bak'
@@ -76,7 +76,7 @@ brew_apps=(
     "Microsoft Edge" "microsoft-edge" 'ssd' 'backup'
 
     # Design apps
-    "Figma" "figma" 'copy' 'no-bak'
+    # "Figma" "figma" 'copy' 'no-bak'
     "Zeplin" "zeplin" 'ssd' 'no-bak'
     "VLC" "vlc" 'ssd' 'no-bak'
     "Elmedia Player" "ElmediaPlayer" "ssd" 'no-bak'

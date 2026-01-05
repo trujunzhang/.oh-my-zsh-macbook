@@ -356,13 +356,18 @@ function Play_Star_Wars_Jedi_Fallen_Order()
 end
 
 function Play_Warcraft_3_The_Frozen_Throne()
+    -- "C:\Games\Warcraft 3\Warcraft III.exe" -nativefullscr
+    -- "C:\Games\Warcraft 3\Warcraft III.exe" -nativefullscr
+    -- "C:\Games\Warcraft 3\Warcraft III.exe" -nativefullscr -opengl
+    -- "C:\Games\Warcraft 3\Warcraft III.exe" -nativefullscr -opengl
+
     local app_name = "Warcraft 3 The Frozen Throne"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(50)
+    -- ActiveWindow(10)
 end
 
 function Play_Battlefield_V()

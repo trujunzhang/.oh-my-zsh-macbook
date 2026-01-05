@@ -11,8 +11,17 @@ function link_games_save_location_path() {
     # Assassin's Creed Mirage
     directoryLink "game(Assassin's Creed Mirage)" "$CURRENT_USER_DOCUMENTS_PATH/Assassin's Creed Mirage" "$USER_DOCUMENTS_DEFAULT_PATH/Assassin's Creed Mirage"
 
+    # Assassin's Creed Rogue
+    directoryLink "game(Assassin's Creed Rogue)" "$CURRENT_USER_DOCUMENTS_PATH/Assassin's Creed Rogue" "$USER_DOCUMENTS_DEFAULT_PATH/Assassin's Creed Rogue"
+
     # Assassin's Creed Syndicate
     directoryLink "game(Assassin's Creed Syndicate)" "$CURRENT_USER_DOCUMENTS_PATH/Assassin's Creed Syndicate" "$USER_DOCUMENTS_DEFAULT_PATH/Assassin's Creed Syndicate"
+
+    # Battlefield V
+    directoryLink "game(Battlefield V)" "$CURRENT_USER_DOCUMENTS_PATH/Battlefield V" "$USER_DOCUMENTS_DEFAULT_PATH/Battlefield V"
+
+    # Warcraft III
+    directoryLink "game(Warcraft III)" "$CURRENT_USER_DOCUMENTS_PATH/Warcraft III" "$USER_DOCUMENTS_DEFAULT_PATH/Warcraft III"
 
     # Ghost of Tsushima DIRECTOR'S CUT
     directoryLink "game(Ghost of Tsushima DIRECTOR'S CUT)" "$CURRENT_USER_DOCUMENTS_PATH/Ghost of Tsushima DIRECTOR'S CUT" "$USER_DOCUMENTS_DEFAULT_PATH/Ghost of Tsushima DIRECTOR'S CUT"
