@@ -53,7 +53,12 @@ function SetMacosVolume(value)
 end
 
 function SetMacosDefaultVolume()
-    SetMacosVolume()
+    if GMacCurrentVolume == 0 then
+        GMacCurrentVolume = 13
+    else
+        GMacCurrentVolume = 0
+    end
+    SetMacosVolume(GMacCurrentVolume)
 end
 
 function TurnOffAerospace()
@@ -107,6 +112,7 @@ end
 
 function Is_WindowActive(windowTitle)
     local focused = hs.window.focusedWindow()
+    hs.printf("%s = %s", "focused window title:", focused:title())
     if focused and CheckContainSubString(focused:title(), windowTitle) then
         return true
     else

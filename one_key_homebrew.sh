@@ -149,6 +149,8 @@ brew_apps_arm=(
 
     # "watchman" "watchman"
 
+    "android-platform-tools" "android-platform-tools"
+
     # for expensify app
     "yq" "yq"
     "mkcert" "mkcert"

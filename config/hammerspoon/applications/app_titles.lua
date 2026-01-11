@@ -8,7 +8,7 @@ function ConsoleWindowFocusHandler(window)
             hs.timer.doAfter(13, function()
                 hs.eventtap.keyStroke({}, "return")
                 hs.notify
-                    .new({ title = "Watching window title: " .. winTitle, informativeText = "run it sucessfully" })
+                    .new({ title = "Watching window title: " .. winTitle, informativeText = "return it sucessfully" })
                     :send()
             end)
         end

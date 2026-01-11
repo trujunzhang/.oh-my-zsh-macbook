@@ -324,14 +324,22 @@ alias eas_Build_All='eas build --platform all'
 # Expo(eas)(Update)
 alias easUpdateConfigure='eas update:configure'
 
+# alias genymotion_app_folder="/Applications"
+alias genymotion_app_folder="/Volumes/MacGame/MacApps/current/Genymotion"
+
 # geny motion
-alias gmgeny="open -a /Applications/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'genymotion'"
+alias gmgeny="open -a $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'Samsung Galaxy Note 3'"
+
+function dmac_genymotion_local_network
+    adb shell settings put global captive_portal_http_url https://www.google.cn/generate_204
+    adb shell settings put global captive_portal_https_url https://www.google.cn/generate_204
+    adb shell settings put global ntp_server 1.hk.pool.ntp.org
+end
 
 # macvim
 # alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
 
 # xcode
-alias dmac_rosetta_install="softwareupdate --install-rosetta"
 alias xcode_path_info="xcode-select --print-path"
 alias xcode_select_current="sudo xcode-select --switch /Volumes/MacGame/MacApps/current/Current.app/Contents/Developer"
 alias xcode_select_default="sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer"
@@ -742,6 +750,14 @@ alias dmac_vim_jenkins_plist="sudo vim /opt/homebrew/opt/jenkins-lts/homebrew.mx
 alias dmac_jenkins_services_restart="brew services restart jenkins-lts"
 alias dmac_aerospace_enable_toggle="aerospace enable toggle"
 
+# macos
+alias dmac_install_rosetta="softwareupdate --install-rosetta"
+
+alias dmac_master_disable="sudo spctl --master-disable"
+
+alias dmac_metalhub_on="/bin/launchctl setenv MTL_HUD_ENABLED 1"
+alias dmac_metalhub_off="/bin/launchctl setenv MTL_HUD_ENABLED 0"
+
 function dmac_install_common_apps
     mkdir -p /tmp/Applications/unzip
     cp /Volumes/MacGame/MacCache/apps/Applications/*.zip /tmp/Applications
@@ -938,11 +954,6 @@ alias dpython_verify_tensorflow='python -c "import tensorflow as tf
 print(tf.reduce_sum(tf.random.normal([1000, 1000])))"'
 alias dpython_verify_transforms="python -c \"from transformers import pipeline
 print(pipeline('sentiment-analysis')('we love you'))\""
-
-# macos
-alias dmac_install_rosetta="softwareupdate --install-rosetta"
-
-alias dmac_master_disable="sudo spctl --master-disable"
 
 alias ollama_install_deepseek="ollama run deepseek-r1:32b"
 

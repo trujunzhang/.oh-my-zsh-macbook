@@ -19,12 +19,12 @@ function OpenAndActiveBraveBrowser()
         )
     )
 
-    hs.timer.doAfter(2, function()
-        if Is_WindowActive("Brave Canary") == false then
-            hs.eventtap.keyStroke({ "Alt" }, "N")
-            hs.printf("%s = %s", "Brave Browser title is not active:", "Brave Canary")
-        end
-    end)
+    -- hs.timer.doAfter(2, function()
+    --     if Is_WindowActive("Brave Canary") == false then
+    --         hs.eventtap.keyStroke({ "Alt" }, "N")
+    --         hs.printf("%s = %s", "Brave Browser title is not active:", "Brave Canary")
+    --     end
+    -- end)
 end
 
 function RunTerminalEscape()

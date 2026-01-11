@@ -1,5 +1,7 @@
 print("=================== load djzhang's config===============================")
 
+GMacCurrentVolume = 0
+
 -- TerminalApp = "Wezterm.app"
 -- TerminalAppID = "com.github.wez.wezterm"
 TerminalApp = "Ghostty.app"
