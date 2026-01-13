@@ -1,5 +1,5 @@
 local function muteOnWake(eventType)
-    if (eventType == hs.caffeinate.watcher.systemDidWake) then
+    if eventType == hs.caffeinate.watcher.systemDidWake then
         -- local output = hs.audiodevice.defaultOutputDevice()
         -- output:setMuted(true)
         -- hs.logger.new('wanghao log', 'info')
@@ -10,10 +10,9 @@ end
 -- caffeinateWatcher = hs.caffeinate.watcher.new(muteOnWake)
 -- caffeinateWatcher:start()
 
-
 hs.hotkey.bind(
--- { 'Cmd', 'Alt' },
-    { 'Cmd', 'Alt', 'Ctrl' },
+    -- { 'Cmd', 'Alt' },
+    { "Cmd", "Alt", "Ctrl" },
     "K",
     function()
         -- hs.eventtap.keyStroke({ "" }, "space")
@@ -24,11 +23,13 @@ hs.hotkey.bind(
         -- end
         for k, v in pairs(hs.keycodes.map) do
             if type(k) == "string" then
-                -- hs.printf("%s = %s", tostring(k), tostring(v))
+                hs.printf("string, %s = %s", tostring(k), tostring(v))
+            else
+                hs.printf("other,  %s = %s", tostring(k), tostring(v))
             end
         end
 
-        hs.printf("%s = %s", 'wanghao key:', keycodes.underscore)
+        hs.printf("%s = %s", "wanghao key:", keycodes.underscore)
 
         -- keycodes[1] == "s"
         -- 94 = underscore
@@ -39,4 +40,5 @@ hs.hotkey.bind(
         -- hs.eventtap.event.newKeyEvent(hs.keycodes.map[104], true):post()
         -- hs.eventtap.event.newKeyEvent({}, hs.keycodes.map.kana, true):post()
         hs.notify.new({ title = "toggle Aerospace", informativeText = "toggle it sucessfully" }):send()
-    end)
+    end
+)

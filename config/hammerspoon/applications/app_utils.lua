@@ -1,5 +1,28 @@
+function Turn_off_Moonlander_light()
+    -- info
+    --   moonlander = "Moonlander Mark I"
+    --   moonlander = "Moonlander Mark I"
+    --    https://github.com/qmk/qmk_firmware
+    --    https://github.com/qmk/qmk_firmware
+    --    QK_BACKLIGHT_OFF
+    --    QK_BACKLIGHT_OFF
+    --    QK_BACKLIGHT_OFF = 0x7801,
+    --    QK_BACKLIGHT_OFF = 0x7801,
+
+    -- hs.eventtap.keyStroke({ "" }, "A")
+
+    -- local char_string = hs.utf8.codepointToUTF8(0x00C5)
+    -- hs.eventtap.keyStrokes(char_string)
+
+    -- local char_string = hs.utf8.codepointToUTF8(0x00A0)
+    -- local char_string = hs.utf8.codepointToUTF8(0x0005)
+    -- hs.eventtap.keyStrokes(char_string)
+
+    -- hs.brightness.keyboard(0)
+end
+
 function Run_Genymotion_VM()
-    hs.execute("killall ClashX" )
+    hs.execute("killall ClashX")
 
     local genymotion_folder = "/Volumes/MacGame/MacApps/current/Genymotion"
     local genymotion_vm_name = "e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926"
