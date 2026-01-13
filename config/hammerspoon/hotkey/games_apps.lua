@@ -195,7 +195,7 @@ function Play_Just_Cause_4()
 end
 
 function Play_Assassins_Creed_4_Black_Flag()
-    local app_name = "Assassins-Creed-IV-Black Flag"
+    local app_name = "Assassins Creed IV Black Flag"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
@@ -205,7 +205,7 @@ function Play_Assassins_Creed_4_Black_Flag()
 end
 
 function Play_Assassins_Creed_Rogue()
-    local app_name = "Assassins-creed-rogue"
+    local app_name = "Assassins creed rogue"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)

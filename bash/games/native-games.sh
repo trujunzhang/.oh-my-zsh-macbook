@@ -27,6 +27,12 @@ native_games_apps=(
     "re_chunk_*"
     "Contents/Resources"
     "open"
+
+    # Sniper Elite 4
+    "Sniper Elite 4"
+    "envs"
+    "Contents/Resources"
+    "open"
 )
 
 test_native_games_apps=(
@@ -47,8 +53,12 @@ function moving_game_from_source_to_dest() {
         success " Start to scan folder: <<${source_path}>>"
 
         for pathname in "${source_path}"/$pattern; do
+            if [ -d "$pathname" ]; then
+                info "   Start moving fold from: <<${pathname}>>"
+                mv "$pathname" "$dest_path"
+            fi
             if [ -f "$pathname" ]; then
-                info "   Start moving to: <<${pathname}>>"
+                info "   Start moving file from: <<${pathname}>>"
                 mv "$pathname" "$dest_path"
             fi
         done
