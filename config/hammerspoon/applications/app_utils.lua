@@ -1,3 +1,17 @@
+function Run_Genymotion_VM()
+    hs.execute("killall ClashX" )
+
+    local genymotion_folder = "/Volumes/MacGame/MacApps/current/Genymotion"
+    local genymotion_vm_name = "e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926"
+
+    hs.execute(
+        genymotion_folder
+            .. "/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/player --vm-name "
+            .. genymotion_vm_name
+            .. " --referer launchpad --no-update-check"
+    )
+end
+
 function OpenAndActiveBraveBrowser()
     hs.application.launchOrFocus("Brave Browser Nightly")
 

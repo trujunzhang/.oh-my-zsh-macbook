@@ -325,10 +325,21 @@ alias eas_Build_All='eas build --platform all'
 alias easUpdateConfigure='eas update:configure'
 
 # alias genymotion_app_folder="/Applications"
-alias genymotion_app_folder="/Volumes/MacGame/MacApps/current/Genymotion"
+# alias genymotion_app_folder="/Volumes/MacGame/MacApps/current/Genymotion"
+# alias genymotion_vm_name="Samsung Galaxy Note 3"
 
-# geny motion
-alias gmgeny="open -a $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'Samsung Galaxy Note 3'"
+# Geny motion
+# alias gmgeny="open -a $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'Samsung Galaxy Note 3'"
+
+function dmac_genymotion_vm_open
+    # "--vm-name", "e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926", "--referer", "launchpad", "--no-update-check"
+    # set genymotion_app_folder "/Applications"
+    set genymotion_app_folder /Volumes/MacGame/MacApps/current/Genymotion
+    # set genymotion_vm_name "Samsung Galaxy Note 3"
+    # set genymotion_vm_name e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926
+    # open -a $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/player --args --vm-name e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926 --referer launchpad --no-update-check
+    $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/player --vm-name e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926 --referer launchpad --no-update-check
+end
 
 function dmac_genymotion_local_network
     adb shell settings put global captive_portal_http_url https://www.google.cn/generate_204
@@ -364,7 +375,7 @@ end
 function ios_new_ieatta_iphone16plus
     set bundle 'com.ieatta.track.dev'
     set UUID $(xcrun simctl list devices | grep -m 1 'iPhone 16 Plus' |grep -E -o -i '([0-9a-f]{8}-([0-9a-f]{4}-){3}[0-9a-f]{12})')
-    echo "iphone 16 Plus<UUID>: $UUID"
+    echo "iphone 16 Plus <UUID >: $UUID"
 
     xcrun simctl shutdown all
     open -a Simulator --args -CurrentDeviceUDID $UUID
@@ -382,7 +393,7 @@ function android_new_ieatta_genymotion_stop
     adb shell am start -n com.ieatta.track.dev/com.ieatta.track.dev.MainActivity
 end
 
-alias androidopen="$ANDROID_SDK_ROOT/emulator/emulator -avd  genymotion"
+alias androidopen="$ANDROID_SDK_ROOT/emulator/emulator -avd genymotion"
 alias adb_restart="adb kill-server && adb start-server"
 alias adb_devices="adb devices"
 
@@ -519,7 +530,7 @@ alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 
 # nvm
-alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm  && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
+alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
 
 # supabase
 function supabase_gen
@@ -546,8 +557,8 @@ alias clsearch='lein search'
 # https://github.com/plexus/chemacs2
 alias emacsdoom="emacs --with-profile=doom"
 alias emacsspace="emacs --with-profile=spacemacs"
-alias etspace="echo 'spacemacs' > ~/.emacs-profile"
-alias etdoom="echo 'doom' > ~/.emacs-profile"
+alias etspace="echo spacemacs >~/.emacs-profile"
+alias etdoom="echo doom >~/.emacs-profile"
 alias edoominstall="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom install"
 alias edoomsync="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom sync"
 alias edoomdoctor="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom doctor"
@@ -571,7 +582,7 @@ alias yl4348="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/bes
 alias yl4954="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' --write-auto-sub --convert-subs=srt --playlist-start 49 --playlist-end 54"
 
 alias wydlcache="yt-dlp --rm-cache-dir"
-alias wdownyl="yt-dlp --rm-cache-dir && nohup ydlcron > /tmp/foo.out 2> /tmp/foo.err < /dev/null &"
+alias wdownyl="yt-dlp --rm-cache-dir && nohup ydlcron >/tmp/foo.out 2>/tmp/foo.err </dev/null & "
 
 alias wprocessyl="pgrep yt-dlp"
 alias wjobs="jobs -l"

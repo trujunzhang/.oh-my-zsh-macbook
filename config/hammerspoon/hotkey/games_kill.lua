@@ -23,5 +23,5 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "x", function()
     -- kill -9 $(ps aux | grep -E 'wine(64)?-preloader|wineserver' | awk '{print $2}')
 
     local app_name = "UNCHARTED.LoT.Collection.app"
-    hs.notify.new({ title = "kill the app: " .. app_name, informativeText = "run it sucessfully" }):send()
+    hs.notify.new({ title = "killing the app: " .. app_name, informativeText = "killed it sucessfully" }):send()
 end)

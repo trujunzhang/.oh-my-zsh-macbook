@@ -149,7 +149,7 @@ brew_apps_arm=(
 
     # "watchman" "watchman"
 
-    "android-platform-tools" "android-platform-tools"
+    # "android-platform-tools" "android-platform-tools"
 
     # for expensify app
     "yq" "yq"
@@ -157,8 +157,8 @@ brew_apps_arm=(
 
     # python on the asdf-vim
     # brew_install_app openssl
-    "readline" "readline"
-    "xz" "xz"
+    # "readline" "readline"
+    # "xz" "xz"
 
     # neovim
     "luarocks" "luarocks"
@@ -178,7 +178,7 @@ brew_apps_arm=(
     "ugit" "ugit"
     "neovide" "neovide"
 
-    "ruby@3.3" "ruby@3.3"
+    # "ruby@3.3" "ruby@3.3"
 
     # https://github.com/Muhammed770/hammerspoon-bluetooth-automation
     # "blueutil" "blueutil"
@@ -186,7 +186,7 @@ brew_apps_arm=(
     # asdf install ruby
     # psych:
     #         Could not be configured. It will not be installed.
-    "libyaml" "libyaml"
+    # "libyaml" "libyaml"
 )
 brew_apps_x86=(
     # "starship" "starship"
