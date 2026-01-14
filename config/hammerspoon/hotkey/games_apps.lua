@@ -366,8 +366,6 @@ function Play_Warcraft_3_The_Frozen_Throne()
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
     end)
-
-    -- ActiveWindow(10)
 end
 
 function Play_Battlefield_V()
@@ -378,4 +376,21 @@ function Play_Battlefield_V()
     end)
 
     ActiveWindow(50)
+end
+
+function Play_Sniper_Elite_4()
+    local app_name = "Sniper Elite 4"
+
+    hs.application.launchOrFocus(GamesFolder .. app_name .. ".app")
+    hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
+
+    hs.timer.doAfter(5, function()
+        ClickPrimaryScreenCenter(-150, 88)
+        hs.notify.new({ title = app_name, informativeText = "click 'cancel' button sucessfully" }):send()
+    end)
+
+    hs.timer.doAfter(8, function()
+        ClickPrimaryScreenCenter(-150, 88)
+        hs.notify.new({ title = app_name, informativeText = "click 'cancel' button sucessfully" }):send()
+    end)
 end

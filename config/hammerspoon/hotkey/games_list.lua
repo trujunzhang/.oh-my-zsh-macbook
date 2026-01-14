@@ -60,8 +60,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_Warcraft_3_The_Frozen_Throne()
     elseif tag == "Battlefield_V" then
         Play_Battlefield_V()
-    -- elseif tag == "" then
-    --     Play_Horizon_Zero_Dawn_Remastered()
+    elseif tag == "Sniper-Elite-4" then
+        Play_Sniper_Elite_4()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -154,10 +154,10 @@ local menus = {
         ["text"] = "Battlefield V(-V)",
         ["tag"] = "Battlefield_V",
     },
-    -- {
-    --     ["text"] = "",
-    --     ["tag"] = "",
-    -- },
+    {
+        ["text"] = "Sniper Elite 4(-E)",
+        ["tag"] = "Sniper-Elite-4",
+    },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",

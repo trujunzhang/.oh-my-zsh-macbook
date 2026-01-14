@@ -200,12 +200,14 @@ set --erase _asdf_shims
 set -g -x PIP_REQUIRE_VIRTUALENV true
 
 if test "$(uname -m)" = arm64
-    # >>> mamba initialize >>>
-    # !! Contents within this block are managed by 'mamba shell init' !!
-    set -gx MAMBA_EXE "$HOMEBREW_PREFIX/opt/micromamba/bin/mamba"
-    set -gx MAMBA_ROOT_PREFIX "$HOME/mamba"
-    $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
-    # <<< mamba initialize <<<
+    if [ -d $HOMEBREW_PREFIX/opt/micromamba ]
+        # >>> mamba initialize >>>
+        # !! Contents within this block are managed by 'mamba shell init' !!
+        set -gx MAMBA_EXE "$HOMEBREW_PREFIX/opt/micromamba/bin/mamba"
+        set -gx MAMBA_ROOT_PREFIX "$HOME/mamba"
+        $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+        # <<< mamba initialize <<<
+    end
 end
 
 if test "$(uname -m)" = x86_64
