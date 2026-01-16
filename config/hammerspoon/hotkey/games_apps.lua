@@ -194,6 +194,25 @@ function Play_Just_Cause_4()
     ActiveWindow()
 end
 
+function Play_Assassin_Creed_Brotherhood()
+    local app_name = "Assassin Creed Brotherhood"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(50)
+end
+
+function Play_Assassins_Creed_Unity()
+    local app_name = "Assassins Creed Unity"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(50)
+end
 function Play_Assassins_Creed_4_Black_Flag()
     local app_name = "Assassins Creed IV Black Flag"
 
@@ -393,4 +412,28 @@ function Play_Sniper_Elite_4()
         ClickPrimaryScreenCenter(-150, 88)
         hs.notify.new({ title = app_name, informativeText = "click 'cancel' button sucessfully" }):send()
     end)
+end
+
+function Play_Alone_in_the_Dark()
+    -- "C:\Games\Alone in the Dark\AloneInTheDark.exe" -DX12
+    -- "C:\Games\Alone in the Dark\AloneInTheDark.exe" -DX12
+    -- "C:\Games\Alone in the Dark\AloneInTheDark.exe" -DX12
+
+    local app_name = "Alone in the Dark"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(50)
+end
+
+function Play_Kingdom_Come_Deliverance()
+    local app_name = "Kingdom Come Deliverance"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(50)
 end

@@ -62,6 +62,20 @@ local chooser = hs.chooser.new(function(choice)
         Play_Battlefield_V()
     elseif tag == "Sniper-Elite-4" then
         Play_Sniper_Elite_4()
+    elseif tag == "Alone-in-the-Dark" then
+        Play_Alone_in_the_Dark()
+    elseif tag == "Kingdom-Come-Deliverance" then
+        Play_Kingdom_Come_Deliverance()
+    elseif tag == "Assassin-Creed-Brotherhood" then
+        Play_Assassin_Creed_Brotherhood()
+    elseif tag == "Assassins-Creed-Unity" then
+        Play_Assassins_Creed_Unity()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -78,18 +92,18 @@ local chooser = hs.chooser.new(function(choice)
 end)
 
 local menus = {
-    {
-        ["text"] = "Star Wars Jedi Fallen Order(-F)",
-        ["tag"] = "Star-Wars-Jedi-Fallen-Order",
-    },
+    -- {
+    --     ["text"] = "Star Wars Jedi Fallen Order(-F)",
+    --     ["tag"] = "Star-Wars-Jedi-Fallen-Order",
+    -- },
     {
         ["text"] = "Horizon Zero Dawn(-D)",
         ["tag"] = "Horizon-Zero-Dawn",
     },
-    {
-        ["text"] = "Red Dead Redemption 2(-R)",
-        ["tag"] = "Red-Dead-Redemption-2",
-    },
+    -- {
+    --     ["text"] = "Red Dead Redemption 2(-R)",
+    --     ["tag"] = "Red-Dead-Redemption-2",
+    -- },
     -- {
     --     ["text"] = "The Last of Us Part I(-)",
     --     ["tag"] = "The-Last-of-Us-Part-I",
@@ -98,10 +112,10 @@ local menus = {
     --     ["text"] = "The Last of Us Part II(-)",
     --     ["tag"] = "The-Last-of-Us-Part-II",
     -- },
-    {
-        ["text"] = "Marvel Spider-Man Remastered(-S)",
-        ["tag"] = "Marvel-Spider-Man-Remastered",
-    },
+    -- {
+    --     ["text"] = "Marvel Spider-Man Remastered(-S)",
+    --     ["tag"] = "Marvel-Spider-Man-Remastered",
+    -- },
     {
         ["text"] = "Ghost of Tsushima(-T)",
         ["tag"] = "Ghost-of-Tsushima",
@@ -111,12 +125,20 @@ local menus = {
     --     ["tag"] = "Just-Cause-4",
     -- },
     {
+        ["text"] = "Assassin Creed Brotherhood(-B)",
+        ["tag"] = "Assassin-Creed-Brotherhood",
+    },
+    {
         ["text"] = "Assassins-Creed-IV-Black Flag(-4)",
         ["tag"] = "Assassins-Creed-IV-Black-Flag",
     },
     {
         ["text"] = "Assassins-creed-rogue(-5)",
         ["tag"] = "Assassins-creed-rogue",
+    },
+    {
+        ["text"] = "Assassins Creed Unity(-U)",
+        ["tag"] = "Assassins-Creed-Unity",
     },
     -- {
     --     ["text"] = "Assassins Creed Syndicate(-A)",
@@ -126,10 +148,10 @@ local menus = {
     --     ["text"] = "Assassins Creed Origins(-)",
     --     ["tag"] = "Assassins-Creed-Origins",
     -- },
-    {
-        ["text"] = "Assassins Creed Mirage(-C)",
-        ["tag"] = "Assassins-Creed-Mirage",
-    },
+    -- {
+    --     ["text"] = "Assassins Creed Mirage(-C)",
+    --     ["tag"] = "Assassins-Creed-Mirage",
+    -- },
     {
         ["text"] = "Need for Speed Heat(-3)",
         ["tag"] = "Need-for-Speed-Heat",
@@ -138,10 +160,10 @@ local menus = {
     --     ["text"] = "Need_for_Speed_Payback(-)",
     --     ["tag"] = "Need-for-Speed-Payback",
     -- },
-    {
-        ["text"] = "Silent Hill 2(-S)",
-        ["tag"] = "Silent-Hill-2",
-    },
+    -- {
+    --     ["text"] = "Silent Hill 2(-S)",
+    --     ["tag"] = "Silent-Hill-2",
+    -- },
     {
         ["text"] = "Grand Theft Auto V(-G)",
         ["tag"] = "Grand-Theft-Auto-V",
@@ -158,6 +180,18 @@ local menus = {
         ["text"] = "Sniper Elite 4(-E)",
         ["tag"] = "Sniper-Elite-4",
     },
+    -- {
+    --     ["text"] = "Alone in the Dark(-A)",
+    --     ["tag"] = "Alone-in-the-Dark",
+    -- },
+    {
+        ["text"] = "Kingdom Come Deliverance(-K)",
+        ["tag"] = "Kingdom-Come-Deliverance",
+    },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",
