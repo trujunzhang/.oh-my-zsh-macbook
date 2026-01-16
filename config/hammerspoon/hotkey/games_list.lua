@@ -70,8 +70,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_Assassin_Creed_Brotherhood()
     elseif tag == "Assassins-Creed-Unity" then
         Play_Assassins_Creed_Unity()
-    -- elseif tag == "" then
-    --     Play_Horizon_Zero_Dawn_Remastered()
+    elseif tag == "Crysis-3-Remasted" then
+        Play_Crysis_3_Remasted()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -188,10 +188,10 @@ local menus = {
         ["text"] = "Kingdom Come Deliverance(-K)",
         ["tag"] = "Kingdom-Come-Deliverance",
     },
-    -- {
-    --     ["text"] = "",
-    --     ["tag"] = "",
-    -- },
+    {
+        ["text"] = "Crysis 3 Remasted(-C)",
+        ["tag"] = "Crysis-3-Remasted",
+    },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",

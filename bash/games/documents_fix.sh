@@ -4,6 +4,13 @@ CURRENT_USER_DOCUMENTS_PATH="/Volumes/MacUser/djzhang/Documents"
 USER_DOCUMENTS_DEFAULT_PATH="/Volumes/MacOS/Users/djzhang/Documents"
 
 function link_games_save_location_path() {
+
+    # Assassin's Creed IV Black Flag
+    directoryLink "game(Assassin's Creed IV Black Flag)" "$CURRENT_USER_DOCUMENTS_PATH/Assassin's Creed IV Black Flag" "$USER_DOCUMENTS_DEFAULT_PATH/Assassin's Creed IV Black Flag"
+
+    # Assassin's Creed Unity
+    directoryLink "game(Assassin's Creed Unity)" "$CURRENT_USER_DOCUMENTS_PATH/Assassin's Creed Unity" "$USER_DOCUMENTS_DEFAULT_PATH/Assassin's Creed Unity"
+
     # Assassin's Creed Origins
     directoryLink "game(Assassin's Creed Origins)" "$CURRENT_USER_DOCUMENTS_PATH/Assassin's Creed Origins" "$USER_DOCUMENTS_DEFAULT_PATH/Assassin's Creed Origins"
     directoryLink "game(Assassin's Creed Origins)" "$CURRENT_USER_DOCUMENTS_PATH/CPY_SAVES" "$USER_DOCUMENTS_DEFAULT_PATH/CPY_SAVES"
