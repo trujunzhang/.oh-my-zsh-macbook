@@ -119,13 +119,13 @@ function Play_The_Witcher_3_Wild_Hunt()
 end
 
 function Play_Crysis_3_Remasted()
-    local app_name = "Crysis 3 Remasted"
+    local app_name = "Crysis 3 Remastered"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(120)
+    ActiveWindow()
 end
 
 function Play_Crysis_2_Remastered()

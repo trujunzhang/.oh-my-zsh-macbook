@@ -17,6 +17,13 @@ set -g -x ANDROID_USER_HOME "$HOME/Library/Android/sdk"
 set -g -x REACT_NATIVE_DOWNLOADS_DIR "$HOME/.local/RN_DOWNLOADS"
 set -g -x ACT_BINARY "$HOME/.local/bin/act"
 
+# Wine
+#export PATH="/Applications/Wine Staging.app/Contents/Resources/wine/bin:$PATH"
+#export PATH="/Applications/Wine Devel.app/Contents/Resources/wine/bin:$PATH"
+export PATH="/Applications/Wine Stable.app/Contents/Resources/wine/bin:$PATH"
+export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
+export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib:/opt/X11/lib:$DYLD_FALLBACK_LIBRARY_PATH"
+
 # Playing games on the crossover platform
 set -g -x ROSETTA_ADVERTISE_AVX 1
 

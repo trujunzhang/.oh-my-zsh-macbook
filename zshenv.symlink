@@ -1,12 +1,11 @@
-
 export DOTFILES=$HOME/.dotfiles
 export CONFIGDIR="$HOME/.config"
 export LOCALDIR="$HOME/.local"
 export CACHEDIR="$HOME/.local/share"
 
 [[ -d "$CONFIGDIR" ]] || mkdir -p "$CONFIGDIR"
-[[ -d "$LOCALDIR" ]]  || mkdir -p "$LOCALDIR"
-[[ -d "$CACHEDIR" ]]  || mkdir -p "$CAHCEDIR"
+[[ -d "$LOCALDIR" ]] || mkdir -p "$LOCALDIR"
+[[ -d "$CACHEDIR" ]] || mkdir -p "$CAHCEDIR"
 
 export EDITOR='nvim'
 export GIT_EDITOR='nvim'
@@ -89,7 +88,6 @@ export PATH="$HOME/bin:$PATH"
 # ************************************
 # source activate 2.7.11
 
-
 # djzhang's bin
 # ======================================================================
 export PATH="$PATH:$HOME/.local/bin"
@@ -144,8 +142,8 @@ export EDITOR="$VISUAL"
 # END set common environment variables #######################################
 
 # BEGIN run on shell startup ###################################################
-if ( hash tmux 2>/dev/null ) && [ $TERM != "screen-256color" ]; then
-  tmux attach || tmux new
+if (hash tmux 2>/dev/null) && [ $TERM != "screen-256color" ]; then
+    tmux attach || tmux new
 fi
 
 # rvm
@@ -174,9 +172,9 @@ if [[ -d '$HOME/.asdf' ]]; then
 fi
 
 if [[ $(uname -m) == 'arm64' ]]; then
-  # echo M2
-  export ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
-  # export HOMEBREW_HOME="/opt/homebrew"
+    # echo M2
+    export ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
+    # export HOMEBREW_HOME="/opt/homebrew"
 fi
 
 if [[ $(uname -m) == 'x86_64' ]]; then
@@ -190,6 +188,11 @@ export HOMEBREW_HOME="not found"
 export TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 
 alias dcd_home="cd ${TRUJUNZHANG_DOTFILES_HOME}"
+
+alias dmac_first_unzip='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
+alias dmac_second_unzip='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'
+
+alias dmac_install_rosetta="softwareupdate --install-rosetta"
 
 #nix
 alias dnix_build_default='darwin-rebuild switch --option http2 false --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal'
@@ -205,18 +208,17 @@ alias dnix_bin="ls -la /etc/profiles/per-user/djzhang/bin"
 alias dnix_install_nix_darwin='sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.bak && nix run nix-darwin -- switch --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"'
 alias dnix_uninstall_nix_darwin="nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller && ./result/bin/darwin-uninstaller"
 
-
 if [[ $(command -v brew) == "" ]]; then
     # echo "Homebrew is not installed"
     export HOMEBREW_HOME="not found"
 else
 
-     export HOMEBREW_HOME="$(brew --prefix)"
+    export HOMEBREW_HOME="$(brew --prefix)"
 
     if [[ $(uname -m) == 'arm64' ]]; then
-      # echo M2
-      # Adding this to my .zshrc solved the problem on a machine with Apple M2 CPU:
-      eval $(/opt/homebrew/bin/brew shellenv)
+        # echo M2
+        # Adding this to my .zshrc solved the problem on a machine with Apple M2 CPU:
+        eval $(/opt/homebrew/bin/brew shellenv)
     fi
 
     # autojump
@@ -227,11 +229,9 @@ else
 
     if [[ $(uname -m) == 'x86_64' ]]; then
         # echo Mackook
-        [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+        [[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
     fi
 fi
-
-
 
 # macvim
 # alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
@@ -248,12 +248,11 @@ export LT_HOME="$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/lighttable"
 
 # Add paths to PATH.
 if [[ -f '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]]; then
-  source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-  source '/nix/var/nix/profiles/default/etc/profile.d/nix.sh'
-  export NIX_PATH="$HOME/.nix-defexpr"
+    source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+    source '/nix/var/nix/profiles/default/etc/profile.d/nix.sh'
+    export NIX_PATH="$HOME/.nix-defexpr"
 fi
 
-
 if [[ -d '$HOME/.cargo' ]]; then
-. "$HOME/.cargo/env"
+    . "$HOME/.cargo/env"
 fi

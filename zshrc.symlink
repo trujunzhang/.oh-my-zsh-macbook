@@ -72,6 +72,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(trujunzhang autojump git fzf-tab fzf brew nvm history pyenv vscode zsh-autosuggestions zsh-syntax-highlighting web-search)
+# plugins=(trujunzhang git history vscode asdf)
 plugins=(trujunzhang git history vscode asdf)
 
 zstyle ':omz:plugins:nvm' lazy yes
