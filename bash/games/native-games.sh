@@ -33,9 +33,28 @@ native_games_apps=(
     "envs"
     "Contents/Resources"
     "open"
+
+    # Assassin's Creed Shadows
+    "Assassin's Creed Shadows"
+    "dlc_20"
+    "Contents/Resources"
+    "ignore"
+
+    # Assassin's Creed Shadows
+    "Assassin's Creed Shadows"
+    "videos"
+    "Contents/Resources"
+    "ignore"
+
+    # Assassin's Creed Shadows
+    "Assassin's Creed Shadows"
+    "*.forge"
+    "Contents/Resources"
+    "open"
 )
 
 test_native_games_apps=(
+
 )
 
 function moving_game_from_source_to_dest() {

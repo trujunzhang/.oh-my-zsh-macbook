@@ -125,7 +125,7 @@ function Play_Crysis_3_Remasted()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(20)
 end
 
 function Play_Crysis_2_Remastered()
@@ -181,7 +181,7 @@ function Play_Horizon_Zero_Dawn_Remastered()
     -- title: "Horizon Zero Dawn™ Remastered",
     -- Close_Active_Window("Horizon Zero Dawn", "ok", 35, "true")
 
-    ActiveWindow()
+    ActiveWindow(30)
 end
 
 function Play_Just_Cause_4()
@@ -191,7 +191,7 @@ function Play_Just_Cause_4()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(25)
 end
 
 function Play_Assassin_Creed_Brotherhood()
@@ -201,7 +201,7 @@ function Play_Assassin_Creed_Brotherhood()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(50)
+    ActiveWindow(20)
 end
 
 function Play_Assassins_Creed_Unity()
@@ -214,7 +214,7 @@ function Play_Assassins_Creed_Unity()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(50)
+    ActiveWindow(20)
 end
 function Play_Assassins_Creed_4_Black_Flag()
     local app_name = "Assassins Creed IV Black Flag"
@@ -223,17 +223,17 @@ function Play_Assassins_Creed_4_Black_Flag()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(20)
 end
 
 function Play_Assassins_Creed_Rogue()
-    local app_name = "Assassins creed rogue"
+    local app_name = "Assassins Creed Rogue"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(30)
 end
 
 function Play_Assassins_Creed_Syndicate()
@@ -248,7 +248,7 @@ function Play_Assassins_Creed_Syndicate()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(20)
 end
 
 function Play_Assassins_Creed_Origins()
@@ -262,7 +262,7 @@ function Play_Assassins_Creed_Origins()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(20)
 end
 
 function Play_Assassins_Creed_Mirage()
@@ -274,7 +274,7 @@ function Play_Assassins_Creed_Mirage()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(20)
 end
 
 function Play_Batman_Arkham_Knight()
@@ -302,17 +302,17 @@ function Play_Need_for_Speed_Heat()
 end
 
 function Play_Need_for_Speed_Payback()
-    local app_name = "Need_for_Speed_Payback"
+    local app_name = "Need for Speed Payback"
 
     -- turn off aerospace
     -- app: "Need_for_Speed_Payback"
-    TurnOffAerospace()
+    -- TurnOffAerospace()
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(30)
 end
 
 -- export D3DM_ENABLE_METALFX=1
@@ -364,7 +364,7 @@ function Play_Grand_Theft_Auto_V()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(50)
+    ActiveWindow(30)
 end
 
 function Play_Star_Wars_Jedi_Fallen_Order()
@@ -374,7 +374,7 @@ function Play_Star_Wars_Jedi_Fallen_Order()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(50)
+    ActiveWindow(30)
 end
 
 function Play_Warcraft_3_The_Frozen_Throne()
@@ -397,7 +397,7 @@ function Play_Battlefield_V()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(50)
+    ActiveWindow(30)
 end
 
 function Play_Sniper_Elite_4()
@@ -438,5 +438,5 @@ function Play_Kingdom_Come_Deliverance()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(50)
+    ActiveWindow(30)
 end

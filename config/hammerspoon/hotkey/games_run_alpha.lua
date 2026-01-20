@@ -24,7 +24,7 @@ hs.hotkey.bind(GameHotkeyMods, "W", Play_Warcraft_3_The_Frozen_Throne)
 hs.hotkey.bind(GameHotkeyMods, "V", Play_Battlefield_V)
 
 hs.hotkey.bind(GameHotkeyMods, "E", Play_Sniper_Elite_4)
-hs.hotkey.bind(GameHotkeyMods, "A", Play_Alone_in_the_Dark)
+-- hs.hotkey.bind(GameHotkeyMods, "A", Play_Alone_in_the_Dark)
 hs.hotkey.bind(GameHotkeyMods, "K", Play_Kingdom_Come_Deliverance)
 
 hs.hotkey.bind(GameHotkeyMods, "C", Play_Crysis_3_Remasted)

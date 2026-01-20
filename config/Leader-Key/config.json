@@ -285,6 +285,11 @@
           "key" : "b",
           "type" : "application",
           "value" : "/Volumes/MacGame/AppGames/RESIDENT EVIL 7 biohazard.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/Assassin's Creed Shadows.app"
         }
       ],
       "key" : "g",

@@ -95,6 +95,8 @@ function Check_And_Run_KegworksApp(appName)
     local currentName = appName
     local tmp1 = check_app_existed("10", appName)
     local tmp2 = check_app_existed("whiskey", appName)
+    local tmp3 = check_app_existed("103", appName)
+    local tmp4 = check_app_existed("2477", appName)
 
     if DoesDirectoryExist(KegworksGames .. appName) then
         currentName = appName
@@ -102,6 +104,10 @@ function Check_And_Run_KegworksApp(appName)
         currentName = tmp1
     elseif DoesDirectoryExist(KegworksGames .. tmp2) then
         currentName = tmp2
+    elseif DoesDirectoryExist(KegworksGames .. tmp3) then
+        currentName = tmp3
+    elseif DoesDirectoryExist(KegworksGames .. tmp4) then
+        currentName = tmp4
     end
 
     hs.printf("%s = %s", "new_name_prefix:", currentName)

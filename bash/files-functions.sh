@@ -4,7 +4,7 @@ source ./bash/shellUtils.sh
 
 DEFAULTACTION="ignore"
 
-function  directoryLink {
+function directoryLink {
 
     msg=$1
     src=$2
@@ -25,21 +25,18 @@ function  directoryLink {
         fi
     fi
 
-    if [ -d "${dest}" ]
-    then
-        error "Directory already exist. ${msg}"
+    if [ -d "${dest}" ]; then
+        error "Directory already exist, ${msg}"
     else
-        if [ -d "${src}" ]
-        then
-            ln -s "${src}"  "${dest}"
-            success "Directory does not exist. ${msg}"
+        if [ -d "${src}" ]; then
+            ln -s "${src}" "${dest}"
+            success "Directory does not exist, ${msg}"
         fi
     fi
 
 }
 
-
-function  fileLink {
+function fileLink {
 
     msg=$1
     src=$2
@@ -60,14 +57,12 @@ function  fileLink {
         fi
     fi
 
-    if [ -f "${dest}" ]
-    then
-        error "File already exist. ${msg}"
+    if [ -f "${dest}" ]; then
+        error "File already exist, ${msg}"
     else
-        if [ -f "${src}" ]
-        then
-            ln -s "${src}"  "${dest}"
-            success "File does not exist. ${msg}"
+        if [ -f "${src}" ]; then
+            ln -s "${src}" "${dest}"
+            success "File does not exist, ${msg}"
         fi
     fi
 

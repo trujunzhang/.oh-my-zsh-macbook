@@ -1,3 +1,11 @@
+function Send_Keys_With_Hotmail()
+    hs.eventtap.keyStrokes("trujunzhang@hotmail.com")
+end
+
+function Send_Keys_With_Password()
+    hs.eventtap.keyStrokes("wanghaoDJZ@720")
+end
+
 function Turn_off_Moonlander_light()
     -- info
     --   moonlander = "Moonlander Mark I"

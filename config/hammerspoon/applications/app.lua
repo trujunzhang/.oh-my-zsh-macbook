@@ -5,6 +5,9 @@ hs.hotkey.bind(GameHotkeyMods, "9", Kill_App_Clashx)
 
 hs.hotkey.bind(GameHotkeyMods, "0", Turn_off_Moonlander_light)
 
+hs.hotkey.bind(GameHotkeyMods, "Q", Send_Keys_With_Hotmail)
+hs.hotkey.bind(GameHotkeyMods, "A", Send_Keys_With_Password)
+
 hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", RunTerminalEscape)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "A", RunToggleAerospace)
@@ -25,12 +28,10 @@ hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "V", function()
     -- hs.notify.new({ title = "Visual Studio Code", informativeText = "run it sucessfully" }):send()
 end)
 
-hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "W", function()
-    hs.application.launchOrFocus(TerminalApp)
-    -- hs.notify.new({ title = "WezTerm", informativeText = "run it sucessfully" }):send()
-end)
+-- hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "W", function()
+--     hs.application.launchOrFocus(TerminalApp)
+-- end)
 
 hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "G", function()
     hs.application.launchOrFocus(TerminalApp)
-    -- hs.notify.new({ title = "Ghostty", informativeText = "run it sucessfully" }):send()
 end)
