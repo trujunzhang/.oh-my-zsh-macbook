@@ -163,6 +163,8 @@ restore_kegworks_games() {
         my_global_result="$game_name"
 
         check_app_existed "10" "$game_name"
+        check_app_existed "103" "$game_name"
+        check_app_existed "2477" "$game_name"
         check_app_existed "whiskey" "$game_name"
 
         if [ -d "$KegworksGames_Folder/${my_global_result}.app" ]; then

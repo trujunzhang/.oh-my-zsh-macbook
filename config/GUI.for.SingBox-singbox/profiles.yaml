@@ -1,5 +1,5 @@
-- id: ID_pdwy8g27
-  name: myclash.top
+- id: ID_ri8yoe68
+  name: trujunzhang-singbox
   log:
     disabled: false
     level: info
@@ -11,7 +11,7 @@
       external_ui: ""
       external_ui_download_url: ""
       external_ui_download_detour: outbound-direct
-      secret: 53f6fae179b937fda49a623e0ac5271976a9f60a25b1becef842940202a60da3
+      secret: 449c1b8b2296725f28610efa133cc9c107e098e90a0a78a54d0754fefe2e176d
       default_mode: rule
       access_control_allow_origin:
         - "*"
@@ -19,7 +19,7 @@
     cache_file:
       enabled: true
       path: cache.db
-      cache_id: ""
+      cache_id: ID_bembhfsy
       store_fakeip: true
       store_rdrc: true
       rdrc_timeout: 7d
@@ -31,7 +31,7 @@
       mixed:
         listen:
           listen: 127.0.0.1
-          listen_port: 1234
+          listen_port: 20122
           tcp_fast_open: false
           tcp_multi_path: false
           udp_fragment: false
@@ -45,7 +45,7 @@
         address:
           - 172.18.0.1/30
           - fdfe:dcba:9876::1/126
-        mtu: 9000
+        mtu: 0
         auto_route: true
         strict_route: true
         route_address: []
@@ -60,8 +60,8 @@
         - id: outbound-urlte
           type: Built-in
           tag: 🎈 Auto
-        - id: ID_5bo80cd6
-          tag: ID_5bo80cd6
+        - id: ID_bsfu9nmq
+          tag: ID_bsfu9nmq
           type: Subscription
       interrupt_exist_connections: true
       url: ""
@@ -73,8 +73,8 @@
       tag: 🎈 Auto
       type: urltest
       outbounds:
-        - id: ID_5bo80cd6
-          tag: ID_5bo80cd6
+        - id: ID_bsfu9nmq
+          tag: ID_bsfu9nmq
           type: Subscription
       interrupt_exist_connections: true
       url: https://www.gstatic.com/generate_204
@@ -84,8 +84,30 @@
       exclude: ""
     - id: outbound-direct
       tag: 🎯 Direct
-      type: direct
-      outbounds: []
+      type: selector
+      outbounds:
+        - id: direct
+          type: Built-in
+          tag: direct
+        - id: block
+          type: Built-in
+          tag: block
+      interrupt_exist_connections: true
+      url: ""
+      interval: 3m
+      tolerance: 150
+      include: ""
+      exclude: ""
+    - id: outbound-block
+      tag: 🛑 Block
+      type: selector
+      outbounds:
+        - id: block
+          type: Built-in
+          tag: block
+        - id: direct
+          type: Built-in
+          tag: direct
       interrupt_exist_connections: true
       url: ""
       interval: 3m
@@ -121,6 +143,9 @@
         - id: outbound-direct
           type: Built-in
           tag: 🎯 Direct
+        - id: outbound-block
+          type: Built-in
+          tag: 🛑 Block
         - id: outbound-fallback
           type: Built-in
           tag: 🐟 Fallback
@@ -132,17 +157,19 @@
       exclude: ""
   route:
     rules:
-      - id: ID_i2jorf6k
+      - id: ID_j4r2gbdr
         type: inbound
         payload: tun-in
+        enable: true
         invert: false
         action: sniff
         outbound: ""
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_2cdr9qy9
+      - id: ID_26zgwdm8
         type: protocol
+        enable: true
         payload: dns
         invert: false
         action: hijack-dns
@@ -150,17 +177,19 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_mvgx1a64
+      - id: ID_3wf13spo
         type: clash_mode
         payload: direct
+        enable: true
         invert: false
         action: route
         outbound: outbound-direct
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_d7lpq78l
+      - id: ID_tojo6w2p
         type: clash_mode
+        enable: true
         payload: global
         invert: false
         action: route
@@ -168,8 +197,19 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_gthkwao2
+      - id: InsertionPoint
+        type: InsertionPoint
+        enable: true
+        payload: ""
+        invert: false
+        action: route
+        outbound: ""
+        sniffer: []
+        strategy: default
+        server: ""
+      - id: ID_zdnlxwj4
         type: network
+        enable: true
         payload: icmp
         invert: false
         action: route
@@ -177,26 +217,29 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_3j4q5flu
+      - id: ID_skv0x0zu
         type: protocol
+        enable: true
         payload: quic
         invert: false
-        action: reject
-        outbound: ""
+        action: route
+        outbound: outbound-block
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_kgucds5y
+      - id: ID_rsl0trvq
         type: rule_set
+        enable: true
         payload: Category-Ads
         invert: false
-        action: reject
-        outbound: ""
+        action: route
+        outbound: outbound-block
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_vk8tvfqw
+      - id: ID_zfu0l4ne
         type: rule_set
+        enable: true
         payload: GeoSite-Private
         invert: false
         action: route
@@ -204,8 +247,9 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_waw6t0if
+      - id: ID_y4f7u88q
         type: rule_set
+        enable: true
         payload: GeoSite-CN
         invert: false
         action: route
@@ -213,8 +257,9 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_akdfmcgv
+      - id: ID_akayywyi
         type: rule_set
+        enable: true
         payload: GeoIP-Private
         invert: false
         action: route
@@ -222,8 +267,9 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_iex3zcr1
+      - id: ID_qkr0kil5
         type: rule_set
+        enable: true
         payload: GeoIP-CN
         invert: false
         action: route
@@ -231,8 +277,9 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_4i6q2tak
+      - id: ID_3yobdysh
         type: rule_set
+        enable: true
         payload: GeoLocation-!CN
         invert: false
         action: route
@@ -304,6 +351,19 @@
       client_subnet: ""
   dns:
     servers:
+      - id: Fake-IP
+        tag: Fake-IP
+        detour: ""
+        type: fakeip
+        domain_resolver: ""
+        server: ""
+        server_port: ""
+        path: ""
+        interface: ""
+        inet4_range: 198.18.0.0/15
+        inet6_range: fc00::/18
+        hosts_path: []
+        predefined: {}
       - id: Local-DNS
         tag: Local-DNS
         detour: ""
@@ -357,8 +417,9 @@
         hosts_path: []
         predefined: {}
     rules:
-      - id: ID_hzfroe5n
+      - id: ID_2m7tmknl
         type: clash_mode
+        enable: true
         payload: direct
         action: route
         server: Local-DNS
@@ -366,8 +427,9 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_d29sqv9b
+      - id: ID_4oygezox
         type: clash_mode
+        enable: true
         payload: global
         action: route
         server: Remote-DNS
@@ -375,8 +437,19 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_pkbtrc0g
+      - id: InsertionPoint
+        type: InsertionPoint
+        enable: true
+        payload: ""
+        action: route
+        server: ""
+        invert: false
+        strategy: default
+        disable_cache: false
+        client_subnet: ""
+      - id: ID_iy27olwk
         type: rule_set
+        enable: true
         payload: GeoSite-CN
         action: route
         server: Local-DNS
@@ -384,8 +457,47 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_o2o7w25i
+      - id: ID_4qk81nn7
+        type: inline
+        enable: false
+        payload: |-
+          {
+            "__is_fake_ip": true,
+            "type": "logical",
+            "mode": "and",
+            "rules": [
+              {
+                "domain_suffix": [
+                  ".lan",
+                  ".localdomain",
+                  ".example",
+                  ".invalid",
+                  ".localhost",
+                  ".test",
+                  ".local",
+                  ".home.arpa",
+                  ".msftconnecttest.com",
+                  ".msftncsi.com"
+                ],
+                "invert": true
+              },
+              {
+                "query_type": [
+                  "A",
+                  "AAAA"
+                ]
+              }
+            ]
+          }
+        action: route
+        server: Fake-IP
+        invert: false
+        strategy: default
+        disable_cache: false
+        client_subnet: ""
+      - id: ID_4yhk2ggy
         type: rule_set
+        enable: true
         payload: GeoLocation-!CN
         action: route
         server: Remote-DNS

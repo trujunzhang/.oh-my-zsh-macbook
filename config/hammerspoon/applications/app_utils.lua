@@ -3,7 +3,7 @@ function Send_Keys_With_Hotmail()
 end
 
 function Send_Keys_With_Password()
-    hs.eventtap.keyStrokes("wanghaoDJZ@720")
+    hs.eventtap.keyStrokes("wanghao@DJZ720")
 end
 
 function Turn_off_Moonlander_light()
@@ -51,7 +51,7 @@ function OpenAndActiveBraveBrowser()
 
         local myApp = hs.application.applicationsForBundleID("com.brave.Browser.nightly")[1]
         local focusedAppWindow = myApp:focusedWindow()
-        ClickActiveWindow(focusedAppWindow, 0, 55)
+        ClickActiveWindow(focusedAppWindow, 0, 70)
         hs.eventtap.keyStroke({ "" }, "space", myApp)
     end)
 

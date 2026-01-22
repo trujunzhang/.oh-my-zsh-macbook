@@ -1,0 +1,76 @@
+- id: ID_bsfu9nmq
+  name: trujunzhang-singbox
+  upload: 0
+  download: 0
+  total: 0
+  expire: null
+  updateTime: 1769046148145
+  type: Manual
+  url: ""
+  website: ""
+  path: data/subscribes/ID_bsfu9nmq.json
+  include: ""
+  exclude: ""
+  includeProtocol: ""
+  excludeProtocol: direct|reject|selector|urltest|block|dns|shadowsocksr
+  proxyPrefix: ""
+  disabled: false
+  inSecure: false
+  requestMethod: GET
+  requestTimeout: 15
+  header:
+    request: {}
+    response: {}
+  proxies:
+    - id: ID_xqwpgztv
+      tag: CF官方优选
+      type: vless
+    - id: ID_d1sn9rt2
+      tag: CF官方优选 2
+      type: vless
+    - id: ID_edhsb0jz
+      tag: CF官方优选 3
+      type: vless
+    - id: ID_bu3ybx18
+      tag: CF官方优选 4
+      type: vless
+    - id: ID_ax4088xe
+      tag: CF官方优选 5
+      type: vless
+    - id: ID_lijlavd5
+      tag: CF官方优选 6
+      type: vless
+    - id: ID_bz9dr1fc
+      tag: CF官方优选 7
+      type: vless
+    - id: ID_74ayfl3z
+      tag: CF官方优选 8
+      type: vless
+    - id: ID_s9l89a9x
+      tag: CF官方优选 9
+      type: vless
+    - id: ID_nhsm8azl
+      tag: CF官方优选 10
+      type: vless
+    - id: ID_l9hyei9x
+      tag: CF官方优选 11
+      type: vless
+    - id: ID_h3s0ff2f
+      tag: CF官方优选 12
+      type: vless
+    - id: ID_mr6houkl
+      tag: CF官方优选 13
+      type: vless
+    - id: ID_0jw5g02h
+      tag: CF官方优选 14
+      type: vless
+    - id: ID_zujujwlq
+      tag: CF官方优选 15
+      type: vless
+    - id: ID_5kr602dx
+      tag: CF官方优选 16
+      type: vless
+  script: |-
+    const onSubscribe = async (proxies, subscription) => {
+      return { proxies, subscription }
+    }

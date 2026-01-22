@@ -201,7 +201,8 @@ function Play_Assassin_Creed_Brotherhood()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(20)
+    local brotherhood_times = 30
+    ActiveWindow(brotherhood_times)
 end
 
 function Play_Assassins_Creed_Unity()
@@ -406,12 +407,12 @@ function Play_Sniper_Elite_4()
     hs.application.launchOrFocus(GamesFolder .. app_name .. ".app")
     hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
 
-    hs.timer.doAfter(5, function()
+    hs.timer.doAfter(10, function()
         ClickPrimaryScreenCenter(-150, 88)
         hs.notify.new({ title = app_name, informativeText = "click 'cancel' button sucessfully" }):send()
     end)
 
-    hs.timer.doAfter(8, function()
+    hs.timer.doAfter(15, function()
         ClickPrimaryScreenCenter(-150, 88)
         hs.notify.new({ title = app_name, informativeText = "click 'cancel' button sucessfully" }):send()
     end)

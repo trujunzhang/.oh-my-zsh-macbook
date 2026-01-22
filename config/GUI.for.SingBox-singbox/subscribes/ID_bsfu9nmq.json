@@ -1,0 +1,370 @@
+[
+  {
+    "type": "vless",
+    "tag": "CF官方优选",
+    "server": "162.159.41.161",
+    "server_port": 2096,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 2",
+    "server": "104.19.37.91",
+    "server_port": 2083,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 3",
+    "server": "108.162.198.147",
+    "server_port": 2083,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 4",
+    "server": "104.19.40.156",
+    "server_port": 8443,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 5",
+    "server": "172.64.145.101",
+    "server_port": 8443,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 6",
+    "server": "108.162.198.201",
+    "server_port": 2083,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 7",
+    "server": "172.64.144.68",
+    "server_port": 2087,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 8",
+    "server": "8.35.211.73",
+    "server_port": 2096,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 9",
+    "server": "172.67.79.245",
+    "server_port": 2083,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 10",
+    "server": "162.159.45.96",
+    "server_port": 8443,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 11",
+    "server": "104.19.47.14",
+    "server_port": 2083,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 12",
+    "server": "8.35.211.103",
+    "server_port": 2096,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 13",
+    "server": "172.64.229.102",
+    "server_port": 2096,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 14",
+    "server": "108.162.198.196",
+    "server_port": 2087,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 15",
+    "server": "173.245.59.146",
+    "server_port": 2087,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  },
+  {
+    "type": "vless",
+    "tag": "CF官方优选 16",
+    "server": "104.19.33.114",
+    "server_port": 2083,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "transport": {
+      "path": "/",
+      "type": "ws",
+      "headers": {
+        "Host": "www.myclash.top"
+      }
+    },
+    "tls": {
+      "enabled": true,
+      "server_name": "www.myclash.top",
+      "insecure": true,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    }
+  }
+]
