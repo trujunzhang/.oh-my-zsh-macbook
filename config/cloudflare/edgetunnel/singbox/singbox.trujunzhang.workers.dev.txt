@@ -1,14 +1,22 @@
+password: wh720
+password: wh720
+password: wh720
+
 ################################################################
 Subscribe / sub 订阅地址, 点击链接自动 复制订阅链接 并 生成订阅二维码
 ---------------------------------------------------------------
 自适应订阅地址:
 https://www.myclash.top/sub?token=9f43cda53856cc892ed85c730e6dc46e
+https://singbox.trujunzhang.workers.dev/sub?token=4afb985db01d23b5f206799226b1a00f
 Base64订阅地址:
 https://www.myclash.top/sub?token=9f43cda53856cc892ed85c730e6dc46e&b64
+https://singbox.trujunzhang.workers.dev/sub?token=4afb985db01d23b5f206799226b1a00f&b64
 clash订阅地址:
 https://www.myclash.top/sub?token=9f43cda53856cc892ed85c730e6dc46e&clash
+https://singbox.trujunzhang.workers.dev/sub?token=4afb985db01d23b5f206799226b1a00f&clash
 singbox订阅地址:
 https://www.myclash.top/sub?token=9f43cda53856cc892ed85c730e6dc46e&sb
+https://singbox.trujunzhang.workers.dev/sub?token=4afb985db01d23b5f206799226b1a00f&sb
 实用订阅技巧∨
 ---------------------------------------------------------------
 ################################################################

@@ -21,6 +21,12 @@
     "type": "application",
     "name": "clash for arm",
     "application": "ClashX.app",
+    "enable": "0"
+  },
+  {
+    "type": "application",
+    "name": "clash for arm",
+    "application": "Clash Verge.app",
     "enable": "1"
   },
   {

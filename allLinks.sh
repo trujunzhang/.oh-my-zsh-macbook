@@ -167,6 +167,8 @@ function link_config_fold {
     # clash
     mkdir -p "$HOME/.config/clash"
     fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/djzhang/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml" "delete"
+    # fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/singbox/singbox.yaml" "$HOME/.config/clash/singbox.yaml" "delete"
+    fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/singbox/singbox-domain.yaml" "$HOME/.config/clash/singbox.yaml" "delete"
 
     # nvim-snippet
     # directoryLink "nvim(snippets)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets" "$HOME/.config/nvim-snippets"
