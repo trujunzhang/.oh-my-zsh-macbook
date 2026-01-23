@@ -5,12 +5,12 @@
         {
           "key" : "s",
           "type" : "application",
-          "value" : "/Applications/Safari.app"
+          "value" : "/Applications/GUI.for.SingBox.app"
         },
         {
           "key" : "e",
           "type" : "application",
-          "value" : "/Applications/Mail.app"
+          "value" : "/Applications/GUI.for.Clash.app"
         },
         {
           "key" : "i",
