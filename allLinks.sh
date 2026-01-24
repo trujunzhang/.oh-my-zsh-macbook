@@ -338,7 +338,7 @@ function link_symlink {
     fileLink ".git(global)" "$TRUJUNZHANG_DOTFILES_HOME/gitignore_global.symlink" "$HOME/.gitignore_global"
 
     directoryLink "dotenv(Express.js environment variables)" "$ORGANIZATIONS_HOME/TRUJUNZHANG/dotenv" "$HOME/.dotenv"
-    directoryLink "hammerspoon(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/hammerspoon" "$HOME/.hammerspoon"
+    directoryLink "hammerspoon(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/hammerspoon${OS_NAME}" "$HOME/.hammerspoon"
     directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner${OS_NAME}" "$HOME/.config/karabiner"
     fileLink "ruby(gemrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/gem/gemrc" "$HOME/.config/gem/gemrc"
 
