@@ -194,6 +194,8 @@ alias dmac_second_unzip='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -
 
 alias dmac_install_rosetta="softwareupdate --install-rosetta"
 
+alias dmac_disable_splotlight="sudo mdutil -i off -a"
+
 #nix
 alias dnix_build_default='darwin-rebuild switch --option http2 false --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal'
 alias dnix_build_local="darwin-rebuild switch --option http2 false  --flake ."
