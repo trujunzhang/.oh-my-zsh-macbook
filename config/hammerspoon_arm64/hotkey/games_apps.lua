@@ -58,7 +58,7 @@ function Play_The_Last_of_Us_Part_I()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(50)
+    ActiveWindow(40)
 end
 
 function Play_The_Last_of_Us_Part_II()
@@ -84,7 +84,7 @@ function Play_Mafia_II_Definitive_Edition()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(30)
 end
 
 function Play_Marvel_Spider_Man_Remastered()
@@ -115,7 +115,7 @@ function Play_The_Witcher_3_Wild_Hunt()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(60)
+    ActiveWindow(30)
 end
 
 function Play_Crysis_3_Remasted()
@@ -125,7 +125,7 @@ function Play_Crysis_3_Remasted()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(20)
+    ActiveWindow(30)
 end
 
 function Play_Crysis_2_Remastered()
@@ -135,7 +135,7 @@ function Play_Crysis_2_Remastered()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(60)
+    ActiveWindow(30)
 end
 
 function Play_Metal_Gear_Solid()
@@ -191,7 +191,7 @@ function Play_Just_Cause_4()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(25)
+    ActiveWindow(30)
 end
 
 function Play_Assassin_Creed_Brotherhood()
@@ -215,7 +215,7 @@ function Play_Assassins_Creed_Unity()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(20)
+    ActiveWindow(30)
 end
 function Play_Assassins_Creed_4_Black_Flag()
     local app_name = "Assassins Creed IV Black Flag"
@@ -224,7 +224,7 @@ function Play_Assassins_Creed_4_Black_Flag()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(20)
+    ActiveWindow(30)
 end
 
 function Play_Assassins_Creed_Rogue()
@@ -249,7 +249,7 @@ function Play_Assassins_Creed_Syndicate()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(20)
+    ActiveWindow(30)
 end
 
 function Play_Assassins_Creed_Origins()
@@ -263,7 +263,7 @@ function Play_Assassins_Creed_Origins()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(20)
+    ActiveWindow(30)
 end
 
 function Play_Assassins_Creed_Mirage()
@@ -275,7 +275,7 @@ function Play_Assassins_Creed_Mirage()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(20)
+    ActiveWindow(30)
 end
 
 function Play_Batman_Arkham_Knight()
@@ -299,7 +299,7 @@ function Play_Need_for_Speed_Heat()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(60)
+    ActiveWindow(30)
 end
 
 function Play_Need_for_Speed_Payback()
@@ -343,7 +343,7 @@ function Play_Silent_Hill_2()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(30)
 end
 
 function Play_Expedition_33()
@@ -353,7 +353,7 @@ function Play_Expedition_33()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow()
+    ActiveWindow(30)
 end
 
 function Play_Grand_Theft_Auto_V()
@@ -429,7 +429,7 @@ function Play_Alone_in_the_Dark()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(50)
+    ActiveWindow(30)
 end
 
 function Play_Kingdom_Come_Deliverance()

@@ -71,6 +71,11 @@
           "key" : "g",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacApps/current/Genymotion/Genymotion.app"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Applications/Clash Verge.app"
         }
       ],
       "key" : "a",

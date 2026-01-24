@@ -51,7 +51,7 @@ function OpenAndActiveBraveBrowser()
 
         local myApp = hs.application.applicationsForBundleID("com.brave.Browser.nightly")[1]
         local focusedAppWindow = myApp:focusedWindow()
-        ClickActiveWindow(focusedAppWindow, 0, 70)
+        ClickActiveWindow(focusedAppWindow, 0, 90)
         hs.eventtap.keyStroke({ "" }, "space", myApp)
     end)
 
