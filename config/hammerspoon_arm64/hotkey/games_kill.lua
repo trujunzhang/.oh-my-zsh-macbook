@@ -1,4 +1,8 @@
 hs.hotkey.bind({ "Cmd", "Alt" }, "x", function()
+    -- hs.execute("kill -9 $(ps aux | grep 'Thief™' | awk '{print $2}')")
+    -- hs.execute("pkill -f Thief™")
+    hs.execute("pkill -f Thief")
+
     hs.execute("pkill -f wine")
 
     -- close all games process
@@ -11,6 +15,8 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "x", function()
 
     hs.execute("killall JustCause4.exe")
 
+    -- hs.execute("killall ")
+    -- hs.execute("killall ")
     -- hs.execute("killall ")
     -- hs.execute("killall ")
     -- hs.execute("killall ")

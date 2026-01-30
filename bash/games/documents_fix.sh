@@ -57,6 +57,9 @@ function link_games_save_location_path() {
 
     # Horizon Zero Dawn
     directoryLink "game(Horizon Zero Dawn)" "$CURRENT_USER_DOCUMENTS_PATH/Horizon Zero Dawn" "$USER_DOCUMENTS_DEFAULT_PATH/Horizon Zero Dawn"
+
+    # The Witcher 3
+    directoryLink "game(The Witcher 3)" "$CURRENT_USER_DOCUMENTS_PATH/The Witcher 3" "$USER_DOCUMENTS_DEFAULT_PATH/The Witcher 3"
 }
 
 #

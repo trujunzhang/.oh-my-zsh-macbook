@@ -72,8 +72,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_Assassins_Creed_Unity()
     elseif tag == "Crysis-3-Remasted" then
         Play_Crysis_3_Remasted()
-    -- elseif tag == "" then
-    --     Play_Horizon_Zero_Dawn_Remastered()
+    elseif tag == "The-Witcher-3" then
+        Play_The_Witcher_3()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -152,14 +152,14 @@ local menus = {
     --     ["text"] = "Assassins Creed Mirage(-C)",
     --     ["tag"] = "Assassins-Creed-Mirage",
     -- },
-    {
-        ["text"] = "Need for Speed Heat(-3)",
-        ["tag"] = "Need-for-Speed-Heat",
-    },
     -- {
-    --     ["text"] = "Need_for_Speed_Payback(-)",
-    --     ["tag"] = "Need-for-Speed-Payback",
+    --     ["text"] = "Need for Speed Heat(-3)",
+    --     ["tag"] = "Need-for-Speed-Heat",
     -- },
+    {
+        ["text"] = "Need_for_Speed_Payback(-)",
+        ["tag"] = "Need-for-Speed-Payback",
+    },
     -- {
     --     ["text"] = "Silent Hill 2(-S)",
     --     ["tag"] = "Silent-Hill-2",
@@ -172,10 +172,10 @@ local menus = {
         ["text"] = "Warcraft 3 The Frozen Throne(-W)",
         ["tag"] = "Warcraft-3-The-Frozen-Throne",
     },
-    {
-        ["text"] = "Battlefield V(-V)",
-        ["tag"] = "Battlefield_V",
-    },
+    -- {
+    --     ["text"] = "Battlefield V(-V)",
+    --     ["tag"] = "Battlefield_V",
+    -- },
     {
         ["text"] = "Sniper Elite 4(-E)",
         ["tag"] = "Sniper-Elite-4",
@@ -192,10 +192,10 @@ local menus = {
         ["text"] = "Crysis 3 Remasted(-C)",
         ["tag"] = "Crysis-3-Remasted",
     },
-    -- {
-    --     ["text"] = "",
-    --     ["tag"] = "",
-    -- },
+    {
+        ["text"] = "The Witcher 3(-H)",
+        ["tag"] = "The-Witcher-3",
+    },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",

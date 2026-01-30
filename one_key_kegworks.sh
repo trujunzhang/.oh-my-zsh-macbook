@@ -47,7 +47,7 @@ games_in_kegworks=(
     "Crysis 3 Remastered" "Crysis 3 Remastered"
     "Need for Speed Heat" "Need for Speed Heat"
     "Need for Speed Payback" "Need for Speed Payback"
-    # "" ""
+    "The Witcher 3" "The Witcher 3"
     # "" ""
     # "" ""
     # "" ""

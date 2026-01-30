@@ -15,7 +15,7 @@ hs.hotkey.bind(GameHotkeyMods, "R", Play_Red_Dead_Redemption)
 hs.hotkey.bind(GameHotkeyMods, "L", Play_The_Last_of_Us_Part_II)
 hs.hotkey.bind(GameHotkeyMods, "M", Play_Mafia_II_Definitive_Edition)
 hs.hotkey.bind(GameHotkeyMods, "S", Play_Marvel_Spider_Man_Remastered)
--- hs.hotkey.bind(GameHotkeyMods, "W", Play_The_Witcher_3_Wild_Hunt)
+hs.hotkey.bind(GameHotkeyMods, "H", Play_The_Witcher_3_Wild_Hunt)
 
 hs.hotkey.bind(GameHotkeyMods, "T", Play_Ghost_of_Tsushima)
 hs.hotkey.bind(GameHotkeyMods, "J", Play_Just_Cause_4)

@@ -109,13 +109,14 @@ function Play_The_Witcher_3_Wild_Hunt()
     -- app: "The Witcher 3 Wild Hunt GOTY"
     HideLeftDock()
 
-    local app_name = "The Witcher 3 Wild Hunt GOTY"
+    local app_name = "The Witcher 3"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(30)
+    local witcher_times = 60
+    ActiveWindow(witcher_times)
 end
 
 function Play_Crysis_3_Remasted()
