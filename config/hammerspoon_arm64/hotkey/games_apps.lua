@@ -442,3 +442,32 @@ function Play_Kingdom_Come_Deliverance()
 
     ActiveWindow(30)
 end
+
+function Play_Resident_Evil_2()
+    local app_name = "Resident Evil 2"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end
+function Play_Resident_Evil_3()
+    local app_name = "Resident Evil 3"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end
+
+function Play_Resident_Evil_7()
+    local app_name = "Resident Evil 7"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end

@@ -691,6 +691,7 @@ alias https_proxy_v2ray="export https_proxy=http://127.0.0.1:1087"
 alias http_proxy_v2ray="export http_proxy=http://127.0.0.1:1087"
 
 # git clone
+alias dclone_openclaw="git clone https://github.com/openclaw/openclaw.git --depth 1"
 alias dclone_expensify="git clone https://github.com/expensify/App.git --depth 1 expensify && cd expensify"
 alias dclone_bitnet="git clone https://github.com/microsoft/BitNet --depth 1"
 alias dclone_ieatta_bitbucket="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git --depth 1 check-ieatta && cd check-ieatta"
@@ -751,6 +752,8 @@ function dnix_build_default
     # darwin-rebuild switch -v --option http2 false --option substituters "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
     darwin-rebuild switch -v --option http2 false --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal
 end
+
+alias dgame_zipfile_ls="ls /Volumes/ZipFiles >'$HOME/Desktop/zipFiles.txt'"
 
 alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
 alias dmac_unzip_vpn_apps='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'

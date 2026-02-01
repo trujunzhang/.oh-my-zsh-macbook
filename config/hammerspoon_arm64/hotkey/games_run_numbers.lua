@@ -9,8 +9,15 @@ hs.hotkey.bind(GameHotkeyMods, "1", SetMacosDefaultVolume)
 
 hs.hotkey.bind(GameHotkeyMods, "2", Show_Bluetooth_PS5_Battery_Info)
 
-hs.hotkey.bind(GameHotkeyMods, "3", Play_Need_for_Speed_Heat)
+-- hs.hotkey.bind(GameHotkeyMods, "3", Play_Need_for_Speed_Heat)
+
 hs.hotkey.bind(GameHotkeyMods, "4", Play_Assassins_Creed_4_Black_Flag)
-hs.hotkey.bind(GameHotkeyMods, "5", Play_Assassins_Creed_Rogue)
-hs.hotkey.bind(GameHotkeyMods, "6", Play_Assassins_Creed_Origins)
+
+-- hs.hotkey.bind(GameHotkeyMods, "5", Play_Assassins_Creed_Rogue)
+-- hs.hotkey.bind(GameHotkeyMods, "6", Play_Assassins_Creed_Origins)
+
+hs.hotkey.bind(GameHotkeyMods, "3", Play_Resident_Evil_2)
+hs.hotkey.bind(GameHotkeyMods, "5", Play_Resident_Evil_3)
+hs.hotkey.bind(GameHotkeyMods, "6", Play_Resident_Evil_7)
+
 hs.hotkey.bind(GameHotkeyMods, "7", Play_Need_for_Speed_Payback)

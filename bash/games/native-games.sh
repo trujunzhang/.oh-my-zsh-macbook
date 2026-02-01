@@ -51,6 +51,13 @@ native_games_apps=(
     "*.forge"
     "Contents/Resources"
     "open"
+
+    # Rise of the Tomb Raider
+    "Rise of the Tomb Raider"
+    "*.tiger"
+    "Contents/Game/RiseOfTheTombRaiderData"
+    "open"
+
 )
 
 test_native_games_apps=(

@@ -247,7 +247,7 @@
           "value" : "/Volumes/MacGame/AppGames/MetroExodus.app"
         },
         {
-          "key" : "r",
+          "key" : "v",
           "type" : "application",
           "value" : "/Volumes/MacGame/AppGames/Resident Evil Village.app"
         },
@@ -295,6 +295,11 @@
           "key" : "s",
           "type" : "application",
           "value" : "/Volumes/MacGame/AppGames/Assassin's Creed Shadows.app"
+        },
+        {
+          "key" : "r",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/Rise of the Tomb Raider.app"
         }
       ],
       "key" : "g",

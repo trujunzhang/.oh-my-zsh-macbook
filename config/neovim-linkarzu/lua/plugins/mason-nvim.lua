@@ -13,7 +13,7 @@ return {
             -- "templ",
             "html-lsp",
             "htmx-lsp",
-            "tailwindcss-language-server",
+            -- "tailwindcss-language-server",
             -- "harper-ls",
             -- marksman and markdownlint come by default in the lazyvim config
             --
