@@ -1,6 +1,7 @@
 print("=================== load djzhang's config===============================")
 
 GMacCurrentVolume = 0
+GCurrentGameName = ""
 
 -- TerminalApp = "Wezterm.app"
 -- TerminalAppID = "com.github.wez.wezterm"

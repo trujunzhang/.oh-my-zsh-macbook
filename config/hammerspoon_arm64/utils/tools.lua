@@ -80,40 +80,35 @@ local function check_app_existed(prefix, appName)
     local dash_name_prefix = prefix .. "_" .. appName:gsub(" ", "_")
 
     if DoesDirectoryExist(KegworksGames .. app_name_prefix) then
-        return app_name_prefix
+        GCurrentGameName = app_name_prefix
     elseif DoesDirectoryExist(KegworksGames .. dash_name_prefix) then
-        return dash_name_prefix
+        GCurrentGameName = dash_name_prefix
+    -- for dxmt
+    elseif DoesDirectoryExist(KegworksGames .. "mt_" .. dash_name_prefix) then
+        GCurrentGameName = "mt_"..dash_name_prefix
     end
-
-    return appName
 end
 
 function Check_And_Run_KegworksApp(appName)
     appName = appName:gsub(".app", "")
     appName = appName .. ".app"
 
-    local currentName = appName
-    local tmp1 = check_app_existed("10", appName)
-    local tmp2 = check_app_existed("whiskey", appName)
-    local tmp3 = check_app_existed("103", appName)
-    local tmp4 = check_app_existed("2477", appName)
+    GCurrentGameName = appName
 
-    if DoesDirectoryExist(KegworksGames .. appName) then
-        currentName = appName
-    elseif DoesDirectoryExist(KegworksGames .. tmp1) then
-        currentName = tmp1
-    elseif DoesDirectoryExist(KegworksGames .. tmp2) then
-        currentName = tmp2
-    elseif DoesDirectoryExist(KegworksGames .. tmp3) then
-        currentName = tmp3
-    elseif DoesDirectoryExist(KegworksGames .. tmp4) then
-        currentName = tmp4
+    check_app_existed("10", appName)
+    check_app_existed("whiskey", appName)
+    check_app_existed("103", appName)
+    check_app_existed("107103", appName)
+    check_app_existed("2477", appName)
+
+    hs.printf("%s = %s", "GCurrentGameName:", GCurrentGameName)
+
+    if DoesDirectoryExist(KegworksGames .. GCurrentGameName) then
+        hs.application.launchOrFocus(KegworksGames .. GCurrentGameName)
+        hs.notify.new({ title = GCurrentGameName, informativeText = "run it sucessfully" }):send()
+    else
+        hs.notify.new({ title = GCurrentGameName .. " not found", informativeText = "run it failed" }):send()
     end
-
-    hs.printf("%s = %s", "new_name_prefix:", currentName)
-
-    hs.application.launchOrFocus(KegworksGames .. currentName)
-    hs.notify.new({ title = currentName, informativeText = "run it sucessfully" }):send()
 end
 
 function Is_WindowActive(windowTitle)

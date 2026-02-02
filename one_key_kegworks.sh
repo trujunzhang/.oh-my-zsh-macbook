@@ -51,7 +51,7 @@ games_in_kegworks=(
     "Resident Evil 2" "Resident Evil 2"
     "Resident Evil 3" "Resident Evil 3"
     "Resident Evil 7" "Resident Evil 7"
-    # "" ""
+    "CarX Street" "CarX Street"
     # "" ""
     # "" ""
     # "" ""
@@ -75,6 +75,11 @@ check_app_existed() {
 
     if [ -d "$KegworksGames_Folder/${dash_name_prefix}.app" ]; then
         my_global_result="$dash_name_prefix"
+    fi
+
+    # for dxmt
+    if [ -d "$KegworksGames_Folder/mt_${dash_name_prefix}.app" ]; then
+        my_global_result="mt_$dash_name_prefix"
     fi
 }
 
@@ -127,6 +132,15 @@ moving_game_to_kegworks() {
     fi
 }
 
+check_real_app_name() {
+    game_name=$1
+    check_app_existed "10" "$game_name"
+    check_app_existed "103" "$game_name"
+    check_app_existed "107103" "$game_name"
+    check_app_existed "2477" "$game_name"
+    check_app_existed "whiskey" "$game_name"
+}
+
 run_kegworks_games() {
     info "run_kegworks_games:"
 
@@ -136,10 +150,7 @@ run_kegworks_games() {
 
         my_global_result="$game_name"
 
-        check_app_existed "10" "$game_name"
-        check_app_existed "103" "$game_name"
-        check_app_existed "2477" "$game_name"
-        check_app_existed "whiskey" "$game_name"
+        check_real_app_name "$game_name"
 
         app_path="$KegworksGames_Folder/${my_global_result}.app"
 
@@ -163,10 +174,7 @@ restore_kegworks_games() {
 
         my_global_result="$game_name"
 
-        check_app_existed "10" "$game_name"
-        check_app_existed "103" "$game_name"
-        check_app_existed "2477" "$game_name"
-        check_app_existed "whiskey" "$game_name"
+        check_real_app_name "$game_name"
 
         if [ -d "$KegworksGames_Folder/${my_global_result}.app" ]; then
             success "my_global_result: ${my_global_result}.app"

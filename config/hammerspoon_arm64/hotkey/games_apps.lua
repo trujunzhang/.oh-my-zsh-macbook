@@ -1,5 +1,6 @@
 -- export D3DM_ENABLE_METALFX=1
 -- export ROSETTA_ADVERTISE_AVX=1
+-- export DXMT_METALFX_SPATIAL_SWAPCHAIN=1
 -- export D3DM_ENABLE_METALFX=1 ROSETTA_ADVERTISE_AVX=1
 -- export D3DM_ENABLE_METALFX=1 ROSETTA_ADVERTISE_AVX=1
 -- export D3DM_ENABLE_METALFX=1
@@ -358,6 +359,9 @@ function Play_Expedition_33()
 end
 
 function Play_Grand_Theft_Auto_V()
+    -- mt_107103_Grand_Theft_Auto_V
+    -- mt_107103_Grand_Theft_Auto_V
+
     -- SetMacosVolume(5)
 
     local app_name = "Grand Theft Auto V"
@@ -470,4 +474,17 @@ function Play_Resident_Evil_7()
     end)
 
     ActiveWindow(30)
+end
+
+function Play_CarX_Street()
+    -- export DXMT_METALFX_SPATIAL_SWAPCHAIN=1
+    -- export DXMT_METALFX_SPATIAL_SWAPCHAIN=1
+
+    local app_name = "CarX Street"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    -- ActiveWindow(30)
 end
