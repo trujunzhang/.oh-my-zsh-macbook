@@ -9,7 +9,9 @@ TerminalApp = "Ghostty.app"
 TerminalAppID = "com.mitchellh.ghostty"
 
 -- GamesFolder = "/Volumes/MacGame/AppGames/Kegworks"
-GamesFolder = "/Volumes/MacGame/AppGames/"
+GGameVolume = "/Volumes/MacGame/"
+GamesFolder = GGameVolume .. "AppGames/"
+GamesControllerFolder = GGameVolume .. "MacApps/GameController/"
 KegworksGames = GamesFolder .. "Kegworks/"
 
 GameHotkeyMods = { "Cmd", "Alt", "shift", "ctrl" }

@@ -476,6 +476,23 @@ function Play_Resident_Evil_7()
     ActiveWindow(30)
 end
 
+function Open_Enjoyable()
+    local appName = "Enjoyable"
+
+    hs.execute("killall " .. appName)
+
+    hs.timer.doAfter(2, function()
+        hs.application.launchOrFocus(GamesControllerFolder .. appName .. ".app")
+        hs.notify.new({ title = "open " .. appName, informativeText = "run it sucessfully" }):send()
+    end)
+
+    hs.timer.doAfter(4, function()
+        -- enable it
+        hs.eventtap.keyStroke({ "cmd" }, "R")
+        hs.eventtap.keyStroke({ "cmd" }, "M")
+    end)
+end
+
 function Play_CarX_Street()
     -- export DXMT_METALFX_SPATIAL_SWAPCHAIN=1
     -- export DXMT_METALFX_SPATIAL_SWAPCHAIN=1
@@ -486,5 +503,10 @@ function Play_CarX_Street()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    -- ActiveWindow(30)
+    ActiveWindow(30)
+end
+
+function Play_CarX_Street_With_Enjoyable()
+    Open_Enjoyable()
+    Play_CarX_Street()
 end

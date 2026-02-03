@@ -70,12 +70,17 @@
         {
           "key" : "g",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacApps/current/Genymotion/Genymotion.app"
+          "value" : "/Volumes/MacGame/MacApps/GameController/Enjoyable.app"
         },
         {
           "key" : "v",
           "type" : "application",
           "value" : "/Applications/Clash Verge.app"
+        },
+        {
+          "key" : "j",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacApps/GameController/Enjoyable.app"
         }
       ],
       "key" : "a",

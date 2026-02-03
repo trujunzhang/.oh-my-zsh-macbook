@@ -464,3 +464,7 @@ run = 'move-node-to-workspace Y'
 if.app-id = 'com.kochmedia.MetroExodusNew'
 run = 'move-node-to-workspace G'
 
+[[on-window-detected]]
+if.app-id = 'com.yukkurigames.Enjoyable'
+run = 'move-node-to-workspace G'
+
