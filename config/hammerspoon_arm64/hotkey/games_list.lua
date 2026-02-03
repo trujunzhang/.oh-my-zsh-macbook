@@ -78,8 +78,12 @@ local chooser = hs.chooser.new(function(choice)
         Play_Far_Cry_4()
     elseif tag == "CarX-Street" then
         Play_CarX_Street_With_Enjoyable()
-    -- elseif tag == "" then
-    --     Play_Horizon_Zero_Dawn_Remastered()
+    elseif tag == "Resident-Evil-2" then
+        Play_Resident_Evil_2()
+    elseif tag == "Resident-Evil-3" then
+        Play_Resident_Evil_3()
+    elseif tag == "Resident-Evil-7" then
+        Play_Resident_Evil_7()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -167,7 +171,7 @@ local menus = {
     --     ["tag"] = "Need-for-Speed-Heat",
     -- },
     {
-        ["text"] = "Need_for_Speed_Payback(-)",
+        ["text"] = "Need_for_Speed_Payback(-6)",
         ["tag"] = "Need-for-Speed-Payback",
     },
     -- {
@@ -214,6 +218,26 @@ local menus = {
         ["text"] = "CarX Street(-3)",
         ["tag"] = "CarX-Street",
     },
+    -- {
+    --     ["text"] = "Resident Evil 2(-2)",
+    --     ["tag"] = "Resident-Evil-2",
+    -- },
+    -- {
+    --     ["text"] = "Resident Evil 3(-3)",
+    --     ["tag"] = "Resident-Evil-3",
+    -- },
+    {
+        ["text"] = "Resident Evil 7(-7)",
+        ["tag"] = "Resident-Evil-7",
+    },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",

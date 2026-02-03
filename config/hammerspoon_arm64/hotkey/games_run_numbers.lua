@@ -20,7 +20,7 @@ hs.hotkey.bind(GameHotkeyMods, "4", Play_Assassins_Creed_4_Black_Flag)
 
 hs.hotkey.bind(GameHotkeyMods, "3", Play_CarX_Street_With_Enjoyable)
 
-hs.hotkey.bind(GameHotkeyMods, "5", Play_Resident_Evil_3)
-hs.hotkey.bind(GameHotkeyMods, "6", Play_Resident_Evil_7)
+-- hs.hotkey.bind(GameHotkeyMods, "5", Play_Resident_Evil_3)
+hs.hotkey.bind(GameHotkeyMods, "7", Play_Resident_Evil_7)
 
-hs.hotkey.bind(GameHotkeyMods, "7", Play_Need_for_Speed_Payback)
+hs.hotkey.bind(GameHotkeyMods, "6", Play_Need_for_Speed_Payback)
