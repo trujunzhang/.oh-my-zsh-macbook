@@ -523,6 +523,9 @@ function link_mac_user {
     # crossover
     directoryLink "crossover(app)" "$HOME_MACGAME_PATH/MacApps/current/CrossOver-25.1.1.app" "/Applications/CrossOver.app"
 
+    # Enjoyable
+    # fileLink "Enjoyable(plist)" "$TRUJUNZHANG_DOTFILES_HOME/config/Enjoyable/com.yukkurigames.Enjoyable.plist" "$HOME/Library/Preferences/com.yukkurigames.Enjoyable.plist"
+
     # homebrew
     # directoryLink "homebrew(home)" "$HOME_MAC_CACHE_PATH/homebrew" "/opt/homebrew"
 

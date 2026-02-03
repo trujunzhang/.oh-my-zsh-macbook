@@ -73,7 +73,17 @@ local chooser = hs.chooser.new(function(choice)
     elseif tag == "Crysis-3-Remasted" then
         Play_Crysis_3_Remasted()
     elseif tag == "The-Witcher-3" then
-        Play_The_Witcher_3()
+        Play_The_Witcher_3_Wild_Hunt()
+    elseif tag == "Far-Cry-4" then
+        Play_Far_Cry_4()
+    elseif tag == "CarX-Street" then
+        Play_CarX_Street_With_Enjoyable()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -116,10 +126,10 @@ local menus = {
     --     ["text"] = "Marvel Spider-Man Remastered(-S)",
     --     ["tag"] = "Marvel-Spider-Man-Remastered",
     -- },
-    {
-        ["text"] = "Ghost of Tsushima(-T)",
-        ["tag"] = "Ghost-of-Tsushima",
-    },
+    -- {
+    --     ["text"] = "Ghost of Tsushima(-T)",
+    --     ["tag"] = "Ghost-of-Tsushima",
+    -- },
     -- {
     --     ["text"] = "Just Cause 4(-J)",
     --     ["tag"] = "Just-Cause-4",
@@ -184,10 +194,10 @@ local menus = {
     --     ["text"] = "Alone in the Dark(-A)",
     --     ["tag"] = "Alone-in-the-Dark",
     -- },
-    {
-        ["text"] = "Kingdom Come Deliverance(-K)",
-        ["tag"] = "Kingdom-Come-Deliverance",
-    },
+    -- {
+    --     ["text"] = "Kingdom Come Deliverance(-K)",
+    --     ["tag"] = "Kingdom-Come-Deliverance",
+    -- },
     {
         ["text"] = "Crysis 3 Remasted(-C)",
         ["tag"] = "Crysis-3-Remasted",
@@ -196,6 +206,22 @@ local menus = {
         ["text"] = "The Witcher 3(-H)",
         ["tag"] = "The-Witcher-3",
     },
+    {
+        ["text"] = "Far Cry 4(-F)",
+        ["tag"] = "Far-Cry-4",
+    },
+    {
+        ["text"] = "CarX Street(-3)",
+        ["tag"] = "CarX-Street",
+    },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",

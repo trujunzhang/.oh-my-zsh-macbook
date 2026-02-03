@@ -220,6 +220,9 @@ function Play_Assassins_Creed_Unity()
     ActiveWindow(30)
 end
 function Play_Assassins_Creed_4_Black_Flag()
+    -- mt_2477_Assassins_Creed_IV_Black_Flag
+    -- mt_2477_Assassins_Creed_IV_Black_Flag
+
     local app_name = "Assassins Creed IV Black Flag"
 
     BeforePlayGame(function()
@@ -230,6 +233,9 @@ function Play_Assassins_Creed_4_Black_Flag()
 end
 
 function Play_Assassins_Creed_Rogue()
+    -- mt_103_Assassins_Creed_Rogue
+    -- mt_103_Assassins_Creed_Rogue
+
     local app_name = "Assassins Creed Rogue"
 
     BeforePlayGame(function()
@@ -493,9 +499,12 @@ function Open_Enjoyable()
     end)
 end
 
-function Play_CarX_Street()
+local function Play_CarX_Street()
     -- export DXMT_METALFX_SPATIAL_SWAPCHAIN=1
     -- export DXMT_METALFX_SPATIAL_SWAPCHAIN=1
+
+    -- mt_107103_CarX_Street
+    -- mt_107103_CarX_Street
 
     local app_name = "CarX Street"
 
@@ -509,4 +518,34 @@ end
 function Play_CarX_Street_With_Enjoyable()
     Open_Enjoyable()
     Play_CarX_Street()
+end
+
+function Play_Far_Cry_4()
+    local app_name = "Far Cry 4"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end
+
+function Play_Far_Cry_5()
+    local app_name = "Far Cry 5"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end
+
+function Play_Far_Cry_6()
+    local app_name = "Far Cry 6"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
 end
