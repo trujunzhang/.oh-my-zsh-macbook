@@ -83,9 +83,13 @@ local function check_app_existed(prefix, appName)
         GCurrentGameName = app_name_prefix
     elseif DoesDirectoryExist(KegworksGames .. dash_name_prefix) then
         GCurrentGameName = dash_name_prefix
+    elseif DoesDirectoryExist(KegworksGames .. "p_" .. dash_name_prefix) then
+        GCurrentGameName = "p_" .. dash_name_prefix
     -- for dxmt
     elseif DoesDirectoryExist(KegworksGames .. "mt_" .. dash_name_prefix) then
-        GCurrentGameName = "mt_"..dash_name_prefix
+        GCurrentGameName = "mt_" .. dash_name_prefix
+    elseif DoesDirectoryExist(KegworksGames .. "p_mt_" .. dash_name_prefix) then
+        GCurrentGameName = "p_mt_" .. dash_name_prefix
     end
 end
 
@@ -98,7 +102,7 @@ function Check_And_Run_KegworksApp(appName)
     check_app_existed("10", appName)
     check_app_existed("whiskey", appName)
     check_app_existed("103", appName)
-    check_app_existed("107103", appName)
+    check_app_existed("108103", appName)
     check_app_existed("2477", appName)
 
     hs.printf("%s = %s", "GCurrentGameName:", GCurrentGameName)

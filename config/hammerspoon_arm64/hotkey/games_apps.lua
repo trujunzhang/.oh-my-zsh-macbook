@@ -521,6 +521,10 @@ function Play_CarX_Street_With_Enjoyable()
 end
 
 function Play_Far_Cry_4()
+    -- ProgramData/Steam/SteamRIP/298110
+    -- ProgramData/Steam/SteamRIP/298110
+    -- ProgramData/Steam/SteamRIP/298110
+
     local app_name = "Far Cry 4"
 
     BeforePlayGame(function()
