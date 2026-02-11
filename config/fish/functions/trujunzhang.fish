@@ -754,6 +754,7 @@ function dnix_build_default
 end
 
 alias dgame_zipfile_ls="ls /Volumes/ZipFiles >'$HOME/Desktop/zipFiles.txt'"
+alias dgame_rarfile_ls="ls /Volumes/RarFiles >'$HOME/Desktop/rarFiles.txt'"
 
 alias dcopy_enjoyable_plist="cp -v $HOME/Library/Preferences/com.yukkurigames.Enjoyable.plist $TRUJUNZHANG_DOTFILES_HOME/config/Enjoyable/com.yukkurigames.Enjoyable.plist"
 

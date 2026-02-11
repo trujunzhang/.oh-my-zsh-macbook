@@ -172,6 +172,8 @@ end
 function Play_Horizon_Zero_Dawn_Remastered()
     -- app: "Horizon Zero Dawn Remastered"
     -- export D3DM_ENABLE_METALFX=1
+    -- requirement c++ libraries:
+    --     2019/VC_redist.x64.exe
     -- local app_name = "Horizon Zero Dawn Remastered"
     local app_name = "Horizon Zero Dawn"
 
@@ -462,8 +464,23 @@ function Play_Resident_Evil_2()
 
     ActiveWindow(30)
 end
+
 function Play_Resident_Evil_3()
     local app_name = "Resident Evil 3"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end
+
+function Play_Resident_Evil_4()
+    -- export D3DM_ENABLE_METALFX=1
+    -- export D3DM_ENABLE_METALFX=1
+    -- export D3DM_ENABLE_METALFX=1
+
+    local app_name = "Resident Evil 4"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
@@ -480,23 +497,6 @@ function Play_Resident_Evil_7()
     end)
 
     ActiveWindow(30)
-end
-
-function Open_Enjoyable()
-    local appName = "Enjoyable"
-
-    hs.execute("killall " .. appName)
-
-    hs.timer.doAfter(2, function()
-        hs.application.launchOrFocus(GamesControllerFolder .. appName .. ".app")
-        hs.notify.new({ title = "open " .. appName, informativeText = "run it sucessfully" }):send()
-    end)
-
-    hs.timer.doAfter(4, function()
-        -- enable it
-        hs.eventtap.keyStroke({ "cmd" }, "R")
-        hs.eventtap.keyStroke({ "cmd" }, "M")
-    end)
 end
 
 local function Play_CarX_Street()
@@ -516,14 +516,14 @@ local function Play_CarX_Street()
 end
 
 function Play_CarX_Street_With_Enjoyable()
-    Open_Enjoyable()
+    Open_Enjoyable("2")
     Play_CarX_Street()
 end
 
 function Play_Far_Cry_4()
-    -- ProgramData/Steam/SteamRIP/298110
-    -- ProgramData/Steam/SteamRIP/298110
-    -- ProgramData/Steam/SteamRIP/298110
+    -- ProgramData/Steam/hacto/298110
+    -- ProgramData/Steam/hacto/298110
+    -- ProgramData/Steam/hacto/298110
 
     local app_name = "Far Cry 4"
 
@@ -534,14 +534,19 @@ function Play_Far_Cry_4()
     ActiveWindow(30)
 end
 
-function Play_Far_Cry_5()
+local function Play_Far_Cry_5()
     local app_name = "Far Cry 5"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(30)
+    ActiveWindow(40)
+end
+
+function Play_Far_Cry_5_With_Enjoyable()
+    Open_Enjoyable("3")
+    Play_Far_Cry_5()
 end
 
 function Play_Far_Cry_6()

@@ -466,5 +466,5 @@ run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
 if.app-id = 'com.yukkurigames.Enjoyable'
-run = 'move-node-to-workspace G'
+run = 'move-node-to-workspace F'
 

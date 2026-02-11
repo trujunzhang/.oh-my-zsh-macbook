@@ -66,22 +66,26 @@ update_wine_games() {
 
             if [ "$Params" = "update" ]; then
                 if [ -d "$old_version_app_path" ]; then
-                    info "     Moving the installed game to new version app: $new_version_file_name"
 
                     old_game_path="${old_version_app_path}/$APP_GAME_FOLDER_IN_DRIVER_C/$install_folder_name"
                     new_game_path="${new_version_app_path}/$APP_GAME_FOLDER_IN_DRIVER_C/$install_folder_name"
 
-                    info "     old_game_path: $old_game_path"
-                    info "     new_game_path: $new_game_path"
+                    if [ -d "$old_game_path" ]; then
 
-                    if [ -d "$new_game_path" ]; then
-                        error "     new_game_path: $new_game_path already exist!"
-                    elif [ -d "$old_game_path" ]; then
-                        info "         Start moving the installed game to new version app: $new_version_file_name"
-                        mv "$old_game_path" "$new_game_path"
-                    else
-                        error "     old_game_path: $old_game_path not exist!"
+                        info "     Moving the installed game to new version app: $new_version_file_name"
+                        info "     old_game_path: $old_game_path"
+                        info "     new_game_path: $new_game_path"
+
+                        if [ -d "$new_game_path" ]; then
+                            error "     new_game_path: $new_game_path already exist!"
+                        elif [ -d "$old_game_path" ]; then
+                            info "         Start moving the installed game to new version app: $new_version_file_name"
+                            mv "$old_game_path" "$new_game_path"
+                        else
+                            error "     old_game_path: $old_game_path not exist!"
+                        fi
                     fi
+
                 fi
             fi
 

@@ -34,6 +34,7 @@ games_in_kegworks=(
     "The Witcher 3" "The Witcher 3"
     "Resident Evil 2" "Resident Evil 2"
     "Resident Evil 3" "Resident Evil 3"
+    "Resident Evil 4" "Resident Evil 4 Remake"
     "Resident Evil 7" "Resident Evil 7"
     "CarX Street" "CarX Street"
     "Far Cry 4" "Far Cry 4"

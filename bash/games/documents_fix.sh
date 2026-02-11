@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-CURRENT_USER_DOCUMENTS_PATH="/Volumes/MacUser/djzhang/Documents"
-USER_DOCUMENTS_DEFAULT_PATH="/Volumes/MacOS/Users/djzhang/Documents"
+CURRENT_USER_HOME_PATH="/Volumes/MacUser/djzhang"
+CURRENT_USER_DOCUMENTS_PATH="$CURRENT_USER_HOME_PATH/Documents"
+MAC_USER_HOME_PATH="/Volumes/MacOS/Users/djzhang"
+USER_DOCUMENTS_DEFAULT_PATH="$MAC_USER_HOME_PATH/Documents"
 
 function link_games_save_location_path() {
 
@@ -60,6 +62,9 @@ function link_games_save_location_path() {
 
     # The Witcher 3
     directoryLink "game(The Witcher 3)" "$CURRENT_USER_DOCUMENTS_PATH/The Witcher 3" "$USER_DOCUMENTS_DEFAULT_PATH/The Witcher 3"
+
+    # Sikarugir
+    directoryLink "app(Sikarugir)" "$CURRENT_USER_HOME_PATH/Library/Application Support/Sikarugir" "$MAC_USER_HOME_PATH/Library/Application Support/Sikarugir"
 }
 
 #

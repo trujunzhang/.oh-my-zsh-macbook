@@ -78,3 +78,21 @@ function ClickPlayButton(app_name, interval)
         hs.notify.new({ title = "launch " .. app_name, informativeText = "run it sucessfully" }):send()
     end)
 end
+
+function Open_Enjoyable(shortcut)
+    local appName = "Enjoyable"
+
+    hs.execute("killall " .. appName)
+
+    hs.timer.doAfter(2, function()
+        hs.application.launchOrFocus(GamesControllerFolder .. appName .. ".app")
+        hs.notify.new({ title = "open " .. appName, informativeText = "run it sucessfully" }):send()
+    end)
+
+    hs.timer.doAfter(4, function()
+        -- enable it
+        hs.eventtap.keyStroke({ "cmd" }, shortcut)
+        hs.eventtap.keyStroke({ "cmd" }, "R")
+        hs.eventtap.keyStroke({ "cmd" }, "M")
+    end)
+end

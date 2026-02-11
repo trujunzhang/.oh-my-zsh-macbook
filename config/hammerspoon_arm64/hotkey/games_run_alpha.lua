@@ -1,5 +1,7 @@
 -- hs.hotkey.bind(GameHotkeyMods, "F", Play_Star_Wars_Jedi_Fallen_Order)
+
 hs.hotkey.bind(GameHotkeyMods, "F", Play_Far_Cry_4)
+-- hs.hotkey.bind(GameHotkeyMods, "F", Play_Far_Cry_5_With_Enjoyable)
 
 hs.hotkey.bind(GameHotkeyMods, "D", Play_Horizon_Zero_Dawn_Remastered)
 -- hs.hotkey.bind(GameHotkeyMods, "D", Play_Call_of_Duty_Modern_Warfare_Remastered)
