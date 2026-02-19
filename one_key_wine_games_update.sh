@@ -4,13 +4,16 @@ source ./bash/shellUtils.sh
 source ./bash/games/native-games.sh
 source ./bash/games/games-data.sh
 
-OLD_VERSION="107103"
-NEW_VERSION="108103"
+# OLD_VERSION="107103"
+OLD_VERSION="108103"
+# NEW_VERSION="108103"
+NEW_VERSION="1010104"
 
 # 108103_wine
 TEMPLATE_WINE_FILE_NAME="${NEW_VERSION}_wine.app"
 
 DEFAULTVALUE="ready"
+# params: 'ready' "update"
 Params="${1:-$DEFAULTVALUE}"
 
 info "                         "
@@ -49,8 +52,6 @@ update_wine_games() {
         old_version_app_path="$KegworksGames_Folder/${old_version_file_name}"
 
         # new version file name and path
-        # dash_name="${game_name// /_}"
-        # dash_name_prefix="${NEW_VERSION}_${dash_name}"
         new_version_file_name="${old_version_file_name//${OLD_VERSION}/${NEW_VERSION}}"
         new_version_app_path="$KegworksGames_Folder/${new_version_file_name}"
 

@@ -7,6 +7,7 @@ KegworksGames_Folder="$APP_GAMES_PATH/Kegworks"
 APP_GAME_FOLDER_IN_DRIVER_C="Contents/drive_c/Games"
 
 games_in_kegworks=(
+    "God of War" "God-of-War"
     "Assassins Creed Syndicate" "Assassins Creed Syndicate"
     "Assassins Creed Mirage" "Assassins Creed Mirage"
     "Assassins Creed Origins" "Assassin's Creed Origins"
@@ -92,7 +93,8 @@ check_real_app_name() {
     game_name=$1
     check_app_existed "10" "$game_name"
     check_app_existed "103" "$game_name"
-    check_app_existed "108103" "$game_name"
+    # check_app_existed "108103" "$game_name"
+    check_app_existed "1010104" "$game_name"
     check_app_existed "2477" "$game_name"
     check_app_existed "whiskey" "$game_name"
 }

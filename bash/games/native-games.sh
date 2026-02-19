@@ -53,10 +53,10 @@ native_games_apps=(
     "open"
 
     # Rise of the Tomb Raider
-    "Rise of the Tomb Raider"
-    "*.tiger"
-    "Contents/Game/RiseOfTheTombRaiderData"
-    "open"
+    # "Rise of the Tomb Raider"
+    # "*.tiger"
+    # "Contents/Game/RiseOfTheTombRaiderData"
+    # "open"
 
 )
 

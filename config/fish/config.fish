@@ -24,6 +24,9 @@ export PATH="/Applications/Wine Stable.app/Contents/Resources/wine/bin:$PATH"
 export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
 export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib:/opt/X11/lib:$DYLD_FALLBACK_LIBRARY_PATH"
 
+fish_add_path "/Volumes/MacUser/djzhang/.asdf/installs/nodejs/25.5.0/bin"
+# export PATH="/Volumes/MacUser/djzhang/.asdf/installs/nodejs/25.5.0/bin:$PATH"
+
 # Playing games on the crossover platform
 set -g -x ROSETTA_ADVERTISE_AVX 1
 

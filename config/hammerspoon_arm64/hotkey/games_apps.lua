@@ -505,6 +505,8 @@ local function Play_CarX_Street()
 
     -- mt_107103_CarX_Street
     -- mt_107103_CarX_Street
+    -- p_mt_1010104_CarX_Street
+    -- p_mt_1010104_CarX_Street
 
     local app_name = "CarX Street"
 
@@ -551,6 +553,16 @@ end
 
 function Play_Far_Cry_6()
     local app_name = "Far Cry 6"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end
+
+function Play_God_of_War()
+    local app_name = "God of War"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
