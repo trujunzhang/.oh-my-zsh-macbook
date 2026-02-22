@@ -84,10 +84,10 @@ local chooser = hs.chooser.new(function(choice)
         Play_Resident_Evil_3()
     elseif tag == "Resident-Evil-7" then
         Play_Resident_Evil_7()
-    -- elseif tag == "" then
-    --     Play_Horizon_Zero_Dawn_Remastered()
-    -- elseif tag == "" then
-    --     Play_Horizon_Zero_Dawn_Remastered()
+    elseif tag == "God-of-War" then
+        Play_God_of_War()
+    elseif tag == "Assassins-Creed-III-Remastered" then
+        Play_Assassins_Creed_III_Remastered()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -143,11 +143,11 @@ local menus = {
         ["tag"] = "Assassin-Creed-Brotherhood",
     },
     {
-        ["text"] = "Assassins-Creed-IV-Black Flag(-4)",
+        ["text"] = "Assassins Creed IV Black Flag(-4)",
         ["tag"] = "Assassins-Creed-IV-Black-Flag",
     },
     {
-        ["text"] = "Assassins-creed-rogue(-5)",
+        ["text"] = "Assassins creed rogue(-5)",
         ["tag"] = "Assassins-creed-rogue",
     },
     {
@@ -171,7 +171,7 @@ local menus = {
     --     ["tag"] = "Need-for-Speed-Heat",
     -- },
     {
-        ["text"] = "Need_for_Speed_Payback(-6)",
+        ["text"] = "Need for Speed Payback(-6)",
         ["tag"] = "Need-for-Speed-Payback",
     },
     -- {
@@ -230,14 +230,14 @@ local menus = {
         ["text"] = "Resident Evil 7(-7)",
         ["tag"] = "Resident-Evil-7",
     },
-    -- {
-    --     ["text"] = "",
-    --     ["tag"] = "",
-    -- },
-    -- {
-    --     ["text"] = "",
-    --     ["tag"] = "",
-    -- },
+    {
+        ["text"] = "God of War(-O)",
+        ["tag"] = "God-of-War",
+    },
+    {
+        ["text"] = "Assassins Creed III Remastered(-M)",
+        ["tag"] = "Assassins-Creed-III-Remastered",
+    },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",

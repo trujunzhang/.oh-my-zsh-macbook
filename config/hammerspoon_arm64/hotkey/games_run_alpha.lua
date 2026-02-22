@@ -1,5 +1,7 @@
 -- hs.hotkey.bind(GameHotkeyMods, "F", Play_Star_Wars_Jedi_Fallen_Order)
 
+hs.hotkey.bind(GameHotkeyMods, "O", Play_God_of_War)
+
 hs.hotkey.bind(GameHotkeyMods, "F", Play_Far_Cry_4)
 -- hs.hotkey.bind(GameHotkeyMods, "F", Play_Far_Cry_5_With_Enjoyable)
 
@@ -12,10 +14,12 @@ hs.hotkey.bind(GameHotkeyMods, "B", Play_Assassin_Creed_Brotherhood)
 hs.hotkey.bind(GameHotkeyMods, "U", Play_Assassins_Creed_Unity)
 -- hs.hotkey.bind(GameHotkeyMods, "A", Play_Assassins_Creed_Syndicate)
 
+hs.hotkey.bind(GameHotkeyMods, "M", Play_Assassins_Creed_III_Remastered)
+
 hs.hotkey.bind(GameHotkeyMods, "G", Play_Grand_Theft_Auto_V)
 -- hs.hotkey.bind(GameHotkeyMods, "S", Play_Silent_Hill_2)
 -- hs.hotkey.bind(GameHotkeyMods, "U", Play_UNCHARTED_LoT_Collection)
-hs.hotkey.bind(GameHotkeyMods, "R", Play_Red_Dead_Redemption)
+-- hs.hotkey.bind(GameHotkeyMods, "R", Play_Red_Dead_Redemption)
 -- hs.hotkey.bind(GameHotkeyMods, "L", Play_The_Last_of_Us_Part_II)
 -- hs.hotkey.bind(GameHotkeyMods, "M", Play_Mafia_II_Definitive_Edition)
 hs.hotkey.bind(GameHotkeyMods, "S", Play_Marvel_Spider_Man_Remastered)

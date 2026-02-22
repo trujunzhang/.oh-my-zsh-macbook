@@ -209,11 +209,11 @@ function Play_Assassin_Creed_Brotherhood()
     ActiveWindow(brotherhood_times)
 end
 
-function Play_Assassins_Creed_Unity()
-    -- ProgramData/Orbit/720/RLD!
-    -- ProgramData/Orbit/720/RLD!
+function Play_Assassins_Creed_III_Remastered()
+    -- uPlay/CODEX/Saves/AssassinsCreedIIIRemastered
+    -- uPlay/CODEX/Saves/AssassinsCreedIIIRemastered
 
-    local app_name = "Assassins Creed Unity"
+    local app_name = "Assassins Creed III Remastered"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
@@ -221,6 +221,7 @@ function Play_Assassins_Creed_Unity()
 
     ActiveWindow(30)
 end
+
 function Play_Assassins_Creed_4_Black_Flag()
     -- mt_2477_Assassins_Creed_IV_Black_Flag
     -- mt_2477_Assassins_Creed_IV_Black_Flag
@@ -239,6 +240,19 @@ function Play_Assassins_Creed_Rogue()
     -- mt_103_Assassins_Creed_Rogue
 
     local app_name = "Assassins Creed Rogue"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end
+
+function Play_Assassins_Creed_Unity()
+    -- ProgramData/Orbit/720/RLD!
+    -- ProgramData/Orbit/720/RLD!
+
+    local app_name = "Assassins Creed Unity"
 
     BeforePlayGame(function()
         Check_And_Run_KegworksApp(app_name)
@@ -562,6 +576,9 @@ function Play_Far_Cry_6()
 end
 
 function Play_God_of_War()
+    -- Saved-Games/God of War/371208929
+    -- Saved-Games/God of War/371208929
+
     local app_name = "God of War"
 
     BeforePlayGame(function()
