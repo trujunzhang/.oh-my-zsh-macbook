@@ -30,7 +30,7 @@
         {
           "key" : "x",
           "type" : "application",
-          "value" : "/Applications/xunlei.app"
+          "value" : "/Applications/Thunder.app"
         },
         {
           "key" : "b",
@@ -211,6 +211,11 @@
           "key" : "r",
           "type" : "application",
           "value" : "/Applications/Path Finder.app"
+        },
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Applications/Bloom.app"
         }
       ],
       "key" : "f",
@@ -289,12 +294,12 @@
         {
           "key" : "d",
           "type" : "application",
-          "value" : "/Volumes/MacGame/AppGames/DeadIsland2.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/DiRT 4.app"
         },
         {
           "key" : "b",
           "type" : "application",
-          "value" : "/Volumes/MacGame/AppGames/RESIDENT EVIL 7 biohazard.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Shadow of the Tomb Raider.app"
         },
         {
           "key" : "s",
@@ -304,7 +309,12 @@
         {
           "key" : "r",
           "type" : "application",
-          "value" : "/Volumes/MacGame/AppGames/Rise of the Tomb Raider.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Shadow of the Tomb Raider.app"
+        },
+        {
+          "key" : "h",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/AppGames/Hitman WOA.app"
         }
       ],
       "key" : "g",

@@ -52,12 +52,23 @@ native_games_apps=(
     "Contents/Resources"
     "open"
 
+    # Hitman WOA
+    "Hitman WOA"
+    "*.rpkg"
+    "Contents/Resources"
+    "open"
+
     # Rise of the Tomb Raider
     # "Rise of the Tomb Raider"
     # "*.tiger"
     # "Contents/Game/RiseOfTheTombRaiderData"
     # "open"
 
+    # DiRT 4
+    # "DiRT 4"
+    # "Data"
+    # "Contents/Resources"
+    # "open"
 )
 
 test_native_games_apps=(

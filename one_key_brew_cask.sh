@@ -12,6 +12,7 @@ USER_APPLICATION="$HOME/Applications/"
 # https://github.com/buo/homebrew-cask-upgrade
 
 brew_apps=(
+    "Bloom" "bloom" "copy" "no-bak"
     "Folx" "Folx" "copy" "no-bak"
     "Keyboard Maestro" "Keyboard Maestro" "copy" "no-bak"
     "Xcode" "xcode" "ssd" "no-bak"

@@ -7,6 +7,7 @@ KegworksGames_Folder="$APP_GAMES_PATH/Kegworks"
 APP_GAME_FOLDER_IN_DRIVER_C="Contents/drive_c/Games"
 
 games_in_kegworks=(
+    "Mafia Definitive Edition" "Mafia Definitive Edition"
     "God of War" "God-of-War"
     "Assassin Creed Brotherhood" "Assassins Creed - Brotherhood"
     "Assassins Creed III Remastered" "Assassins Creed III Remastered"

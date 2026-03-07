@@ -88,8 +88,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_God_of_War()
     elseif tag == "Assassins-Creed-III-Remastered" then
         Play_Assassins_Creed_III_Remastered()
-    -- elseif tag == "" then
-    --     Play_Horizon_Zero_Dawn_Remastered()
+    elseif tag == "Mafia-Definitive-Edition" then
+        Play_Mafia_Definitive_Edition()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -238,10 +238,10 @@ local menus = {
         ["text"] = "Assassins Creed III Remastered(-M)",
         ["tag"] = "Assassins-Creed-III-Remastered",
     },
-    -- {
-    --     ["text"] = "",
-    --     ["tag"] = "",
-    -- },
+    {
+        ["text"] = "Mafia Definitive Edition(-J)",
+        ["tag"] = "Mafia-Definitive-Edition",
+    },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",

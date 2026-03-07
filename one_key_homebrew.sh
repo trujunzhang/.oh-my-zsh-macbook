@@ -161,6 +161,7 @@ brew_apps_arm=(
     # "xz" "xz"
 
     # neovim
+    # "lua@5.1" "lua@5.1"
     "luarocks" "luarocks"
     "rg" "rg"
     "fd" "fd"

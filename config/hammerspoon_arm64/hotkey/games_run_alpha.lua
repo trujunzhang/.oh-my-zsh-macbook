@@ -15,6 +15,7 @@ hs.hotkey.bind(GameHotkeyMods, "U", Play_Assassins_Creed_Unity)
 -- hs.hotkey.bind(GameHotkeyMods, "A", Play_Assassins_Creed_Syndicate)
 
 hs.hotkey.bind(GameHotkeyMods, "M", Play_Assassins_Creed_III_Remastered)
+hs.hotkey.bind(GameHotkeyMods, "J", Play_Mafia_Definitive_Edition)
 
 hs.hotkey.bind(GameHotkeyMods, "G", Play_Grand_Theft_Auto_V)
 -- hs.hotkey.bind(GameHotkeyMods, "S", Play_Silent_Hill_2)

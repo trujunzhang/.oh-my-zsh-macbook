@@ -77,8 +77,17 @@ function Play_The_Last_of_Us_Part_II()
     ActiveWindow(50)
 end
 
+function Play_Mafia_Definitive_Edition()
+    local app_name = "Mafia Definitive Edition"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(90)
+end
+
 function Play_Mafia_II_Definitive_Edition()
-    -- local app_name = "Titanfall2"
     local app_name = "Mafia II Definitive Edition"
 
     BeforePlayGame(function()

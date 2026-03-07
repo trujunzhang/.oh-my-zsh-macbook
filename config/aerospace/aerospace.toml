@@ -260,6 +260,14 @@ if.app-id = 'com.kochmedia.MetroExodusNew'
 run = 'move-node-to-workspace H'
 
 [[on-window-detected]]
+if.app-id = 'dk.ioi.ios.hitman'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
+if.app-id = 'com.feralinteractive.tombraider'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
 if.app-id = 'jp.co.capcom.VillageUS'
 run = 'move-node-to-workspace H'
 
@@ -347,6 +355,10 @@ run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
 if.app-id = 'com.cocoatech.PathFinder'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+if.app-id = 'com.asiafu.Bloom'
 run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
