@@ -691,6 +691,7 @@ alias https_proxy_v2ray="export https_proxy=http://127.0.0.1:1087"
 alias http_proxy_v2ray="export http_proxy=http://127.0.0.1:1087"
 
 # git clone
+alias dclone_llms_from_scratch="git clone https://github.com/rasbt/LLMs-from-scratch"
 alias dclone_openclaw="git clone https://github.com/openclaw/openclaw.git --depth 1"
 alias dclone_expensify="git clone https://github.com/expensify/App.git --depth 1 expensify && cd expensify"
 alias dclone_bitnet="git clone https://github.com/microsoft/BitNet --depth 1"

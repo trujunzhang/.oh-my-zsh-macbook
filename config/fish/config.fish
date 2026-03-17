@@ -24,7 +24,7 @@ export PATH="/Applications/Wine Stable.app/Contents/Resources/wine/bin:$PATH"
 export FREETYPE_PROPERTIES="truetype:interpreter-version=35"
 export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib:/opt/X11/lib:$DYLD_FALLBACK_LIBRARY_PATH"
 
-fish_add_path "/Volumes/MacUser/djzhang/.asdf/installs/nodejs/25.5.0/bin"
+fish_add_path "$HOME/.asdf/installs/nodejs/25.5.0/bin"
 # export PATH="/Volumes/MacUser/djzhang/.asdf/installs/nodejs/25.5.0/bin:$PATH"
 
 # Playing games on the crossover platform
@@ -39,6 +39,8 @@ set -g -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/25.1.8937393
 
 # set -g -x HOMEBREW_BOTTLE_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles"
 # set -g -x HOMEBREW_API_DOMAIN "https://mirrors.aliyun.com/homebrew/homebrew-bottles/api"
+
+set -g -x HOMEBREW_NO_AUTO_UPDATE 1
 
 if test "$(uname -m)" = arm64
     if test -d /opt/homebrew # MacOS arm64
@@ -233,4 +235,7 @@ end
 alias conda="micromamba"
 
 # Added by Windsurf
-fish_add_path /Volumes/MacUser/djzhang/.codeium/windsurf/bin
+fish_add_path "$HOME/.codeium/windsurf/bin"
+
+# OpenClaw Completion
+source "$HOME/.openclaw/completions/openclaw.fish"
