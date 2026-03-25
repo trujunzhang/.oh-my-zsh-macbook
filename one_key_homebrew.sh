@@ -169,7 +169,7 @@ brew_apps_arm=(
     "tree-sitter-cli" "tree-sitter-cli"
 
     "starship" "starship"
-    "zellij" "zellij"
+    # "zellij" "zellij"
     "fish" "fish"
     "neovim" "neovim"
 

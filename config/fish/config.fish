@@ -78,6 +78,8 @@ fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps"
 
 if test "$(uname -m)" = arm64
     fish_add_path "$HOME/.local/bin/helix-aarch64-macos"
+    # https://github.com/zellij-org/zellij/releases/tag/v0.43.1
+    fish_add_path "$HOME/.local/bin/zellij/0.43.1"
 end
 
 if test "$(uname -m)" = x86_64
