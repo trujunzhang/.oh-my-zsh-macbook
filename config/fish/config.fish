@@ -168,6 +168,12 @@ if type zellij &>/dev/null
     else
         zellij attach -c djzhang-mac
     end
+
+    # if status is-interactive
+    #     # ...
+    #     eval (zellij setup --generate-auto-start fish | string collect)
+    # end
+
 end
 
 # if status is-interactive
