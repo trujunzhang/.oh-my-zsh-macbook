@@ -7,6 +7,12 @@
   },
   {
     "type": "application",
+    "name": "Firefox",
+    "application": "Firefox.app",
+    "enable": "0"
+  },
+  {
+    "type": "application",
     "name": "BetterTouchTool",
     "application": "BetterTouchTool.app",
     "enable": "0"
@@ -45,6 +51,12 @@
     "type": "application",
     "name": "Google Chrome",
     "path": "Google Chrome.app",
+    "enable": "0"
+  },
+  {
+    "type": "application",
+    "name": "Firefox Nightly",
+    "path": "Firefox Nightly.app",
     "enable": "1"
   },
   {
@@ -61,12 +73,6 @@
   },
   {
     "type": "application",
-    "name": "WezTerm",
-    "application": "WezTerm.app",
-    "enable": "0"
-  },
-  {
-    "type": "application",
     "name": "Brave Browser Nightly",
     "application": "Brave Browser Nightly.app",
     "enable": "1"
@@ -79,14 +85,20 @@
   },
   {
     "type": "application",
+    "name": "ZellijTools-arm-v1",
+    "application": "ZellijTools-arm-v1.app",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "Raycast",
     "path": "Raycast",
     "enable": "0"
   },
   {
     "type": "application",
-    "name": "ZellijTools-arm-v1",
-    "application": "ZellijTools-arm-v1.app",
+    "name": "Firefox Nightly",
+    "path": "Firefox Nightly.app",
     "enable": "1"
   }
 ]

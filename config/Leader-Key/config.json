@@ -216,6 +216,11 @@
           "key" : "b",
           "type" : "application",
           "value" : "/Applications/Bloom.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Firefox.app"
         }
       ],
       "key" : "f",

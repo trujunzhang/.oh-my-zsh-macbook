@@ -67,6 +67,7 @@ brew_apps=(
     "Vivaldi" "vivaldi" 'ssd' 'backup'
     "Opera" "opera" 'ssd' 'backup'
     "Firefox" "firefox" 'ssd' 'backup'
+    # "Firefox Beta" "firefox-beta" 'copy' 'backup'
     "Brave Browser" "brave-browser" 'ssd' 'backup'
     "Brave Browser Beta" "brave-browser-bata" 'ssd' 'backup'
     # "Brave Browser Nightly" "brave-browser-nightly" 'copy' 'backup'

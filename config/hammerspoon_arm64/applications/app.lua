@@ -19,7 +19,8 @@ end)
 
 hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "C", function()
     -- hs.application.launchOrFocus("/Applications/Google Chrome.app")
-    hs.application.launchOrFocus("Google Chrome.app")
+    -- hs.application.launchOrFocus("Google Chrome.app")
+    hs.application.launchOrFocus("Firefox Nightly.app")
     -- hs.notify.new({ title = "Google Chrome", informativeText = "run it sucessfully" }):send()
 end)
 
