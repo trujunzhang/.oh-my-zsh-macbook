@@ -66,8 +66,9 @@ brew_apps=(
     # "Google Chrome" "google-chrome" 'copy' 'backup'
     "Vivaldi" "vivaldi" 'ssd' 'backup'
     "Opera" "opera" 'ssd' 'backup'
-    "Firefox" "firefox" 'ssd' 'backup'
+    # "Firefox" "firefox" 'ssd' 'backup'
     # "Firefox Beta" "firefox-beta" 'copy' 'backup'
+    # "Firefox Nightly" "firefox-nightly" 'copy' 'backup'
     "Brave Browser" "brave-browser" 'ssd' 'backup'
     "Brave Browser Beta" "brave-browser-bata" 'ssd' 'backup'
     # "Brave Browser Nightly" "brave-browser-nightly" 'copy' 'backup'
@@ -258,10 +259,10 @@ function install_brew_app {
 function install_apps {
     apps=("$@")
     for ((i = 0; i < ${#apps[@]}; i = i + 4)); do
-        name="${apps[$i + 0]}"
-        app="${apps[$i + 1]}"
-        shouldCopyInApplications="${apps[$i + 2]}"
-        needBackup="${apps[$i + 3]}"
+        name="${apps[$i+0]}"
+        app="${apps[$i+1]}"
+        shouldCopyInApplications="${apps[$i+2]}"
+        needBackup="${apps[$i+3]}"
 
         info ""
         info "element $i is ${name}"

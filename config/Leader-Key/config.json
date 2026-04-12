@@ -133,7 +133,7 @@
         {
           "key" : "3",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Firefox.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Firefox Nightly.app"
         },
         {
           "key" : "4",
@@ -221,6 +221,11 @@
           "key" : "f",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Firefox.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/Google Chrome.app"
         }
       ],
       "key" : "f",

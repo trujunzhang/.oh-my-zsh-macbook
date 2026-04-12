@@ -9,7 +9,7 @@
     "type": "application",
     "name": "Firefox",
     "application": "Firefox.app",
-    "enable": "0"
+    "enable": "1"
   },
   {
     "type": "application",
@@ -75,7 +75,7 @@
     "type": "application",
     "name": "Brave Browser Nightly",
     "application": "Brave Browser Nightly.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
@@ -99,6 +99,6 @@
     "type": "application",
     "name": "Firefox Nightly",
     "path": "Firefox Nightly.app",
-    "enable": "1"
+    "enable": "0"
   }
 ]

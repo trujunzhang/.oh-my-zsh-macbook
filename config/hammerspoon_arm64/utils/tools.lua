@@ -47,14 +47,14 @@ function ClickPrimaryScreenCenter(offsetX, offsetY)
 end
 
 function SetMacosVolume(value)
-    value = value or 13
+    value = value or GMacDefaultVolume
     hs.execute("osascript -e 'set volume output volume " .. value .. "'")
     hs.notify.new({ title = "Setup MacOS Volume", informativeText = "to " .. value .. "%" }):send()
 end
 
 function SetMacosDefaultVolume()
     if GMacCurrentVolume == 0 then
-        GMacCurrentVolume = 13
+        GMacCurrentVolume = GMacDefaultVolume
     else
         GMacCurrentVolume = 0
     end
