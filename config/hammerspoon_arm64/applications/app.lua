@@ -1,4 +1,5 @@
-hs.hotkey.bind(GameHotkeyMods, "N", OpenAndActiveBraveBrowser)
+-- hs.hotkey.bind(GameHotkeyMods, "N", OpenAndActiveBraveBrowser)
+hs.hotkey.bind(GameHotkeyMods, "N", RestartFirefoxBrowser)
 
 hs.hotkey.bind(GameHotkeyMods, "9", Kill_App_Clashx)
 -- hs.hotkey.bind(GameHotkeyMods, "0", Run_Genymotion_VM)
@@ -21,7 +22,9 @@ hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "C", function()
     -- hs.application.launchOrFocus("/Applications/Google Chrome.app")
     -- hs.application.launchOrFocus("Google Chrome.app")
     -- hs.application.launchOrFocus("Firefox Nightly.app")
-    hs.application.launchOrFocus("Firefox.app")
+    -- hs.application.launchOrFocus("Firefox.app")
+    -- hs.application.launchOrFocus("Firefox Nightly.app")
+    hs.application.launchOrFocus(GCurrentBrowserApp)
     -- hs.notify.new({ title = "Google Chrome", informativeText = "run it sucessfully" }):send()
 end)
 

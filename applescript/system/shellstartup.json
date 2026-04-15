@@ -9,7 +9,7 @@
     "type": "application",
     "name": "Firefox",
     "application": "Firefox.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
@@ -57,7 +57,7 @@
     "type": "application",
     "name": "Firefox Nightly",
     "path": "Firefox Nightly.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
@@ -99,6 +99,6 @@
     "type": "application",
     "name": "Firefox Nightly",
     "path": "Firefox Nightly.app",
-    "enable": "0"
+    "enable": "1"
   }
 ]

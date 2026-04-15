@@ -1,8 +1,12 @@
 print("=================== load djzhang's config===============================")
 
 GMacCurrentVolume = 0
-GMacDefaultVolume = 15
+-- GMacDefaultVolume = 15
+GMacDefaultVolume = 13
 GCurrentGameName = ""
+
+-- GCurrentBrowserApp = "Google Chrome.app"
+GCurrentBrowserApp = "Firefox Nightly.app"
 
 -- TerminalApp = "Wezterm.app"
 -- TerminalAppID = "com.github.wez.wezterm"

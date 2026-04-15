@@ -43,6 +43,18 @@ function Run_Genymotion_VM()
     )
 end
 
+function RestartFirefoxBrowser()
+    ok, result = hs.osascript.applescript([[
+            tell application "Firefox Nightly" 
+               quit
+            end tell
+            ]])
+
+    hs.timer.doAfter(3, function()
+        hs.application.launchOrFocus(GCurrentBrowserApp)
+    end)
+end
+
 function OpenAndActiveBraveBrowser()
     hs.application.launchOrFocus("Brave Browser Nightly")
 
