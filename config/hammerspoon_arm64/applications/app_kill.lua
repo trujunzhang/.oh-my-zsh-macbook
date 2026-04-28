@@ -5,5 +5,7 @@ function Kill_App_Clashx()
 
     hs.execute("killall V2rayU")
 
+    hs.execute("killall FlClash")
+
     hs.notify.new({ title = "Killing the app: " .. app_name, informativeText = "killed it sucessfully" }):send()
 end

@@ -31,9 +31,15 @@
   },
   {
     "type": "application",
+    "name": "FlClash",
+    "application": "FlClash.app",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "clash for arm",
     "application": "Clash Verge.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",

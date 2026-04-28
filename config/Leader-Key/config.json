@@ -81,6 +81,11 @@
           "key" : "j",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacApps/GameController/Enjoyable.app"
+        },
+        {
+          "key" : "l",
+          "type" : "application",
+          "value" : "/Applications/FlClash.app"
         }
       ],
       "key" : "a",
