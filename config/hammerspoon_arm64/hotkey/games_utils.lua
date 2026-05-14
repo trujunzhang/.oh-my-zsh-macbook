@@ -37,7 +37,7 @@ function BeforePlayGame(runApp)
     hs.notify.new({ title = "Playing game", informativeText = "Start it" }):send()
 
     hs.timer.doAfter(1, function()
-        hs.eventtap.keyStroke({ "Alt" }, "B")
+        hs.eventtap.keyStroke({ "Alt" }, "N")
     end)
 
     hs.timer.doAfter(3, function()

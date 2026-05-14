@@ -56,6 +56,7 @@ games_in_kegworks=(
     # "" ""
 )
 
+DEFAULT_GLOBAL_FILE_NAME="not found"
 my_global_file_name=""
 
 check_app_existed() {
@@ -77,18 +78,37 @@ check_app_existed() {
         my_global_file_name="$dash_name_prefix"
     fi
 
-    if [ -d "$KegworksGames_Folder/p_${dash_name_prefix}.app" ]; then
-        my_global_file_name="p_$dash_name_prefix"
-    fi
+    name_types=(
+        "dx_"
+        "p_"
+        # for dxmt
+        "mt_"
+        "dx_p_"
+        "dx_mt_"
+        "dx_p_mt_"
+        "p_mt_"
+    )
 
-    # for dxmt
-    if [ -d "$KegworksGames_Folder/mt_${dash_name_prefix}.app" ]; then
-        my_global_file_name="mt_$dash_name_prefix"
-    fi
+    for ((m = 0; m < ${#name_types[@]}; m = m + 1)); do
+        value=${name_types[$m]}
 
-    if [ -d "$KegworksGames_Folder/p_mt_${dash_name_prefix}.app" ]; then
-        my_global_file_name="p_mt_$dash_name_prefix"
-    fi
+        if [ -d "$KegworksGames_Folder/${value}${dash_name_prefix}.app" ]; then
+            my_global_file_name="${value}$dash_name_prefix"
+        fi
+    done
+
+    # if [ -d "$KegworksGames_Folder/p_${dash_name_prefix}.app" ]; then
+    #     my_global_file_name="p_$dash_name_prefix"
+    # fi
+    #
+    # # for dxmt
+    # if [ -d "$KegworksGames_Folder/mt_${dash_name_prefix}.app" ]; then
+    #     my_global_file_name="mt_$dash_name_prefix"
+    # fi
+    #
+    # if [ -d "$KegworksGames_Folder/p_mt_${dash_name_prefix}.app" ]; then
+    #     my_global_file_name="p_mt_$dash_name_prefix"
+    # fi
 }
 
 check_real_app_name() {

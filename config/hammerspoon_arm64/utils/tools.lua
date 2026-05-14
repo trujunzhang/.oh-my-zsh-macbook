@@ -79,17 +79,33 @@ local function check_app_existed(prefix, appName)
     local app_name_prefix = prefix .. "_" .. appName
     local dash_name_prefix = prefix .. "_" .. appName:gsub(" ", "_")
 
+    local name_types = {
+        "dx_",
+        "p_",
+        -- for dxmt
+        "mt_",
+        "dx_p_",
+        "dx_mt_",
+        "dx_p_mt_",
+        "p_mt_",
+    }
+
+    for _, value in ipairs(name_types) do
+        if DoesDirectoryExist(KegworksGames .. value .. dash_name_prefix) then
+            GCurrentGameName = value .. dash_name_prefix
+        end
+    end
+
     if DoesDirectoryExist(KegworksGames .. app_name_prefix) then
         GCurrentGameName = app_name_prefix
     elseif DoesDirectoryExist(KegworksGames .. dash_name_prefix) then
         GCurrentGameName = dash_name_prefix
-    elseif DoesDirectoryExist(KegworksGames .. "p_" .. dash_name_prefix) then
-        GCurrentGameName = "p_" .. dash_name_prefix
-    -- for dxmt
-    elseif DoesDirectoryExist(KegworksGames .. "mt_" .. dash_name_prefix) then
-        GCurrentGameName = "mt_" .. dash_name_prefix
-    elseif DoesDirectoryExist(KegworksGames .. "p_mt_" .. dash_name_prefix) then
-        GCurrentGameName = "p_mt_" .. dash_name_prefix
+        -- elseif DoesDirectoryExist(KegworksGames .. "p_" .. dash_name_prefix) then
+        --     GCurrentGameName = "p_" .. dash_name_prefix
+        -- elseif DoesDirectoryExist(KegworksGames .. "mt_" .. dash_name_prefix) then
+        --     GCurrentGameName = "mt_" .. dash_name_prefix
+        -- elseif DoesDirectoryExist(KegworksGames .. "p_mt_" .. dash_name_prefix) then
+        --     GCurrentGameName = "p_mt_" .. dash_name_prefix
     end
 end
 
