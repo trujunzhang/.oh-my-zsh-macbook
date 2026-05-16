@@ -759,6 +759,8 @@ alias dgame_rarfile_ls="ls /Volumes/RarFiles >'$HOME/Desktop/rarFiles.txt'"
 
 alias dcopy_enjoyable_plist="cp -v $HOME/Library/Preferences/com.yukkurigames.Enjoyable.plist $TRUJUNZHANG_DOTFILES_HOME/config/Enjoyable/com.yukkurigames.Enjoyable.plist"
 
+alias dmac_user_link="sudo ln -s /Volumes/MacUser/djzhang /Users/djzhang"
+
 alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
 alias dmac_unzip_vpn_apps='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'
 alias dmac_switch_off_spotlight="sudo mdutil -a -i off"

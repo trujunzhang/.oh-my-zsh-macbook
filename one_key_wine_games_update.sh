@@ -27,7 +27,9 @@ info "$OLD_VERSION"
 info "** NEW_VERSION:                                "
 info "$NEW_VERSION"
 info "** TEMPLATE_FILE_NAME:                                "
-info "$TEMPLATE_FILE_NAME"
+info "$TEMPLATE_WINE_FILE_NAME"
+info "** TEMPLATE_WINE_APP_PATH:                                "
+info "$TEMPLATE_WINE_APP_PATH"
 info "=================================================================================="
 info "                                          "
 
@@ -43,12 +45,10 @@ check_old_app_name() {
 
 do_when_new_file_exist() {
     install_folder_name=$1
-    old_game_path=$2
-    new_game_path=$3
-    old_version_file_name=$4
-    new_version_file_name=$5
-    old_version_app_path=$6
-    new_version_app_path=$7
+    old_version_file_name=$2
+    new_version_file_name=$3
+    old_version_app_path=$4
+    new_version_app_path=$5
 
     info "already exist new version game: $new_version_file_name"
 
@@ -134,7 +134,7 @@ update_wine_games() {
             continue
 
         elif [ -d "$new_version_app_path" ]; then
-            do_when_new_file_exist "$install_folder_name" "$old_version_app_path" "$new_version_app_path" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
+            do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
 
         elif [ -d "$old_version_app_path" ]; then
             do_when_old_file_exist "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"

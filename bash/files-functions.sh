@@ -4,6 +4,9 @@ source ./bash/shellUtils.sh
 
 DEFAULTACTION="ignore"
 
+
+# ln -s /Volumes/MacUser/djzhang /Users/djzhang
+
 function directoryLink {
 
     msg=$1
