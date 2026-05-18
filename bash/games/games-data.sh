@@ -4,11 +4,9 @@ HOME_MACGAME_PATH="/Volumes/MacGame"
 APP_GAMES_PATH="$HOME_MACGAME_PATH/AppGames"
 Moving_Games_Folder="$HOME_MACGAME_PATH/crossover/kegworks_games"
 KegworksGames_Folder="$APP_GAMES_PATH/Kegworks"
+
 DRIVER_C_FOLDER_IN_WINE_APP="Contents/drive_c"
-APP_GAME_FOLDER_IN_DRIVER_C="$DRIVER_C_FOLDER_IN_WINE_APP/Games"
-PROGRAMDATA_FOLDER_IN_DRIVER_C="$DRIVER_C_FOLDER_IN_WINE_APP/ProgramData"
-USER_FOLDER_IN_DRIVER_C="$DRIVER_C_FOLDER_IN_WINE_APP/users"
-USER_SIKARUGIR_FOLDER_IN_DRIVER_C="$USER_FOLDER_IN_DRIVER_C/Sikarugir"
+DRIVER_C_FOLDER_IN_TOXICGAME_APP="Contents/Resources/ToxicGame/drive_c"
 
 GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER="/Volumes/MacUser/djzhang/Documents"
 
@@ -123,7 +121,8 @@ check_real_app_name() {
     check_app_existed "103" "$game_name"
     # check_app_existed "108103" "$game_name"
     # check_app_existed "1010104" "$game_name"
-    check_app_existed "1011106" "$game_name"
+    check_app_existed "1011x106" "$game_name"
+    check_app_existed "2610110" "$game_name"
     check_app_existed "2477" "$game_name"
     check_app_existed "whiskey" "$game_name"
 }

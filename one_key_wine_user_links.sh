@@ -8,7 +8,8 @@ source ./bash/games/native-games.sh
 source ./bash/games/games-data.sh
 
 # NEW_VERSION="108103"
-NEW_VERSION="1011106"
+# NEW_VERSION="1011106"
+NEW_VERSION="2610110"
 
 # 108103_wine
 TEMPLATE_WINE_FILE_NAME="${NEW_VERSION}_wine.app"
@@ -30,28 +31,50 @@ info "                                          "
 rename_folder() {
     folderName=$1
 
-    if [ -d "${folderName}xxx" ]; then
+    info ""
+
+    if [ -L "$folderName" ]; then
+        info "removing linked folder: $folderName"
+        rm -rf "$folderName"
+    elif [ -d "${folderName}xxx" ]; then
         info "already to be renamed: $folderName"
     elif [ -d "$folderName" ]; then
-        info "rename_folder: $folderName"
+        info "renaming folder: $folderName"
         mv "$folderName" "${folderName}xxx"
     fi
 }
 
 check_and_build_user_links() {
+    driver_c_folder=$1
+    app_user=$2
+
+    APP_GAME_FOLDER_IN_DRIVER_C="$driver_c_folder/Games"
+    PROGRAMDATA_FOLDER_IN_DRIVER_C="$driver_c_folder/ProgramData"
+    USER_FOLDER_IN_DRIVER_C="$driver_c_folder/users"
+    APP_USER_FOLDER_IN_DRIVER_C="$USER_FOLDER_IN_DRIVER_C/$app_user"
+
     mkdir -p "$TEMPLATE_WINE_APP_PATH/$APP_GAME_FOLDER_IN_DRIVER_C"
 
     rename_folder "$TEMPLATE_WINE_APP_PATH/$PROGRAMDATA_FOLDER_IN_DRIVER_C"
     directoryLink "ProgramData" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER/ProgramData" "$TEMPLATE_WINE_APP_PATH/$PROGRAMDATA_FOLDER_IN_DRIVER_C"
 
-    rename_folder "$TEMPLATE_WINE_APP_PATH/$USER_SIKARUGIR_FOLDER_IN_DRIVER_C/AppData/Roaming"
-    directoryLink "Roaming" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER/Games-Roaming" "$TEMPLATE_WINE_APP_PATH/$USER_SIKARUGIR_FOLDER_IN_DRIVER_C/AppData/Roaming"
+    rename_folder "$TEMPLATE_WINE_APP_PATH/$APP_USER_FOLDER_IN_DRIVER_C/AppData/Roaming"
+    directoryLink "Roaming" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER/Games-Roaming" "$TEMPLATE_WINE_APP_PATH/$APP_USER_FOLDER_IN_DRIVER_C/AppData/Roaming"
 
-    rename_folder "$TEMPLATE_WINE_APP_PATH/$USER_SIKARUGIR_FOLDER_IN_DRIVER_C/Saved Games"
-    directoryLink "Saved Games" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER/Saved-Games" "$TEMPLATE_WINE_APP_PATH/$USER_SIKARUGIR_FOLDER_IN_DRIVER_C/Saved Games"
+    rename_folder "$TEMPLATE_WINE_APP_PATH/$APP_USER_FOLDER_IN_DRIVER_C/Saved Games"
+    directoryLink "Saved Games" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER/Saved-Games" "$TEMPLATE_WINE_APP_PATH/$APP_USER_FOLDER_IN_DRIVER_C/Saved Games"
+
+    rename_folder "$TEMPLATE_WINE_APP_PATH/$APP_USER_FOLDER_IN_DRIVER_C/Documents"
+    directoryLink "Documents" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER" "$TEMPLATE_WINE_APP_PATH/$APP_USER_FOLDER_IN_DRIVER_C/Documents"
 
     rename_folder "$TEMPLATE_WINE_APP_PATH/$USER_FOLDER_IN_DRIVER_C/Public/Documents"
-    directoryLink "Documents" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER" "$TEMPLATE_WINE_APP_PATH/$USER_FOLDER_IN_DRIVER_C/Public/Documents"
+    directoryLink "Public/Documents" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER" "$TEMPLATE_WINE_APP_PATH/$USER_FOLDER_IN_DRIVER_C/Public/Documents"
 }
 
-check_and_build_user_links
+if [ -d "$TEMPLATE_WINE_APP_PATH/${DRIVER_C_FOLDER_IN_WINE_APP}" ]; then
+    check_and_build_user_links "$DRIVER_C_FOLDER_IN_WINE_APP" "Sikarugir"
+fi
+
+if [ -d "$TEMPLATE_WINE_APP_PATH/${DRIVER_C_FOLDER_IN_TOXICGAME_APP}" ]; then
+    check_and_build_user_links "$DRIVER_C_FOLDER_IN_TOXICGAME_APP" "crossover"
+fi

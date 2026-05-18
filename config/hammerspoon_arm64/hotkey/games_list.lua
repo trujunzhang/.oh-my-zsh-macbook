@@ -206,10 +206,10 @@ local menus = {
         ["text"] = "Crysis 3 Remasted(-C)",
         ["tag"] = "Crysis-3-Remasted",
     },
-    {
-        ["text"] = "The Witcher 3(-H)",
-        ["tag"] = "The-Witcher-3",
-    },
+    -- {
+    --     ["text"] = "The Witcher 3(-H)",
+    --     ["tag"] = "The-Witcher-3",
+    -- },
     {
         ["text"] = "Far Cry 4(-F)",
         ["tag"] = "Far-Cry-4",
