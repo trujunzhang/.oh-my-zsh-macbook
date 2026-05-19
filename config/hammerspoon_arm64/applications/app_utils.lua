@@ -55,6 +55,10 @@ function RestartFirefoxBrowser()
     end)
 end
 
+function OpenAndActiveGoogleChromeBrowser()
+    hs.application.launchOrFocus("Google Chrome")
+end
+
 function OpenAndActiveBraveBrowser()
     hs.application.launchOrFocus("Brave Browser Nightly")
 

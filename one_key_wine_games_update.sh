@@ -7,9 +7,10 @@ source ./bash/games/games-data.sh
 # OLD_VERSION="107103"
 # OLD_VERSION="108103"
 # OLD_VERSION="1010104"
-OLD_VERSION="1011106"
+# OLD_VERSION="1011106"
+OLD_VERSION="1011x106"
 # NEW_VERSION="108103"
-NEW_VERSION="1011x106"
+NEW_VERSION="2610110"
 
 # 108103_wine
 TEMPLATE_WINE_FILE_NAME="${NEW_VERSION}_wine.app"
@@ -51,13 +52,20 @@ do_when_new_file_exist() {
     old_version_app_path=$4
     new_version_app_path=$5
 
-    info "already exist new version game: $new_version_file_name"
+    error "already exist new version game: $new_version_file_name"
 
     if [ "$Params" = "update" ]; then
         if [ -d "$old_version_app_path" ]; then
 
-            old_game_path="${old_version_app_path}/$APP_GAME_FOLDER_IN_DRIVER_C/$install_folder_name"
-            new_game_path="${new_version_app_path}/$APP_GAME_FOLDER_IN_DRIVER_C/$install_folder_name"
+            old_game_path="${old_version_app_path}/$DRIVER_C_FOLDER_IN_WINE_APP/Games/$install_folder_name"
+            if [ -d "$old_version_app_path/$DRIVER_C_FOLDER_IN_TOXICGAME_APP" ]; then
+                old_game_path="${old_version_app_path}/$DRIVER_C_FOLDER_IN_TOXICGAME_APP/Games/$install_folder_name"
+            fi
+
+            new_game_path="${new_version_app_path}/$DRIVER_C_FOLDER_IN_WINE_APP/Games/$install_folder_name"
+            if [ -d "$new_version_app_path/$DRIVER_C_FOLDER_IN_TOXICGAME_APP" ]; then
+                new_game_path="${new_version_app_path}/$DRIVER_C_FOLDER_IN_TOXICGAME_APP/Games/$install_folder_name"
+            fi
 
             if [ -d "$old_game_path" ]; then
 
@@ -105,9 +113,11 @@ do_when_old_file_exist() {
 update_wine_games() {
     info "update_wine_games:"
 
-    for ((i = 0; i < ${#games_in_kegworks[@]}; i = i + 2)); do
-        game_name="${games_in_kegworks[$i+0]}"
-        install_folder_name="${games_in_kegworks[$i+1]}"
+    array=("$@")
+
+    for ((i = 0; i < ${#array[@]}; i = i + 2)); do
+        game_name="${array[$i+0]}"
+        install_folder_name="${array[$i+1]}"
 
         # old version file name and path
         my_global_file_name="$game_name"
@@ -144,4 +154,5 @@ update_wine_games() {
     done
 }
 
-update_wine_games
+# update_wine_games "${games_in_kegworks[@]}"
+update_wine_games "${test_games_in_kegworks[@]}"

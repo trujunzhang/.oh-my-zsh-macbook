@@ -1,6 +1,8 @@
 -- hs.hotkey.bind(GameHotkeyMods, "N", OpenAndActiveBraveBrowser)
 hs.hotkey.bind(GameHotkeyMods, "N", RestartFirefoxBrowser)
 
+hs.hotkey.bind(GameHotkeyMods, "[", OpenAndActiveGoogleChromeBrowser)
+
 hs.hotkey.bind(GameHotkeyMods, "9", Kill_App_Clashx)
 -- hs.hotkey.bind(GameHotkeyMods, "0", Run_Genymotion_VM)
 

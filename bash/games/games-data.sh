@@ -8,7 +8,13 @@ KegworksGames_Folder="$APP_GAMES_PATH/Kegworks"
 DRIVER_C_FOLDER_IN_WINE_APP="Contents/drive_c"
 DRIVER_C_FOLDER_IN_TOXICGAME_APP="Contents/Resources/ToxicGame/drive_c"
 
+DRIVER_C_FOLDER_IN_CROSSOVER_BOTTLE="drive_c"
+
 GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER="/Volumes/MacUser/djzhang/Documents"
+
+test_games_in_kegworks=(
+    "Need for Speed Payback" "Need for Speed Payback"
+)
 
 games_in_kegworks=(
     "Mafia Definitive Edition" "Mafia Definitive Edition"
