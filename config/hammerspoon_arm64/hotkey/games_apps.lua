@@ -182,7 +182,7 @@ function Play_Horizon_Zero_Dawn_Remastered()
     -- app: "Horizon Zero Dawn Remastered"
     -- export D3DM_ENABLE_METALFX=1
     -- requirement c++ libraries:
-    --     2019/VC_redist.x64.exe
+    --     2019/VC_redist.x64.exe (used)(OK)
     -- local app_name = "Horizon Zero Dawn Remastered"
     local app_name = "Horizon Zero Dawn"
 

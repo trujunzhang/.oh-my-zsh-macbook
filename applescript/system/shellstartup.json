@@ -25,6 +25,12 @@
   },
   {
     "type": "application",
+    "name": "CrossOver",
+    "application": "/Applications/CrossOver.app",
+    "enable": "0"
+  },
+  {
+    "type": "application",
     "name": "clash for arm",
     "application": "ClashX.app",
     "enable": "0"

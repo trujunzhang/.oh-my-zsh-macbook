@@ -17,6 +17,8 @@ info "                                          "
 
 mkdir -p "$Moving_Games_Folder"
 
+ APP_GAME_FOLDER_IN_DRIVER_C="$DRIVER_C_FOLDER_IN_WINE_APP/Games"
+
 moving_game_folder_from_kegworks() {
     info "moving game folder from kegworks"
     install_folder_name=$1

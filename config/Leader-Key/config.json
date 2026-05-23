@@ -114,16 +114,6 @@
       "type" : "group"
     },
     {
-      "key" : "c",
-      "type" : "application",
-      "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Google Chrome.app"
-    },
-    {
-      "key" : "v",
-      "type" : "application",
-      "value" : "/Applications/Visual Studio Code.app"
-    },
-    {
       "actions" : [
         {
           "key" : "1",
@@ -334,6 +324,52 @@
       ],
       "key" : "g",
       "label" : "Games",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/AC4BFSP.app"
+        },
+        {
+          "key" : "u",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/ACU.app"
+        },
+        {
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/GoW.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/GTAVLauncher.app"
+        },
+        {
+          "key" : "h",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/HorizonZeroDawn.app"
+        },
+        {
+          "key" : "m",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/mafiadefinitiveedition.app"
+        },
+        {
+          "key" : "n",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/NeedForSpeedPayback.app"
+        },
+        {
+          "key" : "r",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/re7.app"
+        }
+      ],
+      "key" : "c",
       "type" : "group"
     }
   ],

@@ -269,6 +269,11 @@ if.window-title-regex-substring='AC4BFSP'
 run = 'move-node-to-workspace H'
 
 [[on-window-detected]]
+# NeedForSpeedPayback
+if.app-name-regex-substring = 'NeedForSpeedPayback'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
 if.app-id = 'com.kochmedia.MetroExodusNew'
 run = 'move-node-to-workspace H'
 
@@ -301,17 +306,6 @@ run = 'move-node-to-workspace H'
 [[on-window-detected]]
 if.window-title-regex-substring='NeedForSpeedPayback'
 run = 'move-node-to-workspace H'
-
-[[on-window-detected]]
-if.app-id = 'com.codeweavers.CrossOverHelper.BF2AA1BDA8E49838D05D6CD5BD318B91.36F4F7F0ED57062CC3C12EA46C7285C7'
-run = 'move-node-to-workspace H'
-
-[[on-window-detected]]
-# assissan creed- three
-if.app-id = 'com.codeweavers.CrossOverHelper.D6B6179F78AE8157EC442CB0374C62FB.BB8F6C891346910EBD7C0E27ACC7E34A'
-run = 'move-node-to-workspace H'
-
-# com.codeweavers.CrossOverHelper.BF2AA1BDA8E49838D05D6CD5BD318B91.36F4F7F0ED57062CC3C12EA46C7285C7 | NeedForSpeedPayback
 
 [[on-window-detected]]
 if.app-id = 'com.codeweavers.CrossOver'
