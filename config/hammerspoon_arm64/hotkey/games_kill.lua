@@ -6,6 +6,7 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "x", function()
     hs.execute("pkill -f wine")
 
     hs.execute("killall Enjoyable")
+    hs.execute("killall CrossOver")
 
     -- close all games process
     hs.execute("killall u4.exe")

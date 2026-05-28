@@ -308,6 +308,10 @@ if.window-title-regex-substring='NeedForSpeedPayback'
 run = 'move-node-to-workspace H'
 
 [[on-window-detected]]
+if.window-title-regex-substring='wine'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
 if.app-id = 'com.codeweavers.CrossOver'
 run = 'move-node-to-workspace I'
 

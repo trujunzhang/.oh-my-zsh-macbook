@@ -1,3 +1,7 @@
+#!/usr/bin/env bash
+
+brew_install_git_local="$HOME/Documents/brew-install"
+
 ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
 TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 
@@ -10,9 +14,18 @@ export HOMEBREW_INSTALL_FROM_API=1
 # export HOMEBREW_BOTTLE_DOMAIN
 # export HOMEBREW_PIP_INDEX_URL
 
-function homebrew_install_third {
+function homebrew_install_third_online {
     git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git "/tmp/brew-install"
     /bin/bash /tmp/brew-install/install.sh
+}
+
+function homebrew_install_third_offline {
+
+    if [ -d "$brew_install_git_local" ]; then
+        /bin/bash "$brew_install_git_local/install.sh"
+    else
+        error "not exist $brew_install_git_local"
+    fi
 }
 
 # /bin/bash -c "$(curl -fsSL https://github.com/Homebrew/install/raw/master/install.sh)"
@@ -47,7 +60,9 @@ function brew_install_libs {
     brew install libyaml
 }
 
-homebrew_install_third
+# homebrew_install_third_online
+homebrew_install_third_offline
+
 # brew_install_jenkins
-# brew_install_common 
+# brew_install_common
 # brew_install_libs

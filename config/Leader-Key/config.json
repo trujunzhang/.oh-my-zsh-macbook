@@ -367,6 +367,11 @@
           "key" : "r",
           "type" : "application",
           "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/re7.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/CrossOver/FarCry4.app"
         }
       ],
       "key" : "c",
