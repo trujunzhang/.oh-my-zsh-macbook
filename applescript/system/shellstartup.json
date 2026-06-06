@@ -33,7 +33,7 @@
     "type": "application",
     "name": "clash for arm",
     "application": "ClashX.app",
-    "enable": "0"
+    "enable": "1"
   },
   {
     "type": "application",
@@ -45,7 +45,7 @@
     "type": "application",
     "name": "clash for arm",
     "application": "Clash Verge.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",

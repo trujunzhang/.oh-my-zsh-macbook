@@ -759,7 +759,19 @@ alias dgame_rarfile_ls="ls /Volumes/RarFiles >'$HOME/Desktop/rarFiles.txt'"
 
 alias dcopy_enjoyable_plist="cp -v $HOME/Library/Preferences/com.yukkurigames.Enjoyable.plist $TRUJUNZHANG_DOTFILES_HOME/config/Enjoyable/com.yukkurigames.Enjoyable.plist"
 
-alias dmac_user_link="sudo ln -s /Volumes/MacUser/djzhang /Users/djzhang"
+# alias dmac_user_link="sudo ln -s /Volumes/MacUser/djzhang /Users/djzhang"
+
+function dmac_user_link
+    echo "link: /Volumes/MacUser/djzhang -> /Volumes/MacOS/Users/djzhang"
+
+    if [ -d /Volumes/MacOS/Users/djzhangxxx ]
+        echo "already exist: /Volumes/MacOS/Users/djzhangxxx"
+    else if [ -d /Volumes/MacOS/Users/djzhang ]
+        echo "already exist: /Volumes/MacOS/Users/djzhang"
+        sudo mv /Volumes/MacOS/Users/djzhang /Volumes/MacOS/Users/djzhangxxx
+    end
+    sudo ln -s /Volumes/MacUser/djzhang /Volumes/MacOS/Users/djzhang
+end
 
 alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
 alias dmac_unzip_vpn_apps='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'

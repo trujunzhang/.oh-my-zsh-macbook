@@ -2,8 +2,8 @@
 
 # ==========================================================================
 # parse a JSON object within a shell script into an array
-# https://stackoverflow.com/questions/38364261/parse-json-to-array-in-a-shell-script 
-declare -a values # declare the array                                                                                                                                                                  
+# https://stackoverflow.com/questions/38364261/parse-json-to-array-in-a-shell-script
+declare -a values # declare the array
 function parseJson {
     jsonPath=$1
 
@@ -12,14 +12,14 @@ function parseJson {
     while read -r line; do
         # Extract the value from between the double quotes
         # and add it to the array.
-        [[ $line =~ :[[:blank:]]+\"(.*)\" ]] && values+=( "${BASH_REMATCH[1]}" )
-    done < "${jsonPath}"
+        [[ $line =~ :[[:blank:]]+\"(.*)\" ]] && values+=("${BASH_REMATCH[1]}")
+    done <"${jsonPath}"
 
     declare -p values # print the array
     # echo "                         "
 }
 
-parseJson  "$HOME/shellstartup.json"
+parseJson "$HOME/shellstartup.json"
 
 # Get the json array's length
 json_array_len=${#values[@]}
@@ -27,22 +27,26 @@ echo "array_len=${json_array_len}"
 echo "                         "
 # ==========================================================================
 
-
-
 # seq FIRST INCREMENT LAST
-for i in $(seq 0 4 $((json_array_len-1)))
-do
+for i in $(seq 0 4 $((json_array_len - 1))); do
 
-    name=${values[$((i+1))]}
-    application=${values[$((i+2))]}
-    enable=${values[$((i+3))]}
+    type=${values[$((i + 0))]}
+    name=${values[$((i + 1))]}
+    application=${values[$((i + 2))]}
+    enable=${values[$((i + 3))]}
 
     echo "name: $name"
     echo "application: $application"
     echo "                         "
 
     if [ "$enable" = "1" ]; then
-        open -a "$application"
+        if [ "$type" = "book" ]; then
+            open "$application"
+        fi
+
+        if [ "$type" = "application" ]; then
+            open -a "$application"
+        fi
     fi
 
     sleep 2
@@ -54,4 +58,3 @@ mkdir -p /tmp/xxx/234
 mkdir -p /tmp/yyy
 mkdir -p /tmp/yyy/123
 mkdir -p /tmp/yyy/234
-

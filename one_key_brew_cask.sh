@@ -29,15 +29,15 @@ brew_apps=(
     "Realm Studio" "mongodb-realm-studio" 'ssd' 'no-bak'
     "Obsidian" "obsidian" 'ssd' 'no-bak'
     # "Alacritty" "alacritty" 'copy' 'backup'
-    "Wezterm" "wezterm" 'copy' 'backup'
+    # "Wezterm" "wezterm" 'copy' 'no-bak'
     "Ghostty" "ghostty" 'copy' 'backup'
     # "Neovide" "Neovide" 'copy' 'no-bak'
     "Sublime Text" "SublimeText" "ssd" 'no-bak'
     "Sublime Merge" "Sublime Merge" "ssd" "no-bak"
-    "Android Studio" "AndroidStudio" "ssd" 'no-bak'
+    # "Android Studio" "AndroidStudio" "ssd" 'no-bak'
     "ResponsivelyApp" "ResponsivelyApp" "ssd" "no-bak"
     "Pixea" "pixea" "ssd" "no-bak"
-    "Wondershare PDFelement" "pdfelement" "ssd" "no-bak"
+    # "Wondershare PDFelement" "pdfelement" "ssd" "no-bak"
     "DaisyDisk" "daisyDisk" "ssd" "no-bak"
     "Mac FoneLab Screen Recorder" "Mac FoneLab Screen Recorder" "ssd" "no-bak"
     "Amazon Kindle" "Amazon Kindle" "copy" "no-bak"
@@ -50,7 +50,7 @@ brew_apps=(
     # System tools
     "Raycast" "raycast" 'copy' 'no-bak'
     # "SpaceLauncher" "spacelauncher" 'copy' 'backup'
-    "Notion" "notion" 'copy' 'backup'
+    "Notion" "notion" 'copy' 'no-bak'
     "ClickUp" "clickup" 'ssd' 'no-bak'
     # "OneDrive" "onedrive" 'copy' 'no-bak'
     # "Docker" "docker" "copy" 'no-bak'

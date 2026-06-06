@@ -1,21 +1,21 @@
-function ClickGameControllersPanel()
-    local targetWindow = nil
+local targetGameWindow = nil
 
+function ClickGameControllersPanel()
     local windows = hs.window.allWindows()
     for _, win in ipairs(windows) do
-        hs.printf("%s = %s", "list title:", win:title())
+        hs.printf("%s = %s", "list title when showing Game Controllers:", win:title())
 
         if CheckContainSubString(win:title(), "Game Controllers") then
-            hs.printf("%s = %s", "find title:", win:title())
-            targetWindow = win
+            hs.printf("%s = %s", "find title when showing Game Controllers:", win:title())
+            targetGameWindow = win
         end
     end
 
-    if targetWindow then
-        targetWindow:focus(true) -- 'true' brings all windows forward
+    if targetGameWindow then
+        targetGameWindow:focus(true) -- 'true' brings all windows forward
 
         -- Wait a small moment for the focus to shift (optional, but can help with timing)
-        ClickActiveWindow(targetWindow, -300, 160)
+        ClickActiveWindow(targetGameWindow, -300, 160)
     else
         hs.alert.show("Could not find window with title: " .. "Game Controllers")
     end
@@ -37,6 +37,8 @@ function Show_Bluetooth_PS5_Battery_Info()
     end)
 
     hs.timer.doAfter(10, function()
-        hs.eventtap.keyStroke({ "CMD" }, "W")
+        if targetGameWindow then
+            hs.eventtap.keyStroke({ "CMD" }, "W")
+        end
     end)
 end
