@@ -12,6 +12,9 @@ USER_APPLICATION="$HOME/Applications/"
 # https://github.com/buo/homebrew-cask-upgrade
 
 brew_apps=(
+    "Gitfox" "Gitfox" "ssd" "no-bak"
+    "UPDF" "UPDF" "ssd" "no-bak"
+
     "Bloom" "bloom" "copy" "no-bak"
     "Folx" "Folx" "copy" "no-bak"
     "Keyboard Maestro" "Keyboard Maestro" "copy" "no-bak"
@@ -26,14 +29,14 @@ brew_apps=(
     # "Insomnia"            "insomnia" 'ssd' "backup"
     # https://fbflipper.com/
     # "Flipper"             "flipper" 'copy' 'backup'
-    "Realm Studio" "mongodb-realm-studio" 'ssd' 'no-bak'
+    # "Realm Studio" "mongodb-realm-studio" 'ssd' 'no-bak'
     "Obsidian" "obsidian" 'ssd' 'no-bak'
     # "Alacritty" "alacritty" 'copy' 'backup'
     # "Wezterm" "wezterm" 'copy' 'no-bak'
     "Ghostty" "ghostty" 'copy' 'backup'
     # "Neovide" "Neovide" 'copy' 'no-bak'
-    "Sublime Text" "SublimeText" "ssd" 'no-bak'
-    "Sublime Merge" "Sublime Merge" "ssd" "no-bak"
+    # "Sublime Text" "SublimeText" "ssd" 'no-bak'
+    # "Sublime Merge" "Sublime Merge" "ssd" "no-bak"
     # "Android Studio" "AndroidStudio" "ssd" 'no-bak'
     "ResponsivelyApp" "ResponsivelyApp" "ssd" "no-bak"
     "Pixea" "pixea" "ssd" "no-bak"

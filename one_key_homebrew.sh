@@ -168,16 +168,16 @@ brew_apps_arm=(
     "lua-language-server" "lua-language-server"
     "tree-sitter-cli" "tree-sitter-cli"
 
-    "starship" "starship"
+    # "starship" "starship"
     # "zellij" "zellij"
     "fish" "fish"
-    "neovim" "neovim"
+    #"neovim" "neovim"
 
     # "jenkins-lts" "jenkins-lts"
 
     # https://github.com/Bhupesh-V/ugit
     "ugit" "ugit"
-    "neovide" "neovide"
+    # "neovide" "neovide"
 
     # "ruby@3.3" "ruby@3.3"
 
@@ -209,11 +209,11 @@ fi
 function install_apps {
     apps=("${brew_apps[@]}")
     for ((i = 0; i < ${#apps[@]}; i = i + 2)); do
-        echo "element $i is ${apps[$i + 0]}"
-        echo "element $i is ${apps[$i + 1]}"
+        echo "element $i is ${apps[$i+0]}"
+        echo "element $i is ${apps[$i+1]}"
 
-        if [ ! -d "$HOMEBREW_HOME/${apps[$i + 0]}" ]; then
-            brew install "${apps[$i + 1]}"
+        if [ ! -d "$HOMEBREW_HOME/${apps[$i+0]}" ]; then
+            brew install "${apps[$i+1]}"
         fi
     done
 }

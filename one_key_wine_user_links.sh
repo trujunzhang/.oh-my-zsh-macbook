@@ -12,7 +12,9 @@ source ./bash/games/games-data.sh
 NEW_VERSION="2610110"
 
 # 108103_wine
-TEMPLATE_WINE_FILE_NAME="${NEW_VERSION}_wine.app"
+# TEMPLATE_WINE_FILE_NAME="${NEW_VERSION}_wine.app"
+TEMPLATE_WINE_FILE_NAME="Split Fiction.app"
+
 TEMPLATE_WINE_APP_PATH="$APP_GAMES_PATH/${TEMPLATE_WINE_FILE_NAME}"
 
 info "                         "

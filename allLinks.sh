@@ -521,7 +521,7 @@ function link_mac_user {
     directoryLink "jenkins(profile)" "$HOME_MAC_CACHE_PATH/jenkins" "$HOME/.jenkins"
 
     # crossover
-    directoryLink "crossover(app)" "$HOME_MACGAME_PATH/MacApps/current/CrossOver-26.1.app" "/Applications/CrossOver.app"
+    directoryLink "crossover(app)" "$HOME_MACGAME_PATH/MacApps/current/CrossOver-26.2.app" "/Applications/CrossOver.app" "delete"
 
     # Enjoyable
     # fileLink "Enjoyable(plist)" "$TRUJUNZHANG_DOTFILES_HOME/config/Enjoyable/com.yukkurigames.Enjoyable.plist" "$HOME/Library/Preferences/com.yukkurigames.Enjoyable.plist"

@@ -584,6 +584,16 @@ function Play_Far_Cry_6()
     ActiveWindow(30)
 end
 
+function Play_Split_Fiction()
+    local app_name = "Split Fiction"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end
+
 function Play_God_of_War()
     -- Saved-Games/God of War/371208929
     -- Saved-Games/God of War/371208929
