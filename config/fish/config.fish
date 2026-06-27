@@ -81,6 +81,7 @@ if test "$(uname -m)" = arm64
     # https://github.com/zellij-org/zellij/releases/tag/v0.43.1
     fish_add_path "$HOME/.local/bin/zellij/0.43.1"
     fish_add_path "$HOME/.local/bin/starship"
+    fish_add_path "$HOME/.local/bin/fzf-0.73.1"
     fish_add_path "$HOME/.local/bin/nvim-macos-arm64/bin"
 end
 
@@ -245,7 +246,11 @@ end
 alias conda="micromamba"
 
 # Added by Windsurf
-fish_add_path "$HOME/.codeium/windsurf/bin"
+if [ -d $HOME/.codeium ]
+    fish_add_path "$HOME/.codeium/windsurf/bin"
+end
 
 # OpenClaw Completion
-source "$HOME/.openclaw/completions/openclaw.fish"
+if [ -f "$HOME/.openclaw/completions/openclaw.fish" ]
+    source "$HOME/.openclaw/completions/openclaw.fish"
+end

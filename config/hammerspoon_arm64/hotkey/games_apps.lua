@@ -594,6 +594,20 @@ function Play_Split_Fiction()
     ActiveWindow(30)
 end
 
+function Play_Hogwarts_Legacy()
+    local app_name = "Hogwarts Legacy"
+
+    BeforePlayGame(function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    -- app: "Hogwarts Legacy"
+    -- title: "WARNING: Known issues with graphics driver"
+    Close_Active_Window("Known issues", "ok", 45)
+
+    ActiveWindow(60)
+end
+
 function Play_God_of_War()
     -- Saved-Games/God of War/371208929
     -- Saved-Games/God of War/371208929
