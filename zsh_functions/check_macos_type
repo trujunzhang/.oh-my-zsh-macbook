@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "Checking macOS type..."
+
+current_hostname=$(scutil --get LocalHostName)
+
+echo "Current hostname: $current_hostname"
+
+# djzhangs-Mac-mini
+
+if grep -qi "mac-mini" <<<"$current_hostname"; then
+    echo " mac-mini Case-insensitive match found!"
+fi

@@ -421,6 +421,14 @@ run = 'move-node-to-workspace 1'
 if.app-id = 'com.operasoftware.Opera'
 run = 'move-node-to-workspace 2'
 
+[[on-window-detected]]
+if.app-id = 'com.operasoftware.OperaAir'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.operasoftware.OperaGX'
+run = 'move-node-to-workspace 2'
+
 # [[on-window-detected]]
 # if.app-id = 'org.mozilla.firefox'
 # run = 'move-node-to-workspace 3'
@@ -455,7 +463,11 @@ run = ['move-node-to-workspace M']
 
 [[on-window-detected]]
 if.app-id = 'io.playcover.PlayCover'
-run = ['move-node-to-workspace P']
+run = ['move-node-to-workspace L']
+
+[[on-window-detected]]
+if.app-id = 'jp.co.roland.RolandPianoApp'
+run = ['move-node-to-workspace R']
 
 [[on-window-detected]]
 if.app-id = 'zlibrary'

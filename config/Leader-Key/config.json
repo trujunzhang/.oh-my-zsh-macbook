@@ -376,6 +376,22 @@
       ],
       "key" : "c",
       "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "a",
+          "type" : "application",
+          "value" : "/Applications/Opera Air.app"
+        },
+        {
+          "key" : "g",
+          "type" : "application",
+          "value" : "/Applications/Opera GX.app"
+        }
+      ],
+      "key" : "o",
+      "type" : "group"
     }
   ],
   "type" : "group"

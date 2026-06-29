@@ -1,5 +1,11 @@
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
+
+    if [ -f $HOME/.config/fish/functions/check_macos_type.fish ]
+        source $HOME/.config/fish/functions/check_macos_type.fish
+        welcome_message
+    end
 end
 
 set -gx TERM xterm-256color

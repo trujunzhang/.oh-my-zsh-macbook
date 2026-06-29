@@ -69,6 +69,8 @@ brew_apps=(
     # "Google Chrome" "google-chrome" 'copy' 'backup'
     "Vivaldi" "vivaldi" 'ssd' 'backup'
     "Opera" "opera" 'ssd' 'backup'
+    "Opera Air" "opera-air" 'ssd' 'backup'
+    "Opera GX" "opera-gx" 'ssd' 'backup'
     # "Firefox" "firefox" 'ssd' 'backup'
     # "Firefox Beta" "firefox-beta" 'copy' 'backup'
     # "Firefox Nightly" "firefox-nightly" 'copy' 'backup'
