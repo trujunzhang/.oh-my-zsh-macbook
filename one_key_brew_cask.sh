@@ -133,8 +133,8 @@ hash_vals=("/Volumes/MacGame/MacCache"
 app_backup_path_index ${ParamsBkKey}
 CURRENT_THIRD_APPS_PATH=${hash_vals[$?]}
 
-PATH_THIRD_APPLICATIONS="${CURRENT_THIRD_APPS_PATH}/${MY_MAC_TYPE}/Applications"
-PATH_THIRD_APPS_BACKUP="${CURRENT_THIRD_APPS_PATH}/${MY_MAC_TYPE}/BACKUP"
+PATH_THIRD_APPLICATIONS="${CURRENT_THIRD_APPS_PATH}/APPS_${MY_MAC_TYPE}/Applications"
+PATH_THIRD_APPS_BACKUP="${CURRENT_THIRD_APPS_PATH}/APPS_${MY_MAC_TYPE}/BACKUP"
 
 if [ "$Params" = "backup" ]; then
     mkdir -p "${PATH_THIRD_APPLICATIONS}"
@@ -206,7 +206,7 @@ function link_apps {
 
     app_path_in_backup_file="${PATH_THIRD_APPLICATIONS}/${appName}"
     info "Link app: ${appName}"
-    info "Backup app path: ${app_path_in_backup_file}"
+    info "The linked app path: ${app_path_in_backup_file}"
 
     directoryLink "app(${name})" "${app_path_in_backup_file}" "/Applications/${appName}" "delete"
 }
@@ -271,7 +271,7 @@ function install_apps {
         shouldCopyInApplications="${apps[$i+2]}"
         needBackup="${apps[$i+3]}"
 
-        info ""
+        info "========= "
         info "element $i is ${name}"
         info "element $i is ${app}"
         info "element $i is ${shouldCopyInApplications}"

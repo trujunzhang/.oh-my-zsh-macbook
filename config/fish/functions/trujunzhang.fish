@@ -773,7 +773,7 @@ function dmac_user_link
     sudo ln -s /Volumes/MacUser/djzhang /Volumes/MacOS/Users/djzhang
 end
 
-alias denv_info_mac_type='echo "your mac type, ${MY_MAC_TYPE}!"'
+alias denv_info_mac_type='echo "your mac type, $MY_MAC_TYPE!"'
 
 alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
 alias dmac_unzip_vpn_apps='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'
