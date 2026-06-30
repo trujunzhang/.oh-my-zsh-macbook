@@ -1,13 +1,23 @@
 #!/usr/bin/env bash
 
-echo "Checking macOS type..."
-
 current_hostname=$(scutil --get LocalHostName)
 
-echo "Current hostname: $current_hostname"
+# echo "Current hostname: $current_hostname"
 
 # djzhangs-Mac-mini
 
+export MY_MAC_TYPE="unknown"
+
 if grep -qi "mac-mini" <<<"$current_hostname"; then
-    echo " mac-mini Case-insensitive match found!"
+    export MY_MAC_TYPE="mini"
 fi
+
+if grep -qi "mac-pro" <<<"$current_hostname"; then
+    export MY_MAC_TYPE="pro"
+fi
+
+if grep -qi "mac-neo" <<<"$current_hostname"; then
+    export MY_MAC_TYPE="neo"
+fi
+
+echo "Welcome $USER! checking the current macos system type is $MY_MAC_TYPE"

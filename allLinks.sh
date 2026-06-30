@@ -9,9 +9,6 @@ source ./bash/games/documents_fix.sh
 CURRENT=$(pwd)
 # Folders in Home.
 
-OS_NAME="_$(uname -m)"
-# echo "OS_NAME: ${OS_NAME}"
-
 if [[ $(uname -m) == 'arm64' ]]; then
     # info M2
     ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
@@ -123,7 +120,7 @@ function link_config_fold {
 
     # asdf-vm
     fileLink "config(asdfrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.asdfrc" "$HOME/.asdfrc"
-    fileLink "config(tool_versions)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.tool-versions${OS_NAME}" "$HOME/.tool-versions"
+    fileLink "config(tool_versions)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.tool-versions" "$HOME/.tool-versions"
     fileLink "config(asdf-python)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-python-packages" "$HOME/.default-python-packages"
     fileLink "config(asdf-node)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-npm-packages" "$HOME/.default-npm-packages"
     fileLink "config(asdf-ruby)" "$TRUJUNZHANG_DOTFILES_HOME/config/asdf/.default-gems" "$HOME/.default-gems"
@@ -341,8 +338,10 @@ function link_symlink {
     # x86
     #  v1.0.0
     #  https://github.com/Hammerspoon/hammerspoon/releases/tag/1.0.0
-    directoryLink "hammerspoon(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/hammerspoon${OS_NAME}" "$HOME/.hammerspoon"
-    directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner${OS_NAME}" "$HOME/.config/karabiner"
+    directoryLink "hammerspoon(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/hammerspoon" "$HOME/.hammerspoon"
+    directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner" "$HOME/.config/karabiner"
+
+    # directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner${OS_NAME}" "$HOME/.config/karabiner"
     fileLink "ruby(gemrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/gem/gemrc" "$HOME/.config/gem/gemrc"
 
     # **IDES(purcell's emacs.d)

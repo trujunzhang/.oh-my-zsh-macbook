@@ -4,7 +4,6 @@ source ./bash/shellUtils.sh
 
 DEFAULTACTION="ignore"
 
-
 # ln -s /Volumes/MacUser/djzhang /Users/djzhang
 
 function directoryLink {
@@ -28,11 +27,16 @@ function directoryLink {
         fi
     fi
 
+    fixed_src="${src}"
+    if [ -d "${src}-${MY_MAC_TYPE}" ]; then
+        fixed_src="${src}-${MY_MAC_TYPE}"
+    fi
+
     if [ -d "${dest}" ]; then
         error "Directory already exist, ${msg}"
     else
-        if [ -d "${src}" ]; then
-            ln -s "${src}" "${dest}"
+        if [ -d "${fixed_src}" ]; then
+            ln -s "${fixed_src}" "${dest}"
             success "Directory does not exist, ${msg}"
         fi
     fi
@@ -60,11 +64,16 @@ function fileLink {
         fi
     fi
 
+    fixed_src="${src}"
+    if [ -f "${src}-${MY_MAC_TYPE}" ]; then
+        fixed_src="${src}-${MY_MAC_TYPE}"
+    fi
+
     if [ -f "${dest}" ]; then
         error "File already exist, ${msg}"
     else
-        if [ -f "${src}" ]; then
-            ln -s "${src}" "${dest}"
+        if [ -f "${fixed_src}" ]; then
+            ln -s "${fixed_src}" "${dest}"
             success "File does not exist, ${msg}"
         fi
     fi

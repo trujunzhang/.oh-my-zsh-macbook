@@ -133,21 +133,23 @@ hash_vals=("/Volumes/MacGame/MacCache"
 app_backup_path_index ${ParamsBkKey}
 CURRENT_THIRD_APPS_PATH=${hash_vals[$?]}
 
-PATH_THIRD_APPLICATIONS="${CURRENT_THIRD_APPS_PATH}/$(uname -m)/Applications"
-PATH_THIRD_APPS_BACKUP="${CURRENT_THIRD_APPS_PATH}/$(uname -m)/BACKUP"
+PATH_THIRD_APPLICATIONS="${CURRENT_THIRD_APPS_PATH}/${MY_MAC_TYPE}/Applications"
+PATH_THIRD_APPS_BACKUP="${CURRENT_THIRD_APPS_PATH}/${MY_MAC_TYPE}/BACKUP"
 
 if [ "$Params" = "backup" ]; then
     mkdir -p "${PATH_THIRD_APPLICATIONS}"
     mkdir -p "${PATH_THIRD_APPS_BACKUP}"
 fi
 
-info "==========================================================="
-info "params<brew-type> = ${Params}"
-info "params<Backup key> = ${ParamsBkKey}"
-info "current app path fold: ${CURRENT_THIRD_APPS_PATH}"
-info "current app <APPLICATION> path: ${PATH_THIRD_APPLICATIONS}"
-info "current app <BACKUP> path: ${PATH_THIRD_APPS_BACKUP}"
-info "==========================================================="
+show_info() {
+    info "==========================================================="
+    info "params<brew-type> = ${Params}"
+    info "params<Backup key> = ${ParamsBkKey}"
+    info "current app path fold: ${CURRENT_THIRD_APPS_PATH}"
+    info "current app <APPLICATION> path: ${PATH_THIRD_APPLICATIONS}"
+    info "current app <BACKUP> path: ${PATH_THIRD_APPS_BACKUP}"
+    info "==========================================================="
+}
 
 function backup_apps_from_Applications {
     name=$1
@@ -304,3 +306,5 @@ fi
 ## install common apps
 install_apps "${brew_apps[@]}"
 install_apps_on_current_os
+
+show_info

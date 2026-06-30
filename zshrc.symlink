@@ -12,6 +12,17 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 
+
+# Add the directory to your function search path
+fpath=(~/.zsh_functions $fpath)
+
+# Register the function
+autoload -Uz check_macos_type
+
+# Execute the function on startup
+check_macos_type
+
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -191,12 +202,3 @@ export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export ANDROID_USER_HOME=$HOME/Library/Android/sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
-
-# Add the directory to your function search path
-fpath=(~/.zsh_functions $fpath)
-
-# Register the function
-autoload -Uz check_macos_type
-
-# Execute the function on startup
-check_macos_type
