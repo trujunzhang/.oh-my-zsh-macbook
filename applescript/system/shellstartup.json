@@ -39,13 +39,13 @@
     "type": "application",
     "name": "clash for arm",
     "application": "ClashX.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
     "name": "FlClash",
     "application": "FlClash.app",
-    "enable": "0"
+    "enable": "1"
   },
   {
     "type": "application",

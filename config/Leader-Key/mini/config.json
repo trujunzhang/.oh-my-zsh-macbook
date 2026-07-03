@@ -118,12 +118,12 @@
         {
           "key" : "1",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Vivaldi.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Vivaldi.app"
         },
         {
           "key" : "2",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Opera.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Opera.app"
         },
         {
           "key" : "3",
@@ -133,22 +133,22 @@
         {
           "key" : "4",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Brave Browser.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Brave Browser.app"
         },
         {
           "key" : "5",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Microsoft Edge.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Microsoft Edge.app"
         },
         {
           "key" : "6",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Brave Browser Beta.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Brave Browser Beta.app"
         },
         {
           "key" : "7",
           "type" : "application",
-          "value" : "/Applications/Brave Browser Nightly.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Brave Browser Nightly.app"
         }
       ],
       "key" : "b",
@@ -215,7 +215,7 @@
         {
           "key" : "f",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Firefox.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Firefox.app"
         },
         {
           "key" : "c",
@@ -232,22 +232,22 @@
         {
           "key" : "k",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Kodi.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Kodi.app"
         },
         {
           "key" : "i",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Infuse.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Infuse.app"
         },
         {
           "key" : "v",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/VLC.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/VLC.app"
         },
         {
           "key" : "e",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/arm64/Applications/Elmedia Player.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Elmedia Player.app"
         }
       ],
       "key" : "m",
