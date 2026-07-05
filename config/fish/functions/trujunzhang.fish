@@ -338,7 +338,10 @@ function dmac_genymotion_vm_open
     # set genymotion_vm_name "Samsung Galaxy Note 3"
     # set genymotion_vm_name e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926
     # open -a $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/player --args --vm-name e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926 --referer launchpad --no-update-check
-    $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/player --vm-name e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926 --referer launchpad --no-update-check
+
+    set vm_name 44812fe8-3294-40aa-a9d1-ebd08b971ecc
+
+    $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/player --vm-name $vm_name --referer launchpad --no-update-check
 end
 
 function dmac_genymotion_local_network

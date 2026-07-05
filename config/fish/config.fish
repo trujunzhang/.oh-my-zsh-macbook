@@ -1,4 +1,3 @@
-
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
@@ -48,7 +47,7 @@ set -g -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/25.1.8937393
 
 set -g -x HOMEBREW_NO_AUTO_UPDATE 1
 
-if test "$(uname -m)" = arm64
+if test $MY_MAC_TYPE = mini
     if test -d /opt/homebrew # MacOS arm64
         set -gx HOMEBREW_PREFIX /opt/homebrew
     end
@@ -82,11 +81,13 @@ fish_add_path /opt/local/bin
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps"
 
-if test "$(uname -m)" = arm64
+if test $MY_MAC_TYPE = mini
     fish_add_path "$HOME/.local/bin/helix-aarch64-macos"
     # https://github.com/zellij-org/zellij/releases/tag/v0.43.1
     fish_add_path "$HOME/.local/bin/zellij/0.43.1"
     fish_add_path "$HOME/.local/bin/starship"
+    fish_add_path "$HOME/.local/bin/asdf/0.19.0"
+    fish_add_path "$HOME/.local/bin/lazygit/0.63.0"
     fish_add_path "$HOME/.local/bin/fzf-0.73.1"
     fish_add_path "$HOME/.local/bin/nvim-macos-arm64/bin"
 end
@@ -228,7 +229,7 @@ set --erase _asdf_shims
 #
 set -g -x PIP_REQUIRE_VIRTUALENV true
 
-if test "$(uname -m)" = arm64
+if test $MY_MAC_TYPE = mini
     if [ -d $HOMEBREW_PREFIX/opt/micromamba ]
         # >>> mamba initialize >>>
         # !! Contents within this block are managed by 'mamba shell init' !!
