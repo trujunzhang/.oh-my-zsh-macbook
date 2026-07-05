@@ -52,6 +52,10 @@ if test $MY_MAC_TYPE = mini
         set -gx HOMEBREW_PREFIX /opt/homebrew
     end
 
+    if test -d $HOME/Applications/homebrew # MacOS arm64
+        set -gx HOMEBREW_PREFIX $HOME/Applications/homebrew
+    end
+
     set -gx HOMEBREW_CELLAR "$HOMEBREW_PREFIX/Cellar"
     set -gx HOMEBREW_REPOSITORY "$HOMEBREW_PREFIX/homebrew"
     fish_add_path "$HOMEBREW_PREFIX/opt/ruby@3.3/bin"
@@ -88,7 +92,8 @@ if test $MY_MAC_TYPE = mini
     fish_add_path "$HOME/.local/bin/starship"
     fish_add_path "$HOME/.local/bin/asdf/0.19.0"
     fish_add_path "$HOME/.local/bin/lazygit/0.63.0"
-    fish_add_path "$HOME/.local/bin/fzf-0.73.1"
+    fish_add_path "$HOME/.local/bin/fzf/0.73.1"
+    fish_add_path "$HOME/.local/bin/android-platform-tools/37.0.0/platform-tools"
     fish_add_path "$HOME/.local/bin/nvim-macos-arm64/bin"
 end
 

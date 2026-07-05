@@ -174,16 +174,12 @@ fi
 if [[ $(uname -m) == 'arm64' ]]; then
     # echo M2
     export ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
-    # export HOMEBREW_HOME="/opt/homebrew"
 fi
 
 if [[ $(uname -m) == 'x86_64' ]]; then
     # echo Mackook
     export ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
-    # export HOMEBREW_HOME="/usr/local"
 fi
-
-export HOMEBREW_HOME="not found"
 
 export TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 
@@ -221,6 +217,8 @@ alias dnix_bin="ls -la /etc/profiles/per-user/djzhang/bin"
 alias dnix_install_nix_darwin='sudo mv /etc/nix/nix.conf /etc/nix/nix.conf.bak && nix run nix-darwin -- switch --flake "$TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/$(uname -m)"'
 alias dnix_uninstall_nix_darwin="nix-build https://github.com/LnL7/nix-darwin/archive/master.tar.gz -A uninstaller && ./result/bin/darwin-uninstaller"
 
+export HOMEBREW_HOME="not found"
+
 if [[ $(command -v brew) == "" ]]; then
     # echo "Homebrew is not installed"
     export HOMEBREW_HOME="not found"
@@ -231,13 +229,13 @@ else
     if [[ $(uname -m) == 'arm64' ]]; then
         # echo M2
         # Adding this to my .zshrc solved the problem on a machine with Apple M2 CPU:
-        eval $(/opt/homebrew/bin/brew shellenv)
+        eval $($HOMEBREW_PREFIX/bin/brew shellenv)
     fi
 
     # autojump
     if [[ $(uname -m) == 'arm64' ]]; then
         # echo M2
-        [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+        [ -f $HOMEBREW_PREFIX/etc/profile.d/autojump.sh ] && . $HOMEBREW_PREFIX/etc/profile.d/autojump.sh
     fi
 
     if [[ $(uname -m) == 'x86_64' ]]; then

@@ -12,7 +12,6 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 
-
 # Add the directory to your function search path
 fpath=(~/.zsh_functions $fpath)
 
@@ -21,7 +20,6 @@ autoload -Uz check_macos_type
 
 # Execute the function on startup
 check_macos_type
-
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -77,7 +75,7 @@ check_macos_type
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(trujunzhang autojump git fzf-tab fzf brew nvm history pyenv vscode zsh-autosuggestions zsh-syntax-highlighting web-search)
 # plugins=(trujunzhang git history vscode asdf)
-plugins=(trujunzhang git history vscode asdf)
+plugins=(trujunzhang git history)
 
 zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:plugins:nvm' autoload yes
@@ -185,9 +183,18 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [ -d "/opt/homebrew" ]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+    export HOMEBREW_PREFIX="/opt/homebrew"
+fi
 
-    export PATH=/opt/homebrew/opt/ruby@3.3/bin:$PATH
+if [ -d "$HOME/Applications/homebrew" ]; then
+    export HOMEBREW_PREFIX="$HOME/Applications/homebrew"
+fi
+
+if [ -d $HOMEBREW_PREFIX ]; then
+    # echo "exist HOMEBREW_PREFIX is $HOMEBREW_PREFIX"
+    eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
+
+    export PATH=$HOMEBREW_PREFIX/opt/ruby@3.3/bin:$PATH
 fi
 
 # alias dcd_home="cd $HOME/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook"
