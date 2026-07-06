@@ -130,6 +130,8 @@ end
 # ======================================================================
 # Python environment
 # ======================================================================
+alias -s python=python3
+alias -s pip=pip3
 # >>> conda initialize >>>
 # Refer:
 #    https://stackoverflow.com/questions/34280113/add-conda-to-path-in-fish

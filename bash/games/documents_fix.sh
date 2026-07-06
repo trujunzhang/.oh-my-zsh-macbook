@@ -7,6 +7,9 @@ USER_DOCUMENTS_DEFAULT_PATH="$MAC_USER_HOME_PATH/Documents"
 
 function link_games_save_location_path() {
 
+    # Assassin's Creed III Remaster
+    directoryLink "game(Assassin's Creed III Remaster)" "$CURRENT_USER_DOCUMENTS_PATH/Assassin's Creed III Remaster" "$USER_DOCUMENTS_DEFAULT_PATH/Assassin's Creed III Remaster"
+
     # Assassin's Creed IV Black Flag
     directoryLink "game(Assassin's Creed IV Black Flag)" "$CURRENT_USER_DOCUMENTS_PATH/Assassin's Creed IV Black Flag" "$USER_DOCUMENTS_DEFAULT_PATH/Assassin's Creed IV Black Flag"
 
@@ -65,6 +68,9 @@ function link_games_save_location_path() {
 
     # Sikarugir
     directoryLink "app(Sikarugir)" "$CURRENT_USER_HOME_PATH/Library/Application Support/Sikarugir" "$MAC_USER_HOME_PATH/Library/Application Support/Sikarugir"
+
+    # Hogwarts Legacy
+    directoryLink "game(Hogwarts Legacy)" "$CURRENT_USER_DOCUMENTS_PATH/Hogwarts Legacy" "$USER_DOCUMENTS_DEFAULT_PATH/Hogwarts Legacy"
 }
 
 #
