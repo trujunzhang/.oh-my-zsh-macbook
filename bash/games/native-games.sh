@@ -121,7 +121,9 @@ start_moving_native_games() {
         sub_folder="${array[$i + 2]}"
         need_run_app="${array[$i + 3]}"
 
+        echo ""
         success "step $i"
+
         info "  app_name: $app_name"
         info "  pattern: $pattern"
         info "  sub_folder: $sub_folder"

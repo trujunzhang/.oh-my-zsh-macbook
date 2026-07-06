@@ -88,7 +88,8 @@ fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps"
 if test $MY_MAC_TYPE = mini
     fish_add_path "$HOME/.local/bin/helix-aarch64-macos"
     # https://github.com/zellij-org/zellij/releases/tag/v0.43.1
-    fish_add_path "$HOME/.local/bin/zellij/0.43.1"
+    # fish_add_path "$HOME/.local/bin/zellij/0.43.1"
+    fish_add_path "$HOME/.local/bin/zellij/0.44.3"
     fish_add_path "$HOME/.local/bin/starship"
     fish_add_path "$HOME/.local/bin/asdf/0.19.0"
     fish_add_path "$HOME/.local/bin/lazygit/0.63.0"
@@ -130,8 +131,8 @@ end
 # ======================================================================
 # Python environment
 # ======================================================================
-alias -s python=python3
-alias -s pip=pip3
+# alias -s python=python3
+# alias -s pip=pip3
 # >>> conda initialize >>>
 # Refer:
 #    https://stackoverflow.com/questions/34280113/add-conda-to-path-in-fish

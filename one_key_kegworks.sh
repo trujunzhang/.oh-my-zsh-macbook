@@ -17,7 +17,7 @@ info "                                          "
 
 mkdir -p "$Moving_Games_Folder"
 
- APP_GAME_FOLDER_IN_DRIVER_C="$DRIVER_C_FOLDER_IN_WINE_APP/Games"
+APP_GAME_FOLDER_IN_DRIVER_C="$DRIVER_C_FOLDER_IN_WINE_APP/Games"
 
 moving_game_folder_from_kegworks() {
     info "moving game folder from kegworks"
@@ -72,8 +72,11 @@ run_kegworks_games() {
     info "run_kegworks_games:"
 
     for ((i = 0; i < ${#games_in_kegworks[@]}; i = i + 2)); do
-        game_name="${games_in_kegworks[$i + 0]}"
-        install_folder_name="${games_in_kegworks[$i + 1]}"
+        game_name="${games_in_kegworks[$i+0]}"
+        install_folder_name="${games_in_kegworks[$i+1]}"
+
+        echo ""
+        success "step $i"
 
         my_global_file_name="$game_name"
 
@@ -96,8 +99,11 @@ restore_kegworks_games() {
     info "restore_kegworks_games:"
 
     for ((i = 0; i < ${#games_in_kegworks[@]}; i = i + 2)); do
-        game_name="${games_in_kegworks[$i + 0]}"
-        install_folder_name="${games_in_kegworks[$i + 1]}"
+        game_name="${games_in_kegworks[$i+0]}"
+        install_folder_name="${games_in_kegworks[$i+1]}"
+
+        echo ""
+        success "step $i"
 
         my_global_file_name="$game_name"
 

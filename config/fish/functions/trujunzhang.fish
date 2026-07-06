@@ -778,8 +778,11 @@ end
 
 alias denv_info_mac_type='echo "your mac type, $MY_MAC_TYPE!"'
 
-alias dmac_unzip_common_apps='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
-alias dmac_unzip_vpn_apps='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'
+alias dmac_install_homebrew_official='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+
+alias dmac_first_unzip='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
+alias dmac_second_unzip='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'
+
 alias dmac_switch_off_spotlight="sudo mdutil -a -i off"
 alias dmac_link_homebrew="sudo ln -s /Volumes/MacGame/MacCache/homebrew /opt/homebrew"
 alias dmac_vim_jenkins_plist="sudo vim /opt/homebrew/opt/jenkins-lts/homebrew.mxcl.jenkins-lts.plist"
