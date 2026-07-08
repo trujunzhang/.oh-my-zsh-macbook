@@ -86,6 +86,11 @@
           "key" : "l",
           "type" : "application",
           "value" : "/Applications/FlClash.app"
+        },
+        {
+          "key" : "d",
+          "type" : "application",
+          "value" : "/Applications/Android Studio.app"
         }
       ],
       "key" : "a",
@@ -215,12 +220,17 @@
         {
           "key" : "f",
           "type" : "application",
-          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Firefox.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Firefox.app"
         },
         {
           "key" : "c",
           "type" : "application",
           "value" : "/Volumes/MacUser/djzhang/Applications/Google Chrome.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Desktop"
         }
       ],
       "key" : "f",

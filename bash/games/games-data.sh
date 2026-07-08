@@ -13,10 +13,12 @@ DRIVER_C_FOLDER_IN_CROSSOVER_BOTTLE="drive_c"
 GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER="/Volumes/MacUser/djzhang/Documents"
 
 test_games_in_kegworks=(
-    "Need for Speed Payback" "Need for Speed Payback"
+    # "Need for Speed Payback" "Need for Speed Payback"
+    "Hogwarts Legacy" "Hogwarts Legacy"
 )
 
-games_in_kegworks=(
+games_list_in_kegworks=(
+    "Hogwarts Legacy" "Hogwarts Legacy"
     "Mafia Definitive Edition" "Mafia Definitive Edition"
     "God of War" "God-of-War"
     "Assassin Creed Brotherhood" "Assassins Creed - Brotherhood"
@@ -65,6 +67,9 @@ games_in_kegworks=(
     # "" ""
     # "" ""
 )
+
+# games_in_kegworks=("${test_games_in_kegworks[@]}")
+games_in_kegworks=("${games_list_in_kegworks[@]}")
 
 DEFAULT_GLOBAL_FILE_NAME="not found"
 my_global_file_name=""
