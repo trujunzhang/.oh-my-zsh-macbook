@@ -8,7 +8,7 @@ function welcome_message
         set -gx MY_MAC_TYPE mini
     end
 
-    if string match -qi "*mac-pro*" $current_hostname
+    if string match -qi "*macbook-pro*" $current_hostname
         set -gx MY_MAC_TYPE pro
     end
 

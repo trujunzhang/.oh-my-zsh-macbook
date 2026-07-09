@@ -12,7 +12,7 @@ if grep -qi "mac-mini" <<<"$current_hostname"; then
     export MY_MAC_TYPE="mini"
 fi
 
-if grep -qi "mac-pro" <<<"$current_hostname"; then
+if grep -qi "macbook-pro" <<<"$current_hostname"; then
     export MY_MAC_TYPE="pro"
 fi
 
