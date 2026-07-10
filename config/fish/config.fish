@@ -253,13 +253,17 @@ if test $MY_MAC_TYPE = mini
     end
 end
 
-if test "$(uname -m)" = x86_64
+if test $MY_MAC_TYPE = pro
     # >>> mamba initialize >>>
     # !! Contents within this block are managed by 'mamba init' !!
     set -gx MAMBA_EXE /opt/local/bin/micromamba
     # set -gx MAMBA_ROOT_PREFIX /Users/djzhang/mamba
     set -gx MAMBA_ROOT_PREFIX "$HOME/mamba"
-    $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+
+    # if [ -f $MAMBA_EXE ]
+    #    $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
+    # end
+
     # <<< mamba initialize <<<
 end
 
