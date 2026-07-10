@@ -1,17 +1,29 @@
 -- custom shortcuts on the uPDF app
 
 hs.hotkey.bind({ "Cmd" }, "7", function()
-    hs.eventtap.keyStroke({ "Cmd", "Ctrl" }, "7")
+    hs.timer.doAfter(0.5, function()
+        hs.eventtap.keyStroke({ "Cmd", "Ctrl" }, "7")
+        -- hs.notify.new({ title = "toggle 'UPDF' page view type", informativeText = "run it sucessfully" }):send()
+    end)
 end)
 
 hs.hotkey.bind({ "Cmd" }, "8", function()
-    hs.eventtap.keyStroke({ "Cmd", "Ctrl" }, "8")
+    hs.timer.doAfter(0.5, function()
+        hs.eventtap.keyStroke({ "Cmd", "Ctrl" }, "8")
+        -- hs.notify.new({ title = "toggle 'UPDF' page view type", informativeText = "run it sucessfully" }):send()
+    end)
 end)
 
 hs.hotkey.bind({ "Cmd" }, "9", function()
-    hs.eventtap.keyStroke({ "Cmd", "Ctrl" }, "9")
+    hs.timer.doAfter(0.5, function()
+        hs.eventtap.keyStroke({ "Cmd", "Ctrl" }, "9")
+        -- hs.notify.new({ title = "toggle 'UPDF' page view type", informativeText = "run it sucessfully" }):send()
+    end)
 end)
 
 hs.hotkey.bind({ "Cmd" }, "0", function()
-    hs.eventtap.keyStroke({ "Cmd", "Ctrl" }, "0")
+    hs.timer.doAfter(0.5, function()
+        hs.eventtap.keyStroke({ "Cmd", "Ctrl" }, "0")
+        -- hs.notify.new({ title = "toggle 'UPDF' page view type", informativeText = "run it sucessfully" }):send()
+    end)
 end)

@@ -182,6 +182,8 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export HOMEBREW_PREFIX="unknow"
+
 if [ -d "/opt/homebrew" ]; then
     export HOMEBREW_PREFIX="/opt/homebrew"
 fi

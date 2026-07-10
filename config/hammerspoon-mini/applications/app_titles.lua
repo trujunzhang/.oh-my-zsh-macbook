@@ -2,7 +2,15 @@
 function ConsoleWindowFocusHandler(window)
     if window then
         local winTitle = window:title()
+        local appName = window:application():title() -- Get the application name
         print("Hammerspoon Console window focused! Title: " .. winTitle)
+        print(string.format("  Focused Application: %s | Title: %s", appName, winTitle))
+
+        if appName == "UPDF" then
+            -- hs.eventtap.keyStroke({ "Cmd", "Ctrl" }, "7")
+            -- hs.eventtap.keyStroke({ "fn" }, "f")
+            print(string.format("  Focused UPDF Application: %s | Title: %s", appName, winTitle))
+        end
 
         if winTitle == "Open" then
             hs.timer.doAfter(13, function()
