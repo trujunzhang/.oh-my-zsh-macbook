@@ -98,8 +98,13 @@ if test $MY_MAC_TYPE = mini
     fish_add_path "$HOME/.local/bin/nvim-macos-arm64/bin"
 end
 
-if test "$(uname -m)" = x86_64
+if test $MY_MAC_TYPE = pro
+    # if test "$(uname -m)" = x86_64
     fish_add_path "$HOME/.local/bin/helix-x86_64-macos"
+    fish_add_path "$HOME/.local/bin/zellij/0.44.3"
+    fish_add_path "$HOME/.local/bin/starship"
+    fish_add_path "$HOME/.local/bin/lazygit/0.63.0"
+    fish_add_path "$HOME/.local/bin/fzf/0.74.0"
     fish_add_path "$HOME/.local/bin/nvim-macos-x86_64/bin"
 end
 
