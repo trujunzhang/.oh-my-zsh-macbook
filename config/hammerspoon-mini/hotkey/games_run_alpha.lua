@@ -2,7 +2,8 @@
 
 hs.hotkey.bind(GameHotkeyMods, "O", Play_God_of_War)
 
-hs.hotkey.bind(GameHotkeyMods, "F", Play_Far_Cry_4)
+hs.hotkey.bind(GameHotkeyMods, "F", Play_007_First_Light)
+-- hs.hotkey.bind(GameHotkeyMods, "F", Play_Far_Cry_4)
 -- hs.hotkey.bind(GameHotkeyMods, "F", Play_Far_Cry_5_With_Enjoyable)
 
 hs.hotkey.bind(GameHotkeyMods, "D", Play_Horizon_Zero_Dawn_Remastered)

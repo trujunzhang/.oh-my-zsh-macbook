@@ -203,6 +203,8 @@ alias dmac_install_rosetta="softwareupdate --install-rosetta"
 
 alias dmac_switch_off_spotlight="sudo mdutil -a -i off"
 
+alias dmac_macbook_pro_disable_sleeping_mode="sudo pmset disablesleep 1"
+
 #nix
 alias dnix_build_default='darwin-rebuild switch --option http2 false --flake $TRUJUNZHANG_DOTFILES_HOME/config/nix-darwin/universal'
 alias dnix_build_local="darwin-rebuild switch --option http2 false  --flake ."

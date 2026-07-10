@@ -73,6 +73,11 @@ function link_games_save_location_path() {
     directoryLink "game(Hogwarts Legacy)" "$CURRENT_USER_DOCUMENTS_PATH/Hogwarts Legacy" "$USER_DOCUMENTS_DEFAULT_PATH/Hogwarts Legacy"
 }
 
+function link_apps_games_in_applications() {
+    directoryLink "game(007 First Light.app)" "$KegworksGames_Folder/007 First Light.app" "/Applications/007 First Light.app"
+    directoryLink "game(007 Shader Commander.app)" "$KegworksGames_Folder/007 Shader Commander.app" "/Applications/007 Shader Commander.app"
+}
+
 #
 # directoryLink "game()" "$CURRENT_USER_DOCUMENTS_PATH/" "$USER_DOCUMENTS_DEFAULT_PATH/"
 

@@ -331,6 +331,11 @@ alias easUpdateConfigure='eas update:configure'
 # Geny motion
 # alias gmgeny="open -a $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'Samsung Galaxy Note 3'"
 
+function dmac_run_app_ok
+    set app $argv[1]
+    xattr -cr /Applications/$app
+end
+
 function dmac_genymotion_vm_open
     # "--vm-name", "e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926", "--referer", "launchpad", "--no-update-check"
     # set genymotion_app_folder "/Applications"
@@ -782,6 +787,8 @@ alias dmac_install_homebrew_official='/bin/bash -c "$(curl -fsSL https://raw.git
 
 alias dmac_first_unzip='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'
 alias dmac_second_unzip='unzip -o "/Volumes/MacGame/MacCache/apps/v2ray/*.zip" -d /Applications'
+
+alias dmac_macbook_pro_disable_sleeping_mode="sudo pmset disablesleep 1"
 
 alias dmac_switch_off_spotlight="sudo mdutil -a -i off"
 alias dmac_link_homebrew="sudo ln -s /Volumes/MacGame/MacCache/homebrew /opt/homebrew"
