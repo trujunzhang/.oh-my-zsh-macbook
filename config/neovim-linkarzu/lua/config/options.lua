@@ -428,6 +428,15 @@ vim.opt.guicursor = {
     "r-cr:hor20-CursorIM", -- Use 'CursorIM' for replace mode
 }
 
+-- aunmenu PopUp
+-- autocmd! nvim.popupmenu
+
+vim.api.nvim_command("aunmenu PopUp")
+vim.api.nvim_command("autocmd! nvim.popupmenu")
+
+-- vim.api.nvim_command("aunmenu PopUp.How-to\\ disable\\ mouse")
+-- vim.api.nvim_command("aunmenu PopUp.-1-")
+
 -- ############################################################################
 --                           End of Neovide section
 -- ############################################################################

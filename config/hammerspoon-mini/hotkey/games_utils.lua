@@ -31,9 +31,56 @@ function Move_Cursor(direction)
     hs.mouse.setAbsolutePosition(center)
 end
 
-function BeforePlayGame(runApp)
-    -- move_cursor('left')
+function BeforePlayGame(app_name, game_foler_name, runApp)
+    DoesGameTagFileExist(app_name, game_foler_name, runApp, DoPlayGame, DoOpenAndVerifyGame)
+end
 
+function DoOpenAndVerifyGame(appName, game_foler_name)
+    hs.notify.new({ title = "Verifing game", informativeText = "Start it" }):send()
+
+    appName = FixGameAppName(appName)
+    GCurrentGameName = appName
+    CheckAppExistedByPrefix(appName)
+
+    -- hs.printf("%s = %s", "GCurrentGameName:", GCurrentGameName)
+
+    local appPath = KegworksGames .. GCurrentGameName
+    -- hs.printf("%s = %s", "appPath:", appPath)
+
+    if DoesDirectoryExist(appPath) then
+        -- hs.application.launchOrFocus(KegworksGames .. GCurrentGameName)
+
+        local gamePath = appPath .. "/" .. APP_GAME_FOLDER_IN_DRIVER_C .. "/" .. game_foler_name
+        local tmpPath = Moving_Games_Folder .. "/" .. game_foler_name
+
+        -- hs.printf("%s = %s", "gamePath:", gamePath)
+        -- hs.printf("%s = %s", "tmpPath:", tmpPath)
+
+        if DoesDirectoryExist(gamePath) then
+            local shell_command = "mv '" .. gamePath .. "' '" .. tmpPath .. "'"
+            hs.execute(shell_command)
+            hs.notify.new({ title = GCurrentGameName, informativeText = "Moving to tmp folder sucessfully" }):send()
+
+            hs.timer.doAfter(0.5, function()
+                hs.application.launchOrFocus(appPath)
+            end)
+
+            hs.timer.doAfter(80, function()
+                -- hs.timer.doAfter(5, function()
+                hs.execute("killall Configure")
+            end)
+        elseif DoesDirectoryExist(tmpPath) then
+            local shell_command = "mv '" .. tmpPath .. "' '" .. gamePath .. "'"
+            hs.execute(shell_command)
+            hs.notify.new({ title = GCurrentGameName, informativeText = "Moving from tmp folder sucessfully" }):send()
+            WriteGameTagFile(appName)
+        end
+    else
+        hs.notify.new({ title = GCurrentGameName .. " not found", informativeText = "run it failed" }):send()
+    end
+end
+
+function DoPlayGame(runApp)
     hs.notify.new({ title = "Playing game", informativeText = "Start it" }):send()
 
     hs.timer.doAfter(1, function()
@@ -55,6 +102,9 @@ function BeforePlayGame(runApp)
 end
 
 function ActiveWindow(interval)
+    if OpenGameStatus == "verify" then
+        return
+    end
     interval = interval or 60
     hs.timer.doAfter(interval, function()
         -- hs.eventtap.leftClick(hs.mouse.absolutePosition())

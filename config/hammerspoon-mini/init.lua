@@ -18,12 +18,19 @@ GGameVolume = "/Volumes/MacGame/"
 GamesFolder = GGameVolume .. "AppGames/"
 GamesControllerFolder = GGameVolume .. "MacApps/GameController/"
 KegworksGames = GamesFolder .. "Kegworks/"
+Moving_Games_Folder = GGameVolume .. "crossover/kegworks_games"
+
+OpenGameStatus = "open"
+DRIVER_C_FOLDER_IN_WINE_APP = "Contents/drive_c"
+APP_GAME_FOLDER_IN_DRIVER_C = DRIVER_C_FOLDER_IN_WINE_APP .. "/Games"
+TAGGameFolder = "/Volumes/MacOS/Users/djzhang/Desktop/TAGGame/"
 
 GameHotkeyMods = { "Cmd", "Alt", "shift", "ctrl" }
 
 -- require "reload.reload"
 require("utils.tools")
 require("utils.string_utils")
+-- applications
 require("applications.app_utils")
 require("applications.app_kill")
 require("applications.app")
@@ -31,6 +38,7 @@ require("applications.app_restart")
 require("applications.app_titles")
 require("applications.app_windows")
 require("applications.bluetooth_info")
+require("applications.app_custom_shortcuts")
 -- require("hotkey.hotkey")
 require("hotkey.games_utils")
 require("hotkey.games_apps")

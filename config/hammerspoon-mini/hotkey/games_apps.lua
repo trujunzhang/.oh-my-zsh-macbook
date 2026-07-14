@@ -8,7 +8,7 @@
 function Play_Call_of_Duty_Modern_Warfare_Remastered()
     local app_name = "Call of Duty Modern Warfare Remastered"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -22,7 +22,7 @@ end
 function Play_UNCHARTED_LoT_Collection()
     local app_name = "UNCHARTED.LoT.Collection"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -41,7 +41,7 @@ end
 function Play_Red_Dead_Redemption()
     local app_name = "Red Dead Redemption 2"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -55,7 +55,7 @@ end
 function Play_The_Last_of_Us_Part_I()
     local app_name = "The Last of Us Part I"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -65,7 +65,7 @@ end
 function Play_The_Last_of_Us_Part_II()
     local app_name = "The Last of Us Part II"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -80,7 +80,7 @@ end
 function Play_Mafia_Definitive_Edition()
     local app_name = "Mafia Definitive Edition"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -90,7 +90,7 @@ end
 function Play_Mafia_II_Definitive_Edition()
     local app_name = "Mafia II Definitive Edition"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -100,7 +100,7 @@ end
 function Play_Marvel_Spider_Man_Remastered()
     local app_name = "Marvel Spider-Man Remastered"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -121,7 +121,7 @@ function Play_The_Witcher_3_Wild_Hunt()
 
     local app_name = "The Witcher 3"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -132,7 +132,7 @@ end
 function Play_Crysis_3_Remasted()
     local app_name = "Crysis 3 Remastered"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -142,7 +142,7 @@ end
 function Play_Crysis_2_Remastered()
     local app_name = "Crysis_2_Remastered-FLT"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -152,7 +152,7 @@ end
 function Play_Metal_Gear_Solid()
     local app_name = "METAL GEAR SOLID Δ"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -166,7 +166,7 @@ end
 function Play_Ghost_of_Tsushima()
     local app_name = "Ghost of Tsushima"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -186,7 +186,7 @@ function Play_Horizon_Zero_Dawn_Remastered()
     -- local app_name = "Horizon Zero Dawn Remastered"
     local app_name = "Horizon Zero Dawn"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -200,7 +200,7 @@ end
 function Play_Just_Cause_4()
     local app_name = "Just Cause 4"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -210,7 +210,7 @@ end
 function Play_Assassin_Creed_Brotherhood()
     local app_name = "Assassin Creed Brotherhood"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -224,7 +224,7 @@ function Play_Assassins_Creed_III_Remastered()
 
     local app_name = "Assassins Creed III Remastered"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -237,7 +237,7 @@ function Play_Assassins_Creed_4_Black_Flag()
 
     local app_name = "Assassins Creed IV Black Flag"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -250,7 +250,7 @@ function Play_Assassins_Creed_Rogue()
 
     local app_name = "Assassins Creed Rogue"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -263,7 +263,7 @@ function Play_Assassins_Creed_Unity()
 
     local app_name = "Assassins Creed Unity"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -278,7 +278,7 @@ function Play_Assassins_Creed_Syndicate()
 
     local app_name = "Assassins Creed Syndicate"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -292,7 +292,7 @@ function Play_Assassins_Creed_Origins()
 
     local app_name = "Assassins Creed Origins"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -304,7 +304,7 @@ function Play_Assassins_Creed_Mirage()
     -- export D3DM_ENABLE_METALFX=1
     local app_name = "Assassins Creed Mirage"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -318,7 +318,7 @@ function Play_Batman_Arkham_Knight()
     -- app: "Batman Arkham Knight"
     TurnOffAerospace()
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -328,7 +328,7 @@ end
 function Play_Need_for_Speed_Heat()
     local app_name = "Need for Speed Heat"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -342,7 +342,7 @@ function Play_Need_for_Speed_Payback()
     -- app: "Need_for_Speed_Payback"
     -- TurnOffAerospace()
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -354,7 +354,7 @@ end
 function Play_SILENT_HILL_f()
     local app_name = "SILENT HILL f"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -372,7 +372,7 @@ function Play_Silent_Hill_2()
 
     local app_name = "Silent Hill 2"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -382,7 +382,7 @@ end
 function Play_Expedition_33()
     local app_name = "Expedition 33"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -397,7 +397,7 @@ function Play_Grand_Theft_Auto_V()
 
     local app_name = "Grand Theft Auto V"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -407,7 +407,7 @@ end
 function Play_Star_Wars_Jedi_Fallen_Order()
     local app_name = "Star Wars Jedi Fallen Order"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -422,7 +422,7 @@ function Play_Warcraft_3_The_Frozen_Throne()
 
     local app_name = "Warcraft 3 The Frozen Throne"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 end
@@ -430,7 +430,7 @@ end
 function Play_Battlefield_V()
     local app_name = "Battlefield V"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -461,7 +461,7 @@ function Play_Alone_in_the_Dark()
 
     local app_name = "Alone in the Dark"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -471,7 +471,7 @@ end
 function Play_Kingdom_Come_Deliverance()
     local app_name = "Kingdom Come Deliverance"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -481,7 +481,7 @@ end
 function Play_Resident_Evil_2()
     local app_name = "Resident Evil 2"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -491,7 +491,7 @@ end
 function Play_Resident_Evil_3()
     local app_name = "Resident Evil 3"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -505,7 +505,7 @@ function Play_Resident_Evil_4()
 
     local app_name = "Resident Evil 4"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -515,7 +515,7 @@ end
 function Play_Resident_Evil_7()
     local app_name = "Resident Evil 7"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -533,7 +533,7 @@ local function Play_CarX_Street()
 
     local app_name = "CarX Street"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -552,7 +552,7 @@ function Play_Far_Cry_4()
 
     local app_name = "Far Cry 4"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -562,7 +562,7 @@ end
 local function Play_Far_Cry_5()
     local app_name = "Far Cry 5"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -577,7 +577,7 @@ end
 function Play_Far_Cry_6()
     local app_name = "Far Cry 6"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -587,7 +587,7 @@ end
 function Play_Split_Fiction()
     local app_name = "Split Fiction"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -597,7 +597,7 @@ end
 function Play_Hogwarts_Legacy()
     local app_name = "Hogwarts Legacy"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -614,7 +614,7 @@ function Play_God_of_War()
 
     local app_name = "God of War"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -624,9 +624,9 @@ end
 function Play_007_First_Light()
     local app_name = "007 First Light"
 
-    BeforePlayGame(function()
+    BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-     ActiveWindow(60)
+    ActiveWindow(60)
 end

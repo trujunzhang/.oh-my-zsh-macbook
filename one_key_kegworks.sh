@@ -137,7 +137,7 @@ run)
     if [ "$test_mode" == "test" ]; then
         test_run_native_games
     else
-        run_kegworks_games
+        # run_kegworks_games
         run_native_games
     fi
     ;;
@@ -145,7 +145,7 @@ restore)
     if [ "$test_mode" == "test" ]; then
         test_restore_native_games
     else
-        restore_kegworks_games
+        # restore_kegworks_games
         restore_native_games
     fi
     ;;

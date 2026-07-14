@@ -70,6 +70,27 @@ function HideLeftDock()
     hs.execute("defaults write com.apple.dock autohide -bool true && killall Dock")
 end
 
+function WriteGameTagFile(app_name)
+    local filePath = TAGGameFolder .. app_name
+
+    hs.execute("mkdir -p " .. TAGGameFolder)
+
+    local file = io.open(filePath, "w")
+    file:write("Hello World")
+    file:close()
+end
+
+function DoesGameTagFileExist(app_name, game_foler_name, runApp, existFunc, notExistFunc)
+    local filePath = TAGGameFolder .. FixGameAppName(app_name)
+    if hs.fs.attributes(filePath) then
+        OpenGameStatus = "open"
+        existFunc(runApp)
+    else
+        OpenGameStatus = "verify"
+        notExistFunc(app_name, game_foler_name)
+    end
+end
+
 function DoesDirectoryExist(path)
     local attr = hs.fs.attributes(path)
     return attr and attr.mode == "directory"
@@ -109,12 +130,7 @@ local function check_app_existed(prefix, appName)
     end
 end
 
-function Check_And_Run_KegworksApp(appName)
-    appName = appName:gsub(".app", "")
-    appName = appName .. ".app"
-
-    GCurrentGameName = appName
-
+function CheckAppExistedByPrefix(appName)
     check_app_existed("10", appName)
     check_app_existed("whiskey", appName)
     check_app_existed("103", appName)
@@ -123,6 +139,18 @@ function Check_And_Run_KegworksApp(appName)
     check_app_existed("1011x106", appName)
     check_app_existed("2610110", appName)
     check_app_existed("2477", appName)
+end
+
+function FixGameAppName(appName)
+    appName = appName:gsub(".app", "")
+    appName = appName .. ".app"
+    return appName
+end
+
+function Check_And_Run_KegworksApp(appName)
+    appName = FixGameAppName(appName)
+    GCurrentGameName = appName
+    CheckAppExistedByPrefix(appName)
 
     hs.printf("%s = %s", "GCurrentGameName:", GCurrentGameName)
 

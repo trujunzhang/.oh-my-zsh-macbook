@@ -65,6 +65,10 @@ function ListAllWindowTitles()
 end
 
 function Close_Active_Window(windowTitle, actionType, interval, needClickPlayButton)
+    if OpenGameStatus == "verify" then
+        return
+    end
+
     interval = interval or 35
     actionType = actionType or "ok"
     needClickPlayButton = needClickPlayButton or "false"
