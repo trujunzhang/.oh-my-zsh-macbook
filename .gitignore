@@ -83,4 +83,24 @@ builds/
 
 sing-box.bak
 
+# gui for Clash
+.cache
+user.yaml
+**/mihomo/cache.db
+**/mihomo/rules
+**/mihomo/mihomo-darwin-amd64-compatible
+**/mihomo/mihomo-darwin-amd64*
 
+**/mihomo*
+**/mihomo/mihomo
+**/mihomo/mihomo.bak
+**/mihomo/pid.txt
+
+# gui for sing-box
+**/sing-box/cache.db
+**/sing-box/sing-box
+**/sing-box/sing-box.bak
+.cache
+user.yaml
+pid.txt
+sing-box.log

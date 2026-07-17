@@ -1,0 +1,62 @@
+- id: ID_an5h55ca
+  name: singbox
+  useInternal: false
+  upload: 0
+  download: 0
+  total: 0
+  expire: null
+  updateTime: 1784279892176
+  type: Manual
+  url: https://myclashes.top/sub?token=63a55a45114761972f3f6310abe6df74&clash
+  website: ""
+  path: data/subscribes/ID_an5h55ca.yaml
+  include: ""
+  exclude: ""
+  includeProtocol: ""
+  excludeProtocol: ""
+  proxyPrefix: ""
+  requestProxyMode: global
+  customProxy: ""
+  disabled: false
+  inSecure: false
+  requestMethod: GET
+  requestTimeout: 15
+  header:
+    request:
+      User-Agent: clash.meta/mihomo
+    response: {}
+  script: |-
+    const onSubscribe = async (proxies, subscription) => {
+      return { proxies, subscription }
+    }
+  proxies:
+    - id: ID_sbz0pkop
+      name: CF电信优选1
+      type: vless
+    - id: ID_7sd5xgkw
+      name: CF电信优选2
+      type: vless
+    - id: ID_zmh2z8cj
+      name: CF电信优选3
+      type: vless
+    - id: ID_7kx6zzbl
+      name: CF电信优选4
+      type: vless
+    - id: ID_z6z5rldz
+      name: CF电信优选5
+      type: vless
+    - id: ID_bzwccr4d
+      name: CF电信优选6
+      type: vless
+    - id: ID_b28jp491
+      name: CF电信优选7
+      type: vless
+    - id: ID_n0a89q31
+      name: CF电信优选8
+      type: vless
+    - id: ID_6af7zvye
+      name: CF电信优选9
+      type: vless
+    - id: ID_6tvq5l2v
+      name: CF电信优选10
+      type: vless

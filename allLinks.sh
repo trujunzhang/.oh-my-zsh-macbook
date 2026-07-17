@@ -394,7 +394,8 @@ function link_symlink {
 
     # GUI.for.clash
     # v1.14.1(ok)
-    directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
+    # directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
+    directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-singbox" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
     # directoryLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.Clash-wanghao" "/Users/djzhang/Library/Application Support/GUI.for.Clash" "delete"
 }
 

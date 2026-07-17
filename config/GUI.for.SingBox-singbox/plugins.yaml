@@ -1,0 +1,30 @@
+- id: plugin-node-convert
+  name: 节点转换
+  version: v3.0.1
+  group: Recommended
+  description: 节点格式转换插件，支持v2Ray格式转clash、clash格式转sing-box。
+  tags:
+    - 节点处理
+  type: Http
+  url: https://raw.githubusercontent.com/GUI-for-Cores/Plugin-Hub/main/plugins/Generic/plugin-node-convert.js
+  path: data/plugins/plugin-node-convert.js
+  triggers:
+    - on::manual
+    - on::subscribe
+  hasUI: false
+  menus:
+    更新依赖: Update
+  context:
+    profiles: {}
+    subscriptions:
+      导出(URI): ExportAsURI
+      导出(Clash): ExportAsClash
+      导出(SingBox): ExportAsSingBox
+    rulesets: {}
+    plugins: {}
+    scheduledtasks: {}
+  status: 0
+  configuration: []
+  disabled: false
+  install: false
+  installed: false

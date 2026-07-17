@@ -1,5 +1,5 @@
-- id: ID_ri8yoe68
-  name: trujunzhang-singbox
+- id: ID_8fak3l9h
+  name: singbox
   log:
     disabled: false
     level: info
@@ -11,7 +11,7 @@
       external_ui: ""
       external_ui_download_url: ""
       external_ui_download_detour: outbound-direct
-      secret: 449c1b8b2296725f28610efa133cc9c107e098e90a0a78a54d0754fefe2e176d
+      secret: dab73be3d7cb45a5228ab0b7fc7ae900375c94b80a4d1a8ae1b4f57611142316
       default_mode: rule
       access_control_allow_origin:
         - "*"
@@ -19,7 +19,7 @@
     cache_file:
       enabled: true
       path: cache.db
-      cache_id: ID_bembhfsy
+      cache_id: ID_dia5wjqw
       store_fakeip: true
       store_rdrc: true
       rdrc_timeout: 7d
@@ -57,11 +57,11 @@
       tag: 🚀 Select
       type: selector
       outbounds:
-        - id: outbound-urlte
+        - id: outbound-urltest
           type: Built-in
           tag: 🎈 Auto
-        - id: ID_bsfu9nmq
-          tag: ID_bsfu9nmq
+        - id: ID_qwsktqnd
+          tag: ID_qwsktqnd
           type: Subscription
       interrupt_exist_connections: true
       url: ""
@@ -69,12 +69,14 @@
       tolerance: 150
       include: ""
       exclude: ""
-    - id: outbound-urlte
+      icon: ""
+      hidden: false
+    - id: outbound-urltest
       tag: 🎈 Auto
       type: urltest
       outbounds:
-        - id: ID_bsfu9nmq
-          tag: ID_bsfu9nmq
+        - id: ID_qwsktqnd
+          tag: ID_qwsktqnd
           type: Subscription
       interrupt_exist_connections: true
       url: https://www.gstatic.com/generate_204
@@ -82,6 +84,8 @@
       tolerance: 150
       include: ""
       exclude: ""
+      icon: ""
+      hidden: false
     - id: outbound-direct
       tag: 🎯 Direct
       type: selector
@@ -98,6 +102,8 @@
       tolerance: 150
       include: ""
       exclude: ""
+      icon: ""
+      hidden: false
     - id: outbound-block
       tag: 🛑 Block
       type: selector
@@ -114,6 +120,8 @@
       tolerance: 150
       include: ""
       exclude: ""
+      icon: ""
+      hidden: false
     - id: outbound-fallback
       tag: 🐟 Fallback
       type: selector
@@ -130,6 +138,8 @@
       tolerance: 150
       include: ""
       exclude: ""
+      icon: ""
+      hidden: false
     - id: outbound-global
       tag: GLOBAL
       type: selector
@@ -137,7 +147,7 @@
         - id: outbound-select
           type: Built-in
           tag: 🚀 Select
-        - id: outbound-urlte
+        - id: outbound-urltest
           type: Built-in
           tag: 🎈 Auto
         - id: outbound-direct
@@ -155,9 +165,11 @@
       tolerance: 150
       include: ""
       exclude: ""
+      icon: ""
+      hidden: false
   route:
     rules:
-      - id: ID_j4r2gbdr
+      - id: ID_2gtw1n0x
         type: inbound
         payload: tun-in
         enable: true
@@ -167,7 +179,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_26zgwdm8
+      - id: ID_4cfzmr4v
         type: protocol
         enable: true
         payload: dns
@@ -177,7 +189,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_3wf13spo
+      - id: ID_27ruz2yd
         type: clash_mode
         payload: direct
         enable: true
@@ -187,7 +199,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_tojo6w2p
+      - id: ID_rsu850of
         type: clash_mode
         enable: true
         payload: global
@@ -207,7 +219,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_zdnlxwj4
+      - id: ID_aqwj8nx6
         type: network
         enable: true
         payload: icmp
@@ -217,7 +229,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_skv0x0zu
+      - id: ID_ga2z0m7z
         type: protocol
         enable: true
         payload: quic
@@ -227,7 +239,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_rsl0trvq
+      - id: ID_r4sqvwao
         type: rule_set
         enable: true
         payload: Category-Ads
@@ -237,7 +249,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_zfu0l4ne
+      - id: ID_okcd1kpq
         type: rule_set
         enable: true
         payload: GeoSite-Private
@@ -247,7 +259,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_y4f7u88q
+      - id: ID_ahmzgyp7
         type: rule_set
         enable: true
         payload: GeoSite-CN
@@ -257,7 +269,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_akayywyi
+      - id: ID_9do9dbb4
         type: rule_set
         enable: true
         payload: GeoIP-Private
@@ -267,7 +279,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_qkr0kil5
+      - id: ID_5bmxzecg
         type: rule_set
         enable: true
         payload: GeoIP-CN
@@ -277,7 +289,7 @@
         sniffer: []
         strategy: default
         server: ""
-      - id: ID_3yobdysh
+      - id: ID_zria5e23
         type: rule_set
         enable: true
         payload: GeoLocation-!CN
@@ -417,7 +429,7 @@
         hosts_path: []
         predefined: {}
     rules:
-      - id: ID_2m7tmknl
+      - id: ID_54qaa13c
         type: clash_mode
         enable: true
         payload: direct
@@ -427,7 +439,7 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_4oygezox
+      - id: ID_31n11wfl
         type: clash_mode
         enable: true
         payload: global
@@ -447,7 +459,7 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_iy27olwk
+      - id: ID_8kf4ze4w
         type: rule_set
         enable: true
         payload: GeoSite-CN
@@ -457,7 +469,7 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_4qk81nn7
+      - id: ID_psrp6cdq
         type: inline
         enable: false
         payload: |-
@@ -495,7 +507,7 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
-      - id: ID_4yhk2ggy
+      - id: ID_90v9x3pa
         type: rule_set
         enable: true
         payload: GeoLocation-!CN

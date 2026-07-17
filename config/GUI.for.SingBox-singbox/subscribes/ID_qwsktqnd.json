@@ -1,0 +1,232 @@
+[
+  {
+    "tag": "CF官方优选1",
+    "type": "vless",
+    "server": "104.17.174.83",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  },
+  {
+    "tag": "CF官方优选2",
+    "type": "vless",
+    "server": "162.159.47.231",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  },
+  {
+    "tag": "CF官方优选3",
+    "type": "vless",
+    "server": "104.17.23.147",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  },
+  {
+    "tag": "CF官方优选4",
+    "type": "vless",
+    "server": "104.17.57.44",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  },
+  {
+    "tag": "CF官方优选5",
+    "type": "vless",
+    "server": "104.16.251.106",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  },
+  {
+    "tag": "CF官方优选6",
+    "type": "vless",
+    "server": "104.17.51.236",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  },
+  {
+    "tag": "CF官方优选7",
+    "type": "vless",
+    "server": "104.17.211.39",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  },
+  {
+    "tag": "CF官方优选8",
+    "type": "vless",
+    "server": "104.26.5.61",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  },
+  {
+    "tag": "CF官方优选9",
+    "type": "vless",
+    "server": "104.17.170.144",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  },
+  {
+    "tag": "CF官方优选10",
+    "type": "vless",
+    "server": "104.16.242.129",
+    "server_port": 2053,
+    "uuid": "b2c43c2d-01fb-48ee-9a1c-8f1ee3227e10",
+    "tls": {
+      "enabled": true,
+      "server_name": "myclashes.top",
+      "insecure": false,
+      "utls": {
+        "enabled": true,
+        "fingerprint": "chrome"
+      }
+    },
+    "transport": {
+      "type": "ws",
+      "headers": {
+        "Host": "myclashes.top"
+      },
+      "path": "/"
+    }
+  }
+]

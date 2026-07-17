@@ -66,6 +66,11 @@
           "key" : "d",
           "type" : "application",
           "value" : "/Applications/Android Studio.app"
+        },
+        {
+          "key" : "r",
+          "type" : "application",
+          "value" : "/Applications/Raycast.app"
         }
       ],
       "key" : "a",
@@ -388,7 +393,7 @@
           "value" : "/Volumes/MacUser/djzhang/Applications/Clash Verge.app"
         },
         {
-          "key" : "c",
+          "key" : "x",
           "type" : "application",
           "value" : "/Volumes/MacUser/djzhang/Applications/ClashX.app"
         },
@@ -396,6 +401,21 @@
           "key" : "f",
           "type" : "application",
           "value" : "/Volumes/MacUser/djzhang/Applications/FlClash.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/GUI.for.Clash.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/GUI.for.SingBox.app"
+        },
+        {
+          "key" : "r",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/V2rayU.app"
         }
       ],
       "key" : "v",
