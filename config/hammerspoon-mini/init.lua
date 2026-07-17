@@ -22,6 +22,7 @@ Moving_Games_Folder = GGameVolume .. "crossover/kegworks_games"
 
 OpenGameStatus = "open"
 DRIVER_C_FOLDER_IN_WINE_APP = "Contents/drive_c"
+DRIVER_C_FOLDER_IN_TOXICGAME_APP = "Contents/Resources/ToxicGame/drive_c"
 APP_GAME_FOLDER_IN_DRIVER_C = DRIVER_C_FOLDER_IN_WINE_APP .. "/Games"
 TAGGameFolder = "/Volumes/MacOS/Users/djzhang/Desktop/TAGGame/"
 

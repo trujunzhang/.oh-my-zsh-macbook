@@ -3,16 +3,6 @@
     {
       "actions" : [
         {
-          "key" : "s",
-          "type" : "application",
-          "value" : "/Applications/GUI.for.SingBox.app"
-        },
-        {
-          "key" : "e",
-          "type" : "application",
-          "value" : "/Applications/GUI.for.Clash.app"
-        },
-        {
           "key" : "i",
           "type" : "application",
           "value" : "/System/Applications/Music.app"
@@ -36,11 +26,6 @@
           "key" : "b",
           "type" : "application",
           "value" : "/Applications/qbittorrent.app"
-        },
-        {
-          "key" : "c",
-          "type" : "application",
-          "value" : "/Applications/ClashX.app"
         },
         {
           "key" : "w",
@@ -73,19 +58,9 @@
           "value" : "/Volumes/MacGame/MacApps/GameController/Enjoyable.app"
         },
         {
-          "key" : "v",
-          "type" : "application",
-          "value" : "/Applications/Clash Verge.app"
-        },
-        {
           "key" : "j",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacApps/GameController/Enjoyable.app"
-        },
-        {
-          "key" : "l",
-          "type" : "application",
-          "value" : "/Applications/FlClash.app"
         },
         {
           "key" : "d",
@@ -403,6 +378,28 @@
       ],
       "key" : "o",
       "label" : "Opera Browser",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/Clash Verge.app"
+        },
+        {
+          "key" : "c",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/ClashX.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/FlClash.app"
+        }
+      ],
+      "key" : "v",
+      "label" : "Proxy",
       "type" : "group"
     }
   ],

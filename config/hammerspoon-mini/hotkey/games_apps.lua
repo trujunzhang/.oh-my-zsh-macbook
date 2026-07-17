@@ -630,3 +630,13 @@ function Play_007_First_Light()
 
     ActiveWindow(60)
 end
+
+function Play_FIFA_21()
+    local app_name = "FIFA 21"
+
+    BeforePlayGame(app_name, app_name, function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(60)
+end

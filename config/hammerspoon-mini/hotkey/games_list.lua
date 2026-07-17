@@ -92,6 +92,16 @@ local chooser = hs.chooser.new(function(choice)
         Play_Mafia_Definitive_Edition()
     elseif tag == "Hogwarts-Legacy" then
         Play_Hogwarts_Legacy()
+    elseif tag == "FIFA-21" then
+        Play_FIFA_21()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
+    -- elseif tag == "" then
+    --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -246,6 +256,19 @@ local menus = {
         ["text"] = "Hogwarts Legacy(-H)",
         ["tag"] = "Hogwarts-Legacy",
     },
+    {
+        ["text"] = "FIFA 21",
+        ["tag"] = "FIFA-21",
+    },
+
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
+    -- {
+    --     ["text"] = "",
+    --     ["tag"] = "",
+    -- },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",
