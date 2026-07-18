@@ -638,5 +638,15 @@ function Play_FIFA_21()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(60)
+    ActiveWindow(70)
+end
+
+function Play_FIFA_22()
+    local app_name = "FIFA 22"
+
+    BeforePlayGame(app_name, app_name, function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(70)
 end

@@ -265,7 +265,16 @@ run = 'move-node-to-workspace F'
 [[on-window-detected]]
 # assissan creed- Black Flag
 if.window-title-regex-substring='AC4BFSP'
-# if.window-title-regex-substring='com.codeweavers.CrossOverHelper'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
+# FIFA21
+if.window-title-regex-substring='FIFA21.exe'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
+# wine apps
+if.window-title-regex-substring='wine'
 run = 'move-node-to-workspace H'
 
 [[on-window-detected]]

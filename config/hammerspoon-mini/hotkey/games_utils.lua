@@ -76,6 +76,7 @@ function DoOpenAndVerifyGame(appName, game_foler_name)
             hs.timer.doAfter(80, function()
                 -- hs.timer.doAfter(5, function()
                 hs.execute("killall Configure")
+                hs.notify.new({ title = "Killing the wine's configure", informativeText = "run it sucessfully" }):send()
             end)
         elseif DoesDirectoryExist(tmpPath) then
             if DoesDirectoryExist(gamesFolder) then

@@ -94,6 +94,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_Hogwarts_Legacy()
     elseif tag == "FIFA-21" then
         Play_FIFA_21()
+    elseif tag == "FIFA-22" then
+        Play_FIFA_22()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -240,10 +242,10 @@ local menus = {
         ["text"] = "Resident Evil 7(-7)",
         ["tag"] = "Resident-Evil-7",
     },
-    {
-        ["text"] = "God of War(-O)",
-        ["tag"] = "God-of-War",
-    },
+    -- {
+    --     ["text"] = "God of War(-O)",
+    --     ["tag"] = "God-of-War",
+    -- },
     {
         ["text"] = "Assassins Creed III Remastered(-M)",
         ["tag"] = "Assassins-Creed-III-Remastered",
@@ -256,11 +258,14 @@ local menus = {
         ["text"] = "Hogwarts Legacy(-H)",
         ["tag"] = "Hogwarts-Legacy",
     },
+    -- {
+    --     ["text"] = "FIFA 21",
+    --     ["tag"] = "FIFA-21",
+    -- },
     {
-        ["text"] = "FIFA 21",
-        ["tag"] = "FIFA-21",
+        ["text"] = "FIFA 22",
+        ["tag"] = "FIFA-22",
     },
-
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",

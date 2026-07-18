@@ -20,7 +20,7 @@
         {
           "key" : "x",
           "type" : "application",
-          "value" : "/Applications/Thunder.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Thunder.app"
         },
         {
           "key" : "b",
@@ -190,7 +190,7 @@
         {
           "key" : "r",
           "type" : "application",
-          "value" : "/Applications/Path Finder.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Path Finder.app"
         },
         {
           "key" : "b",

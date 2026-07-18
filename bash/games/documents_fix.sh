@@ -71,6 +71,12 @@ function link_games_save_location_path() {
 
     # Hogwarts Legacy
     directoryLink "game(Hogwarts Legacy)" "$CURRENT_USER_DOCUMENTS_PATH/Hogwarts Legacy" "$USER_DOCUMENTS_DEFAULT_PATH/Hogwarts Legacy"
+
+    # FIFA 21
+    directoryLink "game(FIFA 21)" "$CURRENT_USER_DOCUMENTS_PATH/FIFA 21" "$USER_DOCUMENTS_DEFAULT_PATH/FIFA 21"
+
+    # FIFA 22
+    directoryLink "game(FIFA 22)" "$CURRENT_USER_DOCUMENTS_PATH/FIFA 22" "$USER_DOCUMENTS_DEFAULT_PATH/FIFA 22"
 }
 
 function link_apps_games_in_applications() {
