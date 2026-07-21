@@ -96,8 +96,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_FIFA_21()
     elseif tag == "FIFA-22" then
         Play_FIFA_22()
-    -- elseif tag == "" then
-    --     Play_Horizon_Zero_Dawn_Remastered()
+    elseif tag == "Atomic-Heart" then
+        Play_Atomic_Heart()
     -- elseif tag == "" then
     --     Play_Horizon_Zero_Dawn_Remastered()
     -- elseif tag == "" then
@@ -263,13 +263,13 @@ local menus = {
     --     ["tag"] = "FIFA-21",
     -- },
     {
-        ["text"] = "FIFA 22",
+        ["text"] = "FIFA 22(-F)",
         ["tag"] = "FIFA-22",
     },
-    -- {
-    --     ["text"] = "",
-    --     ["tag"] = "",
-    -- },
+    {
+        ["text"] = "Atomic Heart(-A)",
+        ["tag"] = "Atomic-Heart",
+    },
     -- {
     --     ["text"] = "",
     --     ["tag"] = "",

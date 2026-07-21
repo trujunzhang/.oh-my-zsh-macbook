@@ -232,8 +232,9 @@ function Play_Assassins_Creed_III_Remastered()
 end
 
 function Play_Assassins_Creed_4_Black_Flag()
-    -- mt_2477_Assassins_Creed_IV_Black_Flag
-    -- mt_2477_Assassins_Creed_IV_Black_Flag
+    -- export ROSETTA_ADVERTISE_AVX=1
+    -- p_mt_2477_Assassins_Creed_IV_Black_Flag
+    -- export ROSETTA_ADVERTISE_AVX=1
 
     local app_name = "Assassins Creed IV Black Flag"
 
@@ -649,4 +650,14 @@ function Play_FIFA_22()
     end)
 
     ActiveWindow(70)
+end
+
+function Play_Atomic_Heart()
+    local app_name = "Atomic Heart"
+
+    BeforePlayGame(app_name, app_name, function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
 end

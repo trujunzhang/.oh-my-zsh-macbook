@@ -481,8 +481,11 @@ function link_mac_user {
     # orbstack
     directoryLink "data(orbstack)" "$HOME_MAC_CACHE_PATH/orbstack/data" "$HOME/Library/Group Containers/HUAQ24HBR6.dev.orbstack/data"
 
+    # genymotion
+    directoryLink "data(genymotion)" "$HOME_MAC_CACHE_PATH/.Genymobile" "$HOME/.Genymobile"
+
     # android
-    directoryLink "android(avd-fold)" "/Users/djzhang/.android" "$HOME/.android"
+    # directoryLink "android(avd-fold)" "/Users/djzhang/.android" "$HOME/.android"
     directoryLink "android(avd)" "$HOME_MAC_CACHE_PATH/.android" "$HOME/.android"
 
     # directoryLink "android(gradle)"    "/Users/djzhang/.gradle"                                  "$HOME/.gradle"
