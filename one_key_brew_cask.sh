@@ -76,6 +76,7 @@ brew_apps=(
     # "Firefox Nightly" "firefox-nightly" 'copy' 'backup'
     "Brave Browser" "brave-browser" 'ssd' 'backup'
     "Brave Browser Beta" "brave-browser-bata" 'ssd' 'backup'
+    "Brave Browser Nightly" "brave-browser-nightly" 'ssd' 'backup'
     # "Brave Browser Nightly" "brave-browser-nightly" 'copy' 'backup'
 
     # =========================================
@@ -171,7 +172,8 @@ function backup_apps_from_Applications {
         rm "${app_path_in_backup_file}"
     fi
 
-    cd "/Applications"
+    # cd "/Applications"
+    cd "$CURRENT_APPLICATION_PATH"
     zip -y -r -q "${app_path_in_backup_file}" "${appName}"
 }
 
@@ -215,7 +217,7 @@ function link_apps {
     info "Link app: ${appName}"
     info "The linked app path: ${app_path_in_backup_file}"
 
-    directoryLink "app(${name})" "${app_path_in_backup_file}" "/Applications/${appName}" "delete"
+    directoryLink "app(${name})" "${app_path_in_backup_file}" "$CURRENT_APPLICATION_PATH/${appName}" "delete"
 }
 
 function install_brew_app {
@@ -226,14 +228,14 @@ function install_brew_app {
     needBackup=$4
 
     if [ "$Params" = "link" ]; then
-        if [ ! -d "/Applications/${appName}" ]; then
+        if [ ! -d "$CURRENT_APPLICATION_PATH/${appName}" ]; then
             if [ "$shouldCopyInApplications" = "ssd" ]; then
                 link_apps "${name}"
             fi
         fi
     elif [ "$Params" = "backup" ]; then
         if [ "$needBackup" = "backup" ]; then
-            if [ -d "/Applications/${appName}" ]; then
+            if [ -d "$CURRENT_APPLICATION_PATH/${appName}" ]; then
                 if [ "$shouldCopyInApplications" = "copy" ]; then
                     backup_apps_from_Applications "${name}"
                 fi
@@ -244,7 +246,7 @@ function install_brew_app {
             fi
         fi
     elif [ "$Params" = "restore" ]; then
-        if [ ! -d "/Applications/${appName}" ]; then
+        if [ ! -d "$CURRENT_APPLICATION_PATH/${appName}" ]; then
             if [ "$shouldCopyInApplications" = "copy" ]; then
                 restore_apps "${name}"
             fi
@@ -273,10 +275,10 @@ function install_brew_app {
 function install_apps {
     apps=("$@")
     for ((i = 0; i < ${#apps[@]}; i = i + 4)); do
-        name="${apps[$i+0]}"
-        app="${apps[$i+1]}"
-        shouldCopyInApplications="${apps[$i+2]}"
-        needBackup="${apps[$i+3]}"
+        name="${apps[$i + 0]}"
+        app="${apps[$i + 1]}"
+        shouldCopyInApplications="${apps[$i + 2]}"
+        needBackup="${apps[$i + 3]}"
 
         info "========= "
         info "element $i is ${name}"

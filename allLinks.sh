@@ -549,6 +549,8 @@ mkdir -p "$HOME/.local/share"
 mkdir -p "$HOME/.local/bin"
 mkdir -p "$HOME/.config"
 
+mkdir -p "/Volumes/MacOS/Users/djzhang/Desktop/TAGGame"
+
 link_homebrew
 link_applescript
 link_config_fold
