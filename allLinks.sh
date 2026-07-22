@@ -164,9 +164,9 @@ function link_config_fold {
 
     # clash
     mkdir -p "$HOME/.config/clash"
-    fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/djzhang/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml" "delete"
+    # fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/djzhang/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml" "delete"
     # fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/singbox/singbox.yaml" "$HOME/.config/clash/singbox.yaml" "delete"
-    fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/singbox/singbox-domain.yaml" "$HOME/.config/clash/singbox.yaml" "delete"
+    # fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/singbox/singbox-domain.yaml" "$HOME/.config/clash/singbox.yaml" "delete"
 
     # nvim-snippet
     # directoryLink "nvim(snippets)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets" "$HOME/.config/nvim-snippets"
@@ -175,9 +175,9 @@ function link_config_fold {
     # lvim
     # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-abzcoding"       "$HOME/.config/lvim"             "delete"
     # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-adibhanna"       "$HOME/.config/lvim"             "delete"
-    directoryLink "config(lvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-ChristianChiarulli" "$HOME/.config/lvim" "delete"
+    # directoryLink "config(lvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-ChristianChiarulli" "$HOME/.config/lvim" "delete"
 
-    directoryLink "config(lvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-branch" "$HOME/.local/share/lunarvim/lvim"
+    # directoryLink "config(lvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-branch" "$HOME/.local/share/lunarvim/lvim"
     # directoryLink  "config(lvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/lvim-master"       "$HOME/.local/share/lunarvim/lvim"
 
     # directoryLink  "config(nvim)"     "$TRUJUNZHANG_DOTFILES_HOME/config/nvim"       "$HOME/.config/nvim/lua/custom"         "delete"
@@ -186,14 +186,14 @@ function link_config_fold {
     directoryLink "config(neovim-linkarzu)" "$TRUJUNZHANG_DOTFILES_HOME/config/neovim-linkarzu" "$HOME/.config/neovim-linkarzu" "delete"
     directoryLink "nvim(snippets for 'neovim-linkarzu')" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-snippets/debug-snippets" "$HOME/.config/neovim-linkarzu/snippets"
 
-    directoryLink "config(nvim_lazy)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-lazy" "$HOME/.config/nvim" "delete"
-    directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-Starter" "$HOME/.config/nvchad-Starter" "delete"
-    directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-Starter" "$HOME/.config/nvchad-Backup" "delete"
-    directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-wSedlacek" "$HOME/.config/nvchad-wSedlacek" "delete"
-    directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-mgastonportillo" "$HOME/.config/nvchad-mgastonportillo" "delete"
-    directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-Alexis12119" "$HOME/.config/nvchad-Alexis12119" "delete"
-    directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-2kabhishek" "$HOME/.config/nvim-2kabhishek" "delete"
-    directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-craftzdog" "$HOME/.config/nvim-craftzdog" "delete"
+    # directoryLink "config(nvim_lazy)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-lazy" "$HOME/.config/nvim" "delete"
+    # directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-Starter" "$HOME/.config/nvchad-Starter" "delete"
+    # directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-Starter" "$HOME/.config/nvchad-Backup" "delete"
+    # directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-wSedlacek" "$HOME/.config/nvchad-wSedlacek" "delete"
+    # directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-mgastonportillo" "$HOME/.config/nvchad-mgastonportillo" "delete"
+    # directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvchad-Alexis12119" "$HOME/.config/nvchad-Alexis12119" "delete"
+    # directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-2kabhishek" "$HOME/.config/nvim-2kabhishek" "delete"
+    # directoryLink "config(nvim)" "$TRUJUNZHANG_DOTFILES_HOME/config/nvim-craftzdog" "$HOME/.config/nvim-craftzdog" "delete"
 
     # fish
     directoryLink "config(fish)" "$TRUJUNZHANG_DOTFILES_HOME/config/fish" "$HOME/.config/fish"

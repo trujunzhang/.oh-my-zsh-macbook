@@ -136,6 +136,11 @@ CURRENT_THIRD_APPS_PATH=${hash_vals[$?]}
 PATH_THIRD_APPLICATIONS="${CURRENT_THIRD_APPS_PATH}/APPS_${MY_MAC_TYPE}/Applications"
 PATH_THIRD_APPS_BACKUP="${CURRENT_THIRD_APPS_PATH}/APPS_${MY_MAC_TYPE}/BACKUP"
 
+USER_APPLICATION_PATH="$HOME/Applications"
+SYSTEM_APPLICATION_PATH="/Applications"
+
+CURRENT_APPLICATION_PATH="$USER_APPLICATION_PATH"
+
 if [ "$Params" = "backup" ]; then
     mkdir -p "${PATH_THIRD_APPLICATIONS}"
     mkdir -p "${PATH_THIRD_APPS_BACKUP}"
@@ -148,6 +153,7 @@ show_info() {
     info "current app path fold: ${CURRENT_THIRD_APPS_PATH}"
     info "current app <APPLICATION> path: ${PATH_THIRD_APPLICATIONS}"
     info "current app <BACKUP> path: ${PATH_THIRD_APPS_BACKUP}"
+    info "current CURRENT <APPLICATION> path: ${CURRENT_APPLICATION_PATH}"
     info "==========================================================="
 }
 
@@ -193,10 +199,11 @@ function restore_apps {
 
     app_path_in_backup_file="${PATH_THIRD_APPS_BACKUP}/${name}.zip"
     info "Restore app: ${appName}"
-    info "Last backup app path: ${app_path_in_backup_file}"
+    info "the backup app path: ${app_path_in_backup_file}"
 
     if [ -f "${app_path_in_backup_file}" ]; then
-        unzip "${app_path_in_backup_file}" -d "/Applications"
+        # unzip "${app_path_in_backup_file}" -d "/Applications"
+        unzip "${app_path_in_backup_file}" -d "$CURRENT_APPLICATION_PATH"
     fi
 }
 
