@@ -15,7 +15,7 @@
         {
           "key" : "n",
           "type" : "application",
-          "value" : "/Applications/Notion.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Notion.app"
         },
         {
           "key" : "x",
@@ -25,7 +25,7 @@
         {
           "key" : "b",
           "type" : "application",
-          "value" : "/Applications/qbittorrent.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/qbittorrent.app"
         },
         {
           "key" : "w",
@@ -35,7 +35,7 @@
         {
           "key" : "f",
           "type" : "application",
-          "value" : "/Applications/Folx.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Folx.app"
         },
         {
           "key" : "a",
@@ -50,7 +50,7 @@
         {
           "key" : "p",
           "type" : "application",
-          "value" : "/Applications/PlayCover.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/PlayCover.app"
         },
         {
           "key" : "g",
@@ -70,7 +70,7 @@
         {
           "key" : "r",
           "type" : "application",
-          "value" : "/Applications/Raycast.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Raycast.app"
         }
       ],
       "key" : "a",

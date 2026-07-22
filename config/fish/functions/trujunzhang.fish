@@ -783,6 +783,10 @@ end
 
 alias denv_info_mac_type='echo "your mac type, $MY_MAC_TYPE!"'
 
+alias dapp_zellij_attack_djzhang_mac="zellij attach -c djzhang-mac"
+alias dapp_zellij_kill_all_sessions="zellij ka"
+alias dapp_zellij_setup_check="zellij setup --check"
+
 alias dmac_install_homebrew_official='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 
 alias dmac_first_unzip='unzip -o "/Volumes/MacGame/MacCache/apps/Applications/*.zip" -d /Applications'

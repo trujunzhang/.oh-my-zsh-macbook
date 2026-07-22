@@ -6,6 +6,8 @@
 cache/
 log/
 
+zjstatus.wasm
+
 emacs.d/.cache
 emacs.d/.cask
 emacs.d/elpa
