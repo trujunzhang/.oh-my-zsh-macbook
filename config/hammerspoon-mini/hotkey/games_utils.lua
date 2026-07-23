@@ -65,30 +65,35 @@ function DoOpenAndVerifyGame(appName, game_foler_name)
 
         if DoesDirectoryExist(gamePath) then
             hs.execute("mkdir -p " .. Moving_Games_Folder)
-            hs.execute("mv '" .. gamePath .. "' '" .. tmpPath .. "'")
-            hs.notify.new({ title = GCurrentGameName, informativeText = "Moving to tmp folder sucessfully" }):send()
+            MoveMacOSFolder(GCurrentGameName, "Moving to tmp folder sucessfully", gamePath, tmpPath)
+            -- hs.execute('mv "' .. gamePath .. "' '" .. tmpPath .. '"')
+            -- hs.notify.new({ title = GCurrentGameName, informativeText = "Moving to tmp folder sucessfully" }):send()
 
             hs.timer.doAfter(0.5, function()
                 hs.application.launchOrFocus(appPath)
             end)
 
             hs.timer.doAfter(80, function()
-                -- hs.timer.doAfter(5, function()
                 hs.execute("killall Configure")
                 hs.notify.new({ title = "Killing the wine's configure", informativeText = "run it sucessfully" }):send()
 
                 if DoesDirectoryExist(tmpPath) then
                     if DoesDirectoryExist(gamesFolder) then
-                        hs.execute("mv '" .. tmpPath .. "' '" .. gamePath .. "'")
-                        hs.notify
-                            .new({ title = GCurrentGameName, informativeText = "Moving from tmp folder sucessfully" })
-                            :send()
+                        MoveMacOSFolder(GCurrentGameName, "Moving from tmp folder sucessfully", tmpPath, gamePath)
+                        -- hs.execute('mv "' .. tmpPath .. "' '" .. gamePath .. '"')
+                        -- hs.notify
+                        --     .new({ title = GCurrentGameName, informativeText = "Moving from tmp folder sucessfully" })
+                        --     :send()
                         WriteGameTagFile(appName)
                     else
                         hs.notify.new({ title = "Moving from tmp folder", informativeText = "run it failed" }):send()
                     end
                 end
             end)
+        else
+            hs.notify
+                .new({ title = "Game folder: '" .. game_foler_name .. "' not found", informativeText = "run it failed" })
+                :send()
         end
     else
         hs.notify.new({ title = GCurrentGameName .. " not found", informativeText = "run it failed" }):send()

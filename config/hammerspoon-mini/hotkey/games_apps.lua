@@ -209,8 +209,9 @@ end
 
 function Play_Assassin_Creed_Brotherhood()
     local app_name = "Assassin Creed Brotherhood"
+    local game_name = "Assassins Creed - Brotherhood"
 
-    BeforePlayGame(app_name, app_name, function()
+    BeforePlayGame(app_name, game_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -263,8 +264,9 @@ function Play_Assassins_Creed_Unity()
     -- ProgramData/Orbit/720/RLD!
 
     local app_name = "Assassins Creed Unity"
+    local game_name = "Assassin's Creed Unity Complete Edition"
 
-    BeforePlayGame(app_name, app_name, function()
+    BeforePlayGame(app_name, game_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 

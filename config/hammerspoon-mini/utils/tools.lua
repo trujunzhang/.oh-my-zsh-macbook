@@ -80,6 +80,15 @@ function WriteGameTagFile(app_name)
     file:close()
 end
 
+function MoveMacOSFolder(title, informativeText, source_folder, dest_folder)
+    local success, err = os.rename(source_folder, dest_folder)
+    if success then
+        hs.notify.new({ title = title, informativeText = informativeText }):send()
+    else
+        hs.notify.new({ title = title .. " Error", informativeText = err }):send()
+    end
+end
+
 function DoesGameTagFileExist(app_name, game_foler_name, runApp, existFunc, notExistFunc)
     local filePath = TAGGameFolder .. FixGameAppName(app_name)
     if hs.fs.attributes(filePath) then

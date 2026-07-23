@@ -278,6 +278,11 @@ if.window-title-regex-substring='wine'
 run = 'move-node-to-workspace H'
 
 [[on-window-detected]]
+# wine apps
+if.app-name-regex-substring = 'wine'
+run = 'move-node-to-workspace H'
+
+[[on-window-detected]]
 # NeedForSpeedPayback
 if.app-name-regex-substring = 'NeedForSpeedPayback'
 run = 'move-node-to-workspace H'
@@ -314,10 +319,6 @@ run = 'move-node-to-workspace H'
 
 [[on-window-detected]]
 if.window-title-regex-substring='NeedForSpeedPayback'
-run = 'move-node-to-workspace H'
-
-[[on-window-detected]]
-if.window-title-regex-substring='wine'
 run = 'move-node-to-workspace H'
 
 [[on-window-detected]]

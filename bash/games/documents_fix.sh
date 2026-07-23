@@ -67,6 +67,7 @@ function link_games_save_location_path() {
     directoryLink "game(The Witcher 3)" "$CURRENT_USER_DOCUMENTS_PATH/The Witcher 3" "$USER_DOCUMENTS_DEFAULT_PATH/The Witcher 3"
 
     # Sikarugir
+    mkdir -p "$CURRENT_USER_HOME_PATH/Library/Application Support/Sikarugir"
     directoryLink "app(Sikarugir)" "$CURRENT_USER_HOME_PATH/Library/Application Support/Sikarugir" "$MAC_USER_HOME_PATH/Library/Application Support/Sikarugir"
 
     # Hogwarts Legacy
