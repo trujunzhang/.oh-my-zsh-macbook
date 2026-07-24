@@ -310,6 +310,11 @@
           "key" : "h",
           "type" : "application",
           "value" : "/Volumes/MacGame/AppGames/Hitman WOA.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/FreshWomen/FreshWomen.app"
         }
       ],
       "key" : "g",

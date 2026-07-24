@@ -57,7 +57,6 @@ function DoOpenAndVerifyGame(appName, game_foler_name)
         end
 
         local gamePath = gamesFolder .. "/" .. game_foler_name
-
         local tmpPath = Moving_Games_Folder .. "/" .. game_foler_name
 
         -- hs.printf("%s = %s", "gamePath:", gamePath)
@@ -65,25 +64,20 @@ function DoOpenAndVerifyGame(appName, game_foler_name)
 
         if DoesDirectoryExist(gamePath) then
             hs.execute("mkdir -p " .. Moving_Games_Folder)
-            MoveMacOSFolder(GCurrentGameName, "Moving to tmp folder sucessfully", gamePath, tmpPath)
-            -- hs.execute('mv "' .. gamePath .. "' '" .. tmpPath .. '"')
-            -- hs.notify.new({ title = GCurrentGameName, informativeText = "Moving to tmp folder sucessfully" }):send()
+            MoveMacOSFolder(GCurrentGameName, "Moved to tmp folder sucessfully", gamePath, tmpPath)
 
             hs.timer.doAfter(0.5, function()
-                hs.application.launchOrFocus(appPath)
+                OpenWineInlineConfigApp(appPath)
             end)
 
             hs.timer.doAfter(80, function()
                 hs.execute("killall Configure")
-                hs.notify.new({ title = "Killing the wine's configure", informativeText = "run it sucessfully" }):send()
+                hs.execute("killall launcher")
+                hs.notify.new({ title = "Killed the wine's configure", informativeText = "run it sucessfully" }):send()
 
                 if DoesDirectoryExist(tmpPath) then
                     if DoesDirectoryExist(gamesFolder) then
-                        MoveMacOSFolder(GCurrentGameName, "Moving from tmp folder sucessfully", tmpPath, gamePath)
-                        -- hs.execute('mv "' .. tmpPath .. "' '" .. gamePath .. '"')
-                        -- hs.notify
-                        --     .new({ title = GCurrentGameName, informativeText = "Moving from tmp folder sucessfully" })
-                        --     :send()
+                        MoveMacOSFolder(GCurrentGameName, "Moved from tmp folder sucessfully", tmpPath, gamePath)
                         WriteGameTagFile(appName)
                     else
                         hs.notify.new({ title = "Moving from tmp folder", informativeText = "run it failed" }):send()

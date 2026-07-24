@@ -26,6 +26,9 @@ DRIVER_C_FOLDER_IN_TOXICGAME_APP = "Contents/Resources/ToxicGame/drive_c"
 APP_GAME_FOLDER_IN_DRIVER_C = DRIVER_C_FOLDER_IN_WINE_APP .. "/Games"
 TAGGameFolder = "/Volumes/MacOS/Users/djzhang/Desktop/TAGGame/"
 
+InlineConfigAppInNornal = "Contents/Configure.app"
+InlineConfigAppInToxicGame = "Contents/Resources/Toxic Engine.app"
+
 GameHotkeyMods = { "Cmd", "Alt", "shift", "ctrl" }
 
 -- require "reload.reload"

@@ -15,6 +15,7 @@ hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", RunTerminalEscape)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "A", RunToggleAerospace)
 
+-- homerow
 hs.hotkey.bind({ "Cmd", "Alt" }, "H", function()
     hs.eventtap.keyStroke({ "Cmd", "Alt" }, "F")
     -- hs.notify.new({ title = "Show Homerow keys", informativeText = "show it sucessfully" }):send()

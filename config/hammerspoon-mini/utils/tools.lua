@@ -80,6 +80,17 @@ function WriteGameTagFile(app_name)
     file:close()
 end
 
+function OpenWineInlineConfigApp(gameAppPath)
+    local normalConfigApp = gameAppPath .. "/" .. InlineConfigAppInNornal
+    local toxicConfigApp = gameAppPath .. "/" .. InlineConfigAppInToxicGame
+
+    if DoesDirectoryExist(normalConfigApp) then
+        hs.application.launchOrFocus(normalConfigApp)
+    elseif DoesDirectoryExist(toxicConfigApp) then
+        hs.application.launchOrFocus(toxicConfigApp)
+    end
+end
+
 function MoveMacOSFolder(title, informativeText, source_folder, dest_folder)
     local success, err = os.rename(source_folder, dest_folder)
     if success then
@@ -143,8 +154,12 @@ function CheckAppExistedByPrefix(appName)
     check_app_existed("10", appName)
     check_app_existed("whiskey", appName)
     check_app_existed("103", appName)
-    -- check_app_existed("108103", appName)
-    -- check_app_existed("1010104", appName)
+    -- check_app_existed("", appName)
+    -- check_app_existed("", appName)
+    -- check_app_existed("", appName)
+    -- check_app_existed("", appName)
+    -- check_app_existed("", appName)
+    check_app_existed("toxic262", appName)
     check_app_existed("1011x106", appName)
     check_app_existed("2610110", appName)
     check_app_existed("2477", appName)
