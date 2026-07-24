@@ -424,8 +424,9 @@ function Play_Warcraft_3_The_Frozen_Throne()
     -- "C:\Games\Warcraft 3\Warcraft III.exe" -nativefullscr -opengl
 
     local app_name = "Warcraft 3 The Frozen Throne"
+    local game_name = "Warcraft 3"
 
-    BeforePlayGame(app_name, app_name, function()
+    BeforePlayGame(app_name, game_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 end

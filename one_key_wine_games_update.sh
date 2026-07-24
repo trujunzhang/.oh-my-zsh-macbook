@@ -45,6 +45,19 @@ check_old_app_name() {
     # check_app_existed "whiskey" "$game_name"
 }
 
+OpenWineInlineConfigApp() {
+    gameAppPath=$1
+
+    normalConfigApp=${gameAppPath}/${InlineConfigAppInNornal}"
+    toxicConfigApp=${gameAppPath}/${InlineConfigAppInToxicGame}"
+
+    if [ -d "$normalConfigApp" ]; then
+        open "$normalConfigApp"
+    elif [ -d "$toxicConfigApp" ]; then
+        open "$toxicConfigApp"
+    fi
+}
+
 do_when_new_file_exist() {
     install_folder_name=$1
     old_version_file_name=$2
@@ -104,7 +117,8 @@ do_when_old_file_exist() {
 
             cp -R "$TEMPLATE_WINE_APP_PATH" "$new_version_app_path"
 
-            open "$new_version_app_path"
+            # open "$new_version_app_path"
+            OpenWineInlineConfigApp "$new_version_app_path"
         fi
     fi
 
@@ -116,8 +130,8 @@ update_wine_games() {
     array=("$@")
 
     for ((i = 0; i < ${#array[@]}; i = i + 2)); do
-        game_name="${array[$i+0]}"
-        install_folder_name="${array[$i+1]}"
+        game_name="${array[$i + 0]}"
+        install_folder_name="${array[$i + 1]}"
 
         # old version file name and path
         my_global_file_name="$game_name"
@@ -129,7 +143,7 @@ update_wine_games() {
         new_version_file_name="${old_version_file_name//${OLD_VERSION}/${NEW_VERSION}}"
         new_version_app_path="$KegworksGames_Folder/${new_version_file_name}"
 
-        info "                                          "
+        info "  ======                                        "
         info "** old_version_file_name:                                "
         info "$old_version_file_name"
         info "** old_version_app_path:                                "

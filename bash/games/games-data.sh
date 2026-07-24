@@ -12,6 +12,9 @@ DRIVER_C_FOLDER_IN_CROSSOVER_BOTTLE="drive_c"
 
 GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER="/Volumes/MacUser/djzhang/Documents"
 
+InlineConfigAppInNornal="Contents/Configure.app"
+InlineConfigAppInToxicGame="Contents/Resources/Toxic Engine.app"
+
 test_games_in_kegworks=(
     # "Need for Speed Payback" "Need for Speed Payback"
     "Hogwarts Legacy" "Hogwarts Legacy"
