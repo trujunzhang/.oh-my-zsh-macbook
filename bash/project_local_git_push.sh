@@ -113,6 +113,14 @@ restore)
 
         if [ -d "$PROJECT_GITHUB_DOT_GIT_PATH" ]; then
             error " already found the online '.git' folder in the '.github' folder"
+
+            # empty 'remote origin url'
+            if [ "$GIT_REMOTE_ORIGIN_URL" = "" ]; then
+                error " Current is the local '.git'"
+                echo
+
+                success " No need to restore the '.git' folder"
+            fi
         else
             restore_online_git_to_dot_github_folder
         fi

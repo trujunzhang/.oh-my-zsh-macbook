@@ -99,7 +99,7 @@
     "type": "application",
     "name": "ZellijTools-arm-v1",
     "application": "ZellijTools-arm-v1.app",
-    "enable": "0"
+    "enable": "1"
   },
   {
     "type": "application",
