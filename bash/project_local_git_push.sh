@@ -64,6 +64,8 @@ push_local_git_to_online() {
 
         backup_current_local_git
         move_online_git_to_current_project
+
+        success "[Done] The online '.git' has been moved to 'Project' folder"
     else
         error "It is the online '.git'"
         echo
@@ -71,7 +73,6 @@ push_local_git_to_online() {
 }
 
 restore_online_git_to_dot_github_folder() {
-
     # empty 'remote origin url'
     if [ "$GIT_REMOTE_ORIGIN_URL" = "" ]; then
         error "It is the local '.git'"
@@ -83,6 +84,8 @@ restore_online_git_to_dot_github_folder() {
         info " Starting to move the online '.git' to '.github' folder"
         echo
         mv "$PROJECT_DOT_GIT_PATH" "$PROJECT_GITHUB_DOT_GIT_PATH"
+
+        success "[Done] The online '.git' has been moved to '.github' folder"
     fi
 }
 
