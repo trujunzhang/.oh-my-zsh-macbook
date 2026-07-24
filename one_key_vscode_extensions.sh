@@ -56,7 +56,7 @@ vsExtensionsArray=(
     # "github.copilot"
     # "codeium.codeium"
     # https://www.codium.ai
-    "Codium.codium"
+    "codeium.codeium"
 
     # =================================
     # Nix

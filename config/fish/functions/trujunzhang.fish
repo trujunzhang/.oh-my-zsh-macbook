@@ -530,9 +530,13 @@ alias drun_onekeymac="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && .
 alias drun_onekeyenv="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./envLinks.sh"
 alias drun_git_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && ./generator_git_offline.sh"
 alias drun_grpc__branch="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
-alias drun_local_gitpull="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash && ./local_git_update.sh"
+alias drun_all_local_git_update="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash && ./local_git_update.sh"
 alias drun_pods_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
 alias drun_http='cd $ORGANIZATIONS_HOME/__CACHES/github && python -m http.server --cgi 8080'
+
+alias drun_local_git_push="bash $ORGANIZATIONS_HOME/bash/project_local_git_push.sh push"
+alias drun_local_git_restore="bash $ORGANIZATIONS_HOME/bash/project_local_git_push.sh restore"
+
 alias dkill_paralles_desktop="sh $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/umac/kill_macos_apps.sh 'prl_client_app'"
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"

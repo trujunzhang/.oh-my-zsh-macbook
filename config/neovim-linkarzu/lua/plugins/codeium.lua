@@ -13,6 +13,10 @@ local spec = {
         end,
         dependencies = {
             {
+                --- https://windsurf.com/vim-show-auth-token?redirect_uri=vim-show-auth-token
+                --- https://windsurf.com/vim-show-auth-token?redirect_uri=vim-show-auth-token
+                --- https://windsurf.com/vim-show-auth-token?redirect_uri=vim-show-auth-token
+                --- https://windsurf.com/vim-show-auth-token?redirect_uri=vim-show-auth-token
                 "Exafunction/codeium.vim",
                 -- enabled = false,
                 enabled = true,
