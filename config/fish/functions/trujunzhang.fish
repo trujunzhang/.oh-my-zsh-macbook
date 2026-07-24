@@ -534,8 +534,8 @@ alias drun_all_local_git_update="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-m
 alias drun_pods_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
 alias drun_http='cd $ORGANIZATIONS_HOME/__CACHES/github && python -m http.server --cgi 8080'
 
-alias drun_local_git_push="bash $ORGANIZATIONS_HOME/bash/project_local_git_push.sh push"
-alias drun_local_git_restore="bash $ORGANIZATIONS_HOME/bash/project_local_git_push.sh restore"
+alias drun_project_git_push="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh push"
+alias drun_project_git_restore="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh restore"
 
 alias dkill_paralles_desktop="sh $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/umac/kill_macos_apps.sh 'prl_client_app'"
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
@@ -703,6 +703,7 @@ alias https_proxy_v2ray="export https_proxy=http://127.0.0.1:1087"
 alias http_proxy_v2ray="export http_proxy=http://127.0.0.1:1087"
 
 # git clone
+alias dclone_oh_my_zsh_macbook="git clone git@github.com:trujunzhang/.oh-my-zsh-macbook.git"
 alias dclone_llms_from_scratch="git clone https://github.com/rasbt/LLMs-from-scratch"
 alias dclone_openclaw="git clone https://github.com/openclaw/openclaw.git --depth 1"
 alias dclone_expensify="git clone https://github.com/expensify/App.git --depth 1 expensify && cd expensify"
@@ -790,6 +791,8 @@ alias denv_info_mac_type='echo "your mac type, $MY_MAC_TYPE!"'
 alias dapp_zellij_attack_djzhang_mac="zellij attach -c djzhang-mac"
 alias dapp_zellij_kill_all_sessions="zellij ka"
 alias dapp_zellij_setup_check="zellij setup --check"
+
+alias dapp_fish_reload="exec fish"
 
 alias dmac_install_homebrew_official='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 
