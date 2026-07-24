@@ -534,8 +534,8 @@ alias drun_all_local_git_update="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-m
 alias drun_pods_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
 alias drun_http='cd $ORGANIZATIONS_HOME/__CACHES/github && python -m http.server --cgi 8080'
 
-alias drun_project_git_push="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh push"
-alias drun_project_git_restore="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh restore"
+alias dproject_git_push="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh push"
+alias dproject_git_restore="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh restore"
 
 alias dkill_paralles_desktop="sh $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/umac/kill_macos_apps.sh 'prl_client_app'"
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
