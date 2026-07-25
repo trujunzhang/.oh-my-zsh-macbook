@@ -65,41 +65,42 @@ do_when_new_file_exist() {
 
     error "already exist new version game: $new_version_file_name"
 
-    if [ "$Params" = "update" ]; then
-        if [ -d "$old_version_app_path" ]; then
+    # if [ "$Params" = "update" ]; then
+    if [ -d "$old_version_app_path" ]; then
 
-            old_game_path="${old_version_app_path}/$DRIVER_C_FOLDER_IN_WINE_APP/Games/$install_folder_name"
-            if [ -d "$old_version_app_path/$DRIVER_C_FOLDER_IN_TOXICGAME_APP" ]; then
-                old_game_path="${old_version_app_path}/$DRIVER_C_FOLDER_IN_TOXICGAME_APP/Games/$install_folder_name"
-            fi
-
-            new_game_path="${new_version_app_path}/$DRIVER_C_FOLDER_IN_WINE_APP/Games/$install_folder_name"
-            if [ -d "$new_version_app_path/$DRIVER_C_FOLDER_IN_TOXICGAME_APP" ]; then
-                new_game_path="${new_version_app_path}/$DRIVER_C_FOLDER_IN_TOXICGAME_APP/Games/$install_folder_name"
-            fi
-
-            if [ -d "$new_game_path" ]; then
-                error "     new_game_path: $new_game_path already exist!"
-            elif [ -d "$old_game_path" ]; then
-                info "  [info]   Moving the installed game to new version app: $new_version_file_name"
-                info "  [info]   old_game_path: $old_game_path"
-                info "  [info]   new_game_path: $new_game_path"
-
-                info "         Start moving the installed game to new version app: $new_version_file_name"
-                mv "$old_game_path" "$new_game_path"
-            else
-                error "     old_game_path: $old_game_path not exist!"
-            fi
-
+        old_game_path="${old_version_app_path}/$DRIVER_C_FOLDER_IN_WINE_APP/Games/$install_folder_name"
+        if [ -d "$old_version_app_path/$DRIVER_C_FOLDER_IN_TOXICGAME_APP" ]; then
+            old_game_path="${old_version_app_path}/$DRIVER_C_FOLDER_IN_TOXICGAME_APP/Games/$install_folder_name"
         fi
+
+        new_game_path="${new_version_app_path}/$DRIVER_C_FOLDER_IN_WINE_APP/Games/$install_folder_name"
+        if [ -d "$new_version_app_path/$DRIVER_C_FOLDER_IN_TOXICGAME_APP" ]; then
+            new_game_path="${new_version_app_path}/$DRIVER_C_FOLDER_IN_TOXICGAME_APP/Games/$install_folder_name"
+        fi
+
+        if [ -d "$new_game_path" ]; then
+            error "     new_game_path: $new_game_path already exist!"
+        elif [ -d "$old_game_path" ]; then
+            info "  [info]   Moving the installed game to new version app: $new_version_file_name"
+            info "  [info]   old_game_path: $old_game_path"
+            info "  [info]   new_game_path: $new_game_path"
+
+            info "         Start moving the installed game to new version app: $new_version_file_name"
+            mv "$old_game_path" "$new_game_path"
+        else
+            error "     old_game_path: $old_game_path not exist!"
+        fi
+
     fi
+    # fi
 }
 
 do_when_old_file_exist() {
-    old_version_file_name=$1
-    new_version_file_name=$2
-    old_version_app_path=$3
-    new_version_app_path=$4
+    install_folder_name=$1
+    old_version_file_name=$2
+    new_version_file_name=$3
+    old_version_app_path=$4
+    new_version_app_path=$5
 
     success "Updating game: from $old_version_file_name to $new_version_file_name"
 
@@ -114,9 +115,14 @@ do_when_old_file_exist() {
 
             # open "$new_version_app_path"
             OpenWineInlineConfigApp "$new_version_app_path"
-        fi
-    fi
 
+            sleep 80
+            do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
+        fi
+    else
+        echo
+        error "   [error]  new version app:'${new_version_file_name}' not exist!"
+    fi
 }
 
 update_wine_games() {
@@ -151,10 +157,8 @@ update_wine_games() {
 
         elif [ -d "$new_version_app_path" ]; then
             do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
-
         elif [ -d "$old_version_app_path" ]; then
-            do_when_old_file_exist "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
-
+            do_when_old_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
         fi
     done
 }

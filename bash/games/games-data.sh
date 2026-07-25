@@ -18,6 +18,9 @@ InlineConfigAppInToxicGame="Contents/Resources/Toxic Engine.app"
 test_games_in_kegworks=(
     # "Need for Speed Payback" "Need for Speed Payback"
     # "Hogwarts Legacy" "Hogwarts Legacy"
+
+    # Exception on the ToxicGame app version
+    "Resident Evil 7" "Resident Evil 7"
     "FIFA 22" "FIFA 22"
 )
 
