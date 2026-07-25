@@ -17,10 +17,12 @@ InlineConfigAppInToxicGame="Contents/Resources/Toxic Engine.app"
 
 test_games_in_kegworks=(
     # "Need for Speed Payback" "Need for Speed Payback"
-    "Hogwarts Legacy" "Hogwarts Legacy"
+    # "Hogwarts Legacy" "Hogwarts Legacy"
+    "FIFA 22" "FIFA 22"
 )
 
 games_list_in_kegworks=(
+    "FIFA 22" "FIFA 22"
     "Hogwarts Legacy" "Hogwarts Legacy"
     "Mafia Definitive Edition" "Mafia Definitive Edition"
     "God of War" "God-of-War"

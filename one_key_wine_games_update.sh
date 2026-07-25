@@ -10,10 +10,10 @@ source ./bash/games/games-data.sh
 # OLD_VERSION="1011106"
 OLD_VERSION="1011x106"
 # NEW_VERSION="108103"
-NEW_VERSION="2610110"
+NEW_VERSION="toxic262"
 
 # 108103_wine
-TEMPLATE_WINE_FILE_NAME="${NEW_VERSION}_wine.app"
+TEMPLATE_WINE_FILE_NAME="ToxicGame.app"
 TEMPLATE_WINE_APP_PATH="$APP_GAMES_PATH/${TEMPLATE_WINE_FILE_NAME}"
 
 DEFAULTVALUE="ready"
@@ -24,14 +24,10 @@ info "                         "
 info "=================================================================================="
 info "Bash version ${BASH_VERSION}...           "
 info "                                          "
-info "** OLD_VERSION:                                "
-info "$OLD_VERSION"
-info "** NEW_VERSION:                                "
-info "$NEW_VERSION"
-info "** TEMPLATE_FILE_NAME:                                "
-info "$TEMPLATE_WINE_FILE_NAME"
-info "** TEMPLATE_WINE_APP_PATH:                                "
-info "$TEMPLATE_WINE_APP_PATH"
+info "** OLD VERSION:              $OLD_VERSION                        "
+info "** NEW VERSION:              $NEW_VERSION                        "
+info "** TEMPLATE FILE NAME:       $TEMPLATE_WINE_FILE_NAME            "
+info "** TEMPLATE WINE APP PATH: $TEMPLATE_WINE_APP_PATH                  "
 info "=================================================================================="
 info "                                          "
 
@@ -48,12 +44,14 @@ check_old_app_name() {
 OpenWineInlineConfigApp() {
     gameAppPath=$1
 
-    normalConfigApp=${gameAppPath}/${InlineConfigAppInNornal}"
-    toxicConfigApp=${gameAppPath}/${InlineConfigAppInToxicGame}"
+    normalConfigApp="${gameAppPath}/${InlineConfigAppInNornal}"
+    toxicConfigApp="${gameAppPath}/${InlineConfigAppInToxicGame}"
 
     if [ -d "$normalConfigApp" ]; then
+        info "Open WineInline Config App: $normalConfigApp"
         open "$normalConfigApp"
     elif [ -d "$toxicConfigApp" ]; then
+        info "Open WineInline Config App: $toxicConfigApp"
         open "$toxicConfigApp"
     fi
 }
@@ -80,20 +78,17 @@ do_when_new_file_exist() {
                 new_game_path="${new_version_app_path}/$DRIVER_C_FOLDER_IN_TOXICGAME_APP/Games/$install_folder_name"
             fi
 
-            if [ -d "$old_game_path" ]; then
+            if [ -d "$new_game_path" ]; then
+                error "     new_game_path: $new_game_path already exist!"
+            elif [ -d "$old_game_path" ]; then
+                info "  [info]   Moving the installed game to new version app: $new_version_file_name"
+                info "  [info]   old_game_path: $old_game_path"
+                info "  [info]   new_game_path: $new_game_path"
 
-                info "     Moving the installed game to new version app: $new_version_file_name"
-                info "     old_game_path: $old_game_path"
-                info "     new_game_path: $new_game_path"
-
-                if [ -d "$new_game_path" ]; then
-                    error "     new_game_path: $new_game_path already exist!"
-                elif [ -d "$old_game_path" ]; then
-                    info "         Start moving the installed game to new version app: $new_version_file_name"
-                    mv "$old_game_path" "$new_game_path"
-                else
-                    error "     old_game_path: $old_game_path not exist!"
-                fi
+                info "         Start moving the installed game to new version app: $new_version_file_name"
+                mv "$old_game_path" "$new_game_path"
+            else
+                error "     old_game_path: $old_game_path not exist!"
             fi
 
         fi
@@ -106,14 +101,14 @@ do_when_old_file_exist() {
     old_version_app_path=$3
     new_version_app_path=$4
 
-    success "update game: from $old_version_file_name to $new_version_file_name"
+    success "Updating game: from $old_version_file_name to $new_version_file_name"
 
     if [ "$Params" = "$DEFAULTVALUE" ]; then
         if [ -d "$TEMPLATE_WINE_APP_PATH" ]; then
-            info "  template app path: $TEMPLATE_WINE_APP_PATH"
-            info "  new version app path: $new_version_app_path"
+            info "[info]  template app path: $TEMPLATE_WINE_APP_PATH"
+            info "[info]  new version app path: $new_version_app_path"
 
-            info "   Copying template app to new version app"
+            info "    Copying template app to new version app"
 
             cp -R "$TEMPLATE_WINE_APP_PATH" "$new_version_app_path"
 
@@ -125,7 +120,7 @@ do_when_old_file_exist() {
 }
 
 update_wine_games() {
-    info "update_wine_games:"
+    info "update wine games:"
 
     array=("$@")
 
@@ -144,14 +139,10 @@ update_wine_games() {
         new_version_app_path="$KegworksGames_Folder/${new_version_file_name}"
 
         info "  ======                                        "
-        info "** old_version_file_name:                                "
-        info "$old_version_file_name"
-        info "** old_version_app_path:                                "
-        info "$old_version_app_path"
-        info "** new_version_file_name:                                "
-        info "$new_version_file_name"
-        info "** new_version_app_path:                                "
-        info "$new_version_app_path"
+        info "** old version file name:         $old_version_file_name                       "
+        info "** old version app path:          $old_version_app_path                       "
+        info "** new version file name:         $new_version_file_name                       "
+        info "** new version app path:          $new_version_app_path                       "
         info "                                          "
 
         if [ ! -d "$old_version_app_path" ]; then
