@@ -67,7 +67,7 @@ push_local_git_to_online() {
 
         success "[Done] The online '.git' has been moved to 'Project' folder"
     else
-        error "It is the online '.git'"
+        error "[Push] Current is already the online '.git'"
         echo
     fi
 }
