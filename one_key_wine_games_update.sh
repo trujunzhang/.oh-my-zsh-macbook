@@ -27,7 +27,7 @@ info "                                          "
 info "** OLD VERSION:              $OLD_VERSION                        "
 info "** NEW VERSION:              $NEW_VERSION                        "
 info "** TEMPLATE FILE NAME:       $TEMPLATE_WINE_FILE_NAME            "
-info "** TEMPLATE WINE APP PATH: $TEMPLATE_WINE_APP_PATH                  "
+info "** TEMPLATE WINE APP PATH:   $TEMPLATE_WINE_APP_PATH                  "
 info "=================================================================================="
 info "                                          "
 
@@ -48,10 +48,10 @@ OpenWineInlineConfigApp() {
     toxicConfigApp="${gameAppPath}/${InlineConfigAppInToxicGame}"
 
     if [ -d "$normalConfigApp" ]; then
-        info "Open WineInline Config App: $normalConfigApp"
+        info "  Open WineInline Config App: $normalConfigApp"
         open "$normalConfigApp"
     elif [ -d "$toxicConfigApp" ]; then
-        info "Open WineInline Config App: $toxicConfigApp"
+        info "  Open ToxicInline Config App: $toxicConfigApp"
         open "$toxicConfigApp"
     fi
 }
@@ -63,9 +63,8 @@ do_when_new_file_exist() {
     old_version_app_path=$4
     new_version_app_path=$5
 
-    error "already exist new version game: $new_version_file_name"
+    success " [info] already exist new version game: $new_version_file_name"
 
-    # if [ "$Params" = "update" ]; then
     if [ -d "$old_version_app_path" ]; then
 
         old_game_path="${old_version_app_path}/$DRIVER_C_FOLDER_IN_WINE_APP/Games/$install_folder_name"
@@ -79,7 +78,7 @@ do_when_new_file_exist() {
         fi
 
         if [ -d "$new_game_path" ]; then
-            error "     new_game_path: $new_game_path already exist!"
+            error "     new game path: '$new_game_path' already exist!"
         elif [ -d "$old_game_path" ]; then
             info "  [info]   Moving the installed game to new version app: $new_version_file_name"
             info "  [info]   old_game_path: $old_game_path"
@@ -92,7 +91,6 @@ do_when_new_file_exist() {
         fi
 
     fi
-    # fi
 }
 
 do_when_old_file_exist() {
@@ -104,21 +102,18 @@ do_when_old_file_exist() {
 
     success "Updating game: from $old_version_file_name to $new_version_file_name"
 
-    if [ "$Params" = "$DEFAULTVALUE" ]; then
-        if [ -d "$TEMPLATE_WINE_APP_PATH" ]; then
-            info "[info]  template app path: $TEMPLATE_WINE_APP_PATH"
-            info "[info]  new version app path: $new_version_app_path"
+    if [ -d "$TEMPLATE_WINE_APP_PATH" ]; then
+        info "[info]  Template app path:    $TEMPLATE_WINE_APP_PATH"
+        info "[info]  New version app path: $new_version_app_path"
 
-            info "    Copying template app to new version app"
+        info "    Copying template app to new version app"
 
-            cp -R "$TEMPLATE_WINE_APP_PATH" "$new_version_app_path"
+        cp -R "$TEMPLATE_WINE_APP_PATH" "$new_version_app_path"
 
-            # open "$new_version_app_path"
-            OpenWineInlineConfigApp "$new_version_app_path"
+        OpenWineInlineConfigApp "$new_version_app_path"
 
-            sleep 80
-            do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
-        fi
+        sleep 80
+        do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
     else
         echo
         error "   [error]  new version app:'${new_version_file_name}' not exist!"
@@ -144,7 +139,8 @@ update_wine_games() {
         new_version_file_name="${old_version_file_name//${OLD_VERSION}/${NEW_VERSION}}"
         new_version_app_path="$KegworksGames_Folder/${new_version_file_name}"
 
-        info "  ======                                        "
+        echo
+        info "  =========                                        "
         info "** old version file name:         $old_version_file_name                       "
         info "** old version app path:          $old_version_app_path                       "
         info "** new version file name:         $new_version_file_name                       "
