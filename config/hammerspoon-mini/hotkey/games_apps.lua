@@ -251,8 +251,9 @@ function Play_Assassins_Creed_Rogue()
     -- mt_103_Assassins_Creed_Rogue
 
     local app_name = "Assassins Creed Rogue"
+    local game_name = "Assassin's Creed Rogue"
 
-    BeforePlayGame(app_name, app_name, function()
+    BeforePlayGame(app_name, game_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
@@ -607,9 +608,9 @@ function Play_Hogwarts_Legacy()
 
     -- app: "Hogwarts Legacy"
     -- title: "WARNING: Known issues with graphics driver"
-    Close_Active_Window("Known issues", "ok", 45)
+    Close_Active_Window("Known issues", "ok", 60)
 
-    ActiveWindow(60)
+    ActiveWindow(80)
 end
 
 function Play_God_of_War()

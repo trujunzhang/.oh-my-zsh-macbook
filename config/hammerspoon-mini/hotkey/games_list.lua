@@ -155,6 +155,10 @@ local menus = {
         ["tag"] = "Assassin-Creed-Brotherhood",
     },
     {
+        ["text"] = "Assassins Creed III Remastered(-M)",
+        ["tag"] = "Assassins-Creed-III-Remastered",
+    },
+    {
         ["text"] = "Assassins Creed IV Black Flag(-4)",
         ["tag"] = "Assassins-Creed-IV-Black-Flag",
     },
@@ -246,10 +250,6 @@ local menus = {
     --     ["text"] = "God of War(-O)",
     --     ["tag"] = "God-of-War",
     -- },
-    {
-        ["text"] = "Assassins Creed III Remastered(-M)",
-        ["tag"] = "Assassins-Creed-III-Remastered",
-    },
     {
         ["text"] = "Mafia Definitive Edition(-J)",
         ["tag"] = "Mafia-Definitive-Edition",
