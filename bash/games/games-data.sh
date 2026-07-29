@@ -19,10 +19,12 @@ test_games_in_kegworks=(
     # "Need for Speed Payback" "Need for Speed Payback"
     # "Hogwarts Legacy" "Hogwarts Legacy"
 
+    "Crysis 3 Remastered" "Crysis 3 Remastered"
+
     # "Assassin Creed Brotherhood" "Assassins Creed - Brotherhood"
-    "Assassins Creed III Remastered" "Assassins Creed III Remastered"
-    "Assassins Creed Rogue" "Assassin's Creed Rogue"
-    "Assassins Creed Unity" "Assassin's Creed Unity Complete Edition"
+    # "Assassins Creed III Remastered" "Assassins Creed III Remastered"
+    # "Assassins Creed Rogue" "Assassin's Creed Rogue"
+    # "Assassins Creed Unity" "Assassin's Creed Unity Complete Edition"
 
     # Exception on the ToxicGame app version
     # "Resident Evil 7" "Resident Evil 7"

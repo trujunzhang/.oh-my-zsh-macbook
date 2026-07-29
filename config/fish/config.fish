@@ -101,7 +101,8 @@ end
 if test $MY_MAC_TYPE = pro
     # if test "$(uname -m)" = x86_64
     fish_add_path "$HOME/.local/bin/helix-x86_64-macos"
-    fish_add_path "$HOME/.local/bin/zellij/0.44.3"
+    # https://github.com/zellij-org/zellij/releases/tag/v0.43.1
+    fish_add_path "$HOME/.local/bin/zellij/0.43.1"
     fish_add_path "$HOME/.local/bin/starship"
     fish_add_path "$HOME/.local/bin/lazygit/0.63.0"
     fish_add_path "$HOME/.local/bin/fzf/0.74.0"
@@ -188,19 +189,17 @@ end
 
 set -x THEFUCK_OVERRIDDEN_ALIASES 'gsed,git'
 
-if test $MY_MAC_TYPE = mini
-    if type zellij &>/dev/null
-        if set -q ZELLIJ
-        else
-            zellij attach -c djzhang-mac
-        end
-
-        # if status is-interactive
-        #     # ...
-        #     eval (zellij setup --generate-auto-start fish | string collect)
-        # end
-
+if type zellij &>/dev/null
+    if set -q ZELLIJ
+    else
+        zellij attach -c djzhang-mac
     end
+
+    # if status is-interactive
+    #     # ...
+    #     eval (zellij setup --generate-auto-start fish | string collect)
+    # end
+
 end
 
 # if status is-interactive
