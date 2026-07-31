@@ -68,6 +68,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_Kingdom_Come_Deliverance()
     elseif tag == "Assassin-Creed-Brotherhood" then
         Play_Assassin_Creed_Brotherhood()
+    elseif tag == "Assassins-Creed-Revelations" then
+        Play_Assassins_Creed_Revelations()
     elseif tag == "Assassins-Creed-Unity" then
         Play_Assassins_Creed_Unity()
     elseif tag == "Crysis-3-Remasted" then
@@ -155,6 +157,10 @@ local menus = {
         ["tag"] = "Assassin-Creed-Brotherhood",
     },
     {
+        ["text"] = "Assassins Creed Revelations(-R)",
+        ["tag"] = "Assassins-Creed-Revelations",
+    },
+    {
         ["text"] = "Assassins Creed III Remastered(-M)",
         ["tag"] = "Assassins-Creed-III-Remastered",
     },
@@ -226,10 +232,10 @@ local menus = {
     --     ["text"] = "The Witcher 3(-H)",
     --     ["tag"] = "The-Witcher-3",
     -- },
-    {
-        ["text"] = "Far Cry 4(-F)",
-        ["tag"] = "Far-Cry-4",
-    },
+    -- {
+    --     ["text"] = "Far Cry 4(-F)",
+    --     ["tag"] = "Far-Cry-4",
+    -- },
     {
         ["text"] = "CarX Street(-3)",
         ["tag"] = "CarX-Street",

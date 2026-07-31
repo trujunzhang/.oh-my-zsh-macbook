@@ -207,6 +207,17 @@ function Play_Just_Cause_4()
     ActiveWindow(30)
 end
 
+function Play_Assassins_Creed_Revelations()
+    local app_name = "Assassins Creed Revelations"
+    -- local game_name = "Assassins Creed Revelations"
+
+    BeforePlayGame(app_name, app_name, function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(30)
+end
+
 function Play_Assassin_Creed_Brotherhood()
     local app_name = "Assassin Creed Brotherhood"
     local game_name = "Assassins Creed - Brotherhood"
