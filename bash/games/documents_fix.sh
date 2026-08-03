@@ -85,6 +85,28 @@ function link_apps_games_in_applications() {
     directoryLink "game(007 Shader Commander.app)" "$KegworksGames_Folder/007 Shader Commander.app" "/Applications/007 Shader Commander.app"
 }
 
+function link_saved_Assassins_Creed_Rogue_location() {
+    local app_name="Assassins Creed Rogue"
+    local game_name="Assassin's Creed Rogue"
+
+    my_global_file_name="$app_name"
+    check_real_app_name "$app_name"
+    game_file_name="${my_global_file_name}.app"
+
+    rogue_installed_path="$KegworksGames_Folder/$game_file_name/$DRIVER_C_FOLDER_IN_TOXICGAME_APP/Games/Assassin's Creed Rogue"
+    rogue_saved_location="$CURRENT_USER_DOCUMENTS_PATH/CPY_SAVES/LumaPlayFiles/Assassin's Creed Rogue"
+
+    fileLink "saved_location(Assassins Creed Rogue/3.save)" "$rogue_saved_location/3.save" "$rogue_installed_path/3.save"
+    fileLink "saved_location(Assassins Creed Rogue/3.save.upload)" "$rogue_saved_location/3.save.upload" "$rogue_installed_path/3.save.upload"
+    fileLink "saved_location(Assassins Creed Rogue/4.save)" "$rogue_saved_location/4.save" "$rogue_installed_path/4.save"
+    fileLink "saved_location(Assassins Creed Rogue/4.save.upload)" "$rogue_saved_location/4.save.upload" "$rogue_installed_path/4.save.upload"
+}
+
+function link_saved_games_location() {
+    # link_saved_Assassins_Creed_Rogue_location
+    echo
+}
+
 #
 # directoryLink "game()" "$CURRENT_USER_DOCUMENTS_PATH/" "$USER_DOCUMENTS_DEFAULT_PATH/"
 

@@ -568,3 +568,4 @@ if [[ $(uname -m) == 'arm64' ]]; then
 fi
 link_games_save_location_path
 link_apps_games_in_applications
+link_saved_games_location

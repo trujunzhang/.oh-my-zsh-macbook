@@ -71,6 +71,11 @@
           "key" : "r",
           "type" : "application",
           "value" : "/Volumes/MacUser/djzhang/Applications/Raycast.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Transmit.app"
         }
       ],
       "key" : "a",
@@ -383,12 +388,12 @@
         {
           "key" : "a",
           "type" : "application",
-          "value" : "/Applications/Opera Air.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Opera Air.app"
         },
         {
           "key" : "g",
           "type" : "application",
-          "value" : "/Applications/Opera GX.app"
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Opera GX.app"
         }
       ],
       "key" : "o",
