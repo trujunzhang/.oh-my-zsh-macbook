@@ -23,7 +23,9 @@ hs.hotkey.bind(GameHotkeyMods, "U", Play_Assassins_Creed_Unity)
 hs.hotkey.bind(GameHotkeyMods, "M", Play_Assassins_Creed_III_Remastered)
 hs.hotkey.bind(GameHotkeyMods, "J", Play_Mafia_Definitive_Edition)
 
-hs.hotkey.bind(GameHotkeyMods, "G", Play_Grand_Theft_Auto_V)
+hs.hotkey.bind(GameHotkeyMods, "G", Play_GTA_V_Enhanced)
+-- hs.hotkey.bind(GameHotkeyMods, "G", Play_Grand_Theft_Auto_V)
+
 -- hs.hotkey.bind(GameHotkeyMods, "S", Play_Silent_Hill_2)
 -- hs.hotkey.bind(GameHotkeyMods, "U", Play_UNCHARTED_LoT_Collection)
 -- hs.hotkey.bind(GameHotkeyMods, "R", Play_Red_Dead_Redemption)

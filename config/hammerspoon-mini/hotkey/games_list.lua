@@ -52,8 +52,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_Need_for_Speed_Payback()
     elseif tag == "Silent-Hill-2" then
         Play_Silent_Hill_2()
-    elseif tag == "Grand-Theft-Auto-V" then
-        Play_Grand_Theft_Auto_V()
+    elseif tag == "GTA-V-Enhanced" then
+        Play_GTA_V_Enhanced()
     elseif tag == "Star-Wars-Jedi-Fallen-Order" then
         Play_Star_Wars_Jedi_Fallen_Order()
     elseif tag == "Warcraft-3-The-Frozen-Throne" then
@@ -201,8 +201,8 @@ local menus = {
     --     ["tag"] = "Silent-Hill-2",
     -- },
     {
-        ["text"] = "Grand Theft Auto V(-G)",
-        ["tag"] = "Grand-Theft-Auto-V",
+        ["text"] = "GTA V Enhanced(-G)",
+        ["tag"] = "GTA-V-Enhanced",
     },
     {
         ["text"] = "Warcraft 3 The Frozen Throne(-W)",

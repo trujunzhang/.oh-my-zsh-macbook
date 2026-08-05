@@ -404,21 +404,6 @@ function Play_Expedition_33()
     ActiveWindow(30)
 end
 
-function Play_Grand_Theft_Auto_V()
-    -- mt_107103_Grand_Theft_Auto_V
-    -- mt_107103_Grand_Theft_Auto_V
-
-    -- SetMacosVolume(5)
-
-    local app_name = "Grand Theft Auto V"
-
-    BeforePlayGame(app_name, app_name, function()
-        Check_And_Run_KegworksApp(app_name)
-    end)
-
-    ActiveWindow(30)
-end
-
 function Play_Star_Wars_Jedi_Fallen_Order()
     local app_name = "Star Wars Jedi Fallen Order"
 
@@ -675,4 +660,18 @@ function Play_Atomic_Heart()
     end)
 
     ActiveWindow(30)
+end
+
+function Play_GTA_V_Enhanced()
+    -- GTA-V-Enhanced\/Grand Theft Auto V Enhanced\/PlayGTAV.exe
+    -- GTA-V-Enhanced\/Grand Theft Auto V Enhanced\/PlayGTAV.exe
+
+    local app_name = "GTA V Enhanced"
+    local game_name = "Grand Theft Auto V Enhanced"
+
+    BeforePlayGame(app_name, game_name, function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(45)
 end
