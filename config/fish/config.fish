@@ -1,3 +1,7 @@
+set -g -x MAC_TYPE_MINI djzhang-mini
+set -g -x MAC_TYPE_PRO djzhang-pro
+set -g -x MAC_TYPE_NEO djzhang-neo
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
@@ -47,7 +51,7 @@ set -g -x ANDROID_NDK_HOME $HOME/Library/Android/sdk/ndk/25.1.8937393
 
 set -g -x HOMEBREW_NO_AUTO_UPDATE 1
 
-if test $MY_MAC_TYPE = mini
+if test $MY_MAC_TYPE = $MAC_TYPE_MINI
     if test -d /opt/homebrew # MacOS arm64
         set -gx HOMEBREW_PREFIX /opt/homebrew
     end
@@ -85,7 +89,7 @@ fish_add_path /opt/local/bin
 fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps"
 
-if test $MY_MAC_TYPE = mini
+if test $MY_MAC_TYPE = $MAC_TYPE_MINI
     fish_add_path "$HOME/.local/bin/helix-aarch64-macos"
     # https://github.com/zellij-org/zellij/releases/tag/v0.43.1
     # fish_add_path "$HOME/.local/bin/zellij/0.43.1"
@@ -98,7 +102,7 @@ if test $MY_MAC_TYPE = mini
     fish_add_path "$HOME/.local/bin/nvim-macos-arm64/bin"
 end
 
-if test $MY_MAC_TYPE = pro
+if test $MY_MAC_TYPE = $MAC_TYPE_PRO
     # if test "$(uname -m)" = x86_64
     fish_add_path "$HOME/.local/bin/helix-x86_64-macos"
     # https://github.com/zellij-org/zellij/releases/tag/v0.43.1
@@ -243,7 +247,7 @@ set --erase _asdf_shims
 #
 set -g -x PIP_REQUIRE_VIRTUALENV true
 
-if test $MY_MAC_TYPE = mini
+if test $MY_MAC_TYPE = $MAC_TYPE_MINI
     if [ -d $HOMEBREW_PREFIX/opt/micromamba ]
         # >>> mamba initialize >>>
         # !! Contents within this block are managed by 'mamba shell init' !!
@@ -254,7 +258,7 @@ if test $MY_MAC_TYPE = mini
     end
 end
 
-if test $MY_MAC_TYPE = pro
+if test $MY_MAC_TYPE = $MAC_TYPE_PRO
     # >>> mamba initialize >>>
     # !! Contents within this block are managed by 'mamba init' !!
     set -gx MAMBA_EXE /opt/local/bin/micromamba

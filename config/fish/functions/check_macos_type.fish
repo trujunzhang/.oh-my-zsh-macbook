@@ -5,15 +5,15 @@ function welcome_message
     set -gx MY_MAC_TYPE unknown
 
     if string match -qi "*mac-mini*" $current_hostname
-        set -gx MY_MAC_TYPE mini
+        set -gx MY_MAC_TYPE $MAC_TYPE_MINI
     end
 
     if string match -qi "*macbook-pro*" $current_hostname
-        set -gx MY_MAC_TYPE pro
+        set -gx MY_MAC_TYPE $MAC_TYPE_PRO
     end
 
     if string match -qi "*mac-neo*" $current_hostname
-        set -gx MY_MAC_TYPE neo
+        set -gx MY_MAC_TYPE $MAC_TYPE_NEO
     end
 
     echo "Welcome $USER! checking the current macos system type is $MY_MAC_TYPE"

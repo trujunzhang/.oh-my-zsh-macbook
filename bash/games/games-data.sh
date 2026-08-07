@@ -16,10 +16,9 @@ InlineConfigAppInNornal="Contents/Configure.app"
 InlineConfigAppInToxicGame="Contents/Resources/Toxic Engine.app"
 
 test_games_in_kegworks=(
-    # "Need for Speed Payback" "Need for Speed Payback"
     # "Hogwarts Legacy" "Hogwarts Legacy"
 
-    "Crysis 3 Remastered" "Crysis 3 Remastered"
+    # "Crysis 3 Remastered" "Crysis 3 Remastered"
 
     # "Assassin Creed Brotherhood" "Assassins Creed - Brotherhood"
     # "Assassins Creed III Remastered" "Assassins Creed III Remastered"
@@ -27,6 +26,7 @@ test_games_in_kegworks=(
     # "Assassins Creed Unity" "Assassin's Creed Unity Complete Edition"
 
     # Exception on the ToxicGame app version
+    # "Need for Speed Payback" "Need for Speed Payback"
     # "Resident Evil 7" "Resident Evil 7"
     # "FIFA 22" "FIFA 22"
 )
