@@ -8,8 +8,8 @@ source ./bash/games/games-data.sh
 # OLD_VERSION="108103"
 # OLD_VERSION="1010104"
 # OLD_VERSION="1011106"
-OLD_VERSION="1011x106"
-# OLD_VERSION="toxic262"
+# OLD_VERSION="1011x106"
+OLD_VERSION="toxic262"
 # NEW_VERSION="108103"
 # NEW_VERSION="toxic262"
 NEW_VERSION="toxic1113"
@@ -64,6 +64,7 @@ do_when_new_file_exist() {
     new_version_file_name=$3
     old_version_app_path=$4
     new_version_app_path=$5
+    game_exe_name=$6
 
     success " [info] already exist new version game: $new_version_file_name"
 
@@ -101,6 +102,7 @@ do_when_old_file_exist() {
     new_version_file_name=$3
     old_version_app_path=$4
     new_version_app_path=$5
+    game_exe_name=$6
 
     success "Updating game: from $old_version_file_name to $new_version_file_name"
 
@@ -115,11 +117,40 @@ do_when_old_file_exist() {
         OpenWineInlineConfigApp "$new_version_app_path"
 
         sleep 80
+
         do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
+
+        toxicConfigApp="${new_version_app_path}/${InlineConfigAppInToxicGame}"
+        if [ -d "$toxicConfigApp" ]; then
+            write_game_exe_file_to_config_file "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
+        fi
+
     else
         echo
         error "   [error]  new version app:'${new_version_file_name}' not exist!"
     fi
+}
+
+write_game_exe_file_to_config_file() {
+    install_folder_name=$1
+    old_version_file_name=$2
+    new_version_file_name=$3
+    old_version_app_path=$4
+    new_version_app_path=$5
+    game_exe_name=$6
+
+    sleep 5
+    killall launcher
+    sleep 10
+
+    toxicConfigJson="${new_version_app_path}/${InlineConfigJsonInToxicGame}"
+
+    # "exe_path" : "ToxicGame\/drive_c\/Games\/Assassins Creed IV Black Flag\/AC4BFSP.exe",
+    # "exe_path" : "ToxicGame\/drive_c\/Games\/Assassins Creed IV Black Flag\/AC4BFSP.exe",
+    # "backend" : "dxmt",
+    # "backend" : "dxmt",
+
+    node -e "let pkg=require('${toxicConfigJson}'); pkg['exe_path'] = 'ToxicGame\/drive_c\/Games\/${install_folder_name}\/${game_exe_name}'; require('fs').writeFileSync('${toxicConfigJson}', JSON.stringify(pkg, null, 2));"
 }
 
 update_wine_games() {
@@ -127,9 +158,10 @@ update_wine_games() {
 
     array=("$@")
 
-    for ((i = 0; i < ${#array[@]}; i = i + 2)); do
+    for ((i = 0; i < ${#array[@]}; i = i + 3)); do
         game_name="${array[$i + 0]}"
         install_folder_name="${array[$i + 1]}"
+        game_exe_name="${array[$i + 2]}"
 
         # old version file name and path
         my_global_file_name="$game_name"
@@ -154,9 +186,9 @@ update_wine_games() {
             continue
 
         elif [ -d "$new_version_app_path" ]; then
-            do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
+            do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
         elif [ -d "$old_version_app_path" ]; then
-            do_when_old_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path"
+            do_when_old_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
         fi
     done
 }

@@ -219,8 +219,16 @@ function Play_Assassins_Creed_Revelations()
 end
 
 function Play_Assassin_Creed_Brotherhood()
+    -- steamrip version
+    -- Assassins-Creed-Brotherhood-SteamRIP.com.rar
+    -- Assassins-Creed-Brotherhood-SteamRIP.com.rar
+    -- Assassins-Creed-Brotherhood-SteamRIP.com.rar
+    -- drive_c\/Games\/Assassins Creed Brotherhood\/AssassinsCreedBrotherhood.exe
+    -- drive_c\/Games\/Assassins Creed Brotherhood\/AssassinsCreedBrotherhood.exe
+    -- drive_c\/Games\/Assassins Creed Brotherhood\/AssassinsCreedBrotherhood.exe
+
     local app_name = "Assassin Creed Brotherhood"
-    local game_name = "Assassins Creed - Brotherhood"
+    local game_name = "Assassins Creed Brotherhood"
 
     BeforePlayGame(app_name, game_name, function()
         Check_And_Run_KegworksApp(app_name)

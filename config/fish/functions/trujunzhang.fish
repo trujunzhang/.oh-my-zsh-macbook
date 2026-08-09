@@ -537,10 +537,6 @@ alias drun_http='cd $ORGANIZATIONS_HOME/__CACHES/github && python -m http.server
 alias dproject_git_push="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh push"
 alias dproject_git_restore="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh restore"
 
-alias dkill_paralles_desktop="sh $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/umac/kill_macos_apps.sh 'prl_client_app'"
-alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
-alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
-
 # nvm
 alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
 
@@ -790,7 +786,13 @@ alias denv_info_mac_type='echo "your mac type, $MY_MAC_TYPE!"'
 
 alias dapp_zellij_attack_djzhang_mac="zellij attach -c djzhang-mac"
 alias dapp_zellij_kill_all_sessions="zellij ka"
+alias dapp_zellij_list_sessions="zellij ls"
 alias dapp_zellij_setup_check="zellij setup --check"
+alias dapp_zellij_delete_all_sessions="zellij delete-all-sessions"
+
+alias dkill_paralles_desktop="sh $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/umac/kill_macos_apps.sh 'prl_client_app'"
+alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
+alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 
 alias dapp_fish_reload="exec fish"
 

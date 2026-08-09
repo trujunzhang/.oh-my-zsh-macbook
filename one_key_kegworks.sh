@@ -71,7 +71,7 @@ moving_game_to_kegworks() {
 run_kegworks_games() {
     info "run_kegworks_games:"
 
-    for ((i = 0; i < ${#games_in_kegworks[@]}; i = i + 2)); do
+    for ((i = 0; i < ${#games_in_kegworks[@]}; i = i + 3)); do
         game_name="${games_in_kegworks[$i+0]}"
         install_folder_name="${games_in_kegworks[$i+1]}"
 
@@ -98,7 +98,7 @@ run_kegworks_games() {
 restore_kegworks_games() {
     info "restore_kegworks_games:"
 
-    for ((i = 0; i < ${#games_in_kegworks[@]}; i = i + 2)); do
+    for ((i = 0; i < ${#games_in_kegworks[@]}; i = i + 3)); do
         game_name="${games_in_kegworks[$i+0]}"
         install_folder_name="${games_in_kegworks[$i+1]}"
 
