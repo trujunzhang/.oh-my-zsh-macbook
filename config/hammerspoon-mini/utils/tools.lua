@@ -104,7 +104,7 @@ function DoesGameTagFileExist(app_name, game_foler_name, runApp, existFunc, notE
     local filePath = TAGGameFolder .. FixGameAppName(app_name)
     if hs.fs.attributes(filePath) then
         OpenGameStatus = "open"
-        existFunc(runApp)
+        existFunc(app_name, runApp)
     else
         OpenGameStatus = "verify"
         notExistFunc(app_name, game_foler_name)

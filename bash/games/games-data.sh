@@ -17,7 +17,9 @@ InlineConfigAppInToxicGame="Contents/Resources/Toxic Engine.app"
 InlineConfigJsonInToxicGame="Contents/Resources/config.json"
 
 test_games_in_kegworks=(
-    "Hogwarts Legacy" "Hogwarts Legacy" "HogwartsLegacy.exe"
+    "Warcraft 3 The Frozen Throne" "Warcraft 3" "Warcraft III.exe"
+
+    # "Hogwarts Legacy" "Hogwarts Legacy" "HogwartsLegacy.exe"
 
     # "Mafia Definitive Edition" "Mafia Definitive Edition" "mafiadefinitiveedition.exe"
 
@@ -27,6 +29,7 @@ test_games_in_kegworks=(
     # "Assassins Creed III Remastered" "Assassins Creed III Remastered" "ACIII.exe"
     # "Assassins Creed Rogue" "Assassin's Creed Rogue" "ACC.exe"
     # "Assassins Creed Unity" "Assassin's Creed Unity Complete Edition" "ACU.exe"
+    # "Assassins Creed Revelations" "Assassins Creed Revelations" "ACRSP.exe"
 
     # "Assassins Creed IV Black Flag" "Assassins Creed IV Black Flag" "AC4BFSP.exe"
 
