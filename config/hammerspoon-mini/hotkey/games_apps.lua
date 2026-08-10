@@ -604,6 +604,10 @@ function Play_Split_Fiction()
 end
 
 function Play_Hogwarts_Legacy()
+    -- Linux (Heroic/Wine): Located inside your Wine prefix under drive_c/users/[YourUsername]/AppData/Local/Hogwarts Legacy/Saved/SaveGames/
+    -- Linux (Heroic/Wine): Located inside your Wine prefix under drive_c/users/[YourUsername]/AppData/Local/Hogwarts Legacy/Saved/SaveGames/
+    -- Linux (Heroic/Wine): Located inside your Wine prefix under drive_c/users/[YourUsername]/AppData/Local/Hogwarts Legacy/Saved/SaveGames/
+
     local app_name = "Hogwarts Legacy"
 
     BeforePlayGame(app_name, app_name, function()

@@ -90,6 +90,7 @@ function link_saved_Assassins_Creed_Rogue_location() {
     local game_name="Assassin's Creed Rogue"
 
     my_global_file_name="$app_name"
+    my_global_file_type=""
     check_real_app_name "$app_name"
     game_file_name="${my_global_file_name}.app"
 

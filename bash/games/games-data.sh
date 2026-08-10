@@ -17,18 +17,18 @@ InlineConfigAppInToxicGame="Contents/Resources/Toxic Engine.app"
 InlineConfigJsonInToxicGame="Contents/Resources/config.json"
 
 test_games_in_kegworks=(
-    # "Hogwarts Legacy" "Hogwarts Legacy" ""
+    "Hogwarts Legacy" "Hogwarts Legacy" "HogwartsLegacy.exe"
 
-    # "Mafia Definitive Edition" "Mafia Definitive Edition" ""
+    # "Mafia Definitive Edition" "Mafia Definitive Edition" "mafiadefinitiveedition.exe"
 
-    # "Crysis 3 Remastered" "Crysis 3 Remastered" ""
+    # "Crysis 3 Remastered" "Crysis 3 Remastered" "Bin64\/Crysis3Remastered.exe"
 
-    # "Assassin Creed Brotherhood" "Assassins Creed Brotherhood" ""
-    # "Assassins Creed III Remastered" "Assassins Creed III Remastered" ""
-    # "Assassins Creed Rogue" "Assassin's Creed Rogue" ""
-    # "Assassins Creed Unity" "Assassin's Creed Unity Complete Edition" ""
+    # "Assassin Creed Brotherhood" "Assassins Creed Brotherhood" "AssassinsCreedBrotherhood.exe"
+    # "Assassins Creed III Remastered" "Assassins Creed III Remastered" "ACIII.exe"
+    # "Assassins Creed Rogue" "Assassin's Creed Rogue" "ACC.exe"
+    # "Assassins Creed Unity" "Assassin's Creed Unity Complete Edition" "ACU.exe"
 
-    "Assassins Creed IV Black Flag" "Assassins Creed IV Black Flag" "AC4BFSP.exe"
+    # "Assassins Creed IV Black Flag" "Assassins Creed IV Black Flag" "AC4BFSP.exe"
 
     # Exception on the ToxicGame app version
     # "Need for Speed Payback" "Need for Speed Payback" ""
@@ -92,6 +92,7 @@ games_in_kegworks=("${games_list_in_kegworks[@]}")
 
 DEFAULT_GLOBAL_FILE_NAME="not found"
 my_global_file_name=""
+my_global_file_type=""
 
 check_app_existed() {
     prefix=$1
@@ -128,21 +129,9 @@ check_app_existed() {
 
         if [ -d "$KegworksGames_Folder/${value}${dash_name_prefix}.app" ]; then
             my_global_file_name="${value}$dash_name_prefix"
+            my_global_file_type="$value"
         fi
     done
-
-    # if [ -d "$KegworksGames_Folder/p_${dash_name_prefix}.app" ]; then
-    #     my_global_file_name="p_$dash_name_prefix"
-    # fi
-    #
-    # # for dxmt
-    # if [ -d "$KegworksGames_Folder/mt_${dash_name_prefix}.app" ]; then
-    #     my_global_file_name="mt_$dash_name_prefix"
-    # fi
-    #
-    # if [ -d "$KegworksGames_Folder/p_mt_${dash_name_prefix}.app" ]; then
-    #     my_global_file_name="p_mt_$dash_name_prefix"
-    # fi
 }
 
 check_real_app_name() {

@@ -13,7 +13,7 @@ NEW_VERSION="2610110"
 
 # 108103_wine
 # TEMPLATE_WINE_FILE_NAME="${NEW_VERSION}_wine.app"
-TEMPLATE_WINE_FILE_NAME="GTA V Enhanced.app"
+TEMPLATE_WINE_FILE_NAME="toxic1113_Hogwarts_Legacy.app"
 
 TEMPLATE_WINE_APP_PATH="$APP_GAMES_PATH/${TEMPLATE_WINE_FILE_NAME}"
 
@@ -67,6 +67,9 @@ check_and_build_user_links() {
 
     rename_folder "$wine_app_path/$APP_USER_FOLDER_IN_DRIVER_C/AppData/Roaming"
     directoryLink "Roaming" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER/Games-Roaming" "$wine_app_path/$APP_USER_FOLDER_IN_DRIVER_C/AppData/Roaming"
+
+    rename_folder "$wine_app_path/$APP_USER_FOLDER_IN_DRIVER_C/AppData/Local"
+    directoryLink "Local" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER/Local" "$wine_app_path/$APP_USER_FOLDER_IN_DRIVER_C/AppData/Local"
 
     rename_folder "$wine_app_path/$APP_USER_FOLDER_IN_DRIVER_C/Saved Games"
     directoryLink "Saved Games" "$GAME_LINKS_FOLDER_IN_CURRENT_USER_FOLDER/Saved-Games" "$wine_app_path/$APP_USER_FOLDER_IN_DRIVER_C/Saved Games"

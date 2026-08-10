@@ -150,7 +150,16 @@ write_game_exe_file_to_config_file() {
     # "backend" : "dxmt",
     # "backend" : "dxmt",
 
-    node -e "let pkg=require('${toxicConfigJson}'); pkg['exe_path'] = 'ToxicGame\/drive_c\/Games\/${install_folder_name}\/${game_exe_name}'; require('fs').writeFileSync('${toxicConfigJson}', JSON.stringify(pkg, null, 2));"
+    # check if a '$game_exe_name' is not empty
+    if [[ -n "$game_exe_name" ]]; then
+        node -e "let pkg=require('${toxicConfigJson}'); pkg['exe_path'] = \"ToxicGame\/drive_c\/Games\/${install_folder_name}\/${game_exe_name}\"; require('fs').writeFileSync('${toxicConfigJson}', JSON.stringify(pkg, null, 2));"
+
+        if [[ "$my_global_file_type" == *"mt"* ]]; then
+            node -e "let pkg=require('${toxicConfigJson}'); pkg['backend'] = 'dxmt'; require('fs').writeFileSync('${toxicConfigJson}', JSON.stringify(pkg, null, 2));"
+        fi
+    else
+        error "    [error]  'game_exe_name' is empty!"
+    fi
 }
 
 update_wine_games() {
@@ -165,6 +174,7 @@ update_wine_games() {
 
         # old version file name and path
         my_global_file_name="$game_name"
+        my_global_file_type=""
         check_old_app_name "$game_name"
         old_version_file_name="${my_global_file_name}.app"
         old_version_app_path="$KegworksGames_Folder/${old_version_file_name}"
@@ -179,6 +189,7 @@ update_wine_games() {
         info "** old version app path:          $old_version_app_path                       "
         info "** new version file name:         $new_version_file_name                       "
         info "** new version app path:          $new_version_app_path                       "
+        info "** game exe name:                 $game_exe_name"
         info "                                          "
 
         if [ ! -d "$old_version_app_path" ]; then
@@ -187,6 +198,7 @@ update_wine_games() {
 
         elif [ -d "$new_version_app_path" ]; then
             do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
+            write_game_exe_file_to_config_file "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
         elif [ -d "$old_version_app_path" ]; then
             do_when_old_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
         fi
