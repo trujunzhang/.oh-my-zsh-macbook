@@ -4,6 +4,7 @@ HOME_MACGAME_PATH="/Volumes/MacGame"
 APP_GAMES_PATH="$HOME_MACGAME_PATH/AppGames"
 Moving_Games_Folder="$HOME_MACGAME_PATH/crossover/kegworks_games"
 KegworksGames_Folder="$APP_GAMES_PATH/Kegworks"
+KegworksGames_Back_Folder="$APP_GAMES_PATH/xxxx"
 
 DRIVER_C_FOLDER_IN_WINE_APP="Contents/drive_c"
 DRIVER_C_FOLDER_IN_TOXICGAME_APP="Contents/Resources/ToxicGame/drive_c"
@@ -17,12 +18,12 @@ InlineConfigAppInToxicGame="Contents/Resources/Toxic Engine.app"
 InlineConfigJsonInToxicGame="Contents/Resources/config.json"
 
 test_games_in_kegworks=(
-    "Warcraft 3 The Frozen Throne" "Warcraft 3" "Warcraft III.exe"
+    # "Warcraft 3 The Frozen Throne" "Warcraft 3" "Warcraft III.exe"
+
+    "CarX Street" "CarX Street" "CarX Street.exe"
 
     # "Hogwarts Legacy" "Hogwarts Legacy" "HogwartsLegacy.exe"
-
     # "Mafia Definitive Edition" "Mafia Definitive Edition" "mafiadefinitiveedition.exe"
-
     # "Crysis 3 Remastered" "Crysis 3 Remastered" "Bin64\/Crysis3Remastered.exe"
 
     # "Assassin Creed Brotherhood" "Assassins Creed Brotherhood" "AssassinsCreedBrotherhood.exe"
@@ -30,7 +31,6 @@ test_games_in_kegworks=(
     # "Assassins Creed Rogue" "Assassin's Creed Rogue" "ACC.exe"
     # "Assassins Creed Unity" "Assassin's Creed Unity Complete Edition" "ACU.exe"
     # "Assassins Creed Revelations" "Assassins Creed Revelations" "ACRSP.exe"
-
     # "Assassins Creed IV Black Flag" "Assassins Creed IV Black Flag" "AC4BFSP.exe"
 
     # Exception on the ToxicGame app version
@@ -74,7 +74,7 @@ games_list_in_kegworks=(
     "Resident Evil 3" "Resident Evil 3" ""
     "Resident Evil 4" "Resident Evil 4 Remake" ""
     "Resident Evil 7" "Resident Evil 7" ""
-    "CarX Street" "CarX Street" ""
+    "CarX Street" "CarX Street" "CarX Street.exe"
     "Far Cry 4" "Far Cry 4" ""
     "Far Cry 5" "Far Cry 5" ""
     "Far Cry 6" "Far Cry 6" ""

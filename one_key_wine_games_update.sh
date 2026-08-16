@@ -8,8 +8,8 @@ source ./bash/games/games-data.sh
 # OLD_VERSION="108103"
 # OLD_VERSION="1010104"
 # OLD_VERSION="1011106"
-# OLD_VERSION="1011x106"
-OLD_VERSION="toxic262"
+OLD_VERSION="1011x106"
+# OLD_VERSION="toxic262"
 # NEW_VERSION="108103"
 # NEW_VERSION="toxic262"
 NEW_VERSION="toxic1113"
@@ -158,8 +158,32 @@ write_game_exe_file_to_config_file() {
     fi
 }
 
+after_update() {
+    install_folder_name=$1
+    old_version_file_name=$2
+    new_version_file_name=$3
+    old_version_app_path=$4
+    new_version_app_path=$5
+    game_exe_name=$6
+
+    old_version_app_path="$KegworksGames_Folder/${old_version_file_name}"
+    old_version_app_back_path="$KegworksGames_Back_Folder/${old_version_file_name}"
+
+    success "After update:"
+
+    info "  [info]   old_game_path: $old_version_app_path"
+    info "  [info]   old_game_back_path: $old_version_app_back_path"
+
+    if [ -d "$old_version_app_back_path" ]; then
+        error "    [error]  old version app back path: '$old_version_app_back_path' already exist!"
+    else
+        mkdir -p "$KegworksGames_Back_Folder"
+        mv "$old_version_app_path" "$old_version_app_back_path"
+    fi
+}
+
 update_wine_games() {
-    info "update wine games:"
+    info "Update wine games:"
 
     array=("$@")
 
@@ -202,6 +226,8 @@ update_wine_games() {
             do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
             write_game_exe_file_to_config_file "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
         fi
+
+        after_update "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
     done
 }
 

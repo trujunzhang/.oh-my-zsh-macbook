@@ -706,6 +706,7 @@ alias dclone_expensify="git clone https://github.com/expensify/App.git --depth 1
 alias dclone_bitnet="git clone https://github.com/microsoft/BitNet --depth 1"
 alias dclone_ieatta_bitbucket="git clone git@bitbucket.org:trujunzhang/ieatta-three-apps.git --depth 1 check-ieatta && cd check-ieatta"
 alias dclone_new_ieatta_gitlab="git clone git@gitlab.com:TrujunZhang/new-ieatta-three-apps.git"
+alias dclone_android_target_volume="git clone git@github.com:trujunzhang/android-target-volume.git"
 alias dclone_used_expensify="git clone git@github.com:trujunzhang/App-1.4.26-2-fixed.git --depth 1 usedExpApp && cd usedExpApp"
 alias dclone_cocoapods="git clone https://github.com/CocoaPods/Specs --depth 1"
 alias dclone_asdf_plugins="git clone https://github.com/asdf-vm/asdf-plugins --depth 1"

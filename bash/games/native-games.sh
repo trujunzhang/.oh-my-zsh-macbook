@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# test_mode="test"
-test_mode="prod"
+test_mode="test"
+# test_mode="prod"
 
 native_games_apps=(
     # Resident Evil Village
@@ -72,7 +72,11 @@ native_games_apps=(
 )
 
 test_native_games_apps=(
-
+    # HITMAN
+    "HITMAN"
+    "runtime"
+    "Contents/Game/HitmanProData"
+    "open"
 )
 
 function moving_game_from_source_to_dest() {
@@ -81,10 +85,10 @@ function moving_game_from_source_to_dest() {
     source_path=$3
     dest_path=$4
 
-    info "Moving game: $app_name"
-    info "  pattern: <<${pattern}>>"
+    info "Moving the game: $app_name"
+    info "  pattern:     <<${pattern}>>"
     info "  from source: <<${source_path}>>"
-    info "  to dest: <<${dest_path}>>"
+    info "  to dest:     <<${dest_path}>>"
 
     if [ -d "$source_path" ]; then
         success " Start to scan folder: <<${source_path}>>"

@@ -65,7 +65,7 @@
         {
           "key" : "d",
           "type" : "application",
-          "value" : "/Applications/Android Studio.app"
+          "value" : "/Volumes/MacUser/djzhang/Applications/Android Studio.app"
         },
         {
           "key" : "r",
@@ -314,7 +314,7 @@
         {
           "key" : "h",
           "type" : "application",
-          "value" : "/Volumes/MacGame/AppGames/Hitman WOA.app"
+          "value" : "/Volumes/MacGame/AppGames/HITMAN.app"
         },
         {
           "key" : "f",

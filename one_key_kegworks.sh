@@ -8,10 +8,8 @@ info "                         "
 info "=================================================================================="
 info "Bash version ${BASH_VERSION}...           "
 info "                                          "
-info "** Games_Folder:                                "
-info "$Moving_Games_Folder"
-info "** kegworks_games_folder:                                "
-info "$KegworksGames_Folder"
+info "** Games_Folder:            $Moving_Games_Folder"
+info "** kegworks_games_folder:   $KegworksGames_Folder"
 info "=================================================================================="
 info "                                          "
 
@@ -72,8 +70,8 @@ run_kegworks_games() {
     info "run_kegworks_games:"
 
     for ((i = 0; i < ${#games_in_kegworks[@]}; i = i + 3)); do
-        game_name="${games_in_kegworks[$i+0]}"
-        install_folder_name="${games_in_kegworks[$i+1]}"
+        game_name="${games_in_kegworks[$i + 0]}"
+        install_folder_name="${games_in_kegworks[$i + 1]}"
 
         echo ""
         success "step $i"
@@ -99,8 +97,8 @@ restore_kegworks_games() {
     info "restore_kegworks_games:"
 
     for ((i = 0; i < ${#games_in_kegworks[@]}; i = i + 3)); do
-        game_name="${games_in_kegworks[$i+0]}"
-        install_folder_name="${games_in_kegworks[$i+1]}"
+        game_name="${games_in_kegworks[$i + 0]}"
+        install_folder_name="${games_in_kegworks[$i + 1]}"
 
         echo ""
         success "step $i"

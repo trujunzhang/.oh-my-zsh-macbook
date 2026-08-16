@@ -616,7 +616,7 @@ function Play_Hogwarts_Legacy()
 
     -- app: "Hogwarts Legacy"
     -- title: "WARNING: Known issues with graphics driver"
-    Close_Active_Window("Known issues", "ok", 60)
+    -- Close_Active_Window("Known issues", "ok", 60)
 
     ActiveWindow(80)
 end
