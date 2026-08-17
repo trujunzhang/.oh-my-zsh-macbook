@@ -18,8 +18,8 @@ brew_apps=(
     "Bloom" "bloom" "copy" "no-bak"
     "Folx" "Folx" "copy" "no-bak"
     "Keyboard Maestro" "Keyboard Maestro" "copy" "no-bak"
-    "Xcode" "xcode" "ssd" "no-bak"
-    "CrossOver" "crossover" "ssd" "no-bak"
+    # "Xcode" "xcode" "ssd" "no-bak"
+    # "CrossOver" "crossover" "ssd" "no-bak"
     "Whiskey" "whiskey" "ssd" "no-bak"
     "Homerow" "homerow" "copy" "no-bak"
     # Editor
@@ -35,7 +35,7 @@ brew_apps=(
     # "Wezterm" "wezterm" 'copy' 'no-bak'
     "Ghostty" "ghostty" 'copy' 'backup'
     # "Neovide" "Neovide" 'copy' 'no-bak'
-    # "Sublime Text" "SublimeText" "ssd" 'no-bak'
+    "Sublime Text" "SublimeText" "ssd" 'no-bak'
     # "Sublime Merge" "Sublime Merge" "ssd" "no-bak"
     # "Android Studio" "AndroidStudio" "ssd" 'no-bak'
     "ResponsivelyApp" "ResponsivelyApp" "ssd" "no-bak"
@@ -134,8 +134,8 @@ hash_vals=("/Volumes/MacGame/MacCache"
 app_backup_path_index ${ParamsBkKey}
 CURRENT_THIRD_APPS_PATH=${hash_vals[$?]}
 
-PATH_THIRD_APPLICATIONS="${CURRENT_THIRD_APPS_PATH}/APPS_${MY_MAC_TYPE}/Applications"
-PATH_THIRD_APPS_BACKUP="${CURRENT_THIRD_APPS_PATH}/APPS_${MY_MAC_TYPE}/BACKUP"
+PATH_THIRD_APPLICATIONS="${CURRENT_THIRD_APPS_PATH}/APPS_${MY_MAC_NAME}/Applications"
+PATH_THIRD_APPS_BACKUP="${CURRENT_THIRD_APPS_PATH}/APPS_${MY_MAC_NAME}/BACKUP"
 
 USER_APPLICATION_PATH="$HOME/Applications"
 SYSTEM_APPLICATION_PATH="/Applications"
@@ -149,11 +149,13 @@ fi
 
 show_info() {
     info "==========================================================="
-    info "params<brew-type> = ${Params}"
-    info "params<Backup key> = ${ParamsBkKey}"
-    info "current app path fold: ${CURRENT_THIRD_APPS_PATH}"
-    info "current app <APPLICATION> path: ${PATH_THIRD_APPLICATIONS}"
-    info "current app <BACKUP> path: ${PATH_THIRD_APPS_BACKUP}"
+    info "params<brew-type> =                 ${Params}"
+    info "params<Backup key> =                ${ParamsBkKey}"
+    info "System<MY_MAC_TYPE> =               ${MY_MAC_TYPE}"
+    info "System<MY_MAC_NAME> =               ${MY_MAC_NAME}"
+    info "current app path fold:              ${CURRENT_THIRD_APPS_PATH}"
+    info "current app <APPLICATION> path:     ${PATH_THIRD_APPLICATIONS}"
+    info "current app <BACKUP> path:          ${PATH_THIRD_APPS_BACKUP}"
     info "current CURRENT <APPLICATION> path: ${CURRENT_APPLICATION_PATH}"
     info "==========================================================="
 }

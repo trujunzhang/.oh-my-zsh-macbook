@@ -243,6 +243,11 @@
           "key" : "e",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Elmedia Player.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Total Video Player.app"
         }
       ],
       "key" : "m",

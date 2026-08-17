@@ -1034,3 +1034,10 @@ end
 
 # macports
 alias ps_list_macports_install="ps aux | grep install"
+
+function dsetup_mkv_default_player
+    # Example for VLC:
+    # set media_player_Bundle_ID "org.videolan.vlc"
+    set media_player_Bundle_ID "com.etinysoft.totalvideoplayer"
+    duti -s $media_player_Bundle_ID mkv all
+end

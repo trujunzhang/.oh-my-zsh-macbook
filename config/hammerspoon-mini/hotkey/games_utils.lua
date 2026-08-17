@@ -95,7 +95,7 @@ function DoOpenAndVerifyGame(appName, game_foler_name)
 end
 
 function DoPlayGame(appName, runApp)
-    hs.notify.new({ title = "Playing a game: " .. appName, informativeText = "Start it" }):send()
+    hs.notify.new({ title = "Playing the game, " .. appName, informativeText = "Start it" }):send()
 
     hs.timer.doAfter(1, function()
         hs.eventtap.keyStroke({ "Alt" }, "N")

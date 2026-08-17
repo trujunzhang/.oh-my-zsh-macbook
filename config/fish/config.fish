@@ -1,6 +1,9 @@
 set -g -x MAC_TYPE_MINI djzhang-mini
+set -g -x MAC_NAME_MINI mini
 set -g -x MAC_TYPE_PRO djzhang-pro
+set -g -x MAC_NAME_PRO pro
 set -g -x MAC_TYPE_NEO djzhang-neo
+set -g -x MAC_NEO neo
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

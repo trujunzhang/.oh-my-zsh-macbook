@@ -31,6 +31,10 @@ export HOMEBREW_API_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottle
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
 brew_apps_arm=(
+    # Duti most commonly refers to a free command-line utility for macOS
+    # that lets you configure default applications for specific document types, file extensions, or Uniform Type Identifiers (UTIs).
+    "duti" "duti"
+
     # "micromamba" "micromamba"
 
     # "--cask wine-stable" "wine-stable"
@@ -102,11 +106,11 @@ fi
 function install_apps {
     apps=("${brew_apps[@]}")
     for ((i = 0; i < ${#apps[@]}; i = i + 2)); do
-        echo "element $i is ${apps[$i+0]}"
-        echo "element $i is ${apps[$i+1]}"
+        echo "element $i is ${apps[$i + 0]}"
+        echo "element $i is ${apps[$i + 1]}"
 
-        if [ ! -d "$HOMEBREW_CELLAR/${apps[$i+0]}" ]; then
-            brew install "${apps[$i+1]}"
+        if [ ! -d "$HOMEBREW_CELLAR/${apps[$i + 0]}" ]; then
+            brew install "${apps[$i + 1]}"
         fi
     done
 }

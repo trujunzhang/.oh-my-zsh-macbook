@@ -1,6 +1,9 @@
 export MAC_TYPE_MINI="djzhang-mini"
+export MAC_NAME_MINI="mini"
 export MAC_TYPE_PRO="djzhang-pro"
+export MAC_NAME_PRO="pro"
 export MAC_TYPE_NEO="djzhang-neo"
+export MAC_NAME_NEO="neo"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH

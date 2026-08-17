@@ -1,12 +1,8 @@
 {
-	"dart_sdk_path": "/Users/djzhang/Documents/flutter/bin/cache/dart-sdk",
-	"ignored_packages":
-	[
-	],
-	"save_on_focus_lost": true,
-	"update_check": false,
-	"vintage_start_in_command_mode": true,
-	"theme": "auto",
-	"color_scheme": "Packages/Github Color Theme/GitHub.tmTheme",
-	"index_files": false,
+  "ignored_packages": [],
+  "save_on_focus_lost": true,
+  "update_check": false,
+  "vintage_start_in_command_mode": true,
+  "theme": "auto",
+  "index_files": false,
 }
