@@ -18,7 +18,7 @@ local chooser = hs.chooser.new(function(choice)
         focusLastFocused()
         return
     end
-    hs.printf("%s = %s", "Choice subText:", choice["subText"])
+    hs.printf("%s = %s", "Choice subText:", choice["tag"])
 
     local tag = choice["tag"]
 
@@ -318,5 +318,4 @@ local function Show_Games_list_Chooser()
     chooser:show()
 end
 
-hs.hotkey.bind(GameHotkeyMods, "-", Show_Games_list_Chooser)
 hs.hotkey.bind(GameHotkeyMods, "=", Show_Games_list_Chooser)

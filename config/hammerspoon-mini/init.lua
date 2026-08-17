@@ -29,11 +29,23 @@ TAGGameFolder = "/Volumes/MacOS/Users/djzhang/Desktop/TAGGame/"
 InlineConfigAppInNornal = "Contents/Configure.app"
 InlineConfigAppInToxicGame = "Contents/Resources/Toxic Engine.app"
 
+GMediaFoldPath = "/Volumes/MacGame/movies/tmpFold"
+GTotalVideoPlayerAppName = "Total Video Player.app"
+GTotalVideoPlayerBinName = "Total Video Player"
+GTotalVideoPlayerBinPath = GGameVolume
+    .. "/MacCache/APPS_mini/Applications/"
+    .. GTotalVideoPlayerAppName
+    .. "/Contents/MacOS/"
+    .. GTotalVideoPlayerBinName
+
 GameHotkeyMods = { "Cmd", "Alt", "shift", "ctrl" }
 
 -- require "reload.reload"
 require("utils.tools")
 require("utils.string_utils")
+-- system
+require("system.system_utils")
+require("system.gui_list_all_media_files")
 -- applications
 require("applications.app_utils")
 require("applications.app_kill")

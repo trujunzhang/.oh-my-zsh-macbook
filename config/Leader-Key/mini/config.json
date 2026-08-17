@@ -76,6 +76,11 @@
           "key" : "t",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Transmit.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Sublime Text.app"
         }
       ],
       "key" : "a",

@@ -1,0 +1,45 @@
+local function focusLastFocused()
+    local wf = hs.window.filter
+    local lastFocused = wf.defaultCurrentSpace:getWindows(wf.sortByFocusedLast)
+    if #lastFocused > 0 then
+        lastFocused[1]:focus()
+    end
+end
+
+local chooser = nil
+
+chooser = hs.chooser.new(function(choice)
+    if not choice then
+        focusLastFocused()
+        return
+    end
+    hs.printf("%s = %s", "Choice subText:", choice["tag"])
+
+    local tag = choice["tag"]
+
+    if chooser ~= nil then
+        chooser:hide()
+    end
+
+    hs.timer.doAfter(0.5, function()
+        local shell_command = '"' .. GTotalVideoPlayerBinPath .. '" "file://' .. tag .. '"'
+
+        hs.printf("%s = %s", "shell command:", shell_command)
+        hs.execute(shell_command)
+    end)
+end)
+
+-- Set the height of the chooser to display 10 rows
+chooser:rows(20)
+chooser:placeholderText("Select a media file to play")
+
+function Show_All_Media_Files_list_Chooser()
+    local myArray = ListAllFilesInMediaFolder(GMediaFoldPath)
+
+    chooser:choices(myArray)
+
+    chooser:query("")
+    chooser:show()
+end
+
+hs.hotkey.bind(GameHotkeyMods, "-", Show_All_Media_Files_list_Chooser)
