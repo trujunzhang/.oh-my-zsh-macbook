@@ -42,6 +42,7 @@ GameHotkeyMods = { "Cmd", "Alt", "shift", "ctrl" }
 
 -- require "reload.reload"
 require("utils.tools")
+require("utils.file_utils")
 require("utils.string_utils")
 -- system
 require("system.system_utils")

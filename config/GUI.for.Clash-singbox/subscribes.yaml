@@ -5,7 +5,7 @@
   download: 0
   total: 0
   expire: null
-  updateTime: 1786699837703
+  updateTime: 1787042480002
   type: Http
   url: https://myclashes.top/sub?token=63a55a45114761972f3f6310abe6df74&clash
   website: ""
@@ -30,39 +30,96 @@
       return { proxies, subscription }
     }
   proxies:
-    - id: ID_uwjz3sdf
-      name: CF官方优选1
+    - id: ID_hkiwb0lg
+      name: wh1
       type: vless
-    - id: ID_m4w4la5g
-      name: CF官方优选2
+    - id: ID_kb6w4yqs
+      name: wh2
       type: vless
-    - id: ID_g79yzfga
-      name: CF官方优选3
+    - id: ID_74iyzj43
+      name: wh3
       type: vless
-    - id: ID_37yh6p2z
-      name: CF官方优选4
+    - id: ID_bhnq2tj6
+      name: visa.cn
       type: vless
-    - id: ID_ftiaop9s
-      name: CF官方优选5
+    - id: ID_5qt7osyr
+      name: JP
       type: vless
-    - id: ID_0y4qahle
-      name: CF官方优选6
+    - id: ID_nwvwhg91
+      name: JP 2
       type: vless
-    - id: ID_h73njchy
-      name: CF官方优选7
+    - id: ID_g65jdu0p
+      name: KR
       type: vless
-    - id: ID_gnov9nso
-      name: CF官方优选8
+    - id: ID_1pp753fl
+      name: JP 3
       type: vless
-    - id: ID_vpsropdw
-      name: CF官方优选9
+    - id: ID_9lzyl9st
+      name: CF优选 169ms 21.19MB/s
       type: vless
-    - id: ID_ud0orfx3
-      name: CF官方优选10
+    - id: ID_zax8y4ar
+      name: CF优选 101.98ms 21.19MB/s
       type: vless
-    - id: ID_e6hcruzd
-      name: CF官方优选11
+    - id: ID_ifonvv43
+      name: CF优选 167.67ms 21.18MB/s
       type: vless
-    - id: ID_xmb8qd4k
-      name: CF官方优选12
+    - id: ID_fab857ro
+      name: CF优选 168.94ms 21.1MB/s
+      type: vless
+    - id: ID_9brao1g9
+      name: CF优选 170.63ms 21.1MB/s
+      type: vless
+    - id: ID_n45g3aaj
+      name: CF优选 167.99ms 21.09MB/s
+      type: vless
+    - id: ID_q1d3eep8
+      name: CF优选 169.45ms 21.08MB/s
+      type: vless
+    - id: ID_0w1opgxl
+      name: CF优选 172.88ms 21.07MB/s
+      type: vless
+    - id: ID_yyofo8xt
+      name: CF优选 168.17ms 21.06MB/s
+      type: vless
+    - id: ID_mrtz99hj
+      name: CF优选 168.02ms 21.05MB/s
+      type: vless
+    - id: ID_seau2sgy
+      name: CF优选 172.65ms 21.02MB/s
+      type: vless
+    - id: ID_8bmh2lxh
+      name: CF优选 168.9ms 21.02MB/s
+      type: vless
+    - id: ID_7hq4s0gn
+      name: CF优选 170.32ms 21.01MB/s
+      type: vless
+    - id: ID_j41zrodd
+      name: CF优选 172.81ms 21.01MB/s
+      type: vless
+    - id: ID_qweo94ah
+      name: CF优选 169.84ms 21MB/s
+      type: vless
+    - id: ID_mhn9ir0k
+      name: CF优选 170.04ms 20.99MB/s
+      type: vless
+    - id: ID_435nw2wt
+      name: CF优选 168.62ms 20.99MB/s
+      type: vless
+    - id: ID_5v7btpw2
+      name: CF优选 168.29ms 20.98MB/s
+      type: vless
+    - id: ID_41r2ldcq
+      name: CF优选 35.28ms 20.97MB/s
+      type: vless
+    - id: ID_oiz7dx5t
+      name: CF优选 169.43ms 20.97MB/s
+      type: vless
+    - id: ID_cgypula7
+      name: CF优选 171.65ms 20.97MB/s
+      type: vless
+    - id: ID_86nq9vt9
+      name: CF优选 171.89ms 20.96MB/s
+      type: vless
+    - id: ID_u77b0ieb
+      name: CF优选 171.09ms 20.95MB/s
       type: vless

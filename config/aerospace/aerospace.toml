@@ -350,6 +350,10 @@ if.app-id = 'org.videolan.vlc'
 run = 'move-node-to-workspace L'
 
 [[on-window-detected]]
+if.app-id = 'com.etinysoft.totalvideoplayer'
+run = 'move-node-to-workspace L'
+
+[[on-window-detected]]
 if.app-id = 'com.clickup.desktop-app'
 run = 'move-node-to-workspace U'
 

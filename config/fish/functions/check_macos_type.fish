@@ -20,5 +20,5 @@ function welcome_message
         set -gx MY_MAC_NAME $MAC_NAME_NEO
     end
 
-    echo "Welcome $USER! Checking the current macos system type is $MY_MAC_TYPE, name is $MY_MAC_NAME"
+    # echo "Welcome $USER! Checking the current macos system type is $MY_MAC_TYPE, name is $MY_MAC_NAME"
 end

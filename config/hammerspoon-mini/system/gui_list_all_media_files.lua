@@ -13,16 +13,24 @@ chooser = hs.chooser.new(function(choice)
         focusLastFocused()
         return
     end
-    hs.printf("%s = %s", "Choice subText:", choice["tag"])
+    hs.printf("%s = %s", "Choice subText:", choice["mediaFile"])
 
-    local tag = choice["tag"]
+    local mediaFile = choice["mediaFile"]
+    local mediaSrt = choice["mediaSrt"]
 
     if chooser ~= nil then
         chooser:hide()
     end
 
     hs.timer.doAfter(0.5, function()
-        local shell_command = '"' .. GTotalVideoPlayerBinPath .. '" "file://' .. tag .. '"'
+        local shell_command = '"' .. GTotalVideoPlayerBinPath .. '" "file://' .. mediaFile .. '" '
+        -- .. '--sub-language "中文 (繁體) -[Chinese]" '
+        -- .. '--sub-language "中文（繁體）-「Chinesel" '
+        -- .. '--sub-language=zh-TW '
+
+        if mediaSrt ~= nil then
+            shell_command = shell_command .. '--sub-file "' .. mediaSrt .. '" '
+        end
 
         hs.printf("%s = %s", "shell command:", shell_command)
         hs.execute(shell_command)

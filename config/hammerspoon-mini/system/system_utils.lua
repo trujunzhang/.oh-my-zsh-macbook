@@ -1,10 +1,30 @@
+local function getFilesWithExtension(path, ext)
+    local allFiles = hs.fs.fileListForPath(path, { subdirs = true, ignore = {} })
+
+    local foundFile = nil
+
+    for _, filepath in ipairs(allFiles) do
+        if filepath:match("%." .. ext .. "$") then
+            foundFile = filepath
+        end
+    end
+    return foundFile
+end
+
 local function generateArrayWithAllFiles(mediaExt, array, mediaFilePath)
-    local parentName = mediaFilePath:match("^.+/(.-)/[^/]+$")
-    print("Found " .. mediaExt .. " file: " .. mediaFilePath)
-    print("Found " .. mediaExt .. " parent folder: " .. parentName)
+    local parentName = Get_Parent_Name(mediaFilePath)
+    local parentPath = Get_Parent_Path(mediaFilePath)
+
+    local srtFile = getFilesWithExtension(parentPath, "srt")
+
+    hs.printf("Found %s file: %s", mediaExt, mediaFilePath)
+    hs.printf("Found %s srt file: %s", mediaExt, srtFile)
+    hs.printf("Found %s parent file: %s", mediaExt, parentName)
+
     local dict = {}
     dict["text"] = parentName
-    dict["tag"] = mediaFilePath
+    dict["mediaFile"] = mediaFilePath
+    dict["mediaSrt"] = srtFile
 
     table.insert(array, dict)
 end
