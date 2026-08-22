@@ -21,8 +21,6 @@ local function generateArrayWithAllFiles(mediaExt, array, mediaFilePath)
     hs.printf("Found %s srt file: %s", mediaExt, srtFile)
     hs.printf("Found %s parent file: %s", mediaExt, parentName)
 
-    local dict = {}
-
     local myRed = { red = 1.0, green = 0.0, blue = 0.0, alpha = 0.5 }
 
     local textColor = { red = 0.0, green = 0.0, blue = 1.0, alpha = 0.5 }
@@ -35,6 +33,7 @@ local function generateArrayWithAllFiles(mediaExt, array, mediaFilePath)
         color = textColor,
     })
 
+    local dict = {}
     dict["text"] = fancyText
     dict["mediaFile"] = mediaFilePath
     dict["mediaSrt"] = srtFile

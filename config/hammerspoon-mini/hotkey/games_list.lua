@@ -306,14 +306,46 @@ local menus = {
     -- },
 }
 
-chooser:choices(menus)
-
 -- Set the height of the chooser to display 10 rows
 chooser:rows(20)
 
 chooser:placeholderText("Select a game")
 
+local function fix_menus()
+    local myArray = {}
+    for index, value in ipairs(menus) do
+        local text = value["text"]
+        local tag = value["tag"]
+
+        local appName = FixGameAppName(tag:gsub("-", " "))
+        GCurrentGameName = appName
+        CheckAppExistedByPrefix(appName)
+
+        local appPath = KegworksGames .. GCurrentGameName
+
+        -- hs.printf("%s = %s", "appPath:", appPath)
+
+        if DoesDirectoryExist(appPath) then
+            local textColor = { red = 1.0, green = 0.0, blue = 0.0, alpha = 0.5 }
+            local fancyText = hs.styledtext.new(text, {
+                font = { name = "Futura", size = 18 },
+                color = textColor,
+            })
+            local dict = {}
+            dict["text"] = fancyText
+            dict["tag"] = value["tag"]
+
+            table.insert(myArray, dict)
+        end
+    end
+
+    return myArray
+end
+
 local function Show_Games_list_Chooser()
+    local fixedMenus = fix_menus()
+    chooser:choices(fixedMenus)
+
     chooser:query("")
     chooser:show()
 end
