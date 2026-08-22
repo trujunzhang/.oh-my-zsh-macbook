@@ -111,3 +111,5 @@
     - id: ID_vt9rlct3
       tag: 🇺🇸 US 6
       type: vless
+  requestProxyMode: system
+  customProxy: ""

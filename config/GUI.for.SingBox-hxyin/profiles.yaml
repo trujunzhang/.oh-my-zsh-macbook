@@ -140,6 +140,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_fvvs6zzl
         type: protocol
         payload: dns
@@ -149,6 +150,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_his7bjmm
         type: clash_mode
         payload: direct
@@ -158,6 +160,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_bdhrphz9
         type: clash_mode
         payload: global
@@ -167,6 +170,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_4w3146cy
         type: protocol
         payload: quic
@@ -176,6 +180,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_b1q6bhdn
         type: rule_set
         payload: Category-Ads
@@ -185,6 +190,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_9lpazi6y
         type: rule_set
         payload: GeoSite-Private
@@ -194,6 +200,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_bnz6kzmu
         type: rule_set
         payload: GeoSite-CN
@@ -203,6 +210,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_8jvk08nd
         type: rule_set
         payload: GeoIP-Private
@@ -212,6 +220,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_5hqv951j
         type: rule_set
         payload: GeoIP-CN
@@ -221,6 +230,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
       - id: ID_5oc3v4f4
         type: rule_set
         payload: GeoLocation-!CN
@@ -230,6 +240,7 @@
         sniffer: []
         strategy: default
         server: ""
+        enable: true
     rule_set:
       - id: Category-Ads
         type: remote
@@ -356,6 +367,7 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
+        enable: true
       - id: ID_qlw24gmy
         type: clash_mode
         payload: global
@@ -365,6 +377,7 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
+        enable: true
       - id: ID_8udrth4h
         type: rule_set
         payload: GeoSite-CN
@@ -374,6 +387,7 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
+        enable: true
       - id: ID_rthp27nr
         type: rule_set
         payload: GeoLocation-!CN
@@ -383,6 +397,7 @@
         strategy: default
         disable_cache: false
         client_subnet: ""
+        enable: true
     disable_cache: false
     disable_expire: false
     independent_cache: false

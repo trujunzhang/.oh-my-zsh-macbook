@@ -22,7 +22,20 @@ local function generateArrayWithAllFiles(mediaExt, array, mediaFilePath)
     hs.printf("Found %s parent file: %s", mediaExt, parentName)
 
     local dict = {}
-    dict["text"] = parentName
+
+    local myRed = { red = 1.0, green = 0.0, blue = 0.0, alpha = 0.5 }
+
+    local textColor = { red = 0.0, green = 0.0, blue = 1.0, alpha = 0.5 }
+    if srtFile ~= nil then
+        textColor = myRed
+    end
+
+    local fancyText = hs.styledtext.new(parentName, {
+        font = { name = "Futura", size = 14 },
+        color = textColor,
+    })
+
+    dict["text"] = fancyText
     dict["mediaFile"] = mediaFilePath
     dict["mediaSrt"] = srtFile
 
@@ -30,13 +43,6 @@ local function generateArrayWithAllFiles(mediaExt, array, mediaFilePath)
 end
 
 function ListAllFilesInMediaFolder(mediaFoldPath)
-    -- Get all non-hidden files
-    -- local files = hs.fs.fileListForPath(mediaFoldPath)
-
-    -- for _, filepath in ipairs(files) do
-    --     print(filepath)
-    -- end
-
     local myArray = {}
 
     -- Get all files including hidden dot-files and subdirectories
@@ -53,6 +59,8 @@ function ListAllFilesInMediaFolder(mediaFoldPath)
             generateArrayWithAllFiles(targetMp4Ext, myArray, filepath)
         end
     end
+
+    hs.printf("")
 
     return myArray
 end

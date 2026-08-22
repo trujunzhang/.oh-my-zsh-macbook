@@ -164,7 +164,7 @@ function link_config_fold {
 
     # clash
     mkdir -p "$HOME/.config/clash"
-    # fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/djzhang/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml" "delete"
+    fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/djzhang/djzhang.trujunzhang.workers.dev.yaml" "$HOME/.config/clash/config.yaml" "delete"
     # fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/singbox/singbox.yaml" "$HOME/.config/clash/singbox.yaml" "delete"
     # fileLink "clash(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/cloudflare/edgetunnel/singbox/singbox-domain.yaml" "$HOME/.config/clash/singbox.yaml" "delete"
 
@@ -389,8 +389,8 @@ function link_symlink {
     # v1.8.8
     # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-djzhang" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
     # v1.9.3
-    # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-hxyin" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
-    directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-singbox" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
+    directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-hxyin" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
+    # directoryLink "SingBox(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/GUI.for.SingBox-singbox" "/Users/djzhang/Library/Application Support/GUI.for.SingBox" "delete"
 
     # GUI.for.clash
     # v1.14.1(ok)

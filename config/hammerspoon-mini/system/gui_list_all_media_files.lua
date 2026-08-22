@@ -40,6 +40,9 @@ end)
 -- Set the height of the chooser to display 10 rows
 chooser:rows(20)
 chooser:placeholderText("Select a media file to play")
+local myRed = { red = 1.0, green = 0.0, blue = 0.0, alpha = 0.5 }
+-- chooser:subTextColor(hs.drawing.color.x11.blue)
+-- chooser:subTextColor(myRed)
 
 function Show_All_Media_Files_list_Chooser()
     local myArray = ListAllFilesInMediaFolder(GMediaFoldPath)
