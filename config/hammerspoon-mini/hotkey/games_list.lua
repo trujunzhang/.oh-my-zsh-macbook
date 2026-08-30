@@ -308,7 +308,7 @@ local menus = {
 
 -- Set the height of the chooser to display 10 rows
 chooser:rows(20)
-
+-- chooser:fgColor(hs.drawing.color.x11.red)
 chooser:placeholderText("Select a game")
 
 local function fix_menus()
@@ -326,7 +326,11 @@ local function fix_menus()
         -- hs.printf("%s = %s", "appPath:", appPath)
 
         if DoesDirectoryExist(appPath) then
-            local textColor = { red = 1.0, green = 0.0, blue = 0.0, alpha = 0.5 }
+            -- local textColor = { red = 1.0, green = 0.0, blue = 0.0, alpha = 0.5 }
+            -- 253, 240, 213
+            -- 253, 240, 213
+            -- 255, 117, 143
+            local textColor = { red = 253 / 255, green = 117 / 255, blue = 143 / 255, alpha = 1.0 }
             local fancyText = hs.styledtext.new(text, {
                 font = { name = "Futura", size = 18 },
                 color = textColor,
@@ -342,8 +346,12 @@ local function fix_menus()
     return myArray
 end
 
+local fixedMenus = fix_menus()
+
 local function Show_Games_list_Chooser()
-    local fixedMenus = fix_menus()
+    if fixedMenus == nil then
+        fixedMenus = fix_menus()
+    end
     chooser:choices(fixedMenus)
 
     chooser:query("")

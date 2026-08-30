@@ -38,7 +38,9 @@ function Show_Bluetooth_PS5_Battery_Info()
 
     hs.timer.doAfter(10, function()
         if targetGameWindow then
-            hs.eventtap.keyStroke({ "CMD" }, "W")
+            -- hs.eventtap.keyStroke({ "CMD" }, "W")
+
+            hs.execute("killall 'System Settings'")
         end
     end)
 end

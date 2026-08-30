@@ -37,7 +37,8 @@ hs.hotkey.bind(GameHotkeyMods, "S", Play_Split_Fiction)
 -- hs.hotkey.bind(GameHotkeyMods, "H", Play_The_Witcher_3_Wild_Hunt)
 hs.hotkey.bind(GameHotkeyMods, "H", Play_Hogwarts_Legacy)
 
-hs.hotkey.bind(GameHotkeyMods, "T", Play_Ghost_of_Tsushima)
+hs.hotkey.bind(GameHotkeyMods, "T", Play_Titanfall_2)
+-- hs.hotkey.bind(GameHotkeyMods, "T", Play_Ghost_of_Tsushima)
 -- hs.hotkey.bind(GameHotkeyMods, "J", Play_Just_Cause_4)
 
 hs.hotkey.bind(GameHotkeyMods, "W", Play_Warcraft_3_The_Frozen_Throne)

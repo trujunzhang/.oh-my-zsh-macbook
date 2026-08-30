@@ -674,6 +674,16 @@ function Play_Atomic_Heart()
     ActiveWindow(30)
 end
 
+function Play_Titanfall_2()
+    local app_name = "Titanfall 2"
+
+    BeforePlayGame(app_name, app_name, function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(40)
+end
+
 function Play_GTA_V_Enhanced()
     -- GTA-V-Enhanced\/Grand Theft Auto V Enhanced\/PlayGTAV.exe
     -- GTA-V-Enhanced\/Grand Theft Auto V Enhanced\/PlayGTAV.exe
