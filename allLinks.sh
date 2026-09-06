@@ -10,12 +10,12 @@ source ./bash/games/games-data.sh
 CURRENT=$(pwd)
 # Folders in Home.
 
-if [[ $(uname -m) == 'arm64' ]]; then
+if [[ $MY_MAC_TYPE == "$MAC_TYPE_MINI" ]]; then
     # info M2
     ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
 fi
 
-if [[ $(uname -m) == 'x86_64' ]]; then
+if [[ $MY_MAC_TYPE == "$MAC_TYPE_PRO" ]]; then
     # info Mackook
     ORGANIZATIONS_HOME="$HOME/Documents/Organizations"
 fi
@@ -23,18 +23,18 @@ fi
 TRUJUNZHANG_DOTFILES_HOME="$ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook"
 HOMEBREW_HOME="$(brew --prefix)"
 
-info "                         "
-info "=================================================================================="
-info "Bash version ${BASH_VERSION}...           "
-info "                                          "
-info "** CURRENT:                                "
-info "$CURRENT"
-info "** ORGANIZATIONS_HOME:                     "
-info "$ORGANIZATIONS_HOME"
-info "** TRUJUNZHANG_DOTFILES_HOME:              "
-info "$TRUJUNZHANG_DOTFILES_HOME"
-info "=================================================================================="
-info "                                          "
+show_info() {
+    info "                         "
+    info "=================================================================================="
+    info "Bash version ${BASH_VERSION}...           "
+    info "                                          "
+    info "** CURRENT:                         ${CURRENT}       "
+    info "** ORGANIZATIONS_HOME:              ${ORGANIZATIONS_HOME}       "
+    info "** TRUJUNZHANG_DOTFILES_HOME:       ${TRUJUNZHANG_DOTFILES_HOME}       "
+    info "** HOMEBREW_HOME:                   ${HOMEBREW_HOME}       "
+    info "=================================================================================="
+    info "                                          "
+}
 
 # ====================================================================
 # ====================================================================
@@ -549,7 +549,9 @@ mkdir -p "$HOME/.local/share"
 mkdir -p "$HOME/.local/bin"
 mkdir -p "$HOME/.config"
 
-mkdir -p "/Volumes/MacOS/Users/djzhang/Desktop/TAGGame"
+if [[ $MY_MAC_TYPE == "$MAC_TYPE_MINI" ]]; then
+    mkdir -p "/Volumes/MacOS/Users/djzhang/Desktop/TAGGame"
+fi
 
 link_homebrew
 link_applescript
@@ -562,10 +564,12 @@ link_pods_shell
 link_run_apps_shell
 link_nginx_http
 # link_mac_app_cloud
-if [[ $(uname -m) == 'arm64' ]]; then
+if [[ $MY_MAC_TYPE == "$MAC_TYPE_MINI" ]]; then
     # info M2
     link_mac_user
 fi
 link_games_save_location_path
 link_apps_games_in_applications
 link_saved_games_location
+
+show_info

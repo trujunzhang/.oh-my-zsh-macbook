@@ -139,6 +139,10 @@ if [ -d $HOME/.jenv ]
     eval (jenv init - | source)
 end
 
+if [ -d $HOME/Applications/vphone-cli.app ]
+    fish_add_path "$HOME/Applications/vphone-cli.app/Contents/MacOS"
+end
+
 # set -e JAVA_HOME ( jenv javahome )
 
 # ======================================================================

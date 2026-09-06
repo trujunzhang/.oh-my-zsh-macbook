@@ -133,6 +133,10 @@ function ActiveWindow(interval)
             )
         )
     end)
+
+    hs.timer.doAfter(120, function()
+        hs.mouse.setAbsolutePosition({ x = 0, y = 0 })
+    end)
 end
 
 function ClickPlayButton(app_name, interval)
