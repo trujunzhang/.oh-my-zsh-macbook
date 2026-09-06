@@ -123,3 +123,4 @@ fi
 
 export TRUJUNZHANG_DOTFILES_HOME="$HOME/_oh-my-zsh-macbook"
 alias okular="flatpak run org.kde.okular"
+alias link_okular_to_bin_folder="sudo link -s $HOME/_oh-my-zsh-macbook/linux/okular/okular_demo.sh /usr/bin/okular-session"
