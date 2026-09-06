@@ -7,17 +7,24 @@ pdf_folder="$HOME/Desktop/lessons"
 
 SESSION_FILE="$file_path"
 
-scan_pdf_folders() {
+walk_dir() {
+    shopt -s globstar
     contained_string="dj_"
 
-    for pathname in "$pdf_folder"/*; do
-        if [ -f "$pathname" ]; then
+    for pathname in "$1"/*; do
+        if [ -d "$pathname" ]; then
+            walk_dir "$pathname"
+        elif [ -f "$pathname" ]; then
             if [[ "$pathname" == *"$contained_string"* ]]; then
                 document_path="$pathname"
                 RESTORED_SESSION+=("$document_path")
             fi
         fi
     done
+}
+
+scan_pdf_folders() {
+    walk_dir "$pdf_folder"
 }
 
 # restore_saved_session() {
@@ -65,6 +72,5 @@ run_okular_xxx() {
     "$OKULAR_BIN" "${launch_args[@]}"
 }
 
-# restore_saved_session
 scan_pdf_folders
 run_okular
