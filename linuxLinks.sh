@@ -10,7 +10,7 @@ source ./bash/games/games-data.sh
 CURRENT=$(pwd)
 # Folders in Home.
 
-TRUJUNZHANG_DOTFILES_HOME="$CURRENT"
+# TRUJUNZHANG_DOTFILES_HOME="$CURRENT"
 
 show_info() {
     info "                         "
@@ -24,8 +24,9 @@ show_info() {
 }
 
 link_common() {
-    # zshrc(rc)
-    fileLink ".zsh(env)" "$TRUJUNZHANG_DOTFILES_HOME/zshenv-linux.symlink" "$HOME/.zshenv"
+    # bash
+    # fileLink ".bash(profile)" "$TRUJUNZHANG_DOTFILES_HOME/bash_profile.symlink" "$HOME/.bash_profile"
+    fileLink ".bash(rc)" "$TRUJUNZHANG_DOTFILES_HOME/bashrc_linux.symlink" "$HOME/.bashrc"
 }
 
 link_common
