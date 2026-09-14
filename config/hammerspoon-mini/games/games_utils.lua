@@ -35,7 +35,7 @@ function BeforePlayGame(app_name, game_foler_name, runApp)
     DoesGameTagFileExist(app_name, game_foler_name, runApp, DoPlayGame, DoOpenAndVerifyGame)
 end
 
-function DoOpenAndVerifyGame(appName, game_foler_name)
+function DoOpenAndVerifyGame(appName, game_foler_name, runApp)
     hs.notify.new({ title = "Verifing game", informativeText = "Start it" }):send()
 
     appName = FixGameAppName(appName)
@@ -79,6 +79,8 @@ function DoOpenAndVerifyGame(appName, game_foler_name)
                     if DoesDirectoryExist(gamesFolder) then
                         MoveMacOSFolder(GCurrentGameName, "Moved from tmp folder sucessfully", tmpPath, gamePath)
                         WriteGameTagFile(appName)
+                        -- finally, run the game
+                        DoPlayGame(appName, runApp)
                     else
                         hs.notify.new({ title = "Moving from tmp folder", informativeText = "run it failed" }):send()
                     end

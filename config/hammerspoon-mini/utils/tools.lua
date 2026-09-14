@@ -107,7 +107,7 @@ function DoesGameTagFileExist(app_name, game_foler_name, runApp, existFunc, notE
         existFunc(app_name, runApp)
     else
         OpenGameStatus = "verify"
-        notExistFunc(app_name, game_foler_name)
+        notExistFunc(app_name, game_foler_name, runApp)
     end
 end
 

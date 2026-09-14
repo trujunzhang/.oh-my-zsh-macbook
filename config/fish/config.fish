@@ -93,16 +93,23 @@ fish_add_path "$HOME/.local/bin"
 fish_add_path "$HOME/Documents/Organizations/__APPLICATIONS/BinApps"
 
 if test $MY_MAC_TYPE = $MAC_TYPE_MINI
+    fish_add_path "$HOME/.local/bin/maestro/bin"
     fish_add_path "$HOME/.local/bin/helix-aarch64-macos"
     # https://github.com/zellij-org/zellij/releases/tag/v0.43.1
-    # fish_add_path "$HOME/.local/bin/zellij/0.43.1"
-    fish_add_path "$HOME/.local/bin/zellij/0.44.3"
+    fish_add_path "$HOME/.local/bin/zellij/0.45.1"
     fish_add_path "$HOME/.local/bin/starship"
-    fish_add_path "$HOME/.local/bin/asdf/0.19.0"
+    fish_add_path "$HOME/.local/bin/asdf/0.20.0"
     fish_add_path "$HOME/.local/bin/lazygit/0.63.0"
     fish_add_path "$HOME/.local/bin/fzf/0.73.1"
     fish_add_path "$HOME/.local/bin/android-platform-tools/37.0.0/platform-tools"
     fish_add_path "$HOME/.local/bin/nvim-macos-arm64/bin"
+
+    # python version on the homebrew
+
+    set PYTHON_ON_HOMEBREW "$(brew --prefix python)/libexec/bin"
+
+    # echo "python on homebrew: $PYTHON_ON_HOMEBREW"
+    fish_add_path "$PYTHON_ON_HOMEBREW"
 end
 
 if test $MY_MAC_TYPE = $MAC_TYPE_PRO

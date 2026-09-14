@@ -81,6 +81,16 @@
           "key" : "s",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Sublime Text.app"
+        },
+        {
+          "key" : "o",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/okular.app"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Applications/Parallels Desktop.app"
         }
       ],
       "key" : "a",
@@ -144,6 +154,11 @@
           "key" : "7",
           "type" : "application",
           "value" : "/Volumes/MacUser/djzhang/Applications/Brave Browser Nightly.app"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/Vivaldi Snapshot.app"
         }
       ],
       "key" : "b",

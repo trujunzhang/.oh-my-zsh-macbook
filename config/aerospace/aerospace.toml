@@ -354,6 +354,10 @@ if.app-id = 'com.etinysoft.totalvideoplayer'
 run = 'move-node-to-workspace L'
 
 [[on-window-detected]]
+if.app-id = 'com.mobiledev.maestro-studio'
+run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
 if.app-id = 'com.clickup.desktop-app'
 run = 'move-node-to-workspace U'
 
@@ -433,6 +437,10 @@ run = 'move-node-to-workspace 7'
 # 5 web browser
 [[on-window-detected]]
 if.app-id = 'com.vivaldi.Vivaldi'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'com.vivaldi.Vivaldi.snapshot'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
