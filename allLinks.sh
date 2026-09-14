@@ -476,6 +476,9 @@ function link_mac_user {
     directoryLink "app(brave nightly)" "$HOME/Applications/Browser Nightly.app" "/Applications/Browser Nightly.app"
 
     # infuse
+    directoryLink "Parallels(vm)" "$HOME_MACGAME_PATH/Parallels" "$HOME/Parallels"
+
+    # infuse
     directoryLink "fold(infuse)" "$HOME_MACGAME_PATH/movies/tmpFold" "$HOME/Movies/Infuse/tmpFold"
 
     # orbstack
