@@ -124,7 +124,7 @@ fi
 export TRUJUNZHANG_DOTFILES_HOME="$HOME/_oh-my-zsh-macbook"
 alias okular="flatpak run org.kde.okular"
 alias link_okular_to_bin_folder="sudo link $HOME/_oh-my-zsh-macbook/linux/okular/okular_demo.sh /usr/bin/okular-session"
-alias link_okular_to_app_folder="sudo link $HOME/_oh-my-zsh-macbook/linux/okular/okular-session.desktop /usr/share/application/okular-session.desktop"
+alias link_okular_to_app_folder="sudo link $HOME/_oh-my-zsh-macbook/linux/okular/okular-session.desktop /usr/share/applications/okular-session.desktop"
 
 # https://extensions.gnome.org/
 alias dfedora_install_gnome_extensions="sudo dnf install gnome-extensions-app"
@@ -133,9 +133,12 @@ alias dfedora_install_gnome_extensions="sudo dnf install gnome-extensions-app"
 alias dfedora_show_battery_percentage="gsettings set org.gnome.desktop.interface show-battery-percentage true"
 
 # okular on the fedora
+alias dfedora_dnf_upgrade="sudo dnf upgrade --refresh"
 alias dfedora_install_flatpak="sudo dnf install flatpak"
 alias dfedora_add_flatpak="sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo"
 alias dfedora_install_okular="sudo flatpak install flathub org.kde.okular"
+
+alias dfedora_install_gnome_tweaks="sudo dnf install gnome-tweaks"
 
 
 
