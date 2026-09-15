@@ -10,7 +10,7 @@ source ./bash/games/games-data.sh
 CURRENT=$(pwd)
 # Folders in Home.
 
-# TRUJUNZHANG_DOTFILES_HOME="$CURRENT"
+TRUJUNZHANG_DOTFILES_HOME="$CURRENT"
 
 show_info() {
     info "                         "

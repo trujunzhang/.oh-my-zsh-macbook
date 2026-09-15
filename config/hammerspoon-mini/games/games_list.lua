@@ -321,6 +321,8 @@ local function fix_menus()
         GCurrentGameName = appName
         CheckAppExistedByPrefix(appName)
 
+        local filePath = TAGGameFolder .. appName
+
         local appPath = KegworksGames .. GCurrentGameName
 
         -- hs.printf("%s = %s", "appPath:", appPath)
@@ -331,6 +333,10 @@ local function fix_menus()
             -- 253, 240, 213
             -- 255, 117, 143
             local textColor = { red = 253 / 255, green = 117 / 255, blue = 143 / 255, alpha = 1.0 }
+
+            if DoesFileExist(filePath) then
+                textColor = { red = 72 / 255, green = 202 / 255, blue = 228 / 255, alpha = 1.0 }
+            end
             local fancyText = hs.styledtext.new(text, {
                 font = { name = "Futura", size = 18 },
                 color = textColor,

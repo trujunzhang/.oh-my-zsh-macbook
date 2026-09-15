@@ -111,6 +111,10 @@ function DoesGameTagFileExist(app_name, game_foler_name, runApp, existFunc, notE
     end
 end
 
+function DoesFileExist(path)
+    return hs.fs.attributes(path)
+end
+
 function DoesDirectoryExist(path)
     local attr = hs.fs.attributes(path)
     return attr and attr.mode == "directory"
