@@ -24,7 +24,7 @@ scan_pdf_folders() {
 
 run_okular() {
     launch_args=("${RESTORED_SESSION[@]}")
-    /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=okular --file-forwarding org.kde.okular "${launch_args[@]}"
+    "$HOME/Applications/okular.app/Contents/MacOS/okular" "${launch_args[@]}"
 }
 
 scan_pdf_folders

@@ -442,9 +442,11 @@ function link_getx_shell {
 # ios cocoapods for React native
 # ======================================
 
-function link_pods_shell {
+function link_user_bin_shell {
     fileLink "Cocoapods(offline)" "$TRUJUNZHANG_DOTFILES_HOME/USERS/cocoapods/offline_local_ios_pods.sh" "$SYSTEM_BIN_PATH/offline_local_ios_pods"
     chmod +x "$SYSTEM_BIN_PATH/offline_local_ios_pods"
+
+    fileLink "okular(run)" "$TRUJUNZHANG_DOTFILES_HOME/linux/okular/okular_macos.sh" "$SYSTEM_BIN_PATH/okular_macos"
 }
 
 # ======================================
@@ -562,8 +564,8 @@ link_config_fold
 link_ide_configs
 link_symlink
 # link_cocoapods
-link_getx_shell
-link_pods_shell
+# link_getx_shell
+link_user_bin_shell
 link_run_apps_shell
 link_nginx_http
 # link_mac_app_cloud

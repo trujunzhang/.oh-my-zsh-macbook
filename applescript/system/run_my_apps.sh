@@ -35,17 +35,19 @@ for i in $(seq 0 4 $((json_array_len - 1))); do
     application=${values[$((i + 2))]}
     enable=${values[$((i + 3))]}
 
-    echo "name: $name"
+    echo "name:        $name"
     echo "application: $application"
+    echo "type:        $type"
+    echo "enable:      $enable"
     echo "                         "
 
     if [ "$enable" = "1" ]; then
         if [ "$type" = "book" ]; then
             open "$application"
-        fi
-
-        if [ "$type" = "application" ]; then
+        elif [ "$type" = "application" ]; then
             open -a "$application"
+        elif [ "$type" = "localShellFile" ]; then
+            bash "$HOME/.local/bin/${application}"
         fi
     fi
 

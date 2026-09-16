@@ -375,6 +375,10 @@ if.app-id = 'com.superace.updf.mac'
 run = 'move-node-to-workspace P'
 
 [[on-window-detected]]
+if.app-id = 'org.kde.okular'
+run = 'move-node-to-workspace O'
+
+[[on-window-detected]]
 if.app-id = 'com.qoppa.PDFStudio'
 run = 'move-node-to-workspace P'
 

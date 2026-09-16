@@ -332,10 +332,10 @@ local function fix_menus()
             -- 253, 240, 213
             -- 253, 240, 213
             -- 255, 117, 143
-            local textColor = { red = 253 / 255, green = 117 / 255, blue = 143 / 255, alpha = 1.0 }
+            local textColor = GFileNotFoundColor
 
             if DoesFileExist(filePath) then
-                textColor = { red = 72 / 255, green = 202 / 255, blue = 228 / 255, alpha = 1.0 }
+                textColor = GFileExistedColor
             end
             local fancyText = hs.styledtext.new(text, {
                 font = { name = "Futura", size = 18 },

@@ -13,12 +13,6 @@
   },
   {
     "type": "application",
-    "name": "BetterTouchTool",
-    "application": "BetterTouchTool.app",
-    "enable": "0"
-  },
-  {
-    "type": "application",
     "name": "CrossOver",
     "application": "/Applications/CrossOver.app",
     "enable": "0"
@@ -27,7 +21,7 @@
     "type": "application",
     "name": "UPDF",
     "application": "UPDF.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",
@@ -69,7 +63,7 @@
     "type": "application",
     "name": "Firefox Nightly",
     "path": "Firefox Nightly.app",
-    "enable": "0"
+    "enable": "1"
   },
   {
     "type": "application",
@@ -96,6 +90,12 @@
     "enable": "1"
   },
   {
+    "type": "localShellFile",
+    "name": "okular-shell",
+    "application": "okular_macos",
+    "enable": "1"
+  },
+  {
     "type": "application",
     "name": "ZellijTools-arm-v1",
     "application": "ZellijTools-arm-v1.app",
@@ -103,14 +103,8 @@
   },
   {
     "type": "application",
-    "name": "Raycast",
-    "path": "Raycast",
-    "enable": "0"
-  },
-  {
-    "type": "application",
     "name": "Firefox Nightly",
     "path": "Firefox Nightly.app",
-    "enable": "1"
+    "enable": "0"
   }
 ]

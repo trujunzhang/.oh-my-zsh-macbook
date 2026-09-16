@@ -1,5 +1,10 @@
 print("=================== load djzhang's config===============================")
 
+GFileNotFoundColor = { red = 253 / 255, green = 117 / 255, blue = 143 / 255, alpha = 1.0 }
+GFileExistedColor = { red = 72 / 255, green = 202 / 255, blue = 228 / 255, alpha = 1.0 }
+
+GTRUJUNZHANG_DOTFILES_HOME = os.getenv("HOME") .. "/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook"
+
 GMacCurrentVolume = 0
 -- GMacDefaultVolume = 15
 GMacDefaultVolume = 13

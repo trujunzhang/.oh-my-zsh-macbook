@@ -1,0 +1,22 @@
+Usage: ./okular [options] urls
+Okular, a universal document viewer
+
+Options:
+  -h, --help                 Displays help on commandline options.
+  --help-all                 Displays help, including generic Qt options.
+  -v, --version              Displays version information.
+  --author                   Show author information.
+  --license                  Show license information.
+  --desktopfile <file name>  The base file name of the desktop entry for this
+                             application.
+  -p, --page <number>        Page of the document to be shown
+  --presentation             Start the document in presentation mode
+  --print                    Start with print dialog
+  --print-and-exit           Start with print dialog and exit after printing
+  --unique                   "Unique instance" control
+  --noraise                  Not raise window
+  --find <string>            Find a string on the text
+  --editor-cmd <string>      Sets the external editor command
+
+Arguments:
+  urls                       Documents to open. Specify '-' to read from stdin.

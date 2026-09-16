@@ -21,16 +21,9 @@ local function generateArrayWithAllFiles(mediaExt, array, mediaFilePath)
     hs.printf("Found %s srt file: %s", mediaExt, srtFile)
     hs.printf("Found %s parent file: %s", mediaExt, parentName)
 
-    -- 0, 187, 249
-    -- 72, 202, 228
-    -- local myRed = { red = 1.0, green = 0.0, blue = 0.0, alpha = 1.0 }
-    -- local myRed = { red = 0 / 255, green = 187 / 255, blue = 249 / 255, alpha = 1.0 }
-    local myRed = { red = 72 / 255, green = 202 / 255, blue = 228 / 255, alpha = 1.0 }
-
-    local textColor = { red = 253 / 255, green = 117 / 255, blue = 143 / 255, alpha = 1.0 }
-    -- local textColor = { red = 0.0, green = 0.0, blue = 1.0, alpha = 0.5 }
+    local textColor = GFileNotFoundColor
     if srtFile ~= nil then
-        textColor = myRed
+        textColor = GFileExistedColor
     end
 
     local fancyText = hs.styledtext.new(parentName, {

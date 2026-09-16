@@ -1,6 +1,6 @@
 -- hs.hotkey.bind(GameHotkeyMods, "F", Play_Star_Wars_Jedi_Fallen_Order)
 
-hs.hotkey.bind(GameHotkeyMods, "O", Play_God_of_War)
+-- hs.hotkey.bind(GameHotkeyMods, "O", Play_God_of_War)
 
 hs.hotkey.bind(GameHotkeyMods, "A", Play_Atomic_Heart)
 

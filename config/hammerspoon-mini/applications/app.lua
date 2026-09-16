@@ -6,7 +6,7 @@ hs.hotkey.bind(GameHotkeyMods, "[", OpenAndActiveGoogleChromeBrowser)
 hs.hotkey.bind(GameHotkeyMods, "9", Kill_App_Clashx)
 -- hs.hotkey.bind(GameHotkeyMods, "0", Run_Genymotion_VM)
 
-hs.hotkey.bind(GameHotkeyMods, "0", Turn_off_Moonlander_light)
+-- hs.hotkey.bind(GameHotkeyMods, "0", Turn_off_Moonlander_light)
 
 hs.hotkey.bind(GameHotkeyMods, "Q", Send_Keys_With_Hotmail)
 hs.hotkey.bind(GameHotkeyMods, "A", Send_Keys_With_Password)
@@ -19,6 +19,10 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "A", RunToggleAerospace)
 hs.hotkey.bind({ "Cmd", "Alt" }, "H", function()
     hs.eventtap.keyStroke({ "Cmd", "Alt" }, "F")
     -- hs.notify.new({ title = "Show Homerow keys", informativeText = "show it sucessfully" }):send()
+end)
+
+hs.hotkey.bind(GameHotkeyMods, "0", function()
+    hs.execute("bash " .. GTRUJUNZHANG_DOTFILES_HOME .. "/linux/okular/okular_macos.sh")
 end)
 
 hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "C", function()
