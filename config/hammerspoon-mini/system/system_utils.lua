@@ -1,25 +1,19 @@
-local function getFilesWithExtension(path, ext)
-    local allFiles = hs.fs.fileListForPath(path, { subdirs = true, ignore = {} })
-
-    local foundFile = nil
-
-    for _, filepath in ipairs(allFiles) do
-        if filepath:match("%." .. ext .. "$") then
-            foundFile = filepath
-        end
-    end
-    return foundFile
-end
-
 local function generateArrayWithAllFiles(mediaExt, array, mediaFilePath)
     local parentName = Get_Parent_Name(mediaFilePath)
     local parentPath = Get_Parent_Path(mediaFilePath)
 
-    local srtFile = getFilesWithExtension(parentPath, "srt")
+    local srtFiles = GetFilesWithExtension(parentPath, "srt", true, false)
+    local srtFile = nil
+    local length = #srtFiles
+    if length ~= 0 then
+        srtFile = srtFiles[1]
+    end
 
-    hs.printf("Found %s file: %s", mediaExt, mediaFilePath)
-    hs.printf("Found %s srt file: %s", mediaExt, srtFile)
-    hs.printf("Found %s parent file: %s", mediaExt, parentName)
+    hs.printf("Found %s srt file length: %s", mediaExt, length)
+
+    -- hs.printf("Found %s file: %s", mediaExt, mediaFilePath)
+    -- hs.printf("Found %s srt file: %s", mediaExt, srtFile)
+    -- hs.printf("Found %s parent file: %s", mediaExt, parentName)
 
     local textColor = GFileNotFoundColor
     if srtFile ~= nil then
@@ -57,7 +51,7 @@ function ListAllFilesInMediaFolder(mediaFoldPath)
         end
     end
 
-    hs.printf("")
+    -- hs.printf("")
 
     return myArray
 end

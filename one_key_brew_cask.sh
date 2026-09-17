@@ -14,6 +14,7 @@ USER_APPLICATION="$HOME/Applications/"
 brew_apps=(
     "Gitfox" "Gitfox" "ssd" "no-bak"
     "UPDF" "UPDF" "ssd" "no-bak"
+    "PDF Reader Pro" "PDF Reader Pro" "ssd" "no-bak"
 
     "Bloom" "bloom" "copy" "no-bak"
     "Folx" "Folx" "copy" "no-bak"

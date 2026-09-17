@@ -44,9 +44,11 @@ for i in $(seq 0 4 $((json_array_len - 1))); do
     if [ "$enable" = "1" ]; then
         if [ "$type" = "book" ]; then
             open "$application"
-        elif [ "$type" = "application" ]; then
+        fi
+        if [ "$type" = "application" ]; then
             open -a "$application"
-        elif [ "$type" = "localShellFile" ]; then
+        fi
+        if [ "$type" = "localShellFile" ]; then
             bash "$HOME/.local/bin/${application}"
         fi
     fi

@@ -6,6 +6,23 @@ function Send_Keys_With_Password()
     hs.eventtap.keyStrokes("wanghao@DJZ720")
 end
 
+function OpenOkularWithSession()
+    local pdfFiles = GetFilesWithExtension(os.getenv("HOME") .. "/Desktop/lessons", "dj_", false, true)
+
+    -- hs.printf("Found %s pdf file length: %s", "", #pdfFiles)
+    -- hs.printf("Found %s pdf file length: %s", "", table.concat(pdfFiles, " "))
+
+    -- hs.execute("bash " .. GTRUJUNZHANG_DOTFILES_HOME .. "/linux/okular/okular_macos.sh")
+    -- hs.execute("bash " .. os.getenv("HOME") .. "/Applications/okular.app/Contents/MacOS/okular")
+    -- hs.execute("" .. os.getenv("HOME") .. "/Applications/okular.app/Contents/MacOS/okular &")
+    -- open -a $HOME/Applications/okular.app $HOME/Desktop/lessons/FP-30X_tw_2.pdf
+    -- hs.execute("open -a $HOME/Applications/okular.app $HOME/Desktop/lessons/FP-30X_tw_2.pdf")
+    -- hs.execute("open -a $HOME/Applications/okular.app " .. table.concat(pdfFiles, " "))
+    -- hs.execute("open -a $HOME/Applications/okular.app " .. "'" .. table.concat(pdfFiles, " ") .. "'")
+
+    hs.execute("open -a $HOME/Applications/okular.app " .. table.concat(pdfFiles, " "))
+end
+
 function Turn_off_Moonlander_light()
     -- info
     --   moonlander = "Moonlander Mark I"

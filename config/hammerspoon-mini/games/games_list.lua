@@ -18,7 +18,7 @@ local chooser = hs.chooser.new(function(choice)
         focusLastFocused()
         return
     end
-    hs.printf("%s = %s", "Choice subText:", choice["tag"])
+    -- hs.printf("%s = %s", "Choice subText:", choice["tag"])
 
     local tag = choice["tag"]
 
@@ -322,7 +322,6 @@ local function fix_menus()
         CheckAppExistedByPrefix(appName)
 
         local filePath = TAGGameFolder .. appName
-
         local appPath = KegworksGames .. GCurrentGameName
 
         -- hs.printf("%s = %s", "appPath:", appPath)

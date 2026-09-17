@@ -21,9 +21,8 @@ hs.hotkey.bind({ "Cmd", "Alt" }, "H", function()
     -- hs.notify.new({ title = "Show Homerow keys", informativeText = "show it sucessfully" }):send()
 end)
 
-hs.hotkey.bind(GameHotkeyMods, "0", function()
-    hs.execute("bash " .. GTRUJUNZHANG_DOTFILES_HOME .. "/linux/okular/okular_macos.sh")
-end)
+hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "o", OpenOkularWithSession)
+hs.hotkey.bind(GameHotkeyMods, "0", OpenOkularWithSession)
 
 hs.hotkey.bind({ "Cmd", "Alt", "Ctrl" }, "C", function()
     -- hs.application.launchOrFocus("/Applications/Google Chrome.app")
