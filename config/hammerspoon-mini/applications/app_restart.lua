@@ -11,6 +11,7 @@ function YesNoDialogBox(ActionFunc)
 end
 function RebootIfChoice(input)
     if input.id == "yes" then
+        Kill_App_Clashx()
         ok, result = hs.osascript.applescript([[
             tell application "System Events" 
                  restart with state saving preference 
@@ -20,6 +21,7 @@ function RebootIfChoice(input)
     elseif input.id == "no" then
         hs.alert("Your choice was: no")
     elseif input.id == "shutdown" then
+        Kill_App_Clashx()
         ok, result = hs.osascript.applescript([[
             tell application "System Events" 
                  shut down with state saving preference 

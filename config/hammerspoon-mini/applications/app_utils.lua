@@ -130,3 +130,10 @@ function RunToggleAerospace()
     hs.execute(shell_command)
     hs.notify.new({ title = "toggle Aerospace", informativeText = "toggle it sucessfully" }):send()
 end
+
+function RunOkularAndTerminalEscape()
+    OpenOkularWithSession()
+    hs.timer.doAfter(3, function()
+        RunTerminalEscape()
+    end)
+end
