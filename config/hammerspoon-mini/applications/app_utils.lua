@@ -12,37 +12,10 @@ function OpenOkularWithSession()
     -- hs.printf("Found %s pdf file length: %s", "", #pdfFiles)
     -- hs.printf("Found %s pdf file length: %s", "", table.concat(pdfFiles, " "))
 
-    -- hs.execute("bash " .. GTRUJUNZHANG_DOTFILES_HOME .. "/linux/okular/okular_macos.sh")
-    -- hs.execute("bash " .. os.getenv("HOME") .. "/Applications/okular.app/Contents/MacOS/okular")
-    -- hs.execute("" .. os.getenv("HOME") .. "/Applications/okular.app/Contents/MacOS/okular &")
-    -- open -a $HOME/Applications/okular.app $HOME/Desktop/lessons/FP-30X_tw_2.pdf
-    -- hs.execute("open -a $HOME/Applications/okular.app $HOME/Desktop/lessons/FP-30X_tw_2.pdf")
-    -- hs.execute("open -a $HOME/Applications/okular.app " .. table.concat(pdfFiles, " "))
-    -- hs.execute("open -a $HOME/Applications/okular.app " .. "'" .. table.concat(pdfFiles, " ") .. "'")
-
     hs.execute("open -a $HOME/Applications/okular.app " .. table.concat(pdfFiles, " "))
 end
 
 function Turn_off_Moonlander_light()
-    -- info
-    --   moonlander = "Moonlander Mark I"
-    --   moonlander = "Moonlander Mark I"
-    --    https://github.com/qmk/qmk_firmware
-    --    https://github.com/qmk/qmk_firmware
-    --    QK_BACKLIGHT_OFF
-    --    QK_BACKLIGHT_OFF
-    --    QK_BACKLIGHT_OFF = 0x7801,
-    --    QK_BACKLIGHT_OFF = 0x7801,
-
-    -- hs.eventtap.keyStroke({ "" }, "A")
-
-    -- local char_string = hs.utf8.codepointToUTF8(0x00C5)
-    -- hs.eventtap.keyStrokes(char_string)
-
-    -- local char_string = hs.utf8.codepointToUTF8(0x00A0)
-    -- local char_string = hs.utf8.codepointToUTF8(0x0005)
-    -- hs.eventtap.keyStrokes(char_string)
-
     -- hs.brightness.keyboard(0)
 end
 

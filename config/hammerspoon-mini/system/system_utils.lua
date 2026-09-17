@@ -9,7 +9,7 @@ local function generateArrayWithAllFiles(mediaExt, array, mediaFilePath)
         srtFile = srtFiles[1]
     end
 
-    hs.printf("Found %s srt file length: %s", mediaExt, length)
+    -- hs.printf("Found %s srt file length: %s", mediaExt, length)
 
     -- hs.printf("Found %s file: %s", mediaExt, mediaFilePath)
     -- hs.printf("Found %s srt file: %s", mediaExt, srtFile)
