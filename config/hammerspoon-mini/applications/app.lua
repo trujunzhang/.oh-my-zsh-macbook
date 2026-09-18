@@ -3,7 +3,7 @@ hs.hotkey.bind(GameHotkeyMods, "N", RestartFirefoxBrowser)
 
 hs.hotkey.bind(GameHotkeyMods, "[", OpenAndActiveGoogleChromeBrowser)
 
-hs.hotkey.bind(GameHotkeyMods, "9", Kill_App_Clashx)
+hs.hotkey.bind(GameHotkeyMods, "9", Kill_App_ClashxWithNofity)
 -- hs.hotkey.bind(GameHotkeyMods, "0", Run_Genymotion_VM)
 
 -- hs.hotkey.bind(GameHotkeyMods, "0", Turn_off_Moonlander_light)
@@ -11,8 +11,8 @@ hs.hotkey.bind(GameHotkeyMods, "9", Kill_App_Clashx)
 hs.hotkey.bind(GameHotkeyMods, "Q", Send_Keys_With_Hotmail)
 hs.hotkey.bind(GameHotkeyMods, "A", Send_Keys_With_Password)
 
-hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", RunOkularAndTerminalEscape)
--- hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", RunTerminalEscape)
+-- hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", RunOkularAndTerminalEscape)
+hs.hotkey.bind({ "Cmd", "shift", "Ctrl" }, "C", RunTerminalEscape)
 
 hs.hotkey.bind({ "Cmd", "Alt" }, "A", RunToggleAerospace)
 

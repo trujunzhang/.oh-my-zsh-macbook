@@ -16,6 +16,8 @@ brew_apps=(
     "UPDF" "UPDF" "ssd" "no-bak"
     "PDF Reader Pro" "PDF Reader Pro" "ssd" "no-bak"
 
+    "Total Video Player" "Total Video Player" "ssd" "no-bak"
+
     "Bloom" "bloom" "copy" "no-bak"
     "Folx" "Folx" "copy" "no-bak"
     "Keyboard Maestro" "Keyboard Maestro" "copy" "no-bak"

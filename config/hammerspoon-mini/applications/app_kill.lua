@@ -9,6 +9,9 @@ function Kill_App_Clashx()
 
     hs.execute("killall GUI.for.SingBox")
     hs.execute("killall GUI.for.Clash")
+end
 
-    hs.notify.new({ title = "Killing the app: " .. app_name, informativeText = "killed it sucessfully" }):send()
+function Kill_App_ClashxWithNofity()
+    Kill_App_Clashx()
+    hs.notify.new({ title = "Killing all clash apps", informativeText = "killed it sucessfully" }):send()
 end

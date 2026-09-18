@@ -37,8 +37,8 @@ InlineConfigAppInToxicGame = "Contents/Resources/Toxic Engine.app"
 GMediaFoldPath = "/Volumes/MacGame/movies/tmpFold"
 GTotalVideoPlayerAppName = "Total Video Player.app"
 GTotalVideoPlayerBinName = "Total Video Player"
-GTotalVideoPlayerBinPath = GGameVolume
-    .. "/MacCache/APPS_mini/Applications/"
+GTotalVideoPlayerBinPath = os.getenv("HOME")
+    .. "/Applications/"
     .. GTotalVideoPlayerAppName
     .. "/Contents/MacOS/"
     .. GTotalVideoPlayerBinName
