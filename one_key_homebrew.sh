@@ -35,6 +35,8 @@ brew_apps_arm=(
     # that lets you configure default applications for specific document types, file extensions, or Uniform Type Identifiers (UTIs).
     "duti" "duti"
 
+    "pyenv" "pyenv"
+
     # "micromamba" "micromamba"
 
     # "--cask wine-stable" "wine-stable"
@@ -94,11 +96,11 @@ brew_apps_x86=(
 )
 
 brew_apps=()
-if [[ $MY_MAC_TYPE == mini ]]; then
+if [[ $MY_MAC_TYPE == $MAC_TYPE_MINI ]]; then
     # info M2 mini
     brew_apps=("${brew_apps_arm[@]}")
 fi
-if [[ $MY_MAC_TYPE == pro ]]; then
+if [[ $MY_MAC_TYPE == $MAC_TYPE_PRO ]]; then
     # info Mackook pro
     brew_apps=("${brew_apps_x86[@]}")
 fi

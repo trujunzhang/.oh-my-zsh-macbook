@@ -109,7 +109,9 @@ if test $MY_MAC_TYPE = $MAC_TYPE_MINI
     set PYTHON_ON_HOMEBREW "$(brew --prefix python)/libexec/bin"
 
     # echo "python on homebrew: $PYTHON_ON_HOMEBREW"
-    fish_add_path "$PYTHON_ON_HOMEBREW"
+    # fish_add_path "$PYTHON_ON_HOMEBREW"
+
+    # fish_add_path (brew --prefix)/bin
 end
 
 if test $MY_MAC_TYPE = $MAC_TYPE_PRO
@@ -174,8 +176,11 @@ if type starship &>/dev/null
 end
 
 if [ -d $HOME/.pyenv ]
+    set -Ux PYENV_ROOT $HOME/.pyenv
+    test -d $PYENV_ROOT/bin; and fish_add_path $PYENV_ROOT/bin
+
     if type pyenv &>/dev/null
-        pyenv init - | source
+        pyenv init - fish | source
     end
 end
 
