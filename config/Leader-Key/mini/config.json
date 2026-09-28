@@ -18,24 +18,9 @@
           "value" : "/Volumes/MacUser/djzhang/Applications/Notion.app"
         },
         {
-          "key" : "x",
-          "type" : "application",
-          "value" : "/Volumes/MacUser/djzhang/Applications/Thunder.app"
-        },
-        {
-          "key" : "b",
-          "type" : "application",
-          "value" : "/Volumes/MacUser/djzhang/Applications/qbittorrent.app"
-        },
-        {
           "key" : "w",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacApps/current/Whisky-v2.3.5.app"
-        },
-        {
-          "key" : "f",
-          "type" : "application",
-          "value" : "/Volumes/MacUser/djzhang/Applications/Folx.app"
         },
         {
           "key" : "a",
@@ -460,6 +445,38 @@
       ],
       "key" : "v",
       "label" : "Proxy",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "p",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/PullTube.app"
+        },
+        {
+          "key" : "x",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/Thunder.app"
+        },
+        {
+          "key" : "f",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/Folx.app"
+        },
+        {
+          "key" : "b",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/qbittorrent.app"
+        },
+        {
+          "key" : "d",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/Downie 4.app"
+        }
+      ],
+      "key" : "d",
+      "label" : "Downloading",
       "type" : "group"
     }
   ],

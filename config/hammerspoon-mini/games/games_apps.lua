@@ -507,18 +507,18 @@ function Play_Resident_Evil_3()
     ActiveWindow(30)
 end
 
-function Play_Resident_Evil_4()
+function Play_Resident_Evil_4_Remake()
     -- export D3DM_ENABLE_METALFX=1
     -- export D3DM_ENABLE_METALFX=1
     -- export D3DM_ENABLE_METALFX=1
 
-    local app_name = "Resident Evil 4"
+    local app_name = "Resident Evil 4 Remake"
 
     BeforePlayGame(app_name, app_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(30)
+    ActiveWindow(50)
 end
 
 function Play_Resident_Evil_7()

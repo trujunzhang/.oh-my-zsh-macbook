@@ -86,6 +86,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_Resident_Evil_3()
     elseif tag == "Resident-Evil-7" then
         Play_Resident_Evil_7()
+    elseif tag == "Resident-Evil-4-Remake" then
+        Play_Resident_Evil_4_Remake()
     elseif tag == "God-of-War" then
         Play_God_of_War()
     elseif tag == "Assassins-Creed-III-Remastered" then
@@ -249,9 +251,13 @@ local menus = {
     --     ["tag"] = "Resident-Evil-3",
     -- },
     {
-        ["text"] = "Resident Evil 7(-7)",
-        ["tag"] = "Resident-Evil-7",
+        ["text"] = "Resident Evil 4(-7)",
+        ["tag"] = "Resident-Evil-4-Remake",
     },
+    -- {
+    --     ["text"] = "Resident Evil 7(-7)",
+    --     ["tag"] = "Resident-Evil-7",
+    -- },
     -- {
     --     ["text"] = "God of War(-O)",
     --     ["tag"] = "God-of-War",
