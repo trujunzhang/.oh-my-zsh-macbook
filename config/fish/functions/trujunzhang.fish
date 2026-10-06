@@ -1043,3 +1043,8 @@ function dsetup_mkv_default_player
     set media_player_Bundle_ID "com.etinysoft.totalvideoplayer"
     duti -s $media_player_Bundle_ID mkv all
 end
+
+function dandroid_adb_search_package
+    set pkgName $argv[1]
+    adb shell pm list packages | grep $pkgName
+end

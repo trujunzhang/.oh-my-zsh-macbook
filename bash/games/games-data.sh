@@ -20,7 +20,7 @@ InlineConfigJsonInToxicGame="Contents/Resources/config.json"
 test_games_in_kegworks=(
     # "Warcraft 3 The Frozen Throne" "Warcraft 3" "Warcraft III.exe"
 
-    "CarX Street" "CarX Street" "CarX Street.exe"
+    # "CarX Street" "CarX Street" "CarX Street.exe"
 
     # "Hogwarts Legacy" "Hogwarts Legacy" "HogwartsLegacy.exe"
     # "Mafia Definitive Edition" "Mafia Definitive Edition" "mafiadefinitiveedition.exe"
@@ -36,7 +36,7 @@ test_games_in_kegworks=(
     # Exception on the ToxicGame app version
     # "Need for Speed Payback" "Need for Speed Payback" ""
     # "Resident Evil 7" "Resident Evil 7" ""
-    # "FIFA 22" "FIFA 22" ""
+    "FIFA 22" "FIFA 22" ""
 )
 
 games_list_in_kegworks=(
@@ -144,10 +144,10 @@ check_real_app_name() {
     # check_app_existed "" "$game_name"
     # check_app_existed "" "$game_name"
     # check_app_existed "" "$game_name"
-    # check_app_existed "" "$game_name"
     check_app_existed "toxic1113" "$game_name"
     check_app_existed "toxic262" "$game_name"
     check_app_existed "1011x106" "$game_name"
+    check_app_existed "1101x1021" "$game_name"
     check_app_existed "2610110" "$game_name"
     check_app_existed "2477" "$game_name"
     check_app_existed "whiskey" "$game_name"

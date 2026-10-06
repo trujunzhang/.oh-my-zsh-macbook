@@ -13,7 +13,7 @@ NEW_VERSION="2610110"
 
 # 108103_wine
 # TEMPLATE_WINE_FILE_NAME="${NEW_VERSION}_wine.app"
-TEMPLATE_WINE_FILE_NAME="toxic1113_Hogwarts_Legacy.app"
+TEMPLATE_WINE_FILE_NAME="1101x1021_wine.app"
 
 TEMPLATE_WINE_APP_PATH="$APP_GAMES_PATH/${TEMPLATE_WINE_FILE_NAME}"
 
@@ -89,10 +89,10 @@ if [ -d "$TEMPLATE_WINE_APP_PATH/${DRIVER_C_FOLDER_IN_TOXICGAME_APP}" ]; then
     check_and_build_user_links "AppGames/${TEMPLATE_WINE_FILE_NAME}" "$DRIVER_C_FOLDER_IN_TOXICGAME_APP" "crossover"
 fi
 
-if [ -d "$HOME_MACGAME_PATH/crossover/d3d-co261win10" ]; then
-    check_and_build_user_links "crossover/d3d-co261win10" "$DRIVER_C_FOLDER_IN_CROSSOVER_BOTTLE" "crossover"
-fi
+# if [ -d "$HOME_MACGAME_PATH/crossover/d3d-co261win10" ]; then
+#     check_and_build_user_links "crossover/d3d-co261win10" "$DRIVER_C_FOLDER_IN_CROSSOVER_BOTTLE" "crossover"
+# fi
 
-if [ -d "$HOME_MACGAME_PATH/crossover/mt-co261win10" ]; then
-    check_and_build_user_links "crossover/mt-co261win10" "$DRIVER_C_FOLDER_IN_CROSSOVER_BOTTLE" "crossover"
-fi
+# if [ -d "$HOME_MACGAME_PATH/crossover/mt-co261win10" ]; then
+#     check_and_build_user_links "crossover/mt-co261win10" "$DRIVER_C_FOLDER_IN_CROSSOVER_BOTTLE" "crossover"
+# fi
