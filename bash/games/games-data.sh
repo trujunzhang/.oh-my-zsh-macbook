@@ -27,16 +27,16 @@ test_games_in_kegworks=(
     # "Crysis 3 Remastered" "Crysis 3 Remastered" "Bin64\/Crysis3Remastered.exe"
 
     # "Assassin Creed Brotherhood" "Assassins Creed Brotherhood" "AssassinsCreedBrotherhood.exe"
-    # "Assassins Creed III Remastered" "Assassins Creed III Remastered" "ACIII.exe"
+    "Assassins Creed III Remastered" "Assassins Creed III Remastered" "ACIII.exe"
     # "Assassins Creed Rogue" "Assassin's Creed Rogue" "ACC.exe"
     # "Assassins Creed Unity" "Assassin's Creed Unity Complete Edition" "ACU.exe"
     # "Assassins Creed Revelations" "Assassins Creed Revelations" "ACRSP.exe"
     # "Assassins Creed IV Black Flag" "Assassins Creed IV Black Flag" "AC4BFSP.exe"
 
     # Exception on the ToxicGame app version
-    # "Need for Speed Payback" "Need for Speed Payback" ""
+    #"Need for Speed Payback" "Need for Speed Payback" ""
     # "Resident Evil 7" "Resident Evil 7" ""
-    "FIFA 22" "FIFA 22" ""
+    #"FIFA 22" "FIFA 22" "FIFA22.exe"
 )
 
 games_list_in_kegworks=(
@@ -94,61 +94,81 @@ games_list_in_kegworks=(
 games_in_kegworks=("${games_list_in_kegworks[@]}")
 
 DEFAULT_GLOBAL_FILE_NAME="not found"
+
+# ${my_global_file_name} without extension '.app'
+# ${my_global_file_name} = "1101x1021_FIFA_22"
 my_global_file_name=""
-my_global_file_type=""
 
-check_app_existed() {
-    prefix=$1
-    appName=$2
-
-    app_name_prefix="${prefix}_${appName}"
+check_real_app_name() {
+    appName=$1
     dash_name="${appName// /_}"
-    dash_name_prefix="${prefix}_${dash_name}"
 
-    # info "check_app_existed: $app_name_prefix"
-    # info "check_app_existed: $dash_name_prefix"
+    for pathname in "${KegworksGames_Folder}"/*; do
+        if [ -d "$pathname" ]; then
+            FILE=$(basename "$pathname")
+            NAME=$(echo "$FILE" | cut -d'.' -f1)
+            EXTENSION=$(echo "$FILE" | cut -d'.' -f2)
 
-    if [ -d "$KegworksGames_Folder/${app_name_prefix}.app" ]; then
-        my_global_file_name="$app_name_prefix"
-    fi
-
-    if [ -d "$KegworksGames_Folder/${dash_name_prefix}.app" ]; then
-        my_global_file_name="$dash_name_prefix"
-    fi
-
-    name_types=(
-        "dx_"
-        "p_"
-        # for dxmt
-        "mt_"
-        "dx_p_"
-        "dx_mt_"
-        "dx_p_mt_"
-        "p_mt_"
-    )
-
-    for ((m = 0; m < ${#name_types[@]}; m = m + 1)); do
-        value=${name_types[$m]}
-
-        if [ -d "$KegworksGames_Folder/${value}${dash_name_prefix}.app" ]; then
-            my_global_file_name="${value}$dash_name_prefix"
-            my_global_file_type="$value"
+            if [[ "$FILE" == *"${appName}"* ]]; then
+                my_global_file_name=${NAME}
+            elif [[ "$FILE" == *"${dash_name}"* ]]; then
+                my_global_file_name=${NAME}
+            fi
         fi
     done
 }
 
-check_real_app_name() {
-    game_name=$1
-    check_app_existed "10" "$game_name"
-    check_app_existed "103" "$game_name"
-    # check_app_existed "" "$game_name"
-    # check_app_existed "" "$game_name"
-    # check_app_existed "" "$game_name"
-    check_app_existed "toxic1113" "$game_name"
-    check_app_existed "toxic262" "$game_name"
-    check_app_existed "1011x106" "$game_name"
-    check_app_existed "1101x1021" "$game_name"
-    check_app_existed "2610110" "$game_name"
-    check_app_existed "2477" "$game_name"
-    check_app_existed "whiskey" "$game_name"
-}
+# check_app_existedxxx() {
+#     prefix=$1
+#     appName=$2
+#
+#     app_name_prefix="${prefix}_${appName}"
+#     dash_name="${appName// /_}"
+#     dash_name_prefix="${prefix}_${dash_name}"
+#
+#     # info "check_app_existed: $app_name_prefix"
+#     # info "check_app_existed: $dash_name_prefix"
+#
+#     if [ -d "$KegworksGames_Folder/${app_name_prefix}.app" ]; then
+#         my_global_file_name="$app_name_prefix"
+#     fi
+#
+#     if [ -d "$KegworksGames_Folder/${dash_name_prefix}.app" ]; then
+#         my_global_file_name="$dash_name_prefix"
+#     fi
+#
+#     name_types=(
+#         "dx_"
+#         "p_"
+#         # for dxmt
+#         "mt_"
+#         "dx_p_"
+#         "dx_mt_"
+#         "dx_p_mt_"
+#         "p_mt_"
+#     )
+#
+#     for ((m = 0; m < ${#name_types[@]}; m = m + 1)); do
+#         value=${name_types[$m]}
+#
+#         if [ -d "$KegworksGames_Folder/${value}${dash_name_prefix}.app" ]; then
+#             my_global_file_name="${value}$dash_name_prefix"
+#         fi
+#     done
+# }
+#
+# check_real_app_namexxx() {
+#     game_name=$1
+#     check_app_existed "10" "$game_name"
+#     check_app_existed "103" "$game_name"
+#     # check_app_existed "" "$game_name"
+#     # check_app_existed "" "$game_name"
+#     # check_app_existed "" "$game_name"
+#     check_app_existed "toxic1113" "$game_name"
+#     check_app_existed "toxic262" "$game_name"
+#     check_app_existed "1011x106" "$game_name"
+#     check_app_existed "1101x1021" "$game_name"
+#     check_app_existed "2610110" "$game_name"
+#     check_app_existed "2477" "$game_name"
+#     check_app_existed "whiskey" "$game_name"
+# }

@@ -100,68 +100,53 @@ function MoveMacOSFolder(title, informativeText, source_folder, dest_folder)
     end
 end
 
-function DoesGameTagFileExist(app_name, game_foler_name, runApp, existFunc, notExistFunc)
-    local filePath = TAGGameFolder .. FixGameAppName(app_name)
-    if hs.fs.attributes(filePath) then
-        OpenGameStatus = "open"
-        existFunc(app_name, runApp)
-    else
-        OpenGameStatus = "verify"
-        notExistFunc(app_name, game_foler_name, runApp)
-    end
-end
+local function checkGameFolderName(fileName, name)
+    local appName = name
 
-function DoesFileExist(path)
-    return hs.fs.attributes(path)
-end
+    local dash_name_prefix = appName:gsub(" ", "_")
 
-function DoesDirectoryExist(path)
-    local attr = hs.fs.attributes(path)
-    return attr and attr.mode == "directory"
-end
-
-local function check_app_existed(prefix, appName)
-    local app_name_prefix = prefix .. "_" .. appName
-    local dash_name_prefix = prefix .. "_" .. appName:gsub(" ", "_")
-
-    local name_types = {
-        "dx_",
-        "p_",
-        -- for dxmt
-        "mt_",
-        "dx_p_",
-        "dx_mt_",
-        "dx_p_mt_",
-        "p_mt_",
-    }
-
-    for _, value in ipairs(name_types) do
-        if DoesDirectoryExist(KegworksGames .. value .. dash_name_prefix) then
-            GCurrentGameName = value .. dash_name_prefix
-        end
-    end
-
-    if DoesDirectoryExist(KegworksGames .. app_name_prefix) then
-        GCurrentGameName = app_name_prefix
-    elseif DoesDirectoryExist(KegworksGames .. dash_name_prefix) then
-        GCurrentGameName = dash_name_prefix
+    -- hs.printf("%s = %s", "find game path:", fileName)
+    -- Match the extension at the end of the path string
+    if fileName:match(appName) then
+        GCurrentGameName = fileName
+    elseif fileName:match(dash_name_prefix) then
+        GCurrentGameName = fileName
     end
 end
 
 function CheckAppExistedByPrefix(appName)
-    check_app_existed("10", appName)
-    check_app_existed("whiskey", appName)
-    check_app_existed("103", appName)
-    -- check_app_existed("", appName)
-    -- check_app_existed("", appName)
-    -- check_app_existed("", appName)
-    check_app_existed("toxic1113", appName)
-    check_app_existed("toxic262", appName)
-    check_app_existed("1011x106", appName)
-    check_app_existed("1101x1021", appName)
-    check_app_existed("2610110", appName)
-    check_app_existed("2477", appName)
+    local gameFoldPath = KegworksGames
+
+    ListSubfolders(gameFoldPath, appName, checkGameFolderName)
 end
+
+-- local function check_app_existed(prefix, appName)
+--     local app_name_prefix = prefix .. "_" .. appName
+--     local dash_name_prefix = prefix .. "_" .. appName:gsub(" ", "_")
+--
+--     local name_types = {
+--         "dx_",
+--         "p_",
+--         -- for dxmt
+--         "mt_",
+--         "dx_p_",
+--         "dx_mt_",
+--         "dx_p_mt_",
+--         "p_mt_",
+--     }
+--
+--     for _, value in ipairs(name_types) do
+--         if DoesDirectoryExist(KegworksGames .. value .. dash_name_prefix) then
+--             GCurrentGameName = value .. dash_name_prefix
+--         end
+--     end
+--
+--     if DoesDirectoryExist(KegworksGames .. app_name_prefix) then
+--         GCurrentGameName = app_name_prefix
+--     elseif DoesDirectoryExist(KegworksGames .. dash_name_prefix) then
+--         GCurrentGameName = dash_name_prefix
+--     end
+-- end
 
 function FixGameAppName(appName)
     appName = appName:gsub(".app", "")

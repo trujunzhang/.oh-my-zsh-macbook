@@ -77,7 +77,6 @@ run_kegworks_games() {
         success "step $i"
 
         my_global_file_name="$game_name"
-        my_global_file_type=""
         check_real_app_name "$game_name"
 
         app_path="$KegworksGames_Folder/${my_global_file_name}.app"
@@ -104,7 +103,6 @@ restore_kegworks_games() {
         success "step $i"
 
         my_global_file_name="$game_name"
-        my_global_file_type=""
         check_real_app_name "$game_name"
 
         if [ -d "$KegworksGames_Folder/${my_global_file_name}.app" ]; then

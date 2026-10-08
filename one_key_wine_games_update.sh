@@ -8,11 +8,14 @@ source ./bash/games/games-data.sh
 # OLD_VERSION="108103"
 # OLD_VERSION="1010104"
 # OLD_VERSION="1011106"
-OLD_VERSION="1011x106"
+# OLD_VERSION="1011x106"
+OLD_VERSION="1101x1021"
+# OLD_VERSION="toxic1113"
 # OLD_VERSION="toxic262"
 # NEW_VERSION="108103"
 # NEW_VERSION="toxic262"
-NEW_VERSION="1101x1021"
+# NEW_VERSION="1101x1021"
+NEW_VERSION="toxic1113"
 
 # 108103_wine
 TEMPLATE_WINE_FILE_NAME="${NEW_VERSION}.app"
@@ -36,9 +39,11 @@ info "                                          "
 check_old_app_name() {
     game_name=$1
 
+    check_real_app_name "$game_name"
+
     # check_app_existed "10" "$game_name"
     # check_app_existed "103" "$game_name"
-    check_app_existed "$OLD_VERSION" "$game_name"
+    # check_app_existed "$OLD_VERSION" "$game_name"
     # check_app_existed "2477" "$game_name"
     # check_app_existed "whiskey" "$game_name"
 }
@@ -149,7 +154,7 @@ write_game_exe_file_to_config_file() {
         if [[ -n "$game_exe_name" ]]; then
             node -e "let pkg=require('${toxicConfigJson}'); pkg['exe_path'] = \"ToxicGame\/drive_c\/Games\/${install_folder_name}\/${game_exe_name}\"; require('fs').writeFileSync('${toxicConfigJson}', JSON.stringify(pkg, null, 2));"
 
-            if [[ "$my_global_file_type" == *"mt"* ]]; then
+            if [[ "$new_version_file_name" == *"mt"* ]]; then
                 node -e "let pkg=require('${toxicConfigJson}'); pkg['backend'] = 'dxmt'; require('fs').writeFileSync('${toxicConfigJson}', JSON.stringify(pkg, null, 2));"
             fi
         else
@@ -174,7 +179,9 @@ after_update() {
     info "  [info]   old_game_path: $old_version_app_path"
     info "  [info]   old_game_back_path: $old_version_app_back_path"
 
-    if [ -d "$old_version_app_back_path" ]; then
+    if [ ! -d "$old_version_app_path" ]; then
+        error "not exist old version game: $old_version_file_name"
+    elif [ -d "$old_version_app_back_path" ]; then
         error "    [error]  old version app back path: '$old_version_app_back_path' already exist!"
     else
         mkdir -p "$KegworksGames_Back_Folder"
@@ -194,7 +201,6 @@ update_wine_games() {
 
         # old version file name and path
         my_global_file_name="$game_name"
-        my_global_file_type=""
         check_old_app_name "$game_name"
         old_version_file_name="${my_global_file_name}.app"
         old_version_app_path="$KegworksGames_Folder/${old_version_file_name}"
@@ -219,15 +225,19 @@ update_wine_games() {
         elif [ -d "$new_version_app_path" ]; then
             do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
             write_game_exe_file_to_config_file "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
+
+            after_update "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
         elif [ -d "$old_version_app_path" ]; then
             do_when_old_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
 
+            error "Waiting 80 seconds"
             sleep 80
             do_when_new_file_exist "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
             write_game_exe_file_to_config_file "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
+
+            after_update "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
         fi
 
-        after_update "$install_folder_name" "$old_version_file_name" "$new_version_file_name" "$old_version_app_path" "$new_version_app_path" "$game_exe_name"
     done
 }
 
