@@ -1,0 +1,21 @@
+appId: com.follow.clash
+---
+- launchApp:
+    clearState: true
+
+- tapOn: "Tools\nTab 3 of 3"
+- scroll:
+    direction: UP
+
+- swipe:
+    direction: UP
+    waitToSettleTimeoutMs: 500
+
+- repeat:
+    times: 3
+    commands:
+    - swipe:
+          direction: UP
+          waitToSettleTimeoutMs: 500
+    - timeout: 30000 + Math.floor(Math.random() * 50) * 30            # Wait up to 30 seconds
+

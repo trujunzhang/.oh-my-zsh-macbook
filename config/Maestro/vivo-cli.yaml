@@ -1,0 +1,11 @@
+appId: com.follow.clashxxx
+---
+
+- swipe:
+    direction: UP
+    waitToSettleTimeoutMs: 500
+          # waitToSettleTimeoutMs: 500
+          # duration: 30000 + Math.floor(Math.random() * 50) * 30
+          # duration: 30000 
+          # - timeout: 30000 + Math.floor(Math.random() * 50) * 30            # Wait up to 30 seconds
+

@@ -38,7 +38,7 @@ local chooser = hs.chooser.new(function(choice)
         Play_Just_Cause_4()
     elseif tag == "Assassins-Creed-IV-Black-Flag" then
         Play_Assassins_Creed_4_Black_Flag()
-    elseif tag == "Assassins-creed-rogue" then
+    elseif tag == "Assassins-Creed-Rogue" then
         Play_Assassins_Creed_Rogue()
     elseif tag == "Assassins-Creed-Syndicate" then
         Play_Assassins_Creed_Syndicate()
@@ -171,8 +171,8 @@ local menus = {
         ["tag"] = "Assassins-Creed-IV-Black-Flag",
     },
     {
-        ["text"] = "Assassins creed rogue(-5)",
-        ["tag"] = "Assassins-creed-rogue",
+        ["text"] = "Assassins Creed Rogue(-5)",
+        ["tag"] = "Assassins-Creed-Rogue",
     },
     {
         ["text"] = "Assassins Creed Unity(-U)",

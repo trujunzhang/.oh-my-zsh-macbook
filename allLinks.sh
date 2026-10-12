@@ -88,6 +88,8 @@ function link_applescript {
 }
 
 function link_config_fold {
+    directoryLink "Maestro(coding)" "$TRUJUNZHANG_DOTFILES_HOME/config/Maestro" "$HOME/Documents/Maestro"
+
     directoryLink "config(ghostty)" "$TRUJUNZHANG_DOTFILES_HOME/config/ghostty" "$HOME/.config/ghostty"
     directoryLink "config(kitty)" "$TRUJUNZHANG_DOTFILES_HOME/config/kitty" "$HOME/.config/kitty"
     directoryLink "config(mpv)" "$TRUJUNZHANG_DOTFILES_HOME/config/mpv" "$HOME/.config/mpv"

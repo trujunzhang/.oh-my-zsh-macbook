@@ -253,6 +253,11 @@
           "key" : "t",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacCache/APPS_mini/Applications/Total Video Player.app"
+        },
+        {
+          "key" : "s",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/SMPlayer.app"
         }
       ],
       "key" : "m",
