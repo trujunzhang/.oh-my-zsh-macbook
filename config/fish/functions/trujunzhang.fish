@@ -1048,3 +1048,8 @@ function dandroid_adb_search_package
     set pkgName $argv[1]
     adb shell pm list packages | grep $pkgName
 end
+
+function drun_adb_devices
+    adb kill-server && adb start-server
+    adb devices
+end

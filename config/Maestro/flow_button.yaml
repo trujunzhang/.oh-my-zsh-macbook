@@ -1,0 +1,30 @@
+appId: com.follow.clashxxx
+---
+- runFlow:
+      when:
+          visible:
+              text: "上滑继续看视频"
+      commands:
+          - evalScript: ${output.shouldClickButton = true}
+
+- runFlow:
+      when:
+          true: ${output.shouldClickButton == true}
+      commands:
+          - tapOn:
+                text: "查看详情 立领3770金币"
+                optional: true
+
+          - runFlow:
+                when:
+                    visible:
+                        # text: "问小团"
+                        text: "评价"
+                commands:
+                    - evalScript: ${output.isInDetailedPage = true}
+
+          - runFlow:
+                when:
+                    true: ${output.isInDetailedPage == true}
+                commands:
+                    - back

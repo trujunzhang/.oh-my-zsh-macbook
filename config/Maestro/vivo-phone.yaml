@@ -1,44 +1,36 @@
 appId: com.follow.clashxxx
 ---
 - repeat:
-    times: 150
-    commands:
-        - swipe:
-            direction: UP
-            waitToSettleTimeoutMs: 500
+      times: 500
+      commands:
+          - swipe:
+                direction: UP
+                waitToSettleTimeoutMs: 500
 
-        - tapOn: 
-            text: "点击查看详情"
-            optional: true
-
-        - tapOn: 
-            text: "下载应用情"
-            optional: true
-
-        - repeat:
-            times: 10
-
-            commands:
-            - tapOn:
-                id: "button_001"
+          - tapOn:
+                text: "点击查看详情"
                 optional: true
-                delay: 200
-                repeat: 200
-                retryTapIfNoChange: true
-                waitToSettleTimeoutMs: 38000
 
-            - doubleTapOn:
-                id: "button_002"
+          - tapOn:
+                text: "下载应用情"
                 optional: true
-                delay: 200
-                repeat: 200
-                retryTapIfNoChange: true
-                waitToSettleTimeoutMs: 38000
 
+          - repeat:
+                times: 3
 
+                commands:
+                    - tapOn:
+                          id: "button_001"
+                          optional: true
+                          delay: 200
+                          repeat: 200
+                          retryTapIfNoChange: true
+                          waitToSettleTimeoutMs: 38000
 
-
-
-
-
-
+                    - doubleTapOn:
+                          id: "button_002"
+                          optional: true
+                          delay: 200
+                          repeat: 200
+                          retryTapIfNoChange: true
+                          waitToSettleTimeoutMs: 38000
