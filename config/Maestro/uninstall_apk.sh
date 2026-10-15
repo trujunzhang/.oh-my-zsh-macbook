@@ -19,12 +19,12 @@ apk_apps=(
     "com.tencent.news"
     # 盒马
     "com.wudaokou.hippo"
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
+    # 欢游
+    "com.sabac.hy"
+    # baidu
+    "com.baidu.searchbox"
+    # 速来免费清理
+    "com.ailmenacrid.gtsagitate"
     #
     # ""
     #

@@ -1,0 +1,6 @@
+appId: com.follow.clashxxx
+---
+- tapOn:
+      text: "下载"
+# - runFlow:
+# file: ./flow_moto_install_app.yaml

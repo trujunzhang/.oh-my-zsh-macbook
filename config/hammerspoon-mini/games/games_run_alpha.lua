@@ -49,3 +49,4 @@ hs.hotkey.bind(GameHotkeyMods, "E", Play_Sniper_Elite_4)
 hs.hotkey.bind(GameHotkeyMods, "K", Play_Kingdom_Come_Deliverance)
 
 hs.hotkey.bind(GameHotkeyMods, "C", Play_Crysis_3_Remasted)
+hs.hotkey.bind(GameHotkeyMods, "O", Play_Assassins_Creed_Origins)

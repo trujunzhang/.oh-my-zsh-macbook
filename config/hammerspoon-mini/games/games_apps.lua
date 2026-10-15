@@ -314,12 +314,13 @@ function Play_Assassins_Creed_Origins()
     -- TurnOffAerospace()
 
     local app_name = "Assassins Creed Origins"
+    local game_name = "Assassin's Creed Origins"
 
-    BeforePlayGame(app_name, app_name, function()
+    BeforePlayGame(app_name, game_name, function()
         Check_And_Run_KegworksApp(app_name)
     end)
 
-    ActiveWindow(30)
+    ActiveWindow(50)
 end
 
 function Play_Assassins_Creed_Mirage()
@@ -452,13 +453,17 @@ function Play_Sniper_Elite_4()
     hs.application.launchOrFocus(GamesFolder .. app_name .. ".app")
     hs.notify.new({ title = app_name, informativeText = "run it sucessfully" }):send()
 
-    hs.timer.doAfter(10, function()
-        ClickPrimaryScreenCenter(-150, 88)
+    hs.timer.doAfter(20, function()
+        -- ClickPrimaryScreenCenter(-150, 88)
+        ClickPrimaryScreenCenter()
+        hs.eventtap.keyStroke({}, "escape")
         hs.notify.new({ title = app_name, informativeText = "click 'cancel' button sucessfully" }):send()
     end)
 
-    hs.timer.doAfter(15, function()
-        ClickPrimaryScreenCenter(-150, 88)
+    hs.timer.doAfter(30, function()
+        -- ClickPrimaryScreenCenter(-150, 88)
+        ClickPrimaryScreenCenter()
+        hs.eventtap.keyStroke({}, "escape")
         hs.notify.new({ title = app_name, informativeText = "click 'cancel' button sucessfully" }):send()
     end)
 end

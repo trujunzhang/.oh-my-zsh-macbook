@@ -74,6 +74,8 @@ local chooser = hs.chooser.new(function(choice)
         Play_Assassins_Creed_Revelations()
     elseif tag == "Assassins-Creed-Unity" then
         Play_Assassins_Creed_Unity()
+    elseif tag == "Assassins-Creed-Origins" then
+        Play_Assassins_Creed_Origins()
     elseif tag == "Crysis-3-Remasted" then
         Play_Crysis_3_Remasted()
     elseif tag == "The-Witcher-3" then
@@ -179,6 +181,10 @@ local menus = {
     {
         ["text"] = "Assassins Creed Unity(-U)",
         ["tag"] = "Assassins-Creed-Unity",
+    },
+    {
+        ["text"] = "Assassins Creed Origins(-O)",
+        ["tag"] = "Assassins_Creed_Origins",
     },
     -- {
     --     ["text"] = "Assassins Creed Syndicate(-A)",

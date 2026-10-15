@@ -1,0 +1,32 @@
+appId: com.follow.clashxxx
+---
+# - runFlow:
+#       when:
+#           visible:
+#               text: "Continue installation"
+#       commands:
+#           - tapOn:
+#                 text: "Continue installation"
+#
+
+# - runFlow:
+#       when:
+#           visible:
+#               text: "I understand the risk.*"
+#       commands:
+#           - tapOn:
+#                 text: "I understand the risk.*"
+#           - tapOn:
+#                 text: "Continue installation"
+
+# - runFlow:
+#       when:
+#           visible:
+#               text: "Installation successful"
+#       commands:
+#           - tapOn:
+#                 text: "DONE"
+
+# text: ".*去浏览.*"
+- tapOn:
+      point: "400, 900"
