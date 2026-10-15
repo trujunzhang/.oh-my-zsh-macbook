@@ -1,0 +1,37 @@
+appId: com.sankuai.meituan
+---
+- runFlow:
+      when:
+          visible:
+              text: "点击完成 即可达标"
+      commands:
+          - evalScript: ${output.shouldClickButton = true}
+
+- runFlow:
+      when:
+          true: ${output.shouldClickButton == true}
+      commands:
+          - tapOn:
+                text: "立即下载"
+                optional: true
+
+          - tapOn:
+                text: "立即打开"
+                optional: true
+
+          - tapOn:
+                text: "查看详情"
+                optional: true
+
+# Step 5: Return to App
+- launchApp:
+      stopApp: false # Brings the app back to the foreground without restarting it
+
+- runFlow:
+      when:
+          visible:
+              text: "再看一个"
+      commands:
+          - tapOn:
+                text: "再看一个"
+                optional: true

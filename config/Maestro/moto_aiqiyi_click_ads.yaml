@@ -1,0 +1,12 @@
+appId: com.follow.clashxxx
+---
+- repeat:
+      times: 500
+      commands:
+          # Step 1: First, it's necessary to initialize the search state
+          - evalScript: ${output.shouldClickButton = false}
+          - evalScript: ${output.isInDetailedPage = false}
+          - runFlow:
+                file: ./aiqiyi/flow_click_ad.yaml
+          - swipe:
+                direction: UP
