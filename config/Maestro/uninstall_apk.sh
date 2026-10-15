@@ -15,6 +15,22 @@ apk_apps=(
     "com.duowan.kiwi"
     # 腾讯地图
     "com.tencent.map"
+    # 腾讯新闻
+    "com.tencent.news"
+    # 盒马
+    "com.wudaokou.hippo"
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
     #
     # ""
 )

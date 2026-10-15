@@ -72,10 +72,10 @@ native_games_apps=(
 )
 
 test_native_games_apps=(
-    # HITMAN
-    "HITMAN"
-    "runtime"
-    "Contents/Game/HitmanProData"
+    # Mafia III
+    "Mafia III"
+    "Assets"
+    "Contents/Resources/Mafia III.app/Contents"
     "open"
 )
 

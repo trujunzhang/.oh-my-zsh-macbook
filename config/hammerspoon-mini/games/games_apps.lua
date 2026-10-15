@@ -697,3 +697,14 @@ function Play_GTA_V_Enhanced()
 
     ActiveWindow(45)
 end
+
+function Play_Max_Payne_3()
+    local app_name = "Max Payne 3"
+    local game_name = "Rockstar Games"
+
+    BeforePlayGame(app_name, game_name, function()
+        Check_And_Run_KegworksApp(app_name)
+    end)
+
+    ActiveWindow(50)
+end

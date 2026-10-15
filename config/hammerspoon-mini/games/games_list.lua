@@ -4,6 +4,8 @@
 
 -- Focus the last used window.
 
+local Tag_Mac_App = "(MacOS)"
+
 local function focusLastFocused()
     local wf = hs.window.filter
     local lastFocused = wf.defaultCurrentSpace:getWindows(wf.sortByFocusedLast)
@@ -215,7 +217,7 @@ local menus = {
     --     ["tag"] = "Battlefield_V",
     -- },
     {
-        ["text"] = "Sniper Elite 4(-E)",
+        ["text"] = Tag_Mac_App .. " Sniper Elite 4(-E)",
         ["tag"] = "Sniper-Elite-4",
     },
     -- {
@@ -325,32 +327,50 @@ local function fix_menus()
 
         local appName = FixGameAppName(tag:gsub("-", " "))
         GCurrentGameName = appName
-        CheckAppExistedByPrefix(appName)
 
-        local filePath = TAGGameFolder .. appName
-        local appPath = KegworksGames .. GCurrentGameName
+        if text:match(Tag_Mac_App) then
+            local appPath = GamesFolder .. GCurrentGameName
 
-        -- hs.printf("%s = %s", "appPath:", appPath)
+            if DoesDirectoryExist(appPath) then
+                local textColor = GFileExistedColor
+                local fancyText = hs.styledtext.new(text, {
+                    font = { name = "Futura", size = 18 },
+                    color = textColor,
+                })
+                local dict = {}
+                dict["text"] = fancyText
+                dict["tag"] = value["tag"]
 
-        if DoesDirectoryExist(appPath) then
-            -- local textColor = { red = 1.0, green = 0.0, blue = 0.0, alpha = 0.5 }
-            -- 253, 240, 213
-            -- 253, 240, 213
-            -- 255, 117, 143
-            local textColor = GFileNotFoundColor
-
-            if DoesFileExist(filePath) then
-                textColor = GFileExistedColor
+                table.insert(myArray, dict)
             end
-            local fancyText = hs.styledtext.new(text, {
-                font = { name = "Futura", size = 18 },
-                color = textColor,
-            })
-            local dict = {}
-            dict["text"] = fancyText
-            dict["tag"] = value["tag"]
+        else
+            CheckAppExistedByPrefix(appName)
 
-            table.insert(myArray, dict)
+            local tagFilePath = TAGGameFolder .. appName
+            local appPath = KegworksGames .. GCurrentGameName
+
+            -- hs.printf("%s = %s", "appPath:", appPath)
+
+            if DoesDirectoryExist(appPath) then
+                -- local textColor = { red = 1.0, green = 0.0, blue = 0.0, alpha = 0.5 }
+                -- 253, 240, 213
+                -- 253, 240, 213
+                -- 255, 117, 143
+                local textColor = GFileNotFoundColor
+
+                if DoesFileExist(tagFilePath) then
+                    textColor = GFileExistedColor
+                end
+                local fancyText = hs.styledtext.new(text, {
+                    font = { name = "Futura", size = 18 },
+                    color = textColor,
+                })
+                local dict = {}
+                dict["text"] = fancyText
+                dict["tag"] = value["tag"]
+
+                table.insert(myArray, dict)
+            end
         end
     end
 
