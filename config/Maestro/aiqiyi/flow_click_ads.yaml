@@ -3,7 +3,7 @@ appId: com.qiyi.video.lite
 - runFlow:
       when:
           visible:
-              text: "上滑继续观看"
+              text: "上滑继续观看.*"
       commands:
           - evalScript: ${output.shouldClickButton = true}
 
@@ -12,30 +12,31 @@ appId: com.qiyi.video.lite
           true: ${output.shouldClickButton == true}
       commands:
           - tapOn:
-                text: "立即领取"
+                # text: ".*立即领取.*"
+                text: ".*可提现.*"
                 optional: true
 
-          # - tapOn:
-          #       text: "立即打开"
-          #       optional: true
-          #
-          # - tapOn:
-          #       text: "查看详情"
-          #       optional: true
+          - repeat:
+                times: 3
 
-- repeat:
-      times: 3
+                commands:
+                    - tapOn:
+                          id: "button_001"
+                          optional: true
+                          delay: 200
+                          repeat: 200
+                          retryTapIfNoChange: true
+                          waitToSettleTimeoutMs: 38000
 
-      commands:
-          - tapOn:
-                id: "button_001"
-                optional: true
-                delay: 200
-                repeat: 200
-                retryTapIfNoChange: true
-                waitToSettleTimeoutMs: 38000
+          # Step 5: Return to App
+          - launchApp:
+                stopApp: false # Brings the app back to the foreground without restarting it
 
-# Step 5: Return to App
-- launchApp:
-      stopApp: false # Brings the app back to the foreground without restarting it
+# - tapOn:
+#       text: "立即打开"
+#       optional: true
+#
+# - tapOn:
+#       text: "查看详情"
+#       optional: true
 

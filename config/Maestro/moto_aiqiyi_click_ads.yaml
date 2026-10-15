@@ -7,6 +7,6 @@ appId: com.follow.clashxxx
           - evalScript: ${output.shouldClickButton = false}
           - evalScript: ${output.isInDetailedPage = false}
           - runFlow:
-                file: ./aiqiyi/flow_click_ad.yaml
+                file: ./aiqiyi/flow_click_ads.yaml
           - swipe:
                 direction: UP
