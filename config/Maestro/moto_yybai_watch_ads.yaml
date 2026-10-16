@@ -1,0 +1,7 @@
+appId: com.follow.clashxxx
+---
+- repeat:
+      times: 500
+      commands:
+          - runFlow:
+                file: ./yybai/flow_click_15s_ads.yaml

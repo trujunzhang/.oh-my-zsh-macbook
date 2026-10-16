@@ -25,6 +25,30 @@ apk_apps=(
     "com.baidu.searchbox"
     # 速来免费清理
     "com.ailmenacrid.gtsagitate"
+    # 开拍
+    "com.meitu.action"
+    # 今日看点极速版
+    "com.jinrikd.news"
+    # 网易小蜜蜂
+    "com.netease.community"
+    # 捞月狗
+    "com.laoyuegou.android"
+    # 欢游
+    "com.sabac.hy"
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
     #
     # ""
     #
