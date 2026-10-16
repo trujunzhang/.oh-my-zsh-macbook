@@ -29,14 +29,16 @@ apk_apps=(
     "com.meitu.action"
     # 今日看点极速版
     "com.jinrikd.news"
+    # 今日看看极速版
+    "com.syey.jinrikk"
     # 网易小蜜蜂
     "com.netease.community"
     # 捞月狗
     "com.laoyuegou.android"
     # 欢游
     "com.sabac.hy"
-    #
-    # ""
+    # 夸克
+    "com.quark.browser"
     #
     # ""
     #
