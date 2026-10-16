@@ -1,0 +1,11 @@
+appId: com.follow.clashxxx
+---
+- repeat:
+      times: 500
+      commands:
+          - tapOn:
+                point: "965, 1424" # 点击"去观看"按钮
+          - runFlow:
+                file: ./yybao/flow_click_15s_ads.yaml
+          - runFlow:
+                file: ./yybao/flow_close_in_finish_task.yaml

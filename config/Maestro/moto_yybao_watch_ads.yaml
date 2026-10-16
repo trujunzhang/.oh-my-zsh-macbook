@@ -4,4 +4,4 @@ appId: com.follow.clashxxx
       times: 500
       commands:
           - runFlow:
-                file: ./yybai/flow_click_15s_ads.yaml
+                file: ./yybao/flow_click_15s_ads.yaml

@@ -5,4 +5,4 @@ appId: com.tencent.android.qqdownloaderxxx
       #text: "去下载"
       text: "下载"
 - runFlow:
-      file: ./yybai/flow_moto_install_app.yaml
+      file: ./yybao/flow_moto_install_app.yaml
