@@ -1,0 +1,9 @@
+appId: com.follow.clashxxx
+---
+- repeat:
+      times: 500
+      commands:
+          - tapOn:
+                text: "去完成"
+          - runFlow:
+                file: ./baidumap/flow_watch_an_ads_video.yaml

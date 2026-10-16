@@ -1,8 +1,9 @@
 appId: com.follow.clashxxx
 ---
 - tapOn:
-      # text:"去完成"
+      text: "去完成"
+      # text: "去完成"
       # point: "960, 1120" # "去完成" 在"提现"页面
       # point: "900, 330 " # 点击"提现"按钮
-      point: "800,  788" # 点击"10元"按钮
+      # point: "800,  788" # 点击"10元"按钮
       # point: "850, 846"

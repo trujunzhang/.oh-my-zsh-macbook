@@ -39,8 +39,8 @@ apk_apps=(
     "com.sabac.hy"
     # 夸克
     "com.quark.browser"
-    #
-    # ""
+    # 七猫免费小说
+    "com.kmxs.reader"
     #
     # ""
     #

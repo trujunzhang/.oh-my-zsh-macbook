@@ -1,0 +1,22 @@
+appId: com.baidu.BaiduMap
+---
+- repeat:
+      times: 500
+      commands:
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*今日打卡任务.*"
+                commands:
+                    - tapOn:
+                          text: "去完成"
+          - tapOn:
+                id: "button_001"
+                optional: true
+                delay: 20
+                repeat: 10
+                retryTapIfNoChange: true
+                waitToSettleTimeoutMs: 800
+          # Step 5: Return to App
+          - launchApp:
+                stopApp: false # Brings the app back to the foreground without restarting it
