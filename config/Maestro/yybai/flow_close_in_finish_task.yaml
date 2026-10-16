@@ -1,8 +1,7 @@
 appId: com.follow.clashxxx
 ---
-# close button
 - tapOn:
-    point: 82%,32%
-# - tapOn:
-#     text: "下载"
-#     index: 2
+      point: "1020, 245" # 点击"x" close按钮
+
+- tapOn:
+      point: "600, 1445" # 点击"放弃奖励" 按钮
