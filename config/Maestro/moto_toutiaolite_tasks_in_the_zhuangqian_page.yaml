@@ -1,0 +1,9 @@
+appId: com.follow.clashxxx
+---
+- repeat:
+      times: 500
+      commands:
+          - runFlow:
+                file: ./toutiao/flow_click_task.yaml
+                env:
+                    appId: "com.ss.android.article.lite"
