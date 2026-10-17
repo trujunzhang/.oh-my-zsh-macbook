@@ -1,0 +1,29 @@
+appId: com.tencent.android.qqdownloader
+---
+- tapOn:
+      id: "button_001"
+      optional: true
+      delay: 200
+      repeat: 200
+      retryTapIfNoChange: true
+      waitToSettleTimeoutMs: 38000
+
+- tapOn:
+      point: "600, 1365" # 点击"去浏览"按钮
+
+- repeat:
+      times: 3
+
+      commands:
+          - tapOn:
+                id: "button_001"
+                optional: true
+                delay: 200
+                repeat: 200
+                retryTapIfNoChange: true
+                waitToSettleTimeoutMs: 38000
+
+# Step 5: Return to App
+- launchApp:
+      stopApp: false # Brings the app back to the foreground without restarting it
+

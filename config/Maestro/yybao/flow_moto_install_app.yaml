@@ -21,12 +21,17 @@ appId: com.follow.clashxxx
 - extendedWaitUntil:
       notVisible:
           text: ".*Installing.*"
-      timeout: 50000
+      timeout: 500000
+
+- extendedWaitUntil:
+      notVisible:
+          text: ".*Installing.*"
+      timeout: 500000
 
 - repeat:
       while:
           notVisible:
-              text: "Installation successful"
+              text: ".*Installation successful.*"
       commands:
           - back
 

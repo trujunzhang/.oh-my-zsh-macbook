@@ -1,0 +1,6 @@
+appId: com.tencent.android.qqdownloader
+---
+- tapOn:
+      text: "领积分"
+- runFlow:
+      file: ./flow_close_in_finish_task.yaml

@@ -1,4 +1,4 @@
-appId: com.follow.clashxxx
+appId: com.tencent.android.qqdownloader
 ---
 - tapOn:
       point: "1020, 245" # 点击"x" close按钮
