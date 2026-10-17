@@ -1,20 +1,23 @@
 appId: com.sankuai.meituan
 ---
+- extendedWaitUntil:
+      visible: ".*点击完成.*即可达标.*"
+      timeout: 100000
+
 - runFlow:
       when:
           visible:
-              text: "点击完成 即可达标"
+              text: ".*点击完成.*即可达标.*"
       commands:
           - tapOn:
-                text: "立即下载"
+                point: "600, 1360" # 点击"button"按钮 in the center of the screen
+
+          - tapOn:
+                text: ".*立即[打开|下载].*"
                 optional: true
 
           - tapOn:
-                text: "立即打开"
-                optional: true
-
-          - tapOn:
-                text: "查看详情"
+                text: ".*查看详情.*"
                 optional: true
 
 # Step 5: Return to App

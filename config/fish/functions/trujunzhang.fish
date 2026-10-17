@@ -1053,3 +1053,5 @@ function drun_adb_devices
     adb kill-server && adb start-server
     adb devices
 end
+
+alias dclean_maestro_studio_tests="rm -rf $HOME/.maestro/tests"

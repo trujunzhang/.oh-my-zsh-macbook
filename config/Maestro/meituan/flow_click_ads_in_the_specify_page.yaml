@@ -5,11 +5,7 @@ appId: com.sankuai.meituan
       optional: true
 
 - tapOn:
-      text: ".*立即打开.*"
-      optional: true
-
-- tapOn:
-      text: ".*立即下载.*"
+      text: ".*立即[体验|打开|下载|抢购].*"
       optional: true
 
 # Step 5: Return to App
