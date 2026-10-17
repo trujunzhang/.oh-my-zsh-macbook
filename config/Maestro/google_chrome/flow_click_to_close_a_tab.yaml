@@ -1,0 +1,8 @@
+appId: com.android.chrome
+---
+- tapOn:
+      id: "button_001"
+      optional: true
+
+- tapOn:
+      point: "491, 1674" # 点击"x"按钮

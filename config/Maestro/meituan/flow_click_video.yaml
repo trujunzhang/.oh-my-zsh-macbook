@@ -5,12 +5,6 @@ appId: com.sankuai.meituan
           visible:
               text: "点击完成 即可达标"
       commands:
-          - evalScript: ${output.shouldClickButton = true}
-
-- runFlow:
-      when:
-          true: ${output.shouldClickButton == true}
-      commands:
           - tapOn:
                 text: "立即下载"
                 optional: true

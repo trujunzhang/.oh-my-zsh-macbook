@@ -5,9 +5,5 @@ appId: com.sankuai.meituan
           notVisible:
               text: "浏览视频任务已全部完成"
       commands:
-          # Step 1: First, it's necessary to initialize the search state
-          - evalScript: ${output.shouldClickButton = false}
-          - evalScript: ${output.shouldWatchAnother = false}
-          - evalScript: ${output.isInDetailedPage = false}
           - runFlow:
                 file: ./meituan/flow_click_video.yaml

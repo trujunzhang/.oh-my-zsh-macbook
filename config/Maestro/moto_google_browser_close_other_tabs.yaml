@@ -1,0 +1,7 @@
+appId: com.android.chrome
+---
+- repeat:
+      times: 500
+      commands:
+          - runFlow:
+                file: ./google_chrome/flow_click_to_close_a_tab.yaml
