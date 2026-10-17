@@ -1,0 +1,18 @@
+appId: ${appId}
+---
+- repeat:
+      times: 3
+
+      commands:
+          - tapOn:
+                id: "button_001"
+                optional: true
+                delay: 200
+                repeat: 200
+                retryTapIfNoChange: true
+                waitToSettleTimeoutMs: 38000
+
+# Step 5: Return to App
+- launchApp:
+      stopApp: false # Brings the app back to the foreground without restarting it
+

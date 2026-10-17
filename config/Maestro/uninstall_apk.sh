@@ -41,12 +41,12 @@ apk_apps=(
     "com.quark.browser"
     # 七猫免费小说
     "com.kmxs.reader"
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
+    # 慢慢买
+    "com.manmanbuy.bijia"
+    # 360AI智剪
+    "com.qihoo.editing"
+    # 智联招聘
+    "com.zhaopin.social"
     #
     # ""
     #

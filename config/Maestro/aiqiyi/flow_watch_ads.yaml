@@ -22,25 +22,12 @@ appId: com.qiyi.video.lite
                 text: ".*兑会员.*"
                 optional: true
 
-- repeat:
-      times: 3
-
+- runFlow:
+      when:
+          notVisible:
+              text: ".*上滑继续观看.*"
       commands:
-          - tapOn:
-                id: "button_001"
-                optional: true
-                delay: 200
-                repeat: 200
-                retryTapIfNoChange: true
-                waitToSettleTimeoutMs: 38000
-
-# Step 5: Return to App
-- launchApp:
-      stopApp: false # Brings the app back to the foreground without restarting it
-
-# - runFlow:
-#       when:
-#           notVisible:
-#               text: ".*已领取.*"
-#       commands:
-#           - back
+          - runFlow:
+                file: ../common/flow_common_15s_and_return_app.yaml
+                env:
+                    appId: "com.qiyi.video.lite"
