@@ -1,46 +1,42 @@
 appId: ${appId}
 ---
 - tapOn:
-      text: "去完成"
-      optional: true
-
-- tapOn:
-      id: "button_001"
-      optional: true
-      delay: 200
-      repeat: 200
-      retryTapIfNoChange: true
-      waitToSettleTimeoutMs: 3800
+    id: "button_001"
+    optional: true
+    delay: 200
+    repeat: 200
+    retryTapIfNoChange: true
+    waitToSettleTimeoutMs: 3800
 
 - runFlow:
-      when:
-          notVisible:
-              text: ".*做任务领金币.*"
-      commands:
-          - back
+    when:
+      notVisible:
+        text: ".*做任务领金币.*"
+    commands:
+      - back
 
 - runFlow:
-      file: ../common/flow_common_25s_and_return_app.yaml
-      env:
-          appId: ${appId}
-          needReturn: "true"
-          step: 3
+    file: ../common/flow_common_25s_and_return_app.yaml
+    env:
+      appId: ${appId}
+      needReturn: "true"
+      step: 2
 
 - tapOn:
-      id: "button_001"
-      optional: true
-      delay: 200
-      repeat: 200
-      retryTapIfNoChange: true
-      waitToSettleTimeoutMs: 3800
+    id: "button_001"
+    optional: true
+    delay: 200
+    repeat: 200
+    retryTapIfNoChange: true
+    waitToSettleTimeoutMs: 3800
 
 - tapOn:
-      point: "565, 1627" # 点击"x" close按钮
+    point: "565, 1627" # 点击"x" close按钮
 
 - tapOn:
-      id: "button_001"
-      optional: true
-      delay: 200
-      repeat: 20
-      retryTapIfNoChange: true
-      waitToSettleTimeoutMs: 380
+    id: "button_001"
+    optional: true
+    delay: 200
+    repeat: 20
+    retryTapIfNoChange: true
+    waitToSettleTimeoutMs: 380
