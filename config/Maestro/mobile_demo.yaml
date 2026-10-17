@@ -1,8 +1,8 @@
 appId: com.follow.clashxxx
 ---
 - tapOn:
-      # text: "去浏览"
-      text: ".*领积分.*"
+      text: ".*去浏览.*"
+      # text: ".*领积分.*"
       # text: "去完成"
       # text: "去完成"
       # point: "960, 1120" # "去完成" 在"提现"页面

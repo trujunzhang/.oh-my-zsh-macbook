@@ -1,6 +1,14 @@
 appId: com.tencent.android.qqdownloader
 ---
 - tapOn:
+      id: "button_001"
+      optional: true
+      delay: 200
+      repeat: 200
+      retryTapIfNoChange: true
+      waitToSettleTimeoutMs: 38000
+
+- tapOn:
       point: "1020, 245" # 点击"x" close按钮
 
 - tapOn:
