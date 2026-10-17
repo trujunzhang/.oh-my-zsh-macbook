@@ -8,7 +8,9 @@ appId: com.kuaishou.nebula
           - tapOn:
                 text: ".*去观看.*"
 - repeat:
-      times: 500
+      while:
+          visible:
+              text: ".*去看广告.*"
       commands:
           - runFlow:
                 file: ./kuaishou/flow_click_ads.yaml
