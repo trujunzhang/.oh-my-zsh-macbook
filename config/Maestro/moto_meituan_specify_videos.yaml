@@ -9,12 +9,20 @@ appId: com.sankuai.meituan
                 when:
                     visible:
                         # text: "上滑继续看视频"
-                        text: ".*查看详情 立领.*"
+                        text: ".*查看详情.*立领.*"
                 commands:
                     - tapOn:
-                          text: "查看详情 立领.*金币"
+                          text: "查看详情.*立领.*金币"
                           optional: true
                     - back
+
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*点击按钮.*可继续计时.*"
+                commands:
+                    - runFlow:
+                          file: ./meituan/flow_click_ads_in_the_specify_page.yaml
 
           - swipe:
                 direction: UP
