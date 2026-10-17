@@ -15,7 +15,7 @@ appId: ${appId}
 
 - runFlow:
       when:
-          true: ${needReturn == true}
+          true: ${needReturn == "true"}
       commands:
           # Step 5: Return to App
           - launchApp:

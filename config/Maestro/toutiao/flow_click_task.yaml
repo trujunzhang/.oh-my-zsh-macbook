@@ -1,15 +1,5 @@
 appId: ${appId}
 ---
-# - runFlow:
-#       when:
-#           visible:
-#               # text: ".*做任务领金币.*"
-#               text: ".*现金收益.*"
-#       commands:
-#           - tapOn:
-#                 text: "去完成"
-#                 optional: true
-
 - tapOn:
       text: "去完成"
       optional: true
@@ -29,21 +19,12 @@ appId: ${appId}
       commands:
           - back
 
-- repeat:
-      times: 4
-
-      commands:
-          - tapOn:
-                id: "button_001"
-                optional: true
-                delay: 200
-                repeat: 20
-                retryTapIfNoChange: true
-                waitToSettleTimeoutMs: 3800
-
-# Step 5: Return to App
-- launchApp:
-      stopApp: false # Brings the app back to the foreground without restarting it
+- runFlow:
+      file: ../common/flow_common_25s_and_return_app.yaml
+      env:
+          appId: ${appId}
+          needReturn: "true"
+          step: 3
 
 - tapOn:
       id: "button_001"
@@ -53,22 +34,8 @@ appId: ${appId}
       retryTapIfNoChange: true
       waitToSettleTimeoutMs: 3800
 
-# - runFlow:
-#       when:
-#           visible:
-#               text: ".*开心收下.*"
-#               # text: ".*恭喜你获得.*"
-#       commands:
-#           - tapOn:
-#                 text: "开心收下"
-#                 optional: true
-
 - tapOn:
       point: "565, 1627" # 点击"x" close按钮
-
-# - tapOn:
-#       text: ".*开心收下.*"
-#       optional: true
 
 - tapOn:
       id: "button_001"

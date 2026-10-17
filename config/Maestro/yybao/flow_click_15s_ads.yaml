@@ -19,7 +19,7 @@ appId: com.tencent.android.qqdownloader
       file: ../common/flow_common_25s_and_return_app.yaml
       env:
           appId: "com.tencent.android.qqdownloader"
-          needReturn: true
+          needReturn: "true"
 
 - back
 
