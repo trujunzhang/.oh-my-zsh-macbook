@@ -1,0 +1,14 @@
+appId: com.kuaishou.nebula
+---
+- runFlow:
+      when:
+          visible:
+              text: ".*今日打卡任务.*"
+      commands:
+          - tapOn:
+                text: ".*去观看.*"
+- repeat:
+      times: 500
+      commands:
+          - runFlow:
+                file: ./kuaishou/flow_click_ads.yaml

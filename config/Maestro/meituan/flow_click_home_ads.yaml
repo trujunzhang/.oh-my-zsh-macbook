@@ -11,7 +11,7 @@ appId: com.follow.clashxxx
               text: "上滑继续看视频"
       commands:
           - tapOn:
-                text: "查看详情 立领3770金币"
+                text: "查看详情 立领.*金币"
                 optional: true
           - back
 

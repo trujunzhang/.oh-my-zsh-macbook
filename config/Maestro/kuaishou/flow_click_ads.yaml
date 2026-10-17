@@ -1,0 +1,50 @@
+appId: com.kuaishou.nebula
+---
+- runFlow:
+      when:
+          visible:
+              text: ".*今日打卡任务.*"
+      commands:
+          - tapOn:
+                text: ".*去看广告.*"
+
+- repeat:
+      times: 5
+
+      commands:
+          - tapOn:
+                id: "button_001"
+                optional: true
+                delay: 200
+                repeat: 200
+                retryTapIfNoChange: true
+                waitToSettleTimeoutMs: 38000
+
+          - doubleTapOn:
+                id: "button_002"
+                optional: true
+                delay: 200
+                repeat: 200
+                retryTapIfNoChange: true
+                waitToSettleTimeoutMs: 38000
+
+- runFlow:
+      when:
+          notVisible:
+              text: ".*今日打卡任务.*"
+      commands:
+          - back
+
+- runFlow:
+      when:
+          notVisible:
+              text: ".*今日打卡任务.*"
+      commands:
+          - back
+
+- runFlow:
+      when:
+          notVisible:
+              text: ".*今日打卡任务.*"
+      commands:
+          - back

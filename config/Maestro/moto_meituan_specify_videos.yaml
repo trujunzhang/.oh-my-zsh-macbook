@@ -1,18 +1,10 @@
-appId: com.follow.clashxxx
+appId: com.sankuai.meituan
 ---
 - repeat:
       while:
           notVisible:
               text: "浏览视频任务已全部完成"
       commands:
-          - swipe:
-                direction: UP
-                waitToSettleTimeoutMs: 500
-
-          - tapOn:
-                text: "点击查看详情"
-                optional: true
-
           - runFlow:
                 when:
                     visible:
@@ -20,9 +12,17 @@ appId: com.follow.clashxxx
                         text: ".*查看详情 立领.*"
                 commands:
                     - tapOn:
-                          text: "查看详情 立领3770金币"
+                          text: "查看详情 立领.*金币"
                           optional: true
                     - back
+
+          - swipe:
+                direction: UP
+                waitToSettleTimeoutMs: 500
+
+          - tapOn:
+                text: "点击查看详情"
+                optional: true
 
           - repeat:
                 times: 3
