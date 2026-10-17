@@ -28,6 +28,6 @@ appId: com.qiyi.video.lite
               text: ".*上滑继续观看.*"
       commands:
           - runFlow:
-                file: ../common/flow_common_15s_and_return_app.yaml
+                file: ../common/flow_common_25s_and_return_app.yaml
                 env:
                     appId: "com.qiyi.video.lite"

@@ -12,6 +12,6 @@ appId: com.tencent.android.qqdownloader
       point: "600, 1365" # 点击"去浏览"按钮
 
 - runFlow:
-      file: ../common/flow_common_15s_and_return_app.yaml
+      file: ../common/flow_common_25s_and_return_app.yaml
       env:
           appId: "com.tencent.android.qqdownloader"
