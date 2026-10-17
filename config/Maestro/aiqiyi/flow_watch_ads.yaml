@@ -31,3 +31,4 @@ appId: com.qiyi.video.lite
                 file: ../common/flow_common_25s_and_return_app.yaml
                 env:
                     appId: "com.qiyi.video.lite"
+                    needReturn: true

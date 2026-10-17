@@ -20,26 +20,29 @@ appId: com.sankuai.meituan
                 direction: UP
                 waitToSettleTimeoutMs: 500
 
-          - tapOn:
-                text: "点击查看详情"
-                optional: true
+          - runFlow:
+                file: ./common/flow_common_25s_and_return_app.yaml
+                env:
+                    appId: "com.sankuai.meituan"
+                    needReturn: false
+                    step: 2
 
-          - repeat:
-                times: 3
-
-                commands:
-                    - tapOn:
-                          id: "button_001"
-                          optional: true
-                          delay: 200
-                          repeat: 200
-                          retryTapIfNoChange: true
-                          waitToSettleTimeoutMs: 38000
-
-                    - doubleTapOn:
-                          id: "button_002"
-                          optional: true
-                          delay: 200
-                          repeat: 200
-                          retryTapIfNoChange: true
-                          waitToSettleTimeoutMs: 38000
+          # - repeat:
+          #       times: 3
+          #
+          #       commands:
+          #           - tapOn:
+          #                 id: "button_001"
+          #                 optional: true
+          #                 delay: 200
+          #                 repeat: 200
+          #                 retryTapIfNoChange: true
+          #                 waitToSettleTimeoutMs: 38000
+          #
+          #           - doubleTapOn:
+          #                 id: "button_002"
+          #                 optional: true
+          #                 delay: 200
+          #                 repeat: 200
+          #                 retryTapIfNoChange: true
+          #                 waitToSettleTimeoutMs: 38000

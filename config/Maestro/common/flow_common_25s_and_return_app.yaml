@@ -1,7 +1,8 @@
 appId: ${appId}
 ---
 - repeat:
-      times: 3
+      # times: 3
+      times: ${step || 3}
 
       commands:
           - tapOn:
@@ -12,7 +13,11 @@ appId: ${appId}
                 retryTapIfNoChange: true
                 waitToSettleTimeoutMs: 38000
 
-# Step 5: Return to App
-- launchApp:
-      stopApp: false # Brings the app back to the foreground without restarting it
+- runFlow:
+      when:
+          true: ${needReturn == true}
+      commands:
+          # Step 5: Return to App
+          - launchApp:
+                stopApp: false # Brings the app back to the foreground without restarting it
 
