@@ -5,4 +5,4 @@ appId: com.android.chrome
       optional: true
 
 - tapOn:
-      point: "491, 1674" # 点击"x"按钮
+      point: "491, 1840" # 点击"x"按钮

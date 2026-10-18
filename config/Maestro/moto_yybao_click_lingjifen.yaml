@@ -1,0 +1,7 @@
+appId: com.tencent.android.qqdownloader
+---
+- repeat:
+      times: 5
+      commands:
+          - runFlow:
+                file: ./yybao/flow_click_lingjifen.yaml
