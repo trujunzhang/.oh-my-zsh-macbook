@@ -1,5 +1,6 @@
 appId: com.baidu.BaiduMap
 ---
+- evalScript: ${output.currentIndex = 1}
 - swipe:
       direction: DOWN
 - swipe:
@@ -7,12 +8,17 @@ appId: com.baidu.BaiduMap
 - repeat:
       times: 500
       commands:
-          - runFlow:
-                when:
-                    visible:
-                        text: ".*开宝箱得金币.*"
-                commands:
-                    - tapOn:
-                          text: "去完成"
+          # Step 5: Return to App
+          - launchApp:
+                stopApp: false # Brings the app back to the foreground without restarting it
+          # - runFlow:
+          #       when:
+          #           visible:
+          #               text: ".*开宝箱得金币.*"
+          #       commands:
+          #           - tapOn:
+          #                 text: "去完成"
+          #                 index: ${output.currentIndex}
           - runFlow:
                 file: ./baidumap/flow_jump_another_app_in_homepage.yaml
+          - evalScript: ${output.currentIndex = (output.currentIndex + 1)%4}
