@@ -1,0 +1,18 @@
+appId: com.baidu.BaiduMap
+---
+- swipe:
+      direction: DOWN
+- swipe:
+      direction: UP
+- repeat:
+      times: 500
+      commands:
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*开宝箱得金币.*"
+                commands:
+                    - tapOn:
+                          text: "去完成"
+          - runFlow:
+                file: ./baidumap/flow_jump_another_app_in_homepage.yaml

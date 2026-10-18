@@ -1,0 +1,26 @@
+appId: com.baidu.BaiduMap
+---
+- runFlow:
+      file: ../common/flow_common_25s_and_return_app.yaml
+      env:
+          appId: "com.baidu.BaiduMap"
+          step: 1
+          needReturn: "true"
+
+- tapOn:
+      id: "button_001"
+      optional: true
+
+- runFlow:
+      when:
+          notVisible:
+              text: ".*开宝箱得金币.*"
+      commands:
+          - back
+
+- tapOn:
+      id: "button_001"
+      optional: true
+
+- tapOn:
+      point: "980, 530" # 点击"x" close按钮

@@ -1,12 +1,18 @@
 appId: com.tencent.android.qqdownloader
 ---
+- extendedWaitUntil:
+      visible:
+          text: ".*Continue.*installation.*"
+      timeout: 30000
+
 - runFlow:
       when:
           visible:
-              text: "Continue installation"
+              text: ".*Continue.*installation.*"
+              # text: "Continue installation"
       commands:
           - tapOn:
-                text: "Continue installation"
+                text: ".*Continue.*installation.*"
 
 - runFlow:
       when:

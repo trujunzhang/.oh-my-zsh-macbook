@@ -1,7 +1,7 @@
 appId: com.tencent.android.qqdownloader
 ---
 - repeat:
-      times: 500
+      times: 10
       commands:
           - runFlow:
                 file: ./yybao/flow_goto_tixian_page.yaml

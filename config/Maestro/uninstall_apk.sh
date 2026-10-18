@@ -47,12 +47,12 @@ apk_apps=(
     "com.qihoo.editing"
     # 智联招聘
     "com.zhaopin.social"
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
+    # 汽水音乐
+    "com.luna.music"
+    # 小猿AI
+    "com.fenbi.android.leo"
+    # 迅雷
+    "com.xunlei.downloadprovider"
     #
     # ""
     #

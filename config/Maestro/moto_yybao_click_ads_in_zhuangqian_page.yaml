@@ -1,7 +1,7 @@
 appId: com.tencent.android.qqdownloader
 ---
 - repeat:
-      times: 500
+      times: 10
       commands:
           - tapOn:
                 point: "965, 1424" # 点击"去观看"按钮
