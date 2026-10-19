@@ -1054,4 +1054,17 @@ function drun_adb_devices
     adb devices
 end
 
+function dtest_maestro_studio
+    set file $(
+      fzf --query="$1" --no-multi --select-1 --exit-0 \
+          --preview 'bat --color=always --line-range :500 {}'
+    )
+
+    echo "selected file: $file"
+
+    if not test -d "$file"
+        maestro test "$file"
+    end
+end
+
 alias dclean_maestro_studio_tests="rm -rf $HOME/.maestro/tests"
