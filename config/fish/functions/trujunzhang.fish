@@ -1069,7 +1069,7 @@ end
 # --walker-root="$HOME/Documents/maestro"
 function dtest_maestro_studio
     set file $(
-      ls "$HOME/Documents/maestro" | \
+      ls "$HOME/Documents/maestro" | grep "\.yaml"  | \
       fzf  \
           --no-multi --select-1 --exit-0 \
           --preview 'bat --color=always --line-range :500 {}' \
@@ -1081,7 +1081,7 @@ function dtest_maestro_studio
         info_red_color "selected file: <$selectedFile >"
         maestro test "$selectedFile"
     else
-        info_green_color "no selected file"
+        info_green_color "no selected file!"
     end
 end
 

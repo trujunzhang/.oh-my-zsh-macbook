@@ -1,9 +1,9 @@
 appId: com.qiyi.video.lite
 ---
-- extendedWaitUntil:
-      notVisible:
-          text: ".*已领取.*"
-      timeout: 30000
+# - extendedWaitUntil:
+#       notVisible:
+#           text: ".*已领取.*"
+#       timeout: 30000
 
 - runFlow:
       when:
