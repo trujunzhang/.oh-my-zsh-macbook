@@ -1,16 +1,9 @@
 appId: com.qiyi.video.lite
 ---
-- evalScript: ${output.gotoOtherApp = false}
-
 - extendedWaitUntil:
       notVisible:
           text: ".*已领取.*"
       timeout: 30000
-
-# - extendedWaitUntil:
-#       visible:
-#           text: ".*上滑继续观看.*"
-#       timeout: 30000
 
 - runFlow:
       when:
@@ -18,22 +11,19 @@ appId: com.qiyi.video.lite
               text: ".*上滑继续观看.*"
       commands:
           - tapOn:
-                # text: ".*立即领取.*"
-                # text: ".*可提现.*"
-                # text: ".*提现.*"
                 text: ".*兑会员.*"
                 optional: true
-          - evalScript: ${output.gotoOtherApp  = true}
 
-- runFlow:
-      when:
-          true: ${output.gotoOtherApp}
-          # notVisible:
-          #     text: ".*上滑继续观看.*"
-      commands:
+          - tapOn:
+                point: "550, 1210" # 点击"立即领取" 按钮
+
           - runFlow:
-                file: ../common/flow_common_25s_and_return_app.yaml
-                env:
-                    appId: "com.qiyi.video.lite"
-                    step: 2
-                    needReturn: "true"
+                when:
+                    notVisible:
+                        text: ".*上滑继续观看.*"
+                commands:
+                    - runFlow:
+                          file: ../common/flow_common_25s_and_return_app.yaml
+                          env:
+                              appId: "com.qiyi.video.lite"
+                              needReturn: "true"

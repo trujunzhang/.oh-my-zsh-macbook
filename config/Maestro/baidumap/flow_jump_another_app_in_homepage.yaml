@@ -7,20 +7,20 @@ appId: com.baidu.BaiduMap
           step: 1
           needReturn: "true"
 
-- tapOn:
-      id: "button_001"
-      optional: true
+# - tapOn:
+#       id: "button_001"
+#       optional: true
 
-- runFlow:
-      when:
-          notVisible:
-              text: ".*开宝箱得金币.*"
-      commands:
-          - back
-
-- tapOn:
-      id: "button_001"
-      optional: true
+# - runFlow:
+#       when:
+#           notVisible:
+#               text: ".*开宝箱得金币.*"
+#       commands:
+#           - back
 
 - tapOn:
       point: "980, 530" # 点击"x" close按钮
+
+- tapOn:
+      id: "button_001"
+      optional: true
