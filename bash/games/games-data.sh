@@ -118,57 +118,12 @@ check_real_app_name() {
     done
 }
 
-# check_app_existedxxx() {
-#     prefix=$1
-#     appName=$2
-#
-#     app_name_prefix="${prefix}_${appName}"
-#     dash_name="${appName// /_}"
-#     dash_name_prefix="${prefix}_${dash_name}"
-#
-#     # info "check_app_existed: $app_name_prefix"
-#     # info "check_app_existed: $dash_name_prefix"
-#
-#     if [ -d "$KegworksGames_Folder/${app_name_prefix}.app" ]; then
-#         my_global_file_name="$app_name_prefix"
-#     fi
-#
-#     if [ -d "$KegworksGames_Folder/${dash_name_prefix}.app" ]; then
-#         my_global_file_name="$dash_name_prefix"
-#     fi
-#
-#     name_types=(
-#         "dx_"
-#         "p_"
-#         # for dxmt
-#         "mt_"
-#         "dx_p_"
-#         "dx_mt_"
-#         "dx_p_mt_"
-#         "p_mt_"
-#     )
-#
-#     for ((m = 0; m < ${#name_types[@]}; m = m + 1)); do
-#         value=${name_types[$m]}
-#
-#         if [ -d "$KegworksGames_Folder/${value}${dash_name_prefix}.app" ]; then
-#             my_global_file_name="${value}$dash_name_prefix"
-#         fi
-#     done
-# }
-#
-# check_real_app_namexxx() {
-#     game_name=$1
-#     check_app_existed "10" "$game_name"
-#     check_app_existed "103" "$game_name"
-#     # check_app_existed "" "$game_name"
-#     # check_app_existed "" "$game_name"
-#     # check_app_existed "" "$game_name"
-#     check_app_existed "toxic1113" "$game_name"
-#     check_app_existed "toxic262" "$game_name"
-#     check_app_existed "1011x106" "$game_name"
-#     check_app_existed "1101x1021" "$game_name"
-#     check_app_existed "2610110" "$game_name"
-#     check_app_existed "2477" "$game_name"
-#     check_app_existed "whiskey" "$game_name"
-# }
+modify_plist_game_config() {
+    plist_config_path=$1
+    key=$2
+    value=$3
+
+    /usr/libexec/PlistBuddy -c "Set :'$key' '$value'" "$plist_config_path"
+}
+
+# /usr/libexec/PlistBuddy -c "Set :'Program Name and Path' 'djzhangxxx'" "$HOME/Movies/Info.plist"

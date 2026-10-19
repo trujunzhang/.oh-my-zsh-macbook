@@ -78,3 +78,26 @@ function ListSubfolders(path, name, customFunc)
     end
     return folders
 end
+
+function ModifyGamePlistConfig(path, key, value)
+    -- local path = os.getenv("HOME") .. "/Library/Preferences/com.example.app.plist"
+
+    -- 1. Read the plist file into a Lua table
+    local data = hs.plist.read(path)
+
+    if data then
+        -- 2. Modify the values in the Lua table
+        -- data["SomeKey"] = "NewValue"
+        data[key] = value
+
+        -- 3. Write the table back to the plist file (set true for binary, false for XML/text)
+        local success = hs.plist.write(path, data, false)
+        if success then
+            hs.printf("Plist updated successfully! %s = %s", key, value)
+            -- print("Plist updated successfully!")
+        else
+            hs.printf("Failed to write plist. %s = %s", key, value)
+            -- print("Failed to write plist.")
+        end
+    end
+end
