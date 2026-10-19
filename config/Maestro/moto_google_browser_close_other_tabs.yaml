@@ -1,5 +1,7 @@
 appId: com.android.chrome
 ---
+- swipe:
+      direction: DOWN
 - repeat:
       times: 500
       commands:

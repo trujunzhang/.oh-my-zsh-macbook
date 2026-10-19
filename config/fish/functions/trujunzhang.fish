@@ -1,3 +1,11 @@
+function info_red_color
+    echo -e "\033[31m$argv\033[0m"
+end
+
+function info_green_color
+    echo -e "\033[32m$argv\033[0m"
+end
+
 # Aliases in alphabetical order
 
 alias ma='meteor add' # Add a package to this project.
@@ -1054,16 +1062,26 @@ function drun_adb_devices
     adb devices
 end
 
+# find . -type f | \
+# find "$HOME/Documents/maestro" -type f -name '.*[lenovo|moto|vivo].*' | \
+# rg --files | rg '[lenovo|moto|vivo].*' "$HOME/Documents/maestro"  | \
+# --query="$1"  \
+# --walker-root="$HOME/Documents/maestro"
 function dtest_maestro_studio
     set file $(
-      fzf --query="$1" --no-multi --select-1 --exit-0 \
-          --preview 'bat --color=always --line-range :500 {}'
+      ls "$HOME/Documents/maestro" | \
+      fzf  \
+          --no-multi --select-1 --exit-0 \
+          --preview 'bat --color=always --line-range :500 {}' \
     )
 
-    echo "selected file: $file"
+    set selectedFile "$HOME/Documents/maestro/$file"
 
-    if not test -d "$file"
-        maestro test "$file"
+    if [ -f $selectedFile ]
+        info_red_color "selected file: <$selectedFile >"
+        maestro test "$selectedFile"
+    else
+        info_green_color "no selected file"
     end
 end
 
