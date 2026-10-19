@@ -6,53 +6,21 @@ function info_green_color
     echo -e "\033[32m$argv\033[0m"
 end
 
+function p_scan_files_names
+    set scan_dir "$argv[1]"
+    set file_type "$argv[2]"
+
+    set fzf_file $(
+      ls "$scan_dir" | grep "\.$file_type"  | \
+      fzf  \
+          --no-multi --select-1 --exit-0 \
+          --preview 'bat --color=always --line-range :500 {}' \
+    )
+
+    echo $fzf_file
+end
+
 # Aliases in alphabetical order
-
-alias ma='meteor add' # Add a package to this project.
-alias map='meteor add-platform' # Add a platform to this project.
-alias mad='meteor admin' # Administrative commands.
-alias mau='meteor authorized' # View or change authorized users and organizations for a site.
-alias mb='meteor build' # Build this project for all platforms.
-alias mcl='meteor claim' # Claim a site deployed with an old Meteor version.
-alias mca='meteor configure-android' # Run the Android configuration tool from Meteor's ADK environment.
-alias mc='meteor create' # Create a new project.
-alias mdb='meteor debug' # Run the project, but suspend the server process for debugging.
-alias mde='meteor deploy' # Deploy this project to Meteor.
-alias mis='meteor install-sdk' # Installs SDKs for a platform.
-alias ml='meteor list' # List the packages explicitly used by your project.
-alias mlp='meteor list-platforms' # List the platforms added to your project.
-alias mls='meteor list-sites' # List sites for which you are authorized.
-alias mli='meteor login' # Log in to your Meteor developer account.
-alias mlo='meteor logout' # Log out of your Meteor developer account.
-alias mlog='meteor logs' # Show logs for specified site.
-alias mm='meteor mongo' # Connect to the Mongo database for the specified site.
-alias mp='meteor publish' # Publish a new version of a package to the package server.
-alias mpa='meteor publish-for-arch' # Builds an already-published package for a new platform.
-alias mpr='meteor publish-release' # Publish a new meteor release to the package server.
-alias mr='meteor remove' # Remove a package from this project.
-alias mrp='meteor remove-platform' # Remove a platform from this project.
-alias mre='meteor reset' # Reset the project state. Erases the local database.
-alias m='meteor run' # [default] Run this project in local development mode.
-alias ms='meteor search' # Search through the package server database.
-alias msh='meteor shell' # Launch a Node REPL for interactively evaluating server-side code.
-alias msw='meteor show' # Show detailed information about a release or package.
-alias mt='meteor test-packages' # Test one or more packages.
-alias mu='meteor update' # Upgrade this project's dependencies to their latest versions.
-alias mw='meteor whoami' # Prints the username of your Meteor developer account.
-alias mnp='meteor npm install --verbose' # Run npm install after creating a new meteor project.
-
-alias mios='meteor run ios' # Run npm install after creating a new meteor project.
-alias mandroid='meteor run android' # Run npm install after creating a new meteor project.
-
-alias mtest='meteor test --full-app --driver-package practicalmeteor:mocha --port 3100 --settings settings.json' # This will execute all your *.app-test[s].* and *.app-spec[s].* files.
-
-alias mm='npm run test-with-meteor-mocha'
-alias mps='npm run run-with-settings'
-alias mpsmg='npm run run-with-settings-and-mongo'
-
-# alias mps='meteor debug --settings settings.json' # Run meteor for the politicl project with settings paras.
-alias mpps='meteor debug --production --settings settings.json' # Run meteor for the politicl project with settings paras.
-
 alias npmt='npm test' # Run the test script from package.json.
 alias npmtp="npm run test:puppeteer"
 
@@ -345,13 +313,7 @@ function dmac_run_app_ok
 end
 
 function dmac_genymotion_vm_open
-    # "--vm-name", "e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926", "--referer", "launchpad", "--no-update-check"
-    # set genymotion_app_folder "/Applications"
     set genymotion_app_folder /Volumes/MacGame/MacApps/current/Genymotion
-    # set genymotion_vm_name "Samsung Galaxy Note 3"
-    # set genymotion_vm_name e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926
-    # open -a $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/player --args --vm-name e19d3aee-67e1-4bc5-a9c2-cdd4a4b18926 --referer launchpad --no-update-check
-
     set vm_name 44812fe8-3294-40aa-a9d1-ebd08b971ecc
 
     $genymotion_app_folder/Genymotion.app/Contents/MacOS/player.app/Contents/MacOS/player --vm-name $vm_name --referer launchpad --no-update-check
@@ -914,30 +876,19 @@ function brew_install_app
 end
 
 function dmac_games_sign
-    set gameName $argv[1]
-
-    if not set -q argv[1]
-        echo 'not defined gameName'
-        set gameName default_value
-    end
-
-    echo "game name: $gameName"
-
     set gameFolder /Volumes/MacGame/AppGames
-    set lower_gameName (string lower $gameName)
+    set file (p_scan_files_names "$gameFolder" "app")
 
-    for file in "$gameFolder"/*.app
+    info_red_color "selected game name: $file"
 
-        set lower_file (string lower $file)
-        echo "file path: $file"
+    set selectedFile "$gameFolder/$file"
 
-        if string match -q "*$lower_gameName*" $lower_file
-            echo " Processing file: $file"
+    info_green_color "game file path: $selectedFile"
 
-            xattr -cr "$file" && codesign --force --deep --sign - "$file"
-        end
+    if [ -d $selectedFile ]
+        info_red_color " Processing file: $selectedFile"
+        xattr -cr "$file" && codesign --force --deep --sign - "$file"
     end
-
 end
 
 alias open_ieatta_android_release_fold="open $ORGANIZATIONS_HOME/__CODING/WORKING/ieatta-three-apps/android/app/build/outputs/apk/production/release"
@@ -1062,18 +1013,12 @@ function drun_adb_devices
     adb devices
 end
 
-# find . -type f | \
-# find "$HOME/Documents/maestro" -type f -name '.*[lenovo|moto|vivo].*' | \
-# rg --files | rg '[lenovo|moto|vivo].*' "$HOME/Documents/maestro"  | \
-# --query="$1"  \
-# --walker-root="$HOME/Documents/maestro"
 function dtest_maestro_studio
-    set file $(
-      ls "$HOME/Documents/maestro" | grep "\.yaml"  | \
-      fzf  \
-          --no-multi --select-1 --exit-0 \
-          --preview 'bat --color=always --line-range :500 {}' \
-    )
+    set maestro_workspace "$HOME/Documents/maestro"
+
+    set file (p_scan_files_names "$maestro_workspace" "yaml")
+
+    # info_red_color "return file: <$file>"
 
     set selectedFile "$HOME/Documents/maestro/$file"
 
