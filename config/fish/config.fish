@@ -14,6 +14,13 @@ if status is-interactive
     end
 end
 
+# function fish_user_key_bindings
+#     bind tab search_functions
+# end
+
+# Bind to Control + F
+bind tab fzf-search-functions
+
 set -gx TERM xterm-256color
 
 # environment variable

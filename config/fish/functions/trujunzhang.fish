@@ -1,3 +1,34 @@
+function search_functions --description "Search and execute Fish functions/aliases using fzf"
+    # 1. List all available functions
+    # 2. Filter out internal/private fish functions starting with '_'
+    # 3. Pass to fzf with a real-time syntax-highlighted preview of the function body
+    set -l choice (functions | string match -v '_*' | fzf \
+        --height=40% \
+        --layout=reverse \
+        --border \
+        --prompt="Run Function > " \
+        --preview="functions {} | bat --color=always --style=numbers --language=fish 2>/dev/null || functions {}")
+
+    # If a choice was made, evaluate (execute) it
+    if test -n "$choice"
+        commandline -r "$choice"
+        commandline -f execute
+    end
+end
+
+function fzf-search-functions --description "Search and select Fish functions/aliases"
+    # List all functions, pipe to fzf with a real-time syntax-highlighted preview
+    set -l chosen_func (functions | string match -v '_*' | fzf \
+        --header "Search Fish Functions / Aliases" \
+        --preview "functions {}" \
+        --preview-window="right:60%:wrap")
+
+    # If an item was selected, insert it into the command line buffer
+    if test -n "$chosen_func"
+        commandline -i $chosen_func
+    end
+end
+
 function info_red_color
     echo -e "\033[31m$argv\033[0m"
 end

@@ -9,7 +9,6 @@ end
 # This variable is global so that it can be referenced by fzf_configure_bindings and in tests
 set --global _fzf_search_vars_command '_fzf_search_variables (set --show | psub) (set --names | psub)'
 
-
 # Install the default bindings, which are mnemonic and minimally conflict with fish's preset bindings
 fzf_configure_bindings
 
@@ -24,12 +23,5 @@ function _fzf_uninstall --on-event fzf_uninstall
     set_color cyan
     echo "fzf.fish uninstalled."
     echo "You may need to manually remove fzf_configure_bindings from your config.fish if you were using custom key bindings."
-    set_color normal
-end
-
-function _fzf_migration_message --on-event fzf_update
-    set_color FF8C00 # dark orange
-    printf '\n%s\n' '[fzf.fish] Breaking change: if you have $fzf_dir_opts or $fzf_shell_vars_opts set in your environment, rename them to $fzf_directory_opts and $fzf_variables_opts respectively.'
-    printf '%s\n\n' 'See https://github.com/PatrickF1/fzf.fish/wiki/Migration-Guides#v10.1.'
     set_color normal
 end
