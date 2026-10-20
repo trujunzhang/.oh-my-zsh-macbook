@@ -1,7 +1,7 @@
 appId: com.follow.clashxxx
 ---
 - repeat:
-      times: 500
+      times: 13
       commands:
           - tapOn:
                 text: ".*去完成.*"

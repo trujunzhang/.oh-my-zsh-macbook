@@ -1,7 +1,7 @@
-appId: com.follow.clashxxx
+appId: com.ss.android.article.lite
 ---
 - repeat:
-      times: 500
+      times: 13
       commands:
           - tapOn:
                 point: "888, 1688" # 点击"去完成" close按钮

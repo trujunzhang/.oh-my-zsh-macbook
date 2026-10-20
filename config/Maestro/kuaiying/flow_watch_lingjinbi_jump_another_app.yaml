@@ -1,0 +1,12 @@
+appId: com.kwai.videoeditor
+---
+- runFlow:
+      file: ../common/flow_common_25s_and_return_app.yaml
+      env:
+          appId: "com.kwai.videoeditor"
+          step: 1
+          needReturn: "true"
+
+- tapOn:
+      id: "button_001"
+      optional: true

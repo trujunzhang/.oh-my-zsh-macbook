@@ -1,0 +1,10 @@
+appId: com.kwai.videoeditor
+---
+- repeat:
+      times: 500
+      commands:
+          - tapOn:
+                id: "button_001"
+                optional: true
+          - runFlow:
+                file: ./kuaiying/flow_watch_lingjinbi_jump_another_app.yaml
