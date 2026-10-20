@@ -8,25 +8,10 @@ appId: com.kuaishou.nebula
           - tapOn:
                 text: ".*去看广告.*"
 
-# - repeat:
-#       times: 5
-#
-#       commands:
-#           - tapOn:
-#                 id: "button_001"
-#                 optional: true
-#                 delay: 200
-#                 repeat: 220
-#                 retryTapIfNoChange: true
-#                 waitToSettleTimeoutMs: 40000
-#
-#           - doubleTapOn:
-#                 id: "button_002"
-#                 optional: true
-#                 delay: 200
-#                 repeat: 220
-#                 retryTapIfNoChange: true
-#                 waitToSettleTimeoutMs: 40000
+- extendedWaitUntil:
+      visible:
+          text: ".*Successfully received reward.*"
+      timeout: 300000
 
 - extendedWaitUntil:
       visible:

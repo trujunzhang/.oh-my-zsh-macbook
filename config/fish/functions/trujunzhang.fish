@@ -48,7 +48,7 @@ function p_scan_files_names
           --preview 'bat --color=always --line-range :500 {}' \
     )
 
-    echo $fzf_file
+    echo "$scan_dir/$fzf_file"
 end
 
 # Aliases in alphabetical order
@@ -908,17 +908,13 @@ end
 
 function dmac_games_sign
     set gameFolder /Volumes/MacGame/AppGames
-    set file (p_scan_files_names "$gameFolder" "app")
+    set file_path (p_scan_files_names "$gameFolder" "app")
 
-    info_red_color "selected game name: $file"
+    info_red_color "selected game name: $file_path"
 
-    set selectedFile "$gameFolder/$file"
-
-    info_green_color "game file path: $selectedFile"
-
-    if [ -d $selectedFile ]
-        info_red_color " Processing file: $selectedFile"
-        xattr -cr "$file" && codesign --force --deep --sign - "$file"
+    if [ -d $file_path]
+        info_red_color " Processing file: $file_path"
+        xattr -cr "$file_path" && codesign --force --deep --sign - "$file_path"
     end
 end
 
@@ -1046,18 +1042,13 @@ end
 
 function dtest_maestro_studio
     set maestro_workspace "$HOME/Documents/maestro"
+    set file_path (p_scan_files_names "$maestro_workspace" "yaml")
 
-    set file (p_scan_files_names "$maestro_workspace" "yaml")
-
-    # info_red_color "return file: <$file>"
-
-    set selectedFile "$HOME/Documents/maestro/$file"
-
-    if [ -f $selectedFile ]
-        info_red_color "selected file: <$selectedFile >"
-        maestro test "$selectedFile"
+    if [ -f $file_path ]
+        info_red_color "selected file: <$file_path>"
+        maestro test "$file_path"
     else
-        info_green_color "no selected file!"
+        info_green_color "no selected file! <$file_path>"
     end
 end
 
