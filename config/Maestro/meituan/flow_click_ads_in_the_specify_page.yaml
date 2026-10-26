@@ -1,8 +1,12 @@
 appId: com.sankuai.meituan
 ---
 - tapOn:
-      text: ".*下载应用.*"
+      text: ".*[下载应用|了解更多].*"
       optional: true
+
+# - tapOn:
+#       text: ".*了解更多.*"
+#       optional: true
 
 - tapOn:
       text: ".*立即[体验|打开|下载|抢购].*"

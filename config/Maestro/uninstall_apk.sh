@@ -53,6 +53,24 @@ apk_apps=(
     "com.fenbi.android.leo"
     # 迅雷
     "com.xunlei.downloadprovider"
+    # 书旗小说
+    "com.shuqi.controller"
+    # 酷狗音乐
+    "com.kugou.android"
+    # tada
+    "com.anonymous.mazeapp"
+    # 作业帮
+    "com.baidu.homework"
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
     #
     # ""
     #

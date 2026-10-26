@@ -12,4 +12,7 @@ appId: com.tencent.android.qqdownloader
       point: "1020, 245" # 点击"x" close按钮
 
 - tapOn:
+      point: "1020, 211" # 点击"x" close按钮
+
+- tapOn:
       point: "600, 1445" # 点击"放弃奖励" 按钮

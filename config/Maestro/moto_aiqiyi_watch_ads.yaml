@@ -1,14 +1,14 @@
 appId: com.qiyi.video.lite
 ---
 - repeat:
-      times: 500
-      commands:
-          - runFlow:
-                when:
-                    notVisible:
-                        text: ".*已领取.*"
-                    visible:
-                        text: ".*上滑继续观看.*"
-                commands:
-                    - runFlow:
-                          file: ./aiqiyi/flow_watch_ads.yaml
+    times: 500
+    commands:
+      - runFlow:
+          when:
+            notVisible:
+              text: ".*已领取.*"
+            visible:
+              text: ".*上滑继续观看.*"
+          commands:
+            - runFlow:
+                file: ./aiqiyi/flow_watch_ads.yaml
