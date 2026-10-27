@@ -61,8 +61,8 @@ apk_apps=(
     "com.anonymous.mazeapp"
     # 作业帮
     "com.baidu.homework"
-    #
-    # ""
+    # 明日方舟：终末地
+    "com.hypergryph.endfield"
     #
     # ""
     #

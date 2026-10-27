@@ -1,17 +1,20 @@
 appId: com.tencent.android.qqdownloader
 ---
-- tapOn:
-      point: "965, 1610" # 点击"去浏览"按钮
+- repeat:
+      times: 5
+      commands:
+          - tapOn:
+                point: "965, 1610" # 点击"去浏览"按钮
 
-- runFlow:
-      file: ./common/flow_common_25s_and_return_app.yaml
-      env:
-          appId: "com.tencent.android.qqdownloader"
-          needReturn: "true"
+          - runFlow:
+                file: ./common/flow_common_25s_and_return_app.yaml
+                env:
+                    appId: "com.tencent.android.qqdownloader"
+                    needReturn: "true"
 
-- tapOn:
-      id: "button_001"
-      optional: true
+          - tapOn:
+                id: "button_001"
+                optional: true
 
-- runFlow:
-      file: ./yybao/flow_click_lingjifen.yaml
+          - runFlow:
+                file: ./yybao/flow_click_lingjifen.yaml

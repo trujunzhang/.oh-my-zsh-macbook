@@ -76,6 +76,11 @@
           "key" : "v",
           "type" : "application",
           "value" : "/Applications/Parallels Desktop.app"
+        },
+        {
+          "key" : "y",
+          "type" : "application",
+          "value" : "/Applications/YYBMacApp.app"
         }
       ],
       "key" : "a",

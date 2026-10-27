@@ -1,0 +1,4 @@
+appId: com.follow.clashxxx
+---
+- runFlow:
+      file: ./common/flow_moto_install_app.yaml
