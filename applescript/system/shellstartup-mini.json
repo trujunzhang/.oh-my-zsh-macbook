@@ -51,7 +51,7 @@
     "type": "application",
     "name": "okular-session",
     "application": "okularFiles.app",
-    "enable": "1"
+    "enable": "0"
   },
   {
     "type": "application",

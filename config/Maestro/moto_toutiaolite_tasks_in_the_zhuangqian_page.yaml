@@ -4,7 +4,8 @@ appId: com.ss.android.article.lite
       times: 13
       commands:
           - tapOn:
-                point: "888, 1688" # 点击"去完成" close按钮
+                # point: "888, 1688" # 点击"去完成" close按钮
+                point: "888, 1140" # 点击"去完成" close按钮
                 # text: ".*去完成.*"
                 optional: true
           - runFlow:

@@ -60,6 +60,10 @@ function ListSubfolders(path, name, customFunc)
     -- Clean up path by removing trailing slash if present
     path = path:gsub("/$", "")
 
+    if not DoesDirectoryExist(path) then
+        return folders
+    end
+
     -- Iterate through the directory
     for file in hs.fs.dir(path) do
         if file ~= "." and file ~= ".." then

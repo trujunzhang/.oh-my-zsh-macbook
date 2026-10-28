@@ -465,6 +465,35 @@ function link_nginx_http {
     directoryLink "nginx(Download)" "$ORGANIZATIONS_HOME/__CACHES/github/@http" "$HOMEBREW_HOME/var/www/@http"
 }
 
+function link_yybao_all {
+    YYBAO_LINK_ALL_PATH="/Volumes/MacGame/MacApps/YYBao-ALL"
+    YYBAO_LINK_APPLICATION_PATH="$YYBAO_LINK_ALL_PATH/Applications"
+    YYBAO_LINK_SUPPORT_PATH="$YYBAO_LINK_ALL_PATH/Application Support"
+
+    YYBAO_LINK_ALL_PATHxxx="/Volumes/MacGame/MacApps/YYBao-ALL/Application/腾讯应用宝"
+
+    # Applications
+    directoryLink "yybao(Application)" "${YYBAO_LINK_APPLICATION_PATH}/YYBMacApp.app" "/Applications/YYBMacApp.app"
+    directoryLink "yybao(Application-mobile)" "${YYBAO_LINK_APPLICATION_PATH}/腾讯应用宝" "/Applications/腾讯应用宝"
+
+    # drwxr-xr-x  22 djzhang  staff   704B Oct 28 20:22 com.tencent.yybmac
+    # drwxr-xr-x   5 djzhang  staff   160B Oct 28 18:06 com.tencent.yybmac.app.com.cat.readall
+    # drwxr-xr-x   5 djzhang  staff   160B Oct 28 18:05 com.tencent.yybmac.app.com.phoenix.read
+    # drwxr-xr-x   5 djzhang  staff   160B Oct 28 20:20 com.tencent.yybmac.app.com.ss.android.article.video
+    # drwxr-xr-x  11 djzhang  staff   352B Oct 28 20:18 com.tencent.yybmac.engine
+    # drwxr-xr-x   5 djzhang  staff   160B Oct 28 18:03 com.tencent.yybmac.healthagent
+    # drwxr-xr-x  11 djzhang  staff   352B Oct 28 18:13 com.tencent.yybmac.wine.engine
+
+    # Application support in the $HOME's Library
+    directoryLink "yybao(Library)" "${YYBAO_LINK_SUPPORT_PATH}/com.tencent.yybmac" "/$PATH_USERPROFILE_APPLICATION_SUPPORT/com.tencent.yybmac"
+    directoryLink "yybao(Library)" "${YYBAO_LINK_SUPPORT_PATH}/com.tencent.yybmac.app.com.cat.readall" "/$PATH_USERPROFILE_APPLICATION_SUPPORT/com.tencent.yybmac.app.com.cat.readall"
+    directoryLink "yybao(Library)" "${YYBAO_LINK_SUPPORT_PATH}/com.tencent.yybmac.app.com.phoenix.read" "/$PATH_USERPROFILE_APPLICATION_SUPPORT/com.tencent.yybmac.app.com.phoenix.read"
+    directoryLink "yybao(Library)" "${YYBAO_LINK_SUPPORT_PATH}/com.tencent.yybmac.app.com.ss.android.article.video" "/$PATH_USERPROFILE_APPLICATION_SUPPORT/com.tencent.yybmac.app.com.ss.android.article.video"
+    directoryLink "yybao(Library)" "${YYBAO_LINK_SUPPORT_PATH}/com.tencent.yybmac.engine" "/$PATH_USERPROFILE_APPLICATION_SUPPORT/com.tencent.yybmac.engine"
+    directoryLink "yybao(Library)" "${YYBAO_LINK_SUPPORT_PATH}/com.tencent.yybmac.healthagent" "/$PATH_USERPROFILE_APPLICATION_SUPPORT/com.tencent.yybmac.healthagent"
+    directoryLink "yybao(Library)" "${YYBAO_LINK_SUPPORT_PATH}/com.tencent.yybmac.wine.engine" "/$PATH_USERPROFILE_APPLICATION_SUPPORT/com.tencent.yybmac.wine.engine"
+}
+
 function link_mac_app_cloud {
     HOME_ONE_DRIVE_APP_CLOUD="$PATH_USERPROFILE_LIBRARY/CloudStorage/OneDrive-Personal/AppCloud"
     # directoryLink "cloud(Pieces.os)" "$HOME_ONE_DRIVE_APP_CLOUD/com.pieces.os" "$PATH_USERPROFILE_LIBRARY/com.pieces.os"
@@ -560,23 +589,33 @@ if [[ $MY_MAC_TYPE == "$MAC_TYPE_MINI" ]]; then
     mkdir -p "/Volumes/MacOS/Users/djzhang/Desktop/TAGGame"
 fi
 
-link_homebrew
-link_applescript
-link_config_fold
-link_ide_configs
-link_symlink
-# link_cocoapods
-# link_getx_shell
-link_user_bin_shell
-link_run_apps_shell
-link_nginx_http
-# link_mac_app_cloud
-if [[ $MY_MAC_TYPE == "$MAC_TYPE_MINI" ]]; then
-    # info M2
-    link_mac_user
-fi
-link_games_save_location_path
-link_apps_games_in_applications
-link_saved_games_location
+link_all() {
+    link_homebrew
+    link_applescript
+    link_config_fold
+    link_ide_configs
+    link_symlink
+    # link_cocoapods
+    # link_getx_shell
+    link_user_bin_shell
+    link_run_apps_shell
+    link_nginx_http
+    link_yybao_all
+    # link_mac_app_cloud
+    if [[ $MY_MAC_TYPE == "$MAC_TYPE_MINI" ]]; then
+        # info M2
+        link_mac_user
+    fi
+    link_games_save_location_path
+    link_apps_games_in_applications
+    link_saved_games_location
+}
+
+link_only_test() {
+    link_yybao_all
+}
+
+# link_all
+link_only_test
 
 show_info

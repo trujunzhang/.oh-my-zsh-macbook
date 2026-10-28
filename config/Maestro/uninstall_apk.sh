@@ -63,6 +63,54 @@ apk_apps=(
     "com.baidu.homework"
     # 明日方舟：终末地
     "com.hypergryph.endfield"
+    #  微众银行
+    "com.webank.wemoney"
+    # 灵光
+    "com.antgroup.leopard.android"
+    #全民k歌
+    "com.tencent.karaoke"
+    #  小红书
+    "com.xingin.xhs"
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
     #
     # ""
     #
