@@ -51,6 +51,11 @@ for i in $(seq 0 4 $((json_array_len - 1))); do
         if [ "$type" = "localShellFile" ]; then
             bash "$HOME/.local/bin/${application}"
         fi
+        if [ "$type" = "osascript" ]; then
+            if [ "$application" = "escape-all-tabs" ]; then
+                osascript -e 'tell application "System Events" to keystroke "c" using {command down, shift down, control down}'
+            fi
+        fi
     fi
 
     sleep 2

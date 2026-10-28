@@ -503,7 +503,7 @@ run = 'move-node-to-workspace F'
 # ===================================
 [[on-window-detected]]
 if = 'test %{app-bundle-id} = com.tencent.yybmac'
-run = 'move-node-to-workspace U' 
+run = 'move-node-to-workspace W' 
 
 [[on-window-detected]]
 if = 'test %{app-bundle-id} = com.tencent.yybmac.engine'

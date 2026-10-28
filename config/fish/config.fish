@@ -104,7 +104,7 @@ if test $MY_MAC_TYPE = $MAC_TYPE_MINI
     fish_add_path "$HOME/.local/bin/helix-aarch64-macos"
     # https://github.com/zellij-org/zellij/releases/tag/v0.43.1
     fish_add_path "$HOME/.local/bin/zellij/0.45.1"
-    fish_add_path "$HOME/.local/bin/starship"
+    fish_add_path "$HOME/.local/bin/starship/1.27.0"
     fish_add_path "$HOME/.local/bin/asdf/0.20.0"
     fish_add_path "$HOME/.local/bin/lazygit/0.63.0"
     fish_add_path "$HOME/.local/bin/fzf/0.73.1"
