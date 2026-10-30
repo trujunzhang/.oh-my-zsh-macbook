@@ -4,7 +4,7 @@ appId: com.tencent.android.qqdownloader
       times: 5
       commands:
           - tapOn:
-                point: "965, 1610" # 点击"去浏览"按钮
+                point: "965, 1575" # 点击"去浏览"按钮
 
           - runFlow:
                 file: ./common/flow_common_25s_and_return_app.yaml

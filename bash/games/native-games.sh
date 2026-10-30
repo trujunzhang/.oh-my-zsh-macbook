@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-test_mode="test"
-# test_mode="prod"
+# test_mode="test"
+test_mode="prod"
 
 native_games_apps=(
     # Resident Evil Village

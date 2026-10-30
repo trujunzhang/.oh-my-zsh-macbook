@@ -7,7 +7,7 @@ appId: com.tencent.android.qqdownloader
 # point: "800,  788" # 点击"10元"按钮
 
 - tapOn:
-      point: "900, 330 " # 点击"提现"按钮
+      point: "700, 147 " # 点击"提现"按钮
 
 - tapOn:
       point: "800,  788" # 点击"10元"按钮

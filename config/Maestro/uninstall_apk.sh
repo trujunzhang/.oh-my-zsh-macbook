@@ -67,16 +67,16 @@ apk_apps=(
     "com.webank.wemoney"
     # 灵光
     "com.antgroup.leopard.android"
-    #全民k歌
+    # 全民k歌
     "com.tencent.karaoke"
-    #  小红书
+    # 小红书
     "com.xingin.xhs"
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
+    # 华为乾坤
+    "com.yinwang.qiankunapp"
+    # momo
+    "com.immomo.momo"
+    # 优酷视频
+    "com.youku.phone"
     #
     # ""
     #

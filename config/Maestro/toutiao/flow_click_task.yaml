@@ -20,13 +20,12 @@ appId: ${appId}
       env:
           appId: ${appId}
           needReturn: "true"
-          step: 2
+          step: 1
 
 - tapOn:
       id: "button_001"
       optional: true
-      delay: 200
-      repeat: 200
+      delay: 100
       retryTapIfNoChange: true
       waitToSettleTimeoutMs: 3800
 
@@ -37,6 +36,5 @@ appId: ${appId}
       id: "button_001"
       optional: true
       delay: 100
-      repeat: 10
       retryTapIfNoChange: true
       waitToSettleTimeoutMs: 38
