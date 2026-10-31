@@ -77,10 +77,10 @@ apk_apps=(
     "com.immomo.momo"
     # 优酷视频
     "com.youku.phone"
-    #
-    # ""
-    #
-    # ""
+    # 天天快看极速版
+    "com.xdth.tiantiankk"
+    # NFC门禁卡包通
+    "com.hkfynfc.control"
     #
     # ""
     #

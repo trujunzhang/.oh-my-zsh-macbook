@@ -1053,3 +1053,5 @@ function dtest_maestro_studio
 end
 
 alias dclean_maestro_studio_tests="rm -rf $HOME/.maestro/tests"
+
+alias dsource_craft="bass source ~/CraftRoot/craft/craftenv.sh"

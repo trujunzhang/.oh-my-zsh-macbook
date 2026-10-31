@@ -536,6 +536,9 @@ function link_mac_user {
     # npm(cache)
     directoryLink "npm(cache)" "$HOME_MAC_CACHE_PATH/nvmCaches/.npm" "$HOME/.npm"
 
+    # craft(cache)
+    directoryLink "craft(cache)" "$HOME_MAC_CACHE_PATH/CraftRoot" "$HOME/CraftRoot"
+
     # home(cache)
     directoryLink "HomeCache(npm)" "$HOME_MAC_CACHE_PATH/HomeCache/npm" "$HOME/.cache/npm"
     directoryLink "HomeCache(ccache)" "$HOME_MAC_CACHE_PATH/HomeCache/ccache" "$HOME/.cache/ccache"

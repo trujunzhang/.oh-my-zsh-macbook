@@ -54,6 +54,8 @@ brew_apps_arm=(
     "yq" "yq"
     "mkcert" "mkcert"
 
+    "bat" "bat"
+
     # python on the asdf-vim
     # brew_install_app openssl
     # "readline" "readline"

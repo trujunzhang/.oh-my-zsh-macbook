@@ -271,7 +271,8 @@ set --erase _asdf_shims
 # See https://docs.python-guide.org/dev/pip-virtualenv/#requiring-an-active-virtual-environment-for-pip
 # See https://blog.glyph.im/2023/08/get-your-mac-python-from-python-dot-org.html#and-always-use-virtual-environments
 #
-set -g -x PIP_REQUIRE_VIRTUALENV true
+
+# set -g -x PIP_REQUIRE_VIRTUALENV true
 
 if test $MY_MAC_TYPE = $MAC_TYPE_MINI
     if [ -d $HOMEBREW_PREFIX/opt/micromamba ]
@@ -309,3 +310,9 @@ end
 if [ -f "$HOME/.openclaw/completions/openclaw.fish" ]
     source "$HOME/.openclaw/completions/openclaw.fish"
 end
+
+# if [ -d $HOME/CraftRoot ]
+# bass source ~/CraftRoot/craft/craftenv.sh
+# bass source "$HOME/CraftRoot/craft/craftenv.sh"
+# bass source ~/CraftRoot/craft/craftenv.sh
+# end
