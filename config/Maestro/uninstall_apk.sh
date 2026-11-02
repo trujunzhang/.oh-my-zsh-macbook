@@ -81,10 +81,10 @@ apk_apps=(
     "com.xdth.tiantiankk"
     # NFC门禁卡包通
     "com.hkfynfc.control"
-    #
-    # ""
-    #
-    # ""
+    # 玩吧
+    "com.wodi.who"
+    # 福喜满满
+    "com.hongliang.fxmm"
     #
     # ""
     #
