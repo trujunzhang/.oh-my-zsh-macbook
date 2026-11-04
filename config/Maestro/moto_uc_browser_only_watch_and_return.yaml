@@ -1,0 +1,15 @@
+appId: com.ucmobile.lite
+---
+- repeat:
+      times: 500
+      commands:
+          - runFlow:
+                file: ./common/flow_common_25s_and_return_app.yaml
+                env:
+                    appId: "com.ucmobile.lite"
+                    step: 3
+                    needReturn: "true"
+
+          # Step 5: Return to App
+          # - launchApp:
+          #       stopApp: false # Brings the app back to the foreground without restarting it
