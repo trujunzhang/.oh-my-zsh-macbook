@@ -15,6 +15,8 @@ if status is-interactive
 end
 
 function fish_user_key_bindings
+    # bind tab 'if commandline --search-field >/dev/null; commandline -f complete; else; commandline -f complete-and-search; end'
+    # bind tab 'if commandline --search-field >/dev/null; commandline -f complete; else; fzf-search-functions; end'
     bind tab fzf-search-functions
 end
 

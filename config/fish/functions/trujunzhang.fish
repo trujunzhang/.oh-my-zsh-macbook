@@ -533,7 +533,10 @@ alias drun_git_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/US
 alias drun_grpc__branch="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
 alias drun_all_local_git_update="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash && ./local_git_update.sh"
 alias drun_pods_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
-alias drun_http='cd $ORGANIZATIONS_HOME/__CACHES/github && python -m http.server --cgi 8080'
+
+# alias drun_http='cd $ORGANIZATIONS_HOME/__CACHES/github && python -m http.server --cgi 8080'
+alias drun_http_github="python -m http.server --cgi 9000 --directory $ORGANIZATIONS_HOME/__CACHES/github"
+alias drun_http_share_linux="python -m http.server --cgi 9000 --directory /Volumes/MacGame/movies/ubuntu_http"
 
 alias dopen_okular="bash $TRUJUNZHANG_DOTFILES_HOME /linux/okular/okular_macos.sh"
 

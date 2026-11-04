@@ -140,6 +140,7 @@ alias dfedora_install_okular="sudo flatpak install flathub org.kde.okular"
 
 alias dfedora_install_gnome_tweaks="sudo dnf install gnome-tweaks"
 
-
+# alias dwget_download_from_macos="wget -r -np -nH --cut-dirs=1R http://192.168.2.204:9000/FolderName/"
+alias dwget_download_from_macos="wget -r -np -nH --cut-dirs=1R "
 
 
