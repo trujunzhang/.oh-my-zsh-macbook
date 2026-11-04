@@ -1045,7 +1045,7 @@ function dtest_maestro_studio
     set file_path (p_scan_files_names "$maestro_workspace" "yaml")
 
     if [ -f $file_path ]
-        info_red_color "selected file: <$file_path>"
+        info_red_color "Selected file: <$file_path>"
         maestro test "$file_path"
     else
         info_green_color "no selected file! <$file_path>"

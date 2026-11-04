@@ -1,18 +1,6 @@
 appId: com.tencent.android.qqdownloader
 ---
-- tapOn:
-      id: "button_001"
-      optional: true
-      delay: 200
-      repeat: 20
-      retryTapIfNoChange: true
-      waitToSettleTimeoutMs: 3800
-
-- tapOn:
-      point: "1020, 245" # 点击"x" close按钮
-
-- tapOn:
-      point: "1020, 211" # 点击"x" close按钮
-
-- tapOn:
-      point: "600, 1445" # 点击"放弃奖励" 按钮
+- runFlow:
+      file: ./flow_click_15s_ads.yaml
+      env:
+          needWait: "false"

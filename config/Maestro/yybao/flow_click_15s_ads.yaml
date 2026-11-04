@@ -1,14 +1,14 @@
 appId: com.tencent.android.qqdownloader
 ---
 - repeat:
-      times: 2
+      times: 4
 
       commands:
           - tapOn:
                 id: "button_001"
                 optional: true
                 delay: 200
-                repeat: 200
+                repeat: 1000
                 retryTapIfNoChange: true
                 waitToSettleTimeoutMs: 38000
 
@@ -26,14 +26,18 @@ appId: com.tencent.android.qqdownloader
 - tapOn:
       point: "1020, 245" # 点击"x" close按钮
 
-- repeat:
-      times: 2
-
+- runFlow:
+      when:
+          true: ${needWait || 'true' == "true"}
       commands:
-          - tapOn:
-                id: "button_001"
-                optional: true
-                delay: 200
-                repeat: 200
-                retryTapIfNoChange: true
-                waitToSettleTimeoutMs: 38000
+          - repeat:
+                times: 2
+
+                commands:
+                    - tapOn:
+                          id: "button_001"
+                          optional: true
+                          delay: 200
+                          repeat: 200
+                          retryTapIfNoChange: true
+                          waitToSettleTimeoutMs: 38000

@@ -20,4 +20,6 @@ appId: ${appId}
           # Step 5: Return to App
           - launchApp:
                 stopApp: false # Brings the app back to the foreground without restarting it
+          - launchApp:
+                stopApp: false # Brings the app back to the foreground without restarting it
 
