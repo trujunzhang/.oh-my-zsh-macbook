@@ -6,6 +6,6 @@ appId: com.xxx.xxx
           - swipe:
                 # direction: UP
                 start: 50%, 50%
-                end: 50%, 48%
+                end: 50%, 49%
                 duration: 100
                 waitToSettleTimeoutMs: 50

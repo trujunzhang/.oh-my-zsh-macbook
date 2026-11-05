@@ -91,10 +91,10 @@ apk_apps=(
     "bubei.tingshu"
     # Sohu TV
     "com.sohu.sohuvideo"
-    #
-    # ""
-    #
-    # ""
+    # 好看云壁纸
+    "com.ziyou.haokan"
+    # 咕咕语音
+    "com.dyheart.chat"
     #
     # ""
     #

@@ -1,8 +1,20 @@
 appId: ${appId}
 ---
-- runFlow:
-      file: ../common/flow_common_25s_and_return_app.yaml
-      env:
-          appId: ${appId}
-          step: 1
-          needReturn: "true"
+# - runFlow:
+#       file: ../common/flow_common_25s_and_return_app.yaml
+#       env:
+#           appId: ${appId}
+#           step: 1
+#           needReturn: "true"
+
+# Step 5: Return to App
+- launchApp:
+      stopApp: false # Brings the app back to the foreground without restarting it
+
+# - runFlow:
+#       when:
+#           notVisible:
+#               # text: ".*[日常任务|任务中心|点击领].*"
+#               text: ".*[日常任务|任务中心|点击领].*"
+#       commands:
+#           - back
