@@ -1,0 +1,11 @@
+appId: com.xxx.xxx
+---
+- repeat:
+      times: 1000
+      commands:
+          - swipe:
+                # direction: UP
+                start: 50%, 50%
+                end: 50%, 48%
+                duration: 100
+                waitToSettleTimeoutMs: 50

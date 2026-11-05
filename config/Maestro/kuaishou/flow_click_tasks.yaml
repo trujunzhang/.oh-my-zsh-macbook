@@ -1,0 +1,8 @@
+appId: ${appId}
+---
+- runFlow:
+      file: ../common/flow_common_25s_and_return_app.yaml
+      env:
+          appId: ${appId}
+          step: 1
+          needReturn: "true"

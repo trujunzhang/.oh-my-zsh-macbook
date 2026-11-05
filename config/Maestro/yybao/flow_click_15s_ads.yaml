@@ -21,6 +21,10 @@ appId: com.tencent.android.qqdownloader
           appId: "com.tencent.android.qqdownloader"
           needReturn: "true"
 
+# Step 5: Return to App
+- launchApp:
+      stopApp: false # Brings the app back to the foreground without restarting it
+
 - back
 
 - tapOn:

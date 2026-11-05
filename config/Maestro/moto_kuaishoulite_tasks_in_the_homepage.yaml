@@ -1,0 +1,11 @@
+appId: com.kuaishou.nebula
+---
+- repeat:
+      times: 500
+      commands:
+          - swipe:
+                direction: UP
+
+          - tapOn:
+                text: "点击查看详情"
+                optional: true

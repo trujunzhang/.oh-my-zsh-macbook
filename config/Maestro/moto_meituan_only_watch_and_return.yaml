@@ -1,0 +1,16 @@
+appId: com.sankuai.meituan
+---
+- repeat:
+      times: 500
+      commands:
+          - tapOn:
+                text: ".*去完成.*"
+          - tapOn:
+                text: ".*点击并浏览.*"
+                optional: true
+          - runFlow:
+                file: ./common/flow_common_25s_and_return_app.yaml
+                env:
+                    appId: "com.sankuai.meituan"
+                    step: 1
+                    needReturn: "true"
