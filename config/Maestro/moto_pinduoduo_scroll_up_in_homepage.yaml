@@ -1,0 +1,13 @@
+appId: com.xunmeng.pinduoduo
+---
+- repeat:
+      times: 1000
+      commands:
+          - swipe:
+                direction: UP
+                duration: 20
+                waitToSettleTimeoutMs: 50
+          # - tapOn:
+          #       id: "button_001"
+          #       optional: true
+          #       delay: 100

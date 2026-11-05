@@ -2,7 +2,7 @@
 
 apk_apps=(
     # 声屿
-    "com.whsh.live"
+
     # tantan
     "com.p1.mobile.putong"
     # 韩小圈
@@ -85,12 +85,12 @@ apk_apps=(
     "com.wodi.who"
     # 福喜满满
     "com.hongliang.fxmm"
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
+    # TT语音
+    "com.yiyou.ga"
+    # 懒人听书
+    "bubei.tingshu"
+    # Sohu TV
+    "com.sohu.sohuvideo"
     #
     # ""
     #

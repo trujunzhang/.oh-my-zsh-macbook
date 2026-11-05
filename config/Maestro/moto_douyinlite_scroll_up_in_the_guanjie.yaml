@@ -1,0 +1,14 @@
+appId: com.ss.android.ugc.aweme.lite
+---
+# - tapOn:
+#       text: ".*去逛街.*"
+- repeat:
+      times: 500
+      commands:
+          - swipe:
+                direction: UP
+                duration: 100
+          - tapOn:
+                id: "button_001"
+                optional: true
+                delay: 10

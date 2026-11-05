@@ -4,7 +4,8 @@ appId: com.sankuai.meituan
       times: 500
       commands:
           - tapOn:
-                id: "button_001"
+                point: "274, 894" # 点击"grid"按钮
+                # id: "button_001"
                 optional: true
                 delay: 200
           # Step 5: Return to App
