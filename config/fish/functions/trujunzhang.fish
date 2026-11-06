@@ -1059,14 +1059,24 @@ alias dclean_maestro_studio_tests="rm -rf $HOME/.maestro/tests"
 
 alias dsource_craft="bass source ~/CraftRoot/craft/craftenv.sh"
 
-function run_maestro_kuaishou_lite_in_the_homepage
+function run_maestro_kuaishou_app_in_the_homepage
     set buttonTxt $argv[1]
+    set appType $argv[2]
 
-    set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishoulite_tasks_in_the_homepage.yaml
+    set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishou_tasks_in_the_homepage.yaml
+
+    if test $appType = lite
+        set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishoulite_tasks_in_the_homepage.yaml
+    end
     maestro test -e buttonText=$buttonTxt "$file_path"
 end
 
-alias dadb_kuaishou_lite_去领取="run_maestro_kuaishou_lite_in_the_homepage 去领取"
-alias dadb_kuaishou_lite_去打开="run_maestro_kuaishou_lite_in_the_homepage 去打开"
-alias dadb_kuaishou_lite_去浏览="run_maestro_kuaishou_lite_in_the_homepage 去浏览"
-alias dadb_kuaishou_lite_去参与="run_maestro_kuaishou_lite_in_the_homepage 去参与"
+alias dmaestro_kuaishou_lite_领金币="run_maestro_kuaishou_app_in_the_homepage 领金币 lite"
+alias dmaestro_kuaishou_lite_去领取="run_maestro_kuaishou_app_in_the_homepage 去领取 lite"
+alias dmaestro_kuaishou_lite_去打开="run_maestro_kuaishou_app_in_the_homepage 去打开 lite"
+alias dmaestro_kuaishou_lite_去浏览="run_maestro_kuaishou_app_in_the_homepage 去浏览 lite"
+
+alias dmaestro_kuaishou_去领取="run_maestro_kuaishou_app_in_the_homepage 去领取 base"
+alias dmaestro_kuaishou_去打开="run_maestro_kuaishou_app_in_the_homepage 去打开 base"
+alias dmaestro_kuaishou_去浏览="run_maestro_kuaishou_app_in_the_homepage 去浏览 base"
+alias dmaestro_kuaishou_去参与="run_maestro_kuaishou_app_in_the_homepage 去参与 base"
