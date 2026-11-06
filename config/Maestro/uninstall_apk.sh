@@ -95,12 +95,12 @@ apk_apps=(
     "com.ziyou.haokan"
     # 咕咕语音
     "com.dyheart.chat"
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
+    # 雷电云手机
+    "com.ld.dianquan"
+    # 火车信息价格查询助手
+    "cn.yq.hcxxjgcx"
+    # Migu Video
+    "com.cmcc.cmvideo"
     #
     # ""
     #

@@ -1,16 +1,22 @@
 appId: com.tencent.android.qqdownloader
 ---
 - repeat:
-      times: 4
+      times: 6
 
       commands:
           - tapOn:
                 id: "button_001"
                 optional: true
-                delay: 200
+                delay: 300
                 repeat: 1000
                 retryTapIfNoChange: true
                 waitToSettleTimeoutMs: 38000
+
+# - extendedWaitUntil:
+#       visible:
+#           text: ".*点击后.*看.*秒可得奖励.*"
+#           # text: ".*点击后看秒可得奖励.*"
+#       timeout: 30000
 
 - tapOn:
       point: "600, 1940" # 点击"立即下载"按钮

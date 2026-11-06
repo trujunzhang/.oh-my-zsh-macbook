@@ -394,7 +394,7 @@ end
 
 #const mainActivity = "com.ieatta.track.MainActivity";
 #const packageName = "com.ieatta.track.dev";
-alias android_new_ieatta_genymotion="node $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/run_android_simulator.js --mainActivity 'com.ieatta.track.MainActivity' --packageName 'com.ieatta.track.dev'"
+alias android_new_ieatta_genymotion="node $TRUJUNZHANG_DOTFILES_HOME/bash/run_android_simulator.js --mainActivity 'com.ieatta.track.MainActivity' --packageName 'com.ieatta.track.dev'"
 
 function android_new_ieatta_genymotion_stop
     $ANDROID_SDK_ROOT/emulator/emulator -avd genymotion
@@ -524,15 +524,15 @@ alias neovimcheck="nvim +checkhealth"
 alias neovimplugininstall="nvim +PlugInstall"
 
 # djzhang's cmd
-alias dfpython="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python"
-alias drunvpn="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
-alias drv="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/python && python vpn_connect.py"
-alias drun_onekeymac="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./one_key_macbook.sh"
-alias drun_onekeyenv="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook && ./envLinks.sh"
-alias drun_git_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && ./generator_git_offline.sh"
-alias drun_grpc__branch="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
-alias drun_all_local_git_update="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash && ./local_git_update.sh"
-alias drun_pods_offline="cd $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/USERS/cocoapods && node offline.js"
+alias dfpython="cd $TRUJUNZHANG_DOTFILES_HOME/USERS/python"
+alias drunvpn="cd $TRUJUNZHANG_DOTFILES_HOME/USERS/python && python vpn_connect.py"
+alias drv="cd $TRUJUNZHANG_DOTFILES_HOME/USERS/python && python vpn_connect.py"
+alias drun_onekeymac="cd $TRUJUNZHANG_DOTFILES_HOME && ./one_key_macbook.sh"
+alias drun_onekeyenv="cd $TRUJUNZHANG_DOTFILES_HOME && ./envLinks.sh"
+alias drun_git_offline="cd $TRUJUNZHANG_DOTFILES_HOME/USERS/cocoapods && ./generator_git_offline.sh"
+alias drun_grpc__branch="cd $TRUJUNZHANG_DOTFILES_HOME/USERS/cocoapods/grpc && ./generator_grpc_git_branch.sh"
+alias drun_all_local_git_update="cd $TRUJUNZHANG_DOTFILES_HOME/bash && ./local_git_update.sh"
+alias drun_pods_offline="cd $TRUJUNZHANG_DOTFILES_HOME/USERS/cocoapods && node offline.js"
 
 # alias drun_http='cd $ORGANIZATIONS_HOME/__CACHES/github && python -m http.server --cgi 8080'
 alias drun_http_github="python -m http.server --cgi 9000 --directory $ORGANIZATIONS_HOME/__CACHES/github"
@@ -540,8 +540,8 @@ alias drun_http_share_linux="python -m http.server --cgi 9000 --directory /Volum
 
 alias dopen_okular="bash $TRUJUNZHANG_DOTFILES_HOME /linux/okular/okular_macos.sh"
 
-alias dproject_git_push="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh push"
-alias dproject_git_restore="bash $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/project_local_git_push.sh restore"
+alias dproject_git_push="bash $TRUJUNZHANG_DOTFILES_HOME/bash/project_local_git_push.sh push"
+alias dproject_git_restore="bash $TRUJUNZHANG_DOTFILES_HOME/bash/project_local_git_push.sh restore"
 
 # nvm
 alias dnvmreset="cd ~/ && rm -rf .nvm && git clone file://$ORGANIZATIONS_HOME/IDES/nvm/localNVM .nvm && cd ~/.nvm && git checkout v0.39.3 && . ~/.nvm/nvm.sh && nvm install 16.16 && nvm use 16.16 && npm install -g yarn"
@@ -797,7 +797,7 @@ alias dapp_zellij_list_sessions="zellij ls"
 alias dapp_zellij_setup_check="zellij setup --check"
 alias dapp_zellij_delete_all_sessions="zellij delete-all-sessions"
 
-alias dkill_paralles_desktop="sh $ORGANIZATIONS_HOME/TRUJUNZHANG/_oh-my-zsh-macbook/bash/umac/kill_macos_apps.sh 'prl_client_app'"
+alias dkill_paralles_desktop="sh $TRUJUNZHANG_DOTFILES_HOME/bash/umac/kill_macos_apps.sh 'prl_client_app'"
 alias wcdxxx="mkdir -p /tmp/xxx && cd /tmp/xxx"
 alias wdwxxx="mkdir -p ~/Downloads/xxx && cd ~/Downloads/xxx"
 
@@ -1058,3 +1058,15 @@ end
 alias dclean_maestro_studio_tests="rm -rf $HOME/.maestro/tests"
 
 alias dsource_craft="bass source ~/CraftRoot/craft/craftenv.sh"
+
+function run_maestro_kuaishou_lite_in_the_homepage
+    set buttonTxt $argv[1]
+
+    set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishoulite_tasks_in_the_homepage.yaml
+    maestro test -e buttonText=$buttonTxt "$file_path"
+end
+
+alias dadb_kuaishou_lite_去领取="run_maestro_kuaishou_lite_in_the_homepage 去领取"
+alias dadb_kuaishou_lite_去打开="run_maestro_kuaishou_lite_in_the_homepage 去打开"
+alias dadb_kuaishou_lite_去浏览="run_maestro_kuaishou_lite_in_the_homepage 去浏览"
+alias dadb_kuaishou_lite_去参与="run_maestro_kuaishou_lite_in_the_homepage 去参与"

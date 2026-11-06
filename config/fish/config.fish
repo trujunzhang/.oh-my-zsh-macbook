@@ -14,14 +14,27 @@ if status is-interactive
     end
 end
 
+function tabEvent
+    if commandline --search-field >/dev/null
+        commandline -f complete
+    else
+        commandline -f complete-and-search
+        # echo wh
+        # commandline -f fzf-search-functions
+    end
+end
+
 function fish_user_key_bindings
     # bind tab 'if commandline --search-field >/dev/null; commandline -f complete; else; commandline -f complete-and-search; end'
     # bind tab 'if commandline --search-field >/dev/null; commandline -f complete; else; fzf-search-functions; end'
-    bind tab fzf-search-functions
+    # bind tab fzf-search-functions
+    # bind tab tabEvent
 end
 
 # Bind to Control + F
 # bind tab fzf-search-functions
+
+set -Ux fifc_editor neovim
 
 set -gx TERM xterm-256color
 
