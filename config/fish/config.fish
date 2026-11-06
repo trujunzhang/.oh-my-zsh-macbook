@@ -35,6 +35,9 @@ end
 # bind tab fzf-search-functions
 
 set -Ux fifc_editor neovim
+# to disable the --exact flag and increase the fuzziness
+# It can search more
+set -U fifc_custom_fzf_opts +e
 
 set -gx TERM xterm-256color
 
