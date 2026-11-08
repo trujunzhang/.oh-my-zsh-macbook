@@ -1076,7 +1076,7 @@ alias dmaestro_kuaishou_lite_去领取="run_maestro_kuaishou_app_in_the_homepage
 alias dmaestro_kuaishou_lite_去打开="run_maestro_kuaishou_app_in_the_homepage 去打开 lite"
 alias dmaestro_kuaishou_lite_去浏览="run_maestro_kuaishou_app_in_the_homepage 去浏览 lite"
 
-alias dmaestro_kuaishou_去领取="run_maestro_kuaishou_app_in_the_homepage 去领取 base"
-alias dmaestro_kuaishou_去打开="run_maestro_kuaishou_app_in_the_homepage 去打开 base"
-alias dmaestro_kuaishou_去浏览="run_maestro_kuaishou_app_in_the_homepage 去浏览 base"
-alias dmaestro_kuaishou_去参与="run_maestro_kuaishou_app_in_the_homepage 去参与 base"
+alias dmaestro_kuaishou_base_去领取="run_maestro_kuaishou_app_in_the_homepage 去领取 base"
+alias dmaestro_kuaishou_base_去打开="run_maestro_kuaishou_app_in_the_homepage 去打开 base"
+alias dmaestro_kuaishou_base_去浏览="run_maestro_kuaishou_app_in_the_homepage 去浏览 base"
+alias dmaestro_kuaishou_base_去参与="run_maestro_kuaishou_app_in_the_homepage 去参与 base"

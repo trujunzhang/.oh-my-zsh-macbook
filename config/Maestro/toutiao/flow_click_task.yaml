@@ -14,6 +14,12 @@ appId: ${appId}
       commands:
           - back
 
+- swipe:
+      direction: UP
+
+# - runFlow:
+#       file: ../common/flow_kill_pipixia.yaml
+
 # - runFlow:
 #       file: ../common/flow_common_25s_and_return_app.yaml
 #       env:

@@ -101,12 +101,12 @@ apk_apps=(
     "cn.yq.hcxxjgcx"
     # Migu Video
     "com.cmcc.cmvideo"
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
+    # 腾讯微视
+    "com.tencent.weishi"
+    # PalmChat
+    "com.zenmen.palmchat"
+    # 中青看点
+    "cn.youth.news"
     #
     # ""
     #

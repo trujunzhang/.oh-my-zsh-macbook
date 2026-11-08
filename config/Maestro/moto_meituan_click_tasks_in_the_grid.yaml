@@ -1,5 +1,8 @@
 appId: com.sankuai.meituan
 ---
+# Step 5: Return to App
+- launchApp:
+      stopApp: false # Brings the app back to the foreground without restarting it
 - repeat:
       times: 500
       commands:

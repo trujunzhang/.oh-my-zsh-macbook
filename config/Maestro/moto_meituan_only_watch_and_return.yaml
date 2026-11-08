@@ -5,6 +5,7 @@ appId: com.sankuai.meituan
       commands:
           - tapOn:
                 text: ".*去完成.*"
+                optional: true
           - tapOn:
                 text: ".*点击并浏览.*"
                 optional: true

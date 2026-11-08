@@ -1,0 +1,4 @@
+appId: com.sup.android.superb
+---
+- pressKey: Home # Puts the app into the background
+- killApp # Kills the app via system-initiated process death

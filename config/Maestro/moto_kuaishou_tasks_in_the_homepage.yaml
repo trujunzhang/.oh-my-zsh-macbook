@@ -5,10 +5,20 @@ appId: com.smile.gifmaker
       commands:
           - tapOn:
                 # text: ".*[去领取|去打开|去浏览].*"
-                text: ".*去[领取|打开|浏览].*"
+                # text: ".*去[领取|打开|浏览].*"
+                text: ${buttonText || "NotSet"}
                 optional: true
 
-          - runFlow:
-                file: ./kuaishou/flow_click_tasks.yaml
-                env:
-                    appId: "com.smile.gifmaker"
+          # Step 5: Return to App
+          - launchApp:
+                stopApp: false # Brings the app back to the foreground without restarting it
+
+
+          # Step 5: Return to App
+          # - launchApp:
+          #       stopApp: false # Brings the app back to the foreground without restarting it
+
+          # - runFlow:
+          #       file: ./kuaishou/flow_click_tasks.yaml
+          #       env:
+          #           appId: "com.smile.gifmaker"
