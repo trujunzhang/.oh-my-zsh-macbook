@@ -107,6 +107,46 @@ apk_apps=(
     "com.zenmen.palmchat"
     # 中青看点
     "cn.youth.news"
+    # 京东金融
+    "com.jd.jrapp"
+    # 叮咚买菜
+    "com.yaya.zone"
+    # 松鼠畅听
+    "com.csxh.squirrel.listening"
+    # 人社一点通
+    "com.xunruan.rsydt"
+    # 阿福
+    "com.antgroup.aijk.android"
+    # Ximalaya
+    "com.ximalaya.ting.lite"
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
     #
     # ""
     #

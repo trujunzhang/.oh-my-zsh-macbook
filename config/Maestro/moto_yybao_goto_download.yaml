@@ -5,6 +5,7 @@ appId: com.tencent.android.qqdownloader
       commands:
           - tapOn:
                 text: "去下载"
+                optional: true
           - runFlow:
                 file: ./common/flow_moto_install_app.yaml
           - runFlow:

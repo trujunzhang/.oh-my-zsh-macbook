@@ -7,7 +7,7 @@ appId: com.sankuai.meituan
                 text: ".*去完成.*"
                 optional: true
           - tapOn:
-                text: ".*点击并浏览.*"
+                text: ".*[点击并浏览|立即购买|打开一淘].*"
                 optional: true
           - runFlow:
                 file: ./common/flow_common_25s_and_return_app.yaml
@@ -15,3 +15,12 @@ appId: com.sankuai.meituan
                     appId: "com.sankuai.meituan"
                     step: 1
                     needReturn: "true"
+          - tapOn:
+                id: "button_001"
+                optional: true
+          - runFlow:
+                when:
+                    notVisible:
+                        text: ".*赚钱中心.*"
+                commands:
+                    - back

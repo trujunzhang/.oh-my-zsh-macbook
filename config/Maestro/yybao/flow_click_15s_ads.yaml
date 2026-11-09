@@ -1,7 +1,7 @@
 appId: com.tencent.android.qqdownloader
 ---
 - repeat:
-      times: 6
+      times: 7
 
       commands:
           - tapOn:
