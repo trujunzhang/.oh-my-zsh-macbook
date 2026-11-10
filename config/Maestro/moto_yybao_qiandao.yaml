@@ -1,0 +1,7 @@
+appId: com.tencent.android.qqdownloader
+---
+- tapOn:
+      text: "立即签到"
+      optional: true
+- runFlow:
+      file: ./yybao/flow_close_in_finish_task.yaml

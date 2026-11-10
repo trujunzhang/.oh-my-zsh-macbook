@@ -1,6 +1,9 @@
 appId: com.tencent.android.qqdownloader
 ---
 - tapOn:
+      id: "button_001"
+      optional: true
+- tapOn:
       point: "965, 1575" # 点击"领积分"按钮
       # text: "领积分"
 - runFlow:

@@ -119,8 +119,8 @@ apk_apps=(
     "com.antgroup.aijk.android"
     # Ximalaya
     "com.ximalaya.ting.lite"
-    #
-    # ""
+    # 货拉拉
+    "com.lalamove.huolala.client"
     #
     # ""
     #

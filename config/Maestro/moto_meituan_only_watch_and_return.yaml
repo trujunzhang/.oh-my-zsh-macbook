@@ -5,6 +5,7 @@ appId: com.sankuai.meituan
       commands:
           - tapOn:
                 text: ".*去完成.*"
+                index: ${buttonIndex || 0 }
                 optional: true
           - tapOn:
                 text: ".*[点击并浏览|立即购买|打开一淘].*"

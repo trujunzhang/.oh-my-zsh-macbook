@@ -1071,7 +1071,26 @@ function run_maestro_kuaishou_app_in_the_homepage
     maestro test -e buttonText=$buttonTxt "$file_path"
 end
 
-alias dmaestro_kuaishou_lite_领金币="run_maestro_kuaishou_app_in_the_homepage 领金币 lite"
+function run_maestro_app --argument-names fileName appId envKey1 envValue1 envKey2 envValue2
+    set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/"$fileName".yaml
+
+    if test -n "$envKey2"
+        echo "EnvKey2 argument provided: $envKey2"
+        maestro test -e $envKey1=$envValue1 -e $envKey2=$envValue2 "$file_path"
+    else
+        echo "Error: EnvKey2 argument is not set"
+
+        if test -n "$envKey1"
+            echo "EnvKey1 argument provided: $envKey1"
+            maestro test -e $envKey1=$envValue1 "$file_path"
+        else
+            echo "Error: EnvKey1 argument is not set"
+        end
+    end
+    # maestro test -e buttonText=$buttonTxt "$file_path"
+end
+
+alias dmaestro_kuaishou_lite_领金币="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae com.kuaishou.nebula buttonText 领金币"
 alias dmaestro_kuaishou_lite_去领取="run_maestro_kuaishou_app_in_the_homepage 去领取 lite"
 alias dmaestro_kuaishou_lite_去打开="run_maestro_kuaishou_app_in_the_homepage 去打开 lite"
 alias dmaestro_kuaishou_lite_去浏览="run_maestro_kuaishou_app_in_the_homepage 去浏览 lite"
