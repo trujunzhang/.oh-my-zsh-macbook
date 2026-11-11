@@ -13,6 +13,12 @@
   },
   {
     "type": "application",
+    "name": "hammerspoon",
+    "application": "Hammerspoon.app",
+    "enable": "1"
+  },
+  {
+    "type": "application",
     "name": "clash for arm",
     "application": "ClashX.app",
     "enable": "1"
@@ -55,26 +61,20 @@
   },
   {
     "type": "application",
-    "name": "Leader Key",
-    "application": "Leader Key.app",
-    "enable": "1"
-  },
-  {
-    "type": "application",
     "name": "Ghostty",
     "application": "Ghostty.app",
-    "enable": "1"
-  },
-  {
-    "type": "application",
-    "name": "hammerspoon",
-    "application": "Hammerspoon.app",
     "enable": "1"
   },
   {
     "type": "osascript",
     "name": "escape tabs in the terminal",
     "application": "escape-all-tabs",
+    "enable": "1"
+  },
+  {
+    "type": "application",
+    "name": "Leader Key",
+    "application": "Leader Key.app",
     "enable": "1"
   },
   {
