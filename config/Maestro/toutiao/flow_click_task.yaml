@@ -7,18 +7,36 @@ appId: ${appId}
       retryTapIfNoChange: true
       waitToSettleTimeoutMs: 380
 
-- swipe:
-      direction: UP
+- runFlow:
+      when:
+          visible:
+              # text: ".*[视频|精选].*"
+              text: ".*[短剧|精选].*"
+      commands:
+          - swipe:
+                direction: UP
+                duration: 100
 
 - runFlow:
       when:
+          visible:
+              # text: ".*做任务赚钱.*"
+              # text: ".*看视频存金币.*"
+              text: ".*看视频.*"
           notVisible:
               text: ".*做任务领金币.*"
       commands:
           - back
 
-- swipe:
-      direction: UP
+- runFlow:
+      when:
+          visible:
+              # text: ".*[视频|精选].*"
+              text: ".*[短剧|精选].*"
+      commands:
+          - swipe:
+                direction: UP
+                duration: 100
 
 # - runFlow:
 #       file: ../common/flow_kill_pipixia.yaml

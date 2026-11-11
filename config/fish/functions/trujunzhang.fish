@@ -1119,9 +1119,9 @@ alias dmaestro_baidumap_watch_and_return="run_maestro_app moto_baidumap_only_wat
 # alias dmaestro_baidumap_="run_maestro_app baidumap"
 
 alias dmaestro_meituan_点击合作任务_9="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan"
-alias dmaestro_meituan_watch_and_return_1="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 0"
-alias dmaestro_meituan_watch_and_return_2="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 1"
-alias dmaestro_meituan_watch_and_return_3="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 2"
+alias dmaestro_meituan_watch_and_return_pos_1="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 0"
+alias dmaestro_meituan_watch_and_return_pos_2="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 1"
+alias dmaestro_meituan_watch_and_return_pos_3="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 2"
 # alias dmaestro_meituan_="run_maestro_app meituan"
 # alias dmaestro_meituan_="run_maestro_app meituan"
 
