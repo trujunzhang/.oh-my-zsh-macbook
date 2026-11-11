@@ -19,9 +19,17 @@ appId: com.sankuai.meituan
           - tapOn:
                 id: "button_001"
                 optional: true
-          - runFlow:
-                when:
+
+          - repeat:
+                while:
                     notVisible:
                         text: ".*赚钱中心.*"
                 commands:
                     - back
+
+          # - runFlow:
+          #       when:
+          #           notVisible:
+          #               text: ".*赚钱中心.*"
+          #       commands:
+          #           - back

@@ -1,3 +1,11 @@
+function info_red_color
+    echo -e "\033[31m$argv\033[0m"
+end
+
+function info_green_color
+    echo -e "\033[32m$argv\033[0m"
+end
+
 function search_functions --description "Search and execute Fish functions/aliases using fzf"
     # 1. List all available functions
     # 2. Filter out internal/private fish functions starting with '_'
@@ -27,14 +35,6 @@ function fzf-search-functions --description "Search and select Fish functions/al
     if test -n "$chosen_func"
         commandline -i $chosen_func
     end
-end
-
-function info_red_color
-    echo -e "\033[31m$argv\033[0m"
-end
-
-function info_green_color
-    echo -e "\033[32m$argv\033[0m"
 end
 
 function p_scan_files_names
@@ -1059,17 +1059,17 @@ alias dclean_maestro_studio_tests="rm -rf $HOME/.maestro/tests"
 
 alias dsource_craft="bass source ~/CraftRoot/craft/craftenv.sh"
 
-function run_maestro_kuaishou_app_in_the_homepage
-    set buttonTxt $argv[1]
-    set appType $argv[2]
-
-    set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishou_tasks_in_the_homepage.yaml
-
-    if test $appType = lite
-        set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishoulite_tasks_in_the_homepage.yaml
-    end
-    maestro test -e buttonText=$buttonTxt "$file_path"
-end
+# function run_maestro_kuaishou_app_in_the_homepage
+#     set buttonTxt $argv[1]
+#     set appType $argv[2]
+#
+#     set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishou_tasks_in_the_homepage.yaml
+#
+#     if test $appType = lite
+#         set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishoulite_tasks_in_the_homepage.yaml
+#     end
+#     maestro test -e buttonText=$buttonTxt "$file_path"
+# end
 
 function run_maestro_app --argument-names fileName appName envKey1 envValue1 envKey2 envValue2
     set appIds yybao com.tencent.android.qqdownloader \
@@ -1082,23 +1082,23 @@ function run_maestro_app --argument-names fileName appName envKey1 envValue1 env
         kuaishou_base com.smile.gifmaker
     set -l appId (dict get appIds $appName)
 
-    echo "appName is $appName"
-    echo "appId is $appId"
+    info_red_color " 🎉 appName is <$appName>"
+    info_red_color " 🎉 appId is <$appId>"
 
     set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/"$fileName".yaml
 
     if test -n "$envKey2"
-        echo "EnvKey2 argument provided: $envKey2"
-        maestro test -e $envKey1=$envValue1 -e $envKey2=$envValue2 "$file_path"
+        info_red_color " 🎉 EnvKey2 argument provided: $envKey2"
+        maestro test -e appId=$appId -e $envKey1=$envValue1 -e $envKey2=$envValue2 "$file_path"
     else
-        echo "Error: EnvKey2 argument is not set"
+        info_green_color "Error: EnvKey2 argument is not set"
 
         if test -n "$envKey1"
-            echo "EnvKey1 argument provided: $envKey1"
-            maestro test -e $envKey1=$envValue1 "$file_path"
+            info_green_color "EnvKey1 argument provided: $envKey1"
+            maestro test -e appId=$appId -e $envKey1=$envValue1 "$file_path"
         else
-            echo "Error: EnvKey1 argument is not set"
-            maestro test "$file_path"
+            info_green_color "Error: EnvKey1 argument is not set"
+            maestro test -e appId=$appId "$file_path"
         end
     end
     # maestro test -e buttonText=$buttonTxt "$file_path"
@@ -1118,8 +1118,10 @@ alias dmaestro_baidumap_watch_and_return="run_maestro_app moto_baidumap_only_wat
 # alias dmaestro_baidumap_="run_maestro_app baidumap"
 # alias dmaestro_baidumap_="run_maestro_app baidumap"
 
-alias dmaestro_meituan_点击合作任务="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan"
-# alias dmaestro_meituan_="run_maestro_app meituan"
+alias dmaestro_meituan_点击合作任务_9="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan"
+alias dmaestro_meituan_watch_and_return_1="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 0"
+alias dmaestro_meituan_watch_and_return_2="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 1"
+alias dmaestro_meituan_watch_and_return_3="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 2"
 # alias dmaestro_meituan_="run_maestro_app meituan"
 # alias dmaestro_meituan_="run_maestro_app meituan"
 
@@ -1128,12 +1130,12 @@ alias dmaestro_toutiao_lite_任务_赚钱页面="run_maestro_app moto_toutiaolit
 
 alias dmaestro_aiqiyi_watch_and_return="run_maestro_app moto_aiqiyi_only_watch_and_return aiqiyi"
 
-alias dmaestro_kuaishou_lite_领金币_1="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 领金币"
-alias dmaestro_kuaishou_lite_去领取_2="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 去领取"
-alias dmaestro_kuaishou_lite_去打开_3="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 去打开"
-alias dmaestro_kuaishou_lite_去浏览_4="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 去浏览"
+alias dmaestro_kuaishou_lite_领金币_1="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 领金币"
+alias dmaestro_kuaishou_lite_去领取_2="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去领取"
+alias dmaestro_kuaishou_lite_去打开_3="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去打开"
+alias dmaestro_kuaishou_lite_去浏览_4="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去浏览"
 
-alias dmaestro_kuaishou_base_去领取_1="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_base buttonText 去领取"
-alias dmaestro_kuaishou_base_去打开_2="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_base buttonText 去打开"
-alias dmaestro_kuaishou_base_去浏览_3="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_base buttonText 去浏览"
-alias dmaestro_kuaishou_base_去参与_4="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_base buttonText 去参与"
+alias dmaestro_kuaishou_base_去领取_1="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去领取"
+alias dmaestro_kuaishou_base_去打开_2="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去打开"
+alias dmaestro_kuaishou_base_去浏览_3="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去浏览"
+alias dmaestro_kuaishou_base_去参与_4="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去参与"
