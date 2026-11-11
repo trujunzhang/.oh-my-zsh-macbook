@@ -1073,6 +1073,11 @@ end
 
 function run_maestro_app --argument-names fileName appName envKey1 envValue1 envKey2 envValue2
     set appIds yybao com.tencent.android.qqdownloader \
+        toutiao_lite com.ss.android.article.lite \
+        toutiao_base com.ss.android.article.news \
+        meituan com.sankuai.meituan \
+        aiqiyi com.qiyi.video.lite \
+        baidumap com.baidu.BaiduMap \
         kuaishou_lite com.kuaishou.nebula \
         kuaishou_base com.smile.gifmaker
     set -l appId (dict get appIds $appName)
@@ -1099,21 +1104,36 @@ function run_maestro_app --argument-names fileName appName envKey1 envValue1 env
     # maestro test -e buttonText=$buttonTxt "$file_path"
 end
 
-alias dmaestro_yybao_立即签到="run_maestro_app moto_yybao_qiandao yybao"
-alias dmaestro_yybao_限时_下载="run_maestro_app moto_yybao_click_download yybao"
-alias dmaestro_yybao_限时_打开="run_maestro_app moto_yybao_click_open yybao"
-alias dmaestro_yybao_任务_提现页面="run_maestro_app moto_yybao_click_ads_in_tixian_page yybao"
-alias dmaestro_yybao_任务_赚钱页面="run_maestro_app moto_yybao_click_ads_in_zhuangqian_page yybao"
-# alias dmaestro_yybao_="run_maestro_app yybao"
-# alias dmaestro_yybao_="run_maestro_app yybao"
-# alias dmaestro_yybao_="run_maestro_app yybao"
+alias dmaestro_yybao_立即签到_1="run_maestro_app moto_yybao_qiandao yybao"
+alias dmaestro_yybao_限时_下载_2="run_maestro_app moto_yybao_click_download yybao"
+alias dmaestro_yybao_限时_打开_3="run_maestro_app moto_yybao_click_open yybao"
+alias dmaestro_yybao_任务_提现页面_4="run_maestro_app moto_yybao_click_ads_in_tixian_page yybao"
+alias dmaestro_yybao_任务_赚钱页面_5="run_maestro_app moto_yybao_click_ads_in_zhuangqian_page yybao"
+alias dmaestro_yybao_去下载_6="run_maestro_app moto_yybao_goto_download yybao"
+alias dmaestro_yybao_去浏览_7="run_maestro_app moto_yybao_goto_browser yybao"
+alias dmaestro_yybao_领积分_8="run_maestro_app moto_yybao_click_lingjifen yybao"
 
-alias dmaestro_kuaishou_lite_领金币="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 领金币"
-alias dmaestro_kuaishou_lite_去领取="run_maestro_kuaishou_app_in_the_homepage 去领取 lite"
-alias dmaestro_kuaishou_lite_去打开="run_maestro_kuaishou_app_in_the_homepage 去打开 lite"
-alias dmaestro_kuaishou_lite_去浏览="run_maestro_kuaishou_app_in_the_homepage 去浏览 lite"
+alias dmaestro_baidumap_watch_and_return="run_maestro_app moto_baidumap_only_watch_and_return baidumap"
+# alias dmaestro_baidumap_="run_maestro_app baidumap"
+# alias dmaestro_baidumap_="run_maestro_app baidumap"
+# alias dmaestro_baidumap_="run_maestro_app baidumap"
 
-alias dmaestro_kuaishou_base_去领取="run_maestro_kuaishou_app_in_the_homepage 去领取 base"
-alias dmaestro_kuaishou_base_去打开="run_maestro_kuaishou_app_in_the_homepage 去打开 base"
-alias dmaestro_kuaishou_base_去浏览="run_maestro_kuaishou_app_in_the_homepage 去浏览 base"
-alias dmaestro_kuaishou_base_去参与="run_maestro_kuaishou_app_in_the_homepage 去参与 base"
+alias dmaestro_meituan_点击合作任务="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan"
+# alias dmaestro_meituan_="run_maestro_app meituan"
+# alias dmaestro_meituan_="run_maestro_app meituan"
+# alias dmaestro_meituan_="run_maestro_app meituan"
+
+alias dmaestro_toutiao_base_任务_赚钱页面="run_maestro_app moto_toutiao_tasks_in_the_zhuangqian_page toutiao_base"
+alias dmaestro_toutiao_lite_任务_赚钱页面="run_maestro_app moto_toutiaolite_tasks_in_the_zhuangqian_page toutiao_lite"
+
+alias dmaestro_aiqiyi_watch_and_return="run_maestro_app moto_aiqiyi_only_watch_and_return aiqiyi"
+
+alias dmaestro_kuaishou_lite_领金币_1="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 领金币"
+alias dmaestro_kuaishou_lite_去领取_2="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 去领取"
+alias dmaestro_kuaishou_lite_去打开_3="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 去打开"
+alias dmaestro_kuaishou_lite_去浏览_4="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 去浏览"
+
+alias dmaestro_kuaishou_base_去领取_1="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_base buttonText 去领取"
+alias dmaestro_kuaishou_base_去打开_2="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_base buttonText 去打开"
+alias dmaestro_kuaishou_base_去浏览_3="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_base buttonText 去浏览"
+alias dmaestro_kuaishou_base_去参与_4="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_base buttonText 去参与"

@@ -63,7 +63,7 @@ apk_apps=(
     "com.baidu.homework"
     # 明日方舟：终末地
     "com.hypergryph.endfield"
-    #  微众银行
+    # 微众银行
     "com.webank.wemoney"
     # 灵光
     "com.antgroup.leopard.android"
@@ -121,10 +121,10 @@ apk_apps=(
     "com.ximalaya.ting.lite"
     # 货拉拉
     "com.lalamove.huolala.client"
-    #
-    # ""
-    #
-    # ""
+    # 哔哩哔哩
+    "tv.danmaku.bili"
+    # 天眼查
+    "com.tianyancha.skyeye"
     #
     # ""
     #
