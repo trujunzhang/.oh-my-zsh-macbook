@@ -1071,7 +1071,15 @@ function run_maestro_kuaishou_app_in_the_homepage
     maestro test -e buttonText=$buttonTxt "$file_path"
 end
 
-function run_maestro_app --argument-names fileName appId envKey1 envValue1 envKey2 envValue2
+function run_maestro_app --argument-names fileName appName envKey1 envValue1 envKey2 envValue2
+    set appIds yybao com.tencent.android.qqdownloader \
+        kuaishou_lite com.kuaishou.nebula \
+        kuaishou_base com.smile.gifmaker
+    set -l appId (dict get appIds $appName)
+
+    echo "appName is $appName"
+    echo "appId is $appId"
+
     set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/"$fileName".yaml
 
     if test -n "$envKey2"
@@ -1085,12 +1093,22 @@ function run_maestro_app --argument-names fileName appId envKey1 envValue1 envKe
             maestro test -e $envKey1=$envValue1 "$file_path"
         else
             echo "Error: EnvKey1 argument is not set"
+            maestro test "$file_path"
         end
     end
     # maestro test -e buttonText=$buttonTxt "$file_path"
 end
 
-alias dmaestro_kuaishou_lite_领金币="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae com.kuaishou.nebula buttonText 领金币"
+alias dmaestro_yybao_立即签到="run_maestro_app moto_yybao_qiandao yybao"
+alias dmaestro_yybao_限时_下载="run_maestro_app moto_yybao_click_download yybao"
+alias dmaestro_yybao_限时_打开="run_maestro_app moto_yybao_click_open yybao"
+alias dmaestro_yybao_任务_提现页面="run_maestro_app moto_yybao_click_ads_in_tixian_page yybao"
+alias dmaestro_yybao_任务_赚钱页面="run_maestro_app moto_yybao_click_ads_in_zhuangqian_page yybao"
+# alias dmaestro_yybao_="run_maestro_app yybao"
+# alias dmaestro_yybao_="run_maestro_app yybao"
+# alias dmaestro_yybao_="run_maestro_app yybao"
+
+alias dmaestro_kuaishou_lite_领金币="run_maestro_app moto_kuaishou_app_tasks_in_the_homepae kuaishou_lite buttonText 领金币"
 alias dmaestro_kuaishou_lite_去领取="run_maestro_kuaishou_app_in_the_homepage 去领取 lite"
 alias dmaestro_kuaishou_lite_去打开="run_maestro_kuaishou_app_in_the_homepage 去打开 lite"
 alias dmaestro_kuaishou_lite_去浏览="run_maestro_kuaishou_app_in_the_homepage 去浏览 lite"
