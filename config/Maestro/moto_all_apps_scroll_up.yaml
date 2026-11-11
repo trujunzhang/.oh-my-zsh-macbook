@@ -7,5 +7,5 @@ appId: com.xxx.xxx
                 # direction: UP
                 start: 50%, 50%
                 end: 50%, 49%
-                duration: 100
+                duration: 400
                 waitToSettleTimeoutMs: 50

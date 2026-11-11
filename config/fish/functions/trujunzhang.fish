@@ -1073,10 +1073,13 @@ alias dsource_craft="bass source ~/CraftRoot/craft/craftenv.sh"
 
 function run_maestro_app --argument-names fileName appName envKey1 envValue1 envKey2 envValue2
     set appIds yybao com.tencent.android.qqdownloader \
+        all_apps com.all.apps \
         toutiao_lite com.ss.android.article.lite \
         toutiao_base com.ss.android.article.news \
         meituan com.sankuai.meituan \
+        uc_browser_lite com.ucmobile.lite \
         aiqiyi com.qiyi.video.lite \
+        kuaiying com.kwai.videoeditor \
         baidumap com.baidu.BaiduMap \
         kuaishou_lite com.kuaishou.nebula \
         kuaishou_base com.smile.gifmaker
@@ -1104,6 +1107,8 @@ function run_maestro_app --argument-names fileName appName envKey1 envValue1 env
     # maestro test -e buttonText=$buttonTxt "$file_path"
 end
 
+alias dmaestro_all_app_scroll_up="run_maestro_app moto_all_apps_scroll_up all_apps"
+
 alias dmaestro_yybao_立即签到_1="run_maestro_app moto_yybao_qiandao yybao"
 alias dmaestro_yybao_限时_下载_2="run_maestro_app moto_yybao_click_download yybao"
 alias dmaestro_yybao_限时_打开_3="run_maestro_app moto_yybao_click_open yybao"
@@ -1112,6 +1117,10 @@ alias dmaestro_yybao_任务_赚钱页面_5="run_maestro_app moto_yybao_click_ads
 alias dmaestro_yybao_去下载_6="run_maestro_app moto_yybao_goto_download yybao"
 alias dmaestro_yybao_去浏览_7="run_maestro_app moto_yybao_goto_browser yybao"
 alias dmaestro_yybao_领积分_8="run_maestro_app moto_yybao_click_lingjifen yybao"
+
+alias dmaestro_kuaiying_watch_and_return="run_maestro_app moto_kuaiying_only_watch_and_return kuaiying"
+
+alias dmaestro_uc_browser_lite_watch_and_return="run_maestro_app moto_uc_browser_only_watch_and_return uc_browser_lite"
 
 alias dmaestro_baidumap_watch_and_return="run_maestro_app moto_baidumap_only_watch_and_return baidumap"
 # alias dmaestro_baidumap_="run_maestro_app baidumap"

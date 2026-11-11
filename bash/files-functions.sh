@@ -28,8 +28,8 @@ function directoryLink {
     fi
 
     fixed_src="${src}"
-    if [ -d "${src}-${MY_MAC_TYPE}" ]; then
-        fixed_src="${src}-${MY_MAC_TYPE}"
+    if [ -d "${src}-${MY_MAC_NAME}" ]; then
+        fixed_src="${src}-${MY_MAC_NAME}"
     fi
 
     if [ -d "${dest}" ]; then
@@ -65,8 +65,8 @@ function fileLink {
     fi
 
     fixed_src="${src}"
-    if [ -f "${src}-${MY_MAC_TYPE}" ]; then
-        fixed_src="${src}-${MY_MAC_TYPE}"
+    if [ -f "${src}-${MY_MAC_NAME}" ]; then
+        fixed_src="${src}-${MY_MAC_NAME}"
     fi
 
     if [ -f "${dest}" ]; then

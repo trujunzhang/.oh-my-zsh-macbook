@@ -344,7 +344,6 @@ function link_symlink {
     directoryLink "hammerspoon(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/hammerspoon" "$HOME/.hammerspoon"
     directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner" "$HOME/.config/karabiner"
 
-    # directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner${OS_NAME}" "$HOME/.config/karabiner"
     fileLink "ruby(gemrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/gem/gemrc" "$HOME/.config/gem/gemrc"
 
     # **IDES(purcell's emacs.d)
@@ -615,7 +614,8 @@ link_all() {
 }
 
 link_only_test() {
-    link_yybao_all
+    # link_yybao_all
+    link_symlink
 }
 
 link_all
