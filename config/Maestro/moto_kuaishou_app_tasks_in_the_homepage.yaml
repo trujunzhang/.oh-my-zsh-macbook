@@ -7,6 +7,7 @@ appId: ${appId}
                 # text: ".*[去领取|去打开|去浏览].*"
                 # text: ".*去[领取|打开|浏览].*"
                 text: ${buttonText || "NotSet"}
+                index: ${buttonIndex || 0 }
                 optional: true
 
           # Step 5: Return to App
