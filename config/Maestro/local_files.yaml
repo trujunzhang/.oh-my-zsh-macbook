@@ -6,7 +6,7 @@
 -rw-r--r--@ 1 djzhang  admin   209 Oct 18 19:31 moto_baidumap_watch_videos.yaml
 -rw-r--r--@ 1 djzhang  admin   313 Nov  5 08:43 moto_douyinlite_scroll_up_in_the_guanjie.yaml
 -rw-r--r--@ 1 djzhang  admin   225 Oct 20 18:15 moto_google_browser_close_other_tabs.yaml
--rw-r--r--@ 1 djzhang  admin   740 Nov 10 21:11 moto_kuaishou_app_tasks_in_the_homepa.yaml
+-rw-r--r--@ 1 djzhang  admin   740 Nov 10 21:11 moto_kuaishou_app_tasks_in_the_homepage.yaml
 -rw-r--r--@ 1 djzhang  admin   750 Nov 10 21:10 moto_kuaishou_tasks_in_the_homepage.yaml
 -rw-r--r--@ 1 djzhang  admin  1041 Nov  6 17:18 moto_kuaishoulite_tasks_in_the_homepage.yaml
 -rw-r--r--@ 1 djzhang  admin   255 Oct 20 12:38 moto_kuaiying_only_watch_and_return.yaml

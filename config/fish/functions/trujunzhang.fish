@@ -1120,7 +1120,8 @@ alias dmaestro_yybao_领积分_8="run_maestro_app moto_yybao_click_lingjifen yyb
 
 alias dmaestro_kuaiying_watch_and_return="run_maestro_app moto_kuaiying_only_watch_and_return kuaiying"
 
-alias dmaestro_uc_browser_lite_watch_and_return="run_maestro_app moto_uc_browser_only_watch_and_return uc_browser_lite"
+alias dmaestro_uc_browser_lite_watch_and_return="run_maestro_app moto_uc_browser_lite_only_watch_and_return uc_browser_lite"
+alias dmaestro_uc_browser_lite_打卡任务_9="run_maestro_app moto_uc_browser_lite_click_ads uc_browser_lite"
 
 alias dmaestro_baidumap_watch_and_return="run_maestro_app moto_baidumap_only_watch_and_return baidumap"
 # alias dmaestro_baidumap_="run_maestro_app baidumap"
@@ -1138,6 +1139,8 @@ alias dmaestro_toutiao_base_任务_赚钱页面="run_maestro_app moto_toutiao_ta
 alias dmaestro_toutiao_lite_任务_赚钱页面="run_maestro_app moto_toutiaolite_tasks_in_the_zhuangqian_page toutiao_lite"
 
 alias dmaestro_aiqiyi_watch_and_return="run_maestro_app moto_aiqiyi_only_watch_and_return aiqiyi"
+
+alias dmaestro_kuaishou_lite_打卡_观看精彩视频_9="run_maestro_app vivo_kuaishoulite_click_ads kuaishou_lite"
 
 alias dmaestro_kuaishou_lite_领金币_1="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 领金币"
 alias dmaestro_kuaishou_lite_去领取_2="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去领取"

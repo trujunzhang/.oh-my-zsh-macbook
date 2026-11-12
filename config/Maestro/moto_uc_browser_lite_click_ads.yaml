@@ -1,0 +1,12 @@
+appId: com.ucmobile.lite
+---
+- tapOn:
+      text: ".*去完成.*"
+
+- repeat:
+      while:
+          visible:
+              text: ".*去完成任务.*"
+      commands:
+          - runFlow:
+                file: ./uc_browser/flow_click_ads.yaml

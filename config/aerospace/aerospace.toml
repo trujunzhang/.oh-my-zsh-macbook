@@ -508,3 +508,12 @@ run = 'move-node-to-workspace W'
 [[on-window-detected]]
 if = 'test %{app-bundle-id} = com.tencent.yybmac.engine'
 run = 'move-node-to-workspace P'
+
+[[on-window-detected]]
+if = 'test %{app-bundle-id} = org.pqrs.Karabiner-Elements.Settings'
+run = 'move-node-to-workspace K'
+
+[[on-window-detected]]
+if = 'test %{app-bundle-id} = org.pqrs.Karabiner-EventViewer'
+run = 'move-node-to-workspace V'
+

@@ -3,10 +3,13 @@ appId: com.kuaishou.nebula
 - runFlow:
       when:
           visible:
-              text: ".*今日打卡任务.*"
+              # text: ".*今日打卡任务.*"
+              text: ".*可任选一方式完成任务.*"
       commands:
           - tapOn:
-                text: ".*去看广告.*"
+                point: "540, 2030" # 点击"去观看"按钮
+                # text: ".*去观看.*"
+                # text: ".*去看广告.*"
 
 - extendedWaitUntil:
       visible:
@@ -18,16 +21,25 @@ appId: com.kuaishou.nebula
           text: ".*Successfully received reward.*"
       timeout: 300000
 
-- runFlow:
-      when:
+- repeat:
+      while:
           notVisible:
-              text: ".*今日打卡任务.*"
+              text: ".*可任选一方式完成任务.*"
+              # text: ".*今日打卡任务.*"
       commands:
           - back
+# - runFlow:
+#       when:
+#           notVisible:
+#               text: ".*可任选一方式完成任务.*"
+#               # text: ".*今日打卡任务.*"
+#       commands:
+#           - back
 
-- runFlow:
-      when:
-          notVisible:
-              text: ".*今日打卡任务.*"
-      commands:
-          - back
+# - runFlow:
+#       when:
+#           notVisible:
+#               text: ".*可任选一方式完成任务.*"
+#               # text: ".*今日打卡任务.*"
+#       commands:
+#           - back

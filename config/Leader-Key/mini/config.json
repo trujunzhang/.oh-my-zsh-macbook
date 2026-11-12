@@ -38,7 +38,7 @@
           "value" : "/Volumes/MacUser/djzhang/Applications/PlayCover.app"
         },
         {
-          "key" : "g",
+          "key" : "e",
           "type" : "application",
           "value" : "/Volumes/MacGame/MacApps/GameController/Enjoyable.app"
         },
@@ -48,7 +48,7 @@
           "value" : "/Volumes/MacGame/MacApps/GameController/Enjoyable.app"
         },
         {
-          "key" : "d",
+          "key" : "g",
           "type" : "application",
           "value" : "/Volumes/MacUser/djzhang/Applications/Android Studio.app"
         },
@@ -73,7 +73,7 @@
           "value" : "/Volumes/MacUser/djzhang/Applications/okular.app"
         },
         {
-          "key" : "v",
+          "key" : "d",
           "type" : "application",
           "value" : "/Applications/Parallels Desktop.app"
         },
@@ -81,6 +81,16 @@
           "key" : "y",
           "type" : "application",
           "value" : "/Applications/YYBMacApp.app"
+        },
+        {
+          "key" : "k",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/Karabiner-Elements.app"
+        },
+        {
+          "key" : "v",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/Karabiner-EventViewer.app"
         }
       ],
       "key" : "a",

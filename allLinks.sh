@@ -458,6 +458,11 @@ function link_run_apps_shell {
     chmod +x "$SYSTEM_BIN_PATH/run_my_apps"
 }
 
+function link_user_apps_to_system_folder {
+    directoryLink "App(Karabiner-Elements)" "$HOME/Applications/Karabiner-Elements.app" "/Applications/Karabiner-Elements.app"
+    directoryLink "App(Karabiner-EventViewer)" "$HOME/Applications/Karabiner-EventViewer.app" "/Applications/Karabiner-EventViewer.app"
+}
+
 # Nginx downloads
 function link_nginx_http {
     # directoryLink "nginx(Download)"   "$ORGANIZATIONS_HOME/__CACHES/github/@http"     "/usr/local/var/www/@http"
@@ -611,6 +616,7 @@ link_all() {
     link_games_save_location_path
     link_apps_games_in_applications
     link_saved_games_location
+    link_user_apps_to_system_folder
 }
 
 link_only_test() {

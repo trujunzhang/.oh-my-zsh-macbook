@@ -9,8 +9,11 @@ appId: com.kuaishou.nebula
                 text: ".*去观看.*"
 - repeat:
       while:
+          # notVisible:
+          # text: ".*去观看.*"
           visible:
-              text: ".*去看广告.*"
+              # text: ".*去看广告.*"
+              text: ".*支付后不可退款.*"
       commands:
           - runFlow:
                 file: ./kuaishou/flow_click_ads.yaml
