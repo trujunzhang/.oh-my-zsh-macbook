@@ -1091,7 +1091,10 @@ function run_maestro_app --argument-names fileName appName envKey1 envValue1 env
     set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/"$fileName".yaml
 
     if test -n "$envKey2"
+        info_red_color " 🎉 EnvKey1 argument provided: $envKey1"
+        info_red_color " 🎉 EnvValue1 argument provided: $envValue1"
         info_red_color " 🎉 EnvKey2 argument provided: $envKey2"
+        info_red_color " 🎉 EnvValue2 argument provided: $envValue2"
         maestro test -e appId=$appId -e $envKey1=$envValue1 -e $envKey2=$envValue2 "$file_path"
     else
         info_green_color "Error: EnvKey2 argument is not set"
@@ -1129,21 +1132,31 @@ alias dmaestro_baidumap_watch_and_return="run_maestro_app moto_baidumap_only_wat
 # alias dmaestro_baidumap_="run_maestro_app baidumap"
 
 alias dmaestro_meituan_点击合作任务_9="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan"
-alias dmaestro_meituan_watch_and_return_pos_1="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 0"
-alias dmaestro_meituan_watch_and_return_pos_2="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 1"
-alias dmaestro_meituan_watch_and_return_pos_3="run_maestro_app moto_meituan_only_watch_and_return meituan buttonIndex 2"
+
+alias dmaestro_meituan_去完成_pos_11="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 0"
+alias dmaestro_meituan_去完成_pos_12="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 1"
+alias dmaestro_meituan_去完成_pos_13="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 2"
+
+alias dmaestro_meituan_去观看_pos_21="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去观看 buttonIndex 0"
+alias dmaestro_meituan_去观看_pos_22="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去观看 buttonIndex 1"
+alias dmaestro_meituan_去观看_pos_23="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去观看 buttonIndex 2"
+
+alias dmaestro_meituan_去浏览_pos_31="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去浏览 buttonIndex 0"
+alias dmaestro_meituan_去浏览_pos_32="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去浏览 buttonIndex 1"
+alias dmaestro_meituan_去浏览_pos_33="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去浏览 buttonIndex 2"
+
 # alias dmaestro_meituan_="run_maestro_app meituan"
 # alias dmaestro_meituan_="run_maestro_app meituan"
 
-alias dmaestro_toutiao_base_任务_赚钱页面="run_maestro_app moto_toutiao_tasks_in_the_zhuangqian_page toutiao_base"
-alias dmaestro_toutiao_lite_任务_赚钱页面="run_maestro_app moto_toutiaolite_tasks_in_the_zhuangqian_page toutiao_lite"
+alias dmaestro_toutiao_base_任务_赚钱页面_9="run_maestro_app moto_toutiao_tasks_in_the_zhuangqian_page toutiao_base"
+alias dmaestro_toutiao_lite_任务_赚钱页面_9="run_maestro_app moto_toutiaolite_tasks_in_the_zhuangqian_page toutiao_lite"
 
 alias dmaestro_aiqiyi_watch_and_return="run_maestro_app moto_aiqiyi_only_watch_and_return aiqiyi"
 
 alias dmaestro_kuaishou_lite_打卡_观看精彩视频_9="run_maestro_app vivo_kuaishoulite_click_ads kuaishou_lite"
 
 alias dmaestro_kuaishou_lite_领金币_1="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 领金币"
-alias dmaestro_kuaishou_lite_去领取_2="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去领取"
+alias dmaestro_kuaishou_lite_去领取_2="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttontext 去领取"
 alias dmaestro_kuaishou_lite_去打开_3="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去打开"
 alias dmaestro_kuaishou_lite_去浏览_4="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去浏览"
 
