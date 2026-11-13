@@ -125,6 +125,94 @@ apk_apps=(
     "tv.danmaku.bili"
     # 天眼查
     "com.tianyancha.skyeye"
+    # 花椒直播
+    "com.huajiao"
+    # 京东特价版
+    "com.jd.jdlite"
+    # 英雄没有闪
+    "com.sqw.yxmys.yxmys_gdt3"
+    # 全国铁路车票
+    "com.trainticket.alltrain"
+    # QQ音乐
+    "com.tencent.qqmusic"
+    # 魔域互通版
+    "com.nd.myht"
+    # Meitu
+    "com.mt.mtxx.mtxx"
+    # 酷我音乐
+    "cn.kuwo.player"
+    # 手机监控实时查看
+    "com.hzzx.sjjksssh"
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
+    #
+    # ""
     #
     # ""
     #

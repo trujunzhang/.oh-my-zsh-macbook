@@ -1097,17 +1097,17 @@ function run_maestro_app --argument-names fileName appName envKey1 envValue1 env
         info_red_color " 🎉 EnvValue2 argument provided: $envValue2"
         maestro test -e appId=$appId -e $envKey1=$envValue1 -e $envKey2=$envValue2 "$file_path"
     else
-        info_green_color "Error: EnvKey2 argument is not set"
+        info_green_color " 💥 Error: EnvKey2 argument is not set"
 
         if test -n "$envKey1"
-            info_green_color "EnvKey1 argument provided: $envKey1"
+            info_red_color " 🎉 EnvKey1 argument provided: $envKey1"
+            info_red_color " 🎉 EnvValue1 argument provided: $envValue1"
             maestro test -e appId=$appId -e $envKey1=$envValue1 "$file_path"
         else
-            info_green_color "Error: EnvKey1 argument is not set"
+            info_green_color " 💥 Error: EnvKey1 argument is not set"
             maestro test -e appId=$appId "$file_path"
         end
     end
-    # maestro test -e buttonText=$buttonTxt "$file_path"
 end
 
 alias dmaestro_all_app_scroll_up="run_maestro_app moto_all_apps_scroll_up all_apps"
@@ -1126,12 +1126,16 @@ alias dmaestro_kuaiying_watch_and_return="run_maestro_app moto_kuaiying_only_wat
 alias dmaestro_uc_browser_lite_watch_and_return="run_maestro_app moto_uc_browser_lite_only_watch_and_return uc_browser_lite"
 alias dmaestro_uc_browser_lite_打卡任务_9="run_maestro_app moto_uc_browser_lite_click_ads uc_browser_lite"
 
-alias dmaestro_baidumap_watch_and_return="run_maestro_app moto_baidumap_only_watch_and_return baidumap"
+alias dmaestro_baidumap_watch_and_return_9="run_maestro_app moto_baidumap_only_watch_and_return baidumap"
 # alias dmaestro_baidumap_="run_maestro_app baidumap"
 # alias dmaestro_baidumap_="run_maestro_app baidumap"
 # alias dmaestro_baidumap_="run_maestro_app baidumap"
 
-alias dmaestro_meituan_点击合作任务_9="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan"
+alias dmaestro_meituan_点击合作任务_91="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 0"
+alias dmaestro_meituan_点击合作任务_92="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 1"
+alias dmaestro_meituan_点击合作任务_93="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 2"
+alias dmaestro_meituan_点击合作任务_94="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 3"
+alias dmaestro_meituan_点击合作任务_95="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 4"
 
 # meituan homepage
 alias dmaestro_meituan_去完成_pos_11="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 0"

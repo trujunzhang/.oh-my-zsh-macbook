@@ -28,9 +28,6 @@ appId: com.sankuai.meituan
                 commands:
                     - back
 
-          # - runFlow:
-          #       when:
-          #           notVisible:
-          #               text: ".*赚钱中心.*"
-          #       commands:
-          #           - back
+          - tapOn:
+                text: ".*[立即领奖].*"
+                optional: true
