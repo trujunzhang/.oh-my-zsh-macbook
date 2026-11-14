@@ -75,24 +75,32 @@ function DoOpenAndVerifyGame(appName, game_foler_name, runApp)
                 hs.execute("killall launcher")
                 hs.notify.new({ title = "Killed the wine's configure", informativeText = "run it sucessfully" }):send()
 
-                if DoesDirectoryExist(tmpPath) then
-                    if DoesDirectoryExist(gamesFolder) then
-                        MoveMacOSFolder(GCurrentGameName, "Moved from tmp folder sucessfully", tmpPath, gamePath)
-                        WriteGameTagFile(appName)
-                        -- finally, run the game
-                        DoPlayGame(appName, runApp)
-                    else
-                        hs.notify.new({ title = "Moving from tmp folder", informativeText = "run it failed" }):send()
-                    end
-                end
+                MovingGameFromTmpPath(appName, runApp, gamesFolder, gamePath, tmpPath)
             end)
         else
-            hs.notify
-                .new({ title = "Game folder: '" .. game_foler_name .. "' not found", informativeText = "run it failed" })
-                :send()
+            if DoesDirectoryExist(tmpPath) then
+                MovingGameFromTmpPath(appName, runApp, gamesFolder, gamePath, tmpPath)
+            else
+                hs.notify
+                    .new({ title = "Game folder: '" .. game_foler_name .. "' not found", informativeText = "run it failed" })
+                    :send()
+            end
         end
     else
         hs.notify.new({ title = GCurrentGameName .. " not found", informativeText = "run it failed" }):send()
+    end
+end
+
+function MovingGameFromTmpPath(appName, runApp, gamesFolder, gamePath, tmpPath)
+    if DoesDirectoryExist(tmpPath) then
+        if DoesDirectoryExist(gamesFolder) then
+            MoveMacOSFolder(GCurrentGameName, "Moved from tmp folder sucessfully", tmpPath, gamePath)
+            WriteGameTagFile(appName)
+            -- finally, run the game
+            DoPlayGame(appName, runApp)
+        else
+            hs.notify.new({ title = "Moving from tmp folder", informativeText = "run it failed" }):send()
+        end
     end
 end
 
