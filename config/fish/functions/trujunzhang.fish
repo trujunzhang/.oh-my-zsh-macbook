@@ -1074,6 +1074,7 @@ alias dsource_craft="bass source ~/CraftRoot/craft/craftenv.sh"
 function run_maestro_app --argument-names fileName appName envKey1 envValue1 envKey2 envValue2
     set appIds yybao com.tencent.android.qqdownloader \
         all_apps com.all.apps \
+        google_chrome com.android.chrome \
         toutiao_lite com.ss.android.article.lite \
         toutiao_base com.ss.android.article.news \
         meituan com.sankuai.meituan \
@@ -1121,7 +1122,7 @@ alias dmaestro_yybao_去下载_6="run_maestro_app moto_yybao_goto_download yybao
 alias dmaestro_yybao_去浏览_7="run_maestro_app moto_yybao_goto_browser yybao"
 alias dmaestro_yybao_领积分_8="run_maestro_app moto_yybao_click_lingjifen yybao"
 
-alias dmaestro_kuaiying_watch_and_return="run_maestro_app moto_kuaiying_only_watch_and_return kuaiying"
+alias dmaestro_kuaiying_watch_and_return_9="run_maestro_app moto_kuaiying_only_watch_and_return kuaiying"
 
 alias dmaestro_uc_browser_lite_watch_and_return="run_maestro_app moto_uc_browser_lite_only_watch_and_return uc_browser_lite"
 alias dmaestro_uc_browser_lite_打卡任务_9="run_maestro_app moto_uc_browser_lite_click_ads uc_browser_lite"
@@ -1141,6 +1142,8 @@ alias dmaestro_meituan_点击合作任务_95="run_maestro_app moto_meituan_click
 alias dmaestro_meituan_去完成_pos_11="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 0"
 alias dmaestro_meituan_去完成_pos_12="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 1"
 alias dmaestro_meituan_去完成_pos_13="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 2"
+alias dmaestro_meituan_去完成_pos_14="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 3"
+alias dmaestro_meituan_去完成_pos_15="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 4"
 
 alias dmaestro_meituan_去观看_pos_21="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去观看 buttonIndex 0"
 alias dmaestro_meituan_去观看_pos_22="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去观看 buttonIndex 1"
@@ -1185,3 +1188,5 @@ alias dmaestro_kuaishou_base_去浏览_pos_32="run_maestro_app moto_kuaishou_app
 
 alias dmaestro_kuaishou_base_去参与_pos_41="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去参与 buttonIndex 0"
 alias dmaestro_kuaishou_base_去参与_pos_42="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去参与 buttonIndex 1"
+
+alias dmaestro_google_chrome_close_tabs_9="run_maestro_app moto_google_browser_close_other_tabs google_chrome"

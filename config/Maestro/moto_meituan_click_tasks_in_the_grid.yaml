@@ -3,13 +3,13 @@ appId: com.sankuai.meituan
 # Step 5: Return to App
 - launchApp:
       stopApp: false # Brings the app back to the foreground without restarting it
+- tapOn:
+      text: ".*去完成.*"
+      index: ${buttonIndex || 0 }
+      optional: true
 - repeat:
       times: 500
       commands:
-          - tapOn:
-                text: ".*去完成.*"
-                index: ${buttonIndex || 0 }
-                optional: true
           - tapOn:
                 # point: "274, 894" # 点击"grid"按钮
                 point: "170, 1140" # 点击"grid"按钮

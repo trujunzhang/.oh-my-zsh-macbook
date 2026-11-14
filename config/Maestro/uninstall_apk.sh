@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 apk_apps=(
-    # 声屿
-
     # tantan
     "com.p1.mobile.putong"
     # 韩小圈
@@ -143,16 +141,16 @@ apk_apps=(
     "cn.kuwo.player"
     # 手机监控实时查看
     "com.hzzx.sjjksssh"
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
-    #
-    # ""
+    # 走路生财运
+    "com.amenabextran.zlscy"
+    # vivo.com
+    "com.vivo.space"
+    # 云视频监控看家
+    "com.monitorfy.video"
+    # 流量卡办理方舟平台
+    "com.fangzhouad"
+    # 松鼠畅读极速版
+    "com.syey.songshucd"
     #
     # ""
     #
