@@ -517,3 +517,7 @@ run = 'move-node-to-workspace K'
 if = 'test %{app-bundle-id} = org.pqrs.Karabiner-EventViewer'
 run = 'move-node-to-workspace V'
 
+[[on-window-detected]]
+if = 'test %{app-bundle-id} = com.tdesktop.Telegram'
+run = 'move-node-to-workspace M'
+

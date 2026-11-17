@@ -17,8 +17,11 @@ appId: ${appId}
       when:
           true: ${needReturn == "true"}
       commands:
-          # Step 5: Return to App
-          - launchApp:
-                stopApp: false # Brings the app back to the foreground without restarting it
-          # - launchApp:
-          #       stopApp: false # Brings the app back to the foreground without restarting it
+          - repeat:
+                # times: 3
+                times: ${returnStep || 1}
+
+                commands:
+                    # Step 5: Return to App
+                    - launchApp:
+                          stopApp: false # Brings the app back to the foreground without restarting it

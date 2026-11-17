@@ -9,6 +9,7 @@ appId: com.sankuai.meituan
                 index: ${buttonIndex || 0 }
                 optional: true
           - tapOn:
+                # text: ".*[点击并浏览|立即购买|打开一淘|立即下载].*"
                 text: ".*[点击并浏览|立即购买|打开一淘].*"
                 optional: true
           - runFlow:

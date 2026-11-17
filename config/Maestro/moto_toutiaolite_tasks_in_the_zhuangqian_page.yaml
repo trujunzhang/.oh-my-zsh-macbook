@@ -1,7 +1,7 @@
 appId: com.ss.android.article.lite
 ---
 - repeat:
-      times: 13
+      times: 23
       commands:
           - tapOn:
                 # point: "888, 1688" # 点击"去完成" close按钮

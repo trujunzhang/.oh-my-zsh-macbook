@@ -493,6 +493,11 @@
           "key" : "d",
           "type" : "application",
           "value" : "/Volumes/MacUser/djzhang/Applications/Downie 4.app"
+        },
+        {
+          "key" : "t",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/Telegram.app"
         }
       ],
       "key" : "d",

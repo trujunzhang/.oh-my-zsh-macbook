@@ -1,16 +1,16 @@
 appId: com.tencent.android.qqdownloader
 ---
 - repeat:
-      times: 7
+      times: 1
 
       commands:
           - tapOn:
                 id: "button_001"
                 optional: true
                 delay: 300
-                repeat: 1000
+                # repeat: 1000
                 retryTapIfNoChange: true
-                waitToSettleTimeoutMs: 38000
+                # waitToSettleTimeoutMs: 38000
 
 # - extendedWaitUntil:
 #       visible:
@@ -19,17 +19,23 @@ appId: com.tencent.android.qqdownloader
 #       timeout: 30000
 
 - tapOn:
+      point: "600, 1780" # 点击"立即下载"按钮
+      # point: "600, 1800" # 点击"立即下载"按钮
+
+- tapOn:
       point: "600, 1940" # 点击"立即下载"按钮
 
 - runFlow:
       file: ../common/flow_common_25s_and_return_app.yaml
       env:
           appId: "com.tencent.android.qqdownloader"
+          step: 2
           needReturn: "true"
+          returnStep: 2
 
 # Step 5: Return to App
-- launchApp:
-      stopApp: false # Brings the app back to the foreground without restarting it
+# - launchApp:
+#       stopApp: false # Brings the app back to the foreground without restarting it
 
 - back
 

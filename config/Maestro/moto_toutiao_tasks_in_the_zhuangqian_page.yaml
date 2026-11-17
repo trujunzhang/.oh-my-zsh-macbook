@@ -1,7 +1,7 @@
 appId: com.ss.android.article.news
 ---
 - repeat:
-      times: 13
+      times: 23
       commands:
           - tapOn:
                 text: ".*去完成.*"
