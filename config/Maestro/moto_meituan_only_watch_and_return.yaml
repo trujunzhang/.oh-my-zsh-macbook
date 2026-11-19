@@ -29,6 +29,10 @@ appId: com.sankuai.meituan
                 commands:
                     - back
 
+                    - tapOn:
+                          text: ".*残忍离开.*"
+                          optional: true
+
           - tapOn:
                 text: ".*[立即领奖].*"
                 optional: true
