@@ -151,8 +151,8 @@ apk_apps=(
     "com.fangzhouad"
     # 松鼠畅读极速版
     "com.syey.songshucd"
-    #
-    # ""
+    # CamScanner
+    "com.intsig.camscanner"
     #
     # ""
     #

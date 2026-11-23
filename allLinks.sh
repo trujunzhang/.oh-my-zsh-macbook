@@ -461,6 +461,7 @@ function link_run_apps_shell {
 function link_user_apps_to_system_folder {
     directoryLink "App(Karabiner-Elements)" "$HOME/Applications/Karabiner-Elements.app" "/Applications/Karabiner-Elements.app"
     directoryLink "App(Karabiner-EventViewer)" "$HOME/Applications/Karabiner-EventViewer.app" "/Applications/Karabiner-EventViewer.app"
+    directoryLink "App(Vibe Island)" "$HOME/Applications/Vibe Island.app" "/Applications/Vibe Island.app"
 }
 
 # Nginx downloads

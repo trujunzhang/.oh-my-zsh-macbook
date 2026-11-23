@@ -5,25 +5,32 @@ appId: com.qiyi.video.lite
 #           text: ".*已领取.*"
 #       timeout: 30000
 
+# - runFlow:
+#       when:
+#           visible:
+#               text: ".*上滑继续观看.*"
+#       commands:
+- tapOn:
+      text: ".*兑会员.*"
+      optional: true
+
+- tapOn:
+      point: "550, 1210" # 点击"立即领取" 按钮
+
 - runFlow:
       when:
-          visible:
+          notVisible:
               text: ".*上滑继续观看.*"
       commands:
-          - tapOn:
-                text: ".*兑会员.*"
-                optional: true
-
-          - tapOn:
-                point: "550, 1210" # 点击"立即领取" 按钮
-
           - runFlow:
-                when:
-                    notVisible:
-                        text: ".*上滑继续观看.*"
-                commands:
-                    - runFlow:
-                          file: ../common/flow_common_25s_and_return_app.yaml
-                          env:
-                              appId: "com.qiyi.video.lite"
-                              needReturn: "true"
+                file: ../common/flow_common_25s_and_return_app.yaml
+                env:
+                    appId: "com.qiyi.video.lite"
+                    needReturn: "true"
+
+- repeat:
+      while:
+          notVisible:
+              text: ".*短视频.*"
+      commands:
+          - back

@@ -19,7 +19,8 @@ appId: com.kuaishou.nebula
 - runFlow:
       when:
           visible:
-              text: ".*万观看.*"
+              text: ".*点什么.*"
+              # text: ".*观看.*"
       commands:
           - runFlow:
                 file: ../common/flow_common_25s_and_return_app.yaml
@@ -31,7 +32,9 @@ appId: com.kuaishou.nebula
 - runFlow:
       when:
           notVisible:
-              text: ".*万观看.*"
+              text: ".*点什么.*"
+          visible:
+              text: ".*Receive.*rewards.*"
       commands:
           - extendedWaitUntil:
                 visible:
