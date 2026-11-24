@@ -1,0 +1,41 @@
+appId: com.qiyi.video.lite
+---
+- repeat:
+      times: 1000
+      commands:
+          - runFlow:
+                when:
+                    notVisible:
+                        text: ".*上滑继续观看.*"
+                commands:
+                    - swipe:
+                          direction: UP
+                          duration: 100
+
+          # - runFlow:
+          #       when:
+          #           visible:
+          #               text: ".*上滑继续观看.*"
+          #       commands:
+          #           - runFlow:
+          #                 when:
+          #                     visible:
+          #                         text: ".*已领取.*"
+          #                 commands:
+          #                     - swipe:
+          #                           direction: UP
+          #                           duration: 100
+
+          - runFlow:
+                when:
+                    notVisible:
+                        text: ".*已领取.*"
+                    visible:
+                        text: ".*上滑继续观看.*"
+                commands:
+                    - runFlow:
+                          file: ./aiqiyi/flow_watch_ads.yaml
+
+                    - swipe:
+                          direction: UP
+                          duration: 100

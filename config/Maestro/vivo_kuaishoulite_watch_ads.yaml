@@ -1,0 +1,19 @@
+appId: com.kuaishou.nebula
+---
+- runFlow:
+      when:
+          visible:
+              text: ".*今日打卡任务.*"
+      commands:
+          - tapOn:
+                text: ".*去观看.*"
+- repeat:
+      while:
+          # notVisible:
+          # text: ".*去观看.*"
+          visible:
+              # text: ".*去看广告.*"
+              text: ".*支付后不可退款.*"
+      commands:
+          - runFlow:
+                file: ./kuaishou/flow_watch_ads.yaml

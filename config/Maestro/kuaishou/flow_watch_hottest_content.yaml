@@ -1,0 +1,54 @@
+appId: com.kuaishou.nebula
+---
+- runFlow:
+      when:
+          visible:
+              # text: ".*今日打卡任务.*"
+              text: ".*支付后不可退款.*"
+      commands:
+          - tapOn:
+                # point: "540, 2030" # 点击"去观看"按钮
+                text: ".*去完成.*"
+
+- tapOn:
+      id: "button_001"
+      optional: true
+      delay: 200
+
+- runFlow:
+      when:
+          visible:
+              text: ".*点什么.*"
+              # text: ".*观看.*"
+      commands:
+          - runFlow:
+                file: ../common/flow_common_25s_and_return_app.yaml
+                env:
+                    appId: "com.kuaishou.nebula"
+                    step: 2
+                    needReturn: "false"
+
+- runFlow:
+      when:
+          notVisible:
+              text: ".*点什么.*"
+          visible:
+              text: ".*Receive.*rewards.*"
+      commands:
+          - extendedWaitUntil:
+                visible:
+                    text: ".*Successfully received reward.*"
+                timeout: 300000
+
+          - extendedWaitUntil:
+                visible:
+                    text: ".*Successfully received reward.*"
+                timeout: 300000
+
+- repeat:
+      while:
+          notVisible:
+              text: ".*可任选一方式完成任务.*"
+              # text: ".*今日打卡任务.*"
+      commands:
+          - back

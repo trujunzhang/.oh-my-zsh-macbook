@@ -1111,7 +1111,7 @@ function run_maestro_app --argument-names fileName appName envKey1 envValue1 env
     end
 end
 
-alias dmaestro_all_app_scroll_up="run_maestro_app moto_all_apps_scroll_up all_apps"
+alias dmaestro_all_app_scroll_up_9="run_maestro_app moto_all_apps_scroll_up all_apps"
 
 alias dmaestro_yybao_立即签到_1="run_maestro_app moto_yybao_qiandao yybao"
 alias dmaestro_yybao_限时_下载_2="run_maestro_app moto_yybao_click_download yybao"
@@ -1160,8 +1160,10 @@ alias dmaestro_toutiao_base_任务_赚钱页面_9="run_maestro_app moto_toutiao_
 alias dmaestro_toutiao_lite_任务_赚钱页面_9="run_maestro_app moto_toutiaolite_tasks_in_the_zhuangqian_page toutiao_lite"
 
 alias dmaestro_aiqiyi_watch_and_return_9="run_maestro_app moto_aiqiyi_only_watch_and_return aiqiyi"
+alias dmaestro_aiqiyi_watch_and_return_自动_8="run_maestro_app moto_aiqiyi_auto_watch_and_return aiqiyi"
 
-alias dmaestro_kuaishou_lite_打卡_观看精彩视频_9="run_maestro_app vivo_kuaishoulite_click_ads kuaishou_lite"
+alias dmaestro_kuaishou_lite_打卡_观看精彩视频_8="run_maestro_app vivo_kuaishoulite_watch_ads kuaishou_lite"
+alias dmaestro_kuaishou_lite_打卡_观看热门内容_9="run_maestro_app vivo_kuaishoulite_watch_hottest_content kuaishou_lite"
 
 # kuaishou lite
 alias dmaestro_kuaishou_lite_领金币_pos_11="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 领金币 buttonIndex 0"

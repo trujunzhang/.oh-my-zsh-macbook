@@ -16,4 +16,4 @@ appId: com.kuaishou.nebula
               text: ".*支付后不可退款.*"
       commands:
           - runFlow:
-                file: ./kuaishou/flow_click_ads.yaml
+                file: ./kuaishou/flow_watch_hottest_content.yaml
