@@ -129,6 +129,12 @@ if test $MY_MAC_TYPE = $MAC_TYPE_MINI
     fish_add_path "$HOME/.local/bin/android-platform-tools/37.0.0/platform-tools"
     fish_add_path "$HOME/.local/bin/nvim-macos-arm64/bin"
 
+    # emacs version
+    set EMACS_VERAION_NAME "emacs-plus-31.1-arm64-15"
+    set EMACS_APP_PATH "$HOME/Applications/$EMACS_VERAION_NAME/Emacs.app"
+    fish_add_path "$EMACS_APP_PATH/Contents/MacOS/bin"
+    fish_add_path "$EMACS_APP_PATH/Contents/MacOS"
+
     # python version on the homebrew
 
     set PYTHON_ON_HOMEBREW "$(brew --prefix python)/libexec/bin"

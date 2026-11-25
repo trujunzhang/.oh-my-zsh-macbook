@@ -7,6 +7,8 @@ appId: com.sankuai.meituan
                 # text: ".*去完成.*"
                 text: ${buttonText || "NotSet"}
                 index: ${buttonIndex || 0 }
+                # text: ".*浏览低价好物得金币.*"
+                # text: ".*看广告赚金币.*"
                 optional: true
           - tapOn:
                 # text: ".*[点击并浏览|立即购买|打开一淘|立即下载].*"
@@ -16,7 +18,7 @@ appId: com.sankuai.meituan
                 file: ./common/flow_common_25s_and_return_app.yaml
                 env:
                     appId: "com.sankuai.meituan"
-                    step: 1
+                    step: 3
                     needReturn: "true"
           - tapOn:
                 id: "button_001"

@@ -25,7 +25,7 @@ appId: com.kuaishou.nebula
                 file: ../common/flow_common_25s_and_return_app.yaml
                 env:
                     appId: "com.kuaishou.nebula"
-                    step: 2
+                    step: 4
                     needReturn: "false"
 
 - runFlow:

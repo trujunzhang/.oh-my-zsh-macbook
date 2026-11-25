@@ -462,6 +462,10 @@ function link_user_apps_to_system_folder {
     directoryLink "App(Karabiner-Elements)" "$HOME/Applications/Karabiner-Elements.app" "/Applications/Karabiner-Elements.app"
     directoryLink "App(Karabiner-EventViewer)" "$HOME/Applications/Karabiner-EventViewer.app" "/Applications/Karabiner-EventViewer.app"
     directoryLink "App(Vibe Island)" "$HOME/Applications/Vibe Island.app" "/Applications/Vibe Island.app"
+
+    # Applications
+    # directoryLink "yybao(Application)" "$HOME/Applications/YYBMacApp.app" "/Applications/YYBMacApp.app"
+    directoryLink "yybao(Application-mobile)" "$HOME/Applications/腾讯应用宝" "/Applications/腾讯应用宝"
 }
 
 # Nginx downloads
@@ -470,7 +474,7 @@ function link_nginx_http {
     directoryLink "nginx(Download)" "$ORGANIZATIONS_HOME/__CACHES/github/@http" "$HOMEBREW_HOME/var/www/@http"
 }
 
-function link_yybao_all {
+function link_yybao_allxxx {
     YYBAO_LINK_ALL_PATH="/Volumes/MacGame/MacApps/YYBao-ALL"
     YYBAO_LINK_APPLICATION_PATH="$YYBAO_LINK_ALL_PATH/Applications"
     YYBAO_LINK_SUPPORT_PATH="$YYBAO_LINK_ALL_PATH/Application Support"
@@ -608,7 +612,7 @@ link_all() {
     link_user_bin_shell
     link_run_apps_shell
     link_nginx_http
-    link_yybao_all
+    # link_yybao_all
     # link_mac_app_cloud
     if [[ $MY_MAC_TYPE == "$MAC_TYPE_MINI" ]]; then
         # info M2
