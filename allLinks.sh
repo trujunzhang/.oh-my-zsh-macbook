@@ -270,17 +270,10 @@ function link_ide_configs {
 # trujunzhang's profile
 # directoryLink  "Application(djzhang)"  "$ORGANIZATIONS_APPLICATION_HOME"  "$HOME/Applications"
 
-function link_symlink {
-    # *Links(IDES)
-    # ======================================
-    IDES_HOME="$ORGANIZATIONS_HOME/IDES"
+function link_emacs {
     # **IDES(chemacs2[emacs-shim])
     EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
-    # **IDES(zsh)
-    OH_MY_ZSH_HOME="$IDES_HOME/oh-my-zsh"
-    # ==Items==
-    OH_MY_ZSH_IDE_HOME="$OH_MY_ZSH_HOME/oh-my-zsh"
-    POWER_LEVEL_9K_HOME="$OH_MY_ZSH_HOME/powerlevel9k"
+
     # **IDES(purcell's emacs.d)
     PURCELL_EMACS_HOME="$TRUJUNZHANG_DOTFILES_HOME/purcell/emacs.d"
     # **IDES(spacemacs)
@@ -289,6 +282,40 @@ function link_symlink {
     SPACEMACS_IDE_HOME="$SPACEMACS_HOME/spacemacs"
     SPACEMACS_W3M_HOME="$SPACEMACS_HOME/venmos/w3m-layer"
     SPACEMACS_VUE_HOME="$SPACEMACS_HOME/lawrsp/vue-layer"
+
+    # **IDES(purcell's emacs.d)
+    # directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
+
+    # **IDES(chemacs2[emacs-shim])
+    # EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
+    # https://github.com/plexus/chemacs2.git
+    # directoryLink "chemacs2(.emacs.d)" "$EMACS_SHIM_HOME/chemacs2" "$HOME/.emacs.d"
+    # directoryLink "Doom(.doom.d)" "$TRUJUNZHANG_DOTFILES_HOME/editors/.doom.d" "$HOME/.doom.d"
+    # fileLink "chemacs2(.emacs-profile)" "$EMACS_SHIM_HOME/.emacs-profile" "$HOME/.emacs-profile"
+    # fileLink "chemacs2(.emacs-profiles.el)" "$TRUJUNZHANG_DOTFILES_HOME/editors/.emacs-profiles.el" "$HOME/.emacs-profiles.el"
+
+    # spacemacs(All)
+    fileLink ".spacemacs(profile)" "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
+    directoryLink ".spacemacs(fold)" "$TRUJUNZHANG_DOTFILES_HOME/editors/spacemacs/spacemacs.d" "$HOME/.spacemacs.d"
+
+    ## spacemacs(plugins)
+    # directoryLink "emacs_layout(trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"    "$HOME/.emacs.d/private/trujunzhang-workspace"
+    # directoryLink "emacs_layout(dart-layer)"   "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/dart-layer"               "$HOME/.emacs.d/private/dart-layer"
+    # directoryLink "w3m(third Layout)"          "$SPACEMACS_W3M_HOME"                                                "$HOME/.emacs.d/private/w3m"
+    # directoryLink "vue(third Layout)"        "$SPACEMACS_VUE_HOME"                                                "$HOME/.emacs.d/private/vue"
+    ## spacemacs(Snippets)
+    # directoryLink "emacs(My Snippet)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/mySnippets"  "$HOME/.emacs.d/private/mySnippets"
+}
+
+function link_symlink {
+    # *Links(IDES)
+    # ======================================
+    IDES_HOME="$ORGANIZATIONS_HOME/IDES"
+    # **IDES(zsh)
+    OH_MY_ZSH_HOME="$IDES_HOME/oh-my-zsh"
+    # ==Items==
+    OH_MY_ZSH_IDE_HOME="$OH_MY_ZSH_HOME/oh-my-zsh"
+    POWER_LEVEL_9K_HOME="$OH_MY_ZSH_HOME/powerlevel9k"
     ### IDES(cocoapods)
     COCOAPODS_HOME="$IDES_HOME/cocoapods/.cocoapods"
     ### IDES(ENVS)
@@ -345,29 +372,6 @@ function link_symlink {
     directoryLink "karabiner(config)" "$TRUJUNZHANG_DOTFILES_HOME/config/karabiner" "$HOME/.config/karabiner"
 
     fileLink "ruby(gemrc)" "$TRUJUNZHANG_DOTFILES_HOME/config/gem/gemrc" "$HOME/.config/gem/gemrc"
-
-    # **IDES(purcell's emacs.d)
-    # directoryLink  "purcell(emacs.d)"       "$PURCELL_EMACS_HOME"         "$HOME/.emacs.d"
-
-    # **IDES(chemacs2[emacs-shim])
-    # EMACS_SHIM_HOME="$IDES_HOME/emacs-shim"
-    # https://github.com/plexus/chemacs2.git
-    directoryLink "chemacs2(.emacs.d)" "$EMACS_SHIM_HOME/chemacs2" "$HOME/.emacs.d"
-    directoryLink "Doom(.doom.d)" "$TRUJUNZHANG_DOTFILES_HOME/editors/.doom.d" "$HOME/.doom.d"
-    fileLink "chemacs2(.emacs-profile)" "$EMACS_SHIM_HOME/.emacs-profile" "$HOME/.emacs-profile"
-    fileLink "chemacs2(.emacs-profiles.el)" "$TRUJUNZHANG_DOTFILES_HOME/editors/.emacs-profiles.el" "$HOME/.emacs-profiles.el"
-
-    # spacemacs(All)
-    fileLink ".spacemacs(profile)" "$TRUJUNZHANG_DOTFILES_HOME/spacemacs.symlink" "$HOME/.spacemacs"
-    directoryLink ".spacemacs(fold)" "$TRUJUNZHANG_DOTFILES_HOME/editors/spacemacs/spacemacs.d" "$HOME/.spacemacs.d"
-
-    ## spacemacs(plugins)
-    # directoryLink "emacs_layout(trujunzhang)"  "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/trujunzhang-workspace"    "$HOME/.emacs.d/private/trujunzhang-workspace"
-    # directoryLink "emacs_layout(dart-layer)"   "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/layers/dart-layer"               "$HOME/.emacs.d/private/dart-layer"
-    # directoryLink "w3m(third Layout)"          "$SPACEMACS_W3M_HOME"                                                "$HOME/.emacs.d/private/w3m"
-    # directoryLink "vue(third Layout)"        "$SPACEMACS_VUE_HOME"                                                "$HOME/.emacs.d/private/vue"
-    ## spacemacs(Snippets)
-    # directoryLink "emacs(My Snippet)" "$TRUJUNZHANG_DOTFILES_HOME/emacs.d/mySnippets"  "$HOME/.emacs.d/private/mySnippets"
 
     # Tmux(All)
     # fileLink "tmux(config)"       "$TMUX_CONFIG"          "$HOME/.tmux.conf"
@@ -607,6 +611,7 @@ link_all() {
     link_config_fold
     link_ide_configs
     link_symlink
+    link_emacs
     # link_cocoapods
     # link_getx_shell
     link_user_bin_shell

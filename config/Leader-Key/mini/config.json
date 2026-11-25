@@ -236,6 +236,11 @@
           "key" : "t",
           "type" : "application",
           "value" : "/Volumes/MacUser/djzhang/Desktop"
+        },
+        {
+          "key" : "e",
+          "type" : "application",
+          "value" : "/Volumes/MacUser/djzhang/Applications/emacs-plus-31.1-arm64-15/Emacs.app"
         }
       ],
       "key" : "f",

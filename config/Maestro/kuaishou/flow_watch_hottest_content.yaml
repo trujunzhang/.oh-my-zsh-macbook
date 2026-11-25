@@ -48,7 +48,7 @@ appId: com.kuaishou.nebula
 - repeat:
       while:
           notVisible:
-              text: ".*可任选一方式完成任务.*"
-              # text: ".*今日打卡任务.*"
+              # text: ".*可任选一方式完成任务.*"
+              text: ".*今日打卡任务.*"
       commands:
           - back

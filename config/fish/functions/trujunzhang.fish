@@ -965,7 +965,7 @@ alias ub='NVIM_APPNAME=nvchad-linkarzu neovide' # Standard neovim
 # Emacs
 # alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
 alias emacsd="emacs -debug-init"
-alias e="emacs -nw"
+alias e="emacs -nw --with-profile doom"
 
 alias fish_reload="source ~/.config/fish/config.fish"
 

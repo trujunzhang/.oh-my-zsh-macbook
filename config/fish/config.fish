@@ -124,6 +124,7 @@ if test $MY_MAC_TYPE = $MAC_TYPE_MINI
     fish_add_path "$HOME/.local/bin/zellij/0.45.1"
     fish_add_path "$HOME/.local/bin/starship/1.27.0"
     fish_add_path "$HOME/.local/bin/asdf/0.20.0"
+    fish_add_path "$HOME/.local/bin/ripgrep"
     fish_add_path "$HOME/.local/bin/lazygit/0.63.0"
     fish_add_path "$HOME/.local/bin/fzf/0.73.1"
     fish_add_path "$HOME/.local/bin/android-platform-tools/37.0.0/platform-tools"
@@ -132,8 +133,12 @@ if test $MY_MAC_TYPE = $MAC_TYPE_MINI
     # emacs version
     set EMACS_VERAION_NAME "emacs-plus-31.1-arm64-15"
     set EMACS_APP_PATH "$HOME/Applications/$EMACS_VERAION_NAME/Emacs.app"
-    fish_add_path "$EMACS_APP_PATH/Contents/MacOS/bin"
-    fish_add_path "$EMACS_APP_PATH/Contents/MacOS"
+    # fish_add_path "$EMACS_APP_PATH/Contents/MacOS/bin"
+    # fish_add_path "$EMACS_APP_PATH/Contents/MacOS"
+
+    # doom emacs config
+    set DOOM_CONFIG_PATH "$HOME/emacsConfig/emacs.doom"
+    fish_add_path "$DOOM_CONFIG_PATH/bin"
 
     # python version on the homebrew
 
