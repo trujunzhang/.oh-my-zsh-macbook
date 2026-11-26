@@ -953,7 +953,7 @@ alias c='NVIM_APPNAME=nvim-craftzdog nvim' # Standard neovim
 alias vs='NVIM_APPNAME=nvchad-Starter nvim' # Standard neovim
 alias vb='NVIM_APPNAME=nvchad-Backup nvim' # Standard neovim
 alias b='NVIM_APPNAME=neovim-linkarzu nvim' # Standard neovim
-alias s='NVIM_APPNAME=neovim-linkarzu nvim' # Standard neovim
+# alias s='NVIM_APPNAME=neovim-linkarzu nvim' # Standard neovim
 
 alias uw='NVIM_APPNAME=nvchad-wSedlacek neovide' # NvChad
 alias un='NVIM_APPNAME=nvim-2kabhishek neovide' # Standard neovim
@@ -966,6 +966,7 @@ alias ub='NVIM_APPNAME=nvchad-linkarzu neovide' # Standard neovim
 # alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
 alias emacsd="emacs -debug-init"
 alias e="emacs -nw --with-profile doom"
+alias s="emacs -nw --with-profile spacemacs"
 
 alias fish_reload="source ~/.config/fish/config.fish"
 

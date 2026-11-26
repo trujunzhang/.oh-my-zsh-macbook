@@ -44,6 +44,14 @@ appId: com.tencent.android.qqdownloader
 
 - runFlow:
       when:
+          notVisible:
+              text: ".*我的.*"
+      commands:
+          - tapOn:
+                point: "1005, 210" # 点击"x" close按钮
+
+- runFlow:
+      when:
           true: ${needWait || 'true' == "true"}
       commands:
           - repeat:

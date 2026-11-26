@@ -89,9 +89,9 @@ This function should only modify configuration layer settings."
                  js2-basic-offset 2)
 
              (typescript :variables
-                 typescript-backend 'tide
-                 typescript-fmt-tool 'prettier
-                 typescript-linter 'eslint)
+                typescript-backend 'tide
+                typescript-fmt-tool 'prettier
+                typescript-linter 'eslint)
 
              ;; (vue :variables
              ;;      vue-backend 'lsp)
@@ -776,7 +776,7 @@ before packages are loaded."
         (lambda () (pcase (file-name-extension buffer-file-name)
                        ("tsx" ('tide-setup-hook))
                        (_ (my-web-mode-hook)))))
-    (flycheck-add-mode 'typescript-tslint 'web-mode)
+    ;; (flycheck-add-mode 'typescript-tslint 'web-mode)
     (add-hook 'web-mode-hook 'company-mode)
     (add-hook 'web-mode-hook 'prettier-js-mode)
     (add-hook 'web-mode-hook #'turn-on-smartparens-mode t)

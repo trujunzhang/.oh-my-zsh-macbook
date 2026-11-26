@@ -1,4 +1,4 @@
-;;; funcs.el --- Python Layer functions File for Spacemacs
+;;; funcs.el --- C# Layer packages File for Spacemacs  -*- lexical-binding: nil; -*-
 ;;
 ;; Copyright (c) 2012-2021 Sylvain Benner & Contributors
 ;;
