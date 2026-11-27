@@ -5,6 +5,14 @@ set -g -x MAC_NAME_PRO pro
 set -g -x MAC_TYPE_NEO djzhang-neo
 set -g -x MAC_NEO neo
 
+function info_red_color
+    echo -e "\033[31m$argv\033[0m"
+end
+
+function info_green_color
+    echo -e "\033[32m$argv\033[0m"
+end
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
@@ -232,6 +240,14 @@ end
 # Aliases
 if [ -f $HOME/.config/fish/functions/trujunzhang.fish ]
     source $HOME/.config/fish/functions/trujunzhang.fish
+end
+
+if [ -f $HOME/.config/fish/functions/trujunzhang/maestro.fish ]
+    source $HOME/.config/fish/functions/trujunzhang/maestro.fish
+end
+
+if [ -f $HOME/.config/fish/functions/trujunzhang/ide.fish ]
+    source $HOME/.config/fish/functions/trujunzhang/ide.fish
 end
 
 # https://rvm.io/integration/fish

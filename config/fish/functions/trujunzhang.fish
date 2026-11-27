@@ -1,11 +1,3 @@
-function info_red_color
-    echo -e "\033[31m$argv\033[0m"
-end
-
-function info_green_color
-    echo -e "\033[32m$argv\033[0m"
-end
-
 function search_functions --description "Search and execute Fish functions/aliases using fzf"
     # 1. List all available functions
     # 2. Filter out internal/private fish functions starting with '_'
@@ -356,9 +348,6 @@ function dmac_genymotion_local_network
     adb shell settings put global ntp_server 1.hk.pool.ntp.org
 end
 
-# macvim
-# alias gvim='$ORGANIZATIONS_HOME/__APPLICATIONS/IDES/MacVim.app/Contents/MacOS/Vim -g'
-
 # xcode
 alias xcode_path_info="xcode-select --print-path"
 alias xcode_select_current="sudo xcode-select --switch /Volumes/MacGame/MacApps/current/Current.app/Contents/Developer"
@@ -519,10 +508,6 @@ alias djrun='python manage.py runserver'
 alias djmj='python manage.py migrate'
 alias djmmj='python manage.py makemigrations'
 
-# neovim
-alias neovimcheck="nvim +checkhealth"
-alias neovimplugininstall="nvim +PlugInstall"
-
 # djzhang's cmd
 alias dfpython="cd $TRUJUNZHANG_DOTFILES_HOME/USERS/python"
 alias drunvpn="cd $TRUJUNZHANG_DOTFILES_HOME/USERS/python && python vpn_connect.py"
@@ -566,16 +551,6 @@ alias cljar='lein uberjar'
 alias clrun='lein run'
 alias cltest='lein test'
 alias clsearch='lein search'
-
-# chemacs2
-# https://github.com/plexus/chemacs2
-alias emacsdoom="emacs --with-profile=doom"
-alias emacsspace="emacs --with-profile=spacemacs"
-alias etspace="echo spacemacs >~/.emacs-profile"
-alias etdoom="echo doom >~/.emacs-profile"
-alias edoominstall="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom install"
-alias edoomsync="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom sync"
-alias edoomdoctor="$ORGANIZATIONS_HOME/IDES/emacs-shim/doom-emacs/bin/doom doctor"
 
 #
 # youtube-dl(pending)
@@ -654,26 +629,9 @@ alias vpsDownload="wget https://storage.googleapis.com/flutter_infra_release/rel
 alias bitbucket_update_ssh="ssh-keygen -R bitbucket.org && curl https://bitbucket.org/site/ssh"
 alias bitbucket_host_key="ssh git@bitbucket.org host_key_info"
 
-# homebrew
-# brew services start d12frosted/emacs-plus/emacs-plus@30
-function binstall-emacs
-    if not test -d "$HOMEBREW_HOME/opt/emacs-plus@30"
-        brew tap d12frosted/emacs-plus
-        brew install emacs-plus@30 --with-spacemacs-icon --with-native-comp
-        brew link emacs-plus@30
-    end
-    if not test -d "/Applications/Emacs.app"
-        ln -s $HOMEBREW_HOME/opt/emacs-plus@30/Emacs.app /Applications
-    end
-end
-
 function binstall-nerd-font
     brew tap homebrew/cask-fonts
     brew install font-hack-nerd-font
-end
-
-function killvim
-    kill $(ps aux | grep 'neovim' | awk '{print $2}')
 end
 
 # brew
@@ -693,10 +651,6 @@ alias buz='brew uninstall --zap'
 # macos
 alias wh_shutdown_mac="sudo shutdown -h now"
 alias wh_restart_mac="sudo shutdown -r now"
-
-# lunarvim
-alias lvimUpdateReset="lvim +LvimUpdate +LvimCacheReset +q"
-alias wrmvimsession="rm -rf $HOME/.local/share/nvim/sessions"
 
 # vpn
 alias wcloudflareip="curl https://raw.githubusercontent.com/badafans/better-cloudflare-ip/master/shell/cf.sh -o /tmp/cf.sh && chmod +x /tmp/cf.sh && cd /tmp && ./cf.sh"
@@ -733,21 +687,6 @@ alias git_set_clash_proxy="git_set_clash_proxy_http && git_set_clash_proxy_https
 alias git_checkout_proxy="git config --global http.proxy"
 
 alias git_checkout_submodules="git submodule update --init --recursive --depth=1"
-
-#nvim
-alias wclean_cache_homebrew="rm -rf $HOME/Library/Caches/Homebrew"
-alias wclean_cache_webstorm="rm -rf $HOME/Library/Caches/JetBrains"
-alias wclean_lvimCache="rm -rf $HOME/.cache/lvim && rm -rf $HOME/.local/state/lvim && rm -rf $HOME/.local/share/lvim && rm -rf $HOME/.local/share/lunarvim/lazy && rm -rf $HOME/.local/share/lunarvim/site"
-alias wclean_nvimCache="rm -rf $HOME/.cache/nvim && rm -rf $HOME/.local/state/nvim && rm -rf $HOME/.local/share/nvim"
-alias wclean_nvchad-cache_Starter="rm -rf $HOME/.cache/nvchad-Starter && rm -rf $HOME/.local/state/nvchad-Starter && rm -rf $HOME/.local/share/nvchad-Starter"
-alias wclean_nvchad-cache_Backup="rm -rf $HOME/.cache/nvchad-Backup && rm -rf $HOME/.local/state/nvchad-Backup && rm -rf $HOME/.local/share/nvchad-Backup"
-alias wclean_nvchad-cache_linkarzu="rm -rf $HOME/.cache/neovim-linkarzu && rm -rf $HOME/.local/state/neovim-linkarzu && rm -rf $HOME/.local/share/neovim-linkarzu"
-alias wclean_nvchad-cache_wSedlacek="rm -rf $HOME/.cache/nvchad-wSedlacek && rm -rf $HOME/.local/state/nvchad-wSedlacek && rm -rf $HOME/.local/share/nvchad-wSedlacek"
-alias wclean_nvchad-cache_mgastonportillo="rm -rf $HOME/.cache/nvchad-mgastonportillo && rm -rf $HOME/.local/state/nvchad-mgastonportillo && rm -rf $HOME/.local/share/nvchad-mgastonportillo"
-alias wclean_nvchad-cache_Alexis12119="rm -rf $HOME/.cache/nvchad-Alexis12119 && rm -rf $HOME/.local/state/nvchad-Alexis12119 && rm -rf $HOME/.local/share/nvchad-Alexis12119"
-alias wclean_nvim-cache_2kabhishek="rm -rf $HOME/.cache/nvim-2kabhishek && rm -rf $HOME/.local/state/nvim-2kabhishek && rm -rf $HOME/.local/share/nvim-2kabhishek"
-alias wclean_nvim-cache_craftzdog="rm -rf $HOME/.cache/nvim-craftzdog && rm -rf $HOME/.local/state/nvim-craftzdog && rm -rf $HOME/.local/share/nvim-craftzdog"
-alias wclean_all_nvim_cache="wclean_nvimCache && wclean_nvim-cache_2kabhishek && wclean_nvim-cache_craftzdog && wclean_nvchad-cache_wSedlacek && wclean_nvchad-cache_mgastonportillo && wclean_nvchad-cache_Alexis12119"
 
 #rvm
 alias set_rvm_source='echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db'
@@ -927,48 +866,10 @@ alias dinstall_ieatta_android_release="adb install $ORGANIZATIONS_HOME/__CODING/
 # python
 alias pip_clean_cache="pip cache purge"
 
-# neovim
-alias l="lvim"
-# alias n="nvim"
-alias vsc="code ."
-
 alias h="nix run ~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/neovim-flake-gvolpe --"
 alias d="nix run ~/Documents/Organizations/TRUJUNZHANG/_oh-my-zsh-macbook/config/neovim-flake-gvolpe --"
 
-# Switching Configs in Neovim
-# see: https://michaeluloth.com/neovim-switch-configs/
-# UpdateRemotePlugins
-
-alias NVIM_APPNAME='nvim-lazyvim nvim'
-alias vd='nvim' # default Neovim config
-alias vz='NVIM_APPNAME=nvim-lazyvim nvim' # LazyVim
-alias vc='NVIM_APPNAME=nvim-nvchad nvim' # NvChad
-alias vk='NVIM_APPNAME=nvim-kickstart nvim' # Kickstart
-alias va='NVIM_APPNAME=nvim-astrovim nvim' # AstroVim
-alias w='NVIM_APPNAME=nvchad-wSedlacek nvim' # NvChad
-alias m='NVIM_APPNAME=nvchad-mgastonportillo nvim' # NvChad
-alias a='NVIM_APPNAME=nvchad-Alexis12119 nvim' # NvChad
-alias nv='NVIM_APPNAME=nvim-2kabhishek nvim' # Standard neovim
-alias c='NVIM_APPNAME=nvim-craftzdog nvim' # Standard neovim
-alias vs='NVIM_APPNAME=nvchad-Starter nvim' # Standard neovim
-alias vb='NVIM_APPNAME=nvchad-Backup nvim' # Standard neovim
-alias b='NVIM_APPNAME=neovim-linkarzu nvim' # Standard neovim
-# alias s='NVIM_APPNAME=neovim-linkarzu nvim' # Standard neovim
-
-alias uw='NVIM_APPNAME=nvchad-wSedlacek neovide' # NvChad
-alias un='NVIM_APPNAME=nvim-2kabhishek neovide' # Standard neovim
-alias uc='NVIM_APPNAME=nvim-craftzdog neovide' # Standard neovim
-alias us='NVIM_APPNAME=nvchad-Starter neovide' # Standard neovim
-alias ucb='NVIM_APPNAME=nvchad-Backup neovide' # Standard neovim
-alias ub='NVIM_APPNAME=nvchad-linkarzu neovide' # Standard neovim
-
-# Emacs
-# alias emacs='open -a $ORGANIZATIONS_HOME/__APPLICATIONS/IDES/Emacs.app $1'
-alias emacsd="emacs -debug-init"
-alias e="emacs -nw --with-profile doom"
-alias s="emacs -nw --with-profile spacemacs"
-
-alias fish_reload="source ~/.config/fish/config.fish"
+# alias fish_reload="source ~/.config/fish/config.fish"
 
 # python
 alias dpython_note="jupyter notebook"
@@ -1034,162 +935,16 @@ function dsetup_mkv_default_player
     duti -s $media_player_Bundle_ID mkv all
 end
 
-function dandroid_adb_search_package
-    set pkgName $argv[1]
-    adb shell pm list packages | grep $pkgName
-end
-
-function drun_adb_devices
-    adb kill-server && adb start-server
-    adb devices
-end
-
-function dtest_maestro_studio
-    set maestro_workspace "$HOME/Documents/maestro"
-    set file_path (p_scan_files_names "$maestro_workspace" "yaml")
-
-    if [ -f $file_path ]
-        info_red_color " 🎉 Selected file: <$file_path>"
-        maestro test "$file_path"
-    else
-        info_green_color "no selected file! <$file_path>"
-    end
-end
-
-alias dclean_maestro_studio_tests="rm -rf $HOME/.maestro/tests"
-
-alias dsource_craft="bass source ~/CraftRoot/craft/craftenv.sh"
-
-# function run_maestro_kuaishou_app_in_the_homepage
-#     set buttonTxt $argv[1]
-#     set appType $argv[2]
+# function dtest_maestro_studio
+#     set maestro_workspace "$HOME/Documents/maestro"
+#     set file_path (p_scan_files_names "$maestro_workspace" "yaml")
 #
-#     set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishou_tasks_in_the_homepage.yaml
-#
-#     if test $appType = lite
-#         set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/moto_kuaishoulite_tasks_in_the_homepage.yaml
+#     if [ -f $file_path ]
+#         info_red_color " 🎉 Selected file: <$file_path>"
+#         maestro test "$file_path"
+#     else
+#         info_green_color "no selected file! <$file_path>"
 #     end
-#     maestro test -e buttonText=$buttonTxt "$file_path"
 # end
 
-function run_maestro_app --argument-names fileName appName envKey1 envValue1 envKey2 envValue2
-    set appIds yybao com.tencent.android.qqdownloader \
-        all_apps com.all.apps \
-        google_chrome com.android.chrome \
-        toutiao_lite com.ss.android.article.lite \
-        toutiao_base com.ss.android.article.news \
-        meituan com.sankuai.meituan \
-        uc_browser_lite com.ucmobile.lite \
-        aiqiyi com.qiyi.video.lite \
-        kuaiying com.kwai.videoeditor \
-        baidumap com.baidu.BaiduMap \
-        kuaishou_lite com.kuaishou.nebula \
-        kuaishou_base com.smile.gifmaker
-    set -l appId (dict get appIds $appName)
-
-    info_red_color " 🎉 appName is <$appName>"
-    info_red_color " 🎉 appId is <$appId>"
-
-    set file_path $TRUJUNZHANG_DOTFILES_HOME/config/Maestro/"$fileName".yaml
-
-    if test -n "$envKey2"
-        info_red_color " 🎉 EnvKey1 argument provided: $envKey1"
-        info_red_color " 🎉 EnvValue1 argument provided: $envValue1"
-        info_red_color " 🎉 EnvKey2 argument provided: $envKey2"
-        info_red_color " 🎉 EnvValue2 argument provided: $envValue2"
-        maestro test -e appId=$appId -e $envKey1=$envValue1 -e $envKey2=$envValue2 "$file_path"
-    else
-        info_green_color " 💥 Error: EnvKey2 argument is not set"
-
-        if test -n "$envKey1"
-            info_red_color " 🎉 EnvKey1 argument provided: $envKey1"
-            info_red_color " 🎉 EnvValue1 argument provided: $envValue1"
-            maestro test -e appId=$appId -e $envKey1=$envValue1 "$file_path"
-        else
-            info_green_color " 💥 Error: EnvKey1 argument is not set"
-            maestro test -e appId=$appId "$file_path"
-        end
-    end
-end
-
-alias dmaestro_all_app_scroll_up_9="run_maestro_app moto_all_apps_scroll_up all_apps"
-
-alias dmaestro_yybao_立即签到_1="run_maestro_app moto_yybao_qiandao yybao"
-alias dmaestro_yybao_限时_下载_2="run_maestro_app moto_yybao_click_download yybao"
-alias dmaestro_yybao_限时_打开_3="run_maestro_app moto_yybao_click_open yybao"
-alias dmaestro_yybao_任务_提现页面_4="run_maestro_app moto_yybao_click_ads_in_tixian_page yybao"
-alias dmaestro_yybao_任务_赚钱页面_5="run_maestro_app moto_yybao_click_ads_in_zhuangqian_page yybao"
-alias dmaestro_yybao_去下载_6="run_maestro_app moto_yybao_goto_download yybao"
-alias dmaestro_yybao_去浏览_7="run_maestro_app moto_yybao_goto_browser yybao"
-alias dmaestro_yybao_领积分_8="run_maestro_app moto_yybao_click_lingjifen yybao"
-
-alias dmaestro_kuaiying_watch_and_return_9="run_maestro_app moto_kuaiying_only_watch_and_return kuaiying"
-
-alias dmaestro_uc_browser_lite_watch_and_return="run_maestro_app moto_uc_browser_lite_only_watch_and_return uc_browser_lite"
-alias dmaestro_uc_browser_lite_打卡任务_9="run_maestro_app moto_uc_browser_lite_click_ads uc_browser_lite"
-
-alias dmaestro_baidumap_watch_and_return_9="run_maestro_app moto_baidumap_only_watch_and_return baidumap"
-# alias dmaestro_baidumap_="run_maestro_app baidumap"
-# alias dmaestro_baidumap_="run_maestro_app baidumap"
-# alias dmaestro_baidumap_="run_maestro_app baidumap"
-
-alias dmaestro_meituan_点击合作任务_91="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 0"
-alias dmaestro_meituan_点击合作任务_92="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 1"
-alias dmaestro_meituan_点击合作任务_93="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 2"
-alias dmaestro_meituan_点击合作任务_94="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 3"
-alias dmaestro_meituan_点击合作任务_95="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 4"
-
-# meituan homepage
-alias dmaestro_meituan_去完成_pos_11="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 0"
-alias dmaestro_meituan_去完成_pos_12="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 1"
-alias dmaestro_meituan_去完成_pos_13="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 2"
-alias dmaestro_meituan_去完成_pos_14="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 3"
-alias dmaestro_meituan_去完成_pos_15="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 4"
-
-alias dmaestro_meituan_去观看_pos_21="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去观看 buttonIndex 0"
-alias dmaestro_meituan_去观看_pos_22="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去观看 buttonIndex 1"
-alias dmaestro_meituan_去观看_pos_23="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去观看 buttonIndex 2"
-
-alias dmaestro_meituan_去浏览_pos_31="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去浏览 buttonIndex 0"
-alias dmaestro_meituan_去浏览_pos_32="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去浏览 buttonIndex 1"
-alias dmaestro_meituan_去浏览_pos_33="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去浏览 buttonIndex 2"
-
-# alias dmaestro_meituan_="run_maestro_app meituan"
-# alias dmaestro_meituan_="run_maestro_app meituan"
-
-alias dmaestro_toutiao_base_任务_赚钱页面_9="run_maestro_app moto_toutiao_tasks_in_the_zhuangqian_page toutiao_base"
-alias dmaestro_toutiao_lite_任务_赚钱页面_9="run_maestro_app moto_toutiaolite_tasks_in_the_zhuangqian_page toutiao_lite"
-
-alias dmaestro_aiqiyi_watch_and_return_9="run_maestro_app moto_aiqiyi_only_watch_and_return aiqiyi"
-alias dmaestro_aiqiyi_watch_and_return_自动_8="run_maestro_app moto_aiqiyi_auto_watch_and_return aiqiyi"
-
-alias dmaestro_kuaishou_lite_打卡_观看精彩视频_8="run_maestro_app vivo_kuaishoulite_watch_ads kuaishou_lite"
-alias dmaestro_kuaishou_lite_打卡_观看热门内容_9="run_maestro_app vivo_kuaishoulite_watch_hottest_content kuaishou_lite"
-
-# kuaishou lite
-alias dmaestro_kuaishou_lite_领金币_pos_11="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 领金币 buttonIndex 0"
-alias dmaestro_kuaishou_lite_领金币_pos_12="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 领金币 buttonIndex 1"
-
-alias dmaestro_kuaishou_lite_去领取_pos_21="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去领取 buttonIndex 0"
-alias dmaestro_kuaishou_lite_去领取_pos_22="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去领取 buttonIndex 1"
-
-alias dmaestro_kuaishou_lite_去打开_pos_31="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去打开 buttonIndex 0"
-alias dmaestro_kuaishou_lite_去打开_pos_32="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去打开 buttonIndex 1"
-
-alias dmaestro_kuaishou_lite_去浏览_pos_41="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去浏览 buttonIndex 0"
-alias dmaestro_kuaishou_lite_去浏览_pos_42="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_lite buttonText 去浏览 buttonIndex 1"
-
-# kuaishou base
-alias dmaestro_kuaishou_base_去领取_pos_11="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去领取 buttonIndex 0"
-alias dmaestro_kuaishou_base_去领取_pos_12="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去领取 buttonIndex 1"
-
-alias dmaestro_kuaishou_base_去打开_pos_21="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去打开 buttonIndex 0"
-alias dmaestro_kuaishou_base_去打开_pos_22="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去打开 buttonIndex 1"
-
-alias dmaestro_kuaishou_base_去浏览_pos_31="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去浏览 buttonIndex 0"
-alias dmaestro_kuaishou_base_去浏览_pos_32="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去浏览 buttonIndex 1"
-
-alias dmaestro_kuaishou_base_去参与_pos_41="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去参与 buttonIndex 0"
-alias dmaestro_kuaishou_base_去参与_pos_42="run_maestro_app moto_kuaishou_app_tasks_in_the_homepage kuaishou_base buttonText 去参与 buttonIndex 1"
-
-alias dmaestro_google_chrome_close_tabs_9="run_maestro_app moto_google_browser_close_other_tabs google_chrome"
+alias dsource_craft="bass source ~/CraftRoot/craft/craftenv.sh"
