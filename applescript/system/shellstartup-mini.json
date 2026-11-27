@@ -87,6 +87,6 @@
     "type": "application",
     "name": "Firefox Nightly",
     "path": "Firefox Nightly.app",
-    "enable": "1"
+    "enable": "0"
   }
 ]

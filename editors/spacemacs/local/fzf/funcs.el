@@ -1,3 +1,6 @@
+;;; funcs.el --- C# Layer packages File for Spacemacs  -*- lexical-binding: nil; -*-
+;;
+;;
 
 (defun spacemacs/fzf-find-files ()
   "Custom fzf-find-files.

@@ -1,4 +1,4 @@
-;;; packages.el --- fzf layer packages file for Spacemacs.
+;;; packages.el --- fzf Layer packages File for Spacemacs  -*- lexical-binding: nil; -*-
 ;;
 ;; Copyright (c) 2012-2017 Sylvain Benner & Contributors
 ;;

@@ -81,3 +81,10 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(use-package! super-save
+  :config
+  (super-save-mode +1)
+  (setq super-save-auto-save-when-idle t))
+
+(setq confirm-kill-emacs nil)

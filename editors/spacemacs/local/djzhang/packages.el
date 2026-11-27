@@ -43,13 +43,13 @@
          ;; https://github.com/Davoodeh/dart-snippets
          ;; dart-snippets
          ;; https://github.com/Exafunction/codeium.el
-         (codeium :location (recipe
-                                :fetcher github
-                                :repo "Exafunction/codeium.el"))
+         ; (codeium :location (recipe
+         ;                        :fetcher github
+         ;                        :repo "Exafunction/codeium.el"))
          ;; https://github.com/emacs-php/jetbrains.el
-         jetbrains
+         ;; jetbrains
          ;; https://github.com/bbatsov/super-save
-         ;; super-save
+          super-save
          ))
 
 (defun djzhang/post-init-eww ()

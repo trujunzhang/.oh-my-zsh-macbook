@@ -7,6 +7,17 @@ appId: com.baidu.BaiduMap
 - repeat:
       times: 500
       commands:
+          - tapOn:
+                id: "button_001"
+                optional: true
+                delay: 200
+                repeat: 400
+                retryTapIfNoChange: true
+                waitToSettleTimeoutMs: 38000
+
+          - tapOn:
+                point: "550, 1540" # 点击"再领" 按钮
+
           # Step 5: Return to App
           # - launchApp:
           #       stopApp: false # Brings the app back to the foreground without restarting it

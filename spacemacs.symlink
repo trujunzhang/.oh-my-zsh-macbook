@@ -62,14 +62,14 @@ This function should only modify configuration layer settings."
              lua
              ;; epub
              ;; pdf
-             ;; neotree
-             (treemacs :variables
-                    treemacs-use-all-the-icons-theme t
-                    ;; treemacs-use-scope-type 'Frames
-                    treemacs-use-scope-type 'Perspectives
-                    treemacs-use-filewatch-mode t
-                    treemacs-use-follow-mode 'tag)
-             ;; fzf
+             neotree
+             ;; (treemacs :variables
+             ;;       treemacs-use-all-the-icons-theme t
+             ;;       ;; treemacs-use-scope-type 'Frames
+             ;;       treemacs-use-scope-type 'Perspectives
+             ;;       treemacs-use-filewatch-mode t
+             ;;       treemacs-use-follow-mode 'tag)
+             fzf
              djzhang
 
              yaml
@@ -82,8 +82,9 @@ This function should only modify configuration layer settings."
              ;; (dart :variables
              ;;     dart-backend 'lsp
              ;;     lsp-dart-sdk-dir "~/Documents/flutter/bin/cache/dart-sdk")
-             tide
-             react
+             ;; tide
+             ;; react
+
              (javascript :variables
                  javascript-backend 'tide
                  js2-basic-offset 2)
@@ -123,8 +124,8 @@ This function should only modify configuration layer settings."
 
              ;; helm-follow-mode sticky - remembers use of C-c C-f
              ;; - follow mode previews when scrolling through a helm list
-             ;; (helm :variables
-             ;;      helm-follow-mode-persistent t)
+             (helm :variables
+                   helm-follow-mode-persistent t)
 
              ;; Language server protocol with minimal visual impact
              ;; https://practicalli.github.io/spacemacs/install-spacemacs/clojure-lsp/lsp-variables-reference.html
@@ -166,14 +167,14 @@ This function should only modify configuration layer settings."
                  lsp-file-watch-threshold 10000
                  lsp-log-io nil)
 
-             (markdown :variables
-                 markdown-live-preview-engine 'vmd)
+             ;; (markdown :variables
+             ;;     markdown-live-preview-engine 'vmd)
 
              osx
              better-defaults
              emacs-lisp
-             common-lisp
-             org
+             ;; common-lisp
+             ;; org
              (shell :variables
                  shell-default-height 30
                  shell-default-position 'bottom)
@@ -589,7 +590,8 @@ It should only modify the values of Spacemacs settings."
         ;; List of search tool executable names. Spacemacs uses the first installed
         ;; tool of the list. Supported tools are `rg', `ag', `pt', `ack' and `grep'.
         ;; (default '("rg" "ag" "pt" "ack" "grep"))
-        dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
+        ;; dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
+        dotspacemacs-search-tools '("rg" "ag" "ack" "grep")
 
         ;; Format specification for setting the frame title.
         ;; %a - the `abbreviated-file-name', or `buffer-name'

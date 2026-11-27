@@ -12,12 +12,6 @@ appId: com.tencent.android.qqdownloader
                 retryTapIfNoChange: true
                 # waitToSettleTimeoutMs: 38000
 
-# - extendedWaitUntil:
-#       visible:
-#           text: ".*点击后.*看.*秒可得奖励.*"
-#           # text: ".*点击后看秒可得奖励.*"
-#       timeout: 30000
-
 - tapOn:
       point: "600, 1780" # 点击"立即下载"按钮
       # point: "600, 1800" # 点击"立即下载"按钮
@@ -33,10 +27,6 @@ appId: com.tencent.android.qqdownloader
           needReturn: "true"
           returnStep: 2
 
-# Step 5: Return to App
-# - launchApp:
-#       stopApp: false # Brings the app back to the foreground without restarting it
-
 - back
 
 - tapOn:
@@ -44,11 +34,16 @@ appId: com.tencent.android.qqdownloader
 
 - runFlow:
       when:
+          visible:
           notVisible:
               text: ".*我的.*"
       commands:
           - tapOn:
                 point: "1005, 210" # 点击"x" close按钮
+
+          - tapOn:
+                text: ".*坚持退出.*"
+                optional: true
 
 - runFlow:
       when:
