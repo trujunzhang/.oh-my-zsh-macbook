@@ -6,6 +6,7 @@ appId: com.baidu.BaiduMap
           appId: "com.baidu.BaiduMap"
           step: 1
           needReturn: "true"
+          returnStep: 2
 # - tapOn:
 #       point: "980, 530" # 点击"x" close按钮
 

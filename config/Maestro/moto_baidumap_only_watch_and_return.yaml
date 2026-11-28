@@ -1,9 +1,9 @@
 appId: com.baidu.BaiduMap
 ---
-- swipe:
-      direction: DOWN
-- swipe:
-      direction: UP
+# - swipe:
+#       direction: DOWN
+# - swipe:
+#       direction: UP
 - repeat:
       times: 500
       commands:

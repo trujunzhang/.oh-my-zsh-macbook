@@ -27,6 +27,7 @@ appId: com.qiyi.video.lite
                 env:
                     appId: "com.qiyi.video.lite"
                     needReturn: "true"
+                    returnStep: 2
 
 - repeat:
       while:

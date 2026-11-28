@@ -42,7 +42,8 @@ appId: com.tencent.android.qqdownloader
                 point: "1005, 210" # 点击"x" close按钮
 
           - tapOn:
-                text: ".*坚持退出.*"
+                point: "552, 1432" # 点击"坚持退出"按钮
+                # text: ".*坚持退出.*"
                 optional: true
 
 - runFlow:

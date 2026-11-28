@@ -156,6 +156,10 @@ keybinds clear-defaults=true {
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
     }
     shared_except "locked" {
+        bind "Ctrl Left" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "Ctrl Right" { MoveFocus "Right"; SwitchToMode "Normal"; }
+        bind "Ctrl Down" { MoveFocus "Left"; SwitchToMode "Normal"; }
+        bind "Ctrl Up" { MoveFocus "Right"; SwitchToMode "Normal"; }
         bind "Ctrl a" { GoToTab 1; }
         bind "Ctrl w" { GoToTab 2; }
         bind "Ctrl e" { GoToTab 3; }

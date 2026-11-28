@@ -9,7 +9,7 @@ appId: com.kuaishou.nebula
           - tapOn:
                 # point: "540, 2030" # 点击"去观看"按钮
                 # text: ".*去观看.*"
-                text: ".*去看广告.*"
+                text: ".*去[看广告|完成].*"
 
 - tapOn:
       id: "button_001"
@@ -20,7 +20,6 @@ appId: com.kuaishou.nebula
       when:
           visible:
               text: ".*点什么.*"
-              # text: ".*观看.*"
       commands:
           - runFlow:
                 file: ../common/flow_common_25s_and_return_app.yaml
