@@ -3,13 +3,62 @@ appId: com.sankuai.meituan
 - repeat:
       times: 500
       commands:
-          - tapOn:
-                # text: ".*去完成.*"
-                text: ${buttonText || "NotSet"}
-                index: ${buttonIndex || 0 }
-                # text: ".*浏览低价好物得金币.*"
-                # text: ".*看广告赚金币.*"
-                optional: true
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*赚钱中心.*"
+                commands:
+                    - tapOn:
+                          text: ".*看视频开广告.*"
+                          optional: true
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*赚钱中心.*"
+                commands:
+                    - tapOn:
+                          text: ".*浏览优质视频.*"
+                          optional: true
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*赚钱中心.*"
+                commands:
+                    - tapOn:
+                          text: ".*逛精选好物.*"
+                          optional: true
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*赚钱中心.*"
+                commands:
+                    - tapOn:
+                          text: ".*浏览好物得金币.*"
+                          optional: true
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*赚钱中心.*"
+                commands:
+                    - tapOn:
+                          text: ".*点击立即得金币.*"
+                          optional: true
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*赚钱中心.*"
+                commands:
+                    - tapOn:
+                          text: ".*看广告赚金币.*"
+                          optional: true
+
+          - runFlow:
+                when:
+                    visible:
+                        text: ".*提现.*" # 提现页面
+                commands:
+                    - back
+
           - tapOn:
                 # text: ".*[点击并浏览|立即购买|打开一淘|立即下载].*"
                 text: ".*[点击并浏览|立即购买|打开一淘].*"

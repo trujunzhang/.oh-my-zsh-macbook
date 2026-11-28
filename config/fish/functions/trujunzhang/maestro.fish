@@ -87,11 +87,11 @@ alias dmaestro_kuaiying_watch_and_return_9="run_maestro_app moto_kuaiying_only_w
 alias dmaestro_uc_browser_lite_watch_and_return="run_maestro_app moto_uc_browser_lite_only_watch_and_return uc_browser_lite"
 alias dmaestro_uc_browser_lite_打卡任务_9="run_maestro_app moto_uc_browser_lite_click_ads uc_browser_lite"
 
-alias dmaestro_meituan_点击合作任务_91="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 0"
-alias dmaestro_meituan_点击合作任务_92="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 1"
-alias dmaestro_meituan_点击合作任务_93="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 2"
-alias dmaestro_meituan_点击合作任务_94="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 3"
-alias dmaestro_meituan_点击合作任务_95="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 4"
+alias dmaestro_meituan_点击合作任务_9="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 0"
+# alias dmaestro_meituan_点击合作任务_92="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 1"
+# alias dmaestro_meituan_点击合作任务_93="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 2"
+# alias dmaestro_meituan_点击合作任务_94="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 3"
+# alias dmaestro_meituan_点击合作任务_95="run_maestro_app moto_meituan_click_tasks_in_the_grid meituan buttonIndex 4"
 
 # meituan homepage
 alias dmaestro_meituan_去完成_pos_11="run_maestro_app moto_meituan_only_watch_and_return meituan buttonText 去完成 buttonIndex 0"

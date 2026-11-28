@@ -14,12 +14,20 @@ appId: com.sankuai.meituan
                 text: ".*点击合作任务.*"
                 optional: true
 
-          - tapOn:
-                # point: "274, 894" # 点击"grid"按钮
-                point: "170, 1140" # 点击"grid"按钮
-                # id: "button_001"
-                optional: true
-                delay: 200
+          # - tapOn:
+          #       # point: "274, 894" # 点击"grid"按钮
+          #       point: "170, 1140" # 点击"grid"按钮
+          #       optional: true
+          #       delay: 200
           # Step 5: Return to App
           - launchApp:
                 stopApp: false # Brings the app back to the foreground without restarting it
+
+          - runFlow:
+                when:
+                    # notVisible:
+                    #     text: ".*点击合作任务.*"
+                    visible:
+                        text: ".*更多金币.*"
+                commands:
+                    - back

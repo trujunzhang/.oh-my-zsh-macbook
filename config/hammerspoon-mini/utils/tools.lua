@@ -3,6 +3,9 @@ function EscapeTab(tab)
 
     hs.eventtap.keyStroke({ "Ctrl" }, tab, myApp)
     hs.eventtap.keyStroke({}, "escape")
+
+    hs.eventtap.keyStroke({ "Ctrl" }, "Up", myApp)
+    hs.eventtap.keyStroke({}, "escape")
 end
 
 function ClickActiveWindow(focusedWindow, offsetX, offsetY)

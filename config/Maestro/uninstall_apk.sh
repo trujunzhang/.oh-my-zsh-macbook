@@ -68,7 +68,7 @@ apk_apps=(
     # 全民k歌
     "com.tencent.karaoke"
     # 小红书
-    "com.xingin.xhs"
+    # "com.xingin.xhs"
     # 华为乾坤
     "com.yinwang.qiankunapp"
     # momo
